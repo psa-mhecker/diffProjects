@@ -1,0 +1,70 @@
+<HTML>
+<HEAD><TITLE>Choose your map</TITLE></HEAD>
+<BODY>
+<SCRIPT>
+function selectGoogle() {
+  document.getElementById("engine1").checked = true;
+  document.getElementById("engine2").checked = false;
+  document.getElementById("engine3").checked = false;
+  document.getElementById("engine4").checked = false;
+  document.getElementById("choice").value = "google";
+  parent.frames["down"].location.href = "dng.htm";
+}
+
+function selectYahoo() {
+  document.getElementById("engine1").checked = false;
+  document.getElementById("engine2").checked = true;
+  document.getElementById("engine3").checked = false;
+  document.getElementById("engine4").checked = false;
+  document.getElementById("choice").value = "yahoo";
+  parent.frames["down"].location.href = "dng.htm";
+}
+
+function selectMicrosoft() {
+  document.getElementById("engine1").checked = false;
+  document.getElementById("engine2").checked = false;
+  document.getElementById("engine3").checked = true;
+  document.getElementById("engine4").checked = false;
+  document.getElementById("choice").value = "microsoft";
+  parent.frames["down"].location.href = "dng.htm";
+}
+
+function selectMappy() {
+  document.getElementById("engine1").checked = false;
+  document.getElementById("engine2").checked = false;
+  document.getElementById("engine3").checked = false;
+  document.getElementById("engine4").checked = true;
+  document.getElementById("choice").value = "mappy";
+  parent.frames["down"].location.href = "dng.htm";
+}
+</SCRIPT>
+<TABLE>
+<TR>
+<TD valign="center">
+<INPUT type="radio" id="engine1" value="google" checked onclick="selectGoogle();"/>
+</TD>
+<TD valign="center">
+<A HREF="javascript:selectGoogle();"><IMG SRC="images/googlemap.gif" border=0/></A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</TD>
+<TD valign="center">
+<INPUT type="radio" id="engine2" value="yahoo" onclick="selectYahoo();"/>
+</TD>
+<TD valign="center">
+<A HREF="javascript:selectYahoo();"><IMG SRC="images/yahoomap.gif" border=0/></A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</TD>
+<TD valign="center">
+<INPUT type="radio" id="engine3" value="vearth" onclick="selectMicrosoft();"/>
+</TD>
+<TD valign="center">
+<A HREF="javascript:selectMicrosoft();"><IMG SRC="images/virtualearth.jpg" border=0/></A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</TD>
+<TD valign="center">
+<INPUT type="radio" id="engine4" value="vearth" onclick="selectMappy();"/>
+</TD>
+<TD valign="center">
+<A HREF="javascript:selectMappy();"><IMG SRC="images/mappy.png" border=0/></A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</TD>
+</TR>
+</TABLE>
+<input type="hidden" id="choice" value="google"/>
+</BODY>

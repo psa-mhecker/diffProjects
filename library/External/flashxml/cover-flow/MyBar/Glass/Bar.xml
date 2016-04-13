@@ -1,0 +1,3 @@
+<bars>
+	<bar leftButton = "MyBar/Glass/l_btn.png" rightButton = "MyBar/Glass/r_btn.png" track = "MyBar/Glass/track.png" scrollButton = "MyBar/Glass/btn_track.png"></bar>
+</bars>

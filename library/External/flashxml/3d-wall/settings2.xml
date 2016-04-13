@@ -1,0 +1,92 @@
+<settings>
+  <General_Properties>
+	<imagesXML value="images.xml"/>
+    <showAbout value="true"/>
+    <widthComponent value="600"/>
+    <heightComponent value="270"/>
+    <backgroundColor value="0x333333"/>
+    <widthPlane value="75"/>
+    <heightPlane value="45"/>
+	<preloader value = "assets/redsquares.swf" />
+	<useLightbox value="false" />
+  </General_Properties>
+  <Wall_Properties>
+    <typeOfWall value="outsideCurvature"/>
+    <cameraPerspectiv value="40"/>
+    <posX value="0"/>
+    <posY value="-30"/>
+    <lines value="2"/>
+    <columns value="18"/>
+    <radius value="300"/>
+    <spacingH value="9"/>
+    <spacingV value="3"/>
+    <speedMove value="1"/>
+    <speedWheel value="5"/>
+    <farDistFromWall value="524"/>
+    <nearDistFromWall value="70"/>
+  </Wall_Properties>
+  <Loader_Properties>
+    <typeLoader value="left"/>
+    <funcLoader value="Circular"/>
+    <methLoader value="easeOut"/>
+    <timeLoader value="3"/>
+  </Loader_Properties>
+  <Reflection_Properties>
+    <alpha value="44"/>
+    <ratio value="163"/>
+    <distance value="2"/>
+  </Reflection_Properties>
+  <Tweens_Images>
+    <goToUrlOnClick value="true"/>
+    <positionPlane value="afterWall"/>
+    <funcCamera value="Linear"/>
+    <methCamera value="easeOut"/>
+    <timeCamera value="1"/>
+    <funcPlane value="Linear"/>
+    <methPlane value="easeOut"/>
+    <timePlane value="0.8"/>
+  </Tweens_Images>
+  <Blur_Effect>
+    <useBlur value="false"/>
+    <blur value="2"/>
+  </Blur_Effect>
+  <Glow_Effect>
+    <useGlow value="true"/>
+    <useInner value="false"/>
+    <glowStrength value="2"/>
+    <glowColor value="0xAAAAAA"/>
+    <glowAlpha value="0.8"/>
+    <glow value="6"/>
+  </Glow_Effect>
+  <Glow_Effect_Near>
+    <useGlow value="true"/>
+    <useInner value="false"/>
+    <glowStrength value="1"/>
+    <glowColor value="0xff0000"/>
+    <glowAlpha value="0.8"/>
+    <glow value="4"/>
+  </Glow_Effect_Near>
+  <ToolTip_Properties>
+    <toolOffSet value="center"/>
+    <functionEasy value="Strong"/>
+    <appearance value="bottom"/>
+    <tweenTime value="0.6"/>
+    <padding value="15"/>
+    <backColor value="16777215"/>
+    <backColor2 value="16777215"/>
+    <backAlpha value="0.7"/>
+    <cornerRadius value="5"/>
+    <toolDistance value="16"/>
+    <hookSize value="8"/>
+    <borderThickness value="1"/>
+    <borderColor value="7829367"/>
+    <fontFace value="verdana"/>
+    <fontColor value="0"/>
+    <fontSize value="15"/>
+  </ToolTip_Properties>
+  <Scroll_Bar>
+    <type_Bar value="MyBar/Glass/Bar.xml"/>
+    <width value="400"/>
+    <positionY value="244"/>
+  </Scroll_Bar>
+</settings>

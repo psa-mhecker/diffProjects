@@ -1,0 +1,27 @@
+<accordion>
+
+ <button titlu="t1" bg="imag/thumbs/01.jpg" abg="imag/01.jpg" destination="http://www.flashxml.net/accordion-basic.html" target="_blank">
+ </button>
+
+ <button titlu="t2" bg="imag/thumbs/02.jpg" abg="imag/02.jpg" destination="http://www.flashxml.net/accordion-basic.html" target="_blank">
+</button>
+ 
+ <button titlu="t3" bg="imag/thumbs/03.jpg" abg="imag/03.jpg" destination="http://www.flashxml.net/accordion-basic.html" target="_blank">
+</button>
+
+ <button titlu="t4" bg="imag/thumbs/04.jpg" abg="imag/04.jpg" destination="http://www.flashxml.net/accordion-basic.html" target="_blank">
+</button>
+
+<button titlu="t5" bg="imag/thumbs/05.jpg" abg="imag/05.jpg" destination="http://www.flashxml.net/accordion-basic.html" target="_blank">
+</button>
+
+<button titlu="t6" bg="imag/thumbs/06.jpg" abg="imag/06.jpg" destination="http://www.flashxml.net/accordion-basic.html" target="_blank">
+</button>
+
+<button titlu="t7" bg="imag/thumbs/07.jpg" abg="imag/07.jpg" destination="http://www.flashxml.net/accordion-basic.html" target="_blank">
+</button>
+
+<button titlu="t8" bg="imag/thumbs/08.jpg" abg="imag/08.jpg" destination="http://www.flashxml.net/accordion-basic.html" target="_blank">
+</button>
+
+</accordion>

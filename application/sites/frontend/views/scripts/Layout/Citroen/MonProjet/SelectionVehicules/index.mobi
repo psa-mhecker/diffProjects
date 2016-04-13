@@ -1,0 +1,17 @@
+{if !$bAffichageFormulaire && !$smarty.get.id}
+<a name="V"></a>
+<section id="{$aParams.ID_HTML}" class="selection-vehicules no-title">
+    <h2 class="title-lvl4">{'MES_VEHICULES'|t}</h2>
+    <div class="slider project evf">
+        <div class="row of1">
+            {for $i=0 to 2}
+                {if (is_null($iEditionId)||$iEditionId neq $i) && isset($aSelectionDetails.$i)  }
+                    {include file="{$sIncludeTplPath}/carSelectionDetails.mobi"}
+                {else}
+                    {include file="{$sIncludeTplPath}/carSelectionForm.mobi"}
+                {/if}
+            {/for}
+        </div><!-- / .row -->
+    </div><!-- / .slider -->
+</section>
+{/if}

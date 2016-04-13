@@ -1,0 +1,966 @@
+DATE_FORMAT_PHP;d/m/Y
+DATE_HEURE_FORMAT_PHP;"d/m/Y H:i:s"
+DATE_FORMAT_DB;DD/MM/YYYY
+DATE_FORMAT_LABEL;JJ/MM/AAAA
+DATE_FORMAT_LABEL_EDITION;"JJ/MM/AAAA, MM/AAAA ou AAAA"
+HOUR_FORMAT_LABEL;hh:mm
+UTILISATEUR;Utilisateur
+SITE;Site
+ADD;aj
+DEL;sup
+EDIT;ed
+FORM_BUTTON_COPY;Dupliquer
+TABLE_FILTER_ALL;Tout
+TABLE_PAGE_PREV;prec.
+TABLE_PAGE_NEXT;suiv.
+TABLE_NO_RECORD;"Pas d'enregistrement"
+TABLE_RECORDS;enr.
+TABLE_FORMAT_HOUR;h.
+TABLE_FORMAT_DAY;j.
+FORM_BUTTON_ADD;Ajouter
+FORM_BUTTON_DELETE;Supprimer
+FORM_BUTTON_EDIT;Modifier
+FORM_BUTTON_PREVIEW;Previs.
+FORM_BUTTON_SAVE;Enregistrer
+FORM_BUTTON_BACK;Retour
+FORM_MAP_ADD;"Modifier l'ImageMap"
+FORM_BUTTON_ADD_VALUE;"Ajouter une valeur"
+FORM_BUTTON_ADD_MULTI;"Ajouter : "
+FORM_BUTTON_COLOR;"Couleur de fond"
+FORM_BUTTON_EDITOR;"Lancer l'assistant de mise en page"
+FORM_BUTTON_FILE_DELETE;Supprimer
+FORM_BUTTON_FILE_SELECT;"Selectionner un fichier"
+FORM_BUTTON_FILE_VIEW;"Voir le fichier"
+FORM_BUTTON_IMG_SELECT;"Selectionner une image"
+FORM_BUTTON_IMG_TITLE;Aperçu
+FORM_BUTTON_LINK_SELECT;"Selectionner un lien"
+FORM_BUTTON_SEARCH;Rechercher
+FORM_FILL;"Veuillez remplir"
+FORM_LABEL;Libelle
+FORM_MSG_CONFIRM_DEL;"Confirmez-vous cette suppression ?"
+FORM_MSG_ERROR_HIERARCHY_PAGE_LANG;"Vous devez d'abord enregistrer la page parente dans la langue."
+FORM_MSG_DATE;"une date valide au format JJ/MM/AAAA"
+FORM_MSG_DATE_EDITION;"une date valide au format JJ/MM/AAAA, MM/AAAA ou AAAA"
+FORM_MSG_HEURE;"une heure valide au format hh:mi (heure sur 24h)"
+FORM_MSG_LIMIT_1;"Vous ne pouvez saisir que"
+FORM_MSG_LIMIT_2;"caracteres au maximum pour"
+FORM_MSG_LIST_AVAILABLE;"Valeurs disponibles"
+FORM_MSG_LIST_SELECTED;"Valeurs selectionnees"
+FORM_MSG_MAIL;"une adresse email valide"
+FORM_MSG_NUMBER;"une valeur entiere"
+FORM_MSG_REAL;"une valeur numerique"
+FORM_MSG_TELEPHONE;"un numero de telephone valide"
+FORM_MSG_URL;"une adresse Internet valide : http://... ou https://..."
+FORM_MSG_ALPHANUM;"un texte ne contenant que des lettres, des chiffres et '_'"
+FORM_MSG_VALUE_CHOOSE;"Veuillez choisir une valeur pour"
+FORM_MSG_VALUE_CONTENT;"Veuillez saisir un contenu pour"
+FORM_MSG_VALUE_FILE;"Veuillez choisir un fichier pour"
+FORM_MSG_VALUE_REQUIRE;"Veuillez saisir une valeur pour"
+FORM_MSG_WITH;avec
+FORM_MSG_YEAR;"une annee sur 4 chiffres"
+FORM_MSG_YES;oui
+FORM_SELECT_CHOOSE;"-> Choisissez"
+EDITOR_ANCHOR;Ancre
+EDITOR_BOLD;Gras
+EDITOR_BRING_ABOVE_TEXT;"Texte en dessous"
+EDITOR_BRING_FORWARD;Avancer
+EDITOR_BRING_TO_FRONT;"Mettre au premier plan"
+EDITOR_CHARMAP;"Caracteres speciaux"
+EDITOR_CLEAN;"Nettoyage du HTML"
+EDITOR_COPY;Copier
+EDITOR_CUT;Couper
+EDITOR_DELETECELLS;"Supprimer les cellules"
+EDITOR_DELETECOLS;"Supprimer les colonnes"
+EDITOR_DELETEROWS;"Supprimer les lignes"
+EDITOR_DETAILS;"Afficher les details"
+EDITOR_DOCUMENT;"Inserer un document"
+EDITOR_FLASH;"Inserer une animation flash"
+EDITOR_FONTNAME;Police
+EDITOR_FONTSIZE;Taille
+EDITOR_HELP;Aide
+EDITOR_HR;"Ligne horizontale"
+DECMD_PAGEBREAK;"Saut de page"
+EDITOR_HTML;"Code HTML"
+EDITOR_IMAGE;"Inserer une image"
+EDITOR_IMAGE_PROPERTY;"Proprietes de l'image"
+EDITOR_INDENT;"Augmenter le retrait"
+EDITOR_INSERTCELL;"Inserer des cellules"
+EDITOR_INSERTCOL;"Inserer des colonnes"
+EDITOR_INSERTROW;"Inserer des lignes"
+EDITOR_INSERTTABLE;"Inserer une table"
+EDITOR_INTERNAL;"Lien interne"
+EDITOR_ITALIC;Italique
+EDITOR_JUSTIFYCENTER;Centre
+EDITOR_JUSTIFYLEFT;"Aligner a gauche"
+EDITOR_JUSTIFYRIGHT;"Aligner a droite"
+EDITOR_LINK;"Lien externe"
+EDITOR_LINKCHECK;"Verifier les liens du document"
+EDITOR_LOCK_ELEMENT;"Verrouiller l'element"
+EDITOR_MAKE_ABSOLUTE;"Rendre absolu"
+EDITOR_MERGECELLS;"Fusionner les cellules"
+EDITOR_MODIFTABLE;"Modifier table / cellule"
+EDITOR_ORDERLIST;Numerotation
+EDITOR_OUTDENT;"Diminuer le retrait"
+EDITOR_PALETTE;"Palette d'images"
+EDITOR_PASTE;Coller
+EDITOR_REDO;Refaire
+EDITOR_REMOVEFORMAT;"Effacer la mise en forme"
+EDITOR_SAVE;Enregistrer
+EDITOR_SELECTALL;"Selectionner tout"
+EDITOR_SEND_BACKWARD;Reculer
+EDITOR_SEND_BELOW_TEXT;"Texte au-dessus"
+EDITOR_SEND_TO_BACK;"Mettre en arriere plan"
+EDITOR_SETBACKCOLOR;"Couleur de fond"
+EDITOR_SETFORECOLOR;"Couleur de police"
+EDITOR_SNAPTOGRID;"Aligner sur la grille"
+EDITOR_SPLITCELL;"Fractionner les cellules"
+EDITOR_STRIKETHROUGH;Barre
+EDITOR_SUBSCRIPT;Indice
+EDITOR_SUPERSCRIPT;Exposant
+EDITOR_TABLE_PROPERTY;"Proprietes du tableau"
+EDITOR_TEMPLATE;"Choix d'un modele"
+EDITOR_CONTENT;"Lien vers une page du site"
+EDITOR_IMAGEMAP;ImageMap
+EDITOR_TIDY;"Nettoyer le code Pelican_Html avec HtmlTidy"
+EDITOR_ACCESS;"Simulation d'un navigateur textuel"
+EDITOR_UNDERLINE;Souligne
+EDITOR_UNDO;Annuler
+EDITOR_UNLINK;"Supprimer le lien"
+EDITOR_UNORDERLIST;Puces
+EDITOR_VISIBLEBORDERS;"Afficher/Masquer les bordures"
+CAL_DATE_FORMAT;dd/mm/yyyy
+CAL_APRIL;Avril
+CAL_AUGUST;Août
+CAL_CHOOSE_MONTH;"Choisissez un mois."
+CAL_CHOOSE_YEAR;"Choisissez une annee."
+CAL_CURRENT_MONTH;"Afficher le mois courant"
+CAL_DECEMBER;Decembre
+CAL_FEBRUARY;Fevrier
+CAL_FRI;Ven
+CAL_FRIDAY;Vendredi
+CAL_JANUARY;Janvier
+CAL_JULY;Juillet
+CAL_JUNE;Juin
+CAL_MARCH;Mars
+CAL_MAY;Mai
+CAL_MON;Lun
+CAL_MONDAY;Lundi
+CAL_NEXT_MONTH;"Cliquez pour passer au mois suivant. Gardez le bouton de la souris appuye pour faire defiler automatiquement."
+CAL_NOVEMBER;Novembre
+CAL_OCTOBER;Octobre
+CAL_PREVIOUS_MONTH;"Cliquez pour passer au mois precedent. Gardez le bouton de la souris appuye pour faire defiler automatiquement."
+CAL_SAT;Sam
+CAL_SATURDAY;Samedi
+CAL_SELECT_DATE;"Selectionner le"
+CAL_SEPTEMBER;Septembre
+CAL_SHOW;"Afficher le "
+CAL_SUN;Dim
+CAL_SUNDAY;Dimanche
+CAL_THU;Jeu
+CAL_THURSDAY;Jeudi
+CAL_TUE;Mar
+CAL_TUESDAY;Mardi
+CAL_WED;Mer
+CAL_WEDNESDAY;Mercredi
+CAL_WEEK;Sem.
+POPUP_ANCHOR_PROPERTIES;"Proprietes d'ancre"
+POPUP_ANCHOR_TITLE;Ancre
+POPUP_BUTTON_BACK;Retour
+POPUP_BUTTON_CANCEL;Annuler
+POPUP_BUTTON_CLOSE;Fermer
+POPUP_BUTTON_OK;Valider
+POPUP_BUTTON_PROPERTIES;Proprietes
+POPUP_BUTTON_RESTORE;Retablir
+POPUP_BUTTON_SAVE;Valider
+POPUP_BUTTON_SELECT;Selectionner
+POPUP_COLOR_CUSTOM_PALETT;"palette personnalisee"
+POPUP_COLOR_TITLE;"Palette de couleurs"
+POPUP_ICONS_TITLE;Icones
+POPUP_LABEL_ACTION;Action
+POPUP_LABEL_ADD;Ajouter
+POPUP_LABEL_BORDER;Bordure
+POPUP_LABEL_CENTER;Centre
+POPUP_LABEL_COLOR;Couleur
+POPUP_LABEL_DEL;Supprimer
+POPUP_LABEL_FILE;Fichier
+POPUP_LABEL_FOLDER;Dossier
+POPUP_LABEL_HEIGHT;Hauteur
+POPUP_LABEL_HOR_ALIGN;"Align. Hor."
+POPUP_LABEL_LEFT;Gauche
+POPUP_LABEL_MIDDLE;Milieu
+POPUP_LABEL_NAME;Nom
+POPUP_LABEL_TITLE;Titre
+POPUP_LABEL_NONE;aucune
+POPUP_LABEL_NONE2;aucun
+POPUP_LABEL_RIGHT;Droite
+POPUP_LABEL_TOP;Haut
+POPUP_LABEL_VERT_ALIGN;"Align. Vert."
+POPUP_LABEL_WIDTH;Largeur
+POPUP_LINK_CURRENT_PAGE;"Page courante"
+POPUP_LINK_CUSTOM;personnalisee
+POPUP_LINK_NEW_PAGE;"Nouvelle fenêtre"
+POPUP_LINK_PARENT_FRAME;"Cadre parent"
+POPUP_LINK_TARGET;Cible
+POPUP_LINK_TITLE;"Proprietes de liens"
+POPUP_LINK_TOP_FRAME;"Toute la fenêtre"
+POPUP_MEDIA_BROWSER;Bibliotheque
+POPUP_MEDIA_FILE;Fichiers
+POPUP_MEDIA_FLASH;Flash
+POPUP_MEDIA_IMAGE;Images
+POPUP_MEDIA_VIDEO;Video
+POPUP_MEDIA_LABEL_ADD_FILE;"Ajout d'un fichier"
+POPUP_MEDIA_LABEL_ADD_FOLDER;"Ajout d'un dossier"
+POPUP_MEDIA_LABEL_LAST_ACCES;"Date de creation"
+POPUP_MEDIA_LABEL_FILE_NAME;Fichier
+POPUP_MEDIA_LABEL_NEW_FILE;Fichier(s)
+POPUP_MEDIA_LABEL_NEW_FILE_COMMENT;"(upload multiple, sauf IE)"
+POPUP_MEDIA_LABEL_NEW_FOLDER;"Nouveau dossier"
+POPUP_MEDIA_LABEL_NO_FILE;"Pas de fichier"
+POPUP_MEDIA_LABEL_PATH;Chemin
+POPUP_MEDIA_LABEL_HTTP;Url
+POPUP_MEDIA_LABEL_PROPERTIES;Proprietes
+POPUP_MEDIA_LABEL_REPLACE;Remplacer
+POPUP_MEDIA_LABEL_SIZE;Taille
+POPUP_MEDIA_LIBRARY_TITLE;"Bibliotheque de medias"
+POPUP_MEDIA_MSG_DEL_FILE;"Etes-vous sûr(e) de vouloir supprimer ce fichier ?"
+POPUP_MEDIA_MSG_DEL_FOLDER;"Etes-vous sûr(e) de vouloir supprimer ce dossier ?"
+POPUP_MEDIA_MSG_MOVE_FOLDER;"Etes-vous sûr(e) de vouloir deplacer ce dossier ?"
+POPUP_MEDIA_MSG_MOVE_MEDIA;"Etes-vous sûr(e) de vouloir deplacer ce fichier ?"
+POPUP_MEDIA_MSG_DEL_ROOT;"Vous ne pouvez pas supprimer le dossier racine : Veuillez selectionner un autre dossier"
+POPUP_MEDIA_MSG_EMPTY_FOLDER;"Le dossier doit être vide pour pouvoir être supprime"
+POPUP_MEDIA_MSG_REAL_SIZE;"Taille reelle"
+POPUP_MEDIA_MSG_SELECT_FOLDER;"Veuillez selectionner un dossier"
+POPUP_MEDIA_MSG_SELECT_MEDIA;"Veuillez selectionner un fichier"
+POPUP_MEDIA_MSG_DEL_MEDIA_FORMAT;"Etes-vous sûr(e) de vouloir supprimer ce format personnalise ?"
+POPUP_REF_USED;"Cette valeur est deja utilisee."
+POPUP_SEARCH_EMPTY;"Saisissez quelque chose a chercher."
+POPUP_SEARCH_LIMIT;"Plus de 100 valeurs ont ete trouvees.
+Soyez plus precis."
+POPUP_SEARCH_NOFOUND;"Rien n'a ete trouve."
+POPUP_SEARCH_TITLE;Recherche
+POPUP_SEARCH_WAIT;"Recherche en cours..."
+POPUP_SPECIAL_CHARS_TITLE;"Caracteres Speciaux"
+POPUP_LABEL_BACKGROUND_COLOR;"Couleur de fond"
+POPUP_TABLE_BASELINE;"Ligne de base"
+POPUP_TABLE_CELL;Cellule
+POPUP_TABLE_CELL_PROPERTIES;"Proprietes de Cellule"
+POPUP_TABLE_COLUMNS;Colonnes
+POPUP_TABLE_LINE;Ligne
+POPUP_TABLE_LINES;Lignes
+POPUP_TABLE_LINE_PROPERTIES;"Proprietes de Ligne"
+POPUP_TABLE_NOWRAP;"Pas de retour a la ligne"
+POPUP_TABLE_TABLE_PROPERTIES;"Proprietes de Table"
+POPUP_TABLE_TITLE;"Proprietes de Table/Ligne/Cellule"
+POPUP_TEMPLATES_TITLE;Modeles
+POPUP_UPLOAD_ATTACHED;"Fichier joint"
+POPUP_UPLOAD_IMPOSSIBLE;"Impossible de copier le fichier."
+POPUP_UPLOAD_TOO_BIG_PHP;"Le fichier depasse la limite autorisee par le serveur (php.ini)"
+POPUP_UPLOAD_TOO_BIG;"Le fichier depasse la limite autorisee dans le formulaire Pelican_Html "
+POPUP_UPLOAD_PART_ONLY;"L'envoi du fichier a ete interrompu pendant le transfert"
+POPUP_UPLOAD_NO_FILE;"Le fichier que vous avez envoye a une taille nulle"
+POPUP_UPLOAD_REPLACE;"Le fichier existe deja : vous pouvez soit le remplacer, soit renommer le fichier transfere"
+POPUP_UPLOAD_SEND;Envoyer
+POPUP_UPLOAD_TITLE;"Transfert de fichier"
+POPUP_UPLOAD_WRONG_TYPE;"Type de fichier non autorise"
+POPUP_UPLOAD_ALREADY_EXISTS;"Le fichier existe deja dans "
+POPUP_LABEL_VERT_SPACE;"Esp. Vertical"
+POPUP_LABEL_HOR_SPACE;"Esp. Horizontal"
+POPUP_LABEL_ALIGNMENT;Alignement
+POPUP_LABEL_CAPTION;Legende
+POPUP_LABEL_QUALITY;Qualite
+POPUP_LABEL_QUALITY_LOW;Basse
+POPUP_LABEL_QUALITY_MEDIUM;Moyenne
+POPUP_LABEL_QUALITY_HIGH;Haute
+POPUP_LABEL_QUALITY_BEST;Automatique
+POPUP_LABEL_ALT;"Info bulle"
+POPUP_LABEL_ORIGINAL_SIZE;"Revenir a la taille originale"
+POPUP_LABEL_PRESERVE;"Preserver les dimensions"
+FILE_BYTE;o
+FILE_FULL_BYTE;octet(s)
+TITRE;Titre
+LEGENDE;"Legende (alt)"
+COMMENTAIRES;Commentaires
+FICHIERS;Fichiers
+FLASH;Flash
+IMAGES;Images
+VIDEOS;Videos
+RUBRIQUES;Rubriques
+CONTENUS;Contenus
+VIRTUAL_KEYBOARD;"Clavier virtuel"
+CHARACTER;caractere
+NONE_F;Aucune
+NONE;Aucun
+AFFICHER;Afficher
+MASQUER;Masquer
+MSG_AIDE_SELECT;"Aide a la selection"
+CONTENU_UTILISER;"Contenu utilise par un autre contenu"
+PAGE_CONTENT_HIER;"Page contenant des elements hierarchiques"
+PAGE_MENU_NAV;"Page utilisee dans des menus de navigation"
+TAG_PAGE;"TAG utilise dans une page"
+ERROR;erreur
+SUPP_IMPOS;"Suppression impossible"
+LOGIN;Identifiant
+PASSWORD;"Mot de passe"
+CHOOSE_SITE;"Choisissez votre site"
+FIRST_NAME;Nom
+SECOND_NAME;Prenom
+EMAIL;Email
+SUBSCRIPTION_DATE;"Date inscription"
+ENCADRE;Encadre
+EXPIRATION;Expiration
+RUBRIQUE;Rubrique
+SECTION;Section
+DESCRIPTION;Description
+ACTIF;Actif
+PAYANT;Payant
+NOM_SERVICE;"Nom du service"
+DESCRIPTION_SERVICE;"Description du service"
+ID;ID
+AUTEUR;Auteur
+DATE;Date
+ETAT;Etat
+CREER;Creer
+PAGE;Page
+LIEN_COMPLET;"Lien complet"
+LIEN_SIMPLE;"Lien simple"
+CHOISIR;Choisir
+CONTRIBUTIONS;Contributions
+ABONNES;Abonnes
+ACTIVER;Activer
+DESACTIVER;Desactiver
+BLOC;Bloc
+BLOCS;Blocs
+MODULE;Module
+PLUGIN;Plugin
+USER_NAME;"Nom utilisateur"
+PROFIL;Profil
+TYPE_CONTENU_ASSOCIE;"Type de Contenu associe"
+TEMPLATE;Template
+DESC;Desc
+PLUGIN_CONTENT;Cont.
+PLUGIN_NAV;Nav.
+URLS;Url(s)
+ROLE;Role
+DEPENDANCES;Dependances
+TABLE;Table
+NUMBER;Numero
+START;Debut
+PUBLICATION;Publication
+PARAMETRES;Parametres
+SEO;Referencement
+TAGS;Tags
+WRONG_LOGIN;"Identifiant ou mot de passe incorrect."
+MAX_TRIES;"Nombre de tenatives depasse."
+OFFLINE;"Hors ligne"
+DEV_SITE;"Site de developpement"
+PREPROD_SITE;"Site de preproduction"
+PROD_SITE;"Site de production"
+DELETE_PAGE_ALERT;"Attention, la suppression de cette rubrique n'entraîne pas la suppression des contenus qui lui sont associes"
+PAGE_NOT_FOUND;"Page not found"
+ASSOCIATED_CONTENT_ORDER;"Ordre des contenus associes"
+GLOBAL_PAGE;-General-
+CHAPO;Chapo
+PHOTO;Photo
+SHORT_ADDRESS;"Adresse courte"
+LONG_ADDRESS;"Adresse reelle"
+LONG_TITLE;"Titre long"
+SHORT_TITLE;"Titre court"
+LAYOUT;Gabarit
+PARAMETER;Parametre
+SHORTCUT;Raccourc.
+CODE;Code
+ALONE_LAYOUT;"Gabarit unique"
+ONE_USE;"Une utilisation"
+HIDE;Cache
+LINK;Lien
+LOCKED_RECORD;"Cet enregistrement est verrouille pour modification par : "
+ONE_SITE_LAYOUT;"1 seul Gabarit/site"
+ONE_SITE_USE;"1 seule utilisation/site"
+HIDE_LAYOUT;"Gabarit cache"
+LINK_PARAMETER;"Parametre d'url"
+LAYOUT_SHORTCUT;Raccourci
+NB_USE;"NB Utilisation"
+TYPE;Type
+COLUMN;Colonne
+FRONT_PATH;"Chemin FO"
+BACK_PATH;"Chemin BO"
+LINK_LABEL;"Libelle lien"
+ORDRE;Ordre
+TEXTE;Texte
+SCHEDULING_BLOC;"Bloc programmable"
+(HOME);"(page d'accueil)"
+PUBLICATION_ON;"le "
+PUBLICATION_BY; par 
+posted;publiee
+Image;Image
+Subtitle;"Sous titre"
+BoldTitle;"Titre en gras"
+Visual1;"Visuel 1"
+Visual2;"Visuel 2"
+vers;vers.
+Miscellaneous;Divers
+version;Version
+versions;versions
+Fonctionnalite;Fonctionnalite
+Site(s);Site(s)
+Javascript a inclure;"Javascript a inclure"
+Tag http;"Tag http"
+Tag https;"Tag https"
+Gabarit Mobile;"Gabarit Mobile"
+Gabarit Web;"Gabarit Web"
+Zone;Zone
+Cache;Cache
+Entete;Entête
+Pied;Pied
+Titre des pages;"Titre des pages"
+URL principale;"URL principale"
+URL claire;"URL claire"
+Raccourcis/Alias;"Raccourcis/Alias (code 200)"
+Redirections;"Redirections (code 301)"
+Droits etendus;"Droits etendus"
+Categorie;Categorie
+Aj.;Aj.
+Sup.;Sup.
+OK;OK
+Drag&Drop;"Drag&Drop (zone portal)"
+Ed.;Ed.
+Url update;"Mettre a jour l'URL"
+Menu properties;"Proprietes de menu"
+Info external links;"(=> Pour des liens externes, taper 'http://' avant le lien)"
+Accesibility key;"Touche d'acc."
+Lost password;"Mot de passe oublie ?"
+Subscribe;S'inscrire
+Authenticate;S'authentifier
+User name;"Nom d'utilisateur"
+Package name;"Nom du package"
+Activation date;"Actif a partir du"
+Until;Jusqu'au
+Public;Public
+Admin reserved;"Page reservee aux gestionnaires"
+Taxonomy;Taxonomie
+Services;Services
+Civility;Civilite
+Fonction;Fonction
+One criteria;"Saisissez au moins un critere"
+1 level;"1 niveau"
+2 levels;"2 niveaux"
+Levels;Niveaux
+End;Fin
+Deidcated to subscribers;"Soumis a abonnement"
+By default;"Par defaut"
+Picto;Picto
+Content;Contenu
+Player size;"Taille du lecteur"
+Free content;"Contenu libre"
+Content order;"Ordre des contenus"
+Content research;"Rechercher les contenus"
+Content type;"Type de contenu"
+State;Statut
+Author;Auteur
+Created on;"Cree entre le"
+And on;"Et le"
+Statistics;Statistiques
+Workflow;Workflow
+80 letters alert;"Rappel : le texte concerne par ce lien ne doit pas exceder 80 caracteres"
+Preview;Previsu.
+No template;"Aucun template identifie"
+Indexer;Indexer
+Displayed publication date;"Date de publication affichee"
+Display date begin;"Date de debut d'affichage"
+Display end date;"Date de fin d'affichage"
+Upd.;Maj.
+Meta title;"Titre (Meta)"
+Meta keywords;"Mots cles (Meta)"
+Meta description;"Description (Meta)"
+Linked page;"Rubrique d'appartenance"
+In page;"Dans la rubrique"
+In home;"En page d'accueil"
+Auto raise;"Remontee auto."
+Image link;"Image lien"
+Visual;Visuel
+Diffusion date and hour;"Date et heure de diffusion"
+Frame type;"Type d'encadre"
+Image position;"Position de l'image"
+Question;Question
+Answer;Reponse
+Attached file;"Piece joint"
+Main text;"Texte Principal"
+Geolocation;Geolocalisation
+Commentary;Commentaire
+Send;Envoi
+Name or content;"Nom ou contenu"
+Backend horizontal display;"Affichage horizontal (BO)"
+Identifier;Identfiant
+Hide when add;"Masquer a l'ajout"
+Start state;"Etat de depart"
+Next state;"Etat suivant"
+(Root);(Racine)
+...New page;"...Nouvelle rubrique"
+Complement;Complement
+Icon;Icone
+Media type;"Types de media"
+Zone type;"Type de zone"
+Template type;"Types de templates"
+Languages;Langues
+Template groups;"Groupes de templates"
+Country;Pays
+Subscribers profiles;"Profils des abonnes"
+Content categories;"Categories de contenu"
+Reference data;"Donnees de reference"
+Reference table;"Tables de reference"
+Backend access;"Acces BO"
+See;Voir
+Global parameters;"Parametres generaux"
+Alias;Alias
+Fonctionnalities;Fonctionnalites
+Content types;"Types de contenus"
+Minisite;Minisite
+Label (state);"Libelle (statut)"
+Label (saction);"Libelle (action)"
+Publication state;"Etat de publication"
+Layout type;"Type de gabarit"
+Postal code;"Code Postal"
+Address;Adresse
+Town;Ville
+Phone;Telephone
+Mobile;Mobile
+Fax;Telecopie
+Action name;"Nom de l'action"
+Action description;"Description de l'action"
+Output format;"Format de sortie"
+Accroche;Accroche
+Start hour;"Heure de lancement"
+End hour;"Heure de fin"
+Subscribers list;"Liste des abonnes"
+Unabled until;"Actif a partir de"
+Free/public package;"Package gratuit/public"
+Services included in package;"Services compris dans le package"
+Partners with package access;"Partenaires ayant acces au package"
+Activate WebService;"Activer ce WebService"
+PHP Class;Classe
+Refernce;Referencer
+Fonctionality type;"Type de fonctionnalite"
+Informations;Informations
+Profiles;Profil(s)
+Users;"Les utilisateurs"
+Name or path;"Nom ou chemin"
+Groupe;Groupe
+Back;Back
+Front;Front
+Template_type;"Type de template"
+Complement2;Complement
+Root directory;"Repertoire racine"
+Tag type;"Type de tag"
+Tag identifier;"Identifiant Tag"
+Available alias;"Alias disponibles"
+Backend;"Back Office"
+Preserve DNS;"Preserver le DNS"
+Site languages;"Langues du site"
+Apart from French;"(en plus du français)"
+Sites;Sites
+Left label;"Libelle gauche"
+CSS class;"Classe CSS"
+Available blocs;"Blocs non selectionnes"
+Selected blocs;"Blocs selectionnes"
+Zone category;"Categorie de zone"
+Direct zone;Direct
+Ajax zone;Ajax
+Iframe zone;Iframe
+Liste;Liste
+Edition;Edition
+Bloc type;"Type de bloc"
+Ajout;Ajout
+Suppression;Suppression
+VISUEL;Visuel
+PICTO_RUBRIQUE;Picto/Rubrique
+IMAGE_FOND_GENERALE;"Image de fond generale"
+DATE_DEBUT;"Date de debut"
+DATE_FIN;"Date de fin"
+Ordre d'affichage;"Ordre d'affichage"
+Poll already voted;"Vote non pris en compte. Vous avez deja vote !"
+ACCES_BACK_OFFICE;"Acces Back Office"
+ACL;Actualites
+ADDRESS_LINE_1;"Adresse (ligne 1)"
+ADDRESS_LINE_2;"Adresse (ligne 2)"
+ADD_AGAIN;"Ajouter a nouveau"
+ADD_TO_BASKET;"Ajouter au panier"
+ADD_TO_COMPARISON;"Ajouter a la comparaison"
+ADD_TO_QUICKLINKS;"Ajouter aux liens rapides"
+ADMINISTRATION;Administration
+ALL;Tout
+ALLEMAND;Allemand
+ALL_FEATURES;"Toutes les fonctionnalites"
+Analytics;Analytique
+ANGLAIS;Anglais
+ANNOUNCEMENTS;Annonces
+Application mobile;"Application mobile"
+AREAS_OF_INTEREST;"Domaines d'interêt"
+Authentification;Authentification
+AWARD_TAB;Recompenses
+BackgroundColor;"Couleur de fond"
+BackgroundImage;"Image de fond"
+BACKOFFICE;"Back Office"
+BACK_TO_LIST;"Retour a la liste"
+Banner;Banniere
+BANNER_SAMPLE;"Les nouvelles technologies au futur quotidien"
+BROWSE;Parcourir
+BROWSE_PRODUCTS;"Parcourir les produits"
+BUSINESS_PROFILE;"Profil professionnel"
+CACHE;Cache
+Carousel;Carrousel
+CATEGORIES;Categories
+CERTIFICATE;Certificat
+CHANGE_MAIL_CONFIRMATION;"Un e-mail vous a ete envoye avec un lien pour confirmer le changement."
+CHANGE_MAIL_ERROR_PWD_TEXT;"Mot de passe non valable"
+CHANGE_MAIL_ERROR_TOKEN;"CHANGE_MAIL_ERROR_TOKEN - to be translated"
+CHANGE_MAIL_LABEL;"Changement d'email"
+CHANGE_MAIL_MAIL_SUBJECT;"Changement d'email utilisateur"
+CHANGE_MAIL_MAIL_TEXT;"
+Veuillez cliquer sur le lien ci-dessous pour proceder au changement de courriel
+
+##URL##
+
+"
+CHANGE_MAIL_TEXT_PRESENTATION;"Veuillez saisir votre mot de passe pour confirmer votre nouvel adresse electronique"
+CHANGE_VIEW;"Modifier l'affichage"
+CHOOSE_ALL;"Choisir tout"
+CHOOSE_LOGITECH_DISTRIBUTOR;"CHOOSE_LOGITECH_DISTRIBUTOR - N/A"
+CITY;Ville
+CIVILITY;Titre
+CLOSE;Fermer
+COMPANY;Societe
+COMPANY_ERROR;"Veuillez selectionner votre pays"
+CONTACT;Contact
+CONTACT_SUBJECT;Objet
+COUNTRY;Pays
+Createur;Createur
+Createur(s);Createur(s)
+CREATE_COMPARISON;"Creer comparaison"
+Creer un contenu de type : ;"Creer un contenu de type : "
+CUSTOMER_DEPOSITS;"CUSTOMER_DEPOSITS - N/A"
+CUSTOMER_NUMBER;"CUSTOMER_NUMBER - N/A"
+dans la Recherche;"dans la Recherche"
+DAVID;David
+DECACHE_TRAD_FO;Decache
+DELIVERY_ADDRESS;"Informations sur la livraison"
+DELIVERY_TIME;"DELIVERY_TIME - N/A"
+DEMO_SITE;"Site de demonstration"
+DESIRED_END_DATE;"DESIRED_END_DATE - N/A"
+DISTRIBUTOR_ACTEBIS_PEACOK_GMBH;"DISTRIBUTOR_ACTEBIS_PEACOK_GMBH - N/A"
+DISTRIBUTOR_API_COMPUTERHANDELS_GMBH;"DISTRIBUTOR_API_COMPUTERHANDELS_GMBH - N/A"
+DISTRIBUTOR_B_COM_COMPUTER_AG;"DISTRIBUTOR_B_COM_COMPUTER_AG - N/A"
+DISTRIBUTOR_INGRAM_MICRO_DISTRIBUTION_GMBH;"DISTRIBUTOR_INGRAM_MICRO_DISTRIBUTION_GMBH - N/A"
+DNS;DNS
+DOES_YOUR_COMPANY_HAVE_AN_E_TAIL_SITE;"Votre entreprise possede-t-elle un site de vente au detail en ligne?"
+DOES_YOUR_COMPANY_HAVE_A_RETAIL_STORE;"Votre societe possede-t-elle un magasin ?"
+DONNEES_DE_REFERENCE;"Donnees de reference"
+DON_T_KNOW;"Ne sais pas"
+Dossiers;Dossiers
+DOWNLOAD;Telecharger
+DO_YOU_HAVE_AN_ACCOUNT_MANAGER_AT_LOGITECH;"Travaillez-vous avec un gestionnaire de compte Logitech?"
+EDITORIAL;EditorialFR
+EDIT_MY_NEWS;"Modifier mes actualites"
+EDIT_MY_QUICKLINKS;"Modifier ma liste a surveiller"
+EMAIL_ERROR;"Veuillez saisir votre adresse electronique"
+EMAIL_FOR_LOGIN;"Adresse electronique (pour la connexion)"
+EMAIL_SUBSCRIBER_REJECTED;"
+Malheureusement, votre compte Logitech Partner Exchange n'a pas ete approuve pour la raison suivante:
+
+##REASON##.
+
+Pour toute question, il suffit d'envoyer un courrier electronique a l'adresse ##MAIL##.
+
+Cordialement,
+Logitech Europe SA
+
+"
+EMAIL_SUBSCRIBER_REMOVED;"
+Nous sommes desoles, votre nouveau compte Logitech Partner Exchange a ete bloque.
+
+Pour toute question, il suffit d'envoyer un courrier electronique a l'adresse partner.fr@logitech.com.
+
+Cordialement,
+Logitech Europe SA
+
+"
+EMAIL_SUBSCRIBER_VALIDATED;"
+Votre nouveau compte Logitech Partner Exchange a ete valide. Vous avez a present acces a l'integralite de notre site.
+
+Pour toute question, il suffit d'envoyer un courrier electronique a l'adresse partner.fr@logitech.com.
+
+Cordialement,
+Logitech Partner Exchange
+
+"
+EMBARGO_PLD_LEGEND;Prochainement
+ENQUIRY_FORM_BLOC_A_LABEL;"ENQUIRY_FORM_BLOC_A_LABEL - N/A"
+ENQUIRY_FORM_BLOC_B_LABEL;"ENQUIRY_FORM_BLOC_B_LABEL - N/A"
+ENQUIRY_FORM_BLOC_C_LABEL;"ENQUIRY_FORM_BLOC_C_LABEL - N/A"
+ENQUIRY_FORM_BLOC_D_LABEL;"ENQUIRY_FORM_BLOC_D_LABEL - N/A"
+ENQUIRY_FORM_BLOC_E_LABEL;"ENQUIRY_FORM_BLOC_E_LABEL - N/A"
+ENQUIRY_FORM_BLOC_F_LABEL;"ENQUIRY_FORM_BLOC_F_LABEL - N/A"
+ENQUIRY_LINK;"ENQUIRY_LINK - N/A"
+ERROR_POS_DENIED_ACCESS;"Vous devez être un utilisateur valide pour acceder a la page POS Material ou Marketing collateral"
+EVENT_TAB;Evenements
+EXCLUDING_VAT;"Hors TVA"
+EXPLOITATION;Exploitation
+EXPORT_TRAD_FO;Exporter
+FAQ;Q&R
+FAX;Fax
+Featured Links;Liens
+FILTER;Filtrer
+FIND_ARCHIVED_PRODUCTS;"Rechercher des produits archives"
+FIRST_NAME_ERROR;"Veuillez saisir votre prenom"
+FIRST_TIME_DELIVERY;"FIRST_TIME_DELIVERY - N/A"
+FOCUS_AREA;"Domaines d'interêt"
+FONCTIONNALITES;Fonctionnalites
+FOOTER_COPYRIGHT_NOTICE;"Copyright 2011 Logitech. Tous droits reserves"
+FORGOT_PASSWORD;"Mot de passe oublie"
+FORGOT_PASSWORD_ERROR_EMAIL_TEXT;"Adresse electronique inconnue"
+FORGOT_PASSWORD_ERROR_PWD_TEXT;"message d'erreur pour formulaire oubli mot de passe"
+FORGOT_PASSWORD_LABEL;"Mot de passe oublie"
+FORGOT_PASSWORD_MAIL_SUBJECT;"Mot de passe oublie pour le site Logitech Partner Exchange"
+FORGOT_PASSWORD_MAIL_TEXT;"
+Vous avez indique ne plus pouvoir vous connecter a Logitech Partner Exchange.
+
+Cliquez sur le lien ci-dessous pour reinitialiser votre mot de passe afin de pouvoir vous reconnecter.
+
+##URL##
+
+Si vous avez des questions, envoyez un e-mail a partner.uk@logitech.com
+
+Cordialement,
+Logitech Europe SA
+
+"
+FORGOT_PASSWORD_TEXT_PRESENTATION_STEP1;"Saisissez votre adresse electronique afin de recevoir un message de reinitialisation de mot de passe"
+FORGOT_PASSWORD_TEXT_PRESENTATION_STEP2;"Un message electronique vous a ete envoye a votre adresse. Cliquez sur le lien contenu dans ce message pour reinitialiser votre mot de passe"
+FORGOT_PASSWORD_TEXT_PRESENTATION_STEP3;"Pour reinitialiser votre mot de passe, saisissez le nouveau mot de passe de votre choix dans les deux champs ci-dessous comme indique, puis cliquez pour enregistrer"
+FRANCAIS;Français
+GABARITS;Gabarits
+GENERAL;General
+GENERATION;Generation
+GESTION;Gestion
+GESTION_DES_TAGS;"Gestion des tags"
+GLOSSARY;Glossaire
+Has list;"Affichage en liste"
+HIGH_RESOLUTION;"Haute res"
+icone;Icone
+Identifiant;Identifiant
+IMG_CHANGE_MAIL_SAVE_NEW_EMAIL_BUTTON;"Enregistrer nouvelle adresse electronique"
+IMG_DOWNLOAD_ALL_BUTTON;"Telecharger tout"
+IMG_DOWNLOAD_SELECTED_ITEMS_BUTTON;"Telecharger les elements selectionnes"
+IMG_FORGOT_PASSWORD_SAVE_NEW_PASSWORD_BUTTON;"Enregistrer le nouveau mot de passe"
+IMG_FORGOT_PASSWORD_SEND_BUTTON;Envoyer
+IMG_LOGIN_BUTTON;Connexion
+IMG_REGISTER_BUTTON;"Inscrivez-vous !"
+IMG_REGISTRATION_BUTTON;S'inscrire
+IMG_SAVE_CHANGES_BUTTON;"Sauvegarder les changements"
+IMG_SEARCH_BUTTON;Rechercher
+IMG_SEND_ENQUIRY_BUTTON;"Envoyer la demande"
+IMG_SEND_REQUEST_BUTTON;"Envoyer la demande"
+IMG_TAKE_TOUR_BUTTON;"Regarder la presentation"
+IMG_TOP_CAT_BUTTON;N°1
+IMG_TOP_PRODUCT_BUTTON;"Nous recommandons"
+IMG_WE_RECOMMEND_BUTTON;
+IMPORT_TRAD_FO;Importer
+INTERNAL_CONTACT_SOCIETY;"INTERNAL_CONTACT_SOCIETY - N/A"
+ITEM_REQUESTED;"Elements demandes"
+l'auteur;l'auteur
+l'icone d'envoi a un ami;"l'icone d'envoi a un ami"
+l'icone d'impression;"l'icone d'impression"
+l'icone PDF;"l'icone PDF"
+la date de publication;"la date de publication"
+LABEL_FILE_TRAD_FO;Fichier
+LABEL_TRAD_LANG_FO;Langue
+LABEL_TRANSLATE;Traduction
+LANGUAGE;Langue
+LANG_EN;Anglais
+LANG_FR;Français
+LANG_LIST;"Liste des langues"
+Last articles;"Les derniers articles"
+LAST_NAME;Nom
+LAST_NAME_ERROR;"Veuillez saisir votre nom"
+le QR Code;"le QR Code"
+LEARN_MORE;"Pour en savoir plus"
+les commentaires;"les commentaires"
+les partages sociaux;"les partages sociaux"
+les tags;"les tags"
+Link;"Lien internet"
+LOGIN_ERROR_NOT_EXIST;"Mauvais login/mot de passe"
+Logo;Logo
+LOGOUT;Deconnexion
+LOT_SIZES;"LOT_SIZES - N/A"
+LOW_RESOLUTION;"Basse res"
+MAIL_APPROVAL_REQUEST_BODY;"Vous avez reçu du contenu Logitech Partner Exchange a approuver. Veuillez retourner vos commentaires avant la date indiquee. Lien : ##TOKEN## Si vous rejetez le contenu, vous êtes tenu d'en indiquer la raison. Merci."
+MAIL_APPROVAL_REQUEST_SUBJECT;"Votre approbation est requise"
+Map;Cartographie
+Map provider;Cartographie
+MEDIATHEQUE;Mediatheque
+MEDIA_TYPE;"Type de media"
+MEDIUM_RESOLUTION;"Moyenne res"
+MIGRATION_CHOOSE;Choisir
+MODERATION;Moderation
+MY_DATA;"Mes donnees"
+MY_NEWS;"Mes actualites"
+NAME;Nom
+NAVIGATION;Navigation
+NEWEST_PRODUCTS;"Produits les plus recents"
+NEWS;Actualites
+NEWSLETTERS_SETTING;"Parametres e-communications"
+NEWSLETTER_QUESTION;"Je souhaite recevoir des newsletters de Logitech"
+Newsletter_subscription;"Inscription a la newsletter"
+NEWS_SETTINGS;"Parametres nouvelles"
+NEW_EMAIL_LABEL;"Nouvelle adresse electronique"
+NEW_PASSWORD_LABEL;"Nouveau mot de passe"
+NEW_PASSWORD_REPEAT_LABEL;"Confirmation du nouveau mot de passe"
+NO;Non
+Nom;Nom
+Order;Ordre
+ORDER_SELECTED_ITEMS;"ORDER_SELECTED_ITEMS - N/A"
+OTHER_INFORMATION_SUPPORT_SERVICES_NEEDED;"OTHER_INFORMATION_SUPPORT_SERVICES_NEEDED - N/A"
+PAGES;Pages
+PHONE;Telephone
+PLEASE_CHOOSE_A_SUBJECT;"Veuillez selectionner un objet"
+Poll;Sondage
+PRESS_ARTICLES_TAB;"Articles de presse"
+PRESS_ARTICLE_MEDIA_ONLINE;"En ligne"
+PRESS_ARTICLE_MEDIA_PRINT;Imprimes
+PRESS_ARTICLE_MEDIA_RADIO;Radio
+PRESS_ARTICLE_MEDIA_TV;TV
+PRESS_RELEASES_TAB;"Communiques de presse"
+PRICE;Prix
+PRINT_PAGE;"Imprimer la page"
+PRODUCTS;Produits
+PRODUCT_ARCHIVED;"Ce produit a ete archive. Si vous avez besoin de plus de renseignements, veuillez nous contacter"
+PRODUCT_COLOR_COLLECTION;"Collection couleur"
+PRODUCT_DATASHEETS_AND_CERTIFICATES;"Fiches techniques et certificats"
+PRODUCT_DATA_SHEET;"Fiche produit"
+PRODUCT_DESCRIPTION;Description
+PRODUCT_DESC_100_WORDS;"Description de 100 mots"
+PRODUCT_DESC_25_WORDS;"Description de 25 mots"
+PRODUCT_DESC_50_WORDS;"Description de 50 mots"
+PRODUCT_DESC_AWARD;Recompenses
+PRODUCT_DESC_CORE_DIFF;"Justification de l'achat"
+PRODUCT_DESC_LANDINGPAGE;"Activites de marketing"
+PRODUCT_DESC_NEWS;Actualites
+PRODUCT_DESC_PACKAGE_CONTENTS;Contenu
+PRODUCT_DESC_SALES_BENEFITS;"Arguments de vente"
+PRODUCT_DESC_SAMPLE_AD_COPY;"Echantillon publicitaire"
+PRODUCT_DESC_SHELF_CARD_COPY;"Affiche de rayon"
+PRODUCT_EMBARGO_DATE;"Date de l'embargo"
+PRODUCT_FEATURES;Fonctions
+PRODUCT_IMAGES;Images
+PRODUCT_INFORMATION_TITLE;"Produits connexes"
+PRODUCT_LAUNCH_DATE;"Date de lancement du produit"
+PRODUCT_LOGISTIC_INFO;"Info logistique"
+PRODUCT_MODEL;"PRODUCT_MODEL - N/A"
+PRODUCT_NAME;"Nom du produit"
+PRODUCT_NAME_IN_SEARCH_AREA;"Saisir nom de produit / numeros de piece"
+PRODUCT_PART_NUMBER;"Numeros de piece"
+PRODUCT_QTY;"PRODUCT_QTY - to be translated"
+PRODUCT_RELATED_PRODUCTS;"Produits connexes"
+PRODUCT_REQUIRED_OFFER_PRICE;"PRODUCT_REQUIRED_OFFER_PRICE - to be translated"
+PRODUCT_REQUIREMENTS;"PRODUCT_REQUIREMENTS - to be translated"
+PRODUCT_TYPE;"Product type"
+PRODUCT_TYPE_ALL;All
+PRODUCT_TYPE_BUSINESS;"Business product"
+PRODUCT_TYPE_RETAIL;"Retail product"
+PRODUCT_TYPE_RETAIL_RECOMMENDED_FOR_BUSINESS;"Retail product recommended for business"
+PRODUCT_UNIFYING;Unifying
+PROFILE;Profil
+PROFILS;Profils
+Pub;Pub
+QUICKLINKS_BUBBLE_TEXT;"Ajouter a ma liste a surveiller"
+QUICKLINKS_INFOS;"Pour ajouter une page a la liste a surveiller, cliquez sur ##IMAGE## "
+QUICKLINKS_TITLE;"Liste a surveiller"
+RATING;Note
+Recent_comment;"Commentaires recents"
+Rechercher dans :;"Rechercher dans :"
+Rechercher les medias nommes ou avec l'id :;"Rechercher les medias nommes ou avec l'id :"
+RECOMMENDED_PRODUCTS;"Nous recommandons"
+RECOMMENDED_RETAIL_PRICE;"Prix recommande"
+REGISTER;S'incrire
+REGISTRATION;Inscription
+REGISTRATION_CONFIRMATION;"Votre demande d'inscription a ete transmise a votre admin pour approbation"
+REGISTRATION_LOGIN_EXIST;"Cet identifiant existe deja"
+REMEMBER_ME;"Se souvenir de moi"
+REMOVE;Supprimer
+REMOVED;Supprime
+REPEAT_PASSWORD;"Confirmation du mot de passe"
+REQUEST_FORM_COMMENT;Commentaires
+REQUEST_FORM_SUCCESS;"Votre demande a ete envoyee"
+REQUEST_HELP;Aide
+REQUEST_SELECTED_ITEMS;"Demander les elements selectionnes"
+RESET_LIST;"Reinitialiser la liste"
+RESULTS;Resultats
+RESULTS_FOUND;"resultats trouves"
+RESULTS_OF;"Resultats de"
+RESULTS_ORDERED_BY;"Resultats tries par"
+RESULTS_PER_PAGE;"Nombre de resultats par page"
+ROLES;Roles
+RSS_FEED;"Flux RSS"
+SAVE_CSV_TRAD_FO;"Enregistrer CSV"
+SAVE_MY_QUICKLINKS;"Enregistrer ma liste a surveiller"
+SEARCH;Rechercher
+SEARCH_PRODUCTS_BY_FEATURE;"Rechercher des produits par fonction"
+SEARCH_PRODUCTS_BY_RETAIL_NAME_PART_NUMBER;"Rechercher des produits par nom / numero de piece"
+SEARCH_PRODUCTS_NO_FEATURE_AVAILABLE;"Pas de fonctions disponibles pour la selection"
+SEARCH_PRODUCTS_PLEASE_SELECT_CAT;"Veuillez selectionner un categorie pour afficher les fonctions"
+SEE_MORE;"Pour en savoir plus"
+SELECT_YOUR_BUSINESS_PROFILE;"Veuillez selectionner le profil de votre societe"
+SELECT_YOUR_POSITION;"Veuillez choisir votre poste"
+SEND_REQUEST;"Envoyer la demande"
+SERVICES;Services
+SETTINGS;Paramêtres
+Short Content;Resume
+SHOW_ALL;"Voir tout"
+SITES;Sites
+SIZE;Taille
+SORT_LIST;"Trier par"
+STREET;"STREET - N/A"
+SUBJECT_CONTACT_MAIL;Sujet
+TABLEAUX_DE_BORD;"Tableaux de bord"
+TABLES_DE_REFERENCE;"Tables de reference"
+TABLES_SYSTEME;"Tables systeme"
+TAXONOMIE;Taxonomie
+TECHNICAL_SPECIFICATIONS;"Specifications techniques"
+TEMPLATES;Templates
+TENDER_DOCUMENTS_AVAILABLE;"TENDER_DOCUMENTS_AVAILABLE - N/A"
+TEST;Test
+TEST_KHADIDJA;TEST_KHADIDJA
+tete;tete
+TITLE;Titre
+TO;a
+TOP_PRODUCT;"TOP_PRODUCT - to be translated"
+TRADUCTION_BO;"Traduction BO"
+TRADUCTION_FO;"Traduction FO"
+TYPES_DE_CONTENU;"Types de contenu"
+TYPES_DE_MARQUEURS;"Types de marqueurs"
+TYPE_DE_GABARIT;"Type de gabarit"
+TYPE_OF_INFORMATION;"Nature des informations"
+UPDATES;Actualites
+UPLOAD_FILE_TRAD_FO;"Importer le fichier"
+UPLOAD_VAT_CERTIFICATE;"UPLOAD_VAT_CERTIFICATE - N/A"
+UPLOAD_VAT_TEXT_EMAIL_REMINDER;"MY_DATA_TEXT_EMAIL_REMINDER - to be translated"
+URL extranet;"URL extranet"
+User;Utilisateur
+UTILISATEURS;Utilisateurs
+Valider;Valider
+VAT_NUMBER;"Numero de TVA "
+Vote;Voter
+WANTED_TO_OFFER;"WANTED_TO_OFFER - N/A"
+WARRANTY;Garantie
+WORKFLOW;Workflow
+YES;Oui
+YOUR_COMMENT;Commentaires
+YOUR_E_MAIL_ADDRESS_LABEL;"Votre adresse e-mail"
+YOUR_POSITION;"Votre poste"
+YOUR_POSITION_MARKETING;Marketing
+YOUR_POSITION_OTHER;Autre
+YOUR_POSITION_OWNER;Gerant
+YOUR_POSITION_SALES;Ventes
+YOUR_POSITION_SHOP_MANAGER;"Responsable de boutique"
+ZIP_CODE;"Code postal"
+ZONES;Zones
+ZZ_TOP;"La Grange"

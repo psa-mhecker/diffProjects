@@ -1,0 +1,28 @@
+{if $aData.ZONE_MOBILE}
+    {if $aData.ZONE_ATTRIBUT == 1}
+        {assign var="target" value="_self"}
+    {elseif $aData.ZONE_ATTRIBUT == 2}
+        {assign var="target" value="_blank"}
+    {/if}
+    {if $aData.ZONE_ATTRIBUT2 == 1}
+        {assign var="target2" value="_self"}
+    {elseif $aData.ZONE_ATTRIBUT2 == 2}
+        {assign var="target2" value="_blank"}
+    {/if}
+<div class="sliceNew slicePushesMobile">
+   <div class="row">
+            <div class="columns column_50">
+			<a  href="{urlParser url=$aData.ZONE_TITRE2}" class="colorpush green">
+			  {$aData.ZONE_TITRE}
+			  <img src="{Pelican::$config.MEDIA_HTTP}{$aData.MEDIA_PATH}" data-original="{Pelican::$config.MEDIA_HTTP}{$aData.MEDIA_PATH}" alt="" />
+			</a>
+            </div>
+             <div class="columns column_50">		
+				<a  href="{urlParser url=$aData.ZONE_TITRE4}" class="colorpush blue1">
+				  {$aData.ZONE_TITRE3}
+				  <img src="{Pelican::$config.MEDIA_HTTP}{$aData.MEDIA_PATH2}"  data-original="{Pelican::$config.MEDIA_HTTP}{$aData.MEDIA_PATH2}" alt="" />
+			  </a>
+            </div>
+    </div>
+</div>
+{/if}

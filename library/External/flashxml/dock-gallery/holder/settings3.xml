@@ -1,0 +1,53 @@
+﻿<settings>
+  <General_Properties>
+    <componentWidth value="893"/>
+    <componentHeight value="630"/>
+    <preloader value="assets/redstripes.swf"/>
+    <backgroundColor value="0xbbbbbb"/>
+    <backgroundAlpha value="1"/>
+    <slideShow value="false"/>
+    <delay value="5"/>
+    <controls value ="skin3.xml"/>
+    <imageFitting value="forcefit"/>
+    <assets value="images/big3.xml"/>
+    <showAbout value="true"/>
+    <scrollIconLink value = "assets/scrollCursorBlack.png"/>
+    <closeIconLink value = "assets/closeIconBlack.png"/>
+    <urlIconLink value = "assets/goToUrlBlack.png"/>
+  </General_Properties>
+  <Scroll_Properties> 
+    <clickForScroll value = "true" />
+    <useAutoScroll value = "true" />
+    <scrollTime value = "1" />
+  </Scroll_Properties>
+  <Loading_Transitions>
+    <loadingTrans value="transitions/favorites.xml"/>
+    <randomTrans value="false"/>
+  </Loading_Transitions>
+  <Text_Effects>
+    <textEff value="transitions/favorites.xml"/>
+    <randomTextEff value="false"/>
+  </Text_Effects>
+  <Text_Properties>
+    <textEffectDelay value="0"/>
+    <bodyTextDelay value="1"/>
+    <styleSheet value="css/styleSheet2.css"/>
+    <hPos value="left"/>
+    <vPos value="bottom"/>
+    <bodyDistance value="13"/>
+    <offset value="54"/>
+    <width value="0"/>
+    <headBgColor value="0x660066"/>
+    <bodyBgColor value="0xffffff"/>
+    <bgAlpha value="0.67"/>
+    <borderColor value="0xffffff"/>
+    <borderAlpha value="0"/>
+    <borderWidth value="0"/>
+    <cornerRadius value="0"/>
+    <paddingLeft value="5"/>
+    <paddingRight value="5"/>
+    <paddingTop value="5"/>
+    <paddingBottom value="5"/>
+    <embedFonts value="true"/>
+  </Text_Properties>
+</settings>

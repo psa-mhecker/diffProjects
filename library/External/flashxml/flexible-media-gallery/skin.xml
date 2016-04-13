@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<groups>
+		<group snapToCell="true" gridPosition="CL" cellPosition="CL">
+			<button out="assets/skin3/left.png" over="assets/skin3/leftOver.png" action="prev" tooltip="" />
+		</group>
+		<group snapToCell="true" gridPosition="CR" cellPosition="CR">
+			<button out="assets/skin3/right.png" over="assets/skin3/rightOver.png" action="next" tooltip="" />
+		</group>
+		<group snapToCell="true" gridPosition="TR" cellPosition="TR">
+			<button out="assets/skin3/close.png" over="assets/skin3/closeOver.png" action="close" tooltip="" />
+		</group>
+	</groups>
+</data>

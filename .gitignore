@@ -1,0 +1,111 @@
+.httpd*
+.htpasswd
+media_old
+update_library.sh
+_install
+###################
+syntax: glob
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.log
+phpunit
+/logs
+/var
+/public/media/file
+/public/media/image
+/public/media/video
+/public/media/mobile
+/public/media/design_pack
+/public/media/flash
+/public/media/design/skins
+/public/media/design/plugins
+/nbproject
+/application/library/Selfcare/Tests/report
+/vendor
+/batch/*.sh
+/batch/preprod
+/batch/recette
+composer.phar
+/public/backend/adminer.php
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.tgz
+*.svn
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
+# OS generated files #
+######################
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db 
+=======
+@@dans le clone du repo
+# Compiled source #
+###################
+syntax: glob
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.log
+/public/media/image
+/var
+/library/wurfl
+/public/media/design_pack
+/public/media/mobile
+._.*
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.tgz
+*.svn
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
+# OS generated files #
+######################
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+localmediadev.ini.php
+composer.lock
+
+.vagrant
+id_rsa*
+root_id_rsa*

@@ -1,0 +1,1596 @@
+CLE;TRADUCTION
+(HOME);"(page d'accueil)"
+(Root);(Racine)
+"...New page";"...Nouvelle rubrique"
+"1 level";"1 niveau"
+15_JOURS;"15 jours"
+1_JOUR;"1 jour"
+1_VISUEL_CINEMASCOPE;"1 visuel cinémascope"
+"2 levels";"2 niveaux"
+2_JOURS;"2 jours"
+2_VISUELS_16_9_EMPILES__1_VISUEL_PORTRAIT;"2 visuels 16/9 empilés + 1 visuel portrait"
+2_VISUELS_FORMATS_PORTRAITS;"2 visuels portraits"
+2_VISUELS_FORMAT_CARRE;"2 visuels carré"
+2_VISUEL_16_9;"2 visuel 16/9"
+3_JOURS;"3 jours"
+3_VISUEL_CARRES;"3 visuels carré"
+4X4;ABCDEFGHIJKLMNOPQRSTUVWXY27ABCDEFGHIJKLMNOPQRSTUVWXY54ABCDEFGHIJKLMNOPQRSTUVWXY81ABCDEFGHIJKLMNOPQRSTUVWX108ABCDEFGHIJKLMNOPQRSTUVWX135ABCDEFGHIJKLMNOPQRSTUVWX162ABCDEFGHIJKLMNOPQRSTUVWX189ABCDEFGHIJKLMNOPQRSTUVWX216ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789D255
+4_JOURS;"4 jours"
+5_JOURS;"5 jours"
+6_JOURS;"6 jours"
+7_JOURS;"7 jours"
+7_JOURS];"7 jours"
+"80 letters alert";"Rappel : le texte concerne par ce lien ne doit pas exceder 80 caracteres"
+ABONNEMENT_NEWSLETTER;"Abonnement newsletter"
+ABONNES;Abonnes
+ABO_NEWSLETTER;"ABONNEMENT NEWSLETTER"
+ABO_RSS;"ABONNEMENT RSS"
+ACCEPT_COOKIES;"Accepter les cookies"
+"Accesibility key";"Touche d'acc."
+ACCESS_FAVORITES;"Accéder à mes favoris"
+ACCES_BACK_OFFICE;"Acces Back Office"
+Accroche;Accroche
+ACL;Actualites
+ACTIF;Actif
+"Action description";"Description de l'action"
+"Action name";"Nom de l'action"
+"Activate WebService";"Activer ce WebService"
+"Activation date";"Actif a partir du"
+ACTIVATION_AUTOCOMPLETION;"Activation autocompletion"
+ACTIVATION_CHAMP_RECHERCHE;"Activation recherche"
+ACTIVATION_CHAMP_RECHERCHE_;"Activation de la recherche"
+ACTIVATION_PRIX_CREDITS;"Activation des prix à crédits"
+ACTIVER;Activer
+ACTIVER_MOBILE;Mobile
+ACTIVER_WEB_TABLETTE;"Web / tablette"
+ACTIVER_WEB_TABLETTE_MOBILE;"Web / tablette et mobile"
+ACTUALITE;Actualité
+ADD;aj
+Address;Adresse
+ADDRESS_LINE_1;"Adresse (ligne 1)"
+ADDRESS_LINE_2;"Adresse (ligne 2)"
+ADD_AGAIN;"Ajouter a nouveau"
+ADD_ENCADRE;"Add box"
+ADD_FAVORITE;"Ajouter à mes favoris"
+ADD_FINITION_COMPARATEUR;"Ajouter cette finition au comparateur"
+ADD_FORM_COL;"Ajouter une colonne"
+ADD_FORM_CTA;"Ajouter un CTA"
+ADD_FORM_GALLERY;"Ajouter une gallerie"
+ADD_LIEN;Lien
+ADD_LIST_PICTO_TEXT;"Ajouter une ligne de picto"
+ADD_MENUS;"Ajouter plusieurs menus"
+ADD_OTHER_CARS;"Autres Véhicules"
+ADD_REDIRECTION_301;"Voulez-vous ajouter l’ancienne url dans le champ « Redirection (code 301) » ?"
+ADD_SLIDESHOW;"Ajouter un slideshow"
+ADD_TERME;"Ajouter un terme"
+ADD_TO_BASKET;"Ajouter au panier"
+ADD_TO_COMPARISON;"Ajouter a la comparaison"
+ADD_TO_MY_SELECTION;"Ajouter à ma sélection"
+ADD_TO_QUICKLINKS;"Ajouter aux liens rapides"
+"Admin reserved";"Page reservee aux gestionnaires"
+ADMINISTRATION;Administration
+AFFICHAGE;Affichage
+AFFICHAGE_MOB;"Affichage mobile"
+AFFICHAGE_WEB;"Affichage web"
+AFFICHAGE_WEB_MOBILE;"Affichage Web / mobile"
+AFFICHER;Afficher
+AFFICHER_ASSISTANCE_TELEPHONIQUE;"Afficher ""Assistance téléphonique"""
+AFFICHER_AUTRES_SITES;"Afficher ""Autres sites"""
+AFFICHER_BESOIN_AIDE;"Afficher ""Besoin d'aide"""
+AFFICHER_ZONE_ABONNEMENT;"Afficher ""Zone d'abonnement"""
+Aj.;Aj.
+"Ajax zone";Ajax
+Ajout;Ajout
+ALERT_CNT_TITLE_LONG_MAX;"Votre titre de contenu est trop long, il est conseillé de ne pas dépasser les 70 caractères pour un titre."
+ALERT_CTA_MODE_OPEN_LINK;"Veuillez remplir le mode d'ouverture du lien"
+ALERT_CTA_MULTI_SLIDESHOW;"Vous devez sélectionner une Couleur Cta"
+ALERT_CTA_TITLE;"Veuillez remplir le libellé du lien "
+ALERT_CTA_URL;"Veuillez remplir le l'URL du lien"
+ALERT_DECACHE_ECHEC;"Echec de la génération des fichiers de langue."
+ALERT_DECACHE_SUCCES;"Génération des fichiers de langue réussi !"
+ALERT_IMPORT_ECHEC;"Echec de l'import."
+ALERT_IMPORT_SUCCES;"Import réussi !"
+ALERT_LANGUE_SITE;"Attention au changement de langue"
+ALERT_MSG_OUTILS_MAX;"Il n'est pas possible de saisir plus de 7 outils."
+ALERT_MSG_OUTILS_MOBILE_MAX;"Vous avez atteint la limite de #nb# outils mobile maximum"
+ALERT_MSG_OUTILS_MOBILE_MIN;"Vous devez sélectionner au moins #nb# outils Mobile"
+ALERT_MSG_OUTILS_WEB_MAX;"Vous avez atteint la limite de #nb# outils web maximum"
+ALERT_MSG_OUTILS_WEB_MIN;"Vous devez sélectionner au moins #nb# outils Web"
+ALERT_NUMERIC_NB_DVN;"La valeur du Nombre de DVN doit être numérique"
+ALERT_NUMERIC_NB_PDV;"La valeur du Nombre de PDV doit être numérique"
+ALERT_NUMERIC_RAYON;"La valeur du rayon doit être numérique"
+ALERT_PAGE_TITLE_LONG_MAX;"Votre titre de rubrique est trop long, il est conseillé de ne pas dépasser les 70 caractères pour un titre."
+ALERT_SEUIL_PRIX_1;"Vous devez saisir un entier pour le seuil prix comptant 1."
+ALERT_SEUIL_PRIX_2;"Vous devez saisir un entier pour le seuil prix comptant 2."
+ALERT_SEUIL_PRIX_3;"Vous devez saisir un entier pour le seuil prix comptant 3."
+ALERT_TIMING_SLIDESHOW;"Le minimum doit être de 5"
+ALERT_TYPO_MULTI_SLIDESHOW;"Vous devez sélectionner une Couleur Typo"
+Alias;Alias
+ALL;Tout
+ALLEMAND;Allemand
+ALLER_PLUS_LOIN;"Allez plus loin avec Citroën C3"
+ALL_FEATURES;"Toutes les fonctionnalites"
+ALONE_LAYOUT;"Gabarit unique"
+ALTERNATIVE;Alternative
+ALTERNATIVE_FLASH;"Alertnative Flash"
+ALTERNATIVE_IMAGE;"Alternative visuel"
+ALTERNATIVE_TEXT;"Alternative textuelle"
+ALT_DELETE_FORCAGE;"Supprimer ce forçage (revenir en mode automatique pour ce format)"
+"An e-mail request for publication will be sent.";"Un email de publication va être envoyé."
+Analytics;Analytique
+"And on";"Et le"
+ANGLAIS;Anglais
+ANNOUNCEMENTS;Annonces
+Answer;Reponse
+"Apart from French";"(en plus du fran"
+"Application mobile";"Application mobile"
+ARBORESCENCE;Arborescence
+"Arborescence cible";"Arborescence cible"
+"Arborescence source";"Arborescence source"
+ARBORESCENCE_OBLIGATOIRE;"Veuillez sélectionner votre arborescence"
+ARBORESCENCE_SOURCE;"Arborescence source"
+ARBORESCENCE_UNIQUE;"Veuillez sélectionner une page"
+ARCHIVES;Archives
+AREAS_OF_INTEREST;"Domaines d'inter"
+ASK_REPLACE_FAV_PDV;"Souhaitez-vous remplacer<br /> Nom de la concession<br />"
+ASSISTANCE;Assistance
+ASSOCIATED_CONTENT_ORDER;"Ordre des contenus associes"
+ASSOCIATED_RUBRIQUE;"Associated topic"
+ASSOC_CONTENT_TYPE;"Type de contenu associé"
+"Attached file";"Piece joint"
+AUCUNE;Aucune
+AUTEUR;Auteur
+Authenticate;S'authentifier
+Authentification;Authentification
+Author;Auteur
+"Auto raise";"Remontee auto."
+AUTOCOMPLETION;Autocomplétion
+AUTOMATIQUE;Automatique
+"Available alias";"Alias disponibles"
+"Available blocs";"Blocs non selectionnes"
+averageDistance;Mixte
+AWARD_TAB;Recompenses
+A_CATEGORY;"A category"
+A_CONTENT;"A content"
+A_PARTIR;"À partir de"
+A_PARTIR_DE;"À partir de"
+A_PUBLIER;"à publier"
+Back;Back
+Backend;"Back Office"
+"Backend access";"Acces BO"
+"Backend horizontal display";"Affichage horizontal (BO)"
+BACKEND_CONTENT_ARTICLE_GEOLOCALISATION;Geolocalization
+BACKEND_CONTENT_MAIN_TEXT;"Main text"
+BackgroundColor;"Couleur de fond"
+BackgroundImage;"Image de fond"
+BACKOFFICE;"Back Office"
+BACK_PATH;"Chemin BO"
+BACK_TO_LIST;"Retour a la liste"
+Banner;Banniere
+BANNER_SAMPLE;"Les nouvelles technologies au futur quotidien"
+BARRE_D_OUTILS;"Barre d'outils"
+BERLINE;Berline
+BESOIN_AIDE;"Besoin d'aide"
+BLANC;Blanc
+BLEU;Bleu
+BLOC;Bloc
+"Bloc type";"Type de bloc"
+BLOCS;Blocs
+BLOC_TEXTE;BLOC_TEXTE
+BOITE_VITESSE;"Boîte de vitesse"
+BOITE_VITESSE_FRONT;"Boîte de vitesse"
+BoldTitle;"Titre en gras"
+BONJOUR;BONJOUREX
+BO_ACCESS;"BO Access"
+BREAK;Break
+BROUILLON;Brouillon
+BROWSE;Parcourir
+BROWSE_PRODUCTS;"Parcourir les produits"
+BUSINESS_PROFILE;"Profil professionnel"
+BUY;Acheter
+"By default";"Par defaut"
+CACHE;Cache
+CALC_ITINERAIRE;"Calculer <br />l'itinéraire"
+CAL_APRIL;Avril
+CAL_AUGUST;Ao
+CAL_CHOOSE_MONTH;"Choisissez un mois."
+CAL_CHOOSE_YEAR;"Choisissez une annee."
+CAL_CURRENT_MONTH;"Afficher le mois courant"
+CAL_DATE_FORMAT;dd/mm/yyyy
+CAL_DECEMBER;Decembre
+CAL_FEBRUARY;Fevrier
+CAL_FRI;Ven
+CAL_FRIDAY;Vendredi
+CAL_JANUARY;Janvier
+CAL_JULY;Juillet
+CAL_JUNE;Juin
+CAL_MARCH;Mars
+CAL_MAY;Mai
+CAL_MON;Lun
+CAL_MONDAY;Lundi
+CAL_NEXT_MONTH;"Cliquez pour passer au mois suivant. Gardez le bouton de la souris appuye pour faire defiler automatiquement."
+CAL_NOVEMBER;Novembre
+CAL_OCTOBER;Octobre
+CAL_PREVIOUS_MONTH;"Cliquez pour passer au mois precedent. Gardez le bouton de la souris appuye pour faire defiler automatiquement."
+CAL_SAT;Sam
+CAL_SATURDAY;Samedi
+CAL_SELECT_DATE;"Selectionner le"
+CAL_SEPTEMBER;Septembre
+CAL_SHOW;"Afficher le "
+CAL_SUN;Dim
+CAL_SUNDAY;Dimanche
+CAL_THU;Jeu
+CAL_THURSDAY;Jeudi
+CAL_TUE;Mar
+CAL_TUESDAY;Mardi
+CAL_WED;Mer
+CAL_WEDNESDAY;Mercredi
+CAL_WEEK;Sem.
+CANCEL;Annuler
+CARMIN;Carmin
+Carousel;Carrousel
+CARRE;Carré
+CASH_PRICE_HT;HT
+CASH_PRICE_TTC;TTC
+Categorie;Categorie
+CATEGORIES;Categories
+CERTIFICATE;Certificat
+CETTE_FINITION_COMPREND;"Cette finition comprend :"
+CHAMPAGNE;Champagne
+CHANGE_CLEAR_URL;"Voulez-vous mettre à jour l'url clair"
+CHANGE_COLOR;"Changez la couleur"
+CHANGE_MAIL_CONFIRMATION;"Un e-mail vous a ete envoye avec un lien pour confirmer le changement."
+CHANGE_MAIL_ERROR_PWD_TEXT;"Mot de passe non valable"
+CHANGE_MAIL_ERROR_TOKEN;"CHANGE_MAIL_ERROR_TOKEN - to be translated"
+CHANGE_MAIL_LABEL;"Changement d'email"
+CHANGE_MAIL_MAIL_SUBJECT;"Changement d'email utilisateur"
+CHANGE_MAIL_MAIL_TEXT;"Veuillez cliquer sur le lien ci-dessous pour proceder au changement de courriel##URL##"
+CHANGE_MAIL_TEXT_PRESENTATION;"Veuillez saisir votre mot de passe pour confirmer votre nouvel adresse electronique"
+CHANGE_VIEW;"Modifier l'affichage"
+CHAPEAU;Chapô
+CHAPO;Chapô
+CHARACTER;caractere
+CHOISIR;Choisir
+CHOISISSEZ_VOTRE_LANGUE;"CHOISISSEZ VOTRE LANGUE"
+CHOIX_ALTER_FLASH;"Veuillez choisir une image alternative pour le flash"
+CHOIX_IMG_FLASH_HTML;"Veuillez choisir une image, un flash ou un HTML"
+CHOOSE_ALL;"Choisir tout"
+CHOOSE_SITE;"Choisissez votre site"
+CINEMASCOPE;Cinemascope
+CITY;Ville
+CIVILITIES;Civilities
+Civility;Titre
+CLEAR_URL;"Url claire"
+CLEAR_URL_USED;"L'url claire est déjà utilisées sur ##param0##"
+CLICK_TO_SEE;"Cliquer pour voir le résultat"
+CLIENT_MAP;Client
+CLOSE;Fermer
+CODE;Code
+CODE_HTML;"Code Html"
+CODE_PAYS;"Code pays"
+COLOR;Couleur
+COLUMN;Colonne
+COMMENTAIRES;Commentaires
+Commentary;Commentaire
+COMMENTS;Comments
+COMPANY;Societe
+COMPANY_ERROR;"Veuillez selectionner votre pays"
+Complement;Complement
+Complement2;Complement
+CONFIGURER;Configurer
+CONFIRM;"Confirmez-vous la suppresion ?"
+CONFIRM_DELETE;"Êtes vous sûr de vouloir supprimer cette page ainsi que les pages et contenus rattachés ?"
+CONFIRM_DELETE_ZONE;"Voulez vous supprimer la tranche?"
+CONFIRM_RESTORE;"Êtes vous sûr de vouloir restaurer la page ainsi que les pages et contenus rattachés ?"
+CONSO;Consommation
+CONSOMMATION;Consommation
+CONSO_FRONT;Consommation
+CONSO_MIXTE;"Consommation mixte"
+CONTACT;Contact
+CONTACTS;Contacts
+CONTACT_SUBJECT;Objet
+Content;Contenu
+"Content categories";"Categories de contenu"
+"Content order";"Ordre des contenus"
+"Content research";"Rechercher les contenus"
+"Content type";"Type de contenu"
+"Content types";"Types de contenus"
+CONTENT_NAME;"Content name"
+CONTENT_TYPE_ASSOCIATED;"Associated content type"
+CONTENU;Contenu
+CONTENUS;Contenus
+CONTENUS_RECOMMANDES;"Contenus recommandés"
+CONTENUS_RECOMMANDES_MAX;"9 contenus recommandés maximum"
+CONTENU_UTILISER;"Contenu utilise par un autre contenu"
+CONTRIBUTIONS;Contributions
+COOKIES;Cookies
+COPIER_COLLER;"Copier coller"
+Copyright;Copyright
+CORBEILLE;Corbeille
+COULEUR_CTA;"Couleur CTA"
+COULEUR_TYPO;"Couleur typo"
+COUNTRIES;Countries
+Country;Pays
+CP_CITY_DEP;"Code postal, ville, département"
+Cr?ateur(s);Cr
+"Cr?er un contenu de type : ";Cr
+"Created on";"Cree entre le"
+Createur;Createur
+Createur(s);Createur(s)
+CREATE_COMPARISON;"Creer comparaison"
+CREER;Creer
+"Creer un contenu de type : ";"Creer un contenu de type : "
+CRITERE_1;"Critère 1"
+CRITERE_2;"Critère 2"
+CRITERE_3;"Critère 3"
+CRITERE_LABEL_INTERNE;"Libellé interne"
+CRITERE_LABEL_PUBLIC;"Libellé public"
+"CSS class";"Classe CSS"
+CTA;CTA
+CTA_GAMME;"CTA Gamme"
+CTA_PDV;"CTA Point de vente"
+CUSTOMER_DEPOSITS;"CUSTOMER_DEPOSITS - N/A"
+CUSTOMER_NUMBER;"CUSTOMER_NUMBER - N/A"
+"dans la Recherche";"dans la Recherche"
+DATE;Date
+DATE_DEBUT;"Date de debut"
+DATE_FIN;"Date de fin"
+DATE_FORMAT_DB;DD/MM/YYYY
+DATE_FORMAT_LABEL;JJ/MM/AAAA
+DATE_FORMAT_LABEL_EDITION;"JJ/MM/AAAA, MM/AAAA ou AAAA"
+DATE_FORMAT_PHP;d/m/Y
+DATE_HEURE_FORMAT_PHP;"d/m/Y H:i:s"
+DAVID;David
+DECACHE_dTRAD_FO;"TEST POUR DECACHE"
+DECACHE_TRAD;"Générer le fichier de traduction"
+DECACHE_TRAD_FO;Decache
+DECMD_PAGEBREAK;"Saut de page"
+"Deidcated to subscribers";"Soumis a abonnement"
+DEL;sup
+DELETE;Supprimer
+DELETE_CONTENT;"Contenu à supprimer"
+DELETE_PAGE_ALERT;"Attention, la suppression de cette rubrique n'entra"
+DELIVERY_ADDRESS;"Informations sur la livraison"
+DELIVERY_TIME;"DELIVERY_TIME - N/A"
+DEL_TRASH;"Suppression de la corbeille"
+DEMANDE_BROCHURE;"Demande de brochure"
+DEMANDE_ESSAI;"Demande d'essai"
+DEMANDE_OFFRES_COMMERCIALES;"Demande d'offre commerciale"
+DEMO_SITE;"Site de demonstration"
+DEPENDANCES;Dependances
+DEPENDANCIES;Dependancies
+DEPLIE;Déplié
+DESACTIVER;Desactiver
+DESC;Desc
+DESCRIPTION;Description
+DESCRIPTION_SERVICE;"Description du service"
+design;Design
+DESIRED_END_DATE;"DESIRED_END_DATE - N/A"
+DEVISE_PAYS;"Devise du pays"
+DEV_SITE;"Site de developpement"
+DIESEL;Diesel
+DIFFUSION;Diffusion
+"Diffusion date and hour";"Date et heure de diffusion"
+"Direct zone";Direct
+"Display date begin";"Date de debut d'affichage"
+"Display end date";"Date de fin d'affichage"
+"Displayed publication date";"Date de publication affichee"
+DISPO_SOUS;"Disponible sous #STOCK# jours"
+DISTRIBUTOR_ACTEBIS_PEACOK_GMBH;"DISTRIBUTOR_ACTEBIS_PEACOK_GMBH - N/A"
+DISTRIBUTOR_API_COMPUTERHANDELS_GMBH;"DISTRIBUTOR_API_COMPUTERHANDELS_GMBH - N/A"
+DISTRIBUTOR_B_COM_COMPUTER_AG;"DISTRIBUTOR_B_COM_COMPUTER_AG - N/A"
+DISTRIBUTOR_INGRAM_MICRO_DISTRIBUTION_GMBH;"DISTRIBUTOR_INGRAM_MICRO_DISTRIBUTION_GMBH - N/A"
+DNS;DNS
+DOES_YOUR_COMPANY_HAVE_AN_E_TAIL_SITE;"Votre entreprise possede-t-elle un site de vente au detail en ligne?"
+DOES_YOUR_COMPANY_HAVE_A_RETAIL_STORE;"Votre societe possede-t-elle un magasin ?"
+DONNEES_DE_REFERENCE;"Donnees de reference"
+DON_T_KNOW;"Ne sais pas"
+Dossiers;Dossiers
+DOWN;Déscendre
+DOWNLOAD;Telecharger
+Drag&Drop;"Drag&Drop (zone portal)"
+DROITE;Droite
+"Droits etendus";"Droits etendus"
+DROTIE;Droite
+DVN_RAC;"DNV RAC"
+eco;€colo
+Ed.;Ed.
+EDIT;ed
+Edition;Edition
+EDITORIAL;Editorial
+EDITOR_ACCESS;"Simulation d'un navigateur textuel"
+EDITOR_ANCHOR;Ancre
+EDITOR_BOLD;Gras
+EDITOR_BRING_ABOVE_TEXT;"Texte en dessous"
+EDITOR_BRING_FORWARD;Avancer
+EDITOR_BRING_TO_FRONT;"Mettre au premier plan"
+EDITOR_CHARMAP;"Caracteres speciaux"
+EDITOR_CLEAN;"Nettoyage du HTML"
+EDITOR_CONTENT;"Lien vers une page du site"
+EDITOR_COPY;Copier
+EDITOR_CUT;Couper
+EDITOR_DELETECELLS;"Supprimer les cellules"
+EDITOR_DELETECOLS;"Supprimer les colonnes"
+EDITOR_DELETEROWS;"Supprimer les lignes"
+EDITOR_DETAILS;"Afficher les details"
+EDITOR_DOCUMENT;"Inserer un document"
+EDITOR_FLASH;"Inserer une animation flash"
+EDITOR_FONTNAME;Police
+EDITOR_FONTSIZE;Taille
+EDITOR_HELP;Aide
+EDITOR_HR;"Ligne horizontale"
+EDITOR_HTML;"Code HTML"
+EDITOR_IMAGE;"Inserer une image"
+EDITOR_IMAGEMAP;ImageMap
+EDITOR_IMAGE_PROPERTY;"Proprietes de l'image"
+EDITOR_INDENT;"Augmenter le retrait"
+EDITOR_INSERTCELL;"Inserer des cellules"
+EDITOR_INSERTCOL;"Inserer des colonnes"
+EDITOR_INSERTROW;"Inserer des lignes"
+EDITOR_INSERTTABLE;"Inserer une table"
+EDITOR_INTERNAL;"Lien interne"
+EDITOR_ITALIC;Italique
+EDITOR_JUSTIFYCENTER;Centre
+EDITOR_JUSTIFYLEFT;"Aligner a gauche"
+EDITOR_JUSTIFYRIGHT;"Aligner a droite"
+EDITOR_LINK;"Lien externe"
+EDITOR_LINKCHECK;"Verifier les liens du document"
+EDITOR_LOCK_ELEMENT;"Verrouiller l'element"
+EDITOR_MAKE_ABSOLUTE;"Rendre absolu"
+EDITOR_MERGECELLS;"Fusionner les cellules"
+EDITOR_MODIFTABLE;"Modifier table / cellule"
+EDITOR_ORDERLIST;Numerotation
+EDITOR_OUTDENT;"Diminuer le retrait"
+EDITOR_PALETTE;"Palette d'images"
+EDITOR_PASTE;Coller
+EDITOR_REDO;Refaire
+EDITOR_REMOVEFORMAT;"Effacer la mise en forme"
+EDITOR_SAVE;Enregistrer
+EDITOR_SELECTALL;"Selectionner tout"
+EDITOR_SEND_BACKWARD;Reculer
+EDITOR_SEND_BELOW_TEXT;"Texte au-dessus"
+EDITOR_SEND_TO_BACK;"Mettre en arriere plan"
+EDITOR_SETBACKCOLOR;"Couleur de fond"
+EDITOR_SETFORECOLOR;"Couleur de police"
+EDITOR_SNAPTOGRID;"Aligner sur la grille"
+EDITOR_SPLITCELL;"Fractionner les cellules"
+EDITOR_STRIKETHROUGH;Barre
+EDITOR_SUBSCRIPT;Indice
+EDITOR_SUPERSCRIPT;Exposant
+EDITOR_TABLE_PROPERTY;"Proprietes du tableau"
+EDITOR_TEMPLATE;"Choix d'un modele"
+EDITOR_TIDY;"Nettoyer le code Pelican_Html avec HtmlTidy"
+EDITOR_TOC;"Insert a Table of content"
+EDITOR_UNDERLINE;Souligne
+EDITOR_UNDO;Annuler
+EDITOR_UNLINK;"Supprimer le lien"
+EDITOR_UNORDERLIST;Puces
+EDITOR_VISIBLEBORDERS;"Afficher/Masquer les bordures"
+EDIT_MY_NEWS;"Modifier mes actualites"
+EDIT_MY_QUICKLINKS;"Modifier ma liste a surveiller"
+ELECTRIQUE;Electrique
+EMAIL;Email
+EMAIL_ERROR;"Veuillez saisir votre adresse electronique"
+EMAIL_FOR_LOGIN;"Adresse electronique (pour la connexion)"
+EMAIL_SUBSCRIBER_REMOVED;Désolé
+EMBARGO_PLD_LEGEND;Prochainement
+EMISSION;Emission
+EMISSION_CO2;"Emission Co2"
+EMISSION_CO2_FRONT;"Emission Co2"
+ENCADRE;Encadre
+End;Fin
+"End hour";"Heure de fin"
+END_DATE_VIEWING;"End showing date"
+ENERGIE;Energie
+ENERGIE_FRONT;Energie
+ENQUIRY_FORM_BLOC_A_LABEL;"ENQUIRY_FORM_BLOC_A_LABEL - N/A"
+ENQUIRY_FORM_BLOC_B_LABEL;"ENQUIRY_FORM_BLOC_B_LABEL - N/A"
+ENQUIRY_FORM_BLOC_C_LABEL;"ENQUIRY_FORM_BLOC_C_LABEL - N/A"
+ENQUIRY_FORM_BLOC_D_LABEL;"ENQUIRY_FORM_BLOC_D_LABEL - N/A"
+ENQUIRY_FORM_BLOC_E_LABEL;"ENQUIRY_FORM_BLOC_E_LABEL - N/A"
+ENQUIRY_FORM_BLOC_F_LABEL;"ENQUIRY_FORM_BLOC_F_LABEL - N/A"
+ENQUIRY_LINK;"ENQUIRY_LINK - N/A"
+Entete;Ent
+EN_SAVOIR_PLUS;"En savoir plus"
+ERREUR_SITE_NON_CONFORME;"Ce fichier n’as pas été généré à partir de ce site. Veuillez sélectionner un autre fichier."
+ERROR;erreur
+ERROR_POS_DENIED_ACCESS;"Vous devez "
+ESSENCE;Essence
+ETAT;Etat
+EVENT_TAB;Evenements
+EXCLUDING_VAT;"Hors TVA"
+EXIST_CAT;"La catégorie existe déjà"
+EXPIRATION;Expiration
+EXPLOITATION;Exploitation
+EXPORT;Export
+EXPORTER;Exporter
+EXPORT_TRAD_BO;Exporter
+EXPORT_TRAD_FO;Exporter
+FAQ;Q&R
+FAQ_RUBRIQUE_LABEL;Rubrique
+FAQ_RUBRIQUE_PICTO;"Picto de rubrique"
+FAX;Telecopie
+FEATURE;Feature
+"Featured Links";Liens
+FEATURE_TYPE;"Type of feature"
+FERMER;Fermer
+FICHIERS;Fichiers
+FICHIER_IMPORT;"Fichier import (format attendu xml)"
+FICHIER_IMPORT_OBLIGATOIRE;"Fichier import obligatoire"
+FICHIER_SWF;"Fichier SWF"
+FICHIER_XML;"Fichier XML"
+FILE_BYTE;o
+FILE_FULL_BYTE;octet(s)
+FILTER;Filtrer
+FILTER_TYPE_1;"Filtre type 1"
+FILTER_TYPE_2;"Filtre type 2"
+FILTRER_PAR;"Filtrer par :"
+FILTRE_PDV_VDN;"Filtrer par pdv/dvn"
+FILTRE_RAYON;"Filtrer par rayon"
+FIL_DARIANE_HOME;"Fils d'ariane"
+FIND_ARCHIVED_PRODUCTS;"Rechercher des produits archives"
+FIND_STORE;"Trouvez un établissement Citroën près de chez vous :"
+FIND_STORE_MOB;"Trouvez un établissement Citroën <br>près de chez vous :"
+FIRST_NAME;Nom
+FIRST_NAME_ERROR;"Veuillez saisir votre prenom"
+FIRST_TIME_DELIVERY;"FIRST_TIME_DELIVERY - N/A"
+FLASH;Flash
+FOCUS_AREA;"Domaines d'inter"
+FOLLOW_US;"NOUS SUIVRE"
+Fonction;Fonction
+"Fonctionality type";"Type de fonctionnalite"
+Fonctionnalite;Fonctionnalite
+FONCTIONNALITES;Fonctionnalites
+Fonctionnalities;Fonctionnalites
+FONCTIONNEMENT_DNS;"A renseigner"
+FONCTIONNEMENT_FILTRE_TYPE;"Ce type de filtre s’affiche uniquement si 2 filtres sont activés."
+FONCTIONNEMENT_MAIL_WEBMASTER;"Liste de courriels séparés par un point virgule."
+FONCTIONNEMENT_OUTILS_RECHERCHE;"Il faut minimum 3 outils pour que le bloc s’affiche."
+FONCTIONNEMENT_ROBOT_ADMIN;"L'url du sitempa devra être saisie avec le code #********#SITEMAP##. Cette variable sera remplacée lors de l'enregistrement"
+FONCTIONNEMENT_TAG_HTTP;"A renseigner"
+FONCTIONNEMENT_TAG_HTTPS;"A renseigner"
+FONCTIONS;Fonctions
+FOOTER;Footer
+FORCED_FORMAT;"Format forcé :"
+FORCE_COOKIES;"Forcer les cookies"
+FORGOT_PASSWORD;"Mot de passe oublie"
+FORGOT_PASSWORD_ERROR_EMAIL_TEXT;"Adresse electronique inconnue"
+FORGOT_PASSWORD_ERROR_PWD_TEXT;"message d'erreur pour formulaire oubli mot de passe"
+FORGOT_PASSWORD_LABEL;"Mot de passe oublie"
+FORGOT_PASSWORD_TEXT_PRESENTATION_STEP1;"Saisissez votre adresse electronique afin de recevoir un message de reinitialisation de mot de passe"
+FORGOT_PASSWORD_TEXT_PRESENTATION_STEP2;"Un message electronique vous a ete envoye a votre adresse. Cliquez sur le lien contenu dans ce message pour reinitialiser votre mot de passe"
+FORGOT_PASSWORD_TEXT_PRESENTATION_STEP3;"Pour reinitialiser votre mot de passe, saisissez le nouveau mot de passe de votre choix dans les deux champs ci-dessous comme indique, puis cliquez pour enregistrer"
+FORMAT_ATTENDU;"Format attendu :"
+FORMAT_CLASSIQUE;"Format classique"
+FORMAT_DATE;"Affichage date"
+FORMAT_URL_BOUTIQUE;"Format à définir en traduction ID : FORMAT_URL_BOUTIQUE"
+FORM_BUTTON_ADD;Ajouter
+FORM_BUTTON_ADD_MULTI;"Ajouter : "
+FORM_BUTTON_ADD_VALUE;"Ajouter une valeur"
+FORM_BUTTON_BACK;Retour
+FORM_BUTTON_COLOR;"Couleur de fond"
+FORM_BUTTON_CONSULT;Consulter
+FORM_BUTTON_COPY;Dupliquer
+FORM_BUTTON_DELETE;Supprimer
+FORM_BUTTON_EDIT;Modifier
+FORM_BUTTON_EDITOR;"Lancer l'assistant de mise en page"
+FORM_BUTTON_FILE_DELETE;Supprimer
+FORM_BUTTON_FILE_SELECT;"Selectionner un fichier"
+FORM_BUTTON_FILE_VIEW;"Voir le fichier"
+FORM_BUTTON_IMG_SELECT;"Selectionner une image"
+FORM_BUTTON_IMG_TITLE;Aper
+FORM_BUTTON_LINK_SELECT;"Selectionner un lien"
+FORM_BUTTON_PREVIEW;Previs.
+FORM_BUTTON_SAVE;Enregistrer
+FORM_BUTTON_SEARCH;Rechercher
+FORM_BUTTON_SELECT;Select
+FORM_CTA;CTA
+FORM_DISPLAY_ORDER;"Ordre d'affichage"
+FORM_FAQ_CAT;"Catégorie de FAQ"
+FORM_FAQ_RUB;"Rubrique de FAQ"
+FORM_FILL;"Veuillez remplir"
+FORM_KEY_POINT;"Point fort"
+FORM_LABEL;Libelle
+FORM_LINK_LABEL;"Libellé du lien"
+FORM_LINK_URL;"Url du lien"
+FORM_MAP_ADD;"Modifier l'ImageMap"
+FORM_MOST_WANTED_QUESTIONS;"Questions les plus posées"
+FORM_MSG_ALPHANUM;"un texte ne contenant que des lettres, des chiffres et '_'"
+FORM_MSG_CONFIRM_DEL;"Confirmez-vous cette suppression ?"
+FORM_MSG_DATE;"une date valide au format JJ/MM/AAAA"
+FORM_MSG_DATE_EDITION;"une date valide au format JJ/MM/AAAA, MM/AAAA ou AAAA"
+FORM_MSG_ERROR_HIERARCHY_PAGE_LANG;"Vous devez d'abord enregistrer la page parente dans la langue."
+FORM_MSG_HEURE;"une heure valide au format hh:mi (heure sur 24h)"
+FORM_MSG_LIMIT_1;"Vous ne pouvez saisir que"
+FORM_MSG_LIMIT_2;"caracteres au maximum pour"
+FORM_MSG_LIST_AVAILABLE;"Valeurs disponibles"
+FORM_MSG_LIST_SELECTED;"Valeurs selectionnees"
+FORM_MSG_MAIL;"une adresse email valide"
+FORM_MSG_NUMBER;"une valeur entiere"
+FORM_MSG_REAL;"une valeur numerique"
+FORM_MSG_TELEPHONE;"un numero de telephone valide"
+FORM_MSG_URL;"une adresse Internet valide : http ou https"
+FORM_MSG_VALUE_CHOOSE;"Veuillez choisir une valeur pour"
+FORM_MSG_VALUE_CONTENT;"Veuillez saisir un contenu pour"
+FORM_MSG_VALUE_FILE;"Veuillez choisir un fichier pour"
+FORM_MSG_VALUE_REQUIRE;"Veuillez saisir une valeur pour"
+FORM_MSG_WITH;avec
+FORM_MSG_YEAR;"une annee sur 4 chiffres"
+FORM_MSG_YES;oui
+FORM_NOT_PUBLISHED;"non publié"
+FORM_PUBLISHED;Publié
+FORM_RESPONSE;Réponse
+FORM_SELECT_CHOOSE;"-> Choisissez"
+FORM_TITLE_LIST;"Titre de la liste"
+FORM_VISUAL;Visuel
+FOURGON;Fourgon
+"Frame type";"Type d'encadre"
+FRANCAIS;Français
+"Free content";"Contenu libre"
+"Free/public package";"Package gratuit/public"
+FRIEND_SEND_ICONE;"Friend send icon"
+Front;Front
+FRONT_PATH;"Chemin FO"
+FUSEAU;"Fuseau horaire"
+"Gabarit Mobile";"Gabarit Mobile"
+"Gabarit Web";"Gabarit Web"
+GABARITS;Gabarits
+GABARIT_HIDDEN;"Hidden template"
+GABARIT_UNIQUE;"Unique template"
+GAMME;Gamme
+GAMME_BUSINESS;"Gamme business"
+GAMME_BUSINESS_FO;"Gamme entreprise"
+GAMME_LIGNE_C;"Ligne C"
+GAMME_LIGNE_C_FO;"LA LIGNE C"
+GAMME_LIGNE_DS;"Ligne DS"
+GAMME_LIGNE_DS_FO;"LA LIGNE DS"
+GAMME_VEHICULE_UTILITAIRE;"Véhicules utilitaire"
+GAMME_VEHICULE_UTILITAIRE_FO;"VÉHICULES UTILITAIRES"
+GARNISSAGE;Garnissage
+GAUCHE;Gauche
+GENERAL;General
+GENERAL_SETTINGS;"General settings"
+GENERATION;Generation
+GEOLOCALIZE_ME;"Chercher autour de ma position"
+Geolocation;Geolocalisation
+GESTION;Gestion
+GESTION_DES_TAGS;"Gestion des tags"
+GESTION_DES_URLS;"Gestion des urls"
+GESTION_MODE;"Mode de gestion"
+"Global parameters";"Parametres generaux"
+GLOBAL_PAGE;-General-
+GLOSSARY;Glossaire
+GOOGLE_ANALYTICS;"Google analytics"
+GRIS;Gris
+Groupe;Groupe
+GROUPES_DE_RESEAUX_SOCIAUX;"Groupe de réseaux sociaux"
+"Has list";"Affichage en liste"
+HEADER;Header
+HIDDEN;Hidden
+HIDE;Cache
+"Hide when add";"Masquer a l'ajout"
+HIDE_LAYOUT;"Gabarit cache"
+HIDE_WHILE_VIEW;"Hide when add"
+HIGH_RESOLUTION;"Haute res"
+HORIZONTAL_VIEW_BO;"Horizontal view (BO)"
+HOUR_FORMAT_LABEL;hh:mm
+HTML;html
+HTML5;Html5
+HYBRIDE-DIESEL;Hybride-Diesel
+Icon;Icone
+icone;Icone
+ID;ID
+Identifiant;Identifiant
+Identifier;Identfiant
+ID_COMPTE;"Id de compte"
+ID_DOUBLON;"Attention, l'identifiant choisi est déjà utilisé, merci d'en choisir un autre."
+"Iframe zone";Iframe
+IFRAME_MOBILE;"Iframe disponible sur le mobile"
+IFRAME_NON_DISPO;"Ce contenu n’est pas disponible sur la version mobile, nous vous invitons à consulter la version web"
+IMAGE;Image
+IMAGE;Image
+"Image link";"Image lien"
+"Image originale";"Image originale"
+"Image position";"Position de l'image"
+IMAGES;Images
+IMAGE_FOND_GENERALE;"Image de fond generale"
+IMAGE_GAMME;Image
+IMAGE_MOBILE;"Image mobile"
+IMAGE_PDV;Image
+IMAGE_WEB;"Image web"
+IMG_CHANGE_MAIL_SAVE_NEW_EMAIL_BUTTON;"Enregistrer nouvelle adresse electronique"
+IMG_DOWNLOAD_ALL_BUTTON;"Telecharger tout"
+IMG_DOWNLOAD_SELECTED_ITEMS_BUTTON;"Telecharger les elements selectionnes"
+IMG_FORGOT_PASSWORD_SAVE_NEW_PASSWORD_BUTTON;"Enregistrer le nouveau mot de passe"
+IMG_FORGOT_PASSWORD_SEND_BUTTON;Envoyer
+IMG_LOGIN_BUTTON;Connexion
+IMG_REGISTER_BUTTON;"Inscrivez-vous !"
+IMG_REGISTRATION_BUTTON;S'inscrire
+IMG_SAVE_CHANGES_BUTTON;"Sauvegarder les changements"
+IMG_SEARCH_BUTTON;Rechercher
+IMG_SEND_ENQUIRY_BUTTON;"Envoyer la demande"
+IMG_SEND_REQUEST_BUTTON;"Envoyer la demande"
+IMG_TAKE_TOUR_BUTTON;"Regarder la presentation"
+IMG_TOP_CAT_BUTTON;N
+IMG_TOP_PRODUCT_BUTTON;"Nous recommandons"
+IMPORT;Import
+IMPORTER;Importer
+IMPORT_EXPORT_TRAD;"Import / export"
+IMPORT_TRAD_BO;"Importer BO"
+IMPORT_TRAD_FO;"Importer FO"
+IMPORT___EXPORT;"Import / export"
+"In home";"En page d'accueil"
+"In page";"Dans la rubrique"
+Indexer;Indexer
+INDIVIDUAL;Individuel
+"Info external links";"(=> Pour des liens externes, taper 'http://' avant le lien)"
+Informations;Informations
+INFOS_GENE;"Informations générales"
+INFO_COOKIES;"Informations sur les cookies"
+INTERFACE_SITE;"Interface du site"
+INTERNAL_CONTACT_SOCIETY;"INTERNAL_CONTACT_SOCIETY - N/A"
+INTRO;Introduction
+IN_THE_RUBRIQUE;"In the topic"
+IN_THE_SEARCH;"In the search de JACKADI"
+ITEM_REQUESTED;"Elements demandes"
+ITINERAIRE;Itinéraire
+"Javascript a inclure";"Javascript a inclure"
+"Key exists bo";"La clé saisie existe en Backoffice"
+"Key exists fo";"La clé saisie existe en Frontoffice"
+KEY_MAP;Clé
+KEY_WORDS;Keywords
+"la date de publication";"la date de publication"
+LABEL;Label
+"Label (saction)";"Libellé de l’action de l’état"
+"Label (state)";"Libellé du statut de l’état"
+LABEL_CASE;Format
+LABEL_FILE_TRAD_BO;"Fichier ( format attendu .csv)"
+LABEL_FILE_TRAD_FO;Fichier
+LABEL_LENGTH_MAX;"Longueur maximum"
+LABEL_TRAD_LANG_BO;Langue
+LABEL_TRAD_LANG_FO;Langue
+LABEL_TRANSLATE;Traduction
+LANGS;Langs
+LANGUAGE;Langue
+Languages;Langues
+"Langue source";"Langue source"
+LANGUETTE;Languette
+LANGUETTE;Languette
+LANGUE_CIBLE;"Langue(s) cible(s)"
+LANGUE_OBLIGATOIRE;"Langue obligatoire"
+LANGUE_SOURCE;"Langue source"
+LANGUE_SOURCE_OBLIGATOIRE;"Langue source obligatoire"
+LANG_EN;Anglais
+LANG_FR;Français
+LANG_LIST;"Liste des langues"
+LANG_LIST_MASTER;"Liste des langues"
+largeFamily;"3 enfants et plus"
+LARGEUR;Largeur
+"Last articles";"Les derniers articles"
+LAST_NAME;Nom
+LAST_NAME_ERROR;"Veuillez saisir votre nom"
+LAYOUT;Gabarit
+"Layout type";"Type de gabarit"
+LAYOUT_SHORTCUT;Raccourci
+LCDV_CODE;"Code LCDV"
+"le QR Code";"le QR Code"
+LEADS;Leads
+LEARN_MORE;"Pour en savoir plus"
+"Left label";"Libelle gauche"
+LEGENDE;"Legende (alt)"
+"les commentaires";"les commentaires"
+"les partages sociaux";"les partages sociaux"
+"les tags";"les tags"
+LES_PRESTATIONS;"LES PRESTATIONS"
+LES_SERVICES;"LES SERVICES"
+Levels;Niveaux
+LIBELLE;Libelle
+LIBELLE_BOUTON_VALIDATION;"Libellé du lien de valisdation"
+LIBELLE_INTERNE;"Libellé interne"
+LIBELLE_LANGUETTE;"Libellé de la languette"
+LIBELLE_lIEN;"Libelle lien"
+LIBELLE_OBLIGATOIRE;"Libellé obligatoire"
+LIB_CTA;"Libellé CTA"
+LIB_HOME;"Libellé du lien 'accueil'"
+LIB_PLAN_SITE;"Libellé du lien 'plan du site'"
+LIB_SEARCH;"Libellé du lien recherche"
+LIEN;Lien
+LIEN_COMPLET;"Lien complet"
+LIEN_MOBILE;"Url mobile"
+LIEN_PAGE_MENTION;"Lien page mention légale"
+LIEN_SIMPLE;"Lien simple"
+LIEN_WEB;"Url Web"
+LIGNE_C;"Ligne C"
+LIGNE_DS;"Ligne DS"
+LINK;"Lien internet"
+"Linked page";"Rubrique d'appartenance"
+LINK_LABEL;"Libelle lien"
+LINK_PARAMETER;"Parametre d'url"
+Liste;Liste
+LOCKED_RECORD;"Cet enregistrement est verrouille pour modification par : "
+LOGIN;Identifiant
+"Login previsu";"Login de prévisualisation"
+LOGIN_ERROR_NOT_EXIST;"Mauvais login/mot de passe"
+Logo;Logo
+LOGOUT;Deconnexion
+longDistance;"Longues distances"
+LONGUEUR_EXT;"Longueur extérieure"
+LONGUEUR_EXT_FRONT;"Longueur extérieure"
+LONG_ADDRESS;"Adresse reelle"
+LONG_TITLE;"Titre long"
+"Lost password";"Mot de passe oublie ?"
+LOT_SIZES;"LOT_SIZES - N/A"
+LOU;lou
+LOWERCASE;Minuscule
+LOW_RESOLUTION;"Basse res"
+l_auteur;l'auteur
+"l_ic?ne d_envoi ? un ami";l'ic
+"l_ic?ne d_impression";l'ic
+"l_ic?ne PDF";l'ic
+"l_icone d_envoi a un ami";"l'icone d'envoi a un ami"
+"l_icone d_impression";"l'icone d'impression"
+"l_icone PDF";"l'icone PDF"
+"Mail expediteur";"Courriel de l’expéditeur"
+"Mail webmaster";"Courriels des webmasters"
+MAIL_APPROVAL_REQUEST_BODY;"Vous avez re"
+MAIL_APPROVAL_REQUEST_SUBJECT;"Votre approbation est requise"
+"Main text";"Texte Principal"
+MAIN_RUBRIQUE;"Main topic"
+MAIN_URLS;"Main URL"
+MANAGE_TITLE;"Manage title"
+MANUELLE;Manuelle
+MAP;Cartographie
+"Map provider";Cartographie
+MASQUER;Masquer
+MAX_PRIX_COMPTANT;"Maximum du prix comptant"
+MAX_TRIES;"Nombre de tenatives depasse."
+MEDIA;Media
+"Media type";"Types de media"
+"Media utilisé par un contenu";"Media utilisé par un contenu"
+MEDIATHEQUE;Mediatheque
+MEDIA_REFERENT;"Média référent"
+MEDIA_TYPES;"Media types"
+MEDIUM_RESOLUTION;"Moyenne res"
+MENTIONS_LEGALES;"Mentions légales"
+MENU;"menus !"
+"Menu properties";"Proprietes de menu"
+MESSAGE;Message
+"Meta description";"Description (Meta)"
+"Meta keywords";"Mots cles (Meta)"
+"Meta title";"Titre (Meta)"
+Metier;Métier
+MIGRATION_CHOOSE;Choisir
+Minisite;Minisite
+MINI_PRIX_COMPTANT;"Minimum du prix comptant"
+MIN_TWO_COL;"Deux colonne minimun sont nécessaire pour afficher le bloc"
+Miscellaneous;Divers
+MOBILE;Mobile
+MODERATION;Moderation
+MODE_AFFICHAGE;"Mode d'affichage"
+"MODE_AFFICHAGE_CARTE ";"Mode d'affichage de la carte"
+MODE_OUVERTURE;"Mode d'ouverture"
+MODULE;Module
+MONOSPACE;Monospace
+MORE_PDV;"Afficher plus de résultats"
+MOT_CONCESSION;"Le mot de la concession"
+MSG_AIDE_SELECT;"Aide a la selection"
+MULTISPACE;Multispace
+MUTUALISER;Mutualiser
+MY_DATA;"Mes donnees"
+MY_NEWS;"Mes actualites"
+NAME;Nom
+"Name or content";"Nom ou contenu"
+"Name or path";"Nom ou chemin"
+NAVIGATION;Navigation
+NB_DVN;"Nombre de DVN"
+NB_PASSAGERS;"Nombre de passagers"
+NB_PASSAGERS_FRONT;"Nombre de passagers"
+NB_PDV;"Nombre de PDV"
+NB_USE;"NB Utilisation"
+NEED_RECORD;"La page doit s'enregistrer avant d'être vue"
+Neutre;Neutre
+NEWEST_PRODUCTS;"Produits les plus recents"
+NEWS;Actualites
+NEWSLETTERS_SETTING;"Parametres e-communications"
+Newsletter_subscription;"Inscription a la newsletter"
+NEWS_SETTINGS;"Parametres nouvelles"
+NEW_EMAIL_LABEL;"Nouvelle adresse electronique"
+NEW_PASSWORD_LABEL;"Nouveau mot de passe"
+NEW_PASSWORD_REPEAT_LABEL;"Confirmation du nouveau mot de passe"
+NEW_RUBRIQUE;"New topic"
+"Next state";"Etat suivant"
+NE_PAS_ACTIVER;"Ne pas activer"
+NE_PAS_AFFICHER;"Ne pas afficher"
+NO;Non
+"No template";"Aucun template identifie"
+NOIR;Noir
+Nom;Nom
+NOMBRE_DE_TRANCHE_ONGLET;"Nombre de tranche à prendre en compte pour cet onglet"
+NOMBRE_ITEM_PAR_LIGNE;"Nombre d'item par ligne"
+NOMBRE_ITEM_PAR_LIGNE_OBLIGATOIRE;"Nombre d'élément par ligne obligatoire"
+NOM_SERVICE;"Nom du service"
+NON;Non
+NONE;Aucun
+NONE_F;Aucune
+NOTICES;Mentions
+NOT_DISPLAY;"Ne pas afficher"
+NOT_EXIST_PAGE;"cette page n'existe pas"
+NO_PROPRIETAIRE;"Media dont vous n'êtes pas le propriétaire"
+NUMBER;Numero
+NUMERO_TELEPHONE;"Numéro de téléphone"
+NUM_TEL;Téléphone
+OFFLINE;"Hors ligne"
+OK;OK
+"One criteria";"Saisissez au moins un critere"
+ONE_GABARIT_SITE;"Only one template/site"
+ONE_LINE;"Une ligne"
+ONE_SITE_LAYOUT;"1 seul Gabarit/site"
+ONE_SITE_USE;"1 seule utilisation/site"
+ONE_USE;"Une utilisation"
+ONE_USE_SITE;"Only one use/site"
+ONGLET;Onglet
+ONLY_MOBILE;"Uniquement Mobile"
+ONLY_WEB_TAB;"Uniquement Web / Tablette"
+ON_HOME_PAGE;"On homepage"
+OR;ou
+Order;Ordre
+ORDER_SELECTED_ITEMS;"ORDER_SELECTED_ITEMS - N/A"
+ORDRE;Ordre
+"Ordre d_affichage";"Ordre d'affichage"
+OTHER_INFORMATION_SUPPORT_SERVICES_NEEDED;"OTHER_INFORMATION_SUPPORT_SERVICES_NEEDED - N/A"
+OUI;Oui
+OUTILS;Outils
+OUTILS_MOBILE;"Outils mobile"
+OUTILS_WEB;"Outils web"
+"Output format";"Format de sortie"
+OUVRIR_NIVEAU_3;"Ouvrir le niveau 3"
+OU_A_PARTIR_DE;"ou à partir de "
+OVERVIEW;Aperçu
+"Package name";"Nom du package"
+PAGE;Page
+pages;pages
+pages;pages
+PAGE_CONTENT_HIER;"Page contenant des elements hierarchiques"
+PAGE_MENU_NAV;"Page utilisee dans des menus de navigation"
+PAGE_NOT_FOUND;"Page not found"
+PAGE_TITLES;"Page titles"
+PARAMETER;Parametre
+PARAMETRAGE;"Paramétrage pour"
+PARAMETRES;Parametres
+PARTAGE_COMPARAISON;"Partager ma comparaison :"
+"Partners with package access";"Partenaires ayant acces au package"
+PAR_CITY;"Par ville"
+PAR_CP;"Par code postal"
+PAR_CP_CITY;"Par code postal/ville"
+PAR_PDV;"Par point de vente"
+PAR_PRODUCT;"Par produit"
+PASSWORD;"Mot de passe"
+"Password previsu";"Mot de passe de prévisualisation"
+PAS_PRIX_COMPTANT;"Pas pour le prix comptant"
+PAYANT;Payant
+"Pays source";"Pays source"
+PAYS_CIBLE;"Pays cible"
+PAYS_CIBLES;"Pays cibles"
+PAYS_CIBLES_OBLIGATOIRE;"Pays cibles obligatoire"
+PAYS_SOURCE;"Pays source"
+PDF_ICONE;"Pdf icon"
+PDV_FILTRE_E_LABEL;"Pdv filtre libelle"
+PERI_INTER;"Périmètre d'intervention"
+PER_MONTH;"/ mois"
+Phone;Telephone
+PHOTO;Photo
+"PHP Class";Classe
+Picto;Picto
+PICTO_RUBRIQUE;Picto/Rubrique
+Pied;Pied
+"Player size";"Taille du lecteur"
+PLEASE_CHOOSE_A_SUBJECT;"Veuillez selectionner un objet"
+PLUGIN;Plugin
+PLUGINS;Plugins
+PLUGIN_CONTENT;Cont.
+PLUGIN_NAV;Nav.
+Poll;Sondage
+"Poll already voted";"Vote non pris en compte. Vous avez deja vote !"
+POPUP_ANCHOR_PROPERTIES;"Proprietes d'ancre"
+POPUP_ANCHOR_TITLE;Ancre
+POPUP_BUTTON_BACK;Retour
+POPUP_BUTTON_CANCEL;Annuler
+POPUP_BUTTON_CLOSE;Fermer
+POPUP_BUTTON_OK;Valider
+POPUP_BUTTON_PROPERTIES;Proprietes
+POPUP_BUTTON_RESTORE;Retablir
+POPUP_BUTTON_SAVE;Valider
+POPUP_BUTTON_SELECT;Selectionner
+POPUP_COLOR_CUSTOM_PALETT;"palette personnalisee"
+POPUP_COLOR_TITLE;"Palette de couleurs"
+POPUP_CONTENT_DATA;"Contenus :"
+POPUP_ICONS_TITLE;Icones
+POPUP_LABEL_ACTION;Action
+POPUP_LABEL_ADD;Ajouter
+POPUP_LABEL_ALIGNMENT;Alignement
+POPUP_LABEL_ALT;"Info bulle"
+POPUP_LABEL_BACKGROUND_COLOR;"Couleur de fond"
+POPUP_LABEL_BORDER;Bordure
+POPUP_LABEL_CAPTION;Legende
+POPUP_LABEL_CENTER;Centre
+POPUP_LABEL_COLOR;Couleur
+POPUP_LABEL_DEL;Supprimer
+POPUP_LABEL_FILE;Fichier
+POPUP_LABEL_FOLDER;Dossier
+POPUP_LABEL_HEIGHT;Hauteur
+POPUP_LABEL_HOR_ALIGN;"Align. Hor."
+POPUP_LABEL_HOR_SPACE;"Esp. Horizontal"
+POPUP_LABEL_LEFT;Gauche
+POPUP_LABEL_MIDDLE;Milieu
+POPUP_LABEL_NAME;Nom
+POPUP_LABEL_NONE;aucune
+POPUP_LABEL_NONE2;aucun
+POPUP_LABEL_ORIGINAL_SIZE;"Revenir a la taille originale"
+POPUP_LABEL_PRESERVE;"Preserver les dimensions"
+POPUP_LABEL_QUALITY;Qualite
+POPUP_LABEL_QUALITY_BEST;Automatique
+POPUP_LABEL_QUALITY_HIGH;Haute
+POPUP_LABEL_QUALITY_LOW;Basse
+POPUP_LABEL_QUALITY_MEDIUM;Moyenne
+POPUP_LABEL_RIGHT;Droite
+POPUP_LABEL_TITLE;Titre
+POPUP_LABEL_TOP;Haut
+POPUP_LABEL_VERT_ALIGN;"Align. Vert."
+POPUP_LABEL_VERT_SPACE;"Esp. Vertical"
+POPUP_LABEL_WIDTH;Largeur
+POPUP_LINK_CURRENT_PAGE;"Page courante"
+POPUP_LINK_CUSTOM;personnalisee
+POPUP_LINK_NEW_PAGE;"Nouvelle fen"
+POPUP_LINK_PARENT_FRAME;"Cadre parent"
+POPUP_LINK_TARGET;Cible
+POPUP_LINK_TITLE;"Proprietes de liens"
+POPUP_LINK_TOP_FRAME;"Toute la fen"
+POPUP_MEDIA_BROWSER;Bibliotheque
+POPUP_MEDIA_FILE;Fichiers
+POPUP_MEDIA_FLASH;Flash
+POPUP_MEDIA_IMAGE;Images
+POPUP_MEDIA_LABEL_ADD_FILE;"Ajout d'un fichier"
+POPUP_MEDIA_LABEL_ADD_FOLDER;"Ajout d'un dossier"
+POPUP_MEDIA_LABEL_FILE_NAME;Fichier
+POPUP_MEDIA_LABEL_HTTP;Url
+POPUP_MEDIA_LABEL_LAST_ACCES;"Date de creation"
+POPUP_MEDIA_LABEL_NEW_FILE;Fichier(s)
+POPUP_MEDIA_LABEL_NEW_FILE_COMMENT;"(upload multiple, sauf IE)"
+POPUP_MEDIA_LABEL_NEW_FOLDER;"Nouveau dossier"
+POPUP_MEDIA_LABEL_NO_FILE;"Pas de fichier"
+POPUP_MEDIA_LABEL_PATH;Chemin
+POPUP_MEDIA_LABEL_PROPERTIES;Proprietes
+POPUP_MEDIA_LABEL_REPLACE;Remplacer
+POPUP_MEDIA_LABEL_SIZE;Taille
+POPUP_MEDIA_LIBRARY_TITLE;"Bibliotheque de medias"
+POPUP_MEDIA_MSG_DEL_FILE;"Etes-vous sur de vouloir supprimer ce fichier ?"
+POPUP_MEDIA_MSG_DEL_FOLDER;"Etes-vous sur de vouloir supprimer ce fichier ?"
+POPUP_MEDIA_MSG_DEL_MEDIA_FORMAT;"Etes-vous sur de vouloir supprimer ce format ?"
+POPUP_MEDIA_MSG_DEL_ROOT;"Vous ne pouvez pas supprimer le dossier racine : Veuillez selectionner un autre dossier"
+POPUP_MEDIA_MSG_EMPTY_FOLDER;"Le dossier doit être vide pour pouvoir être supprimé."
+POPUP_MEDIA_MSG_MOVE_FOLDER;"Etes-vous sur de vouloir supprimer ce dossier ? "
+POPUP_MEDIA_MSG_MOVE_MEDIA;"Etes-vous sur de vouloir supprimer ce média ? "
+POPUP_MEDIA_MSG_REAL_SIZE;"Taille reelle"
+POPUP_MEDIA_MSG_SELECT_FOLDER;"Veuillez selectionner un dossier"
+POPUP_MEDIA_MSG_SELECT_MEDIA;"Veuillez selectionner un fichier"
+POPUP_MEDIA_VIDEO;Video
+POPUP_REF_USED;"Cette valeur est deja utilisee."
+POPUP_RUBRIQUE_DATA;"Rubriques :"
+POPUP_RUBRIQUE_DATA_AUTRE_SITE;"Rubriques (autres sites) : "
+POPUP_SEARCH_EMPTY;"Saisissez quelque chose a chercher."
+POPUP_SEARCH_LIMIT;"Plus de 100 valeurs ont ete trouvees.
+Soyez plus precis."
+POPUP_SEARCH_NOFOUND;"Rien n'a ete trouve."
+POPUP_SEARCH_TITLE;Recherche
+POPUP_SEARCH_WAIT;"Recherche en cours..."
+POPUP_SPECIAL_CHARS_TITLE;"Caracteres Speciaux"
+POPUP_TABLE_BASELINE;"Ligne de base"
+POPUP_TABLE_CELL;Cellule
+POPUP_TABLE_CELL_PROPERTIES;"Proprietes de Cellule"
+POPUP_TABLE_COLUMNS;Colonnes
+POPUP_TABLE_LINE;Ligne
+POPUP_TABLE_LINES;Lignes
+POPUP_TABLE_LINE_PROPERTIES;"Proprietes de Ligne"
+POPUP_TABLE_NOWRAP;"Pas de retour a la ligne"
+POPUP_TABLE_TABLE_PROPERTIES;"Proprietes de Table"
+POPUP_TABLE_TITLE;"Proprietes de Table/Ligne/Cellule"
+POPUP_TEMPLATES_TITLE;Modeles
+POPUP_UPLOAD_ALREADY_EXISTS;"Le fichier existe deja dans "
+POPUP_UPLOAD_ATTACHED;"Fichier joint"
+POPUP_UPLOAD_IMPOSSIBLE;"Impossible de copier le fichier."
+POPUP_UPLOAD_NO_FILE;"Le fichier que vous avez envoye a une taille nulle"
+POPUP_UPLOAD_PART_ONLY;"L'envoi du fichier a ete interrompu pendant le transfert"
+POPUP_UPLOAD_REPLACE;"Le fichier existe deja : vous pouvez soit le remplacer, soit renommer le fichier transfere"
+POPUP_UPLOAD_SEND;Envoyer
+POPUP_UPLOAD_TITLE;"Transfert de fichier"
+POPUP_UPLOAD_TOO_BIG;"Le fichier depasse la limite autorisee dans le formulaire Pelican_Html "
+POPUP_UPLOAD_TOO_BIG_PHP;"Le fichier depasse la limite autorisee par le serveur (php.ini)"
+POPUP_UPLOAD_WRONG_TYPE;"Type de fichier non autorise"
+POPUP_VERSION;Version
+POP_IN;Pop'in
+POSITION_IMG;"Position de l'image"
+"Postal code";"Code Postal"
+posted;publiee
+POUVONS_NOUS_VOUS_AIDER;"POUVONS nous VOUS AIDER ?"
+preprod;preprod
+PREPROD_SITE;"Site de preproduction"
+"Preserve DNS";"Preserver le DNS"
+PRESS_ARTICLES_TAB;"Articles de presse"
+PRESS_ARTICLE_MEDIA_ONLINE;"En ligne"
+PRESS_ARTICLE_MEDIA_PRINT;Imprimes
+PRESS_ARTICLE_MEDIA_RADIO;Radio
+PRESS_ARTICLE_MEDIA_TV;TV
+PRESS_RELEASES_TAB;"Communiques de presse"
+Preview;Previsu.
+PREVIEW_LOGIN;Identifiant
+PREVIEW_MDP;"Mot de passe"
+PRICE;Prix
+PRINT_ICONE;"Print icon"
+PRINT_PAGE;"Imprimer la page"
+PRIX;Prix
+PRIX_COMPTANT;"Prix comptant"
+PRIX_CONSEILLE;"Prix conseillé"
+PRIX_FRONT;Prix
+PRODUCTS;Produits
+PRODUCT_ARCHIVED;"Ce produit a ete archive. Si vous avez besoin de plus de renseignements, veuillez nous contacter"
+PRODUCT_COLOR_COLLECTION;"Collection couleur"
+PRODUCT_DATASHEETS_AND_CERTIFICATES;"Fiches techniques et certificats"
+PRODUCT_DATA_SHEET;"Fiche produit"
+PRODUCT_DESCRIPTION;Description
+PRODUCT_DESC_100_WORDS;"Description de 100 mots"
+PRODUCT_DESC_25_WORDS;"Description de 25 mots"
+PRODUCT_DESC_50_WORDS;"Description de 50 mots"
+PRODUCT_DESC_AWARD;Recompenses
+PRODUCT_DESC_CORE_DIFF;"Justification de l'achat"
+PRODUCT_DESC_LANDINGPAGE;"Activites de marketing"
+PRODUCT_DESC_NEWS;Actualites
+PRODUCT_DESC_PACKAGE_CONTENTS;Contenu
+PRODUCT_DESC_SALES_BENEFITS;"Arguments de vente"
+PRODUCT_DESC_SAMPLE_AD_COPY;"Echantillon publicitaire"
+PRODUCT_DESC_SHELF_CARD_COPY;"Affiche de rayon"
+PRODUCT_EMBARGO_DATE;"Date de l'embargo"
+PRODUCT_FEATURES;Fonctions
+PRODUCT_IMAGES;Images
+PRODUCT_INFORMATION_TITLE;"Produits connexes"
+PRODUCT_LAUNCH_DATE;"Date de lancement du produit"
+PRODUCT_LOGISTIC_INFO;"Info logistique"
+PRODUCT_MODEL;"PRODUCT_MODEL - N/A"
+PRODUCT_NAME;"Nom du produit"
+PRODUCT_NAME_IN_SEARCH_AREA;"Saisir nom de produit / numeros de piece"
+PRODUCT_PART_NUMBER;"Numeros de piece"
+PRODUCT_QTY;"PRODUCT_QTY - to be translated"
+PRODUCT_RELATED_PRODUCTS;"Produits connexes"
+PRODUCT_REQUIRED_OFFER_PRICE;"PRODUCT_REQUIRED_OFFER_PRICE - to be translated"
+PRODUCT_REQUIREMENTS;"PRODUCT_REQUIREMENTS - to be translated"
+PRODUCT_TYPE;"Product type"
+PRODUCT_TYPE_ALL;All
+PRODUCT_TYPE_BUSINESS;"Business product"
+PRODUCT_TYPE_RETAIL;"Retail product"
+PRODUCT_TYPE_RETAIL_RECOMMENDED_FOR_BUSINESS;"Retail product recommended for business"
+PRODUCT_UNIFYING;Unifying
+PROD_SITE;"Site de production"
+PROFESSIONAL;Professionnel
+PROFIL;Profil
+PROFILE;Profil
+Profiles;Profil(s)
+PROFILS;Profils
+PROFITER_OFFRE;"Profiter de cette offre"
+Protocole;"Protocole HTTPS"
+PSA_INTEGRATION;INTEGRATION
+PSA_PREPROD;PREPRODUCTION
+PSA_PROD;PRODUCTION
+PSA_RECETTE;RECETTE
+Pub;Pub
+Public;Public
+PUBLICATION;Publication
+"Publication state";"Etat de publication"
+PUBLICATION_BY;"par "
+PUBLICATION_DATE;"Publication date"
+PUBLICATION_DATE_VIEWED;"Showing date"
+PUBLICATION_ON;"le "
+PUBLIC_TITLE;"Public title"
+PUBLIE;Publié
+PUSH;Push
+PUSH_ASSOCIE;"Push associe"
+PUSH_CONTENU_ANNEXE;"Push de contenu annexe"
+PUSH_MEDIA;"Push Media"
+PUSH_OUTILS_MAJEUR;"Push d'outils Majeur"
+PUSH_OUTILS_MINEUR;"Push d'outils Mineur"
+PUSH_VEHICULE_UTILITAIRE;"Push : véhicule utilitaire"
+QUATRE_TIER;4:3
+Question;Question
+QUE_RECHERCHEZ_VOUS;"Que recherchez-vous ?"
+QUICKLINKS_BUBBLE_TEXT;"Ajouter a ma liste a surveiller"
+QUICKLINKS_INFOS;"Pour ajouter une page a la liste a surveiller, cliquez sur ##IMAGE## "
+QUICKLINKS_TITLE;"Liste a surveiller"
+RAC;RAC
+Raccourcis/Alias;"Raccourcis/Alias (code 200)"
+RATING;Note
+RAYON;Rayon
+Recent_comment;"Commentaires recents"
+RECHERCHER;Rechercher
+"Rechercher dans :";"Rechercher dans :"
+"Rechercher les medias nomm?s ou avec l_id :";"Rechercher les medias nomm"
+"Rechercher les medias nommés ou avec l'id";"Rechercher les medias nommés ou avec l'id"
+"Rechercher les medias nommes ou avec l_id :";"Rechercher les medias nommes ou avec l'id :"
+RECHERCHE_RATIO;Ratio
+RECOMMENDED_PRODUCTS;"Nous recommandons"
+RECOMMENDED_RETAIL_PRICE;"Prix recommande"
+RECUPERATION_AUTOMATIQUE;"Récupération automatique"
+Redirections;"Redirections (code 301)"
+REDIRECT_URL_USED;"Les urls alternatives suivantes sont déjà utilisées :"
+"Reference data";"Donnees de reference"
+"Reference table";"Tables de reference"
+Refernce;Referencer
+REGISTER;S'incrire
+REGISTRATION;Inscription
+REGISTRATION_CONFIRMATION;"Votre demande d'inscription a ete transmise a votre admin pour approbation"
+REGISTRATION_LOGIN_EXIST;"Cet identifiant existe deja"
+REGROUPEMENT;Regroupement
+REGROUPEMENT_DEFAUT_GALERIES_MEDIA;"Regroupement par défaut (Galerie média)"
+REGROUPEMENT_DEFAUT_PUBLIC;"Regroupement par défaut"
+REINITIALISER;Réinitialiser
+REMEMBER_ME;"Se souvenir de moi"
+REMONTEE_AUTO;"Auto ascent"
+REMOVE;Supprimer
+REMOVED;Supprime
+REPEAT_PASSWORD;"Confirmation du mot de passe"
+REPLACE_FAV_PDV;"Vous avez déjà une concession favorite pour<br />vos véhicules neufs / votre service après-vente."
+REQUEST_FORM_COMMENT;Commentaires
+REQUEST_FORM_SUCCESS;"Votre demande a ete envoyee"
+REQUEST_HELP;Aide
+REQUEST_SELECTED_ITEMS;"Demander les elements selectionnes"
+RESEAUX_SOCIAUX;"Réseaux sociaux"
+RESET_LIST;"Reinitialiser la liste"
+REST_TRASH;Restaurer
+RESULTS;Resultats
+RESULTS_FOUND;"resultats trouves"
+RESULTS_GEO_GMAP;"Nous avons trouvé ###count### établissement(s) près de vous"
+RESULTS_GMAP;"Nous avons trouvé ###count### établissement(s) près de &quot;###address###&quot;"
+RESULTS_GSA;"##nb## résultat(s) pour ##search##"
+RESULTS_OF;"Resultats de"
+RESULTS_ORDERED_BY;"Resultats tries par"
+RESULTS_PER_PAGE;"Nombre de resultats par page"
+RETAIL_OUTLET;"Point de vente"
+"Robot seo";"Robots (Meta)"
+"Robots desk";"Robots.txt (Bureau)"
+"Robots mobile";"Robots.txt (mobile)"
+"Robots seo";Robots
+ROLE;Role
+ROLES;Roles
+ROLL_OVER;Survol
+"Root directory";"Repertoire racine"
+ROOT_FOLDER;"Root folder"
+ROUGE;Rouge
+RSS_FEED;"Flux RSS"
+RUBRIQUE;Rubrique
+RUBRIQUES;Rubriques
+RUBRIQUES_FAQ;"Rubriques des FAQ"
+SAVE_CSV_TRAD_FO;"Enregistrer CSV"
+SAVE_DNS;"Save DNS"
+SAVE_MY_QUICKLINKS;"Enregistrer ma liste a surveiller"
+SCHEDULING_BLOC;"Bloc programmable"
+SEARCH;Rechercher
+SEARCH_CRITERE;"Veuillez remplir au moins un critère de recherche"
+SEARCH_LIB;"Libellé pour la recherche"
+SEARCH_PRODUCTS_BY_FEATURE;"Rechercher des produits par fonction"
+SEARCH_PRODUCTS_BY_RETAIL_NAME_PART_NUMBER;"Rechercher des produits par nom / numero de piece"
+SEARCH_PRODUCTS_NO_FEATURE_AVAILABLE;"Pas de fonctions disponibles pour la selection"
+SEARCH_PRODUCTS_PLEASE_SELECT_CAT;"Veuillez selectionner un categorie pour afficher les fonctions"
+SEARCH_URL;"Recherche d'url"
+SECOND_NAME;Prenom
+SECTION;Section
+See;Voir
+SEE_MORE;"Pour en savoir plus"
+SEE_MORE_ACCESSORIES;"Voir plus d'accéssoires"
+SEIZE_NEUVIEME;16/9
+"Selected blocs";"Blocs selectionnes"
+SELECTION_VEHICULES;"Sélection des véhicules"
+SELECT_YOUR_BUSINESS_PROFILE;"Veuillez selectionner le profil de votre societe"
+SELECT_YOUR_POSITION;"Veuillez choisir votre poste"
+Send;Envoi
+SEND_REQUEST;"Envoyer la demande"
+SEO;Referencement
+SERVICES;Services
+"Services included in package";"Services compris dans le package"
+SESSION_EN_COURS;"Session en cours"
+SETTINGS;Param
+SEUIL_PRIX_COMPTANT1;"Seuil pour le prix comptant 1"
+SEUIL_PRIX_COMPTANT2;"Seuil pour le prix comptant 2"
+SEUIL_PRIX_COMPTANT3;"Seuil pour le prix comptant 3"
+SHARER_TITLE;"Titre sharer"
+"Short Content";Resume
+SHORTCUT;Raccourc.
+shortDistance;"Courtes distances"
+SHORT_ADDRESS;"Adresse courte"
+SHORT_TITLE;"Titre court"
+SHOW_ALL;"Voir tout"
+SHOW_ASSISTANCE;Assistance
+SHOW_FORMAT;"Voir ce format"
+SHOW_PIC;"Voir la photo"
+SHOW_VIDEO;"Voir la video"
+SILHOUETTE;Silhouette
+SILHOUETTE_FRONT;Silhouette
+single;"Solo ou couple"
+SITE;Site
+"Site languages";"Langues du site"
+"Site maintenance";"Site en maintenance (503)"
+Site(s);Site(s)
+Sites;Sites
+SITES_APPLICATIONS_MOBILES;"Sites applications mobiles"
+SITE_LANGS;"Site langs"
+SIZE;Taille
+SLIDE_OFFRE_ADD_FORM;Offre
+smallFamily;"Couple et 2 enfants"
+SOCIAL_GROUP;"Type de regroupement sociaux"
+SOIT_ECO;"Soit #PRICE# d'économie"
+SORT_LIST;"Trier par"
+SOUS_TITRE;"Sous titre"
+STANDARD;Standard
+START;Debut
+"Start hour";"Heure de lancement"
+"Start state";"Etat de depart"
+START_DATE_VIEWING;"Start showing date"
+State;Statut
+Statistics;Statistiques
+STATISTIQUES;Statistiques
+STREET;"STREET - N/A"
+SUBJECT_CONTACT_MAIL;Sujet
+Subscribe;S'inscrire
+"Subscribers list";"Liste des abonnes"
+"Subscribers profiles";"Profils des abonnes"
+SUBSCRIBER_PROFIL;"Subscriber profile"
+SUBSCRIPTION_DATE;"Date inscription"
+Subtitle;"Sous titre"
+SUCCES_IMPORT;"Import effectué"
+SUIVRE;Suivre
+SUIVRE_LA_CHAINE;"Suivre la chaine"
+Sup.;Sup.
+Suppression;Suppression
+SUPP_IMPOS;"Suppression impossible"
+SUPP_IMP_USE;"Elément utilisé dans un contenu, suppression impossible"
+SUR_FACEBOOK;"Sur Facebook"
+SUR_INSTAGRAM;"Sur Instagram"
+SUR_TWITTER;"Sur twitter"
+SUR_YOUTUBE;"Sur Youtube"
+S_INSCRIRE;S'incrire
+TABLE;Table
+TABLEAUX_DE_BORD;"Tableaux de bord"
+TABLES_DE_REFERENCE;"Tables de reference"
+TABLES_SYSTEME;"Tables systeme"
+TABLE_FILTER_ALL;Tout
+TABLE_FORMAT_DAY;j.
+TABLE_FORMAT_HOUR;h.
+TABLE_NO_RECORD;"Pas d'enregistrement"
+TABLE_PAGE_NEXT;suiv.
+TABLE_PAGE_PREV;prec.
+TABLE_RECORDS;enr.
+TABLE_REFERENCES;"References' tables"
+"Tag http";"Tag http"
+"Tag https";"Tag https"
+"Tag identifier";"Identifiant Tag"
+"Tag type";"Type de tag"
+TAGS;Tags
+TAG_PAGE;"TAG utilise dans une page"
+TAILLE;Taille
+TARIF_APP;Tarif
+TAXONOMIE;Taxonomie
+Taxonomy;Taxonomie
+TECHNICAL_SPECIFICATIONS;"Specifications techniques"
+TEL;"Tel : "
+TEMPLATE;Template
+"Template groups";"Groupes de templates"
+"Template type";"Types de templates"
+TEMPLATES;Templates
+TEMPLATE_TYPES;"Template types"
+TENDER_DOCUMENTS_AVAILABLE;"TENDER_DOCUMENTS_AVAILABLE - N/A"
+TERME;Terme
+tete;tete
+TEXTE;Texte
+TEXTE_IN_PAGE;"Texte dans la page"
+TEXTE_NOTIFICATION;"Texte notification"
+TEXT_ABO_NEWSLETTER;"Inscrivez vous à notre newsletter pour recevoir toutes nos infos et promotions en avant première."
+THEMES;Thèmes
+THEMES_ACTU;"Thèmes d'actualité"
+THEMES_D_ACTUALITES;"Thèmes d'actualités"
+THEMES_TECHNOLGIES;"Themes technologies"
+THEMES_TECHNOLOGIE;"Thèmes Technologie"
+THEMES_TECHNOLOGIES;"Thèmes Technologie"
+TIMING;Timing
+TITLE;Titre
+TITRE;Titre
+"Titre des pages";"Titre des pages"
+TITRE_BLOC_AUTRES_VEHICULES;"Titre du bloc ""Autres véhicules"""
+TITRE_COL;"Titre de la colonne"
+TITRE_COLONNE;"Titre de colonne"
+TITRE_COURT;"Titre court"
+TITRE_LONG;"Titre long"
+TITRE_ONGLET;"Titre de l'onglet"
+TO;a
+TOP_PRODUCT;"TOP_PRODUCT - to be translated"
+TOUT;Tout
+Town;Ville
+TRADUCTION_BO;"Traduction BO"
+TRADUCTION_FO;"Traduction FO"
+TRANSMISSION;Transmission
+TRANSPORT_PERSONNE;"Transport de personne"
+TRASH_PAGE;Corbeille
+TTC;TTC
+TWEETS_DE;"Tweet de"
+TWO_LINE;"2 lignes"
+TYPE;Type
+TYPES_DE_CONTENU;"Types de contenu"
+TYPES_DE_MARQUEURS;"Types de marqueurs"
+TYPE_AFFICHAGE;"Type d'affichage"
+TYPE_CONTENU_ASSOCIE;"Type de Contenu associe"
+TYPE_DE_GABARIT;"Type de gabarit"
+TYPE_D_AFFICHAGE;"Type d'affichage"
+TYPE_EXPAND;"Type d'expand"
+TYPE_EXPORT;"Type export"
+TYPE_EXPORT_OBLIGATOIRE;"Type export obligatoire"
+TYPE_FILTRE_1;"Type de filtre 1"
+TYPE_FILTRE_2;"Type de filtre 2"
+TYPE_OF_INFORMATION;"Nature des informations"
+TYPE_REGROUPEMENT_RESEAUX_SOCIAUX;"Type de regroupement de réseaux sociaux"
+TYPE_RESEAU;"Type de réseau"
+TYPE_VIDEO;"Type de video"
+"Unabled until";"Actif a partir de"
+UNE_UTILISATION;"One use"
+UNIQUEMENT_MOBILE;"Uniquement Mobile"
+UNIQUEMENT_WEB_TABLETTE;"Uniquement Web / Tablette"
+UNITE_LARGEUR;"Unité de largeur"
+Until;Jusqu'au
+UP;Monter
+Upd.;Maj.
+UPDATES;Actualites
+UPLOAD_FILE_TRAD_BO;"Importer le fichier BO"
+UPLOAD_FILE_TRAD_FO;"Importer le fichier FO"
+UPLOAD_VAT_CERTIFICATE;"UPLOAD_VAT_CERTIFICATE - N/A"
+UPLOAD_VAT_TEXT_EMAIL_REMINDER;"MY_DATA_TEXT_EMAIL_REMINDER - to be translated"
+UPPERCASE;Majuscules
+URL;Url
+"Url canonique";"Url canonique (Meta)"
+"URL claire";"URL claire"
+"URL extranet";"URL extranet"
+"Url maintenance";"Url du site en maintenance (503)"
+"URL principale";"URL principale"
+"Url update";"Mettre a jour l'URL"
+URLS;Url(s)
+URL_BOUTIQUE_ACCESSOIRE;"URL de la boutique accessoire"
+URL_BOUTIQUE_ACCESSOIRE_MOBILE;"URL de la boutique accessoire mobile"
+URL_CHANGE;"Elle a été modifiée."
+URL_CONFIGURATEUR;"URL du configurateur"
+URL_CONFIGURATEUR_MOBILE;"URL du configurateur mobile"
+URL_CTA;"Url CTA"
+URL_DEJA_UTILISEE;"Cette url est déjà utilisé"
+URL_DEMANDE_BROCHURE;"URL demande de brochure"
+URL_DEMANDE_BROCHURE_MOBILE;"URL demande de brochure mobile"
+URL_DEMANDE_ESSAI;"URL demande d’essai"
+URL_DEMANDE_ESSAI_MOBILE;"URL demande d’essai mobile"
+URL_DEMANDE_OFFRE_COMMERCIALE;"URL demande d’offre commerciale"
+URL_DEMANDE_OFFRE_COMMERCIALE_MOBILE;"URL demande d’offre commerciale mobile"
+URL_EXTERNE;"URL externe"
+URL_MOB;"Url mobile"
+URL_MOBILE;"Url mobile"
+URL_OBLIGATOIRE;"Vous devez renseigner une URL"
+URL_PAGE_ABONNEMENT_NEWSLETTER;"Url de la page d'abonnement"
+URL_PAGE_FLUX;"URL de page des flux"
+URL_PAGE_YOUTUBE;"URL de la chaine Youtube"
+URL_SETTING;"URL settings"
+URL_USED_ON_GABARIT;"##param0## pour le type de gabarit ""##param1##"""
+URL_WEB;"Url web"
+User;Utilisateur
+Users;"Les utilisateurs"
+USER_NAME;"Nom utilisateur"
+USER_YOUTUBE;"Utilisateur Youtube"
+UTILISATEUR;Utilisateur
+UTILISATEURS;Utilisateurs
+Valider;Valider
+VAT_NUMBER;"Numero de TVA "
+VEHICULE;Vehicule
+VEHICULES;Véhicules
+VEHICULES_100;"Véhicules 100%"
+VEHICULE_ASSOCIE;"Véhicule associé"
+VEHICULE_COLOURS;"une teinte"
+VEHICULE_COULEUR_LABEL_BCKGRD_WEB;"Visuel de fond WEB"
+VEHICULE_COULEUR_LABEL_CAR_MOB;"Visuel véhicule mobile"
+VEHICULE_COULEUR_LABEL_CAR_WEB;"Visuel véhicule WEB"
+VEHICULE_COULEUR_LABEL_CODE;"Code de la couleur"
+VEHICULE_COULEUR_LABEL_CODELCDV;"Code LCDV de la version"
+VEHICULE_COULEUR_LABEL_NAME;"Libellé de la couleur"
+VEHICULE_COULEUR_LABEL_PICTO;"Picto de couleur"
+VEHICULE_LABEL_ASSOCCRITTYPE;"Filtre de type"
+VEHICULE_LABEL_CASHPRICE;"Prix comptant"
+VEHICULE_LABEL_CASHPRICETYPE;"Type de prix comptant"
+VEHICULE_LABEL_CASHPRICE_LM;"Mention légale prix comptant"
+VEHICULE_LABEL_CASHPRICE_LM_EX;"Exemple : «Tarif CITROËN TTC conseillé en vigueur »"
+VEHICULE_LABEL_CREDITPRICE_FR;"Prix à crédit : premier loyer"
+VEHICULE_LABEL_CREDITPRICE_FR_EX;"Exemple : « après un premier loyer de 2.865,00 €»"
+VEHICULE_LABEL_CREDITPRICE_FR_LM;"Mentions légales premier loyer"
+VEHICULE_LABEL_CREDITPRICE_FR_LM_EX;"Exemple : « Un crédit vous engage et doit être remboursé. Vérifiez vos capacités de remboursement av"
+VEHICULE_LABEL_CREDITPRICE_NR;"Prix à crédit : Loyer suivant/à partir de"
+VEHICULE_LABEL_CREDITPRICE_NR_EX;"Exemple : « 500€/mois »"
+VEHICULE_LABEL_CREDITPRICE_NR_LM;"Mention légale loyer suivant"
+VEHICULE_LABEL_DISPLAYCASHPRICE;"Prix comptant"
+VEHICULE_LABEL_DISPLAYCREDITPRICE;"Prix à crédit"
+VEHICULE_LABEL_DISPLAYPRICE;"Affichage des prix"
+VEHICULE_LABEL_GAMME;Gamme
+VEHICULE_LABEL_GAMMECONFIG;"Code gamme (via le configurateur)"
+VEHICULE_LABEL_GAMMEMANUAL;"Code gamme (manuel)"
+VEHICULE_LABEL_GAMMEVP;"Véhicule particulier"
+VEHICULE_LABEL_GAMMEVU;"Véhicule utilitaire"
+VEHICULE_LABEL_LCDV6CONFIG;"Code LCDV (via le configurateur)"
+VEHICULE_LABEL_LCDV6CONFIGRELOAD;"Si un code LCDV est sélectionné, merci d'enregistrer le véhicule pour le rechargement des données pr"
+VEHICULE_LABEL_LCDVCONFIG;"Code LCDV (via le configurateur)"
+VEHICULE_LABEL_LCDVMANUAL;"Code LCDV (manuel)"
+VEHICULE_LABEL_MEDIAWEB;"Visuel de fond WEB"
+VEHICULE_LABEL_NAME;"Nom du véhicule"
+VEHICULE_LABEL_THUMBNAIL;"Vignette véhicule"
+VEHICULE_LABEL_USEFINANCIALSIMULATOR;"Utiliser le Simulateur Financier Groupe"
+VEHICULE_LABEL_USEFINANCIALSIMULATOR_RELOAD;"Si vous coché la case, merci d'enregistrer les informa"
+VEHICULE_LCDV6;"Vehicule LCDV6"
+VEHICULE_LIST_GAMMECONFIG;"Gamme (config)"
+VEHICULE_LIST_GAMMEMANUAL;Gamme
+VEHICULE_LIST_LCDV6CONFIG;"LCDV6 (config)"
+VEHICULE_LIST_LCDV6MANUAL;LCDV6
+VEHICULE_NAME;"Nom du véhicule"
+vers;vers.
+version;Version
+versions;versions
+VERSION_DATE;"Format de la date"
+VIDEO;Video
+VIDEOS;Videos
+VIEW;View
+VIGNETTE_VIDEO;Vignette
+VIRTUAL_KEYBOARD;"Clavier virtuel"
+VISIT_WEBSITE;"Visiter le site internet"
+VISIT_WEBSITE_MOB;"Visiter le site de <br />ce point de vente"
+Visual;Visuel
+Visual1;"Visuel 1"
+Visual2;"Visuel 2"
+VISUEL;Visuel
+VISUEL_CRIT_1;"Visuel critère 1"
+VISUEL_CRIT_2;"Visuel critère 2"
+VISUEL_CRIT_3;"Visuel critère 3"
+VISUEL_EXPAND;"Visuel de l'expand"
+VISUEL_EXPAND_GALERIE;"Visuel de l'expand + galerie"
+VISUEL_MOBILE;"Visuel Mobile"
+VISUEL_PORTRAIT__2_VISUELS_16_9_EMPILES;"1 visuel portrait + 2 visuels 16/9 empilés"
+VISUEL_PRIX_COMPTANT;"Visuel prix comptant"
+VOIR_MOINS_ACTU;"Voir moins d'actualités"
+VOIR_MOINS_STOCK;"Voir moins de stock"
+VOIR_PLUS;"Voir plus"
+VOIR_PLUS_ACTU;"Voir plus d'actualités"
+VOIR_PLUS_ACTU_MOB;"Charger plus d'actualités"
+VOIR_STOCK;"Voir les stocks disponibles"
+VOIR_VERSION_MOBILE_SITE;"Voir la version mobile du site"
+volume;Volume
+Vote;Voter
+VOTRE_EMAIL;"Votre email"
+VOUS_DEVEZ_AJOUTER_UNE_GALLERIE;"Vous devez ajouter une galerie"
+WANTED_TO_OFFER;"WANTED_TO_OFFER - N/A"
+WARNING_CHOOSE_FILE_TRAD;"Attention, sélectionnez un fichier de traduction"
+WARRANTY;Garantie
+WEB;Web
+WEB_TABLETTE_MOBILE;"Web / Tablette + Mobile"
+WEB_TAB_MOBILE;"Web / Tablette + Mobile"
+WORKFLOW;Workflow
+WRONG_LOGIN;"Identifiant ou mot de passe incorrect."
+YES;Oui
+YOUR_COMMENT;Commentaires
+YOUR_E_MAIL_ADDRESS_LABEL;"Votre adresse e-mail"
+YOUR_POSITION;"Votre poste"
+YOUR_POSITION_MARKETING;Marketing
+YOUR_POSITION_OTHER;Autre
+YOUR_POSITION_OWNER;Gerant
+YOUR_POSITION_SALES;Ventes
+YOUR_POSITION_SHOP_MANAGER;"Responsable de boutique"
+YOUTUBE;YouTube
+YOU_CAN_CREATE;"Vous ne pouvez créer que"
+ZIP_CODE;"Code postal"
+Zone;Zone
+"Zone category";"Categorie de zone"
+"Zone type";"Type de zone"
+ZONES;Zones
+ZONE_TYPES;"Zone types"
+ZOOM;Zoom

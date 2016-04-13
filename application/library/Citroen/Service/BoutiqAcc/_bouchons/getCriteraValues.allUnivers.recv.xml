@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <soap:Body>
+      <ns1:getCriteriaValuesResponse xmlns:ns1="http://xml.inetpsa.com/Services/AccessoiresApplication/AccessoiresService">
+         <criteriaValueOut xmlns="http://aoa.inetpsa.com/ws/export/ExportCriteriaValue">
+            <criteriaValue>
+               <locale>fr_FR</locale>
+               <universes>
+                  <universe>
+                     <code>0099880931770VGm</code>
+                     <label>SOLUTIONS DE TRANSPORT</label>
+                     <order>1</order>
+                     <subUniverses>
+                        <subUniverse>
+                           <code>0099880970280yQT</code>
+                           <label>AMENAGEMENT COFFRE</label>
+                           <order>0</order>
+                        </subUniverse>
+                        <subUniverse>
+                           <code>0099881098825twy</code>
+                           <label>PORTAGE</label>
+                           <order>4</order>
+                        </subUniverse>
+                        <subUniverse>
+                           <code>0099881074263jZo</code>
+                           <label>KIT DE TRANSFORMATION</label>
+                           <order>3</order>
+                        </subUniverse>
+                        <subUniverse>
+                           <code>0099881040230YKm</code>
+                           <label>ATTELAGE</label>
+                           <order>2</order>
+                        </subUniverse>
+                     </subUniverses>
+                  </universe>
+                  <universe>
+                     <code>0099881383442YKv</code>
+                     <label>SECURITE</label>
+                     <order>4</order>
+                     <subUniverses>
+                        <subUniverse>
+                           <code>0099881548530PIP</code>
+                           <label>SECURITE PASSIVE VEHICULE</label>
+                           <order>3</order>
+                        </subUniverse>
+                        <subUniverse>
+                           <code>0099881432904NAB</code>
+                           <label>EQUIPEMENT HIVERNAL</label>
+                           <order>0</order>
+                        </subUniverse>
+                        <subUniverse>
+                           <code>0099881462364giv</code>
+                           <label>SECURITE PASSAGER</label>
+                           <order>1</order>
+                        </subUniverse>
+                        <subUniverse>
+                           <code>0099881508325jTS</code>
+                           <label>SECURITE ACTIVE VEHICULE</label>
+                           <order>2</order>
+                        </subUniverse>
+                     </subUniverses>
+                  </universe>
+                  <universe>
+                     <code>0099881590750sXL</code>
+                     <label>PROTECTION</label>
+                     <order>3</order>
+                     <subUniverses>
+                        <subUniverse>
+                           <code>0099881694842GqX</code>
+                           <label>TAPIS</label>
+                           <order>3</order>
+                        </subUniverse>
+                        <subUniverse>
+                           <code>0099881618409ppO</code>
+                           <label>BAVETTES</label>
+                           <order>0</order>
+                        </subUniverse>
+                        <subUniverse>
+                           <code>0099881672310bFx</code>
+                           <label>PROTECTION EXTERIEURE</label>
+                           <order>2</order>
+                        </subUniverse>
+                        <subUniverse>
+                           <code>0099881639928ggX</code>
+                           <label>HOUSSES</label>
+                           <order>1</order>
+                        </subUniverse>
+                        <subUniverse>
+                           <code>0169949015716rjT</code>
+                           <label>PRODUITS D'ENTRETIEN</label>
+                           <order>4</order>
+                        </subUniverse>
+                     </subUniverses>
+                  </universe>
+                  <universe>
+                     <code>0099881731354VaQ</code>
+                     <label>MULTIMEDIA</label>
+                     <order>5</order>
+                     <subUniverses>
+                        <subUniverse>
+                           <code>0099881783044TMD</code>
+                           <label>NAVIGATION</label>
+                           <order>1</order>
+                        </subUniverse>
+                        <subUniverse>
+                           <code>0099881838285TQi</code>
+                           <label>TELEPHONIE</label>
+                           <order>3</order>
+                        </subUniverse>
+                        <subUniverse>
+                           <code>0099881813262FOX</code>
+                           <label>SON</label>
+                           <order>2</order>
+                        </subUniverse>
+                        <subUniverse>
+                           <code>0099881860487rVv</code>
+                           <label>VIDEO</label>
+                           <order>4</order>
+                        </subUniverse>
+                     </subUniverses>
+                  </universe>
+                  <universe>
+                     <code>0099880307394irq</code>
+                     <label>CONFORT</label>
+                     <order>0</order>
+                     <subUniverses>
+                        <subUniverse>
+                           <code>0099880524310pzS</code>
+                           <label>AMENAGEMENT HABITACLE</label>
+                           <order>1</order>
+                        </subUniverse>
+                        <subUniverse>
+                           <code>0099880827176DWX</code>
+                           <label>STORES</label>
+                           <order>5</order>
+                        </subUniverse>
+                        <subUniverse>
+                           <code>0099880767167jTM</code>
+                           <label>DEFLECTEURS D'AIR</label>
+                           <order>3</order>
+                        </subUniverse>
+                        <subUniverse>
+                           <code>0099880711328Fmb</code>
+                           <label>CONFORT PASSAGER</label>
+                           <order>2</order>
+                        </subUniverse>
+                        <subUniverse>
+                           <code>0079948195009mTF</code>
+                           <label>AIDE AU STATIONNEMENT</label>
+                           <order>0</order>
+                        </subUniverse>
+                        <subUniverse>
+                           <code>0099880800392qHn</code>
+                           <label>PARFUMS</label>
+                           <order>4</order>
+                        </subUniverse>
+                     </subUniverses>
+                  </universe>
+                  <universe>
+                     <code>0099881179495VYE</code>
+                     <label>STYLE</label>
+                     <order>2</order>
+                     <subUniverses>
+                        <subUniverse>
+                           <code>0099881350422jam</code>
+                           <label>PERSONNALISATION INTERIEURE</label>
+                           <order>3</order>
+                        </subUniverse>
+                        <subUniverse>
+                           <code>0099881250210cuk</code>
+                           <label>JANTES ALLIAGE LEGER</label>
+                           <order>1</order>
+                        </subUniverse>
+                        <subUniverse>
+                           <code>0099881212225xBs</code>
+                           <label>ENJOLIVEURS</label>
+                           <order>0</order>
+                        </subUniverse>
+                        <subUniverse>
+                           <code>0099881308201qTA</code>
+                           <label>PERSONNALISATION EXTERIEURE</label>
+                           <order>2</order>
+                        </subUniverse>
+                     </subUniverses>
+                  </universe>
+               </universes>
+            </criteriaValue>
+         </criteriaValueOut>
+      </ns1:getCriteriaValuesResponse>
+   </soap:Body>
+</soap:Envelope>

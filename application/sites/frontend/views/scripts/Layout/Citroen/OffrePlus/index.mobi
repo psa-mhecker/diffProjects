@@ -1,0 +1,102 @@
+{if $aData.ZONE_MOBILE == 1 && count($aMulti) > 2}
+{literal}
+<style>
+    .sliceOffrePlusMobile .slider .bx-prev  , .sliceOffrePlusMobile .slider .bx-next  {
+        color: {/literal}{$aData.SECOND_COLOR}{literal}!important;
+        border: 2px solid {/literal}{$aData.SECOND_COLOR}{literal}!important;
+    }
+    .sliceOffrePlusMobile .slider .bx-prev:hover, .sliceOffrePlusMobile .slider .bx-next:hover{
+        color: #fff!important;
+        background-color: {/literal}{$aData.SECOND_COLOR}{literal}!important;
+    }
+    .sliceOffrePlusMobile .slider .bx-wrapper .bx-controls .bx-pager-item .bx-pager-link.active {
+        background: {/literal}{$aData.SECOND_COLOR}{literal}!important;
+    }
+	 .sliceOffrePlusMobile .slider.offre a:active figcaption, .sliceOffrePlusMobile .slider.offre a:focus figcaption, .sliceOffrePlusMobile .slider.offre a:hover figcaption{
+        color: {/literal}{$aData.SECOND_COLOR}{literal}!important;
+    }
+    div.sliceOffrePlusMobile .actions .buttonTransversalInvert, div.sliceOffrePlusMobile .buttonTransversalInvert{
+    {/literal}{if ($aData.SECOND_COLOR|count_characters)==7 }{literal}
+            background-color:{/literal}{$aData.SECOND_COLOR}!important;{literal}
+            border-color:{/literal}{$aData.SECOND_COLOR}!important;{literal}
+            color:#ffffff!important;
+    {/literal}{/if}{literal}
+    }
+    div.sliceOffrePlusMobile .actions .buttonTransversalInvert:hover, div.sliceOffrePlusMobile .buttonTransversalInvert:hover{
+    {/literal}{if ($aData.SECOND_COLOR|count_characters)==7 }{literal}
+            background-color:#ffffff!important;
+            border-color:{/literal}{$aData.SECOND_COLOR}!important;{literal}
+            color:{/literal}{$aData.SECOND_COLOR}!important; {literal}
+    {/literal}{/if}{literal}
+    }
+	</style>
+{/literal}
+<div class="sliceNew sliceOffrePlusMobile">
+<section  id="{$aData.ID_HTML}">
+	<hr class="full" />
+    {if $aData.ZONE_TITRE3}<h2 class="subtitle" {if ($aData.PRIMARY_COLOR|count_characters)==7 } style="color:{$aData.PRIMARY_COLOR};" {/if}>{$aData.ZONE_TITRE3}</h2>{/if}
+	{if $aData.ZONE_TITRE4}<h3 class="parttitle" {if ($aData.SECOND_COLOR|count_characters)==7 } style="color:{$aData.SECOND_COLOR};" {/if}>{$aData.ZONE_TITRE4}</h3>{/if}
+
+    {if $aData.ZONE_TEXTE}<div class="mgchapo">{$aData.ZONE_TEXTE}</div>{/if}
+
+
+    <div class="slider offre evf" style="position: relative;" {gtmjs type='slider' data=$aData action="click" datasup=['eventCategory' => 'Content::Slideshow']}>
+
+        <div class="row of2">
+            {foreach from=$aMulti item=Multi}
+				<article class="col">
+                    <figure class="item">
+                            <a href="{if $Multi.PAGE_ZONE_MULTI_URL2}{urlParser url=$Multi.PAGE_ZONE_MULTI_URL2}{else}{urlParser url=$Multi.PAGE_ZONE_MULTI_URL}{/if}" {if $Multi.PAGE_ZONE_MULTI_ATTRIBUT == 2} target="blank"{/if}>
+                            <img class="lazy" src="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/145-111.png" data-original="{$Multi.MEDIA_ID}" alt="" />
+                            <figcaption>{$Multi.PAGE_ZONE_MULTI_TITRE}</figcaption></a>
+                        </figure>
+                    </figure>
+				</article>
+             {/foreach}
+
+        </div>
+
+    </div>
+
+{if $aData.ZONE_TITRE6 || $aCTA|@sizeof > 0 || $aData.ZONE_TEXTE4}
+
+    {if $aData.ZONE_TITRE6}
+        {if $aData.ZONE_TITRE5 == "POP_IN" && $urlPopInMention != ""}
+            <em class="notice"><span>{$aData.ZONE_TITRE6}</span></em>
+            <div class="notice-text" data-close="Fermer">
+                <h6 class="title-lvl1 centered nobg">{$titlePopInMention}</h6>
+                <p>
+                    <iframe id="iframe_popin" class="iframe_popin_style" src="{$urlPopInMention}"></iframe>
+                </p>
+            </div>
+        {elseif $aData.ZONE_TITRE5 == "ROLL"}
+            <em class="notice"><span>{$aData.ZONE_TITRE6}</span></em>
+            <div class="notice-text" data-close="Fermer">
+                <h6 class="title-lvl1 centered nobg">{$aData.ZONE_TITRE6}</h6>
+                <p>
+                    {$aData.ZONE_TEXTE4}
+                </p>
+            </div>
+        {/if}
+    {/if}
+    {if $aData.ZONE_TITRE5 == "TEXT" && $aData.ZONE_TEXTE4 neq ""}
+         {if $MEDIA_PATH4 != ""}<figure class="visual"><img class="lazy noscale" src="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/235-100.png" data-original="{"{Pelican::$config.MEDIA_HTTP}{$MEDIA_PATH4}"|format:Pelican::$config.MEDIA_FORMAT_ID.MOBILE_MENTION}" width="580" height="247" alt="{$MEDIA_TITLE4}" /></figure>{/if}
+         <em class="notice">{$aData.ZONE_TITRE6}<br>{$aData.ZONE_TEXTE4}</em>
+     {/if}
+    {if $aCTA|@sizeof > 0}
+		<ul class="actions">
+			{foreach from=$aCTA item=Multi}
+                <li class="cta">
+                    {if $Multi.OUTIL}
+                        {$Multi.OUTIL}
+                    {else}
+            			<a class="buttonTransversalInvert" href="{if $Multi.PAGE_ZONE_MULTI_URL2}{urlParser url=$Multi.PAGE_ZONE_MULTI_URL2}{else}{urlParser url=$Multi.PAGE_ZONE_MULTI_URL}{/if}" target="_{$Multi.PAGE_ZONE_MULTI_VALUE}"><span style="color:inherit!important">{$Multi.PAGE_ZONE_MULTI_LABEL}</span></a>
+                    {/if}
+                </li>
+			{/foreach}
+		</ul>
+	{/if}
+{/if}
+</section>
+</div>
+{/if}

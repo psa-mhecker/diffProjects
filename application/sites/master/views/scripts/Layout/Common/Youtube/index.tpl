@@ -1,0 +1,1 @@
+<center><iframe width="{$width}" height="{$height}" src="http://www.youtube.com/embed/{$data.ZONE_TEXTE}" frameborder="0" allowfullscreen></iframe></center>

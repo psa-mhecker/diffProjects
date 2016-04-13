@@ -1,0 +1,28 @@
+{literal}
+    <style>
+        div.sliceDetailPromotionMobile .back a{
+        {/literal}{if ($aData.SECOND_COLOR|count_characters)==7 }{literal}
+                border-color:{/literal}{$aData.SECOND_COLOR}!important;{literal}
+                color:{/literal}{$aData.SECOND_COLOR}!important; {literal} 
+        {/literal}{/if}{literal}
+        }
+        div.sliceDetailPromotionMobile .back a:active, .sliceDetailPromotionMobile .back a:hover{
+        {/literal}{if ($aData.SECOND_COLOR|count_characters)==7 }{literal}
+                border-color:{/literal}{$aData.SECOND_COLOR}!important;{literal}
+                color:{/literal}{$aData.SECOND_COLOR}!important; {literal}
+        {/literal}{/if}{literal}
+        }
+        div.sliceDetailPromotionMobile .back a:after{
+        {/literal}{if ($aData.SECOND_COLOR|count_characters)==7 }{literal}
+                color:{/literal}{$aData.SECOND_COLOR}!important; {literal}
+        {/literal}{/if}{literal}
+        }
+    </style>
+{/literal}
+<div class="sliceNew sliceDetailPromotionMobile">
+        <div id="{$aData.ID_HTML}" class="back">
+                <a href="{urlParser url=$url}" class="activeRoll">
+                        <span>{"BACK_PROMO"|t}</span>
+                </a>
+        </div>
+</div>

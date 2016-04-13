@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <soap:Body>
+      <SaveCalculationDisplayResponse xmlns="http://xml.inetpsa.com/Services/SFG/Service_Dealer">
+         <ResponseDisplay xmlns="http://xml.inetpsa.com/Services/SFG/Service_dealer">
+            <IdSession>1716108433616677</IdSession>
+            <Site>
+               <Login>CFG</Login>
+               <Password/>
+            </Site>
+            <Context>
+               <Country>FR</Country>
+               <Language>fr-fr</Language>
+               <FinancingMake>AC</FinancingMake>
+               <Currency>EUR</Currency>
+               <FlowDate>2013-03-12T16:18:10.0000000+01:00</FlowDate>
+               <Information/>
+            </Context>
+            <FlagError>false</FlagError>
+            <DisplayList>
+               <Display>
+                  <DisplayName>APARTIRDE</DisplayName>
+                  <DisplayContent>
+                     <ContentName>APD</ContentName>
+                     <Format>XML</Format>
+                     <Content><![CDATA[<title>A partir de</title>
+<price>
+  <span style="font-size:10pt">202,92</span>
+</price>
+<unit>€/mois</unit>
+<DisplayValue>202,92 €/mois</DisplayValue>]]></Content>
+                     <CssStyle/>
+                  </DisplayContent>
+                  <DisplayContent>
+                     <ContentName>APDLegalText</ContentName>
+                     <Format>XML</Format>
+                     <Content>&lt;text>après un premier loyer de &lt;span style="font-size:10pt">4.815,00 €&lt;/span>&lt;br>&lt;/text></Content>
+                     <CssStyle/>
+                  </DisplayContent>
+                  <DisplayContent>
+                     <ContentName>APDLegalTextLagarde</ContentName>
+                     <Format>XML</Format>
+                     <Content>&lt;text>&lt;span style="font-size:10pt">Un crédit vous engage et doit être remboursé. Vérifiez vos capacités de remboursement avant de vous engager.&lt;/span>&lt;/text></Content>
+                     <CssStyle/>
+                  </DisplayContent>
+                  <DisplayContent>
+                     <ContentName>ButtonPerso</ContentName>
+                     <Format>XML</Format>
+                     <Content>&lt;text>Personnalisez votre financement&lt;/text></Content>
+                     <CssStyle/>
+                  </DisplayContent>
+                  <DisplayContent>
+                     <ContentName>ButtonDTL_Obsolete</ContentName>
+                     <Format>XML</Format>
+                     <Content>&lt;text>Detail et mentions légales du financement&lt;/text></Content>
+                     <CssStyle/>
+                  </DisplayContent>
+                  <DisplayContent>
+                     <ContentName>DTL</ContentName>
+                     <Format>XML</Format>
+                     <Content><![CDATA[<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<title>Location avec Option d'Achat (1)</title>
+<variable>
+  <id>VehiclePriceTTC</id>
+  <label>Prix de vente (soit montant total du financement)</label>
+  <value>16050</value>
+  <unit>€</unit>
+  <DisplayValue>16.050,00 €</DisplayValue>
+</variable>
+<variable>
+  <id>MTACOMPTE</id>
+  <label>
+    <span style="font-size:10pt">Premier loyer</span>
+  </label>
+  <value>4815</value>
+  <unit>€</unit>
+  <DisplayValue>
+    <span style="font-size:10pt">4.815,00 €</span>
+  </DisplayValue>
+</variable>
+<variable>
+  <id>PMT</id>
+  <label>
+    <span style="font-size:10pt">59 loyers suivants</span>
+  </label>
+  <value>202,92</value>
+  <DisplayValue>
+    <span style="font-size:10pt">202,92 €</span>
+  </DisplayValue>
+  <unit>€</unit>
+</variable>
+<variable>
+  <id>DURFIN2</id>
+  <label>Nombre de loyers</label>
+  <value>60</value>
+  <unit></unit>
+  <DisplayValue>60 </DisplayValue>
+</variable>
+<variable>
+  <id>MTVR</id>
+  <label>Option finale d'achat</label>
+  <value>4012.5</value>
+  <unit>€</unit>
+  <DisplayValue>4.012,50 €</DisplayValue>
+</variable>
+<variable>
+  <id>TOTALFIN</id>
+  <label>
+    <span style="font-size:10pt">Montant total dû (hors prestations facultatives)</span>
+  </label>
+  <value>20799.78</value>
+  <unit>€</unit>
+  <DisplayValue>
+    <span style="font-size:10pt">20.799,78 €</span>
+  </DisplayValue>
+</variable>
+<variable>
+  <id>
+  </id>
+  <label>
+    <i>Assurances facultatives (sommes à ajouter au loyer mensuel):</i>
+  </label>
+  <value>
+  </value>
+  <DisplayValue>
+  </DisplayValue>
+  <unit>
+  </unit>
+</variable>
+<variable>
+  <id>DI</id>
+  <label>Décès Invalidité</label>
+  <value>11.235</value>
+  <unit>€</unit>
+  <DisplayValue>11,24 €</DisplayValue>
+</variable>
+<variable>
+  <id>SR</id>
+  <label>Sécurité Remplacement</label>
+  <value>22.47</value>
+  <unit>€</unit>
+  <DisplayValue>22,47 €</DisplayValue>
+</variable>
+<variable>
+  <id>
+  </id>
+  <label>-</label>
+  <value>
+  </value>
+  <DisplayValue>
+  </DisplayValue>
+  <unit>
+  </unit>
+</variable>
+<variable>
+  <id>
+  </id>
+  <label>
+    <span style="font-size:10pt">Un crédit vous engage et doit être remboursé. Vérifiez vos capacités de remboursement avant de vous engager.</span>
+  </label>
+  <value>
+  </value>
+  <DisplayValue>
+  </DisplayValue>
+  <unit>
+  </unit>
+</variable>
+<variable>
+  <id>LegalText</id>
+  <label>
+    <FONT size="9">(1) Montants exprimés TTC et hors prestations facultatives. Le premier loyer sera réglé à la livraison. Offre non cumulable réservée aux particuliers pour la location du véhicule Citroën neuf identifié ci-dessus, à usage privé, dans les points de vente Citroën France (France métropolitaine) participants et sous réserve d’acceptation du dossier par CREDIPAR / Citroën Financement, locataire-gérant de CLV, SA au capital de 107.300.016 €, N° 317 425 981 RCS Nanterre, 12 avenue André Malraux 92300 Levallois-Perret. Financement à la livraison et, au plus tôt, après expiration d’un délai de 7 jours à compter de votre acceptation. Vous bénéficiez du délai légal de rétractation. Le contrat de location avec option d’achat est distribué par le réseau Citroën participant qui agit, à titre non exclusif, comme intermédiaire de crédit de CREDIPAR, chargé de vous fournir les informations et explications sur les crédits proposés et de recueillir les éléments nécessaires à la constitution de votre dossier de financement. Les contrats d’assurance Sécurité Remplacement et Décès sont distribués par CREDIPAR, agissant à titre exclusif en qualité de mandataire d’assurance, et souscrits auprès de PSA Life Insurance Ltd (assurance Décès) et de PSA Insurance Ltd (assurance Sécurité Remplacement), sociétés d’assurance vie et dommages exerçant en libre prestation de services, immatriculées à Malte sous les numéros respectifs C 44567 et C 44568, ayant leur siège social à Mediterranean Building, 53 Abate Rigord Street Ta’ Xbiex XBX 1122, Malte, et soumises au contrôle du Malta Financial Services Authority (MFSA) – Notabile Road, Attard BKR 3000, Malte. Vous trouverez des informations importantes sur la Convention AERAS sur le site Internet <a href="http://www.aeras-infos.fr" target="_blank"> http://www.aeras-infos.fr</a>.</FONT>
+  </label>
+  <value>
+  </value>
+  <DisplayValue>
+  </DisplayValue>
+  <unit>
+  </unit>
+</variable>]]></Content>
+                     <CssStyle/>
+                  </DisplayContent>
+                  <DisplayContent>
+                     <ContentName>DTL_old</ContentName>
+                     <Format>XML</Format>
+                     <Content><![CDATA[<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<title>Location avec Option d'Achat (1)</title>
+<variable>
+  <id>VehiclePriceTTC</id>
+  <label>Prix de vente (soit montant total du financement)</label>
+  <value>16050</value>
+  <unit>€</unit>
+  <DisplayValue>16.050,00 €</DisplayValue>
+</variable>
+<variable>
+  <id>MTACOMPTE</id>
+  <label>
+    <FONT size="12 ">Premier loyer</FONT>
+  </label>
+  <value>4815</value>
+  <unit>€</unit>
+  <DisplayValue>
+    <FONT size="12 ">4.815,00 €</FONT>
+  </DisplayValue>
+</variable>
+<variable>
+  <id>PMT</id>
+  <label>
+    <FONT size="12">59 loyers suivants</FONT>
+  </label>
+  <value>202,92</value>
+  <DisplayValue>
+    <FONT size="12">202,92 €</FONT>
+  </DisplayValue>
+  <unit>€</unit>
+</variable>
+<variable>
+  <id>DURFIN2</id>
+  <label>Nombre de loyers</label>
+  <value>60</value>
+  <unit></unit>
+  <DisplayValue>60 </DisplayValue>
+</variable>
+<variable>
+  <id>MTVR</id>
+  <label>Option finale d'achat</label>
+  <value>4012.5</value>
+  <unit>€</unit>
+  <DisplayValue>4.012,50 €</DisplayValue>
+</variable>
+<variable>
+  <id>TOTALFIN</id>
+  <label>
+    <FONT size="12 ">Montant total dû (hors prestations facultatives)</FONT>
+  </label>
+  <value>20799.78</value>
+  <unit>€</unit>
+  <DisplayValue>
+    <FONT size="12 ">20.799,78 €</FONT>
+  </DisplayValue>
+</variable>
+<variable>
+  <id>
+  </id>
+  <label>
+    <i>Assurances facultatives (sommes à ajouter au loyer mensuel):</i>
+  </label>
+  <value>
+  </value>
+  <DisplayValue>
+  </DisplayValue>
+  <unit>
+  </unit>
+</variable>
+<variable>
+  <id>DI</id>
+  <label>Décès Invalidité</label>
+  <value>11.235</value>
+  <unit>€</unit>
+  <DisplayValue>11,24 €</DisplayValue>
+</variable>
+<variable>
+  <id>SR</id>
+  <label>Sécurité Remplacement</label>
+  <value>22.47</value>
+  <unit>€</unit>
+  <DisplayValue>22,47 €</DisplayValue>
+</variable>
+<variable>
+  <id>
+  </id>
+  <label>
+    <FONT size="12">Un crédit vous engage et doit être remboursé. Vérifiez vos capacités de remboursement avant de vous engager.</FONT>
+  </label>
+  <value>
+  </value>
+  <DisplayValue>
+  </DisplayValue>
+  <unit>
+  </unit>
+</variable>
+<variable>
+  <id>LegalText</id>
+  <label>
+    <FONT size="8">(1) Montants exprimés TTC et hors prestations facultatives. Le premier loyer sera réglé à la livraison. Offre non cumulable réservée aux particuliers pour la location du véhicule Citroën neuf identifié ci-dessus, à usage privé, dans les points de vente Citroën France (France métropolitaine) participants et sous réserve d’acceptation du dossier par CREDIPAR / Citroën Financement, locataire-gérant de CLV, SA au capital de 107.300.016 €, N° 317 425 981 RCS Nanterre, 12 avenue André Malraux 92300 Levallois-Perret. Financement à la livraison et, au plus tôt, après expiration d’un délai de 7 jours à compter de votre acceptation. Vous bénéficiez du délai légal de rétractation. Le contrat de location avec option d’achat est distribué par le réseau Citroën participant qui agit, à titre non exclusif, comme intermédiaire de crédit de CREDIPAR, chargé de vous fournir les informations et explications sur les crédits proposés et de recueillir les éléments nécessaires à la constitution de votre dossier de financement. Les contrats d’assurance Sécurité Remplacement et Décès sont distribués par CREDIPAR, agissant à titre exclusif en qualité de mandataire d’assurance, et souscrits auprès de PSA Life Insurance Ltd (assurance Décès) et de PSA Insurance Ltd (assurance Sécurité Remplacement), sociétés d’assurance vie et dommages exerçant en libre prestation de services, immatriculées à Malte sous les numéros respectifs C 44567 et C 44568, ayant leur siège social à Mediterranean Building, 53 Abate Rigord Street Ta’ Xbiex XBX 1122, Malte, et soumises au contrôle du Malta Financial Services Authority (MFSA) – Notabile Road, Attard BKR 3000, Malte. Vous trouverez des informations importantes sur la Convention AERAS sur le site Internet <a href="http://www.aeras-infos.fr" target="_blank"> http://www.aeras-infos.fr</a>.</FONT>
+  </label>
+  <value>
+  </value>
+  <DisplayValue>
+  </DisplayValue>
+  <unit>
+  </unit>
+</variable>]]></Content>
+                     <CssStyle/>
+                  </DisplayContent>
+                  <DisplayContent>
+                     <ContentName>Upselling</ContentName>
+                     <Format>XML</Format>
+                     <Content/>
+                     <CssStyle/>
+                  </DisplayContent>
+                  <DisplayContent>
+                     <ContentName>CreditCheck</ContentName>
+                     <Format>XML</Format>
+                     <Content>&lt;text>True&lt;/text></Content>
+                     <CssStyle/>
+                  </DisplayContent>
+                  <DisplayContent>
+                     <ContentName>PersoURL</ContentName>
+                     <Format>HTML</Format>
+                     <Content>http://finance-bpf.citroen.com/fr/Site_finance/perso/indexPerso.html?Session=|CFG|Citroen|true|FR|fr-fr|AC|648</Content>
+                     <CssStyle/>
+                  </DisplayContent>
+                  <DisplayContent>
+                     <ContentName>PersoHeight</ContentName>
+                     <Format>HTML</Format>
+                     <Content>650px</Content>
+                     <CssStyle/>
+                  </DisplayContent>
+                  <DisplayContent>
+                     <ContentName>PersoWidth</ContentName>
+                     <Format>HTML</Format>
+                     <Content>1020px</Content>
+                     <CssStyle/>
+                  </DisplayContent>
+               </Display>
+            </DisplayList>
+         </ResponseDisplay>
+      </SaveCalculationDisplayResponse>
+   </soap:Body>
+</soap:Envelope>

@@ -1,0 +1,84 @@
+{if $aParams.ZONE_MOBILE}
+	<div class="sliceNew sliceCitroenSocialMobile">
+		<section class="no-title full">
+			<div class="feeds dyncont masonry" data-ws="/_/Layout_Citroen_CitroenSocial/moreSocial" style="position: relative; height: 3787px;">
+				{literal}
+					<script type="text/template" id="masonryTpl">
+						<%
+						var months = ['jan','fev','mar','avr','mai','juin','juil','août','sep','oct','nov','dec'];
+
+						_.each(obj.data,function(item){
+							%>
+							<div class="box item added">
+								<div class="cont">
+									<div class="head">
+										<span>
+											<strong><a href="http://instagram.com/citroenfrance" target="_blank"><%= item.network.page %></a></strong><br>
+											<%
+												var date = new Date(item.post.date),
+													current = new Date(),
+													sago = (current.getTime() - date.getTime())/(1000),
+													mago = sago/60,
+													hago = mago/60;
+
+												var reglink = new RegExp('((http|https)://[\\w\\./]*)','gi'),
+													linked = (item.post.text || '').replace(reglink,'<a href="$1" target="_blank">$1</a>');
+											%>
+											<%= date.getDate() +' '+ months[date.getMonth()]+' '+date.getFullYear() %>
+											<% if(sago < 59){ %>
+												- il y a <%= Math.round(sago) %> sec
+											<% } else if(mago < 59){ %>
+												- il y a <%= Math.round(mago) %> min
+											<% } else if(hago < 23){ %>
+												- il y a <%= Math.round(hago) %> h
+											<% }; %>
+										</span>
+										<a class="socialink" href="<%= item.network.url %>" target="_blank"><img src="{/literal}{Pelican::$config.IMAGE_FRONT_HTTP}{literal}/mobile/picto/<%= item.network.name %>-l.png" width="18" height="18" alt="<%= item.network.name %>"></a>
+									</div>
+									<div class="body">
+										<%
+										switch(item.network.name){
+											case 'youtube':
+											%>
+												<div class="post zoner">
+													<% if(item.post.media){ %>
+														<figure>
+															<a href="<%= item.post.url %>" target="_blank"><img src="<%= item.post.url %>" alt=""></a>
+														</figure>
+													<% }; %>
+
+													<div class="txt">
+														<span class="title"><a href="<%= item.post.url %>" target="_blank"><%= item.post.title %></a></span>
+														<p><%= linked %></p>
+													</div>
+												</div>
+											<%
+											break;
+											default:
+											%>
+												<div class="post zoner">
+													<% if(item.post.media){ %>
+														<figure><a href="<%= item.post.url %>" target="_blank"><img src="<%= item.post.media %>" alt="" /></a></figure>
+													<% }; %>
+													<div class="txt">
+														<span class="title"><a href="<%= item.post.url %>" target="_blank"><%= item.post.title %></a></span>
+														<p><%= linked %></p>
+													</div>
+												</div>
+											<%
+											break;
+										};
+										%>
+									</div>
+								</div>
+							</div>
+						<% }); %>
+					</script>
+				{/literal}
+			</div>
+			<div class="addmore">
+				<a href="#0" {gtm action='Push' data=$aParams datasup=['eventLabel'=>'VOIR_PLUS_ITEMS'|t]}>{'VOIR_PLUS_ITEMS'|t}</a>
+			</div>
+		</section>
+	</div>
+{/if}

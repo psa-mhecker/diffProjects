@@ -1,0 +1,183 @@
+{*DDM*}
+{if $aData.TEMPLATE_PAGE_ID == Pelican::$config['TEMPLATE_PAGE']['SHOWROOM_ACCUEIL']}
+    <div ID="DDM_showroom">
+{/if}
+{if $aData.ZONE_MOBILE eq 1 && $aSlideShow|@sizeof > 0 && $mobile_img_count > 0}
+    <div class="sliceNew sliceSlideShowMobile" {if $mobile_img_count == 1}style="padding-bottom: 0px;"{/if}>
+        <section id="{$aData.ID_HTML}" class="no-sep-after no-title">
+            <div class="slider slideshow set" {gtmjs type='slider' data=$aData  action='Click' _perso={$usingPerso}}>
+                <div class="row of1" {if $mobile_img_count == 1}style="padding-bottom: 0px;"{/if}>
+                    {$turns = 0}
+                    {foreach from=$aSlideShow item=slideShow name=listSlideShow}
+                        {$turns = $turns+1}
+                        {if $slideShow.PAGE_ZONE_MULTI_VALUE eq 'IMAGE'}
+                            {if $slideShow.MEDIA_PATH2 neq ''}
+                                <article class="col" id="{$aData.ID_HTML_SLIDESHOW}_{$turns}">
+                                        <figure class="item">{if $slideShow.PAGE_ZONE_MULTI_URL5 neq ''}<a href="{urlParser url=$slideShow.PAGE_ZONE_MULTI_URL5}" target="{if $slideShow.PAGE_ZONE_MULTI_MODE eq 2}_blank{else}_self{/if}">{/if}<img class="lazy" src="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/lazy-320-160.png" data-original="{$slideShow.MEDIA_PATH2}" alt="{$slideShow.MEDIA_ALT2}" />{if $slideShow.PAGE_ZONE_MULTI_URL5 neq ''}</a>{/if}</figure>
+                                    {literal}
+                                    <style>
+                                        {/literal}
+                                        {if ($slideShow.MOBILE_COULEUR_CTA|count_characters)==7}
+                                        {literal}
+                                        {/literal}#a_{$aData.ID_HTML_SLIDESHOW}_{$turns}{literal}{
+                                        {/literal}{if ($slideShow.MOBILE_COULEUR_CTA|count_characters)==7 }{literal}
+                                            background-color:{/literal}{$slideShow.MOBILE_COULEUR_CTA}{literal};
+                                            border-color:{/literal}{$slideShow.MOBILE_COULEUR_CTA}{literal};
+                                            color:{/literal}{$slideShow.MOBILE_COULEUR_TYPO}{literal};
+                                        {/literal}{/if}{literal}
+                                        }
+                                        {/literal}#a_{$aData.ID_HTML_SLIDESHOW}_{$turns}{literal}:hover, {/literal}#a_{$aData.ID_HTML_SLIDESHOW}_{$turns}{literal}:active, {/literal}#a_{$aData.ID_HTML_SLIDESHOW}_{$turns}{literal}:hover, {/literal}#a_{$aData.ID_HTML_SLIDESHOW}_{$turns}{literal}:active:hover{
+                                        {/literal}{if ($slideShow.MOBILE_COULEUR_CTA|count_characters)==7 }{literal}
+                                            background-color:{/literal}{$slideShow.MOBILE_COULEUR_TYPO}{literal};
+                                            border-color:{/literal}{$slideShow.MOBILE_COULEUR_CTA}{literal};
+                                            color:{/literal}{$slideShow.MOBILE_COULEUR_CTA}{literal};
+                                        {/literal}{/if}{literal}
+                                        }
+                                        {/literal}
+                                        {else}
+
+                                        {/if}
+                                        {literal}
+                                    </style>
+                                    {/literal}
+                                    {if $slideShow.PAGE_ZONE_MULTI_LABEL5 neq '' &&  $slideShow.PAGE_ZONE_MULTI_URL5 neq ''}
+                                        <a id="a_{$aData.ID_HTML_SLIDESHOW}_{$turns}" target="{if $slideShow.PAGE_ZONE_MULTI_MODE5 eq 2}_blank{else}_self{/if}" href="{urlParser url=$slideShow.PAGE_ZONE_MULTI_URL5}" class="cta"
+                                        {gtm action='Click' data=$aData datasup=['value'=>$slideShow.PAGE_ZONE_MULTI_ORDER,'eventLabel'=>$slideShow.MEDIA_ALT|cat:'::'|cat:$slideShow.PAGE_ZONE_MULTI_LABEL5] idMulti=$slideShow._sync}>
+                                        {$slideShow.PAGE_ZONE_MULTI_LABEL5}
+                                        </a>
+                                    {/if}
+                                    {if $slideShow.PAGE_ZONE_MULTI_LABEL6 neq '' &&  $slideShow.PAGE_ZONE_MULTI_URL6 neq ''}
+                                        <a id="a_{$aData.ID_HTML_SLIDESHOW}_{$turns}" target="{if $slideShow.PAGE_ZONE_MULTI_MODE6 eq 2}_blank{else}_self{/if}" href="{urlParser url=$slideShow.PAGE_ZONE_MULTI_URL6}" class="cta"
+                                        {gtm action='Click' data=$aData datasup=['value'=>$slideShow.PAGE_ZONE_MULTI_ORDER,'eventLabel'=>$slideShow.MEDIA_ALT|cat:'::'|cat:$slideShow.PAGE_ZONE_MULTI_LABEL6] idMulti=$slideShow._sync}>
+                                            {$slideShow.PAGE_ZONE_MULTI_LABEL6}
+                                        </a>
+                                    {/if}
+                                </article>
+                            {/if}
+                        {/if}
+                        {if $slideShow.PAGE_ZONE_MULTI_VALUE eq 'HTML5'}
+                            {if $slideShow.PAGE_ZONE_MULTI_TEXT neq ''}
+                                <article class="col" id="{$aData.ID_HTML_SLIDESHOW}_{$turns}">
+                                    <figure class="item">
+                                        {$slideShow.PAGE_ZONE_MULTI_TEXT}
+                                    </figure>
+                                    {literal}
+                                    <style>
+                                        {/literal}
+                                        {if ($slideShow.MOBILE_COULEUR_CTA|count_characters)==7}
+                                        {literal}
+                                        {/literal}#a_{$aData.ID_HTML_SLIDESHOW}_{$turns}{literal}{
+                                        {/literal}{if ($slideShow.MOBILE_COULEUR_CTA|count_characters)==7 }{literal}
+                                            background-color:{/literal}{$slideShow.MOBILE_COULEUR_CTA}{literal};
+                                            border-color:{/literal}{$slideShow.MOBILE_COULEUR_CTA}{literal};
+                                            color:{/literal}{$slideShow.MOBILE_COULEUR_TYPO}{literal};
+                                        {/literal}{/if}{literal}
+                                        }
+                                        {/literal}#a_{$aData.ID_HTML_SLIDESHOW}_{$turns}{literal}:hover, {/literal}#a_{$aData.ID_HTML_SLIDESHOW}_{$turns}{literal}:active, {/literal}#a_{$aData.ID_HTML_SLIDESHOW}_{$turns}{literal}:hover, {/literal}#a_{$aData.ID_HTML_SLIDESHOW}_{$turns}{literal}:active:hover{
+                                        {/literal}{if ($slideShow.MOBILE_COULEUR_CTA|count_characters)==7 }{literal}
+                                            background-color:{/literal}{$slideShow.MOBILE_COULEUR_TYPO}{literal};
+                                            border-color:{/literal}{$slideShow.MOBILE_COULEUR_CTA}{literal};
+                                            color:{/literal}{$slideShow.MOBILE_COULEUR_CTA}{literal};
+                                        {/literal}{/if}{literal}
+                                        }
+                                        {/literal}
+                                        {else}
+
+                                        {/if}
+                                        {literal}
+                                    </style>
+                                    {/literal}
+                                    {if $slideShow.PAGE_ZONE_MULTI_LABEL5 neq '' &&  $slideShow.PAGE_ZONE_MULTI_URL5 neq ''}
+                                        <a id="a_{$aData.ID_HTML_SLIDESHOW}_{$turns}" target="{if $slideShow.PAGE_ZONE_MULTI_MODE5 eq 2}_blank{else}_self{/if}" href="{urlParser url=$slideShow.PAGE_ZONE_MULTI_URL5}" class="cta"
+                                                {gtm action='Click' data=$aData datasup=['value'=>$slideShow.PAGE_ZONE_MULTI_ORDER,'eventLabel'=>$slideShow.MEDIA_ALT|cat:'::'|cat:$slideShow.PAGE_ZONE_MULTI_LABEL5] idMulti=$slideShow._sync}>
+                                            {$slideShow.PAGE_ZONE_MULTI_LABEL5}
+                                        </a>
+                                    {/if}
+                                    {if $slideShow.PAGE_ZONE_MULTI_LABEL6 neq '' &&  $slideShow.PAGE_ZONE_MULTI_URL6 neq ''}
+                                        <a id="a_{$aData.ID_HTML_SLIDESHOW}_{$turns}" target="{if $slideShow.PAGE_ZONE_MULTI_MODE6 eq 2}_blank{else}_self{/if}" href="{urlParser url=$slideShow.PAGE_ZONE_MULTI_URL6}" class="cta"
+                                                {gtm action='Click' data=$aData datasup=['value'=>$slideShow.PAGE_ZONE_MULTI_ORDER,'eventLabel'=>$slideShow.MEDIA_ALT|cat:'::'|cat:$slideShow.PAGE_ZONE_MULTI_LABEL6] idMulti=$slideShow._sync}>
+                                            {$slideShow.PAGE_ZONE_MULTI_LABEL6}
+                                        </a>
+                                    {/if}
+                                </article>
+                            {/if}
+                        {/if}
+                        {if $slideShow.PAGE_ZONE_MULTI_VALUE eq 'FLASH'}
+                            {if $slideShow.MEDIA_PATH5 neq ''}
+                                <article class="col" id="{$aData.ID_HTML_SLIDESHOW}_{$turns}">
+                                    {if $slideShow.PAGE_ZONE_MULTI_URL4 neq ''}
+                                    <a href="{urlParser url=$slideShow.PAGE_ZONE_MULTI_URL4}" target="_self">
+                                        {/if}
+                                        <figure class="item">
+                                            <img src="{$slideShow.MEDIA_PATH5}" width="1480" height="500" alt="" />
+                                            <figurecaption>{$slideShow.PAGE_ZONE_MULTI_TEXT2}</figurecaption>
+                                        </figure>
+                                        {if $slideShow.PAGE_ZONE_MULTI_URL4 neq ''}
+                                    </a>
+                                    {/if}
+                                    {literal}
+                                    <style>
+                                        {/literal}
+                                        {if ($slideShow.MOBILE_COULEUR_CTA|count_characters)==7}
+                                        {literal}
+                                        {/literal}#a_{$aData.ID_HTML_SLIDESHOW}_{$turns}{literal}{
+                                        {/literal}{if ($slideShow.MOBILE_COULEUR_CTA|count_characters)==7 }{literal}
+                                            background-color:{/literal}{$slideShow.MOBILE_COULEUR_CTA}{literal};
+                                            border-color:{/literal}{$slideShow.MOBILE_COULEUR_CTA}{literal};
+                                            color:{/literal}{$slideShow.MOBILE_COULEUR_TYPO}{literal};
+                                        {/literal}{/if}{literal}
+                                        }
+                                        {/literal}#a_{$aData.ID_HTML_SLIDESHOW}_{$turns}{literal}:hover, {/literal}#a_{$aData.ID_HTML_SLIDESHOW}_{$turns}{literal}:active, {/literal}#a_{$aData.ID_HTML_SLIDESHOW}_{$turns}{literal}:hover, {/literal}#a_{$aData.ID_HTML_SLIDESHOW}_{$turns}{literal}:active:hover{
+                                        {/literal}{if ($slideShow.MOBILE_COULEUR_CTA|count_characters)==7 }{literal}
+                                            background-color:{/literal}{$slideShow.MOBILE_COULEUR_TYPO}{literal};
+                                            border-color:{/literal}{$slideShow.MOBILE_COULEUR_CTA}{literal};
+                                            color:{/literal}{$slideShow.MOBILE_COULEUR_CTA}{literal};
+                                        {/literal}{/if}{literal}
+                                        }
+                                        {/literal}
+                                        {else}
+
+                                        {/if}
+                                        {literal}
+                                    </style>
+                                    {/literal}
+                                    {if $slideShow.PAGE_ZONE_MULTI_LABEL5 neq '' &&  $slideShow.PAGE_ZONE_MULTI_URL5 neq ''}
+                                        <a id="a_{$aData.ID_HTML_SLIDESHOW}_{$turns}" target="{if $slideShow.PAGE_ZONE_MULTI_MODE5 eq 2}_blank{else}_self{/if}" href="{urlParser url=$slideShow.PAGE_ZONE_MULTI_URL5}" class="cta"
+                                                {gtm action='Click' data=$aData datasup=['value'=>$slideShow.PAGE_ZONE_MULTI_ORDER,'eventLabel'=>$slideShow.MEDIA_ALT|cat:'::'|cat:$slideShow.PAGE_ZONE_MULTI_LABEL5] idMulti=$slideShow._sync}>
+                                            {$slideShow.PAGE_ZONE_MULTI_LABEL5}
+                                        </a>
+                                    {/if}
+                                    {if $slideShow.PAGE_ZONE_MULTI_LABEL6 neq '' &&  $slideShow.PAGE_ZONE_MULTI_URL6 neq ''}
+                                        <a id="a_{$aData.ID_HTML_SLIDESHOW}_{$turns}" target="{if $slideShow.PAGE_ZONE_MULTI_MODE6 eq 2}_blank{else}_self{/if}" href="{urlParser url=$slideShow.PAGE_ZONE_MULTI_URL6}" class="cta"
+                                                {gtm action='Click' data=$aData datasup=['value'=>$slideShow.PAGE_ZONE_MULTI_ORDER,'eventLabel'=>$slideShow.MEDIA_ALT|cat:'::'|cat:$slideShow.PAGE_ZONE_MULTI_LABEL6] idMulti=$slideShow._sync}>
+                                            {$slideShow.PAGE_ZONE_MULTI_LABEL6}
+                                        </a>
+                                    {/if}
+                                </article>
+                            {/if}
+                        {/if}
+                    {/foreach}
+                </div>
+            </div>
+        </section>
+    </div>
+
+    {if ($aData.PRIMARY_COLOR|count_characters)==7 }
+        <style type="text/css">
+            {literal}
+            .showroom-mobile .bx-pager-link{
+                border:3px solid {/literal}{$aData.SECOND_COLOR}{literal}!important;
+                background:#ffffff!important;
+            }
+            .showroom-mobile .bx-pager-link.active{
+                border:3px solid {/literal}{$aData.SECOND_COLOR}{literal}!important;
+                background:{/literal}{$aData.SECOND_COLOR}{literal}!important;
+            }
+			
+            {/literal}
+        </style>
+    {/if}
+{/if}
+{if $aData.TEMPLATE_PAGE_ID == Pelican::$config['TEMPLATE_PAGE']['SHOWROOM_ACCUEIL']}
+    </div>
+{/if}

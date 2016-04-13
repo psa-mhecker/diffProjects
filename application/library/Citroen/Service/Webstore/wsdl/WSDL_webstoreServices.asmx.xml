@@ -1,0 +1,1578 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetStockWebstore">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="storeRequest" type="tns:WebstoreRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="WebstoreRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Info" type="tns:WebstoreInfoRequest" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehiculeRequest" type="tns:WebstoreVehicleRequest" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="WebstoreInfoRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Brand" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Client" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LanguageCode" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="WebstoreVehicleRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ModelCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RegBodyStyleCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BodyStyleCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LCDV" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RegGradeCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RegEngineCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TransmissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FeaExterCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FeaInterCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OptionList" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnergyCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IdSiteGeo1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IdSiteGeo2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IdSiteGeo3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DealerCode1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DealerCode2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DealerCode3" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SearchByGroup" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="OnlyGoodOffers" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="MinPrice" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaxPrice" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="NBVehicleReturn" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="RecupOnlyVehicleInfo" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="VehiculeListLimited" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleKind" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TypeSite" type="tns:SiteType" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="SiteType">
+        <s:restriction base="s:string">
+          <s:enumeration value="PARTICULIER" />
+          <s:enumeration value="PROFESIONNEL" />
+          <s:enumeration value="FLASH_SALES" />
+          <s:enumeration value="FLASH_SALES_PRO" />
+          <s:enumeration value="PRIVATE" />
+          <s:enumeration value="ALL" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="GetStockWebstoreResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStockWebstoreResult" type="tns:WebstoreResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="WebstoreResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="vehiclesList" type="tns:ArrayOfVehicleProperties" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResponseCode" type="tns:ResponseCodeValue" />
+          <s:element minOccurs="1" maxOccurs="1" name="NbVehicles" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Dealer1StockURL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Dealer2StockURL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Dealer3StockURL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Dealer1StockResultUrl" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Dealer2StockResultUrl" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Dealer3StockResultUrl" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MinPrice" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaxPrice" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfVehicleProperties">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="VehicleProperties" nillable="true" type="tns:VehicleProperties" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="VehicleProperties">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleCarNum" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleVIN" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleDealerCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleCommercialLabel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleModelCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleModelLabel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleBodyStyleCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleBodyStyleLabel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleModelBodyStyleLabel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleEngineLabel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleEnergieCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleEnergieLabel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleGradeLabel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleTransmissionTypeLabel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleFeatureExtLabel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleFeatureIntLabel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleCO2Rate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleCO2Bonus" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="VehiclePriceCatalogue" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="VehicleOptionPrice" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="VehicleWebstorePrice" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleTarifCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleRegBodyStyleCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleRegEngineCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleRegEngineLabel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleRegBodyStyleLabel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleRegCritMarketingLabel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleRegGradeCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleRegGradeLabel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleRegTransmissionTypeCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleRegTransmissionTypeLabel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleStockLevel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleKind" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleOptionList" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleAvailability" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleUrbanConso" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleUrbanConsoMixt" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleUrbanConsoExtra" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleWebstoreLink" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleImage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleLegalMention" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="VehicleReduction" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="VehiclePReduction" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="VehicleIsGoodOffers" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="VehicleLocalDiscount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="VehicleNationalDiscount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="VehicleReductionSecondaire" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="VehicleReductionVehicle" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="VehicleReductionTotal" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="VehiclePReductionTotal" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="ResponseCodeValue">
+        <s:restriction base="s:string">
+          <s:enumeration value="OK" />
+          <s:enumeration value="KO" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="GetVehicles">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="context" type="tns:InternetContextType" />
+            <s:element minOccurs="0" maxOccurs="1" name="filter" type="tns:FilterContextType" />
+            <s:element minOccurs="0" maxOccurs="1" name="paging" type="tns:PagingContextType" />
+            <s:element minOccurs="0" maxOccurs="1" name="sort" type="tns:SortContextType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="InternetContextType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Brand" type="tns:BrandType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LanguageCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Client" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="BrandType">
+        <s:restriction base="s:string">
+          <s:enumeration value="AP" />
+          <s:enumeration value="AC" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="FilterContextType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ModelCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BodyStyleCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnergyCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DealerCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DealerIdSiteGeo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="GroupByVersion" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="GetNearestDealer" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="GetStoreDetailUrl" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="TypeSite" type="tns:SiteType" />
+          <s:element minOccurs="1" maxOccurs="1" name="UnitOfMeasure" type="tns:UnitDistance" />
+          <s:element minOccurs="1" maxOccurs="1" name="Latitude" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Longitude" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="MinPrice" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaxPrice" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="RegColorID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaxDistance" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CarNum" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VersionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ColorExt" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ColorInt" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OptionCode" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="UnitDistance">
+        <s:restriction base="s:string">
+          <s:enumeration value="KM" />
+          <s:enumeration value="MILES" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="PagingContextType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CurrentPageNumber" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="NumberElementByPage" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SortContextType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Type" type="tns:SortType" />
+          <s:element minOccurs="1" maxOccurs="1" name="Mode" type="tns:SortMode" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="SortType">
+        <s:restriction base="s:string">
+          <s:enumeration value="MODEL" />
+          <s:enumeration value="PRICE" />
+          <s:enumeration value="REDUCTION" />
+          <s:enumeration value="DISTANCE" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="SortMode">
+        <s:restriction base="s:string">
+          <s:enumeration value="ASC" />
+          <s:enumeration value="DESC" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="GetVehiclesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetVehiclesResult" type="tns:GetVehiclesResponseType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetVehiclesResponseType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ResponseCode" type="tns:ResponseCodeValue" />
+          <s:element minOccurs="1" maxOccurs="1" name="CountVehicle" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleType" type="tns:ArrayOfGetVehicleType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfGetVehicleType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="GetVehicleType" nillable="true" type="tns:GetVehicleType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GetVehicleType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="VIN" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CarNum" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VersionLCDV" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CommercialLabel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ModelCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ModelLabel" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ModelNumOrder" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="BodystyleCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BodystyleLabel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ModelBodystyleLabel" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BodyStyleNumOrder" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnergyCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnergyLabel" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="EnergyNumorder" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="EngineCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EngineLabel" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="EngineNumOrder" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="GradeCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GradeLabel" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="GradeNumOrder" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TransmissionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TransmissionLabel" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TransmissionNumOrder" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExtTypeFeature" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExtColorFeature" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExtFeatureLabel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InttTypeFeature" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IntColorFeature" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IntFeatureLabel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CO2Rate" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CO2BonusMalus" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CO2Class" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ConsoUrban" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ConsoExtraUrban" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ConsoMixte" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CatalogPrice" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="InternetPrice" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Reduction" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="AdditionnalReduction" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PReduction" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="TarifCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RegEngineCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RegEngineLabel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RegBodyStyleCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RegBodyStyleLabel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RegTransmissionType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RegTransmissionTypeLabel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RegGradeCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RegGradeLabel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RegMarketingCriteria" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RegMarketingCriteriaLabel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RegModelCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RegModelLabel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StockLevel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleKind" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Optioncode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AvailabilityDelay" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsGoodOffer" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="CO2ClassAO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VisuInt" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="VisuIntDefault" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="VisuExt" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="VisuExtDefault" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="RegColorCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RegColorLabel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RegColorHexaCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Distance" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="NBOption" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ParticipePromo" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="PictoPromo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PricebackLink" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PriceMention" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RecoveryBackLink" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RecoveryMention" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NearestDealerName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NearestDealerAddress1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NearestDealerAddress2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NearestDealerPhone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NearestDealerZipCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NearestDealerCity" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StoreDetailUrl" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LocalDiscount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="NationalDiscount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="AdditionnalDiscount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PrimeStock" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PrimeReprise" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="RemiseSecondaireAO" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CountryBonus" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CountryTaxe" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsHideDetailDiscount" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsGammePremium" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="LessThan8yearsRecovery" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MoreThan8yearsRecovery" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetDealers">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="context" type="tns:InternetContextType" />
+            <s:element minOccurs="0" maxOccurs="1" name="filter" type="tns:FilterContextType" />
+            <s:element minOccurs="0" maxOccurs="1" name="paging" type="tns:PagingContextType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDealersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDealersResult" type="tns:GetDealersResponseType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetDealersResponseType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ResponseCode" type="tns:ResponseCodeValue" />
+          <s:element minOccurs="1" maxOccurs="1" name="CountDealer" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DealerType" type="tns:ArrayOfGetDealerType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfGetDealerType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="GetDealerType" nillable="true" type="tns:GetDealerType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GetDealerType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="IDSiteGEO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Address1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Address2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PrefixUrl" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Phone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ZipCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GeoLevel1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GeoLevel2" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NbVehicleOnline" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Distance" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetOptionalFeaturesInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="context" type="tns:InternetContextType" />
+            <s:element minOccurs="0" maxOccurs="1" name="CarNum" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VersionCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ColorExt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ColorInt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OptionCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOptionalFeaturesInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetOptionalFeaturesInfoResult" type="tns:GetOptionalFeaturesInfoResponseType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetOptionalFeaturesInfoResponseType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ResponseCode" type="tns:ResponseCodeValue" />
+          <s:element minOccurs="0" maxOccurs="1" name="OptionalFeaturesList" type="tns:ArrayOfGetOptionalFeaturesInfoType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfGetOptionalFeaturesInfoType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="GetOptionalFeaturesInfoType" nillable="true" type="tns:GetOptionalFeaturesInfoType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GetOptionalFeaturesInfoType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CarNum" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Label" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VersionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GroupCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GroupLabel" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="GroupNumOrder" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="NumOrder" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetTechnicalFeaturesInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="context" type="tns:InternetContextType" />
+            <s:element minOccurs="0" maxOccurs="1" name="VehicleVersion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTechnicalFeaturesInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTechnicalFeaturesInfoResult" type="tns:GetTechnicalFeaturesInfoResponseType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetTechnicalFeaturesInfoResponseType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ResponseCode" type="tns:ResponseCodeValue" />
+          <s:element minOccurs="0" maxOccurs="1" name="TechnicalFeaturesList" type="tns:ArrayOfGetTechnicalFeaturesInfoType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfGetTechnicalFeaturesInfoType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="GetTechnicalFeaturesInfoType" nillable="true" type="tns:GetTechnicalFeaturesInfoType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GetTechnicalFeaturesInfoType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="VersionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CaracteristicCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CaracteristicLabel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NatureCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NatureLabel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Value" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NatureNumOrder" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CaracteristicNumOrder" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetStandardFeaturesInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="context" type="tns:InternetContextType" />
+            <s:element minOccurs="0" maxOccurs="1" name="CarNum" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VersionCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ColorExt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ColorInt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OptionCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStandardFeaturesInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStandardFeaturesInfoResult" type="tns:GetStandardFeaturesInfoResponseType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetStandardFeaturesInfoResponseType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ResponseCode" type="tns:ResponseCodeValue" />
+          <s:element minOccurs="0" maxOccurs="1" name="StandardFeaturesList" type="tns:ArrayOfGetStandardFeaturesInfoType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfGetStandardFeaturesInfoType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="GetStandardFeaturesInfoType" nillable="true" type="tns:GetStandardFeaturesInfoType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GetStandardFeaturesInfoType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VersionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Label" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CategoryLabel" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CategoryNumOrder" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="NumOrder" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetGammeInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="context" type="tns:InternetContextType" />
+            <s:element minOccurs="0" maxOccurs="1" name="filter" type="tns:FilterContextType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGammeInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGammeInfoResult" type="tns:GetGammeInfoResponseType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetGammeInfoResponseType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ResponseCode" type="tns:ResponseCodeValue" />
+          <s:element minOccurs="0" maxOccurs="1" name="GammeInfoList" type="tns:ArrayOfGetGammeInfoType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfGetGammeInfoType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="GetGammeInfoType" nillable="true" type="tns:GetGammeInfoType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GetGammeInfoType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ModelCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ModelLabel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BodystyleCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BodystyleLabel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RegBodystyleCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RegBodystyleLabel" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MinPrice" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaxPrice" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="VisuExt" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="VisuExtDefault" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="NbVehicle" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetPriceInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="context" type="tns:InternetContextType" />
+            <s:element minOccurs="0" maxOccurs="1" name="filter" type="tns:FilterContextType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPriceInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPriceInfoResult" type="tns:GetPriceInfoResponseType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetPriceInfoResponseType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ResponseCode" type="tns:ResponseCodeValue" />
+          <s:element minOccurs="1" maxOccurs="1" name="MinPrice" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaxPrice" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="PriceInfoList" type="tns:ArrayOfGetPriceInfoType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfGetPriceInfoType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="GetPriceInfoType" nillable="true" type="tns:GetPriceInfoType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GetPriceInfoType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="PriceCalalogue" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Discount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="InternetPrice" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetEnergyInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="context" type="tns:InternetContextType" />
+            <s:element minOccurs="0" maxOccurs="1" name="filter" type="tns:FilterContextType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEnergyInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEnergyInfoResult" type="tns:GetEnergyInfoResponseType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetEnergyInfoResponseType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ResponseCode" type="tns:ResponseCodeValue" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnergyInfoList" type="tns:ArrayOfGetEnergyInfoType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfGetEnergyInfoType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="GetEnergyInfoType" nillable="true" type="tns:GetEnergyInfoType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GetEnergyInfoType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="EnergyCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnergyLabel" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="EnergyNumOrder" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetColorExtInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="context" type="tns:InternetContextType" />
+            <s:element minOccurs="0" maxOccurs="1" name="filter" type="tns:FilterContextType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetColorExtInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetColorExtInfoResult" type="tns:GetColorExtInfoResponseType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetColorExtInfoResponseType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ResponseCode" type="tns:ResponseCodeValue" />
+          <s:element minOccurs="0" maxOccurs="1" name="ColorExtInfoList" type="tns:ArrayOfGetColorExtInfoType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfGetColorExtInfoType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="GetColorExtInfoType" nillable="true" type="tns:GetColorExtInfoType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GetColorExtInfoType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="RegColorCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RegColorLabel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RegColorHexaCode" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetCurrencyFormat">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="context" type="tns:InternetContextType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCurrencyFormatResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCurrencyFormatResult" type="tns:GetCurrencyResponseType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetCurrencyResponseType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ResponseCode" type="tns:ResponseCodeValue" />
+          <s:element minOccurs="0" maxOccurs="1" name="CurrencyType" type="tns:GetCurrencyType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GetCurrencyType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CultureCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CurrencySymbol" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SymbolOnLeft" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetStockLastUpdateDateInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="context" type="tns:InternetContextType" />
+            <s:element minOccurs="1" maxOccurs="1" name="SiteType" type="tns:SiteType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStockLastUpdateDateInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStockLastUpdateDateInfoResult" type="tns:GetStockLastUpdateDateInfoResponseType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetStockLastUpdateDateInfoResponseType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ResponseCode" type="tns:ResponseCodeValue" />
+          <s:element minOccurs="1" maxOccurs="1" name="StockLastUpdateDate" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetUrlCampagne">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="context" type="tns:InternetContextType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUrlCampagneResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUrlCampagneResult" type="tns:GetUrlCampagneResponseType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetUrlCampagneResponseType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ResponseCode" type="tns:ResponseCodeValue" />
+          <s:element minOccurs="0" maxOccurs="1" name="UrlCampagnePromo" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetCampagneInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="context" type="tns:InternetContextType" />
+            <s:element minOccurs="1" maxOccurs="1" name="SiteType" type="tns:SiteType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCampagneInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCampagneInfoResult" type="tns:GetCampagneInfoResponseType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetCampagneInfoResponseType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ResponseCode" type="tns:ResponseCodeValue" />
+          <s:element minOccurs="0" maxOccurs="1" name="CampagneInfoList" type="tns:ArrayOfGetCampagneInfoType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfGetCampagneInfoType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="GetCampagneInfoType" nillable="true" type="tns:GetCampagneInfoType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GetCampagneInfoType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CampagneID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CampagneName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CampagneStartDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="CampagneEndDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="CampagneUrl" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CampagnePriority" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetVehicleCampagneInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="context" type="tns:InternetContextType" />
+            <s:element minOccurs="1" maxOccurs="1" name="SiteType" type="tns:SiteType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVehicleCampagneInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetVehicleCampagneInfoResult" type="tns:GetVehicleCampagneInfoResponseType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetVehicleCampagneInfoResponseType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ResponseCode" type="tns:ResponseCodeValue" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleCampagneInfoList" type="tns:ArrayOfGetVehicleCampagneInfoType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfGetVehicleCampagneInfoType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="GetVehicleCampagneInfoType" nillable="true" type="tns:GetVehicleCampagneInfoType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GetVehicleCampagneInfoType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="MaxDateMAD" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="VisuExtDefault" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ModelCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ModelLabel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BodystyleCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BodystyleLabel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnergyCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnergyLabel" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NumberVehicle" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MinDiscountPrice" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PromotionEndDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaxLocalDiscount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaxAdditionnalDiscount" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ImgVehicle" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PrefixUrlDetail" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DiscountLabel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AdditionnalDiscountLabel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MentionSupPrice" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MentionRecovery" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MentionPromo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PictoPromo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MinCatalogPrice" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaxCo2Bonus" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaxNationalDiscount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaxTotalDiscount" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CampagneId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CampaignName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Co2Rate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ConsoUrbain" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ConsoMixte" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ConsoExtra" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetDealerCampagneInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="context" type="tns:InternetContextType" />
+            <s:element minOccurs="1" maxOccurs="1" name="SiteType" type="tns:SiteType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDealerCampagneInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDealerCampagneInfoResult" type="tns:GetDealerCampagneInfoResponseType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetDealerCampagneInfoResponseType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ResponseCode" type="tns:ResponseCodeValue" />
+          <s:element minOccurs="0" maxOccurs="1" name="DealerCampagneInfoList" type="tns:ArrayOfGetDealerCampagneInfoType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfGetDealerCampagneInfoType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="GetDealerCampagneInfoType" nillable="true" type="tns:GetDealerCampagneInfoType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GetDealerCampagneInfoType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CampagneID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DealerGroupId" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetVehicleInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="context" type="tns:InternetContextType" />
+            <s:element minOccurs="1" maxOccurs="1" name="SiteType" type="tns:SiteType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVehicleInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetVehicleInfoResult" type="tns:GetVehicleInfoResponseType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetVehicleInfoResponseType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ResponseCode" type="tns:ResponseCodeValue" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleInfoType" type="tns:ArrayOfGetVehicleInfoType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfGetVehicleInfoType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="GetVehicleInfoType" nillable="true" type="tns:GetVehicleInfoType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GetVehicleInfoType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="MaxDateMAD" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="VisuExtDefault" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ModelCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ModelLabel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BodystyleCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BodystyleLabel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnergyCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnergyLabel" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NumberVehicle" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MinDiscountPrice" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PromotionEndDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaxLocalDiscount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaxAdditionnalDiscount" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ImgVehicle" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UrlGeoloc" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DiscountLabel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AdditionnalDiscountLabel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MentionSupPrice" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MentionRecovery" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MentionPromo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PictoPromo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MinCatalogPrice" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaxCo2Bonus" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaxNationalDiscount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaxTotalDiscount" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DealerGroupId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CampaignId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CampaignName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Co2Rate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ConsoUrbain" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ConsoMixte" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ConsoExtra" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetDealerInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="context" type="tns:InternetContextType" />
+            <s:element minOccurs="1" maxOccurs="1" name="SiteType" type="tns:SiteType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDealerInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDealerInfoResult" type="tns:GetDealerInfoResponseType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetDealerInfoResponseType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ResponseCode" type="tns:ResponseCodeValue" />
+          <s:element minOccurs="0" maxOccurs="1" name="DealerInfo" type="tns:ArrayOfGetDealerInfoType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfGetDealerInfoType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="GetDealerInfoType" nillable="true" type="tns:GetDealerInfoType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GetDealerInfoType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DealerId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DealerName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DealerCity" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DealerUrl" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DealerGroupId" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NumberVehiclePromo" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="NumberVehicleDiscount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MinDiscountPrice" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PromotionEndDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="NumberVehicle" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="NumberVehicleGoodOffers" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="WebCallBackId" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="WebCallBackActiv" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="WebCallBackHours" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WebCallBackProne" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WebCallBackIdPro" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="WebCallBackActivPro" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="WebCallBackHoursPro" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WebCallBackPronePro" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetVehicleDealerInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="context" type="tns:InternetContextType" />
+            <s:element minOccurs="1" maxOccurs="1" name="SiteType" type="tns:SiteType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVehicleDealerInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetVehicleDealerInfoResult" type="tns:GetVehicleDealerInfoResponseType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetVehicleDealerInfoResponseType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ResponseCode" type="tns:ResponseCodeValue" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleDealerInfo" type="tns:ArrayOfGetVehicleDealerInfoType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfGetVehicleDealerInfoType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="GetVehicleDealerInfoType" nillable="true" type="tns:GetVehicleDealerInfoType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GetVehicleDealerInfoType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="MaxDateMAD" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="VisuExtDefault" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ModelCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ModelLabel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BodystyleCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BodystyleLabel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnergyCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnergyLabel" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NumberVehicle" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MinDiscountPrice" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PromotionEndDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaxLocalDiscount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaxAdditionnalDiscount" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ImgVehicle" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PrefixUrlDetail" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PrefixUrlResultat" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DiscountLabel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AdditionnalDiscountLabel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MentionSupPrice" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MentionRecovery" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MentionPromo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PictoPromo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MinCatalogPrice" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaxCo2Bonus" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaxNationalDiscount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaxTotalDiscount" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DealerGroupId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CampaignId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CampaignName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Co2Rate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ConsoUrbain" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ConsoMixte" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ConsoExtra" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetStockWebstoreSoapIn">
+    <wsdl:part name="parameters" element="tns:GetStockWebstore" />
+  </wsdl:message>
+  <wsdl:message name="GetStockWebstoreSoapOut">
+    <wsdl:part name="parameters" element="tns:GetStockWebstoreResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetVehiclesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetVehicles" />
+  </wsdl:message>
+  <wsdl:message name="GetVehiclesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetVehiclesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDealersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDealers" />
+  </wsdl:message>
+  <wsdl:message name="GetDealersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDealersResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOptionalFeaturesInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetOptionalFeaturesInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetOptionalFeaturesInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetOptionalFeaturesInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTechnicalFeaturesInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTechnicalFeaturesInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetTechnicalFeaturesInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTechnicalFeaturesInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetStandardFeaturesInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetStandardFeaturesInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetStandardFeaturesInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetStandardFeaturesInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGammeInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGammeInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetGammeInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGammeInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPriceInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPriceInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetPriceInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPriceInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEnergyInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEnergyInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetEnergyInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEnergyInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetColorExtInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetColorExtInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetColorExtInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetColorExtInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrencyFormatSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCurrencyFormat" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrencyFormatSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCurrencyFormatResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetStockLastUpdateDateInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetStockLastUpdateDateInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetStockLastUpdateDateInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetStockLastUpdateDateInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUrlCampagneSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUrlCampagne" />
+  </wsdl:message>
+  <wsdl:message name="GetUrlCampagneSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUrlCampagneResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCampagneInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCampagneInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetCampagneInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCampagneInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetVehicleCampagneInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetVehicleCampagneInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetVehicleCampagneInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetVehicleCampagneInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDealerCampagneInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDealerCampagneInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetDealerCampagneInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDealerCampagneInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetVehicleInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetVehicleInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetVehicleInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetVehicleInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDealerInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDealerInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetDealerInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDealerInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetVehicleDealerInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetVehicleDealerInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetVehicleDealerInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetVehicleDealerInfoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebstoreServicesSoap">
+    <wsdl:operation name="GetStockWebstore">
+      <wsdl:input message="tns:GetStockWebstoreSoapIn" />
+      <wsdl:output message="tns:GetStockWebstoreSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVehicles">
+      <wsdl:input message="tns:GetVehiclesSoapIn" />
+      <wsdl:output message="tns:GetVehiclesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDealers">
+      <wsdl:input message="tns:GetDealersSoapIn" />
+      <wsdl:output message="tns:GetDealersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOptionalFeaturesInfo">
+      <wsdl:input message="tns:GetOptionalFeaturesInfoSoapIn" />
+      <wsdl:output message="tns:GetOptionalFeaturesInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTechnicalFeaturesInfo">
+      <wsdl:input message="tns:GetTechnicalFeaturesInfoSoapIn" />
+      <wsdl:output message="tns:GetTechnicalFeaturesInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStandardFeaturesInfo">
+      <wsdl:input message="tns:GetStandardFeaturesInfoSoapIn" />
+      <wsdl:output message="tns:GetStandardFeaturesInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGammeInfo">
+      <wsdl:input message="tns:GetGammeInfoSoapIn" />
+      <wsdl:output message="tns:GetGammeInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPriceInfo">
+      <wsdl:input message="tns:GetPriceInfoSoapIn" />
+      <wsdl:output message="tns:GetPriceInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEnergyInfo">
+      <wsdl:input message="tns:GetEnergyInfoSoapIn" />
+      <wsdl:output message="tns:GetEnergyInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetColorExtInfo">
+      <wsdl:input message="tns:GetColorExtInfoSoapIn" />
+      <wsdl:output message="tns:GetColorExtInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencyFormat">
+      <wsdl:input message="tns:GetCurrencyFormatSoapIn" />
+      <wsdl:output message="tns:GetCurrencyFormatSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStockLastUpdateDateInfo">
+      <wsdl:input message="tns:GetStockLastUpdateDateInfoSoapIn" />
+      <wsdl:output message="tns:GetStockLastUpdateDateInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUrlCampagne">
+      <wsdl:input message="tns:GetUrlCampagneSoapIn" />
+      <wsdl:output message="tns:GetUrlCampagneSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCampagneInfo">
+      <wsdl:input message="tns:GetCampagneInfoSoapIn" />
+      <wsdl:output message="tns:GetCampagneInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVehicleCampagneInfo">
+      <wsdl:input message="tns:GetVehicleCampagneInfoSoapIn" />
+      <wsdl:output message="tns:GetVehicleCampagneInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDealerCampagneInfo">
+      <wsdl:input message="tns:GetDealerCampagneInfoSoapIn" />
+      <wsdl:output message="tns:GetDealerCampagneInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVehicleInfo">
+      <wsdl:input message="tns:GetVehicleInfoSoapIn" />
+      <wsdl:output message="tns:GetVehicleInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDealerInfo">
+      <wsdl:input message="tns:GetDealerInfoSoapIn" />
+      <wsdl:output message="tns:GetDealerInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVehicleDealerInfo">
+      <wsdl:input message="tns:GetVehicleDealerInfoSoapIn" />
+      <wsdl:output message="tns:GetVehicleDealerInfoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebstoreServicesSoap" type="tns:WebstoreServicesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetStockWebstore">
+      <soap:operation soapAction="http://tempuri.org/GetStockWebstore" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVehicles">
+      <soap:operation soapAction="http://tempuri.org/GetVehicles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDealers">
+      <soap:operation soapAction="http://tempuri.org/GetDealers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOptionalFeaturesInfo">
+      <soap:operation soapAction="http://tempuri.org/GetOptionalFeaturesInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTechnicalFeaturesInfo">
+      <soap:operation soapAction="http://tempuri.org/GetTechnicalFeaturesInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStandardFeaturesInfo">
+      <soap:operation soapAction="http://tempuri.org/GetStandardFeaturesInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGammeInfo">
+      <soap:operation soapAction="http://tempuri.org/GetGammeInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPriceInfo">
+      <soap:operation soapAction="http://tempuri.org/GetPriceInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEnergyInfo">
+      <soap:operation soapAction="http://tempuri.org/GetEnergyInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetColorExtInfo">
+      <soap:operation soapAction="http://tempuri.org/GetColorExtInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencyFormat">
+      <soap:operation soapAction="http://tempuri.org/GetCurrencyFormat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStockLastUpdateDateInfo">
+      <soap:operation soapAction="http://tempuri.org/GetStockLastUpdateDateInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUrlCampagne">
+      <soap:operation soapAction="http://tempuri.org/GetUrlCampagne" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCampagneInfo">
+      <soap:operation soapAction="http://tempuri.org/GetCampagneInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVehicleCampagneInfo">
+      <soap:operation soapAction="http://tempuri.org/GetVehicleCampagneInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDealerCampagneInfo">
+      <soap:operation soapAction="http://tempuri.org/GetDealerCampagneInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVehicleInfo">
+      <soap:operation soapAction="http://tempuri.org/GetVehicleInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDealerInfo">
+      <soap:operation soapAction="http://tempuri.org/GetDealerInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVehicleDealerInfo">
+      <soap:operation soapAction="http://tempuri.org/GetVehicleDealerInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebstoreServicesSoap12" type="tns:WebstoreServicesSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetStockWebstore">
+      <soap12:operation soapAction="http://tempuri.org/GetStockWebstore" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVehicles">
+      <soap12:operation soapAction="http://tempuri.org/GetVehicles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDealers">
+      <soap12:operation soapAction="http://tempuri.org/GetDealers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOptionalFeaturesInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetOptionalFeaturesInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTechnicalFeaturesInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetTechnicalFeaturesInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStandardFeaturesInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetStandardFeaturesInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGammeInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetGammeInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPriceInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetPriceInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEnergyInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetEnergyInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetColorExtInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetColorExtInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencyFormat">
+      <soap12:operation soapAction="http://tempuri.org/GetCurrencyFormat" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStockLastUpdateDateInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetStockLastUpdateDateInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUrlCampagne">
+      <soap12:operation soapAction="http://tempuri.org/GetUrlCampagne" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCampagneInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetCampagneInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVehicleCampagneInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetVehicleCampagneInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDealerCampagneInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetDealerCampagneInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVehicleInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetVehicleInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDealerInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetDealerInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVehicleDealerInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetVehicleDealerInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebstoreServices">
+    <wsdl:port name="WebstoreServicesSoap" binding="tns:WebstoreServicesSoap">
+      <soap:address location="http://ws-store.citroen.inetpsa.com/services/webstoreServices.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebstoreServicesSoap12" binding="tns:WebstoreServicesSoap12">
+      <soap12:address location="http://ws-store.citroen.inetpsa.com/services/webstoreServices.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,18 @@
+{if $aData.ZONE_MOBILE == 1 && $NbLien >= 4}
+    <section id="{$aData.ID_HTML}"  class="{$aData.ZONE_SKIN} no-title">
+<div class="linkSliceMobile sliceNew">
+        <ul>
+            {foreach from=$aMulti item=Lien key=k}
+                {if $Lien.PAGE_ZONE_MULTI_ATTRIBUT == 1}
+                    {assign var="target" value="_self"}
+                {elseif $Lien.PAGE_ZONE_MULTI_ATTRIBUT == 2}
+                    {assign var="target" value="_blank"}
+                {/if}
+                <li>
+				<a class="{if $k eq '0'}buttonLead {else}buttonTransversalInvert{/if} activeRoll" href="{urlParser url=$Lien.PAGE_ZONE_MULTI_URL}" target="{$target}" {gtm name='clic_lien' data=$aData datasup=['value'=>$Lien.PAGE_ZONE_MULTI_ID] labelvars=['%intitule du lien%'=>$Lien.PAGE_ZONE_MULTI_TITRE]}>{$Lien.PAGE_ZONE_MULTI_TITRE}</a>
+				</li>
+            {/foreach}
+       </ul>
+</div>
+</section>
+{/if}

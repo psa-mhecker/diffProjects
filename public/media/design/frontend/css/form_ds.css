@@ -1,0 +1,971 @@
+    
+/***** DS SKIN *****/
+.tagdate {content: '20150522'}
+/**
+ * CODES COULEURS
+ * #cfc3b8 CHAMPAGNE
+ * #796654 CHAMPAGNE +20%
+ * #ad0040 CARMIN
+ * #595959 ORIGINAL TEXT COLOR
+ */
+.ds .wf_dealer_locator_message,
+.ds .wf_validsearch button:hover,
+.ds .wf_geo_error,
+.ds .wf_geo_btn:hover,
+.ds .wf_form_content .sb-custom .sb-dropdown a:hover,
+.ds .wf_form_content a.popuptypeFACEBOOK:hover,
+.ds .wf_synthesis strong, 
+.ds .wf_resume_content strong, 
+.ds .wf_geo_and,
+.ds label,
+.ds .wf_page_valid .wf_numbering,
+.ds .wf_page_open .wf_numbering,
+.ds .wf_car_model,
+.ds .wf_form_content a,
+.ds .wf_modify:before,
+.ds .wf_synthesis h3, 
+.ds .wf_resume_content h3,
+.ds .wf_html,
+.ds .wf_box_check.wf_checked,
+.ds .wf_form_content .wf_label_field,
+.ds .wf_brochurePickerCar h3,
+.ds .wf_form_content fieldset,
+.ds .wf_form_content,
+.ds .wf_form_content label,
+.ds .wf_form_content p,
+.ds .wf_form_content ul,
+.ds .wf_brochurePickerBrochures tbody,
+.ds .wf_validsearch button,
+.ds .wf_brochurePickerBrochures .wf_highlight  {
+    color: #cfc3b8; /* Couleur Champagne */
+}
+
+
+.ds .wf_resume_img img {
+    min-width: 200px;
+}
+.wf_resume_img img {
+    min-width: 200px;
+}
+
+.ds .wf_html p,
+.ds .wf_html div,
+.ds .wf_synthesis, 
+.ds .wf_resume_content {
+    color: #cfc3b8!important; 
+}
+
+
+.ds .wf_synthesis_brochurePicker .left:after {
+    display: none;
+}
+
+.wf_synthesis_brochurePicker .left:after {
+    display: none;
+}
+
+.mobile.ds .wf_synthesis_brochurePicker .left {
+    width: inherit!important;
+}
+
+.mobile .wf_synthesis_brochurePicker .left {
+    width: inherit!important;
+}
+
+.ds .wf_geo_btn,
+.ds .wf_form_content .wf_field_input input, 
+.ds .wf_form_content .wf_field_input select, 
+.ds .wf_form_content .wf_field_input textarea {
+    background:  #9d8c7a; /* Couleur Champagne */
+    color: #CCCCCC;
+    border-color: #4B4A4D;
+}
+
+.ds .sb-custom .sb-dropdown {
+    background: #9d8c7a;
+    border-color:#9d8c7a;
+}
+
+.ds .wf_range .wf_cars {
+    border-color: #9d8c7a;
+}
+
+.ds .wf_validsearch button:hover,
+.ds .wf_geo_btn:hover,
+.ds .sb-dropdown a:hover,
+.ds .sb-dropdown .selected {
+    background-color: #796654;
+}
+
+.ds .wf_form_content .sb-custom .sb-dropdown a {
+    color: #595959; /* dark grey - original color */
+}
+
+.ds .wf_form_content .wf_field_input input::-webkit-input-placeholder,
+.ds .wf_form_content .wf_field_input select::-webkit-input-placeholder,
+.ds .wf_form_content .wf_field_input textarea::-webkit-input-placeholder{ /* WebKit browsers */
+    color:    #4B4A4D;
+}
+.ds .wf_form_content .wf_field_input input:-moz-placeholder,
+.ds .wf_form_content .wf_field_input select:-moz-placeholder,
+.ds .wf_form_content .wf_field_input textarea:-moz-placeholder{ /* Mozilla Firefox 4 to 18 */
+    color:    #4B4A4D;
+}
+.ds .wf_form_content .wf_field_input input::-moz-placeholder,
+.ds .wf_form_content .wf_field_input select::-moz-placeholder,
+.ds .wf_form_content .wf_field_input textarea::-moz-placeholder{ /* Mozilla Firefox 19+ */
+    color:    #4B4A4D;
+}
+.ds .wf_form_content .wf_field_input input:-ms-input-placeholder,
+.ds .wf_form_content .wf_field_input select:-ms-input-placeholder ,
+.ds .wf_form_content .wf_field_input textarea:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #4B4A4D;
+}
+
+.ds .wf_synthesis,
+.ds .wf_resume_content,{
+    color: #9D8C7C!important;
+}
+
+.ds .wf_page_errorMessage,
+.ds .wf_carpicker .wf_cars_errorMessage,
+.ds .wf_brochurepicker .wf_errorMessage,
+.ds .wf_brochurePickerCar .wf_modify_in:hover,
+.ds .wf_brochurePickerCar .wf_modify_in:active,
+.ds .wf_brochurePickerCar .wf_modify_in:hover:before,
+.ds .wf_brochurePickerCar .wf_modify_in:active:before,
+.ds .wf_page_valid .wf_page_title,
+.ds .wf_page_open .wf_page_title,
+.ds .wf_form_content a:hover,
+.ds .wf_modify:hover:before,
+.ds .wf_box_check.wf_checked:after,
+.ds .wf_icon_box .wf_help_icon:hover {
+    color: #ad0040; /* Couleur Carmin */
+}
+
+.ds .wf_page_errorMessage { font-size: 20px; }
+
+.ds .wf_line .wf_error .wf_field_input input {
+	border: 4px solid #ad0040; /* Couleur Carmin */
+}
+
+.ds .wf_radio_check.wf_checked:after,
+.ds .wf_page_open .wf_numbering {
+    background-color: #ad0040;
+}
+
+.ds .wf_error .sb-custom .sb-dropdown {
+    border-color: -moz-use-text-color #ad0040 #ad0040;
+}
+
+.ds .wf_page_valid .wf_numbering {
+    background-color: #A70242;
+}
+
+.ds .wf_title_container .wf_page_title {
+    color: #9d8c7a;
+}
+
+.ds .wf_numbering {
+    background-color: #292220;
+    color: #9d8c7a;
+}
+
+.ds .wf_page, .ds .wf_cars_type_content {
+    border-top: 1px solid #433c35;
+}
+
+.ds .wf_cars_type_content {
+    border: 1px solid #433c35;
+}
+
+/* Onglets ON */
+.ds ul.wf_cars_type li.wf_active a {
+    border: 1px solid #433c35;
+    border-bottom: 1px solid #0d0c0c;
+    background: #0d0c0c;
+    color: #9d8c7a;
+}
+
+.ds ul.wf_cars_type li a {
+    background: #292220;
+    color: #9d8c7a;
+    border-bottom: 1px solid #433c35;
+}
+
+.ds ul.wf_cars_type li a:hover {
+    color: #9d8c7a;
+}
+
+.ds ul.wf_cars_type li a:hover, .ds ul.wf_cars_type li a:active {
+    background: #15110f;
+}
+
+.ds .wf_carPicker_darkCars {
+    background: none;
+}
+
+.ds .wf_cars_type_content:before {
+    display: none;
+}
+
+.ds .wf_cars label:hover, .ds .wf_cars label:active{
+    background: #1D1A18;
+}
+
+.ds .wf_button input, .ds .wf_button button, .ds .wf_button .wf_button_input {
+    background: #ad0040;
+}
+
+.ds .wf_button:hover input, .ds .wf_button:hover button, .ds .wf_button:hover .wf_button_input {
+    background: #850034;
+}
+
+.ds .wf_dealer_locator {
+    background: #FFF;
+}
+
+.ds .wf_highlight_car label {
+    background-color: #292220;
+}
+
+
+/**
+ * MOBILE
+ */
+.ds .wf_form_content label,
+.ds .wf_form_content .wf_field_select,
+.ds .wf_dealerlocator_form .wf_searchbox_container .wf_validsearch button,
+.ds .wf_dealerlocator_form .wf_geo_wrapper .wf_geo_btn:before,
+.ds .wf_dealerlocator_form .wf_geo_wrapper .wf_geo_btn {
+    color: #cfc3b8;
+}
+
+.ds .wf_resume_details span {
+    color: #cfc3b8;
+}
+
+.ds .wf_validsearch button,
+.ds .wf_field_select:hover,
+.ds .wf_dealerlocator_form .wf_searchbox_container .wf_validsearch button,
+.ds .wf_dealerlocator_form .wf_geo_wrapper .wf_geo_btn {
+    background-color: #9d8c7a;
+}
+
+.mobile.ds .wf_form_content .wf_field_select {
+    background-color: #9d8c7a;
+}
+
+
+.ds .wf_dealerlocator_form .wf_geo_wrapper .wf_geo_btn:hover {
+    background-color: #796654;
+}
+
+.ds .wf_form_content .wf_field_select {
+    border-color: #9d8c7a;
+}
+
+.ds .wf_content .wf_error .wf_field_select select,
+.ds .wf_content .wf_error .wf_field_select select option {
+    color: #ad0040;
+}
+
+.ds .wf_form_content .wf_page_page {
+    border-color: #433c35;
+}
+
+/*.ds .wf_dealer_locator_item .distance {
+    color: #ad0040;
+}*/
+
+
+.showroom .wf_dealer_locator_item .distance{
+    color:#000000;
+}
+
+
+
+
+
+/*--------------------------------
+----------------------------------
+        FORMULAIRE DRIVE
+----------------------------------
+--------------------------------*/
+
+/*BORDER BLUE ENCADREMENT TOP/BOTTOM*/
+.secret{
+    margin: 0 40px 60px!important;
+    padding: 20px 0 0 !important;
+    border-top: 4px solid #85cddb !important;
+    border-bottom: 4px solid #85cddb !important;
+}
+/*ICONE CLOSE*/
+.showroom .closer{
+    width: auto;
+}
+.showroom .closer:before{
+    background-image: url(../images/close-blue.png)!important;
+    background-repeat: no-repeat;
+    background-size: 32px 32px;
+    background-position: center;
+    width: 32px;
+    height: 32px;
+    margin-top: 42px;
+}
+/*TITLE*/
+.showroom section .subtitle {
+    font-size: 32px;
+    color: #85cddb;
+    text-align: left;
+    font-weight: normal;
+}
+/*CHAPO*/
+.showroom section .FormulaireDeploy1Chapo {
+    padding: 0 20px;
+}
+
+/*------------------------
+    GLOBAL STYLE
+------------------------*/
+
+/*MARGE BLOC*/
+div#container.showroom {
+  margin-left: 12px;
+}
+.showroom .wf_form_content .wf_page_open .wf_contentPage{
+    padding: 0 0 0 60px;
+}
+.showroom .wf_form_content .wf_page_valid .wf_synthesis{
+    padding-left: 60px;
+}
+
+/*ICONE NUMBER SUBTITLE*/
+.showroom .wf_form_content .wf_title_container span.wf_numbering{
+    background-color: #85cddb!important;
+    color: #fff;
+    border-radius: 0 !important;
+    width: 32px;
+    height: 32px;
+    line-height: 33px;
+}
+/*SUBTITLE*/
+.showroom .wf_form_content .wf_title_container .wf_page_title {
+    color: #85cddb;
+}
+/*ICONE NUMBER SUBTITLE OPEN*/
+.showroom .wf_form_content .wf_page_open .wf_title_container span.wf_numbering{
+    background-color: #85cddb;
+    color: #fff;
+    border-radius: 0 !important;
+    width: 32px;
+    height: 32px;
+    line-height: 33px;
+}
+
+.showroom .wf_form_content .wf_page_valid .number_container .wf_numbering{
+background-color:#868689!important;
+}
+/*SUBTITLE OPEN*/
+.showroom .wf_form_content .wf_page_open .wf_title_container .wf_page_title {
+    color: #85cddb;
+}
+.showroom .wf_form_content .wf_page_valid .wf_page_title{
+color:#868689!important;
+}
+
+
+/*ICONE MODIFICATION*/
+.showroom .wf_form_content .wf_page_valid .wf_title_container span.wf_link_01 a.wf_modify:hover span{
+    color: #85cddb !important;
+}
+.showroom .wf_form_content .wf_page_valid .wf_title_container span.wf_link_01 a.wf_modify:hover:before{
+    color: #85cddb !important;
+}
+.showroom .wf_form_content .wf_page_valid .wf_title_container span.wf_link_01 a.wf_modify:active:before{
+    color: #85cddb !important;
+}
+/*SEPARATION*/
+.showroom .wf_form_content .wf_content .wf_page{
+    border: none !important;
+}
+
+
+
+/*------------------------
+PARTIE 1 SELECTION MODELE
+------------------------*/
+
+
+/*------------------------
+PARTIE 2 SELECTION PDV
+------------------------*/
+
+/*INPUT CODE POSTAL, VILLE,..*/
+.showroom .wf_form_content .wf_field_input .wf_searchbox_container input{
+    border: 2px solid #85cddb;
+    height: 42px;
+}
+/*BUTTON OK DE VALIDATION*/
+.showroom .wf_form_content .wf_field_input .wf_validsearch button{
+    background-color: #85cddb;
+    color: #fff;
+    border-radius: 0 !important;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+}
+/*BUTTON DE GEOLOCALISATION*/
+.showroom .wf_form_content .wf_geo_wrapper button{
+    background: #ffffff;
+    border: 4px solid #85cddb;
+    border-radius: 0;
+    height: 42px;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.showroom .wf_form_content .wf_geo_wrapper button:before{
+    background-image: url(../images/geo-blue.png);
+    background-repeat: no-repeat;
+    background-position: center 3px;
+    background-size: 26px 26px;
+    width: 26px;
+    height: 26px;
+    text-transform: none;
+}
+.showroom .wf_form_content .wf_geo_wrapper .wf_geo_btn:before{
+    content: "\007A";
+    font-family: webformsIcons;
+    font-size: 37px;
+    position: absolute;
+    left: 10px;
+    line-height: 1em;
+    color: #85cddb;
+    top: 2px;
+}
+/* AU DESSUS MAP*/
+.showroom .wf_form_content .wf_dealer_locator_message{
+    color: #333333;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+/*MAP*/
+.showroom .wf_form_content .wf_dealer_locator_results .wf_line{
+    border: 0 !important;
+    border-radius: 0px !important;
+}
+.showroom .wf_form_content .wf_dealer_locator_results .wf_line .wf_dealer_locator .viewport{
+    border: 4px solid #85cddb;
+    border-radius: 0 !important;
+    height: 479px;
+}
+.showroom .wf_form_content .wf_dealer_locator_results .wf_line .wf_dealer_locator .viewport ul.wf_dealers_wrapper li{
+    padding: 20px 0 20px 0;
+    margin: 0;
+    padding: 15px 20px;
+    border-bottom: 4px solid #85cddb;
+}
+.showroom .wf_form_content .wf_dealer_locator_results .wf_line .wf_dealer_locator .scrollbar{
+    height: 487px;
+    margin: 0 4px 0 7px;
+}
+.showroom .wf_form_content .wf_dealer_locator_results .wf_line .wf_dealer_locator .scrollbar .track{
+    height: 487px;
+    width: 16px;
+}
+.showroom .wf_form_content .wf_dealer_locator_results .wf_line .wf_dealer_locator .scrollbar .track .thumb{
+    background: #85cddb;
+    border-radius: 0 !important;
+    width: 16px;
+}
+.showroom .wf_form_content .wf_dealer_locator_results .wf_line .wf_dealer_locator_map .wf_location_map{
+    border: 4px solid #85cddb;
+}
+
+
+/*------------------------
+PARTIE 3 COORDONNEES
+------------------------*/
+
+/*TITLE INPUT*/
+.showroom .wf_form_content span.wf_label_field{
+    font-weight: bold;
+}
+/*INPUT*/
+.showroom .wf_form_content .wf_page_open fieldset .wf_line_textbox span.wf_field_input input{
+    border: 2px solid #c2e6ed !important;
+}
+/*SELECT*/
+.showroom .wf_form_content .wf_page_open fieldset .wf_line_dropdown span.wf_field_select input{
+    border: 2px solid #85cddb !important;
+}
+.showroom .wf_form_content .wf_page_open fieldset .wf_line_dropdown span.wf_field_select .sb-select:after{
+    color: #85cddb;
+}
+/*TEXTAREA*/
+.showroom .wf_form_content .wf_page_open fieldset .wf_line_textarea span.wf_field_textarea textarea{
+    border: 2px solid #c2e6ed !important;
+}
+
+
+/*ICONE INFORMATION*/
+.showroom .wf_form_content .wf_page_open .wf_icon_box span.wf_help_icon{
+    background: #fff;
+    color: #4B4A4D !important;
+    border: 1px solid #4B4A4D;
+}
+.showroom .wf_form_content .wf_page_open .wf_line_textbox .wf_icon_box{
+    bottom: 6px !important;
+}
+.showroom .wf_form_content .wf_page_open .wf_line_dropdown .wf_icon_box{
+    bottom: 18px !important;
+}
+/*CHECKBOX*/
+.showroom .wf_form_content .wf_page_open fieldset .wf_checkbox span.wf_label_field .wf_box_check{
+    padding-left: 50px !important;
+}
+.showroom .wf_form_content .wf_page_open fieldset .wf_checkbox span.wf_label_field .wf_box_check:before{
+    border: 1px solid #c2e6ed !important;
+    width: 30px !important;
+    height: 30px !important;
+}
+.showroom .wf_form_content .wf_page_open fieldset .wf_checkbox span.wf_label_field .wf_box_check.wf_checked:after{
+    top: 5px;
+    left: 7px;
+    color: #85cddb;
+}
+.showroom .wf_box_check.wf_checked:after{
+    color: #85cddb!important;
+}
+/*BUTTON VALIDEZ*/
+.showroom .wf_form_content .wf_page_open fieldset .wf_line_button{
+    margin: 0 0 18px 0 !important;
+}
+.showroom .wf_form_content .wf_page_open fieldset .wf_line_button span.wf_button input{
+    background: #85cddb;
+    color: #4B4A4D;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    border: 0;
+    height: 48px;
+    padding: 8px 20px !important;
+}
+.showroom .wf_form_content .wf_page_open fieldset .wf_line_button span.wf_button_input:after{
+    display: none;
+}
+/*CONDITION UTILISATION*/
+.showroom .wf_form_content .wf_html div{
+    width: 120%;
+    font-size: 14px;
+    color: #4B4A4D;
+}
+/*BUTTON FERMER*/
+.showroom span.popClose span{
+    height: 48px;
+    text-transform: uppercase;
+    background: #fff;
+    border: 4px solid #85cddb;
+    border-radius: 0;
+    color: #4B4A4D;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 35px;
+    margin: 0;
+}
+
+
+/*--------------------------------
+----------------------------------
+        FORMULAIRE BROCHURES
+----------------------------------
+--------------------------------*/
+
+
+/*------------------------
+PARTICULIER OU PRO
+------------------------*/
+.showroom .form .parttitle{
+    color: #85cddb;
+    margin: 25px 0 !important;
+    font-weight: bold;
+}
+/*CHECKBOX*/
+.showroom .form .field label:before{
+    border: 1px solid #85cddb !important;
+}
+.showroom .form .field label:after{
+    background: #85cddb !important;
+}
+/*BUTTON NEXT*/
+.showroom .form .actions li a{
+    background: #85cddb !important;
+    text-transform: uppercase;
+    color: #4B4A4D;
+    height: 48px;
+    border-radius: 0;
+    padding: 14px 0 15px
+}
+.showroom .form .actions li a span:after{
+    background-image: url(../images/arrow-right-black.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 8px 15px;
+    width: 8px;
+    height: 15px;
+}
+
+
+/*------------------------
+PARTIE 1 SELECTION MODELE
+------------------------*/
+/*SEPARATION*/
+.showroom .wf_form_content .wf_brochurePicker_wrapper .wf_brochurePickerCar:after{
+    display: none;
+}
+/*TEXTE RECAPITULATIF*/
+.showroom .wf_form_content .wf_brochurePicker_wrapper .wf_brochurePickerInfos{
+    
+}
+/*CHOIX BROCHURE*/
+.showroom .wf_form_content .wf_brochurePicker_wrapper .wf_brochurePickerBrochures .wf_highlight{
+    font-size: 14px;
+}
+.showroom .wf_form_content .wf_brochurePicker_wrapper .wf_brochurePickerBrochures .wf_desc_table{
+    color: #4B4A4D;
+}
+.showroom .wf_form_content .wf_brochurePicker_wrapper .wf_brochurePickerBrochures .wf_box_check:before{
+    border: 1px solid #85cddb !important;
+}
+/*BUTTON VALIDATION BROCHURE*/
+.showroom .wf_form_content .wf_brochurePicker_wrapper .wf_button_wrapper span button{
+    background: #85cddb !important;
+    text-transform: uppercase;
+    color: #4B4A4D !important;
+    height: 48px;
+    border-radius: 0 !important;
+    padding: 8px 20px;
+    font-weight: bold !important;
+    font-size: 14px;
+}
+.showroom .wf_form_content .wf_brochurePicker_wrapper .wf_button_wrapper span button:after{
+    display: none;
+}
+
+
+/*------------------------
+PARTIE 2 SELECTION PDV
+------------------------*/
+
+
+/*IDENTIQUE AU FORMULAIRE TEST DRIVE*/
+
+
+/*--------------------------------
+----------------------------------
+        FORMULAIRE OFFRES
+----------------------------------
+--------------------------------*/
+
+
+/*IDENTIQUE AUX ELEMENTS DES DEUX AUTRES FORMULAIRE*/
+
+
+
+/*------------------------
+    FORMULAIRE MOBILE
+------------------------*/
+
+/*MARGE BLOC*/
+div#container.showroom {
+  margin-left: 12px;
+}
+.showroom-mobile .wf_form_content .wf_page_open .wf_contentPage{
+    padding: 0 0 0 60px;
+}
+.showroom-mobile .wf_form_content .wf_page_valid .wf_synthesis{
+    padding-left: 60px;
+}
+
+/*ICONE NUMBER SUBTITLE*/
+.showroom-mobile .wf_form_content .wf_title_container span.wf_numbering{
+    background-color: #868689;
+    color: #fff;
+    border-radius: 0 !important;
+    width: 32px;
+    height: 32px;
+    line-height: 33px;
+    font-size: 20px;
+    padding: 0;
+}
+/*SUBTITLE*/
+.showroom-mobile .wf_form_content .wf_title_container .wf_page_title {
+    color: #868689;
+}
+/*ICONE NUMBER SUBTITLE OPEN*/
+.showroom-mobile .wf_form_content .wf_page_open .wf_title_container span.wf_numbering{
+    background-color: #85cddb;
+    color: #fff;
+    border-radius: 0 !important;
+    width: 32px;
+    height: 32px;
+    line-height: 33px;
+}
+/*ICONE MODIFICATION*/
+.showroom-mobile .wf_form_content .wf_page_valid .wf_title_container span.wf_link_01 a.wf_modify:hover span{
+    color: #85cddb !important;
+}
+.showroom-mobile .wf_form_content .wf_page_valid .wf_title_container span.wf_link_01 a.wf_modify:hover:before{
+    color: #85cddb !important;
+}
+.showroom-mobile .wf_form_content .wf_page_valid .wf_title_container span.wf_link_01 a.wf_modify:active:before{
+    color: #85cddb !important;
+}
+/*SUBTITLE OPEN*/
+.showroom-mobile .wf_form_content .wf_page_open .wf_title_container .wf_page_title {
+    color: #85cddb;
+}
+/*SEPARATION*/
+.showroom-mobile .wf_form_content .wf_content .wf_page{
+    border: none !important;
+}
+
+/*SELECTION VEHICULE*/
+.showroom-mobile .wf_form_content .wf_page_open fieldset span.wf_field_input select{
+    border: 2px solid #85cddb;
+    border-radius: 0;
+    color: #85cddb;
+}
+/*COLOR ARROW CHOIX VEHICULE*/
+.showroom-mobile .wf_form_content .wf_range .wf_cars label .wf_car_model:after{
+    color: #85cddb;
+}
+/*BORDER CHOIX VEHICULE*/
+.showroom-mobile .wf_form_content .wf_range li.wf_cars{
+      border-top: 2px solid #e7e7e7 !important;
+}
+.showroom-mobile .wf_form_content .wf_page_page{
+      border-bottom: 4px solid #e7e7e7 !important;
+}
+
+/*INPUT CODE POSTAL, VILLE,..*/
+.showroom-mobile .wf_form_content .wf_field_input .wf_searchbox_container input{
+    border: 2px solid #85cddb;
+    height: 42px;
+}
+/*BUTTON OK DE VALIDATION*/
+.showroom-mobile .wf_form_content .wf_field_input .wf_validsearch button{
+    background-color: #85cddb;
+    color: #fff;
+    border-radius: 0 !important;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+}
+/*BUTTON DE GEOLOCALISATION*/
+.showroom-mobile .wf_form_content .wf_geo_wrapper button{
+    background: #ffffff;
+    border: 4px solid #85cddb;
+    border-radius: 0;
+    height: 42px;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #333333;
+}
+.showroom-mobile .wf_form_content .wf_geo_wrapper button:before{
+    background-image: url(../../images/geo-blue.png);
+    background-repeat: no-repeat;
+    background-position: center 3px;
+    background-size: 26px 26px;
+    width: 26px;
+    height: 26px;
+    text-transform: none;
+}
+.showroom-mobile .wf_form_content .wf_geo_wrapper .wf_geo_btn:before{
+    content: "\007A";
+    font-family: webformsIcons;
+    font-size: 37px;
+    position: absolute;
+    left: 10px;
+    line-height: 1em;
+    color: #85cddb;
+    top: 2px;
+}
+.showroom-mobile .wf_form_content .wf_geo_wrapper .wf_geo_btn{
+    width: 100% !important;
+}
+
+/*CODE POSTAL, LIEU*/
+.showroom-mobile .wf_form_content span.wf_searchbox_container{
+    background: #ffffff;
+    border: 4px solid #c2e6ed;
+    border-radius: 0;
+    height: 42px;
+    text-transform: uppercase;
+    font-size: 14px;
+    width: 99% !important;
+}
+/* AU DESSUS MAP*/
+.showroom-mobile .wf_form_content .wf_dealer_locator_bottom .wf_dealer_locator_results .wf_line .wf_dealer_locator .wf_dealer_locator_inner li.wf_dealer_locator_item{
+    border-bottom: 2px solid #e7e7e7 !important;
+}
+.showroom-mobile .wf_form_content .wf_dealer_locator_bottom .wf_dealer_locator_results .wf_line .wf_dealer_locator .wf_dealer_locator_inner li.wf_dealer_locator_item span.distance{
+    font-style: normal;
+    font-weight: bold;
+    color: #333235;
+}
+.showroom-mobile .wf_form_content .wf_dealer_locator_bottom .wf_dealer_locator_results .wf_line .wf_dealer_locator .wf_dealer_locator_inner li.wf_dealer_locator_item address{
+    color: #333235;
+}
+.showroom-mobile .wf_form_content .wf_dealer_locator_bottom .wf_dealer_locator_results .wf_line .wf_dealer_locator .wf_dealer_locator_inner li.wf_dealer_locator_item:after{
+    color: #85cddb;
+}
+
+/*BUTTON PLUS DE RESULTAT*/
+.showroom-mobile .wf_form_content .wf_dealer_locator_bottom .wf_dealer_locator_results .wf_line .wf_dealer_locator .wf_dealer_locator_inner .wf_dealers_more .wf_dealers_more_button{
+    background: #ffffff;
+    border: 4px solid #85cddb;
+    border-radius: 0;
+    height: 42px;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #333333;
+}
+/*BUTTON PLUS DE RESULTAT >> ARROW */
+.showroom-mobile .wf_form_content .wf_dealer_locator_bottom .wf_dealer_locator_results .wf_line .wf_dealer_locator .wf_dealer_locator_inner .wf_dealers_more .wf_dealers_more_button:after{
+    content: "\0074";
+    font-family: 'webformsIcons';
+    display: block;
+    margin-left: 25%;
+    z-index: 1;
+    -moz-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);    
+}
+
+/*TEXTE SUBTITLE PARTIE VOS COORDONNEES*/
+.showroom-mobile .wf_form_content .wf_html{
+    font-size: 14px !important;
+    color: #333235 !important;
+    font-weight: lighter !important;
+}
+/*BULLE INFO*/
+.showroom-mobile .wf_form_content .wf_page_open .wf_icon_box span.wf_help_icon{
+    background: #fff;
+    color: #4B4A4D !important;
+    border: 1px solid #4B4A4D;
+}
+/*CHECKBOX*/
+.showroom-mobile .wf_form_content .wf_input_group .wf_radio_check{
+    padding-left: 50px !important;
+}
+.showroom-mobile .wf_form_content .wf_input_group .wf_radio_check:before{
+    border: 1px solid #c2e6ed !important;
+    width: 30px !important;
+    height: 30px !important;
+}
+.showroom-mobile .wf_form_content .wf_input_group .wf_radio_check:after{
+    top: 8px;
+    left: 9px;
+    background-color: #85cddb;
+}
+.showroom-mobile .wf_form_content .wf_input_group .wf_radio .wf_label_field{
+    margin-right: 30px !important;
+}
+
+/*INPUT COORDONNEES*/
+.showroom-mobile .wf_form_content .wf_field_input input{
+    border: 2px solid #c2e6ed;
+    margin-top: 5px;
+}
+/*SELECT COORDONNEES*/
+.showroom-mobile .wf_form_content span.wf_field_select{
+    border: 2px solid #85cddb;
+    margin-top: 5px;
+}
+.showroom-mobile .wf_form_content span.wf_field_select .wf_custom_select_text:after{
+    color: #85cddb;
+}
+/*CHECKBOX CARRE*/
+.showroom-mobile .wf_form_content .wf_page_open fieldset .wf_checkbox span.wf_label_field label.wf_box_check {
+    line-height: 20px;
+    padding-left: 43px !important;
+}
+.showroom-mobile .wf_form_content .wf_page_open fieldset .wf_checkbox span.wf_label_field .wf_box_check:before {
+    border: 2px solid #c2e6ed !important;
+    width: 30px !important;
+    height: 30px !important;
+}
+/*BUTTON VALIDEZ*/
+.showroom-mobile .wf_form_content .wf_page_open fieldset .wf_line_button span.wf_button input{
+    background: #85cddb;
+    color: #4B4A4D;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    border: 0;
+    height: 48px;
+    padding: 8px 65px !important;
+}
+.showroom-mobile .wf_form_content .wf_page_open fieldset .wf_line_button span.wf_button_input:after{
+    display: none;
+}
+/*MODIFICATION*/
+.showroom-mobile .wf_form_content .wf_page_valid .wf_title_container span.wf_link_01{
+    color: #595959;
+    border: 2px solid #868689;
+    width: 30px;
+    height: 30px;
+    padding: 0 !important;
+}
+.showroom-mobile .wf_form_content .wf_page_valid .wf_title_container span.wf_link_01 .wf-modify{
+    padding: 0 !important;
+    margin: 0 3px 0 0 !important;
+}
+.showroom-mobile .wf_form_content .wf_page_valid .wf_title_container span.wf_link_01 .wf-modify:before{
+    font-size: 25px;
+    top: 2px;
+    right: 3px;
+    color: #85cddb;
+}
+
+.ds.cls2colonnes .actions a {
+    padding: 10px 5px 13px 15px !important;
+}
+
+/*NEW STYLE FORM DS*/
+
+.ds input[type='text'], .ds input[type='email'], .ds input[type='password'], .ds input[type='submit'], .ds textarea, .ds button {
+    /* width: 100%; */
+    padding: 0 15px 0 15px;
+    height: 40px;
+    line-height: 1em;
+    background: transparent !important;
+    border: 1px solid #D0D0D3;
+    border-radius: 0 !important;
+}
+
+/*CPW-4049*/
+.ds .wf_dealerlocator_form .wf_geo_wrapper span.wf_geo_and{
+    margin: 0 20px 0 30px !important;
+}
+/* CPW-4049 */
+.ds .wf_dealerlocator_form .wf_geo_wrapper span.wf_geo_and{
+    /*margin: 0 20px 0 30px !important;*/
+}
+.ds .wf_dealerlocator_form .wf_validsearch{
+    width:116px!important;
+}
+.ds .wf_dealerlocator_form .wf_geo_btn{
+    padding:0 15px 0 40px;
+}
+.ds .wf_dealerlocator_form .wf_validsearch{
+    padding:0 15px 0 15px;
+}
+
+.ds .wf_brochurepicker .wf_brochurePicker_wrapper .wf_brochurepicker_validate_button button, 
+.ds .wf_button_input input{
+    padding:0 40px 0 15px;
+}

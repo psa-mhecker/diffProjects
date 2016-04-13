@@ -1,0 +1,1283 @@
+		
+@font-face {
+    font-family: 'citroenbold';
+    src: url('../font/citroen_bold-webfont.eot');
+    src: url('../font/citroen_bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/citroen_bold-webfont.svg#citroenbold') format('svg'),
+         url('../font/citroen_bold-webfont.woff') format('woff'),
+         url('../font/citroen_bold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'citroenregular';
+    src: url('../font/citroen_regular-webfont.eot');
+    src: url('../font/citroen_regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/citroen_regular-webfont.svg#citroenregular') format('svg'),
+         url('../font/citroen_regular-webfont.woff') format('woff'),
+         url('../font/citroen_regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'citroenlight';
+    src: url('../font/citroen_light-webfont.eot');
+    src: url('../font/citroen_light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/citroen_light-webfont.svg#citroenlight') format('svg'),
+         url('../font/citroen_light-webfont.woff') format('woff'),
+         url('../font/citroen_light-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#content_mmd1404{
+    position: relative;
+    width: 100%;
+    height: 438px;
+    min-width: 1024px;
+    max-width: 1480px;
+    margin: auto;
+    border: 1px solid #000;
+    overflow: hidden;
+}
+
+#content_mmd1404 *{
+    min-width: 0%;
+    max-width: 1000%;
+    line-height: 1;
+}
+
+#zone_anim_mmd1404{
+    position: relative;
+    width: 1024px;
+    height: 100%;
+    margin: auto;
+}
+
+.blue_mmd1404{
+    color: #85cddb;
+}
+
+.regular_mmd1404{
+    font-family: 'citroenregular', sans-serif;
+}
+
+.sup_mmd1404{
+    position: relative;
+    bottom: 4px;
+    left: 4px;
+    font-size: .4em;
+    line-height: .8em;
+    vertical-align:super;
+    text-decoration:none;
+}
+
+/*ZONE INTRO*/
+
+#zone_intro_mmd1404{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /*display: none;*/
+}
+
+#txt_intro_mmd1404{
+    position: absolute;
+    font-family: 'citroenlight', sans-serif;
+    font-size: 80px;
+    color: #c2b000;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    top: 24px;
+    opacity: 0;
+}
+
+#plus_decale_mmd1404{
+    position: relative;
+    bottom: 7px;
+}
+
+#cta_intro_mm1404{
+    position: absolute;
+    width: 128px;
+    height: 31px;
+    background-color: #c2b000;
+    color: #ffffff;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    text-align: center;
+    padding-top: 9px;
+    font-family: 'citroenregular', sans-serif;
+    letter-spacing: 2px;
+    top: 120px;
+    left: 50%;
+    margin-left: -64px;
+    font-size: 14px;
+    cursor: pointer;
+    -webkit-transition: background-color .3s;
+    -moz-transition: background-color .3s;
+    -o-transition: background-color .3s;
+    -ms-transition: background-color .3s
+    transition: background-color .3s;
+    opacity: 0;
+    z-index: 8;
+}
+
+#cta_intro_mm1404:hover{
+    background-color: #958a1a;
+}
+
+#voiture_intro_mmd1404{
+    position: absolute;
+    width: 676px;
+    height: 302px;
+    left: 50%;
+    margin-left: -338px;
+    bottom: -320px;
+}
+
+/*ZONE SLIDE1*/
+
+#zone_slide1_mmd1404{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+#zone_triangles_mmd_1404{
+    position: absolute;
+    width: 194px;
+    height: 194px;
+    overflow: hidden;
+    border-radius: 50%;
+    top: 106px;
+    left: 73px;
+    z-index: 10;
+    opacity: 0;
+}
+
+.carre_mmd1404{
+    position: absolute;
+    width: 97px;
+    height: 97px;
+    -webkit-transform-origin: 100% 100%;
+    -moz-transform-origin: 100% 100%;
+    -o-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+    cursor: pointer;
+}
+
+#carre1_mmd1404{
+    background-color: #c1c3c8;
+}
+
+#carre2_mmd1404{
+    background-color: #2e2e2e;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    z-index: 2;
+}
+
+#carre3_mmd1404{
+    background-color: #5c9fa2;
+    -webkit-transform: rotate(162deg);
+    -moz-transform: rotate(162deg);
+    -o-transform: rotate(162deg);
+    -ms-transform: rotate(162deg);
+    transform: rotate(162deg);
+    z-index: 3;
+}
+
+#carre4_mmd1404{
+    background-color: #7462a2;
+    -webkit-transform: rotate(230deg);
+    -moz-transform: rotate(230deg);
+    -o-transform: rotate(230deg);
+    -ms-transform: rotate(230deg);
+    transform: rotate(230deg);
+    z-index: 4;
+}
+
+#carre5_mmd1404{
+    background-color: #e8df4c;
+    -webkit-transform: rotate(310deg);
+    -moz-transform: rotate(310deg);
+    -o-transform: rotate(310deg);
+    -ms-transform: rotate(310deg);
+    transform: rotate(310deg);
+    z-index: 5;
+    overflow: hidden;
+}
+
+#fond_carre5_mmd1404{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#partie_carre1_mmd1404{
+    position: absolute;
+    width: 97px;
+    height: 97px;
+    -webkit-transform-origin: 0% 100%;
+    -moz-transform-origin: 0% 100%;
+    -o-transform-origin: 0% 100%;
+    -ms-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    left: 97px;
+    background-color: #c1c3c8;
+    -webkit-transform: rotate(-18deg);
+    -moz-transform: rotate(-18deg);
+    -o-transform: rotate(-18deg);
+    -ms-transform: rotate(-18deg);
+    transform: rotate(-18deg);
+    z-index: 6;
+}
+
+#zone_voiture_slide1_mmd1404{
+    position: absolute;
+    width: 850px;
+    height: 358px;
+    top: 38px;
+    left: 217px;
+}
+
+#voit1_slide1_mmd1404, #voit2_slide1_mmd1404, #voit3_slide1_mmd1404, #voit4_slide1_mmd1404, #voit5_slide1_mmd1404{
+    position: absolute;
+    width: 850px;
+    height: 358px;
+} 
+
+#voit2_slide1_mmd1404, #voit3_slide1_mmd1404, #voit4_slide1_mmd1404{
+    opacity: 0;
+    z-index: 2;
+}
+
+#voit1_slide1_mmd1404{
+    z-index: 2;
+}
+
+#texte_roue_mmd1404{
+    position: absolute;
+    width: 262px;
+    height: 262px;
+    left: 39px;
+    top: 73px;
+    z-index: 5;
+    opacity: 0;
+}
+
+#roue1_slide1_mmd1404{
+    position: absolute;
+    width: 122px;
+    height: 109px;
+    top: 185px;
+    left: 155px;
+    z-index: 6;
+}
+
+#roue2_slide1_mmd1404{
+    position: absolute;
+    width: 112px;
+    height: 112px;
+    top: 184px;
+    right: 153px;
+    z-index: 6;
+}
+
+#turn_mmd1404{
+    position: absolute;
+    width: 110px;
+    height: 91px;
+    top: 158px;
+    left: 107px;
+    background-image: url(http://media.intrun.cppv2.citroen.rec.inetpsa.com/design/frontend/animation/img/turn_mmd1404.png);
+    z-index: 11;
+    opacity: 0;
+    -webkit-transform-origin: 57% 50%;
+    -moz-transform-origin: 57% 50%;
+    -o-transform-origin: 57% 50%;
+    -ms-transform-origin: 57% 50%;
+    transform-origin: 57% 50%;
+
+    -webkit-transform: rotate(5deg);
+    -moz-transform: rotate(5deg);
+    -o-transform: rotate(5deg);
+    -ms-transform: rotate(5deg);
+    transform: rotate(5deg);
+}
+
+/*ZONE SLIDE2*/
+
+#zone_slide2_mmd1404{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+#intro_slide2_mmd1404{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#balle1_mmd1404{
+    position: absolute;
+    left: 1100px;
+    top: 100px;
+}
+
+#balle2_mmd1404{
+    position: absolute;
+    left: -60px;
+    top: 80px;
+}
+
+#content_slide2_mmd1404{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+#voit1_slide2_mmd1404{
+    position: absolute;
+    width: 450px;
+    height: 337px;
+    top: 46px;
+    left: 303px;
+}
+
+#zone_voiture_slide2_mmd1404{
+    position: absolute;
+    width: 548px;
+    height: 298px;
+    background-image: url(http://media.intrun.cppv2.citroen.rec.inetpsa.com/design/frontend/animation/img/voit2_slide2_mmd1404.jpg);
+    top: 46px;
+    left: 460px; 
+}
+
+#zone_roue1_slide2_mmd1404{
+    position: absolute;
+    width: 122px;
+    height: 109px;
+    top: 176px;
+    left: 174px;
+    -webkit-transform: perspective(600px) rotateY(36deg) rotateX(-2deg);
+}
+
+#zone_roue2_slide2_mmd1404{
+    position: absolute;
+    width: 122px;
+    height: 109px;
+    top: 154px;
+    right: -23px;
+    -webkit-transform: perspective(600px) rotateY(50deg) rotateX(-2deg) scale(0.86);
+}
+
+#zone_txt_slide2_mmd1404{
+    position: absolute;
+    width: 424px;
+    height: 275px;
+    left: 11px;
+    top: 60px;
+    /*background-color: yellow;*/
+}
+
+#txt1_slide2_mmd1404{
+    position: relative;
+    font-family: 'citroenlight', sans-serif;
+    font-size: 94px;
+    text-transform: uppercase;
+    color: #85cddb;
+    margin-left: 10px;
+    line-height: 84px;
+}
+
+#txt2_slide2_mmd1404{
+    position: relative;
+    font-family: 'citroenlight', sans-serif;
+    font-size: 41px;
+    text-transform: uppercase;
+    color: #868689;
+    margin-left: 14px;
+}
+
+#txt3_slide2_mmd1404{
+    position: relative;
+    font-family: 'citroenbold', sans-serif;
+    font-size: 35.8px;
+    text-transform: uppercase;
+    color: #c2b000;
+    margin-left: 14px;
+}
+
+#cadre_slide2_mmd1404{
+    position: absolute;
+    left: 1px;
+    bottom: 1px;
+    border: 1px solid #dadadb;
+    width: 414px;
+    height: 82px;
+}
+
+#txt4_slide2_mmd1404{
+    position: absolute;
+    font-family: 'citroenregular', sans-serif;
+    font-size: 15px;
+    width: 280px;
+    text-align: center;
+    height: 15px;
+    background-color: #ffffff;
+    left: 67px;
+    bottom: 78px;
+    text-transform: uppercase;
+    color: #868689;
+    z-index: 2;
+}
+
+#picto1_part2_mmd1404, #picto2_part2_mmd1404, #picto3_part2_mmd1404{
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    top: 20px;
+}
+
+#picto1_part2_mmd1404{
+    left: 22px;
+}
+
+#picto2_part2_mmd1404{
+    left: 155px;
+}
+
+#picto3_part2_mmd1404{
+    left: 303px;
+}
+
+#txtcadre1_slide2_mmd1404, #txtcadre2_slide2_mmd1404, #txtcadre3_slide2_mmd1404{
+    position: absolute;
+    font-family: 'citroenbold', sans-serif;
+    font-size: 15px;
+    top: 33px;
+    color: #868689;
+    text-transform: uppercase;
+}
+
+#txtcadre1_slide2_mmd1404{
+    left: 72px;
+}
+
+#txtcadre2_slide2_mmd1404{
+    left: 205px;
+}
+
+#txtcadre3_slide2_mmd1404{
+    left: 353px;
+}
+
+/*ZONE SLIDE3*/
+
+#zone_slide3_mmd1404{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 50;
+}
+
+#voiture_slide3_mmd1404{
+    position: absolute;
+    width: 582px;
+    height: 316px;
+    top: 66px;
+    left: 47px;
+}
+
+#sky_mmd1404{
+    position: absolute;
+    width: 501px;
+    height: 331px;
+    top: 33px;
+    left: -28px;
+    background-image: url(http://media.intrun.cppv2.citroen.rec.inetpsa.com/design/frontend/animation/img/sky_mmd1404.jpg);
+}
+
+#plus_mmd1404{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background-position: 0% 0%;
+    background-image: url(http://media.intrun.cppv2.citroen.rec.inetpsa.com/design/frontend/animation/img/plus_mmd1404.png);
+    top: 56px;
+    left: 73px;
+    cursor: pointer;
+}
+
+#plus_mmd1404:hover{
+    background-position: 0% -100%;
+}
+
+#zone_txt_slide3_mmd1404{
+    position: absolute;
+    width: 338px;
+    height: 272px;
+    right: 15px;
+    top: 60px;
+}
+
+#sofa_mmd1404{
+    position: relative;
+    width: 247px;
+    height: 127px;
+    top: 0px;
+    margin-left: 45px;
+    background-image: url(http://media.intrun.cppv2.citroen.rec.inetpsa.com/design/frontend/animation/img/sofa_mmd1404.png);
+}
+
+.cache_sofa_mmd1404{
+    position: absolute;
+    background-color: #ffffff;
+}
+
+#cache_sofa1_mmd1404{
+    width: 100%;
+    height: 3px;
+    bottom: 0px;
+}
+
+#cache_sofa2_mmd1404{
+    width: 10px;
+    height: 26px;
+    bottom: 3px;
+    right: 0px;
+}
+
+#cache_sofa3_mmd1404{
+    width: 100%;
+    height: 3px;
+    bottom: 29px;
+}
+
+#cache_sofa4_mmd1404{
+    width: 10px;
+    height: 26px;
+    bottom: 3px;
+    left: 0px;
+}
+
+#cache_sofa5_mmd1404{
+    width: 207px;
+    height: 3px;
+    bottom: 36px;
+    left: 21px;
+}
+
+#cache_sofa6_mmd1404{
+    width: 10px;
+    height: 55px;
+    bottom: 38px;
+    right: 20px;
+    -webkit-transform: rotate(-12deg);
+    -moz-transform: rotate(-12deg);
+    -o-transform: rotate(-12deg);
+    -ms-transform: rotate(-12deg);
+    transform: rotate(-12deg);
+}
+
+#cache_sofa7_mmd1404{
+    width: 181px;
+    height: 3px;
+    bottom: 91px;
+    left: 33px;
+}
+
+#cache_sofa8_mmd1404{
+    width: 10px;
+    height: 55px;
+    bottom: 38px;
+    left: 20px;
+    -webkit-transform: rotate(12deg);
+    -moz-transform: rotate(12deg);
+    -o-transform: rotate(12deg);
+    -ms-transform: rotate(12deg);
+    transform: rotate(12deg);
+}
+
+#cache_sofa9_mmd1404, #cache_sofa10_mmd1404{
+    width: 54px;
+    height: 3px;
+    bottom: 99px;
+}
+
+#cache_sofa11_mmd1404, #cache_sofa12_mmd1404, #cache_sofa15_mmd1404, #cache_sofa16_mmd1404{
+    width: 8px;
+    height: 24px;
+    bottom: 102px;
+}
+
+#cache_sofa11_mmd1404{
+    left: 103px;
+}
+
+#cache_sofa12_mmd1404{
+    left: 186px;
+}
+
+#cache_sofa15_mmd1404{
+    left: 55px;
+}
+
+#cache_sofa16_mmd1404{
+    left: 137px;
+}
+
+#cache_sofa13_mmd1404, #cache_sofa14_mmd1404{
+    width: 54px;
+    height: 3px;
+    bottom: 123px;
+}
+
+#cache_sofa9_mmd1404, #cache_sofa13_mmd1404{
+    left: 57px;
+}
+
+#cache_sofa10_mmd1404, #cache_sofa14_mmd1404{
+    left: 138px;
+}
+
+
+#txt1_slide3_mmd1404{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-family: 'citroenregular', sans-serif;
+    font-size: 51px;
+    text-transform: uppercase;
+    color: #c2b000;
+    margin-top: 16px;
+}
+
+#txt2_slide3_mmd1404{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-family: 'citroenregular', sans-serif;
+    font-size: 21.6px;
+    text-transform: uppercase;
+    color: #868689;
+    margin-top: 4px;
+}
+
+#txt3_slide3_mmd1404{
+    position: relative;
+    width: 338px;
+    height: 43px;
+    background-image: url(http://media.intrun.cppv2.citroen.rec.inetpsa.com/design/frontend/animation/img/enlarge_mmd1404.png);
+    text-align: center;
+    font-family: 'citroenregular', sans-serif;
+    font-size: 21.6px;
+    text-transform: uppercase;
+    color: #ffffff;
+    padding-top: 11px;
+    box-sizing: border-box;
+    margin-top: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    background-size: 100% 100%;
+}
+
+/*SLIDER SLIDE3*/
+
+#content_slider_slide3_mmd1404{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    z-index: 150;
+    display: none;
+}
+
+#fond_slider_slide3_mmd1404{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    background-color: #ffffff;
+    opacity: 0.9;
+}
+
+#close_slider_mmd1404{
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 28px;
+    right: 28px;
+    background-image: url(http://media.intrun.cppv2.citroen.rec.inetpsa.com/design/frontend/animation/img/close_mmd1404.png);
+    -webkit-transition: opacity .3s;
+    -moz-transition: opacity .3s;
+    -o-transition: opacity .3s;
+    -ms-transition: opacity .3s
+    transition: opacity .3s;
+    z-index: 5;
+    cursor: pointer;
+}
+
+#close_slider_mmd1404:hover{
+    opacity: 0.6;
+}
+
+#zone_slider_slide3_mmd1404{
+    position: relative;
+    width: 624px;
+    height: 100%;
+    margin: auto;
+}
+
+#slider_slide3_left_mmd1404, #slider_slide3_right_mmd1404{
+    position: absolute;
+    width: 18px;
+    height: 30px; 
+    top: 50%;
+    margin-top: -15px;
+    -webkit-transition: opacity .3s;
+    -moz-transition: opacity .3s;
+    -o-transition: opacity .3s;
+    -ms-transition: opacity .3s
+    transition: opacity .3s;
+    cursor: pointer;
+}
+
+#slider_slide3_left_mmd1404:hover, #slider_slide3_right_mmd1404:hover{
+    opacity: 0.6;
+}
+
+#slider_slide3_left_mmd1404{
+    left: 0px;
+    background-image: url(http://media.intrun.cppv2.citroen.rec.inetpsa.com/design/frontend/animation/img/left_mmd1404.png);
+}
+
+#slider_slide3_right_mmd1404{
+    right: 0px;
+    background-image: url(http://media.intrun.cppv2.citroen.rec.inetpsa.com/design/frontend/animation/img/right_mmd1404.png);
+}
+
+#slide1_slider_slide3_mmd1404, #slide2_slider_slide3_mmd1404, #slide3_slider_slide3_mmd1404{
+    position: absolute;
+    width: 527px;
+    height: 394px;
+    left: 48px;
+    top: 22px;
+    -moz-box-shadow: 0px 0px 15px 0px #656565;
+    -webkit-box-shadow: 0px 0px 15px 0px #656565;
+    -o-box-shadow: 0px 0px 15px 0px #656565;
+    box-shadow: 0px 0px 15px 0px #656565;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=NaN, Strength=15);
+    font-family: 'citroenregular', sans-serif;
+    color: #ffffff;
+    font-size: 16px;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 365px;
+}
+
+#slide1_slider_slide3_mmd1404{
+    background-image: url(http://media.intrun.cppv2.citroen.rec.inetpsa.com/design/frontend/animation/img/slide1_slider_mmd1404.jpg);
+}
+
+#slide2_slider_slide3_mmd1404{
+    background-image: url(http://media.intrun.cppv2.citroen.rec.inetpsa.com/design/frontend/animation/img/slide2_slider_mmd1404.jpg);
+    opacity: 0;
+}
+
+#slide3_slider_slide3_mmd1404{
+    background-image: url(http://media.intrun.cppv2.citroen.rec.inetpsa.com/design/frontend/animation/img/slide3_slider_mmd1404.jpg);
+    opacity: 0;
+}
+
+/*ZONE SLIDE4*/
+
+#zone_slide4_mmd1404{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+#zone_txt_slide4_mmd1404{
+    position: absolute;
+    width: 472px;
+    height: 195px;
+    left: 12px;
+    top: 85px;
+}
+
+#txt1_slide4_mmd1404{
+    position: relative;
+    font-family: 'citroenregular', sans-serif;
+    color: #868689;
+    font-size: 29.5px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#txt2_slide4_mmd1404{
+    position: relative;
+    font-family: 'citroenregular', sans-serif;
+    color: #868689;
+    font-size: 37px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+
+#txt3_slide4_mmd1404{
+    position: relative;
+    font-family: 'citroenbold', sans-serif;
+    color: #85cddb;
+    font-size: 47px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#zone_picto_slide4_mmd1404{
+    position: absolute;
+    width: 472px;
+    height: 60px;
+    bottom: 0px;
+}
+
+.picto_slide4_mmd1404{
+    position: relative;
+    float: left;
+    width: 60px;
+    height: 60px;
+    top: 0px;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.hover_slide4_mmd1404:hover{
+    background-position: 0% -100%;
+}
+
+.current_slide4_mmd1404{
+    background-position: 0% -100%;
+}
+
+#picto1_slide4_mmd1404{
+    margin-left: 2px;
+    background-image: url(http://media.intrun.cppv2.citroen.rec.inetpsa.com/design/frontend/animation/img/btn1_slide4_mmd1404.png);
+}
+
+#picto2_slide4_mmd1404{
+    background-image: url(http://media.intrun.cppv2.citroen.rec.inetpsa.com/design/frontend/animation/img/btn2_slide4_mmd1404.png);
+}
+
+#picto3_slide4_mmd1404{
+    background-image: url(http://media.intrun.cppv2.citroen.rec.inetpsa.com/design/frontend/animation/img/btn3_slide4_mmd1404.png);
+}
+
+#picto4_slide4_mmd1404{
+    background-image: url(http://media.intrun.cppv2.citroen.rec.inetpsa.com/design/frontend/animation/img/btn4_slide4_mmd1404.png);
+}
+
+#picto5_slide4_mmd1404{
+    background-image: url(http://media.intrun.cppv2.citroen.rec.inetpsa.com/design/frontend/animation/img/btn5_slide4_mmd1404.png);
+}
+
+#picto6_slide4_mmd1404{
+    background-image: url(http://media.intrun.cppv2.citroen.rec.inetpsa.com/design/frontend/animation/img/btn6_slide4_mmd1404.png);
+}
+
+#picto7_slide4_mmd1404{
+    background-image: url(http://media.intrun.cppv2.citroen.rec.inetpsa.com/design/frontend/animation/img/btn7_slide4_mmd1404.png);
+}
+
+.cursor_slide4_mmd1404{
+    position: relative;
+    width: 7px;
+    height: 31px;
+    background-image: url(http://media.intrun.cppv2.citroen.rec.inetpsa.com/design/frontend/animation/img/cursor_mmd1404.png);
+    margin: auto;
+    top: 70px;
+}
+
+.hover_slide4_mmd1404>*{
+    opacity: 0;
+}
+
+.current_slide4_mmd1404>*{
+    opacity: 1;
+}
+
+.txt_picto_slide4_mmd1404{
+    position: absolute;
+    font-family: 'citroenregular', sans-serif;
+    color: #c2b000;
+    font-size: 15px;
+    text-transform: uppercase;
+    width: 200px;
+    left: -66px;
+    text-align: center;
+    top: 113px;
+}
+
+.tablette_slide4_mmd1404, .tablettefake_slide4_mmd1404{
+    position: absolute;
+    width: 403px;
+    height: 277px;
+    background-image: url(http://media.intrun.cppv2.citroen.rec.inetpsa.com/design/frontend/animation/img/back_screen_mmd1404.png);
+    top: 62px;
+    right: 43px;
+}
+
+.screen_tablette_slide4_mmd1404{
+    position: absolute;
+    width: 262px;
+    height: 158px;
+    top: 32px;
+    left: 70px;
+}
+
+#tablette2_slide4_mmd1404, #tablette3_slide4_mmd1404, #tablette4_slide4_mmd1404, #tablette5_slide4_mmd1404, #tablette6_slide4_mmd1404, #tablette7_slide4_mmd1404{
+    opacity: 0;
+}
+
+#tablette1_slide4_mmd1404{
+    z-index: 5;
+}
+
+#tablettefake2_slide4_mmd1404{
+    opacity: 0.4;
+    right: -50px;
+    -webkit-transform: scale(0.7);
+    -moz-transform: scale(0.7);
+    -o-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    transform: scale(0.7);
+}
+
+#tablettefake1_slide4_mmd1404{
+    opacity: 0.4;
+    right: 135px;
+    -webkit-transform: scale(0.7);
+    -moz-transform: scale(0.7);
+    -o-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    transform: scale(0.7);
+}
+
+#screen_tablette1_slide4_mmd1404{
+    background-image: url(http://media.intrun.cppv2.citroen.rec.inetpsa.com/design/frontend/animation/img/screen1_mmd1404.png);
+}
+
+#screen_tablette2_slide4_mmd1404{
+    background-image: url(http://media.intrun.cppv2.citroen.rec.inetpsa.com/design/frontend/animation/img/screen2_mmd1404.png);
+}
+
+#screen_tablette3_slide4_mmd1404{
+    background-image: url(http://media.intrun.cppv2.citroen.rec.inetpsa.com/design/frontend/animation/img/screen3_mmd1404.png);
+}
+
+#screen_tablette4_slide4_mmd1404{
+    background-image: url(http://media.intrun.cppv2.citroen.rec.inetpsa.com/design/frontend/animation/img/screen4_mmd1404.png);
+}
+
+#screen_tablette5_slide4_mmd1404{
+    background-image: url(http://media.intrun.cppv2.citroen.rec.inetpsa.com/design/frontend/animation/img/screen5_mmd1404.png);
+}
+
+#screen_tablette6_slide4_mmd1404{
+    background-image: url(http://media.intrun.cppv2.citroen.rec.inetpsa.com/design/frontend/animation/img/screen6_mmd1404.png);
+}
+
+#screen_tablette7_slide4_mmd1404{
+    background-image: url(http://media.intrun.cppv2.citroen.rec.inetpsa.com/design/frontend/animation/img/screen7_mmd1404.png);
+}
+
+/*SLIDE 5*/
+
+#zone_slide5_mmd1404{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+#voiture_slide5_mmd1404{
+    position: absolute;
+    width: 698px;
+    height: 393px;
+    background-image: url(http://media.intrun.cppv2.citroen.rec.inetpsa.com/design/frontend/animation/img/voit_slide5_mmd1404.jpg);
+    top: 8px;
+    left: -79px;
+}
+
+#zone_txt_slide5_mmd1404{
+    position: absolute;
+    width: 214px;
+    height: 222px;
+    top: 84px;
+    left: 532px;
+}
+
+#txt1_slide5_mmd1404{
+    position: relative;
+    text-transform: uppercase;
+    font-family: 'citroenbold', sans-serif;
+    color: #85cddb;
+    text-align: center;
+    font-size: 21px;
+}
+
+#txt2_slide5_mmd1404{
+    position: relative;
+    text-transform: uppercase;
+    font-family: 'citroenlight', sans-serif;
+    color: #85cddb;
+    text-align: center;
+    font-size: 39px;
+    margin-top: 2px;
+}
+
+#zone_decompte_mmd1404{
+    position: relative;
+    width: 100%;
+    height: 90px;
+    margin-top: 6px;
+}
+
+#txt3_slide5_mmd1404{
+    position: relative;
+    text-transform: uppercase;
+    font-family: 'citroenregular', sans-serif;
+    color: #868689;
+    text-align: center;
+    font-size: 26px;
+    margin-top: 7px;
+}
+
+#txt4_slide5_mmd1404{
+    position: relative;
+    text-transform: uppercase;
+    font-family: 'citroenregular', sans-serif;
+    color: #868689;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 4px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 208px;
+    height: 26px;
+    border: 1px solid #868689;
+    margin-left: 3px;
+    padding-top: 5px;
+    margin-top: 5px;
+}
+
+.decompte_mmd1404{
+    position: relative;
+    width: 66px;
+    height: 90px;
+    margin-left: 6px;
+    border-radius: 8px;
+    background-color: #85cddb;
+    float: left;
+    overflow: hidden;
+}
+
+#decompte1_mmd1404{
+    margin-left: 2px;
+}
+
+#zone_gouttes_mmd1404{
+    position: absolute;
+    width: 174px;
+    height: 230px;
+    top: 84px;
+    left: 758px;
+}
+
+#masque_gouttes_mmd1404{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(http://media.intrun.cppv2.citroen.rec.inetpsa.com/design/frontend/animation/img/gouttes_mmd1404.png);
+    z-index: 5;
+}
+
+#back_gouttes_grey_mmd1404{
+    position: absolute;
+    width: 170px;
+    height: 226px;
+    top: 2px;
+    left: 2px;
+    background-color: #e6e6e6;
+    overflow: hidden;
+}
+
+#chiffredecompte1_mmd1404, #chiffredecompte1bis_mmd1404, #chiffredecompte2_mmd1404, #chiffredecompte2bis_mmd1404, #chiffredecompte3_mmd1404, #chiffredecompte3bis_mmd1404{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-family: 'citroenbold', sans-serif;
+    color: #ffffff;
+    text-align: center;
+    font-size: 100px;
+    line-height: 84px;
+}
+
+.container_decompte_mmd1404{
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+    background-color: #85cddb;
+    z-index: 5;
+}
+
+#barre_decompte_mmd1404{
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top: 50%;
+    background-color: #ffffff;
+    z-index: 10;
+}
+
+#virgule_mmd1404{
+    font-family: 'citroenbold', sans-serif;
+    color: #ffffff;
+    font-size: 58px;
+    position: absolute;
+    bottom: 4px;
+    right: -1px;
+}
+
+#gouttes1_mmd1404, #gouttes2_mmd1404, #gouttes3_mmd1404, #gouttes4_mmd1404{
+    position: absolute;
+    height: 25px;
+    background-color: #c2b000;
+    right: 0px;
+}
+
+#gouttes1_mmd1404{
+    bottom: 4px;
+}
+
+#gouttes2_mmd1404{
+    bottom: 33px;
+}
+
+#gouttes3_mmd1404{
+    bottom: 61px;
+}
+
+#gouttes4_mmd1404{
+    bottom: 89px;
+}
+
+
+/*NAVIGATION*/
+
+#zone_nav_mmd1404{
+    position: absolute;
+    width: 440px;
+    height: 56px;
+    bottom: 0px;
+    left: 292px;
+    z-index: 100;
+    display: none;
+}
+
+.selec_nav_mmd1404{
+    position: relative;
+    float: left;
+    width: 22px;
+    height: 22px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: 1px solid #a3a3a5;
+    color: #a3a3a5;
+    font-family: 'citroenregular', sans-serif;
+    padding-top: 2px;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#selec1_nav_mmd1404{
+    margin-left: 5px;
+}
+
+#selec5_nav_mmd1404{
+    margin-right: 0px;
+}
+
+.selec_nav_mmd1404:hover{
+    color: #ffffff;
+    background-color: #c2b000;
+    border: 1px solid #c2b000;
+}
+
+.tiret_nav_mmd1404{
+    position: relative;
+    float: left;
+    height: 1px;
+    background-color: #a3a3a5;
+    top: 11px;
+    width: 60px;
+}
+
+.current_selec_nav_mmd1404{
+    color: #ffffff;
+    background-color: #c2b000;
+    border: 1px solid #c2b000;
+}
+
+.titre_nav_mmd1404{
+    position: absolute;
+    color: #a3a3a5;
+    font-family: 'citroenregular', sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    top: 29px;
+}
+
+#titre1_nav_mmd1404{
+    left: -49px;
+}
+
+#titre2_nav_mmd1404{
+    left: 92px;
+}
+
+#titre3_nav_mmd1404{
+    left: 194px;
+}
+
+#titre4_nav_mmd1404{
+    left: 296px;
+}
+
+#titre5_nav_mmd1404{
+    left: 396px;
+}
+
+.current_title_mmd1404{
+    color: #c2b000;
+}

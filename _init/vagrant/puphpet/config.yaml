@@ -1,0 +1,386 @@
+---
+vagrantfile-local:
+    vm:
+        box: puphpet/debian75-x64
+        box_url: puphpet/debian75-x64
+        hostname: psa-cppv2
+        memory: '1024'
+        cpus: '1'
+        chosen_provider: virtualbox
+        network:
+            private_network: 192.168.10.10
+            forwarded_port: {  }
+        post_up_message: ''
+        provider:
+            virtualbox:
+                modifyvm:
+                    natdnshostresolver1: on
+            vmware:
+                numvcpus: 1
+            parallels:
+                cpus: 1
+        provision:
+            puppet:
+                manifests_path: puphpet/puppet
+                manifest_file: site.pp
+                module_path: puphpet/puppet/modules
+                options:
+                    - '--verbose'
+                    - '--hiera_config /vagrant/puphpet/puppet/hiera.yaml'
+                    - '--parser future'
+        synced_folder:
+            H6SoOAKGQWQH:
+                owner: vagrant
+                group: www-data
+                source: 'D:\Documents\GitHub'
+                target: /var/www
+                sync_type: default
+                rsync:
+                    args:
+                        - '--verbose'
+                        - '--archive'
+                        - '-z'
+                    exclude:
+                        - .vagrant/
+                    auto: 'false'
+        usable_port_range:
+            start: 10200
+            stop: 10500
+    ssh:
+        host: null
+        port: null
+        private_key_path: null
+        username: vagrant
+        guest_port: null
+        keep_alive: true
+        forward_agent: false
+        forward_x11: false
+        shell: 'bash -l'
+    vagrant:
+        host: detect
+server:
+    install: '1'
+    packages:
+        - vim
+        - htop
+        - subversion
+        - graphicsmagick
+        - git
+        - phpmyadmin
+        - sendmail-bin
+        - sendmail
+        - php-apc
+users_groups:
+    install: '1'
+    groups: {  }
+    users: {  }
+cron:
+    install: '1'
+    jobs: {  }
+firewall:
+    install: '1'
+    rules: {  }
+apache:
+    install: '1'
+    settings:
+        user: www-data
+        group: www-data
+        default_vhost: true
+        manage_user: false
+        manage_group: false
+        sendfile: 0
+    modules:
+        - deflate
+        - ldap
+        - rewrite
+        - ssl
+    vhosts:
+        vhost_frontend:
+            servername: master.psa-cppv2.com
+            serveraliases:
+                - fr.psa-cppv2.com
+                - be.psa-cppv2.com
+                - de.psa-cppv2.com
+                - cz.psa-cppv2.com
+                - master.psa-cppv2.com
+            docroot: /var/www/cppv2/public/frontend
+            port: '80'
+            setenv:
+                - 'TYPE_ENVIRONNEMENT VM'
+                - 'HTTP_MEDIA media.psa-cppv2.com'
+                - 'HTTP_BACKEND backend.psa-cppv2.com'
+            directories:
+                cppv2_frontend:
+                    provider: directory
+                    path: /var/www/cppv2/public
+                    options:
+                        - Indexes
+                        - FollowSymlinks
+                        - MultiViews
+                    allow_override:
+                        - All
+                    require:
+                        - all
+                        - granted
+                    custom_fragment: ''
+            engine: php
+            custom_fragment: "Alias /library/ \"/var/www/cppv2/library/\"\nAlias /videos/ \"/var/www/cppv2/public/media/video/\"\nAlias /modules/ \"/var/www/cppv2/public/media/modules/\"\nAlias /plugins/ \"/var/www/cppv2/public/media/plugins/\"\nAddType video/mp4 .mp4\nAddType video/webm .webm"
+            ssl_cert: ''
+            ssl_key: ''
+            ssl_chain: ''
+            ssl_certs_dir: ''
+        vhost_media:
+            servername: media.psa-cppv2.com
+            docroot: /var/www/cppv2/public/media
+            port: '80'
+            setenv:
+                - 'TYPE_ENVIRONNEMENT VM'
+                - 'HTTP_MEDIA media.psa-cppv2.com'
+                - 'HTTP_BACKEND backend.psa-cppv2.com'
+            directories:
+                cppv2_backend:
+                    provider: directory
+                    path: /var/www/cppv2/public
+                    options:
+                        - Indexes
+                        - FollowSymlinks
+                        - MultiViews
+                    allow_override:
+                        - All
+                    require:
+                        - all
+                        - granted
+                    custom_fragment: ''
+            engine: php
+            custom_fragment: "Alias /library/ \"/var/www/cppv2/library/\"\nAlias /videos/ \"/var/www/cppv2/public/media/video/\"\nAlias /modules/ \"/var/www/cppv2/public/media/modules/\"\nAlias /plugins/ \"/var/www/cppv2/public/media/plugins/\"\nAddType video/mp4 .mp4\nAddType video/webm .webm"
+            ssl_cert: ''
+            ssl_key: ''
+            ssl_chain: ''
+            ssl_certs_dir: ''
+        vhost_backend:
+            servername: backend.psa-cppv2.com
+            docroot: /var/www/cppv2/public/backend
+            port: '80'
+            setenv:
+                - 'TYPE_ENVIRONNEMENT VM'
+                - 'HTTP_MEDIA media.psa-cppv2.com'
+                - 'HTTP_BACKEND backend.psa-cppv2.com'
+            directories:
+                cppv2_media:
+                    provider: directory
+                    path: /var/www/cppv2/public
+                    options:
+                        - Indexes
+                        - FollowSymlinks
+                        - MultiViews
+                    allow_override:
+                        - All
+                    require:
+                        - all
+                        - granted
+                    custom_fragment: ''
+            engine: php
+            custom_fragment: "Alias /library/ \"/var/www/cppv2/library/\"\nAlias /videos/ \"/var/www/cppv2/public/media/video/\"\nAlias /modules/ \"/var/www/cppv2/public/media/modules/\"\nAlias /plugins/ \"/var/www/cppv2/public/media/plugins/\"\nAddType video/mp4 .mp4\nAddType video/webm .webm"
+            ssl_cert: ''
+            ssl_key: ''
+            ssl_chain: ''
+            ssl_certs_dir: ''
+    mod_pagespeed: 0
+nginx:
+    install: '0'
+    settings:
+        default_vhost: 1
+        proxy_buffer_size: 128k
+        proxy_buffers: '4 256k'
+    upstreams: {  }
+    vhosts:
+        mdznb3lltjqb:
+            proxy: ''
+            server_name: awesome.dev
+            server_aliases:
+                - www.awesome.dev
+            www_root: /var/www/awesome
+            listen_port: '80'
+            index_files:
+                - index.html
+                - index.htm
+                - index.php
+            client_max_body_size: 1m
+            ssl_cert: ''
+            ssl_key: ''
+            ssl_port: ''
+php:
+    install: '1'
+    version: '54'
+    composer: '1'
+    composer_home: ''
+    modules:
+        php:
+            - cli
+            - curl
+            - gd
+            - imagick
+            - intl
+            - ldap
+            - mbstring
+            - mcrypt
+            - mysql
+            - mysqlnd
+        pear: {  }
+        pecl:
+            - mongo
+            - mysqlnd_ms
+            - redis
+            - yaml
+            - pecl_http
+            - imagick
+            - igbinary
+            - phar
+    ini:
+        display_errors: On
+        session.save_path: /var/lib/php/session
+        always_populate_raw_post_data: '0'
+        error_reporting: 'E_ALL & ~E_NOTICE & ~E_WARNING & ~E_DEPRECATED & ~E_STRICT'
+        expose_php: '0'
+        log_errors: '1'
+        short_open_tag: '1'
+        memory_limit: 768M
+        sendmail_path: '/usr/bin/env catchmail -f mail@psa-cppv2.com'
+        include_path: '.:/var/www/cppv2/application/configs:/var/www/cppv2/library'
+        extension: igbinary.so
+        session.serialize_handler: igbinary
+        igbinary.compact_strings: On
+        date.timezone: 'Europe/Paris'
+    mod_php: '1'
+hhvm:
+    install: '0'
+    nightly: 0
+    composer: '1'
+    composer_home: ''
+    settings:
+        host: 127.0.0.1
+        port: '9000'
+    ini:
+        display_errors: On
+        error_reporting: '-1'
+    timezone: null
+xdebug:
+    install: '1'
+    settings:
+        xdebug.default_enable: '1'
+        xdebug.remote_connect_back: '1'
+        xdebug.remote_enable: '0'
+        xdebug.remote_handler: dbgp
+        xdebug.remote_host: 192.168.10.1
+        xdebug.remote_mode: req
+        xdebug.idekey: phpstorm-idekey
+        xdebug.remote_autostart: '1'
+xhprof:
+    install: '1'
+wpcli:
+    install: '0'
+    version: ''
+drush:
+    install: '0'
+    version: 6.3.0
+ruby:
+    install: '1'
+    versions: {  }
+nodejs:
+    install: '1'
+    npm_packages: {  }
+python:
+    install: '1'
+    packages: {  }
+    versions: {  }
+mysql:
+    install: '1'
+    settings:
+        override_options: {  }
+        root_password: root
+    adminer: '1'
+    databases:
+        psa-cppv2:
+            grant:
+                - ALL
+            name: psa-cppv2
+            host: localhost
+            user: psa-cppv2
+            password: psa-cppv2
+            sql_file: /var/www/cppv2/_init/fixtures/psa-cppv2.sql
+postgresql:
+    install: '0'
+    settings:
+        global:
+            encoding: UTF8
+            version: '9.3'
+        server:
+            postgres_password: ''
+    databases: {  }
+    users: {  }
+    grants: {  }
+    adminer: 0
+mariadb:
+    install: '0'
+    settings:
+        override_options: {  }
+        root_password: ''
+    adminer: 0
+    databases: {  }
+sqlite:
+    install: '0'
+    adminer: 0
+    databases: {  }
+mongodb:
+    install: '1'
+    settings:
+        auth: 1
+        port: '27017'
+    databases:
+        S6QTagpHHgVX:
+            name: cppv2
+            user: cppv2
+            password: cppv2
+redis:
+    install: '1'
+    settings:
+        conf_port: '6379'
+mailcatcher:
+    install: '1'
+    settings:
+        smtp_ip: 0.0.0.0
+        smtp_port: 1025
+        http_ip: 0.0.0.0
+        http_port: '1080'
+        mailcatcher_path: /usr/local/rvm/wrappers/default
+        from_email_method: inline
+beanstalkd:
+    install: '0'
+    settings:
+        listenaddress: 0.0.0.0
+        listenport: '13000'
+        maxjobsize: '65535'
+        maxconnections: '1024'
+        binlogdir: /var/lib/beanstalkd/binlog
+        binlogfsync: null
+        binlogsize: '10485760'
+    beanstalk_console: 0
+    binlogdir: /var/lib/beanstalkd/binlog
+rabbitmq:
+    install: '0'
+    settings:
+        port: '5672'
+    users: {  }
+    vhosts: {  }
+    plugins: {  }
+elastic_search:
+    install: '0'
+    settings:
+        version: 1.4.1
+        java_install: true
+solr:
+    install: '0'
+    settings:
+        version: ''
+        port: ''
+

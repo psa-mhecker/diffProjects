@@ -1,0 +1,43 @@
+<settings>
+  <General_Properties>
+    <componentWidth value="600"/>
+    <componentHeight value="300"/>
+    <skins value="assets/skins/skin.xml"/>
+    <showAbout value="true"/>
+  </General_Properties>
+  <Background_Properties>
+    <fillType value="linear"/>
+    <backgroundColor1 value="0xbbbbbb"/>
+    <backgroundColor2 value="0xeeeeee"/>
+    <backgroundAlpha value="1"/>
+    <bgCornerRadius value="0"/>
+    <gradientRotation value="30"/>
+    <gradientRatio value="40"/>
+    <gradientPosX value="0"/>
+    <gradientPosY value="0"/>
+  </Background_Properties>
+  <Shade_Properties>
+    <useShade value="false"/>
+    <shadeColor value="0x000000"/>
+    <shadeAlpha value="1"/>
+    <shadeRatio value="40"/>
+    <shadeWidth value="0"/>
+    <shadeHeight value="0"/>
+  </Shade_Properties>
+  <Sound_Properties>
+    <useSound value="onRollOver"/>
+    <sound value="assets/sound/tick2.mp3"/>
+    <volume value="50"/>
+  </Sound_Properties>
+  <Clock_Properties>
+    <time value="local"/>
+    <tickingType value="normal"/>
+    <clockWidth value="253"/>
+    <clockHeight value="253"/>
+    <clockOffsetX value="169"/>
+    <clockOffsetY value="18"/>
+    <hourOffset value="23"/>
+    <minutOffset value="34"/>
+    <secOffset value="26"/>
+  </Clock_Properties>
+</settings>

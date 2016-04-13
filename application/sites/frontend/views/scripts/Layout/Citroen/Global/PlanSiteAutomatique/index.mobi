@@ -1,0 +1,11 @@
+<div id="{$aData.ID_HTML}"  class="content">
+<section>
+    <ul class="links"> 
+        {section name=langue loop=$aLangue}
+            <li>
+                <a href="{urlParser url=$home[langue]}" target="_self" style="text-align: left"><span>{$aLangue[langue].LANGUE_TRANSLATE}</span></a>
+            </li>
+        {/section}    
+    </ul>
+</section>
+</div>

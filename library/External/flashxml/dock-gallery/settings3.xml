@@ -1,0 +1,14 @@
+﻿<settings>
+  <General_Properties>
+    <position value="left"/>
+    <hide value="slide"/>
+    <slideDirection value=""/>
+    <time value="1"/>
+    <motion value="Cubic"/>
+    <ease value="easeOut"/>
+    <useButton value="true"/>
+    <arrow value="assets/redarrow.png"/>
+    <margin value="32"/>
+    <path value="dockMenu"/>
+  </General_Properties>
+</settings>

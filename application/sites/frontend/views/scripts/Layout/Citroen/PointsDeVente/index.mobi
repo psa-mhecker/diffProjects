@@ -1,0 +1,165 @@
+{if ($aData.ZONE_SKIN == "ds") }
+	{  $aData.MEA = 0 }
+{/if}
+
+{if $aData.ZONE_MOBILE == 1}
+<div class="sliceNew sliceStoreLocatorMobile">
+	<section id="{$aData.ID_HTML}" class="{$aData.ZONE_SKIN}">
+		<h2 class="subtitle center nobg"><span>{'SEARCH_PDV'|t}</span></h2>
+		<article class="locations storefinder ">
+			<div class="parttitle">
+				{'FIND_STORE_MOB'|t}
+			</div>
+			<div class="locate">
+				<form class="{$page_skin} {$aData.ZONE_SKIN} locator" data-template="" data-config="/_/Layout_Citroen_PointsDeVente/getMapConfiguration" data-list="/_/Layout_Citroen_PointsDeVente/getStoreList"  data-page="{$aData.PAGE_ID}" data-version= "{$aData.PAGE_VERSION}" data-area="{$aData.AREA_ID}" data-order="{$aData.ZONE_ORDER}" data-ztid="{$aData.ZONE_TEMPLATE_ID}" data-details="?id=###id###" data-mea="{if ($aData.MEA == 1) }true{/if}" data-path="{Pelican::$config.MEDIA_HTTP}/" data-filter-bar="{$aData.filter_bar}" data-brand-activity="{$aData.brand_activity}"
+					  data-matrice-affichage="{$matriceAffichage|json_encode|htmlspecialchars}"
+				>
+					<a class="autolocate geoloc" href="#0" {gtm type='clickable' name="Search" data=$aData datasup=['eventCategory'=>'Showroom::Carstore','eventLabel'=>  'OK']}><span>{'GEOLOCALIZE_ME'|t}</span></a>
+					<div class="error-geoloc" data-close="{'CLOSE'|t}">
+						<p>
+							{'SORRY_GEO'|t}
+						</p>
+					</div>
+					<span class="or">{'OR'|t}</span>
+					<fieldset>
+						<input type="text" name="address" id="address" placeholder="{'CP_CITY_DEP'|t}" />
+					</fieldset>
+				</form>
+			</div>
+			<div id="map-canvas" class="map-canvas" data-loadtext="<?php t('LOADING_DATA'); ?>"></div>
+
+			<ul class="map-legend">
+				<li>
+					<figure><img src="{Pelican::$config.IMAGE_FRONT_HTTP}/illustrations/legend2.png" alt="{'DVN_RAC'|t}" /></figure>
+					<span>{'DVN_RAC'|t}</span>
+				</li>
+				<li>
+					<figure><img src="{Pelican::$config.IMAGE_FRONT_HTTP}/illustrations/legend.png" alt="{'RAC'|t}" /></figure>
+					<span>{'RAC'|t}</span>
+				</li>
+			</ul>
+
+			{literal}
+			<div class="box-other stores filled">
+				<script type="text/template" id="itemTpl">
+					<article  class="item {/literal}{if ($aData.MEA == 1) }mea{/if}{literal} <% if (data.type) { %><%= data.type %><% }; %>{/literal}" data-id="<%= data.id %>">
+						<a href="?id=<%= data.id %>#pdv">
+							<h2><span><%= data.name %></span></h2>
+
+
+							{if ($aData.MEA == 1) }
+							{literal}
+								<div class="type">
+								<% if (data.catName=='') { %>
+								<% if(data.type  == 'dvn'){ %>{/literal}{'DVN_RAC'|t}{literal}<% }; %>
+								<% if(data.type  == 'pdv'){ %>{/literal}{'RAC'|t}{literal}<% }; %>
+								<% } else { %>
+								<% if(data.isAgent==true) { %>
+							{/literal}{'RAC'|t}{literal}
+								<% } else { %>
+								<% if (data.siteMode=='ds') { %>
+								<%=data.catName%>
+								<% } %>
+								<% if (data.siteMode=='neutre') { %>
+								<% if ((data.cat=='DS3')||(data.cat=='DS4')) { %>
+							{/literal}{'DVN_RAC'|t}{literal}
+								<% } else { %>
+								<%=data.catName%>
+								<% } %>
+								<% } %>
+								<% if (data.siteMode=='c') { %>
+								<% if ((data.cat=='DS3')||(data.cat=='DS4')) { %>
+							{/literal}{'DVN_RAC'|t}{literal}
+								<% } %>
+								<% } %>
+								<% } %>
+								<% } %>
+								</div>
+							{/literal}
+							{/if}
+
+							{if ($aData.ZONE_SKIN == "ds") }
+							{literal}
+								<div class="type" style="color:white;">
+								<% if (data.catName=='') { %>
+								<% if(data.type  == 'dvn'){ %>{/literal}{'DVN_RAC'|t}{literal}<% }; %>
+								<% if(data.type  == 'pdv'){ %>{/literal}{'RAC'|t}{literal}<% }; %>
+								<% } else { %>
+								<% if(data.isAgent==true) { %>
+							{/literal}{'RAC'|t}{literal}
+								<% } else { %>
+								<% if (data.siteMode=='ds') { %>
+								<%=data.catName%>
+								<% } %>
+								<% if (data.siteMode=='neutre') { %>
+								<% if ((data.cat=='DS3')||(data.cat=='DS4')) { %>
+							{/literal}{'DVN_RAC'|t}{literal}
+								<% } else { %>
+								<%=data.catName%>
+								<% } %>
+								<% } %>
+								<% if (data.siteMode=='c') { %>
+								<% if ((data.cat=='DS3')||(data.cat=='DS4')) { %>
+							{/literal}{'DVN_RAC'|t}{literal}
+								<% } %>
+								<% } %>
+								<% } %>
+								<% } %>
+								</div>
+							{/literal}
+							{/if}
+
+							{literal}<!-- Hack <div class="type"><%=data.catName%>-<%=data.type%>-Agent?:<%=data.isAgent%></div -->
+							{/literal}
+
+
+
+
+
+							{literal}
+								<% if(data.distance){ %><em><%= Math.round(data.distance*10)/10 %> {/literal}{'KM'|t}{literal}</em><% }; %>
+							{/literal}
+							<p>
+								<%= data.address %>
+							</p>
+
+
+							{literal}<% if(data.services){ %>{/literal}
+							<ul class="services-list simple">
+								{literal}<% _.each(data.services,function(option,i){ %>{/literal}
+								{literal}<% if(services[option]) { %>
+
+								{/literal}{ if $aData.ZONE_SKIN=="ds"}{literal}
+								<% if ((services[option].code!= "DS1")&&(services[option].code!= "DS2")&&(services[option].code!= "DS3")&&(services[option].code!= "DS4")&&(services[option].code!= "DS5")) { %>
+								<li><img src="{/literal}{$imgFront}{literal}/design/frontend/images/illustrations/<%= services[option].code %>.png" alt="<%= services[option].label %>" title="<%= services[option].label %>" /></li>
+								<% } %>
+								{/literal}{else}{literal}
+								<% if ((services[option].code!= "DS1")&&(services[option].code!= "DS2")&&(services[option].code!= "DS3")&&(services[option].code!= "DS4")&&(services[option].code!= "DS5")) { %>
+								<li><img src="{/literal}{$imgFront}{literal}/design/frontend/images/illustrations/<%= services[option].code %>.png" alt="<%= services[option].label %>" title="<%= services[option].label %>" /></li>
+								<% } %>
+								{/literal}{/if}{literal}
+
+
+
+								<% } %>
+								<% }); %>
+							</ul>
+							<% }; %>
+
+						</a>
+					</article>
+				</script>
+				<p class="resultCount hmargin10 stores-results {/literal}{if ($aData.MEA == 1) }{literal}mea{/literal}{/if}{literal}" id="results" data-search="{/literal}{'RESULTS_GMAP'|t}{literal}" data-geo="{/literal}{'RESULTS_GEO_GMAP'|t}{literal}" data-search-mea-dvn="{/literal}{'NOUS_AVONS_TROUVE'|t|replace:'"':''}{literal} <span>###countDvn### {/literal}{'CONCESSION_S'|t|replace:'"':''}</span>{literal} {/literal}{'PRES_DE'|t}{literal} ###address###"  data-search-mea-pdv="{/literal}{'NOUS_AVONS_TROUVE'|t|replace:'"':''}{literal} <strong>###countPdv### {/literal}{'AGENT_S'|t|replace:'"':''}</strong>{literal} {/literal}{'PRES_DE'|t|replace:'"':''}{literal} ###address###"  data-search-mea-both="{/literal}{'NOUS_AVONS_TROUVE'|t|replace:'"':''}{literal} <span>###countDvn### {/literal}{'CONCESSION_S'|t|replace:'"':''}</span>{literal} {/literal}{'ET'|t|replace:'"':''}{literal} <strong>###countPdv### {/literal}{'AGENT_S'|t|replace:'"':''}</strong>{literal} {/literal}{'PRES_DE'|t|replace:'"':''}{literal} ###address###"  data-geo-mea-pdv="{/literal}{'NOUS_AVONS_TROUVE'|t|replace:'"':''}{literal} <span>###countDvn### {/literal}{'CONCESSION_S'|t|replace:'"':''}</span>{literal} {/literal}{'PRES_DE_VOUS'|t|replace:'"':''}{literal}"  data-geo-mea-dvn="{/literal}{'NOUS_AVONS_TROUVE'|t|replace:'"':''}{literal} <strong>###countPdv### {/literal}{'AGENT_S'|t|replace:'"':''}</strong>{literal} {/literal}{'PRES_DE_VOUS'|t|replace:'"':''}{literal}"  data-geo-mea-both="{/literal}{'NOUS_AVONS_TROUVE'|t|replace:'"':''}{literal} <span>###countDvn### {/literal}{'CONCESSION_S'|t|replace:'"':''}</span>{literal} {/literal}{'ET'|t|replace:'"':''}{literal} <strong>###countPdv### {/literal}{'AGENT_S'|t|replace:'"':''}</strong>{literal} {/literal}{'PRES_DE_VOUS'|t|replace:'"':''}{literal}"></p>
+				<div class="results-list">
+					<!-- DEBUG - TEMPLATE MOBILE -->
+
+					<div class="scroll">
+						<div class="items" data-more="<div class='loadMore addmore'><a href='#0'>{/literal}{'MORE_PDV'|t}{literal}</a></div>"></div>
+					</div>
+				</div>
+			</div>
+			{/literal}
+		</article>
+	</section>
+</div>
+{/if}

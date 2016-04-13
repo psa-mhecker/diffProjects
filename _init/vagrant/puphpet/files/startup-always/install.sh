@@ -1,0 +1,1 @@
+. /var/www/cppv2/_init/addons/install.sh

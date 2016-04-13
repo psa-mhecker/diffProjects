@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2006 rel. 3 U (http://www.altova.com) by PSA (PSA / PCA PEUGEOT CITROEN) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ecv="http://aoa.inetpsa.com/ws/export/ExportCriteriaValue" xmlns:sc="http://aoa.inetpsa.com/ws/setting/Criteria" targetNamespace="http://aoa.inetpsa.com/ws/export/ExportCriteriaValue" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://aoa.inetpsa.com/ws/setting/Criteria" schemaLocation="aoaSettingsCriteria.xsd"/>
+	<xs:complexType name="isSoldOnInternetType">
+		<xs:sequence>
+			<xs:element name="isSoldOnInternet" type="xs:boolean" minOccurs="0" maxOccurs="2"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="vehicleType">
+		<xs:sequence>
+			<xs:element name="bodyStyleCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="modelCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="transmissionCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="lcdv16code" type="xs:string" minOccurs="0"/>
+			<xs:element name="any" type="ecv:anyType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="subUniverseType">
+		<xs:sequence>
+			<xs:element name="code" type="xs:string"/>
+			<xs:element name="label" type="xs:string"/>
+			<xs:element name="order" type="xs:int"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="universeType">
+		<xs:sequence>
+			<xs:element name="code" type="xs:string"/>
+			<xs:element name="label" type="xs:string"/>
+			<xs:element name="order" type="xs:int"/>
+			<xs:element name="subUniverses">
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="subUniverse" type="ecv:subUniverseType"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="searchPricingType">
+		<xs:sequence>
+			<xs:element name="maxPrice" type="xs:double"/>
+			<xs:element name="minPrice" type="xs:double"/>
+			<xs:element name="isTTC" type="xs:boolean"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="anyType"/>
+	<xs:element name="criteriaValueOut">
+		<xs:annotation>
+			<xs:documentation>Comment describing your root element</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="criteriaValue" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="locale" type="sc:localeType"/>
+							<xs:element name="isSoldeOnInternet" type="ecv:isSoldOnInternetType" minOccurs="0"/>
+							<xs:element name="searchPricing" type="ecv:searchPricingType" minOccurs="0"/>
+							<xs:element name="vehicule" type="ecv:vehicleType" minOccurs="0" maxOccurs="unbounded"/>
+							<xs:element name="universes" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence maxOccurs="unbounded">
+										<xs:element name="universe" type="ecv:universeType"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="any" type="ecv:anyType" minOccurs="0" maxOccurs="unbounded"/>
+							<xs:element name="references" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence maxOccurs="unbounded">
+										<xs:element name="reference" type="ecv:referenceType"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="referenceType">
+		<xs:annotation>
+			<xs:documentation>reference de l'accessoire</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+</xs:schema>

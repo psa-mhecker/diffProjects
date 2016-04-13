@@ -1,0 +1,184 @@
+{if $aParams.ZONE_MOBILE eq 1 and $display neq 0}
+	<div class="sliceNew sliceTintSelectorMobile">
+		<!-- configurateur de teinte -->
+		<div  id="{$aParams.ID_HTML}" class="showroom-mobile head full">
+			<header>
+				<div class="txt"{if ($aParams.PRIMARY_COLOR|count_characters)==7 } style="background:{$aParams.SECOND_COLOR};"{/if} itemscope itemtype="http://schema.org/Product">
+					<h1 class="title-lvl0">
+						<span itemprop="name">{$aParams.PAGE_TITLE_BO}</span>
+					</h1>
+					{if !$hidePrice}
+					<div class="prices">
+						{if $hasCashPrice ==  true && $aShowRoomInfo.CASH_PRICE}
+							<div class="price">
+								{$stAPartirDe} <em><span itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span itemprop="price">  {$aShowRoomInfo.CASH_PRICE} {$cashPriceType}</span></span></em>
+								{if $cashPriceLegalMentionSelecteurTeinte AND $aParams.ZONE_TITRE5 != "TEXT"}
+									<small class="tooltip" {gtmjs type='toggle'  action='Display::ToolTip|' eventGTM='over' data=$aParams  datasup=['value'=>'NOTICES','eventLabel'=>$aShowRoomInfo.VEHICULE_LABEL]} ><span>{'NOTICES'|t}</span></small>
+								{/if}
+
+								{if $aParams.ZONE_TITRE5 != "TEXT" }
+									<div class="notice-text" data-close="{'FERMER'|t}">
+										<p>{$cashPriceLegalMentionSelecteurTeinte}</p>
+									</div>
+								{/if}
+							</div>
+						{/if}
+						{if $hasCreditPrice == true}
+							<div class="price">
+								{if $useFinancialSimulator == true && $wsCreditPriceNextRentValue}
+									{'OR'|t} <em>{$wsCreditPriceNextRentValue}{$wsCreditPriceNextRentUnit} {'PER_MONTH'|t}</em>
+									{if $aDataSimulateurFinancementSelecteurTeinte.VARIABLES AND $aParams.ZONE_TITRE5 != "TEXT"}
+										<small class="tooltip" {gtmjs type='toggle'  action='Display::ToolTip|'  eventGTM='over' data=$aParams  datasup=['value'=>'MENTIONS','eventLabel'=>$aShowRoomInfo.VEHICULE_LABEL]} ><span>{'MENTIONS'|t}</span></small>
+									{/if}
+								{elseif $creditPriceNextRent}
+									{'OR'|t} <em>{$creditPriceNextRent}{'PER_MONTH'|t}</em>
+									{if $creditPriceNextRentLMSelecteurTeinte AND $aParams.ZONE_TITRE5 != "TEXT"}
+										<small class="tooltip" {gtmjs type='toggle'  action='Display::ToolTip|'   eventGTM='over' data=$aParams  datasup=['value'=>'MENTIONS','eventLabel'=>$aShowRoomInfo.VEHICULE_LABEL]} ><span>{'MENTIONS'|t}</span></small>
+									{/if}
+								{/if}
+
+								{if $aParams.ZONE_TITRE5 != "TEXT" }
+									<div class="notice-text" data-close="{'FERMER'|t}">
+										{if $useFinancialSimulator == true}
+											<p>{$aDataSimulateurFinancementSelecteurTeinte.TITLE}</p>
+											{foreach from=$aDataSimulateurFinancementSelecteurTeinte.VARIABLES item=financement name=dataSimulateurFinancement key=key}
+												{if $key == 'LegalText'}
+													<p><small>{$financement.LABEL} <span class="value">{$financement.VALUE} {$financement.UNIT}</span></small></p>
+												{else}
+													{if $financement.LABEL ne '' AND $financement.LABEL ne '-'}<p><small>{$financement.LABEL} {if $financement.VALUE ne ''}<span class="value">{$financement.VALUE} {$financement.UNIT}</span>{/if}</small></p>{/if}
+												{/if}
+											{/foreach}
+										{else}
+											<p>{$creditPriceNextRentLMSelecteurTeinte}</p>
+										{/if}
+									</div>
+								{/if}
+							</div>
+						{/if}
+					</div>
+					{/if}
+				</div>
+			</header>
+		</div>
+		{if !isset($smarty.get.sticky) && $aDataParams.TEMPLATE_PAGE_ID == Pelican::$config.TEMPLATE_PAGE.SHOWROOM_ACCUEIL}
+			<section class="full showroom-mobile color-selector">
+				<div class="thumb-slider" >
+					<figure><img itemprop="image" class="lazy car" src="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/lazy-235-100.png" data-original="{Pelican::$config.MEDIA_HTTP}{if $aShowRoomColors|@count == 0}{$aShowRoomInfo.BCKGRDMOB_PATH}{else}{$aShowRoomColors.0.CARMOB1_PATH}{/if}" alt="{if $aShowRoomColors|@count == 0}{$aShowRoomInfo.BCKGRDMOB_ALT}{else}{$aShowRoomColors.0.CARMOB1_ALT}{/if}" />
+
+
+
+						{if $affichageVisuelsInterieur360.AFFICHAGE_VISUEL_360_MOBILE eq 1 && $show360 == "false"}
+							<div class="view-selector">
+								<div class="inside"><a href="javascript:void(0);" {gtm action='Display::Interior' data=$aData datasup=['eventCategory'=>'Showroom::Color selector' , 'eventLabel' => 'VOIR-INT-DESKTOP'|t]}><span>{'VOIR-INT-MOBILE'|t}</span></a></div>
+								<input type="hidden" id="discover-gtm" {gtm action='Discover' data=$aData datasup=['eventCategory'=>'Showroom::Color selector' , 'eventLabel' => 'ViewMore360']}>
+							</div>
+							<style type="text/css">
+								{literal}
+								.showroom-mobile .view-selector a:hover:before,
+								.showroom-mobile .view-selector a.active:before{
+									color:{/literal}{$aParams.PRIMARY_COLOR}{literal}!important;
+								}
+
+								.showroom-mobile .view-360:before{
+									color:{/literal}{$aParams.PRIMARY_COLOR}{literal}!important;
+								}
+								{/literal}
+							</style>
+						{/if}
+					</figure>
+
+					<!-- list colors -->
+					<!-- CPW-4112 -->
+					<div class="bx-pager colors">
+						<ul>
+							{foreach from=$aShowRoomColors item=color name=showroomColors key=id}
+								{if $smarty.foreach.showroomColors.iteration == 1}
+									<li class="on"><a class="active"
+								{else}
+									<li> <a
+								{/if}
+								href="{urlParser url={Pelican::$config.MEDIA_HTTP|cat:$color.CARMOB1_PATH}}" data-lazy="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/lazy-235-100.png"
+								{gtm action='ColorSelector' data=$aParams datasup=['value'=>$id , 'eventLabel'=>{$color.VEHICULE_COULEUR_LABEL}]}
+
+								><img src="{Pelican::$config.MEDIA_HTTP}{$color.PICTO_PATH}" width="25" height="25" alt="{$color.VEHICULE_COULEUR_LABEL}" /></a></li>
+							{/foreach}
+						</ul>
+					</div><!-- / list colors -->
+
+				</div><!-- / .slider -->
+
+				{if $affichageVisuelsInterieur360.AFFICHAGE_VISUEL_360_MOBILE eq 1}
+					<div class="view-360 init">
+						<span class="closer"{if ($aParams.PRIMARY_COLOR|count_characters)==7 } style="background:{$aParams.PRIMARY_COLOR};"{/if}></span>
+						<canvas id="canvas" width="100%" height="100%" style="width: 100%; height: 100%"></canvas>
+						<script type="text/javascript">
+							{literal}
+							var tabImages = [];
+							tabImages.push('{/literal}{$urlVisuelsInterieur360.MEDIA_ID5}{literal}'); // GAUCHE
+							tabImages.push('{/literal}{$urlVisuelsInterieur360.MEDIA_ID2}{literal}'); // DROITE
+							tabImages.push('{/literal}{$urlVisuelsInterieur360.MEDIA_ID}{literal}'); // HAUT
+							tabImages.push('{/literal}{$urlVisuelsInterieur360.MEDIA_ID4}{literal}'); // BAS
+							tabImages.push('{/literal}{$urlVisuelsInterieur360.MEDIA_ID3}{literal}'); // ARRIERE
+							tabImages.push('{/literal}{$urlVisuelsInterieur360.MEDIA_ID6}{literal}'); // AVANT
+
+							// tabImages.push('{/literal}{Pelican::$config.DESIGN_HTTP}{literal}/images/360-5.png'); // GAUCHE
+							// tabImages.push('{/literal}{Pelican::$config.DESIGN_HTTP}{literal}/images/360-2.png'); // DROITE
+							// tabImages.push('{/literal}{Pelican::$config.DESIGN_HTTP}{literal}/images/360-1.png'); // HAUT
+							// tabImages.push('{/literal}{Pelican::$config.DESIGN_HTTP}{literal}/images/360-4.png'); // BAS
+							// tabImages.push('{/literal}{Pelican::$config.DESIGN_HTTP}{literal}/images/360-3.png'); // ARRIERE
+							// tabImages.push('{/literal}{Pelican::$config.DESIGN_HTTP}{literal}/images/360-6.png'); // AVANT
+
+
+							var tabScripts = [];
+							tabScripts.push('{/literal}{Pelican::$config.DESIGN_HTTP}{literal}/js/typedarray.js');
+							tabScripts.push('{/literal}{Pelican::$config.DESIGN_HTTP}{literal}/js/three.min.js');
+							tabScripts.push('{/literal}{Pelican::$config.DESIGN_HTTP}{literal}/js/Projector.js');
+							tabScripts.push('{/literal}{Pelican::$config.DESIGN_HTTP}{literal}/js/CanvasRenderer.js');
+							tabScripts.push('{/literal}{Pelican::$config.DESIGN_HTTP}{literal}/js/inside/namespace.js');
+							tabScripts.push('{/literal}{Pelican::$config.DESIGN_HTTP}{literal}/js/inside/object3d/pointofinterest.js');
+							tabScripts.push('{/literal}{Pelican::$config.DESIGN_HTTP}{literal}/js/inside/object3d/cube.js');
+							tabScripts.push('{/literal}{Pelican::$config.DESIGN_HTTP}{literal}/js/inside/inside.js');
+
+							{/literal}
+						</script>
+					</div>
+				{/if}
+
+
+
+				<style type="text/css">
+					{literal}
+					.showroom-mobile .thumb-slider .on a,
+					.showroom-mobile .thumb-slider li a:active,
+					.showroom-mobile .thumb-slider li a:hover{
+						border:4px solid {/literal}{$aParams.PRIMARY_COLOR}{literal}!important;
+					}
+					{/literal}
+				</style>
+			</section>
+			<!-- / configurateur de teinte -->
+		{/if}
+		{if $aParams.ZONE_TITRE5 == "TEXT" }
+			<div class="text mltext">
+				{if $useFinancialSimulator == true}
+					{if $aDataSimulateurFinancementSelecteurTeinte.TITLE|@trim}
+						<p>{$aDataSimulateurFinancementSelecteurTeinte.TITLE}</p>
+					{/if}
+
+					{foreach from=$aDataSimulateurFinancementSelecteurTeinte.VARIABLES item=financement name=dataSimulateurFinancement key=key}
+						{if $financement.LABEL|@trim AND $financement.LABEL ne '-'}
+							<p><small>{$financement.LABEL}
+									{if $financement.VALUE|@trim}
+										<span class="value">{$financement.VALUE} {$financement.UNIT}</span>
+									{/if}
+								</small></p>
+						{/if}
+
+					{/foreach}
+				{else}
+					<p>{$creditPriceNextRentLMSelecteurTeinte}</p>
+				{/if}
+			</div>
+		{/if}
+	</div>
+{/if}

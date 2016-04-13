@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head>
+<title>JavaScript Bs_Slider example 6</title>
+
+<style>
+  .sliderInput {
+  	height:20;
+    width:40;
+  	font-family : Arial, Helvetica, sans-serif;
+  	font-size : 12px;
+  }
+  .smallTxt {
+    font-size: 12px;
+  }
+</style>
+
+<script type="text/javascript" src="../../../lib/LibCrossBrowser.js"></script>
+<script type="text/javascript" src="../../../lib/EventHandler.js"></script>
+<script type="text/javascript" src="../../../core/form/Bs_FormUtil.lib.js"></script>
+<script type="text/javascript" src="../Bs_Slider.class.js"></script>
+
+<script type="text/javascript"><!--
+function init(){
+  // - Slider 1 -----------------------------------------
+  mySlider = new Bs_Slider();
+	mySlider.direction     = 1;
+  mySlider.width         = 16;
+  mySlider.height        = 100;
+  mySlider.minVal        = 0;
+  mySlider.maxVal        = 100;
+  mySlider.valueInterval = 1;
+  mySlider.arrowAmount   = 2;
+  mySlider.valueDefault  = 40;
+  mySlider.imgDir   = '../img/';
+  mySlider.setBackgroundImage('dotBlack2.gif', 'repeat');
+  mySlider.setSliderIcon('bob/slider.gif', 13, 18);
+  mySlider.setArrowIconLeft('img/arrowUp.gif', 16, 16);
+  mySlider.setArrowIconRight('img/arrowDown.gif', 16, 16);
+  mySlider.useInputField = 0;
+  mySlider.styleValueFieldClass = 'sliderInput';
+  mySlider.drawInto('sliderDiv1');
+	
+  // - Slider 2 -----------------------------------------
+  mySlider2 = new Bs_Slider();
+	mySlider2.direction     = 1;
+  mySlider2.width         = 16;
+  mySlider2.height        = 100;
+  mySlider2.minVal        = 0;
+  mySlider2.maxVal        = 100;
+  mySlider2.valueInterval = 1;
+  mySlider2.valueDefault  = 40;
+  mySlider2.imgDir   = '../img/volume/';
+  mySlider2.setBackgroundImage('winampVerticalBackground.gif', 'repeat-y');
+  mySlider2.setSliderIcon('winampVerticalKnob.gif', 14, 11);
+  mySlider2.useInputField = 0;
+  mySlider2.styleValueFieldClass = 'sliderInput';
+  mySlider2.drawInto('sliderDiv2');
+	
+}
+// --></script>
+
+</head>
+<body bgcolor="#FFFFFF" text="#3366AA" link="#0000EE" vlink="#551A8B" alink="#FF0000" onLoad="init();">
+
+<h1>JavaScript Bs_Slider example 6</h1>
+
+A simple vertical slider.<br>
+Note: The colorbar feature as well as the arrow keys don't work in the vertical slider yet.<br>
+Note: The vertical slider feature exists since bs-4.6.<br>
+<br><br>
+
+<table>
+	<tr>
+		<td width="50">
+      <div id="sliderDiv1"></div>
+		</td>
+		<td width="50">
+      <div id="sliderDiv2"></div>
+		</td>
+	</tr>
+</table>
+
+</body></html>

@@ -1,0 +1,62 @@
+<settings>
+  <General_Properties>
+    <componentWidth value="600"/>
+    <componentHeight value="300"/>
+    <tagItems value="assets/tagclouds/tagcloud3.xml"/>
+    <showAbout value="true"/>
+  </General_Properties>
+  <Background_Properties>
+    <fillType value="radial"/>
+    <backgroundColor1 value="0xffffff"/>
+    <backgroundColor2 value="0xe9e9e9"/>
+    <backgroundAlpha value="1"/>
+    <bgCornerRadius value="0"/>
+    <gradientRotation value="30"/>
+    <gradientRatio value="96"/>
+    <gradientPosX value="0"/>
+    <gradientPosY value="0"/>
+  </Background_Properties>
+  <Shade_Properties>
+    <useShade value="true"/>
+    <shadeColor value="0xe9e9e9"/>
+    <shadeAlpha value="1"/>
+    <shadeRatio value="211"/>
+    <shadeWidth value="-142"/>
+    <shadeHeight value="392"/>
+  </Shade_Properties>
+  <Tag_Properties>
+    <rollOutSpeed value="0"/>
+    <rollOutAngle value="0"/>
+    <stopingSpeed value="0.1"/>
+    <offsetX value="282"/>
+    <offsetY value="105"/>
+    <radius value="188"/>
+    <perspective value="250"/>
+    <speed value="3"/>
+    <picWidth value="80"/>
+    <picHeight value="80"/>
+    <picPosition value="bottom"/>
+    <picDistance value="10"/>
+    <aspect value="sphere"/>
+  </Tag_Properties>
+  <Over_properties>
+    <overBorderColor value=""/>
+    <overBorderWidth value="0"/>
+	<overBorderAlpha value="0"/>
+  </Over_properties>
+  <Text_Properties>
+    <width value="0"/>
+    <bgAlpha value="0"/>
+    <backgroundColor value="0x3300ff"/>
+    <borderColor value="0x990000"/>
+    <borderAlpha value="0"/>
+    <borderWidth value="0"/>
+    <cornerRadius value="0"/>
+    <paddingLeft value="0"/>
+    <paddingRight value="0"/>
+    <paddingTop value="0"/>
+    <paddingBottom value="0"/>
+    <embedFonts value="false"/>
+    <style value="assets/css/style.css"/>
+  </Text_Properties>
+</settings>

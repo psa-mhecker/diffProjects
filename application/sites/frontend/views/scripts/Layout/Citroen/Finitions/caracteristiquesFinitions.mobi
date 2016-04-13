@@ -1,0 +1,17 @@
+{foreach from=$aCaracteristiques item=category name=listCategory}
+	<h4 class="title-tab"><span>{$category.LABEL}</span></h4> 
+	<div class="item">
+		<table>
+			<tbody>
+				{foreach from=$category.CARACTERISTIQUES item=caracteristique name=listCaracteristique}
+					{if $caracteristique.DISPONIBILITY neq 'None' && $caracteristique.DISPONIBILITY neq '-'}
+						<tr>
+							<th scope="row">{$caracteristique.NAME}</th>
+							<td>{$caracteristique.VALUE}</td>
+						</tr>
+					{/if}
+				{/foreach}
+			</tbody>
+		</table>
+	</div>
+{/foreach}

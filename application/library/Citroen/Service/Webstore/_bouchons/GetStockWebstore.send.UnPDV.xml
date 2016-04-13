@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/">
+   <soap:Header/>
+   <soap:Body>
+      <tem:GetStockWebstore>
+         <!--Optional:-->
+         <tem:storeRequest>
+            <!--Optional:-->
+            <tem:Info>
+               <!--Optional:-->
+               <tem:Brand>AC</tem:Brand>
+               <!--Optional:-->
+               <tem:Country>FR</tem:Country>
+               <!--Optional:-->
+               <tem:Client>CPPv2</tem:Client>
+               <!--Optional:-->
+               <tem:LanguageCode>fr-FR</tem:LanguageCode>
+            </tem:Info>
+            <!--Optional:-->
+            <tem:VehiculeRequest>
+               <tem:ModelCode>1CB0</tem:ModelCode>
+               <tem:BodyStyleCode>A3</tem:BodyStyleCode>              
+               <tem:IdSiteGeo1>0000038345</tem:IdSiteGeo1>
+              
+            </tem:VehiculeRequest>
+         </tem:storeRequest>
+      </tem:GetStockWebstore>
+   </soap:Body>
+</soap:Envelope>

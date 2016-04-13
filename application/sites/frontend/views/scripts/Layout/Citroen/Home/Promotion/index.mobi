@@ -1,0 +1,12 @@
+<div class="sliceNew sliceDetailPromotionMobile">
+{if $aData.ZONE_WEB == 1}
+    {foreach from=$ListePromotions item=promotion}
+        {if $promotion.PAGE_ZONE_MULTI_LABEL3 eq 1}
+            {include file="$pathVisualMobi"}
+        {else}
+            {include file="$pathMixteMobi"}
+        {/if}
+    {/foreach}
+</section>
+{/if}
+</div>

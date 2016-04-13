@@ -1,0 +1,38 @@
+<div class="sliceNew sliceResultsMobile">
+    <section id="{$aData.ID_HTML}" class=" no-title">
+            <div class="searchengine-lvl large">
+            <form class="search-lvl" id="searchPage"> 
+                    <span>
+                            <label for="search"></label>
+                            <input type="search" name="search" id="searchField" value="{$search|escape}" class="tt-query" autocomplete="off" spellcheck="false" dir="auto"><span style="position: absolute; left: -9999px; visibility: hidden; white-space: nowrap; font-family: robotolight, Arial, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;"/>
+                            <button type="submit" name="submit-page" id="submit-seachpage" class="submit">Ok</button>
+                    </span> 
+            </form> 
+            </div>
+    {if $aSearch|@sizeof > 0}
+            <div class="searchpage">
+            {if $search neq ''}
+                    <div class="intitule result-title">
+                            <p>
+                            {$sResultsMob}
+                            </p>
+                    </div>
+            {/if}
+                    <input type="hidden" name="iCount" id="iCount" value="{$iCount}"/>
+                    <div class="resultslist dyncont">
+                            <div class="item shown" id="allResults">
+                                    {foreach from=$aSearch item=result name=listResults}
+                                            <div class="result">
+                                                    <a href="{urlParser url=$result.url}" {if $result.mode_ouverture==2}target='_blank'{/if}>
+                                                            <h4 class="parttitle">{$result.title}</h4>
+                                                            <p>{$result.desc}</p>
+                                                    </a>
+                                            </div>
+                                    {/foreach}
+                            </div>
+                            <div id="seeMoreResults" class="loadMore"><a href="javascript://">{'VOIR_PLUS_RESULTATS'|t}</a></div> 
+                    </div>
+            </div>
+    {/if}
+    </section>
+</div>

@@ -1,0 +1,1 @@
+<center><div style="{if $aParams.w}width:{$aParams.w}px;{/if}{if $aParams.h}height:{$aParams.h}px;{/if}">{$script}</div></center>

@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>Maquette MyMap</title>
+    <style>html,body,p { font-family: Arial; font-size:13px; }</style>
+    <!-- Include Map engine: we need to use just one of them ! -->
+    <script src="http://maps.google.com/maps?file=api&amp;v=3&amp;key=ABQIAAAAvO-5bFf8hKO7IavMRg3Y_RQCv3MI1JMe712rFCXhNkPkIcQRahT9uM_z-Df5HGASrOAP1bmNIjYO_Q" type="text/javascript"></script>
+    <script src="http://api.maps.yahoo.com/ajaxymap?v=3.0&appid=uB_VXMbV34GL_tIPopFd7qcV2W1xGCymtMozAhZWUJOLW91HQlFSZdoSMb2XnjNn0CtxsSQ-" type="text/javascript"></script>
+    <script src="http://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=6.2" type="text/javascript"></script>
+    <script src="http://axe.mappy.com/1v1/init/get.aspx?auth=XXXXXXXXXXX&version=2.01&solution=ajax" type="text/javascript"></script>
+
+    <!-- Include MyMap -->
+    <script src="mymap.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    MyMapInclude("mymap_"+parent.frames["up"].document.getElementById("choice").value+".js");
+    </script>
+    <scriptxx src="mymap_yahoo.js" type="text/javascript"></scriptxx>
+
+    <!-- Common JavaScript for this page -->
+    <script type="text/javascript" src="dng.js"></script>
+  </head>
+
+  <body onload="load()" onunload="unload()">
+    <table>
+    <tr>
+    <td>
+    <div id="map" style="position:relative; width: 600px; height: 400px"></div>
+    </td>
+    <td>
+    <form>
+    <B>Display:</B><BR/>
+    <input name="platform" type="radio" value="none" checked onclick="filter('none');"/>All<BR/>
+    <input name="platform" type="radio" value=".NET" onclick="filter('J2EE');"/>.NET<BR/>
+    <input name="platform" type="radio" value="J2EE" onclick="filter('.NET');"/>J2EE<BR/>
+    </form>
+    <BR/>
+    <BR/>
+    <BR/>
+    <B>Click on names to zoom:</B><BR/>
+    <select id="list" size="10" onchange="gotoselected()">
+    </select>
+    </td>
+    </tr>
+    </table>
+  </body>
+</html>

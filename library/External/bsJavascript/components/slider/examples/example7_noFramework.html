@@ -1,0 +1,205 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head>
+<title>JavaScript Bs_Slider example 7</title>
+
+<style>
+  .sliderInput {
+  	height:20;
+    width:40;
+  	font-family : Arial, Helvetica, sans-serif;
+  	font-size : 12px;
+  }
+  .smallTxt {
+    font-size: 12px;
+  }
+</style>
+
+<script type="text/javascript" src="../../../lib/LibCrossBrowser.js"></script>
+<script type="text/javascript" src="../../../lib/EventHandler.js"></script>
+<script type="text/javascript" src="../../../core/form/Bs_FormUtil.lib.js"></script>
+<script type="text/javascript" src="../Bs_Slider.class.js"></script>
+
+<script type="text/javascript"><!--
+function init(){
+  // - Slider 1 -----------------------------------------
+  mySlider = new Bs_Slider();
+	mySlider.direction     = 1;
+  mySlider.width         = 17;
+  mySlider.height        = 100;
+  mySlider.minVal        = 0;
+  mySlider.maxVal        = 100;
+  mySlider.valueInterval = 1;
+  mySlider.arrowAmount   = 2;
+  mySlider.valueDefault  = 40;
+	mySlider.bgColor       = '#F9F9F7';
+  mySlider.imgDir        = '../img/winxp/';
+  mySlider.setSliderIcon('vertical_knob.gif', 16, 17);
+  mySlider.setArrowIconLeft('vertical_arrowTop.gif', 16, 17);
+  mySlider.setArrowIconRight('vertical_arrowBottom.gif', 16, 17);
+  mySlider.useInputField = 0;
+  mySlider.styleValueFieldClass = 'sliderInput';
+  mySlider.drawInto('sliderDiv1');
+	
+  // - Slider 2 -----------------------------------------
+  mySlider2 = new Bs_Slider();
+	mySlider2.direction     = 0;
+  mySlider2.width         = 100;
+  mySlider2.height        = 17;
+  mySlider2.minVal        = 0;
+  mySlider2.maxVal        = 100;
+  mySlider2.valueInterval = 1;
+  mySlider2.valueDefault  = 40;
+	mySlider2.bgColor       = '#F9F9F7';
+  mySlider2.imgDir        = '../img/winxp/';
+  mySlider2.setSliderIcon('horizontal_knob.gif', 17, 16);
+  mySlider2.setArrowIconLeft('horizontal_arrowLeft.gif', 17, 16);
+  mySlider2.setArrowIconRight('horizontal_arrowRight.gif', 17, 16);
+  mySlider2.useInputField = 0;
+  mySlider2.styleValueFieldClass = 'sliderInput';
+  mySlider2.drawInto('sliderDiv2');
+	
+  // - Slider 3 -----------------------------------------
+  mySlider3 = new Bs_Slider();
+	mySlider3.direction     = 0;
+  mySlider3.width         = 100;
+  mySlider3.height        = 17;
+  mySlider3.minVal        = 0;
+  mySlider3.maxVal        = 100;
+  mySlider3.valueInterval = 1;
+  mySlider3.valueDefault  = 40;
+	//mySlider3.bgColor       = '#C1C1C1';
+  mySlider3.imgDir        = '../img/osx/';
+  mySlider3.setSliderIcon('knob.gif', 17, 16);
+  mySlider3.setBackgroundImage('background.gif', 'repeat');
+  mySlider3.useInputField = 0;
+  mySlider3.styleValueFieldClass = 'sliderInput';
+  mySlider3.drawInto('sliderDiv3');
+	
+  // - Slider 4 -----------------------------------------
+  mySlider4 = new Bs_Slider();
+	mySlider4.direction     = 1;
+  mySlider4.width         = 15;
+  mySlider4.height        = 100;
+  mySlider4.minVal        = 0;
+  mySlider4.maxVal        = 100;
+  mySlider4.valueInterval = 1;
+  mySlider4.arrowAmount   = 10;
+  mySlider4.valueDefault  = 40;
+  mySlider4.imgDir        = '../img/osx/';
+  mySlider4.setSliderIcon('vertical_knobLarge.gif', 15, 59);
+  mySlider4.setBackgroundImage('vertical_background.gif', 'repeat');
+  mySlider4.setArrowIconLeft('vertical_arrowTop.gif', 15, 17);
+  mySlider4.setArrowIconRight('vertical_arrowBottom.gif', 15, 17);
+  mySlider4.useInputField = 0;
+  mySlider4.styleValueFieldClass = 'sliderInput';
+  mySlider4.drawInto('sliderDiv4');
+	
+  // - Slider 5 -----------------------------------------
+  mySlider5 = new Bs_Slider();
+	mySlider5.direction     = 1;
+  mySlider5.width         = 15;
+  mySlider5.height        = 100;
+  mySlider5.minVal        = 0;
+  mySlider5.maxVal        = 100;
+  mySlider5.valueInterval = 1;
+  mySlider5.arrowAmount   = 10;
+  mySlider5.valueDefault  = 40;
+  mySlider5.imgDir        = '../img/osx/';
+  mySlider5.setSliderIcon('vertical_knobSmall.gif', 15, 23);
+  mySlider5.setBackgroundImage('vertical_background.gif', 'repeat');
+  mySlider5.setArrowIconLeft('vertical_arrowTop.gif', 15, 17);
+  mySlider5.setArrowIconRight('vertical_arrowBottom.gif', 15, 17);
+  mySlider5.useInputField = 0;
+  mySlider5.styleValueFieldClass = 'sliderInput';
+  mySlider5.drawInto('sliderDiv5');
+	
+  // - Slider 6 -----------------------------------------
+  mySlider6 = new Bs_Slider();
+	mySlider6.direction     = 1;
+  mySlider6.width         = 16;
+  mySlider6.height        = 100;
+  mySlider6.minVal        = 0;
+  mySlider6.maxVal        = 100;
+  mySlider6.valueInterval = 1;
+  mySlider6.arrowAmount   = 10;
+  mySlider6.valueDefault  = 40;
+  mySlider6.imgDir        = '../img/os9/';
+  mySlider6.setSliderIcon('vertical_knob.gif', 16, 17);
+  mySlider6.setBackgroundImage('vertical_background.gif', 'repeat');
+  mySlider6.setArrowIconLeft('vertical_arrowTop.gif', 16, 16);
+  mySlider6.setArrowIconRight('vertical_arrowBottom.gif', 16, 16);
+  mySlider6.useInputField = 0;
+  mySlider6.styleValueFieldClass = 'sliderInput';
+  mySlider6.drawInto('sliderDiv6');
+	
+  // - Slider 7 -----------------------------------------
+  mySlider7 = new Bs_Slider();
+	mySlider7.direction     = 0;
+  mySlider7.width         = 100;
+  mySlider7.height        = 16;
+  mySlider7.minVal        = 0;
+  mySlider7.maxVal        = 100;
+  mySlider7.valueInterval = 1;
+  mySlider7.valueDefault  = 40;
+  mySlider7.imgDir        = '../img/gray/';
+  mySlider7.setSliderIcon('knob.gif', 13, 15);
+  mySlider7.setBackgroundImage('background.gif', 'repeat');
+  mySlider7.useInputField = 0;
+  mySlider7.styleValueFieldClass = 'sliderInput';
+  mySlider7.drawInto('sliderDiv8');
+	
+}
+// --></script>
+
+</head>
+<body bgcolor="#FFFFFF" text="#3366AA" link="#0000EE" vlink="#551A8B" alink="#FF0000" onLoad="init();">
+
+<h1>JavaScript Bs_Slider example 7</h1>
+
+Sliders with different styles and icons.<br>
+<br><br>
+
+<table bgcolor="#D6D6CE">
+	<tr>
+		<td width="50" height="150" valign="top">
+      <div id="sliderDiv1"></div>
+		</td>
+		<td width="150" valign="top">
+      <div id="sliderDiv2"></div>
+		</td>
+		<td width="150" valign="top">
+      <div id="sliderDiv3"></div>
+		</td>
+		<td width="50" valign="top">
+      <div id="sliderDiv4"></div>
+		</td>
+		<td width="50" valign="top">
+      <div id="sliderDiv5"></div>
+		</td>
+		<td width="50" valign="top">
+      <div id="sliderDiv6"></div>
+		</td>
+	</tr>
+	<tr>
+		<td width="50" height="150" valign="top">
+      <div id="sliderDiv7"></div>
+		</td>
+		<td width="150" valign="middle">
+      <div id="sliderDiv8"></div>
+		</td>
+		<td width="150" valign="top">
+      <div id="sliderDiv9"></div>
+		</td>
+		<td width="50" valign="top">
+      <div id="sliderDiv10"></div>
+		</td>
+		<td width="50" valign="top">
+      <div id="sliderDiv11"></div>
+		</td>
+		<td width="50" valign="top">
+      <div id="sliderDiv12"></div>
+		</td>
+	</tr>
+</table>
+
+</body></html>

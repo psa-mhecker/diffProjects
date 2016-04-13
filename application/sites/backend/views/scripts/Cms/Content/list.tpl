@@ -1,0 +1,3 @@
+{$languageTab}
+<br />
+{$list}

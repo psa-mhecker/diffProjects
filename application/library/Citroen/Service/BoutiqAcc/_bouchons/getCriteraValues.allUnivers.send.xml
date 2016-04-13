@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:acc="http://xml.inetpsa.com/Services/AccessoiresApplication/AccessoiresService" xmlns:crit="http://aoa.inetpsa.com/ws/setting/CriteriaValue" xmlns:crit1="http://aoa.inetpsa.com/ws/setting/Criteria">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <acc:getCriteriaValues>
+         <crit:criteriaValueInput>
+            <crit:criteria>
+               <!--1 or more repetitions:-->
+               <crit:criterion>Universes</crit:criterion>
+            </crit:criteria>
+            <crit:settings>
+               <crit1:clientID>CSA01</crit1:clientID>
+               <crit1:locales>
+                  <!--1 or more repetitions:-->
+                  <crit1:locale>fr_FR</crit1:locale>
+               </crit1:locales>
+            </crit:settings>
+         </crit:criteriaValueInput>
+      </acc:getCriteriaValues>
+   </soapenv:Body>
+</soapenv:Envelope>

@@ -1,0 +1,197 @@
+{if !$smarty.get.popinMobile}
+<div id="{$aParams.ID_HTML}"  class="headerReviewMob sliceNew">
+{if $blangueCode}
+    {literal}
+        <script type='text/javascript' >
+            var addthis_config = {
+              ui_language: "en" 
+          } 
+      </script>
+	  
+
+    {/literal}
+{/if}
+
+{literal}
+<script type="text/javascript" src="{/literal}{Pelican::$config.DESIGN_HTTP}{literal}/js/TweenMax.min.js"></script>
+{/literal}
+
+    <header>
+	<nav>
+        <div class="navFirsLvl">
+          <div class="row">
+            <div class="columns column_50 firstLvl">
+              <a class="menuButton" href="#"></a>
+               <h1>
+            
+                <a href="/" class="homeButton">
+					CITROËN
+                   {if $aConfig.ZONE_TITRE24} <span>{$aConfig.ZONE_TITRE24|upper}</span>{/if} 
+                </a>
+                </h1>
+            </div>
+            <div class="columns column_50 secondLvl" style="margin-top:-17px">
+              {if $aConfig.MEDIA_ID9 }<a  href="{$aConfig.ZONE_TEXTE7}" {if $aConfig.ZONE_TOOL	=='2'} target="_blank"{/if}>
+               <img src="{$aConfig.MEDIA_ID9}" >
+              </a> {else}<a class="carsButton" href="{$aConfig.ZONE_TEXTE7}" {if $aConfig.ZONE_TOOL	=='2'} target="_blank"{/if}>
+              </a>{/if}
+              <a class="citroenLogo activeRoll" href="/">
+                <span>Citroen</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="navWrapper">
+          <div class="wrapperMenu">
+            {if $activationRecherche.ZONE_TITRE2==2 || $activationRecherche.ZONE_TITRE2==3}
+            <form action="{$recherche.PAGE_CLEAR_URL}" method="post" >
+                <input type="search" name="search" id="search" placeholder="{'RECHERCHE'|t}" style="background-color:none;" />
+                <button><input type="submit" name="submit" id="submit" value="" class="submit" {gtm name="menu_mobile_clic_sur_recherche" data=$aData} /></button>
+            </form>
+            {/if}
+            <ul class="ctaNav">
+                    {assign var=nbNavMobile value=1}
+			 {foreach from=$navigationSite item=navigation1 name=navigation1}
+                        
+                        {if $nbNavMobile <=7}
+                            {if $navigation1.n1.urlExterne != ''}
+                                {if $navigation1.n1.affichageMobile eq 1}
+                                    {assign var=nbNavMobile value=$nbNavMobile+1}
+                                    <li><a  class="activeRoll" {gtmjs data=$aParams type='toggle' labels=['tranche' => $aParams.ZONE_TYPE_ID, 'id' => $aParams.ZONE_ID, 'nomCategorie' => $navigation1.n1.lib, 'idCategorie' => $navigation1.n1.id]} href="{if $navigation1.n1.urlExterne}{urlParser url=$navigation1.n1.urlExterne}{else}{urlParser url=$navigation1.n1.url}{/if}" {if $navigation1.n1.urlExterneTarget == 2}target="_blank"{/if}>{$navigation1.n1.lib}</a></li>
+                                {/if}
+                                {if $navigation1.n2}
+                                    {foreach from=$navigation1.n2 item=navigation2 name=navigation2}
+                                        {if $navigation2.affichageMobile eq 1}
+                                            <li>
+                                            {if $navigation2.urlExterne!=''}
+                                                    <a class="activeRoll" {gtm action="Click" data=$aParams datasup=['eventCategory' => 'HeaderMobile::Menu', 'eventLabel' => $navigation2.lib]} href="{urlParser url=$navigation2.urlExterne}" {if $navigation2.urlExterneTarget == 2}target="_blank"{/if}>{$navigation2.lib}</a>
+                                            {else}
+                                                    <a  class="activeRoll" {gtm action="Click" data=$aParams datasup=['eventCategory' => 'HeaderMobile::Menu', 'eventLabel' => $navigation2.lib]} href="{urlParser url=$navigation2.url}" {if $navigation2.urlExterneTarget == 2}target="_blank"{/if}>{$navigation2.lib}</a>
+                                            {/if}
+                                            </li>
+                                        {/if}
+                                    {/foreach}
+                                {/if}
+                            {else if $navigation1.n1.ouvertureDirect == 1}
+                                {if $navigation1.n1.affichageMobile eq 1}
+                                    {assign var=nbNavMobile value=$nbNavMobile+1}
+                                    <li ><a  class="activeRoll" {gtmjs data=$aParams type='toggle' labels=['tranche' => $aParams.ZONE_TYPE_ID, 'id' => $aParams.ZONE_ID, 'nomCategorie' => $navigation1.n1.lib, 'idCategorie' => $navigation1.n1.id]} href="{urlParser url=$navigation1.n1.url}" {if $navigation1.n1.urlExterneTarget == 2}target="_blank"{/if}>{$navigation1.n1.lib}</a></li>
+                                {/if}
+                                {if $navigation1.n2}
+                                    {foreach from=$navigation1.n2 item=navigation2 name=navigation2}
+                                        {if $navigation2.affichageMobile eq 1}
+                                            <li>
+                                            {if $navigation2.urlExterne!=''}
+                                                    <a class="activeRoll" {gtm action="Click" data=$aParams datasup=['eventCategory' => 'HeaderMobile::Menu', 'eventLabel' => $navigation2.lib]} href="{urlParser url=$navigation2.urlExterne}" {if $navigation2.urlExterneTarget == 2}target="_blank"{/if}>{$navigation2.lib}</a>
+                                            {else}
+                                                    <a  class="activeRoll" {gtm action="Click" data=$aParams datasup=['eventCategory' => 'HeaderMobile::Menu', 'eventLabel' => $navigation2.lib]} href="{urlParser url=$navigation2.url}" {if $navigation2.urlExterneTarget == 2}target="_blank"{/if}>{$navigation2.lib}</a>
+                                            {/if}
+                                            </li>
+                                        {/if}
+                                    {/foreach}
+                                {/if}
+                            {else}
+                                {if $navigation1.n1.affichageMobile eq 1}
+                                    {assign var=nbNavMobile value=$nbNavMobile+1}
+                                    <li ><a  class="activeRoll" {gtm action="Click" data=$aParams datasup=['eventCategory' => 'HeaderMobile::Menu', 'eventLabel' => $navigation1.n1.lib]} href="{urlParser url=$navigation1.n1.url}" {if $navigation1.n1.urlExterneTarget == 2}target="_blank"{/if}>{$navigation1.n1.lib}</a></li>
+                                {/if}
+                                {if $navigation1.n2}
+                                    {foreach from=$navigation1.n2 item=navigation2 name=navigation2}
+                                        {if $navigation2.affichageMobile eq 1}
+                                            <li>
+                                            {if $navigation2.urlExterne!=''}
+                                                    <a class="activeRoll" {gtm action="Click" data=$aParams datasup=['eventCategory' => 'HeaderMobile::Menu', 'eventLabel' => $navigation2.lib]} href="{urlParser url=$navigation2.urlExterne}" {if $navigation2.urlExterneTarget == 2}target="_blank"{/if}>{$navigation2.lib}</a>
+                                            {else}
+                                                    <a  class="activeRoll" {gtm action="Click" data=$aParams datasup=['eventCategory' => 'HeaderMobile::Menu', 'eventLabel' => $navigation2.lib]} href="{urlParser url=$navigation2.url}" {if $navigation2.urlExterneTarget == 2}target="_blank"{/if}>{$navigation2.lib}</a>
+                                            {/if}
+                                            </li>
+                                        {/if}
+                                    {/foreach}
+                                {/if}
+                            {/if}
+                        {/if}
+                    {/foreach}
+                   
+    
+            </ul>
+            <ul class="ctaForm">
+             {if $ctaMajeur}
+                        {foreach from=$ctaMajeur item=cta name=cta}
+                            {if $cta.PAGE_ZONE_MULTI_LABEL && $cta.PAGE_ZONE_MULTI_URL}
+                                <li class="brd"><a class="activeRoll" href="{urlParser url=$cta.PAGE_ZONE_MULTI_URL}"{if $cta.PAGE_ZONE_MULTI_OPTION=='2'} target="_blank"{/if}>{$cta.PAGE_ZONE_MULTI_LABEL}</a></li>
+                            {/if}
+                        {/foreach}
+                    {/if}
+                    {if $ctaMineur}
+                        {foreach from=$ctaMineur item=cta name=cta}
+                            {if $cta.PAGE_ZONE_MULTI_LABEL && $cta.PAGE_ZONE_MULTI_URL}
+                                <li class="last"><a class="activeRoll" href="{urlParser url=$cta.PAGE_ZONE_MULTI_URL}"{if $cta.PAGE_ZONE_MULTI_OPTION=='2'} target="_blank"{/if}>{$cta.PAGE_ZONE_MULTI_LABEL}</a></li>
+                            {/if}
+                        {/foreach}
+                    {/if}
+            </ul>
+			 <ul class="ctaLang">
+			 {if $siteLangues|sizeof>1}
+                        <li >
+                            {foreach from=$siteLangues item=site}
+                                {if $site.LANGUE_ID != $session.LANGUE_ID}
+								
+                                <a  class="activeRoll" href="{urlParser url=$pageLangue.{$site.LANGUE_ID}.PAGE_CLEAR_URL}" class="bullet"{gtmjs type='toggle' action="Language|" data=$aParams datasup=['eventCategory'=>'Header' , 'eventLabel'=>$site.LANGUE_TRANSLATE]}>{$site.LANGUE_TRANSLATE}</a>
+                                {/if}
+                            {/foreach}
+                        </li>  
+                    {/if}
+			</ul>
+			
+          </div>
+        </div>
+		</nav>
+        {*<span class="menu" {gtm action="Display::ExpandBar" data=$aParams datasup=['eventCategory' => 'Header::Menu', 'eventLabel' => $LibHomeMobile.ZONE_TITRE]}>{if $LibHomeMobile.ZONE_TITRE && $LibHomeMobile.ZONE_MOBILE == 1}{$LibHomeMobile.ZONE_TITRE}{/if}</span>
+        {if $activationRecherche.ZONE_TITRE2==2 || $activationRecherche.ZONE_TITRE2==3}<span class="search">{'RECHERCHER'|t}</span>{/if}
+        <span class="logo"><a href="{urlParser url=$url_home}">Citroën</a></span>*}
+    </header>
+
+
+</div>
+<div class="content">   
+
+
+{if $aCookies.ZONE_TITRE4 == "1"}
+    {if $bDisplayCookiesLayer == true || $aParams.preview == 1}
+    <div class="cookieBarReviewMobile sliceNew" style="display: block;">
+      <div class="globalWrapper">
+        <div class="row cookieBarReviewDesktopRow">
+		 <a href="#" onClick="acceptCookies();sendGTM('Cookies','Close','Cross');" class="cross accept">
+              </a>
+
+           <div class="columns column_80 textContent">
+              <div class="valign">
+                <div>
+                  {$aCookies.ZONE_TEXTE}
+
+
+
+
+				   {if !empty($aCookies.ZONE_TITRE3) && !empty($aCookies.ZONE_URL)}
+              <a href="{urlParser url=$aCookies.ZONE_URL}" class="activeRoll">
+                 {$aCookies.ZONE_TITRE3}
+              </a>
+               {/if}
+                </div>
+              </div>
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+    {/if} 
+{/if} 
+
+{/if}
+{if $smarty.get.popinMobile}
+	<div class="content">
+{/if}
+	<div class="swipezone">

@@ -1,0 +1,282 @@
+html.swipebox {
+  overflow: hidden!important;
+}
+
+#swipebox-overlay img {
+  border: none!important;
+}
+
+#swipebox-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99999!important;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+#swipebox-slider {
+  min-height: 100%;
+  height: 100%;
+  max-height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  white-space: nowrap;
+  position: absolute;
+  display: none;
+}
+
+#swipebox-slider .slide {
+  background: url("../../images/mobile/img/loader.gif") no-repeat center center;
+  min-height: 100%;
+  height: 100%;
+  max-height: 100%;
+  width: 100%;
+  line-height: 1px;
+  text-align: center;
+  display: inline-block;
+}
+
+#swipebox-slider .slide:before {
+  content: "";
+  display: inline-block;
+  height: 50%;
+  width: 1px;
+  margin-right: -1px;
+}
+
+#swipebox-slider .slide img,
+#swipebox-slider .slide .swipebox-video-container {
+  display: inline-block;
+  max-height: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: auto;
+  vertical-align: middle;
+}
+
+#swipebox-slider .slide .swipebox-video-container {
+  background:none;
+  max-width: 1140px;
+  max-height: 100%;
+  width: 100%;
+  padding:5%;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+
+#swipebox-slider .slide .swipebox-video-container .swipebox-video{
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  position: relative;
+}
+
+#swipebox-slider .slide .swipebox-video-container .swipebox-video iframe{
+  width: 100%!important;
+  height: 100%!important;
+  position: absolute;
+  top: 0; left: 0;
+}
+
+#swipebox-action, #swipebox-caption {
+  position: absolute;
+  left: 0;
+  z-index: 999;
+  height: 50px;
+  width: 100%;
+}
+#swipebox-caption{ display:none; }
+#swipebox-action{ height: 70px; }
+#swipebox-action {
+  bottom: -70px;
+}
+#swipebox-action.visible-bars {
+  bottom: 0;
+}
+
+#swipebox-action.force-visible-bars {
+  bottom: 0!important;
+}
+
+#swipebox-caption {
+  top: -50px;
+  text-align: center;
+}
+#swipebox-caption.visible-bars {
+  top: 0;
+}
+
+#swipebox-caption.force-visible-bars {
+  top: 0!important;
+}
+
+#swipebox-action #swipebox-prev, #swipebox-action #swipebox-next{
+  background:url(../../images/mobile/sprt/layout.png) no-repeat; background-size:500px auto; 
+  border: none!important;
+  text-decoration: none!important;
+  cursor: pointer;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  bottom:10px;
+}
+#swipebox-action #swipebox-close {
+  background:url(../../images/mobile/sprt/layout.png) no-repeat; background-size:250px auto; 
+  border: none!important;
+  text-decoration: none!important;
+  cursor: pointer;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 23px;
+}
+
+#swipebox-action #swipebox-close {
+	background-position: 0 -301px;
+  left: 10px;
+}
+#swipebox-action #swipebox-close:hover,
+#swipebox-action #swipebox-close:active,
+#swipebox-action #swipebox-close:focus { background-position: 0px -326px; }
+
+
+#swipebox-action #swipebox-prev {
+  background-position: 0 -408px;
+  right: 70px;
+}
+#swipebox-action #swipebox-prev:hover,
+#swipebox-action #swipebox-prev:active,
+#swipebox-action #swipebox-prev:focus { background-position: -100px -408px; }
+
+#swipebox-action #swipebox-next {
+  background-position: -50px -408px;
+  right: 10px;
+}
+#swipebox-action #swipebox-next:hover,
+#swipebox-action #swipebox-next:active,
+#swipebox-action #swipebox-next:focus { background-position: -150px -408px; }
+
+#swipebox-action #swipebox-prev.disabled,
+#swipebox-action #swipebox-next.disabled {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
+  opacity: 0.3;
+}
+
+#swipebox-slider.rightSpring {
+  -moz-animation: rightSpring 0.3s;
+  -webkit-animation: rightSpring 0.3s;
+}
+
+#swipebox-slider.leftSpring {
+  -moz-animation: leftSpring 0.3s;
+  -webkit-animation: leftSpring 0.3s;
+}
+
+@-moz-keyframes rightSpring {
+  0% {
+    margin-left: 0px;
+  }
+
+  50% {
+    margin-left: -30px;
+  }
+
+  100% {
+    margin-left: 0px;
+  }
+}
+
+
+
+@-moz-keyframes leftSpring {
+  0% {
+    margin-left: 0px;
+  }
+
+  50% {
+    margin-left: 30px;
+  }
+
+  100% {
+    margin-left: 0px;
+  }
+}
+
+@-webkit-keyframes rightSpring {
+  0% {
+    margin-left: 0px;
+  }
+
+  50% {
+    margin-left: -30px;
+  }
+
+  100% {
+    margin-left: 0px;
+  }
+}
+
+@-webkit-keyframes leftSpring {
+  0% {
+    margin-left: 0px;
+  }
+
+  50% {
+    margin-left: 30px;
+  }
+
+  100% {
+    margin-left: 0px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #swipebox-action #swipebox-close {
+	top:23px;
+    left: 10px;
+  }
+
+  #swipebox-action #swipebox-prev {
+	bottom:10px;
+    right: 70px;
+  }
+
+  #swipebox-action #swipebox-next {
+	bottom:10px;
+    right: 10px;
+  }
+}
+
+
+/* Skin
+--------------------------*/
+#swipebox-overlay {
+}
+
+#swipebox-action, #swipebox-caption {
+  text-shadow: 1px 1px 1px black;
+}
+
+#swipebox-action {
+  background: rgba(0,0,0,0.5);
+}
+
+#swipebox-caption {
+  color: white!important;
+  font-size: 15px;
+  line-height: 43px;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+

@@ -1,0 +1,445 @@
+@font-face {
+    font-family: 'citroenbold';
+    src: url('../font/citroen_bold-webfont.eot');
+    src: url('../font/citroen_bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/citroen_bold-webfont.svg#citroenbold') format('svg'),
+         url('../font/citroen_bold-webfont.woff') format('woff'),
+         url('../font/citroen_bold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'citroenregular';
+    src: url('../font/citroen_regular-webfont.eot');
+    src: url('../font/citroen_regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/citroen_regular-webfont.svg#citroenregular') format('svg'),
+         url('../font/citroen_regular-webfont.woff') format('woff'),
+         url('../font/citroen_regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'citroenlight';
+    src: url('../font/citroen_light-webfont.eot');
+    src: url('../font/citroen_light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/citroen_light-webfont.svg#citroenlight') format('svg'),
+         url('../font/citroen_light-webfont.woff') format('woff'),
+         url('../font/citroen_light-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#content_mmd1404{
+    position: relative;
+    width: 90%;
+    margin: auto;
+    /*border: 1px solid #dbdbdb;*/
+    overflow: hidden;
+}
+
+#content_mmd1404 *{
+    min-width: 0%;
+    max-width: 1000%;
+    -moz-tap-highlight-color:  rgba(255, 255, 255, 0); 
+    -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
+    -o-tap-highlight-color:  rgba(255, 255, 255, 0); 
+    -ms-tap-highlight-color:  rgba(255, 255, 255, 0); 
+    tap-highlight-color:  rgba(255, 255, 255, 0); 
+}
+
+
+/*INTRO*/
+
+#intro_mmd1404{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    background-image: url(../img/c4p_back_intro_mmd1404.jpg);
+    background-size: 100% 100%;
+}
+
+#cta_intro_mmd1404{
+    position: absolute;
+    width: 60%;
+    left: 20%;
+    top: 76%;
+    background-color: #ced60f;
+    font-size: 4vw;
+    font-family: 'citroenregular', sans-serif;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.2em;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+
+#txt_intro_mmd1404{
+    position: absolute;
+    width: 60%;
+    left: 20%;
+    text-align: center;
+    top: 16%;
+    color: #acdee6;
+    text-transform: uppercase;
+}
+
+.intro_phrase1_mmd1404{
+    font-size: 5.8vw;
+    font-family: 'citroenregular', sans-serif;
+}
+
+.intro_phrase2_mmd1404{
+    font-size: 5.6vw;
+    font-family: 'citroenregular', sans-serif;
+}
+
+.intro_phrase3_mmd1404{
+    font-family: 'citroenbold';
+    font-size: 9.9vw;
+    color: #6aade4;
+    margin-top: 7%;
+    line-height: 0.7;
+}
+
+.intro_phrase4_mmd1404{
+    font-family: 'citroenbold';
+    font-size: 10.1vw;
+    color: #6aade4;
+}
+
+/*SLIDE 1*/
+
+#slide1_mmd1404{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    background-size: 100% 100%;
+    background-image: url(../img/c4p_back_slide1_mmd1404.jpg);
+    background-size: 100% 100%;
+    left: 0%;
+}
+
+#txt_slide1_mmd1404{
+    position: absolute;
+    width: 60%;
+    left: 19%;
+    text-align: center;
+    top: 3%;
+    color: #6aade4;
+    /*background-color: red;*/
+    line-height: 0.9;
+    /*height: 50px;*/
+    text-transform: uppercase;
+}
+
+.phrase1_mmd1404{
+    font-size: 10.8vw;
+    font-family: 'citroenbold', sans-serif;
+}
+
+.phrase2_mmd1404{
+    font-size: 11.2vw;
+    font-family: 'citroenregular', sans-serif;
+}
+
+.phrase3_mmd1404{
+    font-size: 4.5vw;
+    font-family: 'citroenbold', sans-serif;
+}
+
+
+
+/*SLIDE 2*/
+
+#slide2_mmd1404{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    background-size: 100% 100%;
+    background-image: url(../img/c4p_back_slide2_mmd1404.jpg);
+    background-size: 100% 100%;
+    left: 100%;
+}
+
+#text_zone2_mmd1404{
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    text-align: center;
+    top: 6%;
+    color: #6aade4;
+    text-transform: uppercase;
+}
+
+.text1_zone2_mmd1404{
+    font-size: 17vw;
+    font-family: 'citroenbold', sans-serif;
+}
+
+.text2_zone2_mmd1404{
+    font-size: 14.5vw;
+    font-family: 'citroenbold', sans-serif;
+}
+
+.text3_zone2_mmd1404{
+    font-size: 5.9vw;
+    font-family: 'citroenregular', sans-serif;
+    color: #acdee6;    
+}
+
+/*SLIDE 3*/
+
+#slide3_mmd1404{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    background-size: 100% 100%;
+    background-image: url(../img/c4p_back_slide3_mmd1404.jpg);
+    background-size: 100% 100%;
+    left: 100%;
+}
+
+#text_zone3_mmd1404{
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    text-align: center;
+    top: 5%;
+    color: #ced60f;
+    text-transform: uppercase;
+}
+
+.text1_zone3_mmd1404{
+    font-size: 7.2vw;
+    font-family: 'citroenregular', sans-serif;
+}
+
+.text2_zone3_mmd1404{
+    font-size: 8.6vw;
+    font-family: 'citroenregular', sans-serif;
+}
+
+.text3_zone3_mmd1404{
+    font-size: 7.5vw;
+    font-family: 'citroenbold', sans-serif;
+    color: #6aade4;
+    margin-top: 2%;
+}
+
+.text4_zone3_mmd1404{
+    font-size: 5.3vw;
+    font-family: 'citroenbold', sans-serif;
+    color: #6aade4;
+}
+
+#small_ping_mmd1404{
+    position: absolute;
+    width: 7%;
+    top: 57%;
+    left: 54%;
+}
+
+#big_ping_mmd1404{
+    position: absolute;
+    width: 34%;
+    top: 49%;
+    left: 40%;
+    display: none;
+}
+
+
+/*SLIDE 4*/
+
+#slide4_mmd1404{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    background-size: 100% 100%;
+    background-image: url(../img/c4p_back_slide4_mmd1404.jpg);
+    background-size: 100% 100%;
+    left: 100%;
+    overflow: hidden;
+}
+
+#text_zone4_mmd1404{
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    text-align: center;
+    top: 12%;
+    color: #6aade4;
+    text-transform: uppercase;
+}
+
+.text1_zone4_mmd1404{
+    font-size: 5vw;
+    font-family: 'citroenbold', sans-serif;
+}
+
+.text2_zone4_mmd1404{
+    font-size: 6vw;
+    font-family: 'citroenbold', sans-serif;
+}
+
+.text3_zone4_mmd1404{
+    font-size: 5.5vw;
+    font-family: 'citroenregular', sans-serif;
+    margin-top: 4%;
+}
+
+.text4_zone4_mmd1404{
+    font-size: 5.7vw;
+    font-family: 'citroenregular', sans-serif;
+}
+
+/*SLIDE 5*/
+
+#slide5_mmd1404{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    background-size: 100% 100%;
+    background-image: url(../img/c4p_back_slide5_mmd1404.jpg);
+    background-size: 100% 100%;
+    left: 100%;
+}
+
+#part1_slide5_mmd1404{
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    /*height: 44%;*/
+    top: 8%;
+    
+    color: #6aade4;
+    text-align: center;
+}
+
+#text1_zone5_mmd1404{
+    font-size: 12.5vw;
+    font-family: 'citroenregular', sans-serif;
+    text-transform: uppercase;
+}
+
+#text2_zone5_mmd1404{
+    font-size: 8.9vw;
+    font-family: 'citroenbold', sans-serif;
+    text-transform: uppercase;
+}
+
+#text3_zone5_mmd1404{
+    font-size: 5.9vw;
+    font-family: 'citroenbold', sans-serif;
+    text-transform: uppercase;
+}
+
+#text4_zone5_mmd1404{
+    position: relative;
+    width: 86%;
+    left: 7%;
+    font-size: 4.3vw;
+    border: 1px solid #cfcfd0;
+    font-family: 'citroenregular', sans-serif;
+    color: #868689;
+    margin-top: 2%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border-radius: 3px;
+}
+
+#part2_slide5_mmd1404{
+    position: absolute;
+    width: 70%;
+    left: 15%;
+    height: 44%;
+    background-color: #fff;
+    top: 4%;
+}
+
+#cta_end1_mmd1404, #cta_end2_mmd1404{
+    position: absolute;
+    width: 100%;
+    font-family: 'citroenregular', sans-serif;
+    color: #fff;
+    font-size: 6vw;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#cta_end1_mmd1404{
+    top: 20%;
+    background-color: #ced60f;
+}
+
+#cta_end2_mmd1404{
+    top: 51%;
+    background-color: #a0cfeb;
+}
+
+/* NAV */
+
+#left_mmd1404{
+    position: absolute;
+    width: 5%;
+    left: -18%;
+    bottom: 11%;
+    z-index: 999;
+    display: none;
+}
+
+#right_mmd1404{
+    position: absolute;
+    width: 5%;
+    right: -14%;
+    bottom: 11%;
+    z-index: 999;
+    display: none;
+}
+
+#timeline_mmd1404{
+    position: absolute;
+    width: 70%;
+    left: 17%;
+    bottom: 5%;
+}
+
+.btn_timeline_mmd1404{
+    position: relative;
+    float: left;
+    width: 11%;
+    color: #afadc3;
+    font-size: 5vw;
+    font-family: "citroenregular", sans-serif;
+    text-align: center;
+    border: 2px solid #afadc3;
+    padding-bottom: 2%;
+    padding-top: 2%;
+    background-color: #ffffff;
+}
+
+.tiret_timeline_mmd1404{
+    position: relative;
+    float: left;
+    height: 1px;
+    background-color: #afadc3;
+    width: 7.5%;
+    margin-top: 7%;
+}
+
+.current_timeline_mmd1404{
+    color: #ffffff;
+    background-color: #6aade4;
+    border: 2px solid #6aade4;
+}

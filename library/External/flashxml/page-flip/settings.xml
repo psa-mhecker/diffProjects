@@ -1,0 +1,70 @@
+<settings>
+  <General_Properties>
+    <width value="600"/>
+    <height value="550"/>
+    <pozY value="50"/>
+    <assets value="images.xml"/>
+    <backgroundColor value="0xffffff"/>
+    <backgroundAlpha value="0"/>
+    <backgroundImage value=""/>
+    <showAbout value="true"/>
+  </General_Properties>
+  <Image_Properties>
+    <backColor value="13421772"/>
+    <preloader value="assets/preloaders/redsquares.swf"/>
+    <pageClick value="enlarge"/>
+    <zoomPercent value="100"/>
+  </Image_Properties>
+  <Cotrol_Bar_Skin>
+    <skin value="assets/skins/skin.xml"/>
+    <pozX value="85"/>
+    <pozY value="525"/>
+  </Cotrol_Bar_Skin>
+  <Play_Properties>
+    <autoPlay value="false"/>
+    <slideshowTime value="3"/>
+  </Play_Properties>
+  <Animation_Properties>
+    <startHookSize value="40"/>
+    <dragTweenTime value="0"/>
+    <tweenMethod value="circ"/>
+    <tweenFunction value="easeout"/>
+    <tweenTime value="1.2"/>
+    <pixelBind value="45"/>
+    <shadowColor value="0"/>
+    <shadowAlpha value="60"/>
+    <shadowSpread value="200"/>
+    <pageGradColor value="0"/>
+    <pageGradSpread value="15"/>
+    <pageGradAlpha value="64"/>
+    <flipAngle value="30"/>
+    <movePage value="click"/>
+    <autoHook value="true"/>
+  </Animation_Properties>
+  <Sound_Properties>
+    <startSound value="assets/sounds/flipStart.mp3"/>
+    <stopSound value="assets/sounds/flipEnd.mp3"/>
+    <volume value="50"/>
+  </Sound_Properties>
+  <Text_Properties>
+    <show value="true"/>
+    <style value="assets/css/style.css"/>
+    <embedFont value="true"/>
+    <width value="250"/>
+    <hPos value="center"/>
+    <vPos value="center"/>
+    <textBoxPadding value="4"/>
+    <backgrounColor value="0"/>
+    <backgroundAlpha value="0.8"/>
+    <cornerRadius value="5"/>
+    <textPadding value="3"/>
+    <slide value="true"/>
+    <appear value="right"/>
+    <alpha value="true"/>
+    <blur value="true"/>
+    <tweenMethod value="elastic"/>
+    <tweenFunction value="easeout"/>
+    <duration value="1"/>
+    <delay value="1"/>
+  </Text_Properties>
+</settings>

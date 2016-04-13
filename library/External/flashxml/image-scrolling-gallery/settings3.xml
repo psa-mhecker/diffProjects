@@ -1,0 +1,13 @@
+<settings>
+  <General_Properties>
+    <position value="top"/>
+    <frameSize value="120"/>
+    <frameColor1 value="0xff9900"/>
+    <frameColor2 value="0xff9900"/>
+    <frameGradientRatio value="0"/>
+    <borderWidth value="5"/>
+    <borderColor value="0x000000"/>
+    <borderAlpha value="1"/>
+    <path value="fxImageScroller"/>
+  </General_Properties>
+</settings>

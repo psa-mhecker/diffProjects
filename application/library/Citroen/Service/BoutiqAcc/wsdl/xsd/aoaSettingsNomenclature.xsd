@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns:sn="http://aoa.inetpsa.com/ws/setting/nomenclature" 
+	xmlns:c="http://aoa.inetpsa.com/ws/common" 
+	targetNamespace="http://aoa.inetpsa.com/ws/setting/nomenclature">
+
+	<xs:import namespace="http://aoa.inetpsa.com/ws/common" schemaLocation="aoaCommonItems.xsd"/>
+	
+	<xs:element name="NomenclatureInput">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Hierarchy" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Applicability" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Promotions" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Languages" type="xs:boolean" minOccurs="0"/>
+				<xs:any namespace="##other" processContents="skip" minOccurs="0"/>
+				<!-- joker -->
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+</xs:schema>

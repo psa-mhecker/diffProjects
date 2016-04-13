@@ -1,0 +1,11 @@
+<div class="sliceNew slicePanoramiqueMobile">
+    <div id="{$aData.ID_HTML}"  class="head full clsgrandvisuel">
+        <header>
+            <div class="row">
+                <figure>
+                    <img alt="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/235-100.png" data-original="{Pelican::$config.MEDIA_HTTP}{$MEDIA_PATH}" src="{Pelican::$config.MEDIA_HTTP}{$MEDIA_PATH}" class="lazy">
+                </figure>
+            </div>
+        </header>
+    </div>
+</div>

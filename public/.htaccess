@@ -1,0 +1,170 @@
+# Turn on URL rewriting engine
+<FilesMatch "\.(ttf|otf|eot|woff)$">
+  <IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+  </IfModule>
+</FilesMatch>
+
+# Redirection pour CPW-4051 : méthode contre les tentatives de hacking
+RedirectMatch 402 /wp-admin/|admin-ajax\.php|wp-config\.php
+
+# Redirection pour mycitroen
+RewriteRule /MyCITROEN$ /library/External/Cpw/mycitroen.php [NC,L]
+RewriteRule /MyCITROEN/$ /library/External/Cpw/mycitroen.php [NC,L]
+RewriteRule /MyCITROEN/.*$ /library/External/Cpw/mycitroen.php [NC,L]
+
+# Redirection pour GB
+RewriteCond %{HTTP_HOST} ^(.*)gb.cppv2.citroen.preprod.inetpsa.com$ [NC] 
+Rewritecond %{REQUEST_URI} ^/(c1videos)$ [NC]
+RewriteRule ^(.*)$ http://vimeopro.com/theacdemyinfo/the-new-citroen-c1 [NC,R=301,L]
+
+
+RewriteCond %{HTTP_HOST} ^(.*)gb.cppv2.citroen.preprod.inetpsa.com$ [NC] 
+Rewritecond %{REQUEST_URI} ^/(Sales|Promotions|Deals|citroeneconomics|offers)$ [NC]
+RewriteRule ^(.*)$ http://info.citroen.co.uk/offers [NC,R=301,L]
+
+RewriteCond %{HTTP_HOST} ^(.*)gb.cppv2.citroen.preprod.inetpsa.com$ [NC] 
+Rewritecond %{REQUEST_URI} ^/(Cars|Diesel-Cars|Sport-Cars|Superminis-Cars)$ [NC]
+RewriteRule ^(.*)$ http://info.citroen.co.uk/offers/new-car-offers [NC,R=301,L]
+
+RewriteCond %{HTTP_HOST} ^(.*)gb.cppv2.citroen.preprod.inetpsa.com$ [NC] 
+Rewritecond %{REQUEST_URI} ^/c4picassovideos$ [NC]
+RewriteRule ^(.*)$ http://vimeopro.com/theacdemyinfo/citroen-c4-picasso-videos [NC,R=301,L]
+
+RewriteCond %{HTTP_HOST} ^(.*)gb.cppv2.citroen.preprod.inetpsa.com$ [NC] 
+Rewritecond %{REQUEST_URI} ^/ds3bybenefit$ [NC]
+RewriteRule ^(.*)$ http://info.citroen.co.uk/new-cars/special-editions/ds3-by-benefit [NC,R=301,L]
+
+RewriteCond %{HTTP_HOST} ^(.*)gb.cppv2.citroen.preprod.inetpsa.com$ [NC] 
+Rewritecond %{REQUEST_URI} ^/(City-Cars|Compact-Cars|Small-Cars)$ [NC]
+RewriteRule ^(.*)$ http://info.citroen.co.uk/find-the-best/small-cars [NC,R=301,L]
+
+RewriteCond %{HTTP_HOST} ^(.*)gb.cppv2.citroen.preprod.inetpsa.com$ [NC] 
+Rewritecond %{REQUEST_URI} ^/Family-Cars$ [NC]
+RewriteRule ^(.*)$ http://info.citroen.co.uk/find-the-best/family-cars/ [NC,R=301,L]
+
+RewriteCond %{HTTP_HOST} ^(.*)gb.cppv2.citroen.preprod.inetpsa.com$ [NC] 
+Rewritecond %{REQUEST_URI} ^/Executive-Cars$ [NC]
+RewriteRule ^(.*)$ http://info.citroen.co.uk/find-the-best/executive-luxury-cars/ [NC,R=301,L]
+
+RewriteCond %{HTTP_HOST} ^(.*)gb.cppv2.citroen.preprod.inetpsa.com$ [NC] 
+Rewritecond %{REQUEST_URI} ^/Electric-Cars$ [NC]
+RewriteRule ^(.*)$ http://info.citroen.co.uk/find-the-best/electric-cars/ [NC,R=301,L]
+
+RewriteCond %{HTTP_HOST} ^(.*)gb.cppv2.citroen.preprod.inetpsa.com$ [NC] 
+Rewritecond %{REQUEST_URI} ^/(Compact-MPV|MPV)$ [NC]
+RewriteRule ^(.*)$ http://info.citroen.co.uk/find-the-best/5-and-7-seater-cars/ [NC,R=301,L]
+
+RewriteCond %{HTTP_HOST} ^(.*)gb.cppv2.citroen.preprod.inetpsa.com$ [NC] 
+Rewritecond %{REQUEST_URI} ^/Brochure$ [NC]
+RewriteRule ^(.*)$ http://info.citroen.co.uk/contact-us/request-a-brochure/ [NC,R=301,L]
+
+RewriteCond %{HTTP_HOST} ^(.*)gb.cppv2.citroen.preprod.inetpsa.com$ [NC] 
+Rewritecond %{REQUEST_URI} ^/Test-Drive$ [NC]
+RewriteRule ^(.*)$ http://info.citroen.co.uk/contact-us/retail-test-drive/ [NC,R=301,L]
+
+RewriteCond %{HTTP_HOST} ^(.*)gb.cppv2.citroen.preprod.inetpsa.com$ [NC] 
+Rewritecond %{REQUEST_URI} ^/(benefit)$ [NC]
+RewriteRule ^(.*)$ http://info.citroen.co.uk/new-cars/special-editions/ds3-by-benefit [NC,R=301,L]
+
+RewriteEngine On
+#RewriteRule /mobile$ /library/Pelican/Http/UserAgent/public/ [L]
+#RewriteRule /identify$ /library/Pelican/Http/UserAgent/public/identify.php [L]
+
+##Ajouter pour NL 
+RewriteCond %{HTTP_HOST} ^(.*)nl.cppv2.citroen.preprod.inetpsa.com$ [NC] 
+RewriteCond %{REQUEST_URI} !.*\.html
+RewriteRule /Resources/Content/(.*) http://data.citroen.nl/Resources/Content/$1 [R=301,NC,L]
+
+
+# Redirection pour les ressrouces de l'ancienne galerie de ressources
+#RewriteRule /Resources/Content/(.*) http://data.citroen.fr/Resources/Content/$1 [R=301,L] 
+RewriteCond %{REQUEST_URI} !.*\.html
+RewriteRule /Resources/Content/(.*) http://data.citroen.fr/Resources/Content/$1 [R=301,NC,L]
+
+#RewriteCond %{HTTP_HOST} ^m.(.*).cppv2.dev.inetpsa.com$ [NC] http://fr.cppv2.citroen.preprod.inetpsa.com/
+RewriteCond %{HTTP_HOST} ^m.fr.cppv2.citroen.preprod.inetpsa.com$ [NC]
+RewriteRule /gateway(.*) http://legacy.citroen.fr/gateway$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^m.de.cppv2.citroen.preprod.inetpsa.com$ [NC]
+RewriteRule /gateway(.*) http://legacy.citroen.de/gateway$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^m.gb.cppv2.citroen.preprod.inetpsa.com$ [NC]
+RewriteRule /gateway(.*) http://legacy.citroen.co.uk/gateway$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^m.it.cppv2.citroen.preprod.inetpsa.com$ [NC]
+RewriteRule /gateway(.*) http://legacy.citroen.it/gateway$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^m.es.cppv2.citroen.preprod.inetpsa.com$ [NC]
+RewriteRule /gateway(.*) http://legacy.citroen.es/gateway$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^m.ua.cppv2.citroen.preprod.inetpsa.com$ [NC]
+RewriteRule /gateway(.*) http://legacy.citroen.ua/gateway$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^m.pt.cppv2.citroen.preprod.inetpsa.com$ [NC]
+RewriteRule /gateway(.*) http://legacy.citroen.pt/gateway$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^m.at.cppv2.citroen.preprod.inetpsa.com$ [NC]
+RewriteRule /gateway(.*) http://legacy.citroen.at/gateway$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^fr.cppv2.citroen.preprod.inetpsa.com$ [NC]
+RewriteRule /challengecbu2014(.*) http://challengecitroenbusiness.com$1 [R=301,L]
+
+# Correction Erreurs 404 FR
+RewriteCond %{HTTP_HOST} ^(.*)fr.cppv2.citroen.preprod.inetpsa.com$ [NC] 
+Rewritecond %{REQUEST_URI} /concessions/ [NC]
+RewriteRule ^(.*)$ http://fr.cppv2.citroen.preprod.inetpsa.com/rechercher-un-point-de-vente.html [NC,R=301,L]
+RewriteCond %{HTTP_HOST} ^(.*)fr.cppv2.citroen.preprod.inetpsa.com$ [NC] 
+Rewritecond %{REQUEST_URI} /reparateur/ [NC]
+RewriteRule ^(.*)$ http://fr.cppv2.citroen.preprod.inetpsa.com/rechercher-un-point-de-vente.html [NC,R=301,L]
+RewriteCond %{HTTP_HOST} ^(.*)fr.cppv2.citroen.preprod.inetpsa.com$ [NC] 
+Rewritecond %{REQUEST_URI} /actualites/ [NC]
+RewriteRule ^(.*)$ http://fr.cppv2.citroen.preprod.inetpsa.com/univers-citroen/evenements-actualites.html [NC,R=301,L]
+RewriteCond %{HTTP_HOST} ^(.*)fr.cppv2.citroen.preprod.inetpsa.com$ [NC] 
+Rewritecond %{REQUEST_URI} /Cwf/ [NC]
+RewriteRule ^(.*)$ http://fr.cppv2.citroen.preprod.inetpsa.com/accueil.html [NC,R=301,L]
+RewriteCond %{HTTP_HOST} ^(.*)fr.cppv2.citroen.preprod.inetpsa.com$ [NC] 
+Rewritecond %{REQUEST_URI} /accueil.php [NC]
+RewriteRule ^(.*)$ http://fr.cppv2.citroen.preprod.inetpsa.com/accueil.html [NC,R=301,L]
+
+# Correction Erreurs 404 DE
+RewriteCond %{HTTP_HOST} ^(.*)de.cppv2.citroen.preprod.inetpsa.com$ [NC] 
+Rewritecond %{REQUEST_URI} /aktuelles/ [NC]
+RewriteRule ^(.*)$ http://de.cppv2.citroen.preprod.inetpsa.com/unternehmen/aktuelles-neuigkeiten.html [NC,R=301,L]
+RewriteCond %{HTTP_HOST} ^(.*)de.cppv2.citroen.preprod.inetpsa.com$ [NC] 
+Rewritecond %{REQUEST_URI} /cwg/aktuelles/ [NC]
+RewriteRule ^(.*)$ http://de.cppv2.citroen.preprod.inetpsa.com/unternehmen/aktuelles-neuigkeiten.html [NC,R=301,L]
+RewriteCond %{HTTP_HOST} ^(.*)de.cppv2.citroen.preprod.inetpsa.com$ [NC] 
+Rewritecond %{REQUEST_URI} /CWG/Aktuelles/ [NC]
+RewriteRule ^(.*)$ http://de.cppv2.citroen.preprod.inetpsa.com/unternehmen/aktuelles-neuigkeiten.html [NC,R=301,L]
+RewriteCond %{HTTP_HOST} ^(.*)de.cppv2.citroen.preprod.inetpsa.com$ [NC] 
+Rewritecond %{REQUEST_URI} /cwg/Neuwagen/ [NC]
+RewriteRule ^(.*)$ http://de.cppv2.citroen.preprod.inetpsa.com/modelle.html [NC,R=301,L]
+RewriteCond %{HTTP_HOST} ^(.*)de.cppv2.citroen.preprod.inetpsa.com$ [NC] 
+Rewritecond %{REQUEST_URI} /CWG/Neuwagen/ [NC]
+RewriteRule ^(.*)$ http://de.cppv2.citroen.preprod.inetpsa.com/modelle.html [NC,R=301,L]
+RewriteCond %{HTTP_HOST} ^(.*)de.cppv2.citroen.preprod.inetpsa.com$ [NC] 
+Rewritecond %{REQUEST_URI} /CWG/nutzfahrzeuge/ [NC]
+RewriteRule ^(.*)$ http://de.cppv2.citroen.preprod.inetpsa.com/modelle/nutzfahrzeuge.html [NC,R=301,L]
+RewriteCond %{HTTP_HOST} ^(.*)de.cppv2.citroen.preprod.inetpsa.com$ [NC] 
+Rewritecond %{REQUEST_URI} /cwg/nutzfahrzeuge/ [NC]
+RewriteRule ^(.*)$ http://de.cppv2.citroen.preprod.inetpsa.com/modelle/nutzfahrzeuge.html [NC,R=301,L]
+RewriteCond %{HTTP_HOST} ^(.*)de.cppv2.citroen.preprod.inetpsa.com$ [NC] 
+Rewritecond %{REQUEST_URI} /service/ [NC]
+RewriteRule ^(.*)$ http://de.cppv2.citroen.preprod.inetpsa.com/service-und-zubehoer.html [NC,R=301,L]
+RewriteCond %{HTTP_HOST} ^(.*)de.cppv2.citroen.preprod.inetpsa.com$ [NC] 
+Rewritecond %{REQUEST_URI} /CWG/ [NC]
+RewriteRule ^(.*)$ http://de.cppv2.citroen.preprod.inetpsa.com/startseite.html [NC,R=301,L]
+
+# Correction Erreurs 404 IT
+RewriteCond %{HTTP_HOST} ^(.*)it.cppv2.citroen.preprod.inetpsa.com$ [NC] 
+Rewritecond %{REQUEST_URI} /attualita/ [NC]
+RewriteRule ^(.*)$ http://it.cppv2.citroen.preprod.inetpsa.com/mondo-citroen/attualita.html [NC,R=301,L]
+RewriteCond %{HTTP_HOST} ^(.*)it.cppv2.citroen.preprod.inetpsa.com$ [NC] 
+Rewritecond %{REQUEST_URI} /aree/citroen_italia/news/ [NC]
+RewriteRule ^(.*)$ http://it.cppv2.citroen.preprod.inetpsa.com/mondo-citroen/attualita.html [NC,R=301,L]
+RewriteCond %{HTTP_HOST} ^(.*)it.cppv2.citroen.preprod.inetpsa.com$ [NC] 
+Rewritecond %{REQUEST_URI} /configuratore/ [NC]
+RewriteRule ^(.*)$ http://it.cppv2.citroen.preprod.inetpsa.com/modelli.html [NC,R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} !-s
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule !\.(js|ico|gif|jpg|png|css)$ /index.php
+RewriteRule ^.*$ /index.php [NC,L]
+
+## Protection du site contre les robots d'indexation
+#RewriteCond %{HTTP_USER_AGENT} (Googlebot|Gigabot|Slurp|Yeti|msnbot|Twiceler|cuill|Ask|Jeeves|Exabot|VoilaBot|MJ12bot|archiver|mnoGoSearch|nutchLycos|Alltheweb|Fast|Inktomi|DeepIndex|Moreoverbot|BlogPulseLive) [NC]
+#RewriteRule ^.*$ - [G]

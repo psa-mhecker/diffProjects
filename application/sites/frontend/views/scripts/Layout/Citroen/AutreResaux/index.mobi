@@ -1,0 +1,22 @@
+{if $aData.ZONE_MOBILE == 1 && $reseauxSociauxSelected|@sizeof >= 2}
+<div class="sliceNew sliceAutreReseauMobile">
+<section id="{$aData.ID_HTML}">                    
+ 
+        {if $aData.ZONE_TITRE}<h2 class="subtitle"  {if ($aData.PRIMARY_COLOR|count_characters)==7 } style="color:{$aData.PRIMARY_COLOR};" {/if}>{$aData.ZONE_TITRE|escape}</h2>{/if}
+		
+		{if $aData.ZONE_TITRE2}<h3 class="parttitle" {if ($aData.SECOND_COLOR|count_characters)==7 } style="color:{$aData.SECOND_COLOR};" {/if} >{$aData.ZONE_TITRE2|escape}</h3>{/if}
+
+    {if $aData.ZONE_TEXTE}<div class="mgchapo">{$aData.ZONE_TEXTE}</div>{/if}
+    {if $reseauxSociauxSelected && $reseauxSociaux}
+      {assign var="pos" value=1}
+        <ul class="suiveznoussurpictos">
+            {foreach from=$reseauxSociauxSelected item=Rs}
+                <li><a href="{urlParser url=$reseauxSociaux[$Rs]['RESEAU_SOCIAL_URL_MOBILE']}" target="_blank" title="{t('SUIVEZ_NOUS_SUR')} {gtm name='mobile_autres_reseaux_liens_vers_pages_reseaux_sociaux' data=$aParams datasup=['value'=>$Rs] labelvars=['%position%'=>$pos,'%nom du lien%'=>$reseauxSociaux[$Rs]['RS'],'%id du lien%'=>$Rs]} {$reseauxSociaux[$Rs]['RS']|capitalize:true}" class="picto-{$reseauxSociaux[$Rs]['RS']}"><span>{t('SUIVEZ_NOUS_SUR')} {$reseauxSociaux[$Rs]['RS']|capitalize:true}</span></a></li>
+                {$pos++}
+            {/foreach}
+        </ul>
+    {/if}
+</section>
+</div>
+
+{/if}

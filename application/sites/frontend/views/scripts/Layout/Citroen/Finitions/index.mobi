@@ -1,0 +1,99 @@
+{if $aData.ZONE_MOBILE eq 1}
+<div class="finitionsReviewMobile sliceNew">
+	<section id="{$aData.ID_HTML}" class="showroom-mobile {if $aData.ZONE_TITRE ==""}no-title{/if}">
+		{if $aData.ZONE_TITRE neq ''}<h3 class="parttitle"{if ($aData.PRIMARY_COLOR|count_characters)==7 } style="color:{$aData.PRIMARY_COLOR};" {/if}>{$aData.ZONE_TITRE|escape}</h3>{/if}
+		 <div class="slider slider-lvl2" {gtmjs type='slider'  data=$aData  action='Click' }> 
+			<div class="row of1">
+				{foreach from=$aFinitions item=finition name=listFinition}
+				 <article class="col columns">
+					<header>
+						<div class="intro">
+							{if $aData.FROM_MON_PROJET}
+							<span data-value="{$finition.FINITION_CODE}" class="check-label{if $finition.FINITION_CODE  == $smarty.get.select_vehicule_finition} checked{/if}"><span></span></span>
+							{else}
+							<figure><img class="lazy" src="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/lazy-235-100.png" data-original="{$finition.IMAGE_MOBILE}" alt="{$finition.FINITION_LABEL}" /></figure>
+							{/if}
+							<h4 class="subtitle" {if ($aData.PRIMARY_COLOR|count_characters)==7 } style="color:{$aData.PRIMARY_COLOR};" {/if}>{$finition.FINITION_LABEL}</h4>
+							<em class="prices">
+								{'A_PARTIR_DE'|t} <em{if ($aData.PRIMARY_COLOR|count_characters)==7 } style="color:{$aData.PRIMARY_COLOR};" {/if}><strong>{$finition.PRIMARY_DISPLAY_PRICE} {'TTC'|t}</strong></em>
+								{if  $aVehicule.VEHICULE.VEHICULE_CASH_PRICE_LEGAL_MENTION neq ''}
+								<small class="tooltip"><span>Mentions</span></small>
+								<div class="notice-text" data-close="Fermer"><p>{$aVehicule.VEHICULE.VEHICULE_CASH_PRICE_LEGAL_MENTION}</p></div>{/if}
+								<br />
+								{if $finition.CREDIT}
+									{'OU_A_PARTIR_DE'|t} <em{if ($aData.PRIMARY_COLOR|count_characters)==7 } style="color:{$aData.PRIMARY_COLOR};" {/if}><strong>{$finition.CREDIT.PRIX}</strong></em>{if  $finition.MENTIONS_LEGALES.HTML neq ''}<small class="tooltip"><span>Mentions</span></small><div class="notice-text" data-close="Fermer"><p>{$finition.MENTIONS_LEGALES.HTML}</p></div>
+									{/if}
+								{/if}
+							</em>
+						</div>
+						
+					</header>
+					<ul class="listed">
+					{if $finition.FINITION_MERE}
+						<li>
+						<span {if ($aData.SECOND_COLOR|count_characters)==7 } style="color:{$aData.SECOND_COLOR};" {/if}>{'EQUIPEMENTS_FINITION_MERE'|t} {$finition.FINITION_MERE}</span>
+						</li> 
+					{/if}
+						{foreach from=$finition.EQUIPEMENTS item=equipement name=listEquipement}
+							<li><span>{$equipement.EQUIPEMENT_LABEL}</span></li>
+						{/foreach}
+					</ul>
+					<ul class="cta of1 compareBtn" {if ($aData.PRIMARY_COLOR|count_characters)==7 } data-off="border:4px solid {$aData.SECOND_COLOR}; background:{$aData.SECOND_COLOR}; color:#ffffff;" data-hover="border:4px solid {$aData.SECOND_COLOR}; background:#ffffff; color:{$aData.SECOND_COLOR};"{/if} >
+						<li class="col"><a href="#" data-finitionlabel="{$finition.FINITION_LABEL}" class="btn dynscript" rel="{$aLcdv6Gamme.LCDV6}_{$aLcdv6Gamme.GAMME}_{$finition.FINITION_CODE}__{$smarty.get.pid}"><span>{'AFFICHER_EQUIPEMENTS_CARACTERISTIQUES'|t}</span></a></li>
+					</ul>
+				</article>
+				{/foreach}
+			</div>
+		</div>
+
+
+
+        {if ($aData.PRIMARY_COLOR|count_characters)==7 }
+        <style type="text/css">
+            {literal}
+            .showroom-mobile .bx-pager-link{
+                border:3px solid {/literal}{$aData.SECOND_COLOR}{literal}!important; 
+                background:#ffffff!important;
+            }
+            .showroom-mobile .bx-pager-link.active{
+                border:3px solid {/literal}{$aData.SECOND_COLOR}{literal}!important; 
+                background:{/literal}{$aData.SECOND_COLOR}{literal}!important;
+            }
+            {/literal}
+        </style>
+        {/if}
+             {if $aData.ZONE_TITRE6}
+                {if $aData.ZONE_TITRE5 == "POP_IN" && $aData.PAGE_CLEAR_URL != ""}
+                    <em class="notice"><span {gtmjs type='toggle' data=$aData labels=['tranche' => $aData.ZONE_TYPE_ID, 'id' => $aData.ZONE_ID, 'profil' => $dataLayer.profiles, 'nomBouton' => $aData.ZONE_TITRE6, 'idBouton' => 'legal']}>{$aData.ZONE_TITRE6}</span></em>
+                    <div class="notice-text" data-close="Fermer">
+                        <h6 class="title-lvl1 centered nobg">{$titlePopInMention}</h6>
+                        <iframe id="iframe_popin" class="iframe_popin_style" src="{$aData.PAGE_CLEAR_URL}?popinMobile=1"></iframe>
+                    </div>
+                {elseif $aData.ZONE_TITRE5 == "ROLL"}
+                    <em class="notice"><span>{$aData.ZONE_TITRE6}</span></em>
+                    <div class="notice-text" data-close="Fermer">
+                        {if $aData.MEDIA_ID4 != ""}<figure><img class="lazy noscale" src="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/235-100.png" data-original="{$aData.MEDIA_ID4}" alt="{$aData.MEDIA_ID4}" /></figure>{/if}
+                        <h6 class="title-lvl1 centered nobg">{$aData.ZONE_TITRE6}</h6>
+                        <p>
+                            {$aData.ZONE_TEXTE4}
+                        </p>
+                    </div>
+                {/if}
+            {/if}
+            {if $aData.ZONE_TITRE5 == "TEXT" && $aData.ZONE_TEXTE4 neq ""}
+                {if $MEDIA_PATH4 != ""}<figure class="visual"><img class="lazy noscale" src="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/235-100.png" data-original="{"{Pelican::$config.MEDIA_HTTP}{$MEDIA_PATH4}"|format:Pelican::$config.MEDIA_FORMAT_ID.MOBILE_MENTION}" alt="{$MEDIA_TITLE4}" /></figure>{/if}
+                <em class="notice">{$aData.ZONE_TITRE6}<br>{$aData.ZONE_TEXTE4}</em>
+            {/if}
+	</section>
+	
+	<script type="text/template" id="itemTpl">
+	</script>
+	<div id="car-details" class="showroom-mobile car-details"></div>
+{/if}
+{foreach from=$aFinitions item=finition name=listFinition}
+	<div class="notice-text" data-close="Fermer">
+		<p>
+			{$aVehicule.VEHICULE.VEHICULE_CASH_PRICE_LEGAL_MENTION}
+		</p>
+	</div>
+{/foreach}

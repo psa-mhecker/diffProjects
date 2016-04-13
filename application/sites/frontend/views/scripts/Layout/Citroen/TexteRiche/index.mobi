@@ -1,0 +1,11 @@
+{if $aData.ZONE_MOBILE == 1}
+    <div class="sliceNew sliceTexteRicheMobile">
+        {if $aData.ZONE_TEXTE4}
+        <section class="no-title afterFilters">
+                <div class="zonetexte">
+                    {$aData.ZONE_TEXTE4}
+                </div>
+        </section>
+        {/if}
+    </div>
+{/if}

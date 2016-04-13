@@ -1,0 +1,187 @@
+﻿
+{if $aData.FORM_DEPLOYE.FORM_CONTEXT_CODE neq 'RTO' && $bVenteIframe neq true}
+{literal}
+    <script	type="text/javascript">
+
+        var cpw = cpw || [];
+
+        cpw.{/literal}{$formTypeGTM}{literal} = cpw.{/literal}{$formTypeGTM}{literal} || [];
+        cpw.{/literal}{$formTypeGTM}{literal}.form_gtm_data = {
+            {/literal}
+            {foreach from=$aDataGTM[$formTypeGTM] key=var_name item=foo2 name=gtm}
+            '{$var_name}' : "{$foo2}",
+            {/foreach}
+            {literal}
+
+        };
+
+    </script>
+	<script type="text/javascript" src="/version/vc/script/webforms_loader.js"></script> 
+{/literal}
+{/if}
+<script type="text/javascript">
+    // Transmission de l'ID de form pour push dataLayer dans initFormulaire()
+    window.FORM_TYPE_GTM_ID = {$formTypeFull.FORM_TYPE_GTM_ID|json_encode};
+</script>
+{literal}<link href="{/literal}{$formcss}{literal}" type="text/css" rel="stylesheet">{/literal}
+
+
+{if ($aData.PRIMARY_COLOR|count_characters)==7 }
+{literal}
+    <style type="text/css">
+        input[type=radio]:checked+label:after{content:"";position:absolute;left:10px;top:10px;display:block;width:14px;height:14px;background:{/literal}{$aData.PRIMARY_COLOR}{literal};border-top-left-radius:14px;border-top-right-radius:14px;border-bottom-left-radius:14px;border-bottom-right-radius:14px;vertical-align:middle}
+.submit-form-btn{background: {/literal}{if ($aData.PRIMARY_COLOR|count_characters)==7 }{$aData.PRIMARY_COLOR}{else} #f0780a{/if}{literal};color: #fff;cursor: pointer;display: block;margin: 30px auto;padding: 7px;text-align: center; width: 150px; font-size: 13px !important;font:15px Arial,sans-serif}
+    </style>
+{/literal}
+{/if}
+
+{if $sCssMobile}{$sCssMobile}{/if}
+
+<div class="sliceNew sliceDeployableFormMobile">
+{if $formulaire || $aData.ZONE_TITRE4 eq 'CHOIX'}
+
+    <a name="{$formName}anchor"></a>
+    {if $aData.ZONE_ATTRIBUT neq 0 && ($aData.ZONE_ATTRIBUT eq 2 || $aData.ZONE_ATTRIBUT eq 3) && !$trancheEssayer}
+        {*   Attention présentation du titre sous forme de bandeau gris
+           {if $aData.ZONE_TITRE neq ''}
+               <div id="{$aData.ID_HTML}" class="head full">
+                   <header>
+                       <div class="txt">
+                           <h1 class="title-lvl0"><span>{$aData.ZONE_TITRE}</span></h1>
+                       </div>
+                   </header>
+               </div>
+           {/if}
+        *}
+        {if $idPDV && $isRTO == 'RTO'}
+            <input type="hidden" id="isGeocodeActive" value="{$idPDV}" >
+            <input type="hidden" id="isPDV" value="{$isRTO}" >
+        {/if}
+        <input type="hidden" name="{$formName}idPage" value="{$aData.PAGE_ID}"/>
+        <input type="hidden" name="{$formName}areaId" value="{$aData.AREA_ID}"/>
+        <input type="hidden" name="{$formName}zoneOrder" value="{$aData.ZONE_ORDER}"/>
+        <input type="hidden" name="{$formName}zoneTid" value="{$aData.ZONE_TEMPLATE_ID}"/>
+        <input type="hidden" name="{$formName}styleForm" value="{$aData.ZONE_SKIN}"/>
+        <input type="hidden" name="{$formName}form_page_pid" value="{$smarty.get.pid}"/>
+        <input type="hidden" name="{$formName}ppid" value="{$smarty.get.ppid}"/>
+        <input type="hidden" name="{$formName}CODE_PAYS" value="{$sCodePays}"/>
+        <input type="hidden" name="{$formName}typeDevice" value="{$typeDevice}"/>
+        <input type="hidden" name="{$formName}LANGUE_CODE" value="{$sLanguePays}"/>
+        <input type="hidden" name="formTypeLabel" value="{$formtype}"/>
+		 <input type="hidden" name="formTypeGTM" value="{$formTypeGTM}"/>
+
+        <!-- CPW-4014 -->
+        <section class="{if ($aData.PRIMARY_COLOR|count_characters)==7 } showroom-mobile {/if} {$formName} {$aData.ZONE_SKIN}">
+            {if $aData.ZONE_TITRE}<h1 class="title-lvl1"{if ($aData.PRIMARY_COLOR|count_characters)==7 } style="color:{$aData.PRIMARY_COLOR};" {/if}>{$aData.ZONE_TITRE}</h1>{/if}
+            {if $aData.ZONE_TEXTE neq ''}
+                <div class="text {$formName}Chapo">
+                    <span class="line"><span>{$aData.ZONE_TEXTE|nl2br|replace:"#MEDIA_HTTP#":Pelican::$config.MEDIA_HTTP}</span></span>
+                </div>
+            {/if}
+            <div class="request-form row {$formName}" id="{$formName}">
+                <input type="hidden" name="formActivation" value="{$formActivation}"/>
+                <input type="hidden" name="typeFormulaire" value="{if $aData.ZONE_ATTRIBUT2}{$aData.ZONE_ATTRIBUT2}{else}{$aData.ZONE_TITRE3}{/if}"/>
+                <input type="hidden" name="typeDevice" value="{$typeDevice}"/>
+                <input type="hidden" name="lcdv6Form" value="{$lcdv6Form}"/>
+                <input type="hidden" name="InceCode" value="{$formulaire.FORM_INCE_CODE}"/>
+				 <input type="hidden" name="FORM_CONTEXT_CODE" value="{$formulaire.FORM_CONTEXT_CODE}"/>
+                <input type="hidden" name="gdoMarketingCode" value="{$formulaire.FORM_GDO_MARKETING_CODE}"/>
+                <input type="hidden" name="{$formName}deployed" value="0"/>
+                <input type="hidden" name="deployed" value="0"/>
+                <input type="hidden" name="TYPE_ID" value="{$formulaire.FORM_TYPE_ID}"/>
+                <input type="hidden" name="EQUIPEMENT_CODE" value="{$formulaire.FORM_EQUIPEMENT_CODE}"/>
+                <input type="hidden" name="USER_TYPE_CODE" value="{$formulaire.FORM_USER_TYPE_CODE}"/>
+                <input type="hidden" name="form_page_pid" value="{$smarty.get.pid}"/>
+                <input type="hidden" name="ppid" value="{$smarty.get.ppid}"/>
+                <input type="hidden" name="CODE_PAYS" value="{$sCodePays}"/>
+                <input type="hidden" name="typeDevice" value="{$typeDevice}"/>
+                <input type="hidden" name="LANGUE_CODE" value="{$sLanguePays}"/>
+                <input type="hidden" name="formTypeLabel" value="{$formtype}"/>
+				 <input type="hidden" name="formTypeGTM" value="{$formTypeGTM}"/>
+                {if $formActivation eq 'CHOIX'}
+                    <script	type="text/javascript">
+                            delete cpw.{$formTypeGTM}.form_gtm_data.to_push;
+                            dataLayer.push(cpw.{$formTypeGTM}.form_gtm_data);
+                        </script>
+						
+
+                    <div class="step in">
+                        <h2 class="title" ><span class="text"  {if ($aData.PRIMARY_COLOR|count_characters)==7 } style="color:{$aData.PRIMARY_COLOR};font-weight:bold;" {/if}>{'ETES_VOUS_PRO_PARTICULIER'|t}</span></h2>
+                        <form name="request-form" id="request-form" action="" method="post">
+                            <fieldset>
+                                <div class="row">
+                                    <input id="particulier" class="radio" type="radio" name="typeClient" value="IND">
+                                    <label for="particulier" class="radio-label">&nbsp;{'PARTICULIER'|t}</label>
+                                </div>
+                                <div class="row">
+                                    <input id="professionnel" class="radio" type="radio" name="typeClient" value="PRO">
+                                    <label for="professionnel" class="radio-label">&nbsp;{'PRO'|t}</label>
+                                </div>
+                                <a href="#" rel="{$formName}" class="{if ($aData.PRIMARY_COLOR|count_characters)==7 }submit-form-btn{else}submit{/if} nextStepForm{$formName}" >{'NEXT_STEP'|t}</a>
+                            </fieldset>
+                        </form>
+                    </div>
+                {/if}
+            </div>
+        </section>
+
+    {literal}
+        <script type="text/javascript">
+            /*dataLayer.push({
+             'event': 'updateformsV2',
+             'pageName': 'Intro/Request_{/literal}{$formTypeFull.FORM_TYPE_GTM_ID}{literal}',
+             'virtualPageURL': '/Request_{/literal}{$formTypeFull.FORM_TYPE_GTM_ID}{literal}/Intro'
+             });*/
+        </script>
+    {/literal}
+
+    {elseif $aData.FORM_DEPLOYE}
+        <input type="hidden" name="{$formName}deployed" value="1"/>
+        <input type="hidden" name="deployed" value="1"/>
+        {if $formulaire.FORM_TITRE neq ''}
+            <div id="{$aData.ID_HTML}" class="{if ($aData.PRIMARY_COLOR|count_characters)==7 } showroom-mobile {/if} head full">
+                <header>
+                    <div class="txt">
+                        <h1 class="title-lvl0"><span>{$formulaire.FORM_TITRE}</span></h1>
+                    </div>
+                </header>
+            </div>
+        {/if}
+        <section class="{if ($aData.PRIMARY_COLOR|count_characters)==7 } showroom-mobile {/if} {$formName} {if $formulaire.FORM_MODE_AFF eq 'C'}c-skin{elseif $formulaire.FORM_MODE_AFF eq 'DS'}ds{/if}" id="{$formName}">
+            {if $formulaire.FORM_CHAPO neq ''}
+                <div class="text {$formName}Chapo">
+                    <span class="line"><span>{$formulaire.FORM_CHAPO|nl2br|replace:"#MEDIA_HTTP#":Pelican::$config.MEDIA_HTTP}</span></span>
+                </div>
+            {/if}
+            <div class="request-form row {$formName}" id="{$formName}">
+                <input type="hidden" name="formActivation" value="{$formActivation}"/>
+                <input type="hidden" name="typeFormulaire" value="{if $aData.ZONE_ATTRIBUT2}{$aData.ZONE_ATTRIBUT2}{else}{$aData.ZONE_TITRE3}{/if}"/>
+                <input type="hidden" name="typeDevice" value="{$typeDevice}"/>
+                <input type="hidden" name="lcdv6Form" value="{$lcdv6Form}"/>
+                <input type="hidden" name="InceCode" value="{$formulaire.FORM_INCE_CODE}"/>
+                <input type="hidden" name="gdoMarketingCode" value="{$formulaire.FORM_GDO_MARKETING_CODE}"/>
+                <input type="hidden" name="{$formName}deployed" value="1"/>
+                <input type="hidden" name="deployed" value="1"/>
+                <input type="hidden" name="TYPE_ID" value="{$formulaire.FORM_TYPE_ID}"/>
+                <input type="hidden" name="EQUIPEMENT_CODE" value="{$formulaire.FORM_EQUIPEMENT_CODE}"/>
+				 <input type="hidden" name="FORM_CONTEXT_CODE" value="{$formulaire.FORM_CONTEXT_CODE}"/>
+                <input type="hidden" name="USER_TYPE_CODE" value="{$formulaire.FORM_USER_TYPE_CODE}"/>
+                <input type="hidden" name="form_page_pid" value="{$smarty.get.pid}"/>
+                <input type="hidden" name="ppid" value="{$smarty.get.ppid}"/>
+                <input type="hidden" name="CODE_PAYS" value="{$sCodePays}"/>
+                <input type="hidden" name="typeDevice" value="{$typeDevice}"/>
+                <input type="hidden" name="LANGUE_CODE" value="{$sLanguePays}"/>
+                <input type="hidden" name="formTypeLabel" value="{$formtype}"/>
+				 <input type="hidden" name="formTypeGTM" value="{$formTypeGTM}"/>
+            </div>
+        </section>
+			
+
+   
+    {/if}
+{/if}
+</div>
+<input type="hidden" name="form_page_title" value="{$pageName}"/>
+		<input type="hidden" name="vehicleModelBodystyleLabel" value="{$vehicleModelBodystyleLabel}"/>
+		<input type="hidden" name="siteTypeLevel2" value="{$siteTypeLevel2}"/>
+

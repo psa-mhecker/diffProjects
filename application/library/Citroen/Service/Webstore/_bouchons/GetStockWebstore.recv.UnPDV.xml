@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <soap:Body>
+      <GetStockWebstoreResponse xmlns="http://tempuri.org/">
+         <GetStockWebstoreResult>
+            <vehiclesList>
+               <VehicleProperties>
+                  <VehicleCarNum>GM7403</VehicleCarNum>
+                  <VehicleVIN>VF7PMCFB4CR522976</VehicleVIN>
+                  <VehicleDealerCode>020401</VehicleDealerCode>
+                  <VehicleCommercialLabel>C1 3 portes 1.0i BVM Attraction</VehicleCommercialLabel>
+                  <VehicleModelCode>1CB0</VehicleModelCode>
+                  <VehicleModelLabel>C1</VehicleModelLabel>
+                  <VehicleBodyStyleCode>A3</VehicleBodyStyleCode>
+                  <VehicleBodyStyleLabel>Berline 3 portes</VehicleBodyStyleLabel>
+                  <VehicleModelBodyStyleLabel>C1, Berline 3P</VehicleModelBodyStyleLabel>
+                  <VehicleEngineLabel>1.0i - 4 CV</VehicleEngineLabel>
+                  <VehicleEnergieCode>02</VehicleEnergieCode>
+                  <VehicleEnergieLabel>Essence</VehicleEnergieLabel>
+                  <VehicleGradeLabel>Attraction</VehicleGradeLabel>
+                  <VehicleTransmissionTypeLabel>Manuelle  5 rapports</VehicleTransmissionTypeLabel>
+                  <VehicleFeatureExtLabel>Rouge Scarlett</VehicleFeatureExtLabel>
+                  <VehicleFeatureIntLabel>Garnissage Maille Nokimat Mistral</VehicleFeatureIntLabel>
+                  <VehicleCO2Rate>99</VehicleCO2Rate>
+                  <VehicleCO2Bonus>200</VehicleCO2Bonus>
+                  <VehiclePriceCatalogue>9800</VehiclePriceCatalogue>
+                  <VehicleOptionPrice>250</VehicleOptionPrice>
+                  <VehicleWebstorePrice>9600</VehicleWebstorePrice>
+                  <VehicleTarifCode>280</VehicleTarifCode>
+                  <VehicleRegBodyStyleCode>00000005</VehicleRegBodyStyleCode>
+                  <VehicleRegEngineCode>ES000010</VehicleRegEngineCode>
+                  <VehicleRegEngineLabel>1.0 i</VehicleRegEngineLabel>
+                  <VehicleRegBodyStyleLabel>Berline 3P</VehicleRegBodyStyleLabel>
+                  <VehicleRegCritMarketingLabel>longueur &lt; 3,7 m</VehicleRegCritMarketingLabel>
+                  <VehicleRegGradeCode>AC000012</VehicleRegGradeCode>
+                  <VehicleRegGradeLabel>Attraction</VehicleRegGradeLabel>
+                  <VehicleRegTransmissionTypeCode>BV000010</VehicleRegTransmissionTypeCode>
+                  <VehicleRegTransmissionTypeLabel>Manuelles 5/6 rapports</VehicleRegTransmissionTypeLabel>
+                  <VehicleStockLevel>30</VehicleStockLevel>
+                  <VehicleKind>VP</VehicleKind>
+                  <VehicleOptionList>DD04</VehicleOptionList>
+                  <VehicleAvailability>8</VehicleAvailability>
+                  <VehicleUrbanConso>5,1</VehicleUrbanConso>
+                  <VehicleUrbanConsoMixt>4,3</VehicleUrbanConsoMixt>
+                  <VehicleUrbanConsoExtra>3,8</VehicleUrbanConsoExtra>
+                  <VehicleWebstoreLink>http://www.carstore.citroen.fr/haguenau/c1/berline-3p/fiche-detaillee?car=GM7403</VehicleWebstoreLink>
+                  <VehicleImage>http://www.carstore.citroen.fr/SrcImagesCentral/colorsStep/1CB0/exterior/1CB0A3_0MP00NY2.jpg</VehicleImage>
+                  <VehicleReduction>0</VehicleReduction>
+                  <VehiclePReduction>0</VehiclePReduction>
+                  <VehicleIsGoodOffers>false</VehicleIsGoodOffers>
+                  <VehicleLocalDiscount>0</VehicleLocalDiscount>
+                  <VehicleNationalDiscount>0</VehicleNationalDiscount>
+                  <VehicleReductionSecondaire>0</VehicleReductionSecondaire>
+                  <VehicleReductionVehicle>200</VehicleReductionVehicle>
+                  <VehicleReductionTotal>0</VehicleReductionTotal>
+                  <VehiclePReductionTotal>0</VehiclePReductionTotal>
+               </VehicleProperties>
+            </vehiclesList>
+            <ResponseCode>OK</ResponseCode>
+            <NbVehicles>1</NbVehicles>
+            <Dealer1StockURL>http://www.carstore.citroen.fr/haguenau?mbd=1cb000000005</Dealer1StockURL>
+            <Dealer1StockResultUrl>http://www.carstore.citroen.fr/</Dealer1StockResultUrl>
+            <MinPrice>9600</MinPrice>
+            <MaxPrice>9600</MaxPrice>
+         </GetStockWebstoreResult>
+      </GetStockWebstoreResponse>
+   </soap:Body>
+</soap:Envelope>

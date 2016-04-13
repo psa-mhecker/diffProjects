@@ -1,0 +1,65 @@
+{if $stickyBar|sizeof >= 2}
+	{if !$bStickyBarInactiveSurMobile}
+	<section id="{$aData.ID_HTML}" class="showroom-mobile no-sep-after no-title">
+	<ul class="links upper">
+		{foreach from=$stickyBar item=nav name=sb}
+                    {assign var='afficheElement' value='false'}
+                    {if $smarty.foreach.sb.iteration!=1 || Pelican::$config.STICKY_ZONE_TRANSVERSE }
+                        {if $nav.PAGE_CLEAR_URL}
+                            
+                            {if $nav.PAGE_START_DATE == '' && $nav.PAGE_END_DATE == ''}
+                                {assign var='afficheElement' value='true'}
+                            {else if $nav.PAGE_START_DATE|date_format:"%Y%m%d%H%M" <= $smarty.now|date_format:"%Y%m%d%H%M" 
+                                    && $smarty.now|date_format:"%Y%m%d%H%M" <= $nav.PAGE_END_DATE|date_format:"%Y%m%d%H%M"}
+                                    {assign var='afficheElement' value='true'}
+                            {else if $nav.PAGE_START_DATE|date_format:"%Y%m%d%H%M" <= $smarty.now|date_format:"%Y%m%d%H%M" 
+                                    && $nav.PAGE_END_DATE == ''}
+                                    {assign var='afficheElement' value='true'}
+                            {else if $nav.PAGE_START_DATE == '' 
+                                    && $smarty.now|date_format:"%Y%m%d%H%M" <= $nav.PAGE_END_DATE|date_format:"%Y%m%d%H%M"}
+                                    {assign var='afficheElement' value='true'}
+                            {/if}
+                            
+                            {if $afficheElement == 'true'}
+                                <li><a href="{urlParser url=$nav.PAGE_CLEAR_URL}{if Pelican::$config.STICKY_ZONE_TRANSVERSE}?sticky{/if}" {gtm name='clic_sur_une_rubrique' data=$aData datasup=['value'=>$nav.PAGE_ID] labelvars=['%nom du modele%'=>$aVehicule.VEHICULE_LABEL,'%intitule de la rubrique%'=>$nav.PAGE_TITLE]}><span>{if $shortTitle}{$nav.PAGE_TITLE_BO}{else}{$nav.PAGE_TITLE}{/if}</span></a></li>
+                            {/if}
+                        {/if}
+                    {/if}
+		{/foreach}
+	</ul>
+
+    <style type="text/css">
+    {literal}
+        .showroom-mobile .links li a{
+            border:4px solid {/literal}{if ($aData.PRIMARY_COLOR|count_characters)==7 }{$aData.PRIMARY_COLOR}{else}#afadc3{/if}{literal}!important;
+            background:#ffffff!important;
+            color:{/literal}{$aData.PRIMARY_COLOR}{literal}!important;
+        }
+        .showroom-mobile .links li a span{
+            color:{/literal}{if ($aData.PRIMARY_COLOR|count_characters)==7 }{$aData.PRIMARY_COLOR}{else}#afadc3{/if}{literal}!important;
+        }
+        .showroom-mobile .links li a:hover,
+        .showroom-mobile .links li a:active{
+            border:4px solid {/literal}{if ($aData.PRIMARY_COLOR|count_characters)==7 }{$aData.PRIMARY_COLOR}{else}#afadc3{/if}{literal}!important;
+            background:{/literal}{if ($aData.PRIMARY_COLOR|count_characters)==7 }{$aData.PRIMARY_COLOR}{else}#afadc3{/if}{literal}!important;
+            color:{/literal}#ffffff{literal}!important
+        }
+        .showroom-mobile .links li a:hover span,
+        .showroom-mobile .links li a span:hover,
+        .showroom-mobile .links li a span:active{
+            color:{/literal}{if ($aData.PRIMARY_COLOR|count_characters)==7 }#ffffff{else}{$aData.PRIMARY_COLOR}{/if}{literal}!important;
+        }
+        {/literal}
+    </style>
+	</section>
+	{elseif $aData.TEMPLATE_PAGE_ID == Pelican::$config.TEMPLATE_PAGE.SHOWROOM_INTERNE}
+	<div class="finitionsReviewMobile sliceNew">
+	<section class="showroom-mobile no-sep-after stickybar">
+		<h2 class="title" {if ($aData.SECOND_COLOR|count_characters)==7 } style="color:{$aData.SECOND_COLOR};" {/if}>{$pageTitle}</h2>
+	</section>
+	</div>
+	{/if}
+	{if $aZonesHeritesCurrent|sizeof > 0}
+	{foreach from=$aZonesHeritesCurrent item=zoneCurrent}{$zoneCurrent}{/foreach}
+	{/if}
+{/if}

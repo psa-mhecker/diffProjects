@@ -1,0 +1,51 @@
+#tablet_menu a {
+	text-decoration: none;
+	color: inherit;
+}
+
+#page {
+	text-align: center;
+}
+
+.shareme {
+	font-family: sans-serif;
+	display: inline-block;
+	color: #fff;
+	background: #333;
+	padding: 10px;
+}
+
+#tablet_menu {
+	font-family: sans-serif;
+	padding: 10px;
+	position: absolute;
+	left: -1000px;
+	background-color: #fff;
+	padding: 20px 0px 0px;
+	background: -webkit-canvas(menu_background) no-repeat;
+	-webkit-transition: opacity 300ms ease-out;
+}
+
+#tablet_menu li {
+	list-style-type: none;
+}
+
+#tablet_menu a {
+	display: block;
+	margin: 7px;
+	padding: 10px 20px;
+	font-weight: bold;
+	font-size: 20px;
+	text-align: center;
+	border-radius: 5px;
+	background: -webkit-gradient(linear, 0% 50%, 0% 51%, from(#fff),
+		to(#edeff3) );
+}
+
+.hide {
+	opacity: 0;
+}
+
+.show {
+	opacity: 1;
+}

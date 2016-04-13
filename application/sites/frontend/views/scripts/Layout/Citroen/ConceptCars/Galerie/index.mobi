@@ -1,0 +1,30 @@
+<style>
+{if ($aParams.PRIMARY_COLOR|count_characters)==7 }
+    div.sliceConceptCarsGalerieMobile .subtitle{literal}{{/literal}
+        color:{$aParams.PRIMARY_COLOR};
+    {literal}}{/literal}
+    div.sliceConceptCarsGalerieMobile .buttonTransversalInvert{literal}{{/literal}
+        background-color:{$aParams.SECOND_COLOR};
+        border-color:{$aParams.SECOND_COLOR};
+        color:#ffffff;
+    {literal}}{/literal}
+    div.sliceConceptCarsGalerieMobile .buttonTransversalInvert:hover{literal}{{/literal}
+        background-color:#ffffff;
+        border-color:{$aParams.SECOND_COLOR};
+        color:{$aParams.SECOND_COLOR};
+    {literal}}{/literal}
+{/if}
+</style>
+<div class="sliceNew sliceConceptCarsGalerieMobile">
+    <section id="{$aParams.ID_HTML}" class="{$aParams.ZONE_SKIN} no-title afterIntro">
+        {foreach from=$galerieConceptCars item=galerie}
+            {if $galerie.PAGE_TITLE}<h2 class="subtitle">{$galerie.PAGE_TITLE}</h2>{/if}
+            <div class="row of1">
+                <a class="img col" href="{urlParser url=$galerie.PAGE_CLEAR_URL}">
+                    <figure><img class="lazy" src="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/235-100.png" data-original="{"{Pelican::$config.MEDIA_HTTP}{$galerie.MEDIA_PATH}"|format:Pelican::$config.MEDIA_FORMAT_ID.MOBILE_CONCEPT_CAR_GALERIE}" alt="{$galerie.MEDIA_ALT|escape}" /></figure>
+                    <span class="buttonTransversalInvert">{'EN_SAVOIR_PLUS'|t}</span>
+                </a>
+            </div>
+        {/foreach}
+    </section>
+</div>

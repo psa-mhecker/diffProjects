@@ -1,0 +1,40 @@
+{if $aData.ZONE_WEB == 1}
+{$sSharer}
+<div class="sliceNew sliceOverviewMobile">
+    <div class="header">
+        <h2 id="overview-n{$aData.ID_HTML}" class="subtitle">
+            {$aData.ZONE_TITRE|escape}
+        </h2>
+    </div>
+    <section class="{$aData.ZONE_SKIN} overview">
+    {if $aData.ZONE_TEXTE}<div class="zonetexte">{$aData.ZONE_TEXTE}</div>{/if}
+    {if $aOverview|@sizeof > 0}
+        <ul class="actions">
+            {foreach from=$aOverview item=Page}
+                {assign var='afficheElement' value='false'}
+
+                {if $Page.PAGE_START_DATE == '' && $Page.PAGE_END_DATE == ''}
+                    {assign var='afficheElement' value='true'}
+                {else if $Page.PAGE_START_DATE|date_format:"%Y%m%d%H%M" <= $smarty.now|date_format:"%Y%m%d%H%M" 
+                    && $smarty.now|date_format:"%Y%m%d%H%M" <= $Page.PAGE_END_DATE|date_format:"%Y%m%d%H%M"}
+                    {assign var='afficheElement' value='true'}
+                {else if $Page.PAGE_START_DATE|date_format:"%Y%m%d%H%M" <= $smarty.now|date_format:"%Y%m%d%H%M" 
+                    && $Page.PAGE_END_DATE == ''}
+                    {assign var='afficheElement' value='true'}
+                {else if $Page.PAGE_START_DATE == '' 
+                    && $smarty.now|date_format:"%Y%m%d%H%M" <= $Page.PAGE_END_DATE|date_format:"%Y%m%d%H%M"}
+                    {assign var='afficheElement' value='true'}
+                {/if}
+
+                {if $afficheElement == 'true'}
+                    <li>
+                        <a class="buttonTransversalInvert" href="{urlParser url=$Page.PAGE_CLEAR_URL}" {gtm data=$aData action='Push' datasup=['eventLabel'=> {$Page.PAGE_TITLE}]}>
+                        <span>{$Page.PAGE_TITLE}</span></a>
+                    </li>
+                {/if}
+            {/foreach}
+        </ul>
+    {/if}
+    </section>
+</div>
+{/if}
