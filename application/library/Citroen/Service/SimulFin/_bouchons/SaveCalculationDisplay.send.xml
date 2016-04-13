@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://xml.inetpsa.com/Services/SFG/Service_Dealer" xmlns:ser1="http://xml.inetpsa.com/Services/SFG/Service_dealer">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ser:SaveCalculationDisplay>
+         <ser1:RequestCalculationDisplay>
+            <ser1:IdSession/>
+             <ser1:Site>
+               <ser1:Login>CFG</ser1:Login>
+               <ser1:Password>recette</ser1:Password>
+            </ser1:Site>
+            <ser1:Context>
+               <ser1:Country>FR</ser1:Country>
+               <ser1:Language>fr-fr</ser1:Language>
+               <ser1:FinancingMake>AC</ser1:FinancingMake>
+               <ser1:Currency>EUR</ser1:Currency>
+               <ser1:FlowDate>2013-03-12T16:18:10.0000000+01:00</ser1:FlowDate>
+            </ser1:Context>
+            <ser1:Vehicle>
+               <ser1:VehicleGeneral>
+                   <ser1:VehicleBrandCode>CITROEN</ser1:VehicleBrandCode>
+                   <ser1:VehicleBrandLabel>CITROEN</ser1:VehicleBrandLabel>
+                   <ser1:VehicleType>VN</ser1:VehicleType>
+                   <ser1:VehicleIdentification>1CWAAFECB504A030</ser1:VehicleIdentification>
+                   <ser1:VehicleModel>C3 Picasso</ser1:VehicleModel>
+                   <ser1:VehicleDescription>Nouveau C3 Picasso Monospace</ser1:VehicleDescription>
+                   <ser1:VehicleCategory>VP</ser1:VehicleCategory>
+                   <ser1:VehicleEngine>02</ser1:VehicleEngine>
+                   <ser1:VehicleKilometers/>
+                   <ser1:VehicleCO2Emission/>
+               </ser1:VehicleGeneral>
+               <ser1:VehiclePrices>
+                               <ser1:VehiclePriceHT>0</ser1:VehiclePriceHT>
+                               <ser1:VehiclePriceTTC>16050</ser1:VehiclePriceTTC>
+                               <ser1:VehicleOTRHT>0</ser1:VehicleOTRHT>
+                               <ser1:VehicleOTRTTC>0</ser1:VehicleOTRTTC>
+                               <ser1:VehicleBrandRebateTTC>0</ser1:VehicleBrandRebateTTC>
+                               <ser1:AddedOptionPrice>0</ser1:AddedOptionPrice>
+                               <ser1:IncludedOptionPrice>0</ser1:IncludedOptionPrice>
+               </ser1:VehiclePrices>
+            </ser1:Vehicle>
+            <ser1:Client>
+                                               <ser1:ClientPersonalData>
+                                                               <ser1:ClientType>PART</ser1:ClientType>
+                                               </ser1:ClientPersonalData>
+            </ser1:Client>
+            <ser1:Financing>
+                 <ser1:FinancingSpecialFlag>1</ser1:FinancingSpecialFlag>
+            </ser1:Financing>
+            <ser1:DisplayNameList>
+                 <ser1:DisplayName>APARTIRDE</ser1:DisplayName>
+            </ser1:DisplayNameList>
+         </ser1:RequestCalculationDisplay>
+     </ser:SaveCalculationDisplay>
+   </soapenv:Body>
+</soapenv:Envelope>

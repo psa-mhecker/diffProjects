@@ -1,0 +1,48 @@
+head {font-family: Verdana;
+    font-size: 18px;
+	color: #aaaaaa;
+	font-weight:bold;
+	text-align:left;}
+body {font-family:Verdana; font-size:12px; color:#838383;}
+a {color:#ff0000; font-family:Verdana; font-size:20px;}
+
+month {
+		font-family: Verdana;
+		font-size: 14px;
+		color: #a9a9a9;
+		font-weight:bold;
+		text-align:left;}
+		
+weekDays{
+		font-family: Verdana;
+		font-size: 10px;
+		color: #a9a9a9;
+		font-weight:bold;
+		text-align:left;}
+		
+simpleDay {
+		font-family: Verdana;
+		font-size: 10px;
+		color: #a9a9a9;
+		font-weight:bold;
+		text-align:left;}
+		
+eventDay {
+		font-family: Verdana;
+		font-size: 10px;
+		color: #505050;
+		font-weight:bold;
+		text-align:left;}
+		
+currentDay {
+		font-family: Verdana;
+		font-size: 10px;
+		color: #505050;
+		font-weight:bold;
+		text-align:left;}
+		
+infoBox{font-family: Verdana;
+		font-size: 16px;
+		color: #aaaaaa;
+		font-weight:bold;
+		text-align:left;}

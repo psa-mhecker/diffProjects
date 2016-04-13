@@ -1,0 +1,71 @@
+{if !$smarty.get.id}
+{if $smarty.get.erreur}
+<section class="mainalert">
+	<h2 class="title-lvl4">{if $smarty.get.erreur==1}{$aErreurs.PAGE_ZONE_MULTI_TITRE}{elseif $smarty.get.erreur==2}{$aErreurs.PAGE_ZONE_MULTI_TITRE2}{/if}</h2>
+	{if $smarty.get.erreur==1}{$aErreurs.PAGE_ZONE_MULTI_TEXT}{elseif $smarty.get.erreur==2}{$aErreurs.PAGE_ZONE_MULTI_TEXT2}{/if}{if $smarty.get.msg}<br/>{$smarty.get.msg}{/if}
+</section>
+{/if}
+<section class="connect">
+	<div class="popin-like">
+		<div class="cont">
+			<div class="step">
+				<h2 class="title-lvl4">{$aNonIdentifie.PAGE_ZONE_MULTI_TITRE}</h2>
+				<span class="i-text">{$aNonIdentifie.PAGE_ZONE_MULTI_TITRE2}</span>
+				<small class="tooltip form-essai"><span>{'INFORMATIONS'|t}</span></small>
+				<div class="notice-text" data-close="{'FERMER'|t}"><p>{$aNonIdentifie.PAGE_ZONE_MULTI_TEXT2}</p></div>
+				<a href="#logon" class="connection-btn">{'CONNEXION'|t}</a>
+				{if $aConnexionRS}
+				<div class="title-lvl4"><p>{'OU'|t}</p></div>
+				<span class="i-text">{$aNonIdentifie.PAGE_ZONE_MULTI_TITRE3}</span>
+				<small class="tooltip form-essai"><span>{'INFORMATIONS'|t}</span></small>
+				<div class="notice-text" data-close="{'FERMER'|t}"><p>{$aNonIdentifie.PAGE_ZONE_MULTI_TEXT3}</p></div>
+				<div class="share-btns simple">
+					<ul>
+						{foreach from=$aConnexionRS item=RS}
+						{if $RS == 1}
+						<li class="facebook"><a href="#" data-url="{Pelican::$config.DOCUMENT_HTTP}/_/User/connexionFacebook">Facebook</a></li>
+						{elseif $RS == 2}
+						<li class="twitter"><a href="#" data-url="{Pelican::$config.DOCUMENT_HTTP}/_/User/connexionTwitter">Twitter</a></li>
+						{elseif $RS == 3}
+						<li class="gplus"><a href="#" data-url="{Pelican::$config.DOCUMENT_HTTP}/_/User/connexionGoogle">Google+</a></li>
+						{/if}
+						{/foreach}
+					</ul>
+				</div>
+				{/if}
+			</div>
+			<div class="step">
+				<h3 class="title-lvl4">{$aNonIdentifie.PAGE_ZONE_MULTI_TITRE4}</h3>
+				<span class="i-text">{$aNonIdentifie.PAGE_ZONE_MULTI_LABEL5}</span>
+				<a href="#subscribe" class="subscribe-btn sb">{'CREER_MON_COMPTE'|t}</a>
+			</div>
+			<div class="subscribe-block-popin connection-block">
+				<h3 class="title-lvl4">{'CREER_MON_COMPTE'|t}</h3>
+				<div class="text">{'AVEC_VOTRE_ADRESSE_EMAIL'|t}</div>
+					<small class="tooltip form-essai"><span>{'INFORMATIONS'|t}</span></small>
+					<div class="notice-text" data-close="{'FERMER'|t}"><p>?</p>
+				</div>
+				<a href="?inscription" class="subscribe-btn">{'CREER_MON_COMPTE'|t}</a>
+				{if $aConnexionRS}
+				<div class="social-connect">
+					<div class="text"><p>{'AVEC_VOS_RESEAUX_SOCIAUX'|t}</p></div>
+					<small class="tooltip form-essai"><span>{'INFORMATIONS'|t}</span></small>
+					<div class="notice-text" data-close="{'FERMER'|t}"><p>?</p></div>
+					<div class="btns">
+						{foreach from=$aConnexionRS item=RS}
+						{if $RS == 1}
+						<span data-displaytext="Facebook" class="fb" data-url="{Pelican::$config.DOCUMENT_HTTP}/_/User/connexionFacebook"></span>
+						{elseif $RS == 2}
+						<span data-displaytext="Twitter" class="tw" data-url="{Pelican::$config.DOCUMENT_HTTP}/_/User/connexionTwitter"></span>
+						{elseif $RS == 3}
+						<span data-displaytext="Google+" class="gp" data-url="{Pelican::$config.DOCUMENT_HTTP}/_/User/connexionGoogle"></span>
+						{/if}
+						{/foreach}
+					</div>
+				</div>
+				{/if}
+			</div>
+		</div>
+	</div>
+</section>
+{/if}

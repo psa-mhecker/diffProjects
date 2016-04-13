@@ -1,0 +1,48 @@
+*{ font-family: Arial, Helvetica, sans-serif; font-size: 11px; }
+a{ color: #18417F; text-decoration: none; }
+/** liens avec chevrons */
+.chevron {background:url("../images/pict_liste_liens.png") no-repeat 0em 0.4em; margin-bottom:0.2em;padding-left:0.6em;}
+
+a:visited{ }
+a:hover{ text-decoration: underline; }
+a:active{ }
+acronym{ border: none; cursor: help; }
+blockquote{ margin: 0; padding: 0; }
+caption{ color: #FF500B; font-size: 110%; font-weight: normal; margin: 1.8em 0 0.5em; text-align: left; }
+dd{ margin: 0.5em 0; }
+div#toc { clear: both; margin: 0em 0 2.7em 0; }
+div#toc li { background: url("../images/pict_liste_liens.png") no-repeat 0 0.4em; margin-bottom: 0.2em; margin-left: 0em; }
+div#toc li a{ font-size: 100%; font-weight: normal; }
+div#toc ul{ border-left: 4px solid #FF500B; margin-top: 0em; padding-left: 5px; }
+dt{ color: #FF500B; font-size: 110%; font-weight: normal; margin: 1.8em 0 0.5em !important; text-align: left; }
+h4{ border-bottom: 1px solid #CCC; color: #FF500B; font-size: 120%; letter-spacing: 0.05em; margin-bottom: 0.5em; padding-bottom: 0.3em; position: relative; }
+h4 a.top{ display: block; position: absolute; right: 0; top: 0; }
+h5{ color: #FF500B; font-size: 110%; font-weight: normal; margin: 1.8em 0 0.5em; }
+h6{ font-size: 100%; font-weight: normal; margin: 1.8em 0 0; }
+img{ border: none; text-decoration: none; }
+ol{ list-style: decimal inside; margin-left: 0; padding-left: 0; }
+ol li{ }
+ol ol{ margin-bottom: 0.5em; padding-left: 18px; }
+p{ }
+table{ background-color: #FDEEE9; border-collapse: collapse; border-spacing: 0; width: 100%; }
+tbody th{ color: #FF500B; }
+th,td{ border: 1px solid #FFF; margin: 0; padding: 2px 4px; text-align: left; vertical-align: top; }
+thead th{ background-color: #FF9420; color: #FFF; }
+ul{ list-style: none; margin-left: 0; padding: 0; }
+ul li{ background: url("../images/pict_liste.png") no-repeat 0 0.5em; padding-left: 10px; }
+.attention{ background: url("../images/pict_attention.png") no-repeat 0 1px; color: #BF002E; font-weight: bold; padding: 2px 0 3px 22px; }
+.centre{ text-align: center; }
+.date{ color: #666; display: block; font-weight: normal; letter-spacing: 0.1em; }
+.download{ background: url("../images/pict_download.png") no-repeat 0 4px; padding-left: 18px; }
+.droite{ text-align: right; }
+.gauche{ text-align: left; }
+.help-plugin{ background-color: #EEE; clear: both; margin-top: 40px !important; padding: 2px 0; text-align: center; }
+.information{ background: url("../images/pict_information.png") no-repeat 0 2px; padding: 1px 0 1px 18px; }
+.label-coord{ color: #FF500B; text-align: left; }
+.legende-graph { background: url("../images/bg_legende_top.png") no-repeat 50% 0; padding: 1em 0.5em; }
+.legende-table { font-size: 90%; }
+.vignette-left{ background-color: #CCC; float: left; margin: 0 0.5em 0.5em 0 !important; }
+.vignette-left span.legende, .vignette-right span.legende{ display: block; font-size: 90%; padding: 2px 4px; text-align: right; }
+.vignette-right{ background-color: #CCC; float: right; margin: 0 0 0 0.5em !important; }
+
+

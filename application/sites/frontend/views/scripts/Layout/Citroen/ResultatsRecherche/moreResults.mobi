@@ -1,0 +1,8 @@
+{foreach from=$aSearch item=result name=listResults}
+	<div class="result">
+		<a href="{urlParser url=$result.url}" {if $result.mode_ouverture==2}target='_blank'{/if}>
+			<h4 class="title">{$result.title}</h4>
+			<p>{$result.desc}</p>
+		</a>
+	</div>
+{/foreach}

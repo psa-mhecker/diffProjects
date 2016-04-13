@@ -1,0 +1,15 @@
+<assets>
+	
+	<monthButton>
+		<over value="assets/buttons/skin2/monthOver.png"/>
+		<out value="assets/buttons/skin2/month.png"/>
+		<down value="assets/buttons/skin2/month.png"/>
+	</monthButton>
+	
+	<yearButton>
+		<over value="assets/buttons/skin2/yearOver.png"/>
+		<out value="assets/buttons/skin2/year.png"/>
+		<down value="assets/buttons/skin2/year.png"/>
+	</yearButton>
+	
+</assets>

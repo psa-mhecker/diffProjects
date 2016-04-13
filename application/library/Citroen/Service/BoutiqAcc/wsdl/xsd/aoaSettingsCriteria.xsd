@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by  () -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:sc="http://aoa.inetpsa.com/ws/setting/Criteria" targetNamespace="http://aoa.inetpsa.com/ws/setting/Criteria" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:complexType name="settingsType">
+		<xs:annotation>
+			<xs:documentation>Settings Type</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="clientID" type="xs:string"/>
+			<xs:element name="locales">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="locale" type="sc:localeType" minOccurs="1" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="localeType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[a-z]{2}_[A-Z]{2}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- root element -->
+	<xs:element name="criteriaInput">
+		<xs:annotation>
+			<xs:documentation>CriteriaType</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="settings" type="sc:settingsType"/>
+				<xs:any processContents="skip" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

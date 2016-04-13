@@ -1,0 +1,385 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head>
+<title>JavaScript Bs_Slider example 7</title>
+
+<style>
+  .sliderInput {
+  	height:20;
+    width:40;
+  	font-family : Arial, Helvetica, sans-serif;
+  	font-size : 12px;
+  }
+  .smallTxt {
+    font-size: 12px;
+  }
+	
+	body, td {
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 10px;
+	}
+</style>
+
+<script type="text/javascript" src="/_bsJavascript/lib/LibCrossBrowser.js"></script>
+<script type="text/javascript" src="/_bsJavascript/lib/EventHandler.js"></script>
+<script type="text/javascript" src="/_bsJavascript/core/form/Bs_FormUtil.lib.js"></script>
+<script type="text/javascript" src="/_bsJavascript/components/slider/Bs_Slider.class.js"></script>
+
+<script type="text/javascript"><!--
+function init(){
+  // - Slider 1 -----------------------------------------
+  mySlider = new Bs_Slider();
+	mySlider.loadSkin('winxp-scrollbar-vertical');
+  mySlider.height        = 100;
+  mySlider.minVal        = 0;
+  mySlider.maxVal        = 100;
+  mySlider.valueDefault  = 40;
+	mySlider.bgColor       = '#F9F9F7';
+  mySlider.styleValueFieldClass = 'sliderInput';
+  mySlider.drawInto('sliderDiv1');
+	
+  // - Slider 2 -----------------------------------------
+  mySlider2 = new Bs_Slider();
+	mySlider2.loadSkin('opera7-vertical');
+  mySlider2.height        = 100;
+  mySlider2.minVal        = 0;
+  mySlider2.maxVal        = 100;
+  mySlider2.valueDefault  = 40;
+  mySlider2.styleValueFieldClass = 'sliderInput';
+  mySlider2.drawInto('sliderDiv2');
+	
+  // - Slider 4 -----------------------------------------
+  mySlider4 = new Bs_Slider();
+	mySlider4.loadSkin('osx-scrollbar-vertical');
+  mySlider4.setSliderIcon('vertical_scrollbar_knobLarge.gif', 15, 59); //overwriting, using large knob.
+  mySlider4.height        = 100;
+  mySlider4.minVal        = 0;
+  mySlider4.maxVal        = 100;
+  mySlider4.valueDefault  = 40;
+  mySlider4.styleValueFieldClass = 'sliderInput';
+  mySlider4.drawInto('sliderDiv4');
+	
+  // - Slider 5 -----------------------------------------
+  mySlider5 = new Bs_Slider();
+	mySlider5.loadSkin('osx-scrollbar-vertical');
+  mySlider5.height        = 100;
+  mySlider5.minVal        = 0;
+  mySlider5.maxVal        = 100;
+  mySlider5.valueDefault  = 40;
+  mySlider5.styleValueFieldClass = 'sliderInput';
+  mySlider5.drawInto('sliderDiv5');
+	
+  // - Slider 6 -----------------------------------------
+  mySlider6 = new Bs_Slider();
+	mySlider6.loadSkin('os9-vertical');
+  mySlider6.height        = 100;
+  mySlider6.minVal        = 0;
+  mySlider6.maxVal        = 100;
+  mySlider6.valueDefault  = 40;
+  mySlider6.styleValueFieldClass = 'sliderInput';
+  mySlider6.drawInto('sliderDiv6');
+	
+  // - Slider 7 -----------------------------------------
+  mySlider7 = new Bs_Slider();
+	mySlider7.loadSkin('burp-vertical');
+  mySlider7.height        = 100;
+  mySlider7.minVal        = 0;
+  mySlider7.maxVal        = 100;
+  mySlider7.valueDefault  = 40;
+  mySlider7.styleValueFieldClass = 'sliderInput';
+  mySlider7.drawInto('sliderDiv7');
+	
+  // - Slider 8 -----------------------------------------
+  mySlider8 = new Bs_Slider();
+	mySlider8.loadSkin('ximian-industrial-vertical');
+  mySlider8.height        = 100;
+  mySlider8.minVal        = 0;
+  mySlider8.maxVal        = 100;
+  mySlider8.valueDefault  = 40;
+  mySlider8.styleValueFieldClass = 'sliderInput';
+  mySlider8.drawInto('sliderDiv8');
+
+  // - Slider 9 -----------------------------------------
+  mySlider9 = new Bs_Slider();
+	mySlider9.loadSkin('smoothstreak-vertical');
+  mySlider9.height        = 100;
+  mySlider9.minVal        = 0;
+  mySlider9.maxVal        = 100;
+  mySlider9.valueDefault  = 40;
+  mySlider9.styleValueFieldClass = 'sliderInput';
+  mySlider9.drawInto('sliderDiv9');
+	
+	
+	
+	
+	
+  // - Slider 100 -----------------------------------------
+  mySlider100 = new Bs_Slider();
+	mySlider100.loadSkin('winxp-scrollbar-horizontal');
+  mySlider100.width         = 100;
+  mySlider100.minVal        = 0;
+  mySlider100.maxVal        = 100;
+  mySlider100.valueDefault  = 40;
+	mySlider100.bgColor       = '#F9F9F7';
+  mySlider100.styleValueFieldClass = 'sliderInput';
+  mySlider100.drawInto('sliderDiv100');
+	
+  // - Slider 101 -----------------------------------------
+  mySlider101 = new Bs_Slider();
+	mySlider101.loadSkin('opera7-horizontal');
+  mySlider101.width         = 100;
+  mySlider101.minVal        = 0;
+  mySlider101.maxVal        = 100;
+  mySlider101.valueDefault  = 40;
+  mySlider101.styleValueFieldClass = 'sliderInput';
+  mySlider101.drawInto('sliderDiv101');
+	
+  // - Slider 102 -----------------------------------------
+  mySlider102 = new Bs_Slider();
+	mySlider102.loadSkin('osx-scrollbar-horizontal');
+  mySlider102.width         = 100;
+  mySlider102.minVal        = 0;
+  mySlider102.maxVal        = 100;
+  mySlider102.valueDefault  = 40;
+	//mySlider102.bgColor       = '#C1C1C1';
+  mySlider102.styleValueFieldClass = 'sliderInput';
+  mySlider102.drawInto('sliderDiv102');
+	
+  // - Slider 103 -----------------------------------------
+  mySlider103 = new Bs_Slider();
+	mySlider103.loadSkin('osx-horizontal');
+  mySlider103.width         = 100;
+  mySlider103.minVal        = 0;
+  mySlider103.maxVal        = 100;
+  mySlider103.valueDefault  = 40;
+  mySlider103.styleValueFieldClass = 'sliderInput';
+  mySlider103.drawInto('sliderDiv103');
+	
+  // - Slider 104 -----------------------------------------
+  mySlider104 = new Bs_Slider();
+	mySlider104.loadSkin('os9-horizontal');
+  mySlider104.width         = 100;
+  mySlider104.minVal        = 0;
+  mySlider104.maxVal        = 100;
+  mySlider104.valueDefault  = 40;
+  mySlider104.styleValueFieldClass = 'sliderInput';
+  mySlider104.drawInto('sliderDiv104');
+	
+  // - Slider 105 -----------------------------------------
+  mySlider105 = new Bs_Slider();
+	mySlider105.loadSkin('burp-horizontal');
+  mySlider105.width         = 100;
+  mySlider105.minVal        = 0;
+  mySlider105.maxVal        = 100;
+  mySlider105.valueDefault  = 40;
+  mySlider105.styleValueFieldClass = 'sliderInput';
+  mySlider105.drawInto('sliderDiv105');
+	
+  // - Slider 106 -----------------------------------------
+  mySlider106 = new Bs_Slider();
+	mySlider106.loadSkin('ximian-industrial-horizontal');
+  mySlider106.width         = 100;
+  mySlider106.minVal        = 0;
+  mySlider106.maxVal        = 100;
+  mySlider106.valueDefault  = 40;
+  mySlider106.styleValueFieldClass = 'sliderInput';
+  mySlider106.drawInto('sliderDiv106');
+	
+  // - Slider 107 -----------------------------------------
+  mySlider107 = new Bs_Slider();
+	mySlider107.loadSkin('smoothstreak-horizontal');
+  mySlider107.width         = 100;
+  mySlider107.minVal        = 0;
+  mySlider107.maxVal        = 100;
+  mySlider107.valueDefault  = 40;
+  mySlider107.styleValueFieldClass = 'sliderInput';
+  mySlider107.drawInto('sliderDiv107');
+	
+  // - Slider 108 -----------------------------------------
+  mySlider108 = new Bs_Slider();
+	mySlider108.loadSkin('aluminumalloyvolcanic-horizontal');
+  mySlider108.width         = 100;
+  mySlider108.minVal        = 0;
+  mySlider108.maxVal        = 100;
+  mySlider108.valueDefault  = 40;
+  mySlider108.styleValueFieldClass = 'sliderInput';
+  mySlider108.drawInto('sliderDiv108');
+	
+  // - Slider 109 -----------------------------------------
+  mySlider109 = new Bs_Slider();
+	mySlider109.loadSkin('yattacier3-horizontal');
+  mySlider109.width         = 100;
+  mySlider109.minVal        = 0;
+  mySlider109.maxVal        = 100;
+  mySlider109.valueDefault  = 40;
+  mySlider109.styleValueFieldClass = 'sliderInput';
+  mySlider109.drawInto('sliderDiv109');
+	
+  // - Slider 110 -----------------------------------------
+  mySlider110 = new Bs_Slider();
+	mySlider110.loadSkin('h2ogtk2-horizontal');
+  mySlider110.width         = 100;
+  mySlider110.minVal        = 0;
+  mySlider110.maxVal        = 100;
+  mySlider110.valueDefault  = 40;
+  mySlider110.styleValueFieldClass = 'sliderInput';
+  mySlider110.drawInto('sliderDiv110');
+	
+  // - Slider 111 -----------------------------------------
+  mySlider111 = new Bs_Slider();
+	mySlider111.loadSkin('h2ogtk2-scrollbar-horizontal');
+	mySlider111.setSliderIcon('horizontal_knobSmall.gif', 14, 17);
+  mySlider111.width         = 100;
+  mySlider111.minVal        = 0;
+  mySlider111.maxVal        = 100;
+  mySlider111.valueDefault  = 40;
+  mySlider111.styleValueFieldClass = 'sliderInput';
+  mySlider111.drawInto('sliderDiv111');
+	
+	
+	
+	/*
+  // - Slider 9 -----------------------------------------
+  mySlider9 = new Bs_Slider();
+	mySlider9.loadSkin('bob');
+  mySlider9.width         = 121;
+  mySlider9.height        = 26;
+  mySlider9.minVal        = 0;
+  mySlider9.maxVal        = 10;
+  mySlider9.valueDefault  = 4;
+  mySlider9.useInputField = 2;
+  mySlider9.styleValueFieldClass = 'sliderInput';
+  mySlider9.drawInto('sliderDiv9');
+
+	
+  // - Slider 8 -----------------------------------------
+  mySlider8 = new Bs_Slider();
+  mySlider8.width         = 100;
+  mySlider8.height        = 16;
+  mySlider8.minVal        = 0;
+  mySlider8.maxVal        = 100;
+  mySlider8.valueDefault  = 40;
+  mySlider8.imgDir        = '/_bsJavascript/components/slider/img/gray/';
+  mySlider8.setSliderIcon('knob.gif', 13, 15);
+  mySlider8.setBackgroundImage('background.gif', 'repeat');
+  mySlider8.useInputField = 0;
+  mySlider8.styleValueFieldClass = 'sliderInput';
+  mySlider8.drawInto('sliderDiv8');
+	*/
+	
+
+}
+// --></script>
+
+</head>
+<body bgcolor="#FFFFFF" text="#3366AA" link="#0000EE" vlink="#551A8B" alink="#FF0000" onLoad="init();">
+
+<h1>JavaScript Bs_Slider example 7</h1>
+
+Sliders with different styles and icons using the <b>loadSkin()</b> method.<br>
+<br><br>
+
+
+<table bgcolor="#D6D6CE">
+	<tr>
+		<td width="165" height="50" valign="top">
+			winxp-scrollbar-horizontal<br>
+      <div id="sliderDiv100"></div>
+		</td>
+		<td width="165" height="50" valign="top">
+			opera7-horizontal<br>
+      <div id="sliderDiv101"></div>
+		</td>
+		<td width="165" height="50" valign="top">
+			osx-scrollbar-horizontal<br>
+      <div id="sliderDiv102"></div>
+		</td>
+	</tr>
+	<tr>
+		<td width="165" height="50" valign="top">
+			osx-horizontal<br>
+      <div id="sliderDiv103"></div>
+		</td>
+		<td width="165" height="50" valign="top">
+			os9-horizontal<br>
+      <div id="sliderDiv104"></div>
+		</td>
+		<td width="165" height="50" valign="top">
+			burp-horizontal<br>
+      <div id="sliderDiv105"></div>
+		</td>
+	</tr>
+	<tr>
+		<td width="165" height="50" valign="top">
+			ximian-industrial-horizontal<br>
+      <div id="sliderDiv106"></div>
+		</td>
+		<td width="165" height="50" valign="top">
+			smoothstreak-horizontal<br>
+      <div id="sliderDiv107"></div>
+		</td>
+		<td width="165" height="50" valign="top">
+			aluminumalloyvolcanic-horizontal<br>
+      <div id="sliderDiv108"></div>
+		</td>
+	</tr>
+	<tr>
+		<td width="165" height="50" valign="top">
+			yattacier3-horizontal<br>
+      <div id="sliderDiv109"></div>
+		</td>
+		<td width="165" height="50" valign="top">
+			h2ogtk2-horizontal<br>
+      <div id="sliderDiv110"></div>
+		</td>
+		<td width="165" height="50" valign="top">
+			h2ogtk2-scrollbar-horizontal<br>
+      <div id="sliderDiv111"></div>
+		</td>
+	</tr>
+</table>
+<br><br>
+
+<table bgcolor="#D6D6CE">
+	<tr>
+		<td width="50" height="150" valign="top">
+      <div id="sliderDiv1"></div>
+		</td>
+		<td width="50" valign="top">
+      <div id="sliderDiv2"></div>
+		</td>
+		<td width="50" valign="top">
+      <div id="sliderDiv4"></div>
+		</td>
+		<td width="50" valign="top">
+      <div id="sliderDiv5"></div>
+		</td>
+		<td width="50" valign="top">
+      <div id="sliderDiv6"></div>
+		</td>
+		<td width="50" valign="top">
+      <div id="sliderDiv7"></div>
+		</td>
+		<td width="50" valign="top">
+      <div id="sliderDiv8"></div>
+		</td>
+		<td width="50" valign="top">
+      <div id="sliderDiv9"></div>
+		</td>
+		<td width="50" valign="top">
+      <div id="sliderDiv10"></div>
+		</td>
+	</tr>
+</table>
+<br>
+From left to right:<br>
+winxp-scrollbar-vertical'<br>
+opera7-vertical'<br>
+osx-scrollbar-vertical<br>
+osx-scrollbar-vertical<br>
+os9-vertical<br>
+burp-vertical<br>
+ximian-industrial-vertical<br>
+smoothstreak-vertical<br>
+
+
+</body></html>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Eléments communs -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+		elementFormDefault="qualified" 
+		attributeFormDefault="unqualified"
+		xmlns:c="http://aoa.inetpsa.com/ws/common"
+		targetNamespace="http://aoa.inetpsa.com/ws/common">
+	<xs:simpleType name="PriceType">
+		<xs:restriction base="xs:decimal">
+			<xs:fractionDigits value="2"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="DealerType">
+		<xs:sequence>
+			<xs:element name="Brand" type="xs:string"/>
+			<xs:element name="Country" type="xs:string"/>
+			<xs:element name="DealerCode" type="xs:string" minOccurs="0"/>
+			<!-- les filiales n'ont pas de code, les point de vente dépendent d'une filiale -->
+		</xs:sequence>
+		<!-- point de vente marque, pays et code point de vente (code A7 récupéré du LDAP) -->
+	</xs:complexType>
+	<xs:complexType name="ApplicabilityType">
+		<xs:sequence>
+			<xs:element name="ProductLine" type="c:ProductLineType"/>
+			<xs:element name="Lcdvs" type="c:LcdvCodesType" minOccurs="0"/>
+		</xs:sequence>
+		<!-- applicabilité des véhicules -->
+	</xs:complexType>
+	<xs:complexType name="LcdvCodesType">
+		<xs:sequence>
+			<xs:element name="LcdvCode" type="xs:string" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="ProductLineType">
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:complexType name="HierarchyType">
+		<xs:sequence>
+			<xs:element name="IsRoot" type="xs:boolean"/>
+			<xs:element name="HierarchyName" type="xs:string"/>
+			<xs:element name="HierarchyCode" type="xs:integer"/>
+			<xs:element name="HierarchyParentCode" type="xs:integer" minOccurs="0"/>
+			<xs:element name="HierarchyChild" type="c:HierarchyType" minOccurs="0" maxOccurs="unbounded"/>
+			<!-- seulement les feuilles filles du noeud (pas les petites filles) -->
+		</xs:sequence>
+		<!-- noed de l'arborescence des données -->
+	</xs:complexType>
+</xs:schema>

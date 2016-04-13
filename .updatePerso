@@ -1,0 +1,24 @@
+# Update
+cd /home/users/recette/psa-cppv2-perso
+unset SSH_ASKPASS
+git config --global http.sslVerify "false"
+git config --global user.name "itkg-developpement"
+git config remote.origin.url https://itkg-developpement:itkg-developpement1@github.com/itkg/psa-cppv2.git
+git pull origin perso20140612
+php /bin/composer.phar update -n
+cd /home/users/recette/psa-cppv2-perso/vendor/itkg
+git pull origin citroen
+cd /home/users/recette/psa-cppv2-perso/vendor/itkg-apis
+git pull origin master
+
+chown -R recette:projects /home/users/recette/psa-cppv2-perso
+chown -R recette:projects /home/users/recette/psa-cppv2-perso/.git
+chown -R apache:projects /home/users/recette/psa-cppv2-perso/public/media/image
+chown -R apache:projects /home/users/recette/psa-cppv2-perso/public/media/video
+chown -R apache:projects /home/users/recette/psa-cppv2-perso/public/media/flash
+chown -R apache:projects /home/users/recette/psa-cppv2-perso/public/media/file
+chown -R apache:projects /home/users/recette/psa-cppv2-perso/public/media/design_pack
+chmod -R 755 /home/users/recette/psa-cppv2-perso
+chmod -R 777 /home/users/recette/psa-cppv2-perso/var
+
+cd /home/users/recette/psa-cppv2-perso/

@@ -1,0 +1,4 @@
+{$languageTab}
+<br />
+{$form}
+{$versionForm}

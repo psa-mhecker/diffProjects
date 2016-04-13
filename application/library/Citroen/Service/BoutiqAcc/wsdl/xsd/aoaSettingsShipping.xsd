@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns:ss="http://aoa.inetpsa.com/ws/setting/shipping" 
+	xmlns:c="http://aoa.inetpsa.com/ws/common" 
+	targetNamespace="http://aoa.inetpsa.com/ws/setting/shipping">
+
+	<xs:import namespace="http://aoa.inetpsa.com/ws/common" schemaLocation="aoaCommonItems.xsd"/>
+	
+	<xs:element name="ShippingInput">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Value" type="c:PriceType" minOccurs="0"/>
+				<!-- valeur dans la devise du point de vente de la commande -->
+				<xs:element name="Weight" type="xs:string" minOccurs="0"/>
+				<!--[lot2+] élément ignoré en lot 1 -->
+				<xs:element name="Retailer" type="c:DealerType"/>
+				<!-- utilisé pour connaitre le pourcentage définit par le point de vente, et le seuil définit par la filiale -->
+				<xs:element name="ShippingAdress" type="ss:ShippingAdressType" minOccurs="0"/>
+				<!--[lot2+] élément ignoré en lot 1 -->
+				<xs:element name="ShippingOption" type="ss:ShippingOptionType" minOccurs="0"/>
+				<!--[lot2+] élément ignoré en lot 1 -->
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:complexType name="ShippingAdressType">
+		<xs:sequence>
+			<xs:element name="PostalCode" type="xs:string"/>
+			<!-- [lot2+] code postal de livraison, cette valeur n'est pas utilisé en lot1 -->
+			<xs:element name="Country" type="xs:string"/>
+			<!-- [lot2+] pays de livraison, cette valeur n'est pas utilisé en lot1  -->
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="ShippingOptionType">
+		<xs:sequence>
+			<xs:element name="Mode" type="xs:string"/>
+			<!-- [lot2+] mode de livraison -->
+			<xs:element name="Height" type="xs:string"/>
+			<!-- [lot2+] hauteur en cm -->
+			<xs:element name="Width" type="xs:string"/>
+			<!-- [lot2+] largeur en cm -->
+			<xs:element name="Length" type="xs:string"/>
+			<!-- [lot2+] longeur en cm -->
+		</xs:sequence>
+	</xs:complexType>		
+	
+</xs:schema>

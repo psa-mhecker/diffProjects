@@ -1,0 +1,1 @@
+{foreach from=$aZonesShowroom item=zone}{$zone}{/foreach}

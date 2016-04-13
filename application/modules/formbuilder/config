@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin>
+	<title>FormBuilder</title>
+	<description>Visual form builder</description>
+	<version>1.0</version>
+	<date>15/01/2014</date>
+	<author>Interakting</author>
+	<category>Widget</category>
+</plugin>

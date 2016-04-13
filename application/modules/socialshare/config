@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin>
+	<title>SocialShare</title>
+	<description>Bloc permettant d'envoyer en tant que favori une page sur les services les plus connus</description>
+	<version>1.0</version>
+	<date>29/07/2009</date>
+	<author>Interakting</author>
+	<category>Widget</category>
+</plugin>

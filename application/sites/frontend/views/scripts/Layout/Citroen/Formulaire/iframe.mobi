@@ -1,0 +1,94 @@
+{literal}
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="Content-Type" content="text/html, charset=UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+{/literal}{if !$bShowroom}{literal}<link href="/dcrv2/css/mobile_common.css" type="text/css" rel="stylesheet">{/literal}{else}{$sCssMobile}{/if}{literal}
+<link href="/dcrv2/css/mobile_citroen{/literal}{$cssArial}{literal}.css" type="text/css" rel="stylesheet">
+{/literal}
+<link href="{$formds_css['href']}" type="text/css" rel="stylesheet">
+{literal}
+<script type="text/javascript" src="/dcrv2/script/jquery-2.1.4.min.js" style=""></script>
+<script type="text/javascript" src="/dcrv2/script/inputmask.js"></script>
+<script type="text/javascript" src="/dcrv2/script/jquery.inputmask.js"></script> 
+<script	type="text/javascript"	src="//maps.google.com/maps/api/js?libraries=geometry&amp;sensor=true&amp;region={/literal}{$pays}{literal}"></script>
+<script type="text/javascript" src="http://google-maps-utility-library-v3.googlecode.com/svn/trunk/markerclusterer/src/markerclusterer.js"></script>
+<script type="text/javascript" src="/dcrv2/js/tracking/dcr-git.js"></script>
+<script type="text/javascript" src="/dcrv2/scriptmobile/webFormsAppGlobal.js"></script> 
+<script type="text/javascript">
+    citroen.webforms.parameters.override({
+        {/literal}
+        culture: '{$culture}',
+        lang: '{$lang}',
+        country: '{$pays}',
+        srcImg : '/version/vc',
+        i18nService: '/dcr/srv/services/getflux?service=i18nService',
+        brochureServiceParams : 'Country={$pays}&Lan={$culture}', 
+        prefixGroupeCode : 'cpw_',
+        i18nServiceParams : 'groupCode={literal}{groupCode}{/literal}&lang={$culture}&country={$pays}',
+        vehicleServiceParams : 'Country={$pays}&Lan={$culture}',
+        sessionService: '/dcr/srv/services/getflux?service=sessionService&country={$pays}',
+        connexionService: '/dcr/srv/services/getflux?service=connexionService&country={$pays}',
+        connectorLoginPopupService: '/dcr/connexion/login-popup?service=connexionService&culture={$culture}&context=pc',
+        connectorGetDataService: '/dcr/connexion/get-user-data',
+        getDealersListServiceParams: {literal}'Country={country}&Lan={lang}&language={lang}&latitude={latitude}&longitude={longitude}&region={region}&search={search}&search-name={searchname}'{/literal},
+        getDealerService: '/dcr/srv/services/getflux?service=getDealerService',
+        getDepartementsService: '/dcr/srv/services/getflux?service=getDepartementsService',
+        getFavoriteDealersService: '/dcr/srv/services/getflux?service=getFavoriteDealersService&country={$pays}',
+        getFavoriteDealersServiceParams: '',
+        getAddDealerToFavoritesService: '/dcr/srv/services/getflux?service=getAddDealerToFavoritesService',
+        getAddDealerToFavoritesServiceParams: 'Country={$pays}&Lan={$culture}&dealerid={literal}{dealerId}{/literal}',
+        getDealersListService: '/dcr/srv/services/getflux?service=getDealersListService&country={$pays}',
+        getDealerSuggest: '/dcr/srv/services/getflux?service=getDealerSuggestService&country={$pays}&culture={$culture}&input=$VALUE',
+        {literal}
+    });
+</script>
+<script type="text/javascript">
+    function init() {
+        var IdSiteGeo = "";
+        
+        if($("#isGeocodeActive", window.parent.document))
+        {
+            IdSiteGeo = $("#isGeocodeActive", window.parent.document).val();
+        }
+            // launch app
+            new citroen.webforms.WebFormsFacade({
+                source: '/dcr/prm/getinstancebyid?instanceid={/literal}{$aData.idform}&culture={$culture}{$formulaire.FORM_PARAMS}{literal}',
+                returnURL: '',
+                dealerLocatorFluxType: 'dealerdirectory2',
+                iFrame: true,
+                target: 'wf_form_content',
+                siteGeo : IdSiteGeo,
+                autoFill: {'GIT_TRACKING_ID': getGITID()},
+                carPickerPreselectedVehicles: [{/literal}{if $aData.lcdv neq '' && $formulaire.FORM_CONTEXT_CODE eq 'CAR'}'{$aData.lcdv}'{/if}{literal}],
+                brochurePickerPreselectedVehicles: [],
+                brochurePickerPreselectedVehiclesLcdv: [{/literal}{if $aData.lcdv neq '' && $formulaire.FORM_CONTEXT_CODE eq 'CAR'}'{$aData.lcdv}'{/if}{literal}],
+                onPostAjaxSuccess: function(datas) {
+                    window.parent.finalStepFunction(datas,{/literal}'{$aData.section}', '{$aData.idform}'{literal});
+                }
+            });
+        }
+        $(window).load(init);
+
+        function sendGTM(category, action, label) 
+        {
+          dataLayer.push(
+              {'event': 'uaevent', 'eventCategory': category, 'eventAction': action, 'eventLabel': label }
+              );
+      }
+  </script>
+  <script type="text/javascript">
+    window.isDeployed = {/literal}{$isDeployed|json_encode}{literal};
+</script>
+<body>
+<!-- CPW-4014 -->
+
+    {/literal}{$gtmTag}{literal}
+
+    <div id="container" {/literal} class="mobile{if $formClass} {$formClass}{/if}"{literal}>
+        <div id="wf_form_content" class="wf_form_content"></div>
+    </div>
+    <script type="text/javascript" src="/dcrv2/js/common/webFormUtils.js"></script>
+
+</body></html>
+{/literal}

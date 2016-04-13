@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:acc="http://xml.inetpsa.com/Services/AccessoiresApplication/AccessoiresService" xmlns:acc1="http://aoa.inetpsa.com/ws/setting/Accessories" xmlns:exp="http://aoa.inetpsa.com/ws/export/ExportCriteriaValue" xmlns:crit="http://aoa.inetpsa.com/ws/setting/Criteria">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <acc:getAccessories>
+         <acc1:accessoriesInput>
+            <!--Optional:-->
+            <acc1:accessoryFields>
+               <acc1:accessoryField/>
+            </acc1:accessoryFields>
+            <!--Optional:-->
+            <acc1:valuedCriteria>
+               <!--1 or more repetitions:-->
+               <acc1:valuedCriterion>
+                  <!--Optional:-->
+                  <acc1:locale>fr_FR</acc1:locale>
+                  <!--Optional:-->
+                  <acc1:isSoldOnInternet/>
+                  <!--Optional:-->
+                  <acc1:maxPrice/>
+                  <!--Optional:-->
+                  <acc1:minPrice/>
+                  <!--Optional:-->
+                  <acc1:isTTC/>
+                  <!--Optional:-->
+                  <acc1:universeCode/>
+                  <!--Optional:-->
+                  <acc1:subUniverseCode>0099880970280yQT</acc1:subUniverseCode>
+                  <!--Optional:-->
+                  <acc1:vehicle>
+                     <!--Optional:-->
+                     <exp:bodyStyleCode>A3</exp:bodyStyleCode>
+                     <!--Optional:-->
+                     <exp:modelCode>1CYA</exp:modelCode>
+                     <!--Optional:-->
+                     <exp:transmissionCode/>
+                     <!--Optional:-->
+                     <exp:lcdv16code/>
+                     <!--Optional:-->
+                     <exp:any/>
+                  </acc1:vehicle>
+                  <!--Optional:-->
+                  
+                  <!--Zero or more repetitions:-->
+                  <acc1:any/>
+                  <!--Optional:-->
+                  
+               </acc1:valuedCriterion>
+            </acc1:valuedCriteria>
+            <acc1:settings>
+               <crit:clientID>CFGAC</crit:clientID>
+               <crit:locales>
+                  <!--1 or more repetitions:-->
+                  <crit:locale>fr_FR</crit:locale>
+               </crit:locales>
+            </acc1:settings>
+         </acc1:accessoriesInput>
+      </acc:getAccessories>
+   </soapenv:Body>
+</soapenv:Envelope>

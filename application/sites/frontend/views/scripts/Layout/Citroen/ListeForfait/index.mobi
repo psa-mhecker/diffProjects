@@ -1,0 +1,142 @@
+{if $forfaitSelected == true}
+    <div class="sliceNew sliceListeForfaitMobile">
+        <section id="{$aParams.ID_HTML}">
+            {if $MEDIA_VIDEO}
+                <figure class="visual">
+                    <a class="video galleryPop popThis" data-video="{$MEDIA_VIDEO}" href="{urlParser url=$MEDIA_VIDEO}">
+                        <img class="lazy" src="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/16-9.png" data-original="{"{Pelican::$config.MEDIA_HTTP}{$MEDIA_PATH}"|format:Pelican::$config.MEDIA_FORMAT_ID.WEB_2_COLONNES_MIXTE}" />
+                    </a>
+                </figure>
+            {elseif $aMEDIA_ID2}
+                {if ($aMEDIA_ID2|count)>1}
+                    <a class="col galleryPop popThis" href="{urlParser url=$aMEDIA_ID2[0]}" data-other="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/235-100.png" data-bundle="_visual{$aMEDIA_ID2|count}" {gtm action='Display::Video' data=$aData datasup=['eventLabel'=>{$MEDIA_ALT}]}>
+                        <img class="lazy" src="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/235-100.png" data-original="{$aMEDIA_ID2[0]}"  /></figure>
+                    </a>
+                    <ul class="hideThis">
+                        {foreach from=$aMEDIA_ID2 key=i item=galleryItem}
+                            {if $i !=0}
+                                <li>
+                                    <a class="galleryPop" href="{urlParser url=$galleryItem}" data-other="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/235-100.png" data-bundle="_visual{$aMEDIA_ID2|count}" >
+                                        <img class="lazy" src="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/235-100.png" data-original="{$galleryItem}"  />
+                                    </a>
+                                </li>
+                            {/if}
+                        {/foreach}
+                    </ul>
+                {else}
+                    <figure class="visual">
+                        <img class="lazy" src="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/235-100.png" data-original="{$aMEDIA_ID2[0]}" alt="{$aListeForfait.TITRE}" />
+                    </figure>
+                {/if}
+
+            {/if}
+
+            {foreach $MultiForfait as $Multi}
+
+                <article class="maintenance-item">
+                    {if $Multi.CONTENT_ZONE_MULTI_LABEL != ''}<div class="parttitle">{$Multi.CONTENT_ZONE_MULTI_LABEL} {if $Multi.CONTENT_ZONE_MULTI_LABEL2 != ''}<span>{$Multi.CONTENT_ZONE_MULTI_LABEL2}</span>{/if}</div>{/if}
+
+                    {$Multi.CONTENT_ZONE_MULTI_TEXT}
+                </article>
+
+            {/foreach}
+
+            {if $aListeForfait.CONTENT_TITLE2}
+                {if $aListeForfait.CONTENT_TITLE2 == "ROLL" && $aListeForfait.CONTENT_TEXT && $aListeForfait.CONTENT_TITLE3}
+                    <small class="legal"><a href="#LegalTip" class="texttip">{$aListeForfait.CONTENT_TITLE3}</a></small>
+                    <div class="legal layertip" id="LegalTip">
+                        {$aListeForfait.CONTENT_TEXT}
+                    </div>
+
+                {elseif $aListeForfait.CONTENT_TITLE2 == "POP_IN" && $urlPopInMention && $aListeForfait.CONTENT_TITLE3}
+                    <small class="legal">
+                        <a href="{$urlPopInMention}?popin=1" class="popinfos fancybox.ajax">
+                            {$aListeForfait.CONTENT_TITLE3}
+                        </a>
+                    </small>
+                {elseif $aListeForfait.CONTENT_TITLE2 == "TEXT" && ($aListeForfait.CONTENT_TITLE3 || $aListeForfait.CONTENT_TEXT)}
+                    <small class="legal">{$aListeForfait.CONTENT_TITLE3}<br>{$aListeForfait.CONTENT_TEXT}</small>
+                {/if}
+            {/if}
+
+            {if $Multi.CONTENT_TITLE2}
+                {if $Multi.CONTENT_TITLE2 == "POP_IN" && $urlPopInMention != ""}
+                    <em class="notice legal"><span {gtmjs type='toggle' data=$aData action='Display::ToolTip|' eventGTM='over'  datasup=['eventLabel' => $aData.ZONE_TITRE6]}>{$aData.ZONE_TITRE6|escape}</span></em>
+                    <div class="notice-text" data-close="Fermer">
+                        <h6 class="title-lvl1 centered nobg">{$titlePopInMention}</h6>
+                        <iframe id="iframe_popin" class="iframe_popin_style" src='{$urlPopInMention}'></iframe>
+                    </div>
+                {elseif $Multi.CONTENT_TITLE2 == "ROLL"}
+                    <em class="notice legal"><span>{$aData.ZONE_TITRE6|escape}</span></em>
+                    <div class="notice-text" data-close="Fermer">
+                        {if $MEDIA_PATH4 != ""}<figure><img class="lazy noscale" src="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/235-100.png" width="580" height="247" alt="{$MEDIA_TITLE4}" /></figure>{/if}
+                        <h6 class="title-lvl1 centered nobg">{$aData.ZONE_TITRE6|escape}</h6>
+                        <p>
+                            {$aData.ZONE_TEXTE4}
+                        </p>
+                    </div>
+                {/if}
+            {/if}
+            {if $Multi.CONTENT_TITLE2 == "TEXT" && $aData.ZONE_TEXTE4 neq ""}
+                {if $aData.MEDIA_ID4 != ""}<figure class="visual"><img class="lazy noscale" src="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/235-100.png" data-original="{$MEDIA_PATH4}" width="580" height="247" alt="{$MEDIA_TITLE4}" /></figure>{/if}
+                <em class="notice legal">{$aData.ZONE_TITRE6|escape}<br>{$aData.ZONE_TEXTE4}</em>
+            {/if}
+
+            {if $aMedias|@sizeof > 0}
+                <div class="row thumbs">
+                    {foreach $aMedias as $aMedia  key=key}
+                        <div class="columns column_33">
+                            {if $aMedia.VIDEO}
+                            {if $aMedia.VIDEO.YOUTUBE_ID}
+                            <a class="galleryPop popThis" {if $aMedia.VIDEO.OTHER_MEDIA_PATH}data-video="{$aMedia.VIDEO.OTHER_MEDIA_PATH}"{/if} href="{if $aMedia.VIDEO.YOUTUBE_URL}{urlParser url=$aMedia.VIDEO.YOUTUBE_URL}{/if}" data-bundle="" {gtm data=$aData action='Display::Video' data=$aData datasup=['eventLabel'=>{$aMedia.VIDEO.MEDIA_ALT}]}>
+                                {else}
+                                <a class="video col galleryPop popThis" {if $aMedia.VIDEO.OTHER_MEDIA_PATH}data-video="{$aMedia.VIDEO.OTHER_MEDIA_PATH}"{/if} href="{if $aMedia.VIDEO.OTHER_MEDIA_PATH}{urlParser url=$aMedia.VIDEO.OTHER_MEDIA_PATH}{/if}||" data-bundle="" {gtm data=$aData action='Display::Video' data=$aData datasup=['eventLabel'=>{$aMedia.VIDEO.MEDIA_ALT}]}>
+                                    {/if}
+                                    <figure class="shadow video">
+                                        <i class="icon-play"></i>
+                                        <img class="lazy" src="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/235-100.png" data-original="{if $aMedia.VIDEO.MEDIA_PATH}{Pelican::$config.MEDIA_HTTP}{$aMedia.VIDEO.MEDIA_PATH2}{/if}" alt="{$aMedia.VIDEO.MEDIA_ALT2}">
+                                    </figure>
+                                    <span class="legend">{$aMedia.VIDEO.MEDIA_TITLE|escape}</span>
+                                </a>
+                                {/if}
+                                {if $aMedia.IMAGE}
+                                    {section name=push loop=$aMedia.IMAGE}
+                                        {if $smarty.section.push.first}
+                                            <a class="col galleryPop popThis" href="{urlParser url={Pelican::$config.MEDIA_HTTP|cat:$aMedia.IMAGE[push].MEDIA_PATH}}" data-other="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/235-100.png" data-bundle="group2col{$key}" title="{$aPush[push].MEDIA_TITLE}" {gtm action='Zoom' data=$aData datasup=['eventLabel'=>{$aMedia.IMAGE[push].MEDIA_TITLE}]}>
+                                                <figure>
+                                                    {if $VIGN_GALLERY}
+                                                        {assign var="Vignette_Gal" value="$VIGN_GALLERY"}
+                                                    {else}
+                                                        {assign var="Vignette_Gal" value=$aMedia.IMAGE[push].MEDIA_PATH}
+                                                    {/if}
+                                                    <img class="lazy" src="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/235-100.png" data-original="{"{Pelican::$config.MEDIA_HTTP}{$Vignette_Gal}"|format:Pelican::$config.MEDIA_FORMAT_ID.MOBILE_PUSH}" alt="{$aMedia.IMAGE[push].MEDIA_ALT}">
+                                                </figure>
+                                                <span class="legend">{$aMedia.MEDIA_TITLE}</span>
+                                            </a>
+                                            <ul class="hideThis">
+                                        {else}
+                                            <a class="galleryPop popThis" href="{urlParser url={Pelican::$config.MEDIA_HTTP|cat:$aMedia.IMAGE[push].MEDIA_PATH}}" data-other="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/235-100.png" data-bundle="group2col{$key}" title="{$aPush[push].MEDIA_TITLE}" {gtm action='Zoom' data=$aData datasup=['eventLabel'=>{$aMedia.IMAGE[push].MEDIA_TITLE}]}>
+                                                <figure>
+                                                    <img class="lazy" src="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/235-100.png" data-original="{"{Pelican::$config.MEDIA_HTTP}{$aMedia.IMAGE[push].MEDIA_PATH}"|format:Pelican::$config.MEDIA_FORMAT_ID.MOBILE_PUSH}" alt="{$aMedia.IMAGE[push].MEDIA_ALT}" />
+                                                </figure>
+                                                <span class="legend">{$aMedia.MEDIA_TITLE}</span>
+                                            </a>
+                                        {/if}
+                                    {/section}
+                                    </ul>
+                                {/if}
+                        </div>
+                    {/foreach}
+                </div>
+            {/if}
+
+            {if $aCta|@sizeof > 0}
+                <ul class="actions">
+                    {section name=cta loop=$aCta}
+                        <li><a class="buttonTransversalInvert" href="{if $aCta[cta].CONTENT_ZONE_MULTI_URL2}{urlParser url=$aCta[cta].CONTENT_ZONE_MULTI_URL2}{else}{urlParser url=$aCta[cta].CONTENT_ZONE_MULTI_URL}{/if}" target="_{$aCta[cta].PAGE_ZONE_MULTI_VALUE}"><span>{$aCta[cta].CONTENT_ZONE_MULTI_LABEL3}</a></li>
+                    {/section}
+                </ul><!-- / .cta -->
+            {/if}
+        </section>
+    </div>
+{/if}

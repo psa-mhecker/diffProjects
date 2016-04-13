@@ -1,0 +1,20 @@
+{if $aData.ZONE_MOBILE == 1}
+    <div class="sliceNew sliceVerbatimMobile">
+        <section id="{$aData.ID_HTML}" class=" showroom-mobile  no-title">
+            {if $aData.ZONE_TITRE neq '' }
+                <div class="span4">
+                    {if $aData.ZONE_TITRE neq ''}<h3 class="title-lvl2" {if ($aData.SECOND_COLOR|count_characters)==7 } style="color:{$aData.SECOND_COLOR};" {/if}>{$aData.ZONE_TITRE|escape}</h3>{/if}
+                </div>
+            {/if}
+            <div class="verbatim">
+                <figure>
+                    <img class="lazy" width="60" height="60" alt="{$MEDIA_ALT2}" src="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/lazy-145-145.png" data-original="{Pelican::$config.MEDIA_HTTP}{$aData.MEDIA_PATH}" style="display: inline-block;">
+                </figure>
+                <div class="txt">
+                    <blockquote>{$aData.ZONE_TEXTE}</blockquote>
+                    <span class="name">{$aData.ZONE_TEXTE2}</span>
+                </div>
+            </div>
+        </section>
+    </div>
+{/if}

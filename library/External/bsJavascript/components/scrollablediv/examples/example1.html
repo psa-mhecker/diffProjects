@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+<title>JavaScript Bs_ScrollableDiv Example 1</title>
+	<script type="text/javascript" src="../../../lib/LibCrossBrowser.js"><!-- //dummy --></script>
+	<script type="text/javascript" src="../../../lib/EventHandler.js"><!-- //dummy --></script>
+	<script type="text/javascript" src="../../../core/form/Bs_FormUtil.lib.js"><!-- //dummy --></script>
+	<script type="text/javascript" src="../../../components/slider/Bs_Slider.class.js"><!-- //dummy --></script>
+	<script type="text/javascript" src="../../../components/scrollablediv/Bs_ScrollableDiv.class.js"><!-- //dummy --></script>
+	<script type="text/javascript">
+	<!--
+	function init() {
+		//scrollablediv 1
+		var scroller = new Bs_ScrollableDiv();
+		scroller.init('divContainer_1', 'divContent_1');
+		
+	  var sliderObj = new Bs_Slider();
+		sliderObj.attachOnChange(Bs_ScrollableDiv_sliderChange);
+		sliderObj.width          = 11;
+		sliderObj.height         = 'auto';
+		sliderObj.minVal         = 0;
+		sliderObj.maxVal         = 100;
+		sliderObj.valueInterval  = 0.1;
+		sliderObj.arrowAmount    = 0.2;
+		sliderObj.arrowMouseOver = true;
+		sliderObj.valueDefault   = 0;
+		sliderObj.direction      = 1;
+		sliderObj.imgDir         = '../../../components/slider/img/burp/';
+		sliderObj.setBackgroundImage('scroll_ln.gif', 'repeat');
+		sliderObj.setSliderIcon('scroll_knob.gif', 11, 5);
+		sliderObj.setArrowIconLeft('scroll_up.gif', 11, 10);
+		sliderObj.setArrowIconRight('scroll_dn.gif', 11, 10);
+		sliderObj.useInputField = 0;
+		
+		scroller.setSliderObject(sliderObj, 'sliderDiv');
+		
+		
+		
+		//scrollablediv 2
+		var scroller2 = new Bs_ScrollableDiv();
+		scroller2.init('divContainer_2', 'divContent_2');
+		
+	  var sliderObj2 = new Bs_Slider();
+		sliderObj2.attachOnChange(Bs_ScrollableDiv_sliderChange);
+		sliderObj2.width          = 11;
+		sliderObj2.height         = 'auto';
+		sliderObj2.minVal         = 0;
+		sliderObj2.maxVal         = 100;
+		sliderObj2.valueInterval  = 0.1;
+		sliderObj2.arrowAmount    = 0.3;
+		sliderObj2.arrowMouseOver = true;
+		sliderObj2.valueDefault   = 0;
+		sliderObj2.direction      = 1;
+		sliderObj2.imgDir         = '../../../components/slider/img/burp/';
+		sliderObj2.setBackgroundImage('scroll_ln.gif', 'repeat');
+		sliderObj2.setSliderIcon('scroll_knob.gif', 11, 5);
+		sliderObj2.setArrowIconLeft('scroll_up.gif', 11, 10);
+		sliderObj2.setArrowIconRight('scroll_dn.gif', 11, 10);
+		sliderObj2.useInputField = 0;
+		
+		scroller2.setSliderObject(sliderObj2, 'sliderDiv2');
+	}
+	// -->
+	</script>
+</head>
+
+<body onload="init();" bgcolor="#ffffff">
+
+<h1>JavaScript Bs_ScrollableDiv Example 1</h1>
+
+To create a scrollable div like this:
+<ul>
+  <li>Include the dependant js files.</li>
+  <li>
+		The code in the init function needs to be executed in the onload event of the document. 
+		Customize the slider to you needs. For more information about the slider go to 
+		<a href="http://www.blueshoes.org/en/javascript/slider/" target="_blank">the slider page</a>.
+	</li>
+  <li>
+		Create a div in a div, just like the ones with ID's "divContainer_1" and "divContent_1" in this document.<br>
+		These ID's need to be used in the init() method.<br>
+		The outer container div needs to be relative. Give it a width, and if possible a height also. <br>
+		In this example we use a height of "100%". That works together with the min-height and max-height. If you can, 
+		set a height in pixels directly. <br>
+		The inner content div needs to be positioned absolute (in the container div).
+	</li>
+	<li>Make a div with an ID for the slider, here it is the "sliderDiv". This ID needs to be used in the setSliderObject() method.</li>
+	<li>
+		You can customize the scroll speed by changing the slider values for minVal, maxVal, valueInterval and arrowAmount. <br>
+		It is a good idea to leave minVal 0 and maxVal 100. Then change the value of arrowAmount, but make sure it is not smaller than valueInterval.
+	</li>
+</ul>
+<hr>
+<br>
+
+
+<table border="0" cellspacing="0" cellpadding="0" width="300" height="150" bgcolor="#C0C0C0">
+	<tr>
+		<td colspan="2" width="100%" valign="top" bgcolor="#DDDDDD">
+			this is just a td of the table. it wastes some space.
+		</td>
+	</tr>
+	<tr>
+		<td width="289" valign="top" bgcolor="#D1D1D1">
+			<div id="divContainer_1" style="position:relative; width:289px; height:100%; min-height:80px; max-height:150px; overflow:hidden;"> 
+				<div id="divContent_1" style="position:absolute; padding:5px;"> 
+					this is the text of the div. it can be anything. images are fine as well. 
+					this is the text of the div. it can be anything. images are fine as well. 
+					<img src="http://www.blueshoes.org/img/blueshoes_php_logo.gif" border="0" align="left" alt=""> 
+					this is the text of the div. it can be anything. images are fine as well. 
+					this is the text of the div. it can be anything. images are fine as well. 
+					aaaaaaa bbbbbbb cccccccc dddddddddd eeeeeeeee fffffffffff gggggggggg
+					hhhhhhh iiiiiiiii jjjjjjjjj kkkkkkkkk llllllll mmmmmmmmmmm nnnnnnnnnn
+					oooooooo pppppppp qqqqqqqqqq rrrrrrrrr sssssssss ttttttt uuuuuuuu
+					vvvvvvvv wwwwwwwww xxxxxxxxxxxxxx yyyyyyyyyyyy zzzzzzzzzzz 000000000
+					1111111 2222222222 33333333333 4444444444 55555555555 666666666666
+					7777777 888888888888 999999999999
+
+					this is the text of the div. it can be anything. images are fine as well. 
+					this is the text of the div. it can be anything. images are fine as well. 
+					aaaaaaa bbbbbbb cccccccc dddddddddd eeeeeeeee fffffffffff gggggggggg
+					hhhhhhh iiiiiiiii jjjjjjjjj kkkkkkkkk llllllll mmmmmmmmmmm nnnnnnnnnn
+					oooooooo pppppppp qqqqqqqqqq rrrrrrrrr sssssssss ttttttt uuuuuuuu
+					vvvvvvvv wwwwwwwww xxxxxxxxxxxxxx yyyyyyyyyyyy zzzzzzzzzzz 000000000
+					1111111 2222222222 33333333333 4444444444 55555555555 666666666666
+					7777777 888888888888 999999999999
+					this is the text of the div. it can be anything. images are fine as well. 
+					this is the text of the div. it can be anything. images are fine as well. 
+					aaaaaaa bbbbbbb cccccccc dddddddddd eeeeeeeee fffffffffff gggggggggg
+					hhhhhhh iiiiiiiii jjjjjjjjj kkkkkkkkk llllllll mmmmmmmmmmm nnnnnnnnnn
+					oooooooo pppppppp qqqqqqqqqq rrrrrrrrr sssssssss ttttttt uuuuuuuu
+					vvvvvvvv wwwwwwwww xxxxxxxxxxxxxx yyyyyyyyyyyy zzzzzzzzzzz 000000000
+					1111111 2222222222 33333333333 4444444444 55555555555 666666666666
+					7777777 888888888888 999999999999
+					this is the text of the div. it can be anything. images are fine as well. 
+					this is the text of the div. it can be anything. images are fine as well. 
+					aaaaaaa bbbbbbb cccccccc dddddddddd eeeeeeeee fffffffffff gggggggggg
+					hhhhhhh iiiiiiiii jjjjjjjjj kkkkkkkkk llllllll mmmmmmmmmmm nnnnnnnnnn
+					oooooooo pppppppp qqqqqqqqqq rrrrrrrrr sssssssss ttttttt uuuuuuuu
+					vvvvvvvv wwwwwwwww xxxxxxxxxxxxxx yyyyyyyyyyyy zzzzzzzzzzz 000000000
+					1111111 2222222222 33333333333 4444444444 55555555555 666666666666
+					7777777 888888888888 999999999999
+					this is the text of the div. it can be anything. images are fine as well. 
+					this is the text of the div. it can be anything. images are fine as well. 
+					aaaaaaa bbbbbbb cccccccc dddddddddd eeeeeeeee fffffffffff gggggggggg
+					hhhhhhh iiiiiiiii jjjjjjjjj kkkkkkkkk llllllll mmmmmmmmmmm nnnnnnnnnn
+					oooooooo pppppppp qqqqqqqqqq rrrrrrrrr sssssssss ttttttt uuuuuuuu
+					vvvvvvvv wwwwwwwww xxxxxxxxxxxxxx yyyyyyyyyyyy zzzzzzzzzzz 000000000
+					1111111 2222222222 33333333333 4444444444 55555555555 666666666666
+					7777777 888888888888 999999999999 end
+				</div>
+			</div>
+		</td>
+		<td width="11" height="100%" align="left" valign="top" bgcolor="white"><div id="sliderDiv"></div></td>
+	</tr>
+</table>
+<br><br>
+
+<table border="0" cellspacing="0" cellpadding="0" width="300" height="100">
+	<tr>
+		<td width="289" valign="top">
+			<div id="divContainer_2" style="position:relative; width:289px; height:100; overflow:hidden;"> 
+				<div id="divContent_2" style="position:absolute;"> 
+					this is the text of the div. it can be anything. images are fine as well. 
+					this is the text of the div. it can be anything. images are fine as well. 
+					<img src="http://www.blueshoes.org/img/blueshoes_php_logo.gif" border="0" align="left" alt=""> 
+					this is the text of the div. it can be anything. images are fine as well. 
+					this is the text of the div. it can be anything. images are fine as well. 
+					aaaaaaa bbbbbbb cccccccc dddddddddd eeeeeeeee fffffffffff gggggggggg
+					hhhhhhh iiiiiiiii jjjjjjjjj kkkkkkkkk llllllll mmmmmmmmmmm nnnnnnnnnn
+					oooooooo pppppppp qqqqqqqqqq rrrrrrrrr sssssssss ttttttt uuuuuuuu
+					vvvvvvvv wwwwwwwww xxxxxxxxxxxxxx yyyyyyyyyyyy zzzzzzzzzzz 000000000
+					1111111 2222222222 33333333333 4444444444 55555555555 666666666666
+					7777777 888888888888 999999999999 end
+				</div>
+			</div>
+		</td>
+		<td width="11" height="100%" align="left" valign="top" bgcolor="white"><div id="sliderDiv2"></div></td>
+	</tr>
+</table>
+
+
+<div id="debug"></div>
+
+</body>
+
+</html>
+

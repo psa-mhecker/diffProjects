@@ -1,0 +1,38 @@
+.combo_suggest {
+	cursor: pointer;
+	left: -22px;
+	margin: 2px;
+	padding: 2px;
+	position: relative;
+	top: 0px;
+	vertical-align: top;
+}
+
+#search_suggest {
+	background-color: #FFFFFF;
+	border: 1px solid #000000;
+	cursor: pointer;
+	display: none;
+	font-weight: bold;
+	height: 150px;
+	overflow: -moz-scrollbars-vertical;
+	overflow-x: hidden;
+	overflow-y: auto;
+	position: absolute;
+	text-align: left;
+	z-index: 2;
+}
+
+#search_suggest a {
+	color: black;	
+	display: block;
+	overflow: hidden;
+	padding: 0 2px;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+#search_suggest a.hovered {
+	background-color: #316AC5;
+	color: #FFFFFF;
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified" attributeFormDefault="unqualified"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns:es="http://aoa.inetpsa.com/ws/export/shipping" 
+	xmlns:c="http://aoa.inetpsa.com/ws/common" 
+	targetNamespace="http://aoa.inetpsa.com/ws/export/shipping">
+	
+	<xs:import namespace="http://aoa.inetpsa.com/ws/common" schemaLocation="aoaCommonItems.xsd"/>
+	
+	<xs:element name="ShippingOutput">
+		<xs:complexType>
+			<xs:sequence>
+				<!-- cout de la livraison -->
+				<xs:element name="Rate" type="c:PriceType"/>
+				<!-- cout de la livraison hors taxes--> <!-- ASI : AOA-319 -->
+				<xs:element name="RateBeforeTaxes" type="c:PriceType" minOccurs="0"/>
+				<!-- [lot2+] code de la livraison -->
+				<xs:element name="Code" type="xs:string" minOccurs="0"/>
+				<!-- [lot2+] livreur -->
+				<xs:element name="Provider" type="xs:string" minOccurs="0"/>
+				<!-- [lot2+] joker -->
+				<xs:any namespace="##other" processContents="skip" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+</xs:schema>

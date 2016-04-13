@@ -1,0 +1,30 @@
+{if $aParams.ZONE_MOBILE eq 1}
+<div class="sliceNew sliceStrongPointsMobile">
+    <section id="{$aParams.ID_HTML}" class="c-skin ">
+        <h2 class="subtitle" {if ($aData.PRIMARY_COLOR|count_characters)==7 } style="color:{$aData.PRIMARY_COLOR};" {/if}>
+            {$aParams.ZONE_TITRE|escape}
+        </h2>
+        <h3 class="parttitle" {if ($aData.SECOND_COLOR|count_characters)==7 } style="color:{$aData.SECOND_COLOR};" {/if}>
+            {$aParams.ZONE_TITRE2|escape}
+        </h3>
+        <h4 class="title-lvl3" {if ($aData.SECOND_COLOR|count_characters)==7 } style="color:{$aData.SECOND_COLOR};" {/if}>
+            {$aParams.ZONE_TITRE3|escape}
+        </h4>
+        {if $aPointsForts|@sizeof > 0}
+            <ul class="checks">
+                {foreach from=$aPointsForts item=pointfort name=pointsforts}
+                    <li>{$pointfort.PAGE_ZONE_MULTI_TITRE}</li>
+                {/foreach}
+            </ul>
+        {/if}
+    </section>
+</div>
+{/if}
+
+{literal}
+<style>
+.sliceStrongPointsMobile .checks li:before {
+    color: {/literal}{$aData.PRIMARY_COLOR};{literal}
+}
+</style>
+{/literal}

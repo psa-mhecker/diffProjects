@@ -1,0 +1,51 @@
+.webfx-tree-container {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #666;
+	white-space: nowrap;
+	cursor:default;
+}
+
+.webfx-tree-item img {
+	vertical-align: middle;
+	border: 0px;
+}
+
+.webfx-tree-item {
+	padding: 0px;
+	margin: 0px;
+	white-space: nowrap;
+}
+
+.webfx-tree-item a, .webfx-tree-item a:active {
+	color: #333;
+	text-decoration: none;
+}
+
+.webfx-tree-item a:hover {
+	color: #333;
+	text-decoration: underline;
+}
+
+.webfx-tree-item a:active, .webfx-tree-item a.selected, .webfx-tree-item a.selected-inactive {
+	background-image: url(/library/Pelican/Hierarchy/Tree/public/images/selection.gif);
+	width:75%;
+}
+
+.webfx-tree-children {
+ 	background-image: url("/library/Pelican/Hierarchy/Tree/public/images/line.gif");
+ 	background-repeat:repeat-y;
+}
+
+.webfx-tree-hide-root {
+	display : none;
+}
+
+.selected > .webfx-tree-item-label {
+	background-image: url(/library/Pelican/Hierarchy/Tree/public/images/selection.gif);
+	width:75%;
+}
+
+.webfx-tree-children-nolines {
+	margin-left:-17px;
+}

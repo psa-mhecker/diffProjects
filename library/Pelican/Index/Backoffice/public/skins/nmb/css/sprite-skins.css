@@ -1,0 +1,70 @@
+.sprite-skins { background: url(../images/sprite-skins.png) no-repeat top left; }
+.sprite-tree_user_profile { background-position: 0 -10px; width:18px; height:18px;} 
+.sprite-tree_base { background-position: 0 -38px; width:19px; height:18px;} 
+.sprite-title { background-position: 0 -66px; width:2px; height:25px;} 
+.sprite-button_addfolder { background-position: 0 -101px; width:12px; height:12px;} 
+.sprite-button_message { background-position: 0 -123px; width:12px; height:12px;} 
+.sprite-footer_off { background-position: 0 -145px; width:1px; height:15px;} 
+.sprite-title2 { background-position: 0 -170px; width:1px; height:19px;} 
+.sprite-tree_workflow { background-position: 0 -199px; width:18px; height:18px;} 
+.sprite-onglet_off_gauche_int, .sprite-onglet_off_gauche, .sprite-onglet_off_droite_int, .sprite-onglet_off_droite, .sprite-onglet_off_centre { background-position: 0 -227px; width:2px; height:32px;} 
+.sprite-onglet_on_centre, .sprite-onglet_on_gauche_int, .sprite-onglet_on_droite, .sprite-onglet_on_droite_int, .sprite-onglet_on_gauche { background-position: 0 -269px; width:2px; height:32px;} 
+.sprite-petit_onglet_off_droite_int, .sprite-petit_onglet_off_droite { background-position: 0 -311px; width:4px; height:21px;} 
+.sprite-button_addmultiple, .sprite-button_mutualisation { background-position: 0 -342px; width:12px; height:12px;} 
+.sprite-header_on { background-position: 0 -364px; width:2px; height:16px;} 
+.sprite-up { background-position: 0 -390px; width:12px; height:12px;} 
+.sprite-tree_user_role { background-position: 0 -412px; width:18px; height:18px;} 
+.sprite-top_middle { background-position: 0 -440px; width:1px; height:25px;} 
+.sprite-fond2 { background-position: 0 -475px; width:1px; height:4px;} 
+.sprite-folderOpen, .sprite-folder { background-position: 0 -489px; width:18px; height:18px;} 
+.sprite-bottom_left, .sprite-xtrans, .sprite-bottom_right { background-position: 0 -517px; width:1px; height:1px;} 
+.sprite-button_off { background-position: 0 -528px; width:2px; height:16px;} 
+.sprite-appli_over { background-position: 0 -554px; width:2px; height:32px;} 
+.sprite-button_back, .sprite-button_undo { background-position: 0 -596px; width:12px; height:12px;} 
+.sprite-title_middle { background-position: 0 -618px; width:2px; height:16px;} 
+.sprite-tree_statistiques { background-position: 0 -644px; width:18px; height:18px;} 
+.sprite-top_right { background-position: 0 -672px; width:16px; height:25px;} 
+.sprite-selection { background-position: 0 -707px; width:1px; height:16px;} 
+.sprite-button_edit { background-position: 0 -733px; width:12px; height:12px;} 
+.sprite-petit_onglet_off_centre { background-position: 0 -755px; width:4px; height:21px;} 
+.sprite-addImage { background-position: 0 -786px; width:16px; height:16px;} 
+.sprite-tree_graphique { background-position: 0 -812px; width:18px; height:18px;} 
+.sprite-logout { background-position: 0 -840px; width:16px; height:16px;} 
+.sprite-tree_consultation { background-position: 0 -866px; width:18px; height:18px;} 
+.sprite-petit_onglet_on_gauche, .sprite-petit_onglet_on_gauche_int { background-position: 0 -894px; width:4px; height:21px;} 
+.sprite-tree_file_red { background-position: 0 -925px; width:18px; height:18px;} 
+.sprite-sep { background-position: 0 -953px; width:2px; height:7px;} 
+.sprite-button_on { background-position: 0 -970px; width:1px; height:25px;} 
+.sprite-petit_onglet_off_gauche_int, .sprite-petit_onglet_off_gauche { background-position: 0 -1005px; width:4px; height:21px;} 
+.sprite-_folderX { background-position: 0 -1036px; width:18px; height:18px;} 
+.sprite-down { background-position: 0 -1064px; width:12px; height:12px;} 
+.sprite-button_delfile { background-position: 0 -1086px; width:12px; height:12px;} 
+.sprite-button_preview { background-position: 0 -1108px; width:15px; height:15px;} 
+.sprite-button_editfolder { background-position: 0 -1133px; width:12px; height:12px;} 
+.sprite-button_save { background-position: 0 -1155px; width:12px; height:12px;} 
+.sprite-button_add { background-position: 0 -1177px; width:12px; height:12px;} 
+.sprite-tree_table { background-position: 0 -1199px; width:18px; height:18px;} 
+.sprite-tree_workflow_detail { background-position: 0 -1227px; width:18px; height:18px;} 
+.sprite-wallpaper { background-position: 0 -1255px; width:6px; height:855px;} 
+.sprite-petit_onglet_on_droite, .sprite-petit_onglet_on_droite_int { background-position: -29px -10px; width:4px; height:21px;} 
+.sprite-_folderXOpen { background-position: -29px -41px; width:18px; height:18px;} 
+.sprite-button_del { background-position: -29px -69px; width:16px; height:16px;} 
+.sprite-button_print { background-position: -29px -95px; width:12px; height:12px;} 
+.sprite-petit_onglet_bas { background-position: -29px -117px; width:4px; height:21px;} 
+.sprite-delImage { background-position: -29px -148px; width:16px; height:16px;} 
+.sprite-tree_table_red { background-position: -29px -174px; width:18px; height:18px;} 
+.sprite-tree_user_user { background-position: -29px -202px; width:18px; height:18px;} 
+.sprite-petit_onglet_on_centre { background-position: -29px -230px; width:4px; height:21px;} 
+.sprite-button_delfolder { background-position: -29px -261px; width:12px; height:12px;} 
+.sprite-addMedia { background-position: -29px -283px; width:16px; height:16px;} 
+.sprite-tree_file { background-position: -29px -309px; width:18px; height:18px;} 
+.sprite-button_select { background-position: -29px -337px; width:12px; height:12px;} 
+.sprite-ok_fond { background-position: -29px -359px; width:2px; height:4px;} 
+.sprite-header_off { background-position: -29px -373px; width:1px; height:19px;} 
+.sprite-tree_user_root { background-position: -29px -402px; width:18px; height:18px;} 
+.sprite-fond { background-position: -29px -430px; width:6px; height:4px;} 
+.sprite-tree_references { background-position: -29px -444px; width:18px; height:18px;} 
+.sprite-combo { background-position: -29px -472px; width:16px; height:17px;} 
+.sprite-onglet_bas { background-position: -29px -499px; width:6px; height:31px;} 
+.sprite-top_left { background-position: -29px -540px; width:9px; height:25px;} 
+.sprite-tree_media { background-position: -29px -575px; width:18px; height:18px;}

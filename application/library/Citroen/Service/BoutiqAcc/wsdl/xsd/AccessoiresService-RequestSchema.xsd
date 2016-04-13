@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema
+  targetNamespace="http://xml.inetpsa.com/Services/AccessoiresApplication/AccessoiresService" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import namespace="http://aoa.inetpsa.com/ws/setting/CriteriaValue" schemaLocation="aoaSettingsCriteriaValue.xsd"/>
+  <xsd:import namespace="http://aoa.inetpsa.com/ws/setting/Criteria" schemaLocation="aoaSettingsCriteria.xsd"/>
+  <xsd:import namespace="http://aoa.inetpsa.com/ws/setting/Accessories" schemaLocation="aoaSettingsAccessories.xsd"/>
+  <xsd:import namespace="http://aoa.inetpsa.com/ws/export/ExportCriteriaValue" schemaLocation="aoaExportCriteriaValue.xsd"/>
+  <xsd:import namespace="http://aoa.inetpsa.com/ws/export/ExportCriteria" schemaLocation="aoaExportCriteria.xsd"/>
+  <xsd:import namespace="http://aoa.inetpsa.com/ws/export/ExportAccessoires" schemaLocation="aoaExportAccessoires.xsd"/>
+
+</xsd:schema>

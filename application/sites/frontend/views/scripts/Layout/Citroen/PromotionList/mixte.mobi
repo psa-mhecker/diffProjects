@@ -1,0 +1,106 @@
+<style>
+    section.prommixte ul.actions li a {ldelim}
+        {if ($aData.SECOND_COLOR|count_characters)==7 }
+            background-color: {$aData.SECOND_COLOR} !important;
+            border-color: {$aData.SECOND_COLOR} !important;
+            color: #ffffff !important;
+        {else}
+            background-color: #f0780a !important;
+            border-color: #f0780a !important;
+            color: #ffffff !important;
+        {/if}
+    {rdelim}
+</style>
+
+<section id="{$promotion.PAGE_ID}_{$promotion.PAGE_ZONE_MULTI_ID}" class="{if ($aData.PRIMARY_COLOR|count_characters)==7 } showroom{/if} prommixte">
+    {if $promotion.PAGE_ZONE_MULTI_LABEL}
+        <h1 class="subtitle">
+            <span {if ($aData.PRIMARY_COLOR|count_characters)==7 } style="color:{$aData.PRIMARY_COLOR};" {/if} >
+                {$promotion.PAGE_ZONE_MULTI_LABEL|escape}
+            </span>
+        </h1>
+    {/if}
+
+    {if $promotion.PAGE_ZONE_MULTI_LABEL2}
+        <h3 class="parttitle">
+            <span {if ($aData.SECOND_COLOR|count_characters)==7 } style="color:{$aData.SECOND_COLOR};" {/if}>
+                {$promotion.PAGE_ZONE_MULTI_LABEL2|escape}
+            </span>
+        </h3>
+    {/if}
+
+    {if $promotion.YOUTUBE_ID}
+	    <figure class="visual">
+            <a class="video galleryPop popThis" data-video="{$promotion.YOUTUBE_ID}" href="{urlParser url=$promotion.YOUTUBE_ID}" {gtm   action='Display::Video' data=$aData datasup=['eventLabel'=>{$promotion.PAGE_ZONE_MULTI_LABEL}]}>
+                <img class="lazy" src="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/16-9.png" data-original="{"{Pelican::$config.MEDIA_HTTP}{$promotion.MEDIA_PATH}"|format:Pelican::$config.MEDIA_FORMAT_ID.WEB_2_COLONNES_MIXTE}" />
+                <i class="icon-play"></i>
+            </a>    
+        </figure>
+    {elseif $promotion.MEDIA_PATH}
+        <figure class="visual"><img class="lazy" alt="{$promotion.MEDIA_ALT}" data-original="{Pelican::$config.MEDIA_HTTP}{$promotion.MEDIA_PATH}" src="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/235-100.png" class="lazy" style="display: inline-block;"></figure>
+    {elseif $promotion.PAGE_ZONE_MULTI_TEXT3 != ""}
+		<div class="text">
+            {$promotion.PAGE_ZONE_MULTI_TEXT3}
+		</div>
+    {/if}
+
+    {if $promotion.PAGE_ZONE_MULTI_TEXT}
+        <div class="zonetexte">
+            <p>
+                <strong>
+                    {$promotion.PAGE_ZONE_MULTI_TEXT}
+                </strong>
+            </p>
+        </div>
+    {/if}
+
+    {if $promotion.CHILD|@count gt 1}
+        <div class="promo-details">
+            <div class="text">{'SEE_PROMO_DETAIL'|t}</div>
+            <form method="post" action="" id="promo-select-vehicle-form" name="promo-select-vehicle-form">
+                <fieldset>
+                    <select id="promo-select-vehicle-select" name="promo-select-vehicle-select" onchange="location = this.options[this.selectedIndex].value;" >
+                        <option value="0">{'SELECT_VEHICLE'|t}</option>
+                        {foreach from=$promotion.CHILD key=k item=pChild}
+                            {if $pChild.VEHICULE_ID}<option value="{$pChild.PAGE_CLEAR_URL}?vid={$pChild.VEHICULE_ID}" {gtm action='DropdownList' data=$aData datasup=['eventLabel'=>$pChild.VEHICULE_LABEL,'eventCategory'=>'Content']}>{$pChild.VEHICULE_LABEL}</option>{/if}
+                        {/foreach}
+                    </select>
+                </fieldset>
+            </form>
+        </div>
+    {/if}
+    
+    {if $promotion.PAGE_ZONE_MULTI_URL14 && ($promotion.PAGE_ZONE_MULTI_URL13 == "ROLL" || ($promotion.PAGE_ZONE_MULTI_URL13 == "POP_IN" && $promotion.PAGE_ZONE_MULTI_URL16 != ""))}
+        {if $promotion.PAGE_ZONE_MULTI_URL13 == "ROLL"}
+            <em class="notice"><span>{$promotion.PAGE_ZONE_MULTI_URL14|escape}</span></em>
+            <div class="notice-text" data-close="Fermer">
+                {if $promotion.MEDIA_PATH6 != ""}<figure><img class="lazy noscale" src="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/235-100.png"  data-original="{Pelican::$config.MEDIA_HTTP}{$promotion.MEDIA_PATH6}" alt="{$promotion.MEDIA_TITLE6}" /></figure>{/if}
+                <h6 class="title-lvl1 centered nobg">{$aData.ZONE_TITRE6|escape}</h6>
+                <p>
+                    {$promotion.PAGE_ZONE_MULTI_TEXT4}
+                </p>
+            </div>
+        {elseif $promotion.PAGE_ZONE_MULTI_URL13 == "POP_IN" && $promotion.PAGE_ZONE_MULTI_URL16 != ""}
+            <em class="notice"><span {gtmjs type='toggle'  action='Display::ToolTip|' eventGTM='over'  data=$aData datasup=['eventLabel' => $promotion.PAGE_ZONE_MULTI_URL14, 'value' => 'legal']}>{$promotion.PAGE_ZONE_MULTI_URL14}</span></em>
+            <div class="notice-text" data-close="Fermer">
+                <h6 class="title-lvl1 centered nobg">{$promotion.PAGE_ZONE_MULTI_URL14|escape}</h6>
+                <iframe id="iframe_popin" class="iframe_popin_style" src="{$promotion.PAGE_ZONE_MULTI_URL16}?popinMobile=1"></iframe>
+            </div>
+        {/if}
+    {/if}
+
+    {if $promotion.PAGE_ZONE_MULTI_URL13 == "TEXT" && $promotion.PAGE_ZONE_MULTI_TEXT4 neq ""}
+        {if $MEDIA_PATH4 != ""}<figure class="visual"><img class="lazy noscale" src="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/235-100.png" data-original="{"{Pelican::$config.MEDIA_HTTP}{$MEDIA_PATH4}"|format:Pelican::$config.MEDIA_FORMAT_ID.MOBILE_MENTION}" alt="{$MEDIA_TITLE4}" /></figure>{/if}
+        <div class="legal">{$promotion.PAGE_ZONE_MULTI_URL14|escape}<br>{$promotion.PAGE_ZONE_MULTI_TEXT4}</div>
+    {/if}
+
+    {if $promotion.CTA|@sizeof > 0}
+        <ul class="actions">
+            {foreach from=$promotion.CTA item=pCta name=promotion_cta}
+                {if $pCta.PAGE_ZONE_MULTI_URL2}
+                    <li><a class="{if $smarty.foreach.promotion_cta.iteration == 1}ctaFirst buttonTransversalInvert{else}buttonLead{/if}" href="{urlParser url=$pCta.PAGE_ZONE_MULTI_URL2}" {gtm action='Push' data=$aData datasup=['eventLabel'=>{$pCta.PAGE_ZONE_MULTI_LABEL|escape},'eventCategory'=>'Content']} {if $pCta.PAGE_ZONE_MULTI_VALUE == "BLANK"}target="_blank"{/if} ><span>{$pCta.PAGE_ZONE_MULTI_LABEL|escape}</span></a></li>
+                {/if}
+            {/foreach}
+        </ul>
+    {/if}
+</section>

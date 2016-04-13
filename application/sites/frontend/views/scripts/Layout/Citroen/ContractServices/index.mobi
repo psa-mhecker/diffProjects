@@ -1,0 +1,70 @@
+{if $aData.ZONE_MOBILE == 1}
+{literal}
+<style>
+	.sliceContratsServicesMobile .buttonLink:hover{
+	color: {/literal}{$aData.SECOND_COLOR}{literal}!important; 
+	}
+	.sliceContratsServicesMobile p.cdsequal span, .sliceContratsServicesMobile p.cdsplus span{
+	background-color: {/literal}{$aData.SECOND_COLOR}{literal}!important; 
+	}
+	</style>
+{/literal}
+
+{assign var='max' value=1}
+<div class="sliceNew sliceContratsServicesMobile">
+<section id="{$aData.ID_HTML}">
+  {if $aData.ZONE_TITRE}<h2 class="span4 subtitle" {if ($aData.PRIMARY_COLOR|count_characters)==7 } style="color:{$aData.PRIMARY_COLOR};"  {/if}>{$aData.ZONE_TITRE}</h2>{/if}
+  {if $aData.ZONE_TITRE2}<h3 class="span4 parttitle" {if ($aData.SECOND_COLOR|count_characters)==7 } style="color:{$aData.SECOND_COLOR};"  {/if}>{$aData.ZONE_TITRE2}</h3>{/if}
+    <div class="accordion" data-tie="all" data-init="0">
+    {assign var='aPictos' value=['nopicto'=>'','pictoplus'=>'cdsplus','pictoegale'=>'cdsequal']}
+    {foreach from=$aContractMobi key=k item=lib}
+                <div class="frame{$DS} {$lib.PAGE_ZONE_MULTI_TITRE4|lower}">
+                   <div class="title-tab">
+                       <div class="txt">
+							<h4 class="parttitle" data-sync="ctrTitled7" {if ($aData.PRIMARY_COLOR|count_characters)==7 } style="color:{$aData.PRIMARY_COLOR};"  {/if}>{$lib.PAGE_ZONE_MULTI_TITRE}</h4>
+                            <div class="price" {if ($aData.SECOND_COLOR|count_characters)==7 } style="color:{$aData.SECOND_COLOR};font-weight:bold;"  {/if}>{$lib.PAGE_ZONE_MULTI_TITRE2}</div>
+                       </div>
+                   </div>
+                   <div class="item">
+                       {if $lib.PAGE_ZONE_MULTI_VALUE3 != 'nopicto'}
+                        {assign var=i value=0}
+                        {section loop=$aContract name=i max=$k + 1}
+                            <div class="text">
+                                 {$aContract[i].$i}
+                            </div>
+
+                              {if $i < $k}
+                                <p class="{$aPictos[$aContractMobi[$i+1].PAGE_ZONE_MULTI_VALUE3]}"><span></span></p>
+                              {/if}
+                          
+                            {assign var=i value=$i + 1}
+                        {/section}
+                        {else}
+                            <div class="text">
+                                 {$lib.PAGE_ZONE_MULTI_TEXT2}
+                            </div>
+                            <p><span></span></p>
+
+                        {/if}
+
+                       {if $lib.PAGE_ZONE_MULTI_URL && $lib.PAGE_ZONE_MULTI_LABEL}
+                            <ul class="linksWrapper">
+                                <li><a class="buttonLink" href="{urlParser url=$lib.PAGE_ZONE_MULTI_URL}" {if $lib.PAGE_ZONE_MULTI_VALUE == 'BLANK'}target="_blank"{/if}><span>{$lib.PAGE_ZONE_MULTI_LABEL}</span></a></li>
+                            </ul>
+                       {/if}
+
+                       {if $lib.PAGE_ZONE_MULTI_URL3 && $lib.PAGE_ZONE_MULTI_LABEL2}
+                            <ul class="actions">
+                                <li><a class="buttonLead" href="{urlParser url=$lib.PAGE_ZONE_MULTI_URL3}" {if $lib.PAGE_ZONE_MULTI_VALUE2 == 'BLANK'}target="_blank"{/if} {gtm name='mobile_contrat_service_cta_souscrire' data=$aData datasup=['value'=>$k] labelvars=['%position%'=>$pos,'%nom du cta%'=>$lib.PAGE_ZONE_MULTI_LABEL2,'%id du cta%'=>$k]}><span>{$lib.PAGE_ZONE_MULTI_LABEL2}</span></a></li>
+                            </ul><!-- / .cta -->
+                       {/if}
+                   </div>
+
+               </div>
+
+       {/foreach}
+
+       </div>
+</section>
+</div>
+{/if}

@@ -1,0 +1,16 @@
+<div class="sliceNew slicePromotionListMobile">
+{if $aData.ZONE_WEB == 1 && $ListePromotions|@sizeof > 0 && $affichTranch==1}	
+    {if $ListePromotions|@sizeof > 0}
+        {foreach from=$ListePromotions item=promotion}
+             {if $promotion.PAGE_ZONE_MULTI_LABEL3 eq 1}
+                 {include file="$pathVisualMobi"}
+             {else}
+                 {include file="$pathMixteMobi"}
+             {/if}
+         {/foreach}
+    {/if}
+    {if $aZonesHeritesM|@sizeof > 0}
+            {foreach from=$aZonesHeritesM item=zone}{$zone}{/foreach}
+    {/if}
+{/if}
+</div>

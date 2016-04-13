@@ -1,0 +1,27 @@
+<skin>
+	<preloader enabled ="true" value="skin2/common/sequence.swf"/>
+	<previous enabled="true" out="skin2/out/previous.gif" over="skin2/over/previous.gif" />
+	<rewind enabled="true" out="skin2/out/rewind.gif" over="skin2/over/rewind.gif" />
+	<stop enabled="true" out="skin2/out/stop.gif" over="skin2/over/stop.gif" />
+	<play enabled="true" out="skin2/out/play.gif" over="skin2/over/play.gif" />
+	<pause enabled="true" out="skin2/out/pause.gif" over="skin2/over/pause.gif" />
+	<fastForward enabled="true" out="skin2/out/forward.gif" over="skin2/over/forward.gif" />
+	<next enabled="true" out="skin2/out/next.gif" over="skin2/over/next.gif"  />
+	<currentTime enabled="true" out="skin2/common/background.gif" />
+	<scrubber enabled="true" bk="skin2/common/background.gif" bar="skin2/common/bar.gif" pointer="skin2/common/pointer.gif"	loadedColor="0x000000" loadedAlpha="25" passedColor="0x000000" passedAlpha="70"  valign="bottom"/>	
+	<totalTime enabled="true" out="skin2/common/background.gif" />
+	<volumeButton enabled="true" out="skin2/out/volume.gif" over="skin2/over/volume.gif" />
+	<muteButton enabled="true" out="skin2/out/mute.gif"  over="skin2/over/mute.gif"  />
+	<volumeSlider enabled="true" bk="skin2/common/background.gif" bar="skin2/common/bar.gif" pointer="skin2/common/pointer.gif" passedColor="0x000000" passedAlpha="75" />
+	<fullscreen enabled="true" out="skin2/out/fullscreen.gif" over="skin2/over/fullscreen.gif" />
+	<restore enabled="true" out="skin2/out/restore.gif" over="skin2/over/restore.gif" />
+	<repeat enabled="true" out="skin2/out/repeat.gif" over="skin2/over/repeat.gif" />
+	<repeatOff enabled="true" out="skin2/out/repeatoff.gif" over="skin2/over/repeatoff.gif"  />
+	<shuffle enabled="true" out="skin2/out/shuffle.gif" over="skin2/over/shuffle.gif"  />
+	<shuffleOff enabled="true" out="skin2/out/shuffleoff.gif" over="skin2/over/shuffleoff.gif" />
+	<info enabled="true" out="skin2/out/info.gif" over="skin2/over/info.gif" />
+	<list enabled="true" out="skin2/out/list.gif" over="skin2/over/list.gif" />
+	<centerButtons enabled="true" play="skin2/common/centerPlay.png" pause="skin2/common/centerPause.png"	rollOverTransparency="70"
+					rollOutTransparency="50" easingType="Regular" easingMethod="easeOut" easingDuration="0.1" />
+	<infoCloseBtn value="skin2/common/x.gif"/>				
+</skin>

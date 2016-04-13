@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions
+  targetNamespace="http://xml.inetpsa.com/Services/AccessoiresApplication/AccessoiresService"
+  xmlns:cxl="http://fault.core.cxl.inetpsa.com"
+  xmlns:ea="http://aoa.inetpsa.com/ws/export/ExportAccessoires"
+  xmlns:ec="http://aoa.inetpsa.com/ws/export/ExportCriteria"
+  xmlns:ecv="http://aoa.inetpsa.com/ws/export/ExportCriteriaValue"
+  xmlns:sa="http://aoa.inetpsa.com/ws/setting/Accessories"
+  xmlns:sc="http://aoa.inetpsa.com/ws/setting/Criteria"
+  xmlns:scv="http://aoa.inetpsa.com/ws/setting/CriteriaValue"
+  xmlns:soap11="http://schemas.xmlsoap.org/soap/envelope/"
+  xmlns:soap12="http://www.w3.org/2003/05/soap-envelope"
+  xmlns:soapenc11="http://schemas.xmlsoap.org/soap/encoding/"
+  xmlns:soapenc12="http://www.w3.org/2003/05/soap-encoding"
+  xmlns:tns="http://xml.inetpsa.com/Services/AccessoiresApplication/AccessoiresService"
+  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+  xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <xsd:schema attributeFormDefault="unqualified"
+      elementFormDefault="qualified" targetNamespace="http://aoa.inetpsa.com/ws/setting/Accessories">
+      <xsd:include schemaLocation="xsd/aoaSettingsAccessories.xsd"/>
+    </xsd:schema>
+    <xsd:schema attributeFormDefault="unqualified"
+      elementFormDefault="qualified" targetNamespace="http://aoa.inetpsa.com/ws/export/ExportAccessoires">
+      <xsd:include schemaLocation="xsd/aoaExportAccessoires.xsd"/>
+    </xsd:schema>
+    <xsd:schema attributeFormDefault="unqualified"
+      elementFormDefault="qualified" targetNamespace="http://aoa.inetpsa.com/ws/setting/Criteria">
+      <xsd:include schemaLocation="xsd/aoaSettingsCriteria.xsd"/>
+    </xsd:schema>
+    <xsd:schema attributeFormDefault="unqualified"
+      elementFormDefault="qualified" targetNamespace="http://aoa.inetpsa.com/ws/export/ExportCriteria">
+      <xsd:include schemaLocation="xsd/aoaExportCriteria.xsd"/>
+    </xsd:schema>
+    <xsd:schema attributeFormDefault="unqualified"
+      elementFormDefault="qualified" targetNamespace="http://aoa.inetpsa.com/ws/setting/CriteriaValue">
+      <xsd:include schemaLocation="xsd/aoaSettingsCriteriaValue.xsd"/>
+    </xsd:schema>
+    <xsd:schema attributeFormDefault="unqualified"
+      elementFormDefault="qualified" targetNamespace="http://aoa.inetpsa.com/ws/export/ExportCriteriaValue">
+      <xsd:include schemaLocation="xsd/aoaExportCriteriaValue.xsd"/>
+    </xsd:schema>
+    <xsd:schema attributeFormDefault="unqualified"
+      elementFormDefault="qualified" targetNamespace="http://fault.core.cxl.inetpsa.com">
+      <xsd:complexType name="ServiceException"/>
+    </xsd:schema>
+    <xsd:schema attributeFormDefault="unqualified"
+      elementFormDefault="qualified"
+      targetNamespace="http://xml.inetpsa.com/Services/AccessoiresApplication/AccessoiresService" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import namespace="http://aoa.inetpsa.com/ws/export/ExportAccessoires"/>
+      <xsd:import namespace="http://fault.core.cxl.inetpsa.com"/>
+      <xsd:import namespace="http://aoa.inetpsa.com/ws/setting/Accessories"/>
+      <xsd:import namespace="http://aoa.inetpsa.com/ws/export/ExportCriteriaValue"/>
+      <xsd:import namespace="http://aoa.inetpsa.com/ws/export/ExportCriteria"/>
+      <xsd:import namespace="http://aoa.inetpsa.com/ws/setting/CriteriaValue"/>
+      <xsd:import namespace="http://aoa.inetpsa.com/ws/setting/Criteria"/>
+      <xsd:element name="getAccessories">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="1" ref="sa:accessoriesInput"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getAccessoriesResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="1" ref="ea:accessoryList"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getCriteria">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="1" ref="sc:criteriaInput"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getCriteriaResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="1" ref="ec:criteriaOut"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getCriteriaValues">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="1" ref="scv:criteriaValueInput"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getCriteriaValuesResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="1" ref="ecv:criteriaValueOut"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ServiceException" type="cxl:ServiceException"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="getAccessoriesRequest">
+    <wsdl:part element="tns:getAccessories" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="getCriteriaRequest">
+    <wsdl:part element="tns:getCriteria" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="getCriteriaValuesRequest">
+    <wsdl:part element="tns:getCriteriaValues" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="ServiceException">
+    <wsdl:part element="tns:ServiceException" name="ServiceException"/>
+  </wsdl:message>
+  <wsdl:message name="getAccessoriesResponse">
+    <wsdl:part element="tns:getAccessoriesResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="getCriteriaResponse">
+    <wsdl:part element="tns:getCriteriaResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="getCriteriaValuesResponse">
+    <wsdl:part element="tns:getCriteriaValuesResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:portType name="AccessoiresServicePortType">
+    <wsdl:operation name="getAccessories">
+      <wsdl:input message="tns:getAccessoriesRequest" name="getAccessoriesRequest"/>
+      <wsdl:output message="tns:getAccessoriesResponse" name="getAccessoriesResponse"/>
+      <wsdl:fault message="tns:ServiceException" name="ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="getCriteria">
+      <wsdl:input message="tns:getCriteriaRequest" name="getCriteriaRequest"/>
+      <wsdl:output message="tns:getCriteriaResponse" name="getCriteriaResponse"/>
+      <wsdl:fault message="tns:ServiceException" name="ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="getCriteriaValues">
+      <wsdl:input message="tns:getCriteriaValuesRequest" name="getCriteriaValuesRequest"/>
+      <wsdl:output message="tns:getCriteriaValuesResponse" name="getCriteriaValuesResponse"/>
+      <wsdl:fault message="tns:ServiceException" name="ServiceException"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AccessoiresServiceHttpBinding" type="tns:AccessoiresServicePortType">
+    <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getAccessories">
+      <wsdlsoap:operation soapAction="http://xml.inetpsa.com/Services/AccessoiresApplication/AccessoiresService#getAccessories"/>
+      <wsdl:input name="getAccessoriesRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getAccessoriesResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <wsdlsoap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCriteria">
+      <wsdlsoap:operation soapAction="http://xml.inetpsa.com/Services/AccessoiresApplication/AccessoiresService#getCriteria"/>
+      <wsdl:input name="getCriteriaRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getCriteriaResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <wsdlsoap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCriteriaValues">
+      <wsdlsoap:operation soapAction="http://xml.inetpsa.com/Services/AccessoiresApplication/AccessoiresService#getCriteriaValues"/>
+      <wsdl:input name="getCriteriaValuesRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getCriteriaValuesResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <wsdlsoap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AccessoiresService">
+    <wsdl:port binding="tns:AccessoiresServiceHttpBinding" name="AccessoiresServiceHttpPort">
+      <wsdlsoap:address location="http://localhost:8080/context-root/services/AccessoiresService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

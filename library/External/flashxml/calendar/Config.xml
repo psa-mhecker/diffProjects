@@ -1,0 +1,25 @@
+﻿<Data>
+	<Days>
+		<Day><![CDATA[<weekDays>Sunday</weekDays>]]></Day>
+		<Day><![CDATA[<weekDays>Monday</weekDays>]]></Day>
+		<Day><![CDATA[<weekDays>Tuesday</weekDays>]]></Day>
+		<Day><![CDATA[<weekDays>Wednesday</weekDays>]]></Day>
+		<Day><![CDATA[<weekDays>Thursday</weekDays>]]></Day>
+		<Day><![CDATA[<weekDays>Friday</weekDays>]]></Day>
+		<Day><![CDATA[<weekDays>Saturday</weekDays>]]></Day>
+	</Days>
+	<Months>
+		<Month><![CDATA[<month>January</month>]]></Month>
+		<Month><![CDATA[<month>February</month>]]></Month>
+		<Month><![CDATA[<month>March</month>]]></Month>
+		<Month><![CDATA[<month>April</month>]]></Month>
+		<Month><![CDATA[<month>May</month>]]></Month>
+		<Month><![CDATA[<month>June</month>]]></Month>
+		<Month><![CDATA[<month>July</month>]]></Month>
+		<Month><![CDATA[<month>August</month>]]></Month>
+		<Month><![CDATA[<month>September</month>]]></Month>
+		<Month><![CDATA[<month>October</month>]]></Month>
+		<Month><![CDATA[<month>November</month>]]></Month>
+		<Month><![CDATA[<month>December</month>]]></Month>
+	</Months>
+</Data>

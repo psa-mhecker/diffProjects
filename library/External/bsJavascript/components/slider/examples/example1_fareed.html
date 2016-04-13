@@ -1,0 +1,94 @@
+<html><head>
+<script type="text/javascript" src="../../../lib/LibCrossBrowser.js"></script>
+<script type="text/javascript" src="../../../lib/EventHandler.js"></script>
+<script type="text/javascript" src="../../../core/form/Bs_FormUtil.lib.js"></script>
+<script type="text/javascript" src="../../../components/slider/Bs_Slider.class.js"></script>
+
+<script type="text/javascript"><!--
+function init(){
+
+var mySlider = [];
+for (i=0; i<2;i++)
+{
+mySlider[i] = [];
+
+for(j=0; j<3;j++)
+{
+mySlider[i][j] = new Bs_Slider();
+mySlider[i][j].attachOnChange(bsSliderStart);
+mySlider[i][j].width = 120;
+mySlider[i][j].height = 26;
+mySlider[i][j].minVal = 0;
+mySlider[i][j].maxVal = 7;
+mySlider[i][j].valueInterval = 1;
+mySlider[i][j].arrowAmount = 0;
+mySlider[i][j].valueDefault = 5;
+mySlider[i][j].imgDir = '../img/';
+mySlider[i][j].setBackgroundImage('bob/background.gif', 'no-repeat');
+mySlider[i][j].setSliderIcon('bob/slider.gif', 13, 18);
+mySlider[i][j].useInputField = 1;
+mySlider[i][j].styleValueFieldClass = 'sliderInput';
+mySlider[i][j].colorbar = new Object();
+mySlider[i][j].colorbar['color'] = 'orange';
+mySlider[i][j].colorbar['height'] =5;
+mySlider[i][j].colorbar['widthDifference'] = -2;
+mySlider[i][j].colorbar['offsetLeft'] = 5;
+mySlider[i][j].colorbar['offsetTop'] = 9;
+mySlider[i][j].fieldName='sliderDiv' +i +'_'+j;
+mySlider[i][j].drawInto('sliderDiv' + i+'_'+j);
+name=mySlider[i][j].fieldName
+len=name.length
+number=name.substring(len-3,len)
+str = "slider"+ i + '_' + j
+document.test[str].value = mySlider[i][j].getValue();
+}
+}
+}
+
+/**
+* @param object sliderObj
+* @param int val (the value)
+*/
+function bsSliderStart(sliderObj, val, newPos){
+name=sliderObj.fieldName
+len=name.length
+number=name.substring(len-1,len)
+number2=name.substring(len-3,len-2)
+
+str = "slider"+ number2 + '_' + number
+document.test[str].value = sliderObj.getValue();
+}
+
+--></script>
+
+</head>
+<body bgcolor="#FFFFFF" text="#3366AA" link="#0000EE" vlink="#551A8B" alink="#FF0000" onLoad="init();">
+
+<form name ="test" id="test" method=post action="/~fareed/test/test/javascript/components/slider/examples/example1.phtml">
+<input type="hidden" name="slider0_0">
+<input type="hidden" name="slider0_1">
+<input type="hidden" name="slider0_2">
+<input type="hidden" name="slider1_0">
+<input type="hidden" name="slider1_1">
+<input type="hidden" name="slider1_2">
+<input type="submit">
+</form>
+
+
+
+<table border="5" cellspacing="5" cellpadding="5">
+<tr>
+<th width="150" align="left">Sliders0</th><th width="150" align="left">Sliders1</th><th width="150" align="left">Sliders2</th><th width="150" align="left">Sliders3</th><th width="150" align="left">Sliders4</th></tr>
+<tr>
+<td><div id="sliderDiv0_0"></div>&nbsp;</td>
+<td><div id="sliderDiv0_1"></div>&nbsp;</td>
+<td><div id="sliderDiv0_2"></div>&nbsp;</td>
+</tr>
+<tr>
+<td><div id="sliderDiv1_0"></div>&nbsp;</td>
+<td><div id="sliderDiv1_1"></div>&nbsp;</td>
+<td><div id="sliderDiv1_2"></div>&nbsp;</td>
+</tr>
+
+</table>
+</body></html>

@@ -1,0 +1,30 @@
+﻿<settings>
+	<slideshow>
+		<page>
+			<photo image="images/01.jpg" url="http://www.flashxml.net" target="_blank" ><![CDATA[<head>Slideshow is enabled</head><body>The pages are flipping automatically</body>]]></photo>
+		</page>
+		<page>
+			<photo image="images/02.jpg" url="http://www.flashxml.net" target="_blank" media="video/green.flv" mediaImage="video/green.jpg" skin="assets/skins/videoSkin2.xml" width="230" height="172" position="CC" paddingH="0" paddingV="0" autoplay="false" displayOn="rightPage"></photo>
+		</page>
+		<page>
+			<photo image="images/particles.swf" url="http://www.flashxml.net" target="_blank"><![CDATA[<head>As you can see</head><body>You can also have XML text over the images</body>]]></photo>
+		</page>
+		<page>
+			<photo image="images/04.jpg" url="http://www.flashxml.net" target="_blank"><![CDATA[<head>The text is CSS formatted</head><body>Also, multiple customizable properties on the controls below</body>]]></photo>
+			<photo image="images/05.png" url="http://www.flashxml.net" target="_blank"></photo>
+		</page>
+		<page>
+			<photo image="images/06.png" url="http://www.flashxml.net" target="_blank"><![CDATA[<head>Clicking on the image</head><body>enables the Zoom mode</body>]]></photo>
+			<photo image="images/07.jpg" url="http://www.flashxml.net" target="_blank"></photo>
+		</page>
+		<page>
+			<photo image="images/08.jpg" url="http://www.flashxml.net" target="_blank"><![CDATA[<head>You can have <a href="http://www.flashxml.net/" target="_blank">links</a> in the text</head>]]></photo>
+		</page>
+		<page>
+			<photo image="images/09.jpg" url="http://www.flashxml.net" target="_blank" media="video/green.flv" mediaImage="video/green.jpg" skin="assets/skins/videoSkin1.xml" width="230" height="172" position="TC" paddingH="0" paddingV="20" autoplay="true" displayOn="leftPage"></photo>
+		</page>
+		<lastpage>
+			<photo image="images/10.jpg" url="http://www.flashxml.net" target="_blank" ></photo>
+		</lastpage>
+	</slideshow>
+</settings>

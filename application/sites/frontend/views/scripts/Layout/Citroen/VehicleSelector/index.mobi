@@ -1,0 +1,37 @@
+{if $aData.ZONE_MOBILE == 1}
+<div id="{$aData.ID_HTML}" class="head full">
+    <header>
+        {if $aParams.MEDIA_PATH}
+		<figure>
+			<img class="lazy" src="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/235-100.png" data-original="{Pelican::$config.MEDIA_HTTP}{$aParams.MEDIA_PATH}" alt="{$aParams.PAGE_TITLE}" />
+		</figure>
+		{/if}
+        <div class="txt">
+                        {if $sSharer}
+                            <span data-text="{'PARTAGER_CONTENU_SUR'|t}" class="shareButton st_sharethis_custom">{'PARTAGER'|t}</span>
+                            <input type="hidden" class="shareContent" value="{$sSharer|escape}"/>
+                        {/if}
+			{if $aData['TEMPLATE_PAGE_ID'] != Pelican::$config['TEMPLATE_PAGE']['DETAIL_PROMOTION']}
+			<h1 class="title-lvl0"><span>{$aData.PAGE_TITLE}</span></h1>
+			{/if}
+        </div>
+    </header>
+</div>
+{if $aVehicules && $aVehicules|@count gt 0}
+<section class="no-title vh">
+	<div class="promo-select">
+		<div class="text">{$titre|escape}</div>
+		<form method="post" action="" id="select-vehicle-form" name="select-vehicle-form">
+			<fieldset>
+				<select id="select-vehicle-select" name="select-vehicle-select" onchange="location = this.options[this.selectedIndex].value;" {gtm name='mobile_selection_vehicule_ouverture_drop_down' data=$aData labelvars=['%nom du boutton%'=>'CHOISISSEZ_SELECTION_DETAIL'|t,'%id du lien%'=>1]}>
+                    <option value="0" >{"CHOISISSEZ_SELECTION_DETAIL"|t}</option>
+                    {foreach from=$aVehicules key=k item=vehicule}
+                    {if $vehicule}<option value="{$vehicule.url}" {gtm action='DropdownList' data=$aData datasup=['eventCategory'=>'Content','eventLabel'=>{$vehicule.label}]}>{$vehicule.label}</a></li>{/if}
+                    {/foreach}
+                </select>
+			</fieldset>
+		</form>
+	</div>
+</section>
+{/if}
+{/if}

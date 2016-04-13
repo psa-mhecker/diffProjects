@@ -1,0 +1,115 @@
+{if $aZone.ZONE_TITRE8 neq '' || $aZone.ZONE_TEXTE2 neq ''}
+    <div class="text">{if $aZone.ZONE_TITRE8 neq ''}<span class="hl" style="color:{if ($aData.PRIMARY_COLOR|count_characters)==7 }{$aData.PRIMARY_COLOR}{else}#f0780a{/if};font-weight:bold;">{$aZone.ZONE_TITRE8}</span><br>{/if}
+       {if $aZone.ZONE_TEXTE2 neq ''}{$aZone.ZONE_TEXTE2|nl2br|replace:"#MEDIA_HTTP#":Pelican::$config.MEDIA_HTTP}{/if}
+    </div>
+{/if}
+{if $sSharer}
+<div class="social-share border">
+	<span class="text">{$aZone.ZONE_TITRE9}</span>
+	<div class="sharerm">
+	</div>
+</div>
+
+<script>
+    {if !isset($smarty.get.popin)}
+        {literal}
+            // SETTINGS THE SOCIAL BUTTONS
+            var addThisBtns = '<a class="addthis_button_facebook at300b" title="Facebook" href="#"><span class=" at300bs at15nc at15t_facebook"><span class="at_a11y">Share on facebook</span></span></a><a class="addthis_button_twitter at300b" title="Tweet" href="#"><span class=" at300bs at15nc at15t_twitter"><span class="at_a11y">Share on twitter</span></span></a><a class="addthis_button_google_plusone_share at300b" href="#" target="_blank" title="Google+"><span class=" at300bs at15nc at15t_google_plusone_share"><span class="at_a11y">Share on google_plusone_share</span></span></a>';
+            // CALLING THE FUNCTION
+            shareThisButton(addThisBtns);
+        {/literal}
+    {/if} 
+</script>
+{/if}
+
+{if $car neq "" && $dealer neq ""}
+    <div class="request-form row">
+    {if $car neq ""}
+        <div class="step end">
+            <h2 class="title"><span class="num"{if ($aData.PRIMARY_COLOR|count_characters)==7 } style="background:{$aData.PRIMARY_COLOR};border-radius:0;" {/if}>1</span><span class="text"{if ($aData.PRIMARY_COLOR|count_characters)==7 } style="color:{$aData.PRIMARY_COLOR};font-weight:bold;" {/if}>{'VOTRE_MODELE'|t}</span></h2>
+            <div class="model">
+                <figure>
+                    <img src="{$mediaPathMobile}" alt="{$car.VEHICULE_LABEL}" style="display: inline-block;">
+                </figure>
+                <h3 class="text">{$car.VEHICULE_LABEL}</h3>
+            </div>
+        </div>
+    {/if}
+    {if $dealer neq ""}
+        <div class="step end">
+                <h2 class="title"><span class="num"{if ($aData.PRIMARY_COLOR|count_characters)==7 } style="background:{$aData.PRIMARY_COLOR};border-radius:0;" {/if}>2</span><span class="text"{if ($aData.PRIMARY_COLOR|count_characters)==7 } style="color:{$aData.PRIMARY_COLOR};font-weight:bold;" {/if}>{'VOTRE_POINT_VENTE'|t}</span></h2>
+                <div class="result-list dyncont row">
+                        {if $dealer.name neq ""}<span class="title-item">{$dealer.name}</span>{/if}
+                        {if $dealer.kilometrage neq ""}<em class="distance">{$dealer.kilometrage}{'KM'|t}</em>{/if}
+                        {if $dealer.address neq ""}<p class="address">{$dealer.address}<br>{$dealer.phone}</p>{/if}
+                 </div>
+
+            </div>
+    {/if}
+     </div>
+{/if}
+{if $aCta|@sizeof > 0}
+    <div class="step ok">
+        <h2 class="title-lvl1"><span class="text-title"{if ($aData.PRIMARY_COLOR|count_characters)==7 } style="color:{$aData.PRIMARY_COLOR};" {/if}>{$titleCTA}</span></h2>
+        <p class="text">{$texteCTA}</p>
+        <ul class="cta red row of{$aCta|@sizeof}">
+            {section name=cta loop=$aCta}
+            <li class="col">
+              {if $aCta[cta].OUTIL}
+                        {$aCta[cta].OUTIL}
+              {else}
+                <a href="{$aCta[cta].PAGE_ZONE_MULTI_URL}" target="_{$aCta[cta].PAGE_ZONE_MULTI_VALUE}"><span>{$aCta[cta].PAGE_ZONE_MULTI_LABEL}</span></a>
+                {/if}</li>
+            {/section}
+        </ul><!-- / .cta -->
+    </div>
+{/if}
+{if $aZone.ZONE_PARAMETERS eq 1}
+    <ul class="cta row of1" {if ($aData.PRIMARY_COLOR|count_characters)==7 } data-off="border:4px solid {$aData.SECOND_COLOR}; background:{$aData.SECOND_COLOR}; color:#ffffff;" data-hover="border:4px solid {$aData.SECOND_COLOR}; background:#ffffff; color:{$aData.SECOND_COLOR};" {/if}>
+        <li class="col home"><a href="/"><span>{'RETOUR_ACCUEIL'|t}</span></a></li>
+    </ul>
+{/if}
+{if $aZone.ZONE_TITRE5 eq 'TEXT'}
+	<em class="notice-flow"  {if $sVisuelML neq ''}style="min-height:165px"{/if}>
+		 {$aZone.ZONE_TITRE6}
+		 {if $sVisuelML neq ''}<figure><img class="lazy" data-original="{$sVisuelML}" width="270" height="152" style="width:270px !important;height:152px !important;min-width:270px !important;max-width:270px !important;float:left"/></figure>{/if}
+		 {$aZone.ZONE_TEXTE4}
+	</em>
+{else if $aZone.ZONE_TITRE5 eq 'POP_IN' && $aMentionsLegales.PAGE_CLEAR_URL neq ''}
+	{if $aZone.ZONE_TITRE6 neq ''}<em class="notice"><span>{$aZone.ZONE_TITRE6}</span></em>{/if}
+	<div class="notice-text" data-close="Fermer">
+		<iframe src="{$aMentionsLegales.PAGE_CLEAR_URL}?popin=1" width="90%"></iframe>
+	</div>
+{/if}
+
+<!-- CPW-4014 -->
+
+{literal}
+    <script type="text/javascript">
+        // Si l'iframe a été ouverte depuis un bloc en mode déployé, on ajoute /Outspread à la fin de pageName et virtualPageURL
+        var isDeployed = '{/literal}{$isDeployed}{literal}';
+        var suffix ='';
+        if(isDeployed == "1" ){
+            suffix ="/Outspread";
+        }
+
+        var event = {
+            'event': 'updatevirtualpath',
+            'pageName': 'Summary/Request_{/literal}{$formTypeFull.FORM_TYPE_GTM_ID}{literal}' + suffix,
+            'virtualPageURL': '/Request_{/literal}{$formTypeFull.FORM_TYPE_GTM_ID}{literal}/ThankYou' + suffix,
+            {/literal}{foreach from=$aGtm[$formTypeFull.FORM_TYPE_GTM_ID] key=var_name item=foo2 name=gtm}
+            '{$var_name}' : '{$foo2}',
+            {/foreach}{literal}
+        };
+        
+        {/literal}
+        {if $formOriginCtaPerso}
+        event["customDimension1"] = "Perso";
+        {/if}
+        {literal}
+
+
+        var dataLayer = dataLayer || [];
+        dataLayer.push(event);
+    </script>
+    {/literal}

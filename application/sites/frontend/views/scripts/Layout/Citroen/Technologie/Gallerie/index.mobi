@@ -1,0 +1,21 @@
+{if $aRsTechno|@sizeof > 0}
+    <div class="sliceNew sliceTechnologieGallerieMobile">
+        <div id="{$aData.ID_HTML}" class="accordion faq" data-init="0">
+            {foreach from=$aRsTechno key=key item=Techno}
+                <h2 class="title-tab">
+                    <span>{$key}</span>
+                </h2>
+                <div class="item close">
+                    <div class="row of1">
+                        {foreach from=$Techno item=Detail}
+                            <a class="img col techno" href="{urlParser url=$Detail.PAGE_CLEAR_URL}">
+                                <figure><img class="lazy" src="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/235-100.png" data-original="{Pelican::$config.MEDIA_HTTP}{$Detail.MEDIA_PATH}" alt="{$Detail.MEDIA_ALT}"></figure>
+                                <span class="buttonTransversalInvert">{$Detail.PAGE_TITLE_BO}</span>
+                            </a>
+                        {/foreach}
+                    </div>
+                </div>
+            {/foreach}
+        </div>
+    </div>
+{/if}

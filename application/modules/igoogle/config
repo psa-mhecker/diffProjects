@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin>
+	<title>iGoogle</title>
+	<description>Bloc permettant l'utilisation de gadgets iGoogle</description>
+	<version>2.3</version>
+	<date>27/10/2011</date>
+	<author>Interakting</author>
+	<category>Widget</category>
+</plugin>

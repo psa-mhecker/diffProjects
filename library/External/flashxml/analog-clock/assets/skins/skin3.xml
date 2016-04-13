@@ -1,0 +1,7 @@
+﻿<skin>
+	<cadran value="assets/skins/skin3/dial.png"/>
+	<orar value="assets/skins/skin3/h.png"/>
+	<minutar value="assets/skins/skin3/min.png"/>
+	<secundar value="assets/skins/skin3/sec.png"/>
+	
+</skin>

@@ -1,0 +1,89 @@
+[RECETTE]
+openid.identity = "http://re7.iddcr.citroen.com"
+openid.realm     = "http://ext1.cppv2.dev.inetpsa.com"
+openid.returnUrl = "http://ext1.cppv2.dev.inetpsa.com/proto/cpw/html/user/openid"
+
+oauth.urlrequesttoken = "http://re7.oadcr.citroen.com/oauth/request-token"
+oauth.urlauthorize = "http://re7.oadcr.citroen.com/oauth/authorize"
+oauth.urlaccesstoken = "http://re7.oadcr.citroen.com/oauth/access-token"
+oauth.urlcallback = "http://ext1.cppv2.dev.inetpsa.com/proto/cpw/html/user/accesstoken"
+oauth.consumerkey = "6f80cc70b6122e5bde83708ea524a444"
+oauth.consumersecret = "c1d830aaa44c2152012a979d6e74f494"
+oauth.method = "GET"
+
+dcr.bend.crmservice = "http://re7.dpdcr.citroen.com/crmws"
+
+sitecode = "AC_FR_CPPV2"
+
+; Proxy settings
+;proxy.host = "http.internetpsa.inetpsa.com"
+;proxy.port = "80"
+;proxy.login = "mdecpw00"
+;proxy.password = "svncpw00"
+;proxy.sgp = 1
+
+[DEV : RECETTE]
+openid.identity = "http://re7.iddcr.citroen.com"
+openid.realm     = "http://cppv2-dev-frontend.interakting.com"
+openid.returnUrl = "http://cppv2-dev-frontend.interakting.com/proto/cpw/html/user/initoauth"
+
+oauth.urlrequesttoken = "http://re7.oadcr.citroen.com/oauth/request-token"
+oauth.urlauthorize = "http://re7.oadcr.citroen.com/oauth/authorize"
+oauth.urlaccesstoken = "http://re7.oadcr.citroen.com/oauth/access-token"
+oauth.urlcallback = "http://cppv2-dev-frontend.interakting.com/_/User/connexionCitroenIdCallback"
+oauth.consumerkey = "6f80cc70b6122e5bde83708ea524a444"
+oauth.consumersecret = "c1d830aaa44c2152012a979d6e74f494"
+oauth.method = "GET"
+
+dcr.bend.crmservice = "http://re7.dpdcr.citroen.com/crmws"
+
+sitecode = "AC_FR_CPPV2"
+
+[PREPROD : RECETTE]
+openid.identity = "http://re7.iddcr.citroen.com"
+openid.realm     = "http://recette-master.psa-cppv2.com"
+openid.returnUrl = "http://recette-master.psa-cppv2.com/proto/cpw/html/user/initoauth"
+
+oauth.urlrequesttoken = "http://re7.oadcr.citroen.com/oauth/request-token"
+oauth.urlauthorize = "http://re7.oadcr.citroen.com/oauth/authorize"
+oauth.urlaccesstoken = "http://re7.oadcr.citroen.com/oauth/access-token"
+oauth.urlcallback = "http://recette-master.psa-cppv2.com/_/User/connexionCitroenIdCallback"
+oauth.consumerkey = "6f80cc70b6122e5bde83708ea524a444"
+oauth.consumersecret = "c1d830aaa44c2152012a979d6e74f494"
+oauth.method = "GET"
+
+dcr.bend.crmservice = "http://re7.dpdcr.citroen.com/crmws"
+
+sitecode = "AC_FR_CPPV2"
+
+; Proxy settings
+;proxy.host = "http.internetpsa.inetpsa.com"
+;proxy.port = "80"
+;proxy.login = "mdecpw00"
+;proxy.password = "svncpw00"
+;proxy.sgp = 1
+
+[PSA_INTEGRATION : RECETTE]
+openid.identity = "http://re7.iddcr.citroen.com"
+openid.realm     = "http://localhost"
+openid.returnUrl = "http://localhost/cpw00/Etudes/web/proto/cpw/html/user/openid"
+
+oauth.urlrequesttoken = "http://re7.oadcr.citroen.com/oauth/request-token"
+oauth.urlauthorize = "http://re7.oadcr.citroen.com/oauth/authorize"
+oauth.urlaccesstoken = "http://re7.oadcr.citroen.com/oauth/access-token"
+oauth.urlcallback = "http://localhost/cpw00/Etudes/web/proto/cpw/html/user/accesstoken"
+oauth.consumerkey = "fe112b55d8276105b63409c1855fc8df"
+oauth.consumersecret = "c1d830aaa44c2152012a979d6e74f494"
+oauth.method = "GET"
+
+dcr.bend.crmservice = "http://re7.dpdcr.citroen.com/crmws"
+
+sitecode = "AC_FR_CPPV2"
+
+; Proxy settings
+proxy.host = "http.internetpsa.inetpsa.com"
+proxy.port = "80"
+proxy.login = "mdecpw00"
+proxy.password = "svncpw00"
+proxy.sgp = 1
+

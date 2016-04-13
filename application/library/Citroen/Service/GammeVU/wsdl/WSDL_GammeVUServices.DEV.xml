@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions name="WsGamme" targetNamespace="PSA.CFG3D.VU.Services" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="PSA.CFG3D.VU.Services" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex">
+  <wsdl:types>
+    <xsd:schema elementFormDefault="qualified" targetNamespace="PSA.CFG3D.VU.Services">
+      <xsd:element name="GetConfiguratorUrlList">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="input" nillable="true" type="q1:CountryInput" xmlns:q1="http://schemas.datacontract.org/2004/07/PSA.CFG3D.VU.Services.Input"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetConfiguratorUrlListResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="GetConfiguratorUrlListResult" nillable="true" type="q2:ConfiguratorUrlOutput" xmlns:q2="http://schemas.datacontract.org/2004/07/PSA.CFG3D.VU.Services.Output"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/PSA.CFG3D.VU.Services.Input" xmlns:tns="http://schemas.datacontract.org/2004/07/PSA.CFG3D.VU.Services.Input">
+      <xsd:complexType name="CountryInput">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="Country" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="Culture" nillable="true" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="CountryInput" nillable="true" type="tns:CountryInput"/>
+    </xsd:schema>
+    <xsd:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/PSA.CFG3D.VU.Services.Output" xmlns:tns="http://schemas.datacontract.org/2004/07/PSA.CFG3D.VU.Services.Output">
+      <xsd:complexType name="ConfiguratorUrlOutput">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="UrlList" nillable="true" type="tns:ArrayOfConfiguratorUrl"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="ConfiguratorUrlOutput" nillable="true" type="tns:ConfiguratorUrlOutput"/>
+      <xsd:complexType name="ArrayOfConfiguratorUrl">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="ConfiguratorUrl" nillable="true" type="tns:ConfiguratorUrl"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="ArrayOfConfiguratorUrl" nillable="true" type="tns:ArrayOfConfiguratorUrl"/>
+      <xsd:complexType name="ConfiguratorUrl">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="Lcdv" nillable="true" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="Url" nillable="true" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="ConfiguratorUrl" nillable="true" type="tns:ConfiguratorUrl"/>
+    </xsd:schema>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/">
+      <xs:element name="anyType" nillable="true" type="xs:anyType"/>
+      <xs:element name="anyURI" nillable="true" type="xs:anyURI"/>
+      <xs:element name="base64Binary" nillable="true" type="xs:base64Binary"/>
+      <xs:element name="boolean" nillable="true" type="xs:boolean"/>
+      <xs:element name="byte" nillable="true" type="xs:byte"/>
+      <xs:element name="dateTime" nillable="true" type="xs:dateTime"/>
+      <xs:element name="decimal" nillable="true" type="xs:decimal"/>
+      <xs:element name="double" nillable="true" type="xs:double"/>
+      <xs:element name="float" nillable="true" type="xs:float"/>
+      <xs:element name="int" nillable="true" type="xs:int"/>
+      <xs:element name="long" nillable="true" type="xs:long"/>
+      <xs:element name="QName" nillable="true" type="xs:QName"/>
+      <xs:element name="short" nillable="true" type="xs:short"/>
+      <xs:element name="string" nillable="true" type="xs:string"/>
+      <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte"/>
+      <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt"/>
+      <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong"/>
+      <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort"/>
+      <xs:element name="char" nillable="true" type="tns:char"/>
+      <xs:simpleType name="char">
+        <xs:restriction base="xs:int"/>
+      </xs:simpleType>
+      <xs:element name="duration" nillable="true" type="tns:duration"/>
+      <xs:simpleType name="duration">
+        <xs:restriction base="xs:duration">
+          <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?"/>
+          <xs:minInclusive value="-P10675199DT2H48M5.4775808S"/>
+          <xs:maxInclusive value="P10675199DT2H48M5.4775807S"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="guid" nillable="true" type="tns:guid"/>
+      <xs:simpleType name="guid">
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:attribute name="FactoryType" type="xs:QName"/>
+      <xs:attribute name="Id" type="xs:ID"/>
+      <xs:attribute name="Ref" type="xs:IDREF"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="IWsGamme_GetConfiguratorUrlList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConfiguratorUrlList"/>
+  </wsdl:message>
+  <wsdl:message name="IWsGamme_GetConfiguratorUrlList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConfiguratorUrlListResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="IWsGamme">
+    <wsdl:operation name="GetConfiguratorUrlList">
+      <wsdl:input wsaw:Action="PSA.CFG3D.VU.Services/IWsGamme/GetConfiguratorUrlList" message="tns:IWsGamme_GetConfiguratorUrlList_InputMessage"/>
+      <wsdl:output wsaw:Action="PSA.CFG3D.VU.Services/IWsGamme/GetConfiguratorUrlListResponse" message="tns:IWsGamme_GetConfiguratorUrlList_OutputMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IWsGamme" type="tns:IWsGamme">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetConfiguratorUrlList">
+      <soap:operation soapAction="PSA.CFG3D.VU.Services/IWsGamme/GetConfiguratorUrlList" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="IWsGammeJSONEndPoint" type="tns:IWsGamme">
+    <wsdl:operation name="GetConfiguratorUrlList">
+      <wsdl:input/>
+      <wsdl:output/>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WsGamme">
+    <wsdl:port name="BasicHttpBinding_IWsGamme" binding="tns:BasicHttpBinding_IWsGamme">
+      <soap:address location="http://localhost:55575/WsGamme.svc/XML"/>
+    </wsdl:port>
+    <wsdl:port name="IWsGammeJSONEndPoint" binding="tns:IWsGammeJSONEndPoint"/>
+  </wsdl:service>
+</wsdl:definitions>

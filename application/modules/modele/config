@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<plugin>
+	<title>Titre du plugin</title>
+	<description>Description du plugin</description>
+	<version>1.0</version>
+	<date>14/07/2007</date>
+	<category>Test</category>
+</plugin>

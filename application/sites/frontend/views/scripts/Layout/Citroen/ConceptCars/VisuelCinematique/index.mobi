@@ -1,0 +1,14 @@
+<div class="sliceNew sliceVisuelCinemascopeConceptCarMobile">
+    <div id="{$aParams.ID_HTML}" class="head full">
+        <header>
+            <figure"><img class="lazy" src="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/lazy-320-100.png" data-original="{"{Pelican::$config.MEDIA_HTTP}{$aParams.MEDIA_PATH}"|format:Pelican::$config.MEDIA_FORMAT_ID.MOBILE_CONCEPT_CAR}" alt="{$aParams.MEDIA_ALT|escape}" /></figure>
+            <div class="header">
+                <span class="shareButton st_sharethis_custom" data-text="{'PARTAGER_CONTENU_SUR'|t}">{'PARTAGER'|t}</span>
+                <input type="hidden" class="shareContent" value="{$sSharer|escape}"/>
+                <h1 class="subtitle" {if ($aParams.PRIMARY_COLOR|count_characters)==7 } style="color:{$aParams.PRIMARY_COLOR};" {/if}>
+                        {$aParams.PAGE_TITLE}
+                </h1>
+            </div>
+        </header>
+    </div> 
+</div> 

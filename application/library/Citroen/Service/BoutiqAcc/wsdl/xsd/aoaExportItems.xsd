@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified" attributeFormDefault="unqualified"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns:ei="http://aoa.inetpsa.com/ws/export/items" 
+	xmlns:c="http://aoa.inetpsa.com/ws/common" 
+	targetNamespace="http://aoa.inetpsa.com/ws/export/items">
+	
+	<xs:import namespace="http://aoa.inetpsa.com/ws/common" schemaLocation="aoaCommonItems.xsd"/>
+	
+	<xs:element name="ItemsOutput">
+	
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Total" type="xs:integer"/>
+				<!--nombre d'éléments dans la réponse-->
+				<xs:element name="Page" type="xs:integer"/>
+				<!--numéro de la page récupérée-->
+				<xs:element name="Item" type="ei:ItemType" minOccurs="0" maxOccurs="unbounded"/>
+				<!--pièce ou autre, limité à 40 par défaut, sauf requète explicite-->
+			</xs:sequence>
+		</xs:complexType>
+			
+	</xs:element>
+	
+	<xs:complexType name="ItemType">
+		<xs:sequence>
+			<xs:element name="Reference" type="xs:string"/>
+			<xs:element name="Hierarchy" type="c:HierarchyType" minOccurs="0" maxOccurs="unbounded"/>
+			<!-- [lot2+] pas de données transmises en lot 1 (peut être maxOccurs="unbounded" en lot2)-->
+			<xs:element name="Applicability" type="c:ApplicabilityType" minOccurs="0" maxOccurs="unbounded"/>
+			<!-- [lot2+] pas de données transmises en lot 1 -->
+			<xs:element name="Attributes" type="ei:AttributesType" minOccurs="0"/>
+			<!-- [lot2+] pas de données transmises en lot 1 -->
+			<xs:element name="Description" type="ei:DescriptionType" minOccurs="0" maxOccurs="unbounded"/>
+			<!-- [lot2+] pas de données transmises en lot 1 -->
+			<xs:element name="Files" type="ei:FilesType" minOccurs="0"/>
+			<!-- [lot2+] pas de données transmises en lot 1 -->
+			<xs:element name="Prices" type="ei:PricesType" minOccurs="0"/>
+			<!-- informations de tarifs de la pièces -->
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="AttributesType">
+		<!-- [lot2+] -->
+		<xs:sequence>
+			<xs:element name="MarketingFamilyName" type="xs:string" minOccurs="0"/>
+			<xs:element name="MarketingFamilyCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="BussinessName" type="xs:string" minOccurs="0"/>
+			<xs:element name="CondUnit" type="xs:int" minOccurs="0"/>
+			<xs:element name="ComRefs" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="TechRefs" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="Brand" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="RequiredDealerInst" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="SapRef" type="xs:string" minOccurs="0"/>
+			<xs:element name="RemplacementRef" type="xs:string" minOccurs="0"/>
+			<xs:element name="OnLineSales" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="Height" type="xs:string" minOccurs="0"/>
+			<xs:element name="Width" type="xs:string" minOccurs="0"/>
+			<xs:element name="Length" type="xs:string" minOccurs="0"/>
+			<!-- ou volume -->
+			<xs:element name="Volume" type="xs:string" minOccurs="0"/>
+			<xs:element name="Weight" type="xs:string" minOccurs="0"/>
+			<xs:any namespace="##other" processContents="skip" minOccurs="0"/>
+			<!-- joker -->
+		</xs:sequence>
+	</xs:complexType>	
+
+	<xs:complexType name="DescriptionType">
+		<!-- [lot2+] -->
+		<xs:sequence>
+			<xs:element name="Text" type="xs:string" minOccurs="0"/>
+			<xs:element name="Clients" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="FilesType">
+		<!-- [lot2+] -->
+		<xs:sequence>
+			<xs:element name="File" type="ei:FileType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="FileType">
+		<!-- [lot2+] -->
+		<xs:sequence>
+			<xs:element name="URL" type="xs:string" minOccurs="0"/>
+			<!-- chemin pour accéder au fichier -->
+			<xs:element name="FileCategory" type="xs:string" minOccurs="0"/>
+			<!-- descripteur du type du fichier, code phrase Thésée du type de fichier -->
+			<xs:element name="Clients" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+			<!-- de fait, il n'y a qu'un client par type de photo, le unbonded anticipe une évolution -->
+			<xs:element name="Applicability" type="c:ApplicabilityType" minOccurs="0" maxOccurs="unbounded"/>
+			<!-- un fichier peut être rattaché à une liste de véhicules définit -->
+		</xs:sequence>
+	</xs:complexType>	
+
+	<xs:complexType name="PricesType">
+		<!-- informations sur les prix, fonction majeure du lot 1 -->
+		<xs:sequence>
+			<xs:element name="PriceBeforeTaxes" type="c:PriceType" minOccurs="0"/>
+			<!-- prix filiale HT -->
+			<xs:element name="PriceTaxesIncluded" type="c:PriceType" minOccurs="0"/>
+			<!-- prix filiale TTC -->
+			<xs:element name="DealerReductionPercent" type="xs:integer" minOccurs="0"/>
+			<!-- valeur tronqué de la réduction accordée en pourcentage-->
+			<xs:element name="DealerReductionAmountBeforeTaxes" type="c:PriceType" minOccurs="0"/>
+			<!-- montant de la réduction dans la devise du point de vente -->
+			<xs:element name="DealerReductionAmountTaxesIncluded" type="c:PriceType" minOccurs="0"/>
+			<!-- montant de la réduction dans la devise du point de vente -->
+			<xs:element name="DealerPriceBeforeTaxes" type="c:PriceType" minOccurs="0"/>
+			<!-- prix point de vente HT -->
+			<xs:element name="DealerPriceTaxesIncluded" type="c:PriceType" minOccurs="0"/>
+			<!-- prix point de vente TTC -->
+			<xs:element name="DepositReference" type="xs:string" minOccurs="0"/>
+			<!-- référence de la consigne -->
+			<xs:element name="DepositPriceBeforeTaxes" type="c:PriceType" minOccurs="0"/>
+			<!-- montant de la consigne HT -->
+			<xs:element name="DepositPriceTaxesIncluded" type="c:PriceType" minOccurs="0"/>
+			<!-- montant de la consigne TTC -->
+			<xs:element name="InternetSales" type="xs:boolean"/>
+			<!-- autorisation de vente sur internet, les applications clientes utliseront cette information pour interdire le versement au panier -->
+		</xs:sequence>
+	</xs:complexType>	
+	
+</xs:schema>

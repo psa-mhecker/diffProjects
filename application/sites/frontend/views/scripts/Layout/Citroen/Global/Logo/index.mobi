@@ -1,0 +1,7 @@
+<div id="{$aParams.ID_HTML}"  class="container">
+    <div class="content">
+        <header>
+            <span class="logo"><a>Citroën</a></span>
+        </header>
+    </div>
+</div>

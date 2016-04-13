@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2006 rel. 3 U (http://www.altova.com) by PSA (PSA / PCA PEUGEOT CITROEN) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ec="http://aoa.inetpsa.com/ws/export/ExportCriteria" xmlns:sc="http://aoa.inetpsa.com/ws/setting/Criteria" targetNamespace="http://aoa.inetpsa.com/ws/export/ExportCriteria" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://aoa.inetpsa.com/ws/setting/Criteria" schemaLocation="aoaSettingsCriteria.xsd"/>
+	<xs:element name="criteriaOut">
+		<xs:annotation>
+			<xs:documentation> type de de sortie</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="criterionLocale" type="ec:criterionLocaleType" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="criterionLocaleType">
+		<xs:sequence>
+			<xs:element name="criterion" type="xs:string" maxOccurs="unbounded"/>
+			<xs:element name="locale" type="sc:localeType"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

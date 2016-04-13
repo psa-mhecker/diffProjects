@@ -1,0 +1,72 @@
+/*CSS3 ONLY*/
+#bloc_content .form select {
+	background: #f6f6f6; /* Old browsers */
+	background: -moz-linear-gradient(top, #f6f6f6 0%, #fafafa 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f6f6f6), color-stop(100%,#fafafa)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #f6f6f6 0%,#fafafa 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #f6f6f6 0%,#fafafa 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #f6f6f6 0%,#fafafa 100%); /* IE10+ */
+	background: linear-gradient(top, #f6f6f6 0%,#fafafa 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f6f6', endColorstr='#fafafa',GradientType=0 ); /* IE6-9 */
+	
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	
+	box-shadow:3px 3px 6px #DDDDDD;
+	-moz-box-shadow:3px 3px 6px #DDDDDD;
+	-webkit-box-shadow:3px 3px 6px #DDDDDD;
+}
+
+.sidebar .bloc_filter .more_filter a,
+.sidebar .block_mea .more_filter a,
+.preface .sommaire,
+#quiz .action a.button,
+#resultatfinal .replay a.button,
+.question,
+#blog_article_list .col_content .blocs .item h2{
+	-webkit-border-radius:6px;
+	-moz-border-radius:6px;
+	border-radius:6px;
+}
+#theme_content_quizz_list .col_content .blocs .item .num{
+	-moz-border-radius-topleft: 6px;
+	-moz-border-radius-topright: 0px;
+	-moz-border-radius-bottomright: 0px;
+	-moz-border-radius-bottomleft: 6px;
+	-webkit-border-radius: 6px 0px 6px 0px;
+	border-radius: 6px 0px 0px 6px; 
+}
+
+#blog_article_list .col_content .blocs .item .inner .play a,
+#theme_content_quizz_list .col_content .blocs .item .inner .play a{
+	-moz-border-radius-topleft: 6px;
+	-moz-border-radius-topright: 0px;
+	-moz-border-radius-bottomright: 0px;
+	-moz-border-radius-bottomleft: 6px;
+	-webkit-border-radius: 6px 0px 6px 0px;
+	border-radius: 6px 0px 0px 6px; 
+}
+
+.tipsy-inner{
+	box-shadow:3px 3px 6px #272727;
+	-moz-box-shadow:3px 3px 6px #272727;
+	-webkit-box-shadow:3px 3px 6px #272727;
+}
+.formulaire input,
+.formulaire textarea,
+.formulaire .action input.submit{
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	border-radius:3px;
+}
+/*
+.preface .sommaire ol li{
+	-moz-border-radius-topleft: 6px;
+	-moz-border-radius-topright: 0px;
+	-moz-border-radius-bottomright: 0px;
+	-moz-border-radius-bottomleft: 0px;
+	-webkit-border-radius: 6px 0px 0px 0px;
+	border-radius: 6px 0px 0px 0px; 
+}
+*/

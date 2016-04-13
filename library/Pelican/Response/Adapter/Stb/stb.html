@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" fullscreen>
+<html>
+<head>
+<title>CANAL</title>
+<meta NAME='media' VALUE='tv'>
+<meta http-equiv='pragma' content='no-cache'>
+<meta http-equiv='cache-control' content='no-cache'>
+<meta http-equiv='Expires' content='Mon 30 Jun 1999 14:30:00'>
+<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'>
+<meta name="error_page" content="none">
+
+
+</html>
+
+
+-----------------------------------
+
+FREE
+La taille standard de l'écran TV utilisé par la Freebox est 720x576
+
+Le navigateur a une marge de 24 pixels, soit une résolution utilisable par page de 672x528 
+
+Il est donc préférable de se baser sur une taille inférieure (600x400 par exemple) et de centrer le site sur la page (en utilisant des balises TABLE) afin de garantir une compatibilité maximale. 
+
+abgcolor quand actif
+------------------------------------
+
+Liens 
+Free 
+<a href='main.php?action=reglagebetatest&num='>
+STB
+ArrayAction["ok"] = "fctTopReloadPortail('main.php?action=reglageifc&num=5');";
+
+-------------------------
+
+<stb type="image" label="{$valuebouton}" href="{$hrefbouton}"
+	src="{$imagesbouton}" name="{$nombouton}" haut="{$haut}" bas="{$bas}"
+	gauche="{$gauche}" droit="{$droit}" width="{$widthbouton}"
+	height="{$heightbouton}" bgcolor="{$bgcolorbouton}"
+	align="{$textalign}" classbouton="{$classbouton}"
+	colobouton="{$colorbouton}" onfocus="{$onfocus}"
+	imagefocus="{$imagefocus}" imagenofocus="{$imagenofocus}"
+	posx="{$posX}" posy="{$posY}" typebouton="{$typebouton}"
+	classFocus="{$classFocus}" classNoFocus="{$classNoFocus}" />
+
+FREE : {$color}
+
+Exemple Free
+<table cellspacing='0' cellpadding='0' border='0' width='{$widthbouton}' height='{$heightbouton}'>
+	<tr>
+		<td><a href='{$hrefbouton}'>
+		<table border='2' width='{$widthbouton}' height='{$heightbouton}' cellpadding='0'
+			cellspacing='0' bordercolor='{$bgcolorborderbouton}' valign='middle'>
+			<tr>
+				<td bgcolor='{$bgcolorbouton}' height='{$heightbouton}' align='{$textalign}' valign='middle'>
+				<font size='2' color='{$color}'>{$valuebouton}</font>
+				</td>
+			</tr>
+		</table>
+		</a></td>
+	</tr>
+</table>
+
+Exemple 1 de création d’un bouton avec focus bordures en gif :
+<table cellspacing='0' cellpadding='0' border=0>
+	<tr>
+		<td colspan=3 bgcolor="{$bgcolorborderbouton}"><img width="100%"
+			height="2" border="0" src="images/{$imagesbouton}"
+			name="haut{$nombouton}"></td>
+	</tr>
+	<tr>
+		<td bgcolor="{$bgcolorborderbouton}"><img width="2"
+			height="{$heightbouton}" src="images/{$imagesbouton}"
+			name="gauche{$nombouton}"></td>
+		<td bgcolor="{$bgcolorbouton}" width="{$widthbouton}"
+			align="{$textalign}" style="color: {$color}" class="{$classbouton}">{$valuebouton}</td>
+		<td bgcolor="{$bgcolorborderbouton}"><img width="2"
+			height="{$heightbouton}" src="images/{$imagesbouton}"
+			name="droit{$nombouton}"></td>
+	</tr>
+	<tr>
+		<td colspan=3 bgcolor="{$bgcolorborderbouton}"><img width="100%"
+			height="2" src="images/{$imagesbouton}" name="bas{$nombouton}">
+		</td>
+	</tr>
+</table>
+<script>
+var ArrayAction = new Array();
+ArrayAction["ok"] = "{$hrefbouton}";
+ArrayAction["name"] = "{$nombouton}";
+ArrayAction["haut"] = "{$haut}";
+ArrayAction["bas"] = "{$bas}";
+ArrayAction["gauche"] = "{$gauche}";
+ArrayAction["droit"] = "{$droit}";
+ArrayAction["onfocus"] = "{$onfocus}";
+ArrayAction["imageFocus"] = "{$imagefocus}";
+ArrayAction["imageNoFocus"] = "{$imagenofocus}";
+ArrayAction["onblur'] = "{$onblur}";
+ArrayAction["imageCenterFocus'] = "{$imagecenterfocus}";
+ArrayAction["imageCenterNoFocus'] = "{$imagecenternofocus}";
+parent. fctTopExterneGtfAddButton ('{$posX}','{$posY}',ArrayAction);
+ou parent.fctGtfAddButton('0','5',ArrayAction);
+</script>
+
+#-----------------------------------------------------------------------------------------------
+#| => texte
+#| {$valuebouton}
+#| => image
+#| <img width="256" height="185" border="0" src="{$valuebouton}" name="image_name_{$nombouton}">
+#-----------------------------------------------------------------------------------------------
+#=> bordures vierges avec "images/transp.gif"
+
+Exemple 2 de création d’un bouton avec focus CSS (uniquement pour STB
+évoluée) :
+
+<style type="text/css">
+.boutonMenuFocus {css bouton focusé}
+.boutonMenuNoFocus {css bouton non focusé}
+</style>
+<div class="{$classNoFocus} classe2 classe3">{$valuebouton}</div>
+
+<script>
+var ArrayAction = new Array();
+ArrayAction["ok"] = "{$hrefbouton}";
+ArrayAction["name"] = "{$nombouton}";
+ArrayAction["haut"] = "{$haut}";
+ArrayAction["bas"] = "{$bas}";
+ArrayAction["gauche"] = "{$gauche}";
+ArrayAction["droit"] = "{$droit}";
+ArrayAction["onfocus"] = "{$onfocus}";
+ArrayAction["imageFocus"] = "{$imagefocus}";
+ArrayAction["imageNoFocus"] = "{$imagenofocus}";
+ArrayAction["typebouton"] = "{$typebouton}";
+ArrayAction["classFocus"] = "{$classFocus}";
+ArrayAction["classNoFocus"] = "{$classNoFocus}";
+ArrayAction["onblur'] = "{$onblur}";
+ArrayAction["imageCenterFocus'] = "{$imagecenterfocus}";
+ArrayAction["imageCenterNoFocus'] = "{$imagecenternofocus}";
+parent. fctTopExterneGtfAddButton ('{$posX}','{$posY}',ArrayAction);
+ou parent.fctGtfAddButton('0','5',ArrayAction);
+</script>

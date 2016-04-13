@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!DOCTYPE GSP SYSTEM "google.dtd">
+<GSP VER="3.2">
+<TM>0.014166</TM><Q>sedan</Q>
+<PARAM name="q" value="sedan" original_value="sedan"/>
+<PARAM name="client" value="CPPv2" original_value="CPPv2"/>
+<PARAM name="output" value="xml" original_value="xml"/>
+<PARAM name="sort" value="date:D:L:d1" original_value="date:D:L:d1"/>
+<PARAM name="site" value="CPP_PRO_FR_FR" original_value="CPP_PRO_FR_FR"/>
+<PARAM name="num" value="100" original_value="100"/>
+<PARAM name="tlen" value="1000" original_value="1000"/>
+<PARAM name="ie" value="UTF-8" original_value="UTF-8"/>
+<PARAM name="ip" value="10.100.152.30" original_value="10.100.152.30"/>
+<PARAM name="access" value="p" original_value="p"/>
+<PARAM name="entqr" value="3" original_value="3"/>
+<PARAM name="entqrm" value="0" original_value="0"/>
+<RES SN="1" EN="2">
+<M>2</M>
+<XT/>
+<R N="1"><U>http://fr.cpp.citroen.inetpsa.com/actualites/numero-9/</U><UE>http://fr.cpp.citroen.inetpsa.com/actualites/numero-9/</UE><T>Concept Car Numéro 9 Full-hybrid Plug-in - Créative Technologie</T><RK>3</RK><CRAWLDATE>17 juin 2013</CRAWLDATE><ENT_SOURCE>T3-L3AHNDFCC6WXP</ENT_SOURCE><FS NAME="date" VALUE=""/><S>&lt;b&gt;...&lt;/b&gt; 9. Un concept qui préfigure le futur de la ligne DS et qui annonce&lt;br&gt; les codes stylistiques des 3 prochains modèles de cette ligne : une&lt;br&gt; berline du segment C Premium &lt;b&gt;Sedan&lt;/b&gt;, un SUV et &lt;b&gt;...&lt;/b&gt;  </S><LANG>fr</LANG><HAS><L/><C SZ="29k" CID="9uzoJZ9g0wEJ" ENC="UTF-8"/></HAS></R><R N="2"><U>http://fr.cpp.citroen.inetpsa.com/actualites/citroen_salon-pekin/</U><UE>http://fr.cpp.citroen.inetpsa.com/actualites/citroen_salon-pekin/</UE><T>Citroën au Salon automobile de Pékin, Chine : DS5 Hybrid4, DS3, C-Zero</T><RK>3</RK><CRAWLDATE>17 juin 2013</CRAWLDATE><ENT_SOURCE>T3-L3AHNDFCC6WXP</ENT_SOURCE><FS NAME="date" VALUE=""/><S>&lt;b&gt;...&lt;/b&gt; Une ligne qui s&amp;#39;enrichira en effet d&amp;#39;une berline &lt;b&gt;Sedan&lt;/b&gt; sur le segment&lt;br&gt; C, un SUV et une berline haut de gamme sur le segment D. Ces trois&lt;br&gt; prochains modèles ne seront pas réservés &lt;b&gt;...&lt;/b&gt;  </S><LANG>fr</LANG><HAS><L/><C SZ="26k" CID="uHpVVGlDE8QJ" ENC="UTF-8"/></HAS></R></RES>
+</GSP>

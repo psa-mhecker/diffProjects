@@ -1,0 +1,10 @@
+<article class="col" data-actif="{if $i == $iSelectionId}true{/if}">
+	<form class="mp-vc-form selectfeeder" name="mp-v-form_{$i+1}" id="mp-v-form_{$i+1}" action="" method="post" data-feeder="/_/Layout_Citroen_MonProjet_SelectionVehicules/getVehiculesMobile" data-defaut-vehicule="{if $aSelection.$i.lcdv6_code && $iEditionId == $i}{$aSelection.$i.lcdv6_code}{/if}" data-defaut-finition="{if $aSelection.$i.finition_code && $iEditionId == $i}{$aSelection.$i.finition_code}{/if}" data-defaut-version="{if $aSelection.$i.version_code && $iEditionId == $i}{$aSelection.$i.version_code}{/if}">
+		<span class="title">{'SELECTION'|t} 0{$i+1}</span>
+		<figure><img class="lazy" src="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/lazy-560x311.png" data-original="{Pelican::$config.IMAGE_FRONT_HTTP}/mobile/img/mon-projet-car-default.png" alt="" /></figure>
+		<fieldset></fieldset>
+		<ul class="cta red of1">
+			<li class="col"><a href="#V" onclick="saveVehicule({$i+1})"><span>{'SELECTIONNER'|t}</span></a></li>
+		</ul>
+	</form>
+</article>

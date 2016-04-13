@@ -1,0 +1,84 @@
+{assign var="jsfile" value=['assets/js/common/new-vehicles-mobile.js']}
+
+<div class="sliceNew sliceNewVehiclesMobile">
+    <h1 class="title-01">
+        {$aPageParentFull.PAGE_TITLE_BO}
+    </h1>
+    {if $contenuTextCta.ZONE_TEXTE}
+        <div class="zonetexte">{$contenuTextCta.ZONE_TEXTE}</div>
+    {/if}
+    <div class="js-toggle-all-context">
+        {*<div class="all-toggle-actions">
+            <button class="all-toggle-btn js-toggle-all-open-btn">
+                <span>Tout ouvrir</span>
+            </button>
+            <button class="all-toggle-btn js-toggle-all-close-btn">
+                <span>Tout fermer</span>
+            </button>
+        </div>*}
+        {foreach from=$aPagesN1 key=index item=n1}
+            {if $n1.TEMPLATE_PAGE_ID == Pelican::$config['TEMPLATE_PAGE']['MASTER_PAGE_VEHICULES_N2']}
+                <div class="toggle-list js-toggle-context {if $n1.PAGE_GAMME_VEHICULE == $aParams.PAGE_GAMME_VEHICULE}js-toggle-opened{/if}">
+                    <a href="{if $n1.PAGE_GAMME_VEHICULE != $aParams.PAGE_GAMME_VEHICULE}{$n1.PAGE_CLEAR_URL}{/if}" data={$aParams} {gtm action="NewCar::{$n1.PAGE_TITLE}" data={$aParams} datasup=['eventCategory'=>'NewCar' ,'eventLabel' =>{$n1.PAGE_TITLE} , value =>$index ]}>
+                        <button class="toggle-btn js-toggle-btn">
+                            {$n1.PAGE_TITLE}
+                        </button>
+                    </a>
+                    {if $n1.PAGE_GAMME_VEHICULE == $aParams.PAGE_GAMME_VEHICULE}
+                        <div class="vehicles-list js-toggle-content">
+                            {foreach from=$aVehicules key=index item=vehicule}
+                                <article class="vehicle-item">
+                                    <a href="{$vehicule.PAGE_CLEAR_URL}" target="_self">
+                                        <figure>
+                                            <img class="" src="{Pelican::$config.MEDIA_HTTP}{$vehicule.MEDIA_PATH}" alt="{$vehicule.MEDIA_ALT|escape}">
+                                        </figure>
+                                        <figcaption>
+                                            {if $vehicule.VEHICULE_LABEL}<h3>{$vehicule.VEHICULE_LABEL}</h3>{/if}
+
+                                            {if $vehicule.VEHICULE_DISPLAY_CASH_PRICE eq 1 }
+                                                <p>
+                                                    {'A_PARTIR'|t}
+                                                    <span>{$vehicule.PRIX}
+                                                        <sup>
+                                                            {if $vehicule.VEHICULE_CASH_PRICE_TYPE == 'CASH_PRICE_TTC'}
+                                                                {'CASH_PRICE_TTC'|t}
+                                                            {else}
+                                                                {'CASH_PRICE_HT'|t}
+                                                            {/if}
+                                                        </sup>
+                                                        {if $aPage.ZONE_TITRE23 neq '' && $aParams.PAGE_GAMME_VEHICULE eq 'GAMME_VEHICULE_UTILITAIRE'}<sup>**</sup>{elseif $aPage.ZONE_TITRE6 neq '' && $aParams.PAGE_GAMME_VEHICULE neq 'GAMME_VEHICULE_UTILITAIRE'}<sup>*</sup>{/if}
+								                </span>
+                                                </p>
+                                            {/if}
+                                        </figcaption>
+                                    </a>
+                                </article>
+                            {/foreach}
+
+                        </div>
+                    {/if}
+                </div>
+            {/if}
+        {/foreach}
+        <div class="sliceNew sliceGalerieLvl2vehiculesMobile">
+            <section id="galerie-de-niveau-2-vehicules-_1860" class=" no-title">
+                <ul class="links upper">
+                    {assign var="counter" value=0}
+                    {foreach from=$aAutresVehicules item=vehicule name=autresVehicules}
+                        {if $smarty.foreach.autresVehicules.iteration%2==1}
+                            {assign var="counter" value=$counter+1}
+                        {/if}
+                        <li class="{if $smarty.foreach.autresVehicules.iteration%2==1 }greyback{/if}">
+                            <a class="img" href="{urlParser url=$vehicule.PAGE_CLEAR_URL}">
+                                <figure>
+                                    <img class="" src="{Pelican::$config.MEDIA_HTTP}{$vehicule.MEDIA_PATH}" alt="{$vehicule.MEDIA_ALT|escape}" style="display: inline-block;">
+                                </figure>
+                                <span>{$vehicule.PAGE_TITLE_BO}</span>
+                            </a>
+                        </li>
+                    {/foreach}
+                </ul>
+            </section>
+        </div>
+    </div>
+</div>

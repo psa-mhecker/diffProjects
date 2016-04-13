@@ -1,0 +1,3 @@
+{if $aParams.ZONE_MOBILE eq 1}
+	<input id="{$aParams.ID_HTML}" type='hidden' name='trancheComparateur' value='1'/>
+{/if}

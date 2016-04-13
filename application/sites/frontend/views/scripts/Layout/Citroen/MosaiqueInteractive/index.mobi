@@ -1,0 +1,712 @@
+
+{if $aData.ZONE_MOBILE == 1}
+{literal}
+	<style>
+{/literal}
+{if ($aData.SECOND_COLOR|count_characters)==7}
+{literal}
+.sliceNew .buttonLink:active, .sliceNew .buttonLink:hover, .sliceInteractiveMosaicMobile .actions .buttonTransversalInvert:hover span{
+{/literal}{if ($aData.SECOND_COLOR|count_characters)==7 }{literal}
+	color:{/literal}{$aData.SECOND_COLOR};{literal};
+{/literal}{/if}{literal}
+}
+body.mobile .sliceInteractiveMosaicMobile .int-mosaic .close {
+	border: 2px solid {/literal}{$aData.SECOND_COLOR}{literal}!important;
+	background-color:#fff!important;
+	color:{/literal}{$aData.SECOND_COLOR}{literal}!important;
+}
+
+{/literal}
+{/if}
+{literal}
+	</style>
+{/literal}
+	<div class="sliceNew sliceInteractiveMosaicMobile">
+		<section id="{$aData.ID_HTML}">
+			<hr class="full" />
+			{if $aData.ZONE_TITRE}<h1 class="subtitle" {if ($aData.PRIMARY_COLOR|count_characters)==7 } style="color:{$aData.PRIMARY_COLOR};" {/if}>{$aData.ZONE_TITRE}</h1>{/if}
+			{if $aData.ZONE_TITRE2}<h2 class="parttitle" {if ($aData.SECOND_COLOR|count_characters)==7 } style="color:{$aData.SECOND_COLOR};" {/if}>{$aData.ZONE_TITRE2}</h2>{/if}
+
+			{if $aData.ZONE_TEXTE}
+				<div class="mgchapo">
+					{$aData.ZONE_TEXTE}
+				</div>
+			{/if}
+
+			{if $NbVisuelMosaique > 1}
+				{assign var='iMaxBoucleMore' value=$NbVisuelMosaique - 1}
+				{assign var='iMaxBoucleGene' value=$NbVisuelMosaique - $iMaxBoucleMore}
+			{else}
+				{assign var='iMaxBoucleGene' value=$NbVisuelMosaique}
+			{/if}
+
+			{if $aVisuelMosaique|@sizeof > 0}
+				<div class="int-mosaic dyncont row">
+					{section name=i loop=$aVisuelMosaique max=$iMaxBoucleGene}
+						{if $aVisuelMosaique[i].PAGE_ZONE_MULTI_ATTRIBUT == 1}
+							<div class="item shown">
+								<div class="row">
+									<figure class="col row">{if $aData.ZONE_TITRE3 eq 1}<span class="optiontitle">{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TITRE2}</span>{/if}<img class="lazy" src="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/tile-2col.png" data-original="{"{Pelican::$config.MEDIA_HTTP}{$aVisuelMosaique[i].MEDIA_ID2}"|format:Pelican::$config.MEDIA_FORMAT_ID.WEB_MOSAIQUE_600x395}" alt="" /></figure>
+									<div class="ctnt">
+										<h6 class="parttitle" {if ($aData.SECOND_COLOR|count_characters)==7 } style="color:{$aData.SECOND_COLOR};" {/if}>{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TITRE2}</h6>
+										<p>
+											{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TEXT2}
+										</p>
+										{if $aVisuelMosaique[i].PAGE_ZONE_MULTI_URL6 && $aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL3}
+													<ul class="link-chev">
+														<li>
+															<a class="buttonLink" href="{urlParser url=$aVisuelMosaique[i].PAGE_ZONE_MULTI_URL6}">
+																{$aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL3}
+															</a>
+												</li>
+											</ul>
+										{/if}
+										{if $aVisuelMosaique[i].PAGE_ZONE_MULTI_URL8 && $aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL4}
+											<ul class="actions row" {if ($aData.PRIMARY_COLOR|count_characters)==7 } data-off="background:{$aData.SECOND_COLOR}; color:#ffffff;" data-hover="border:4px solid {$aData.SECOND_COLOR}; background:#ffffff; color:{$aData.SECOND_COLOR};" {/if}>
+												<li class="col"><a class="buttonTransversalInvert" href="{urlParser url=$aVisuelMosaique[i].PAGE_ZONE_MULTI_URL8}"><span>{$aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL4}</span></a></li>
+											</ul><!-- / .cta -->
+										{/if}
+									</div>
+								</div>
+								<div class="of2 row">
+									<figure class="col row">{if $aData.ZONE_TITRE3 eq 1}<span class="optiontitle">{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TITRE}</span>{/if}<img class="lazy" src="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/tile.png" data-original="{"{Pelican::$config.MEDIA_HTTP}{$aVisuelMosaique[i].MEDIA_ID}"|format:Pelican::$config.MEDIA_FORMAT_ID.WEB_MOSAIQUE_300x395}" alt="" /></figure>
+									<div class="ctnt">
+										<h6 class="parttitle" {if ($aData.SECOND_COLOR|count_characters)==7 } style="color:{$aData.SECOND_COLOR};" {/if}>{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TITRE}</h6>
+										<p>
+											{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TEXT}
+										</p>
+										{if $aVisuelMosaique[i].PAGE_ZONE_MULTI_URL2 && $aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL}
+											<ul class="link-chev">
+												<li>
+													<a class="buttonLink" href="{urlParser url=$aVisuelMosaique[i].PAGE_ZONE_MULTI_URL2}">
+														{$aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL}
+													</a>
+												</li>
+											</ul>
+										{/if}
+										{if $aVisuelMosaique[i].PAGE_ZONE_MULTI_URL4 && $aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL2}
+											<ul class="actions row" {if ($aData.PRIMARY_COLOR|count_characters)==7 } data-off="background:{$aData.SECOND_COLOR}; color:#ffffff;" data-hover="border:4px solid {$aData.SECOND_COLOR}; background:#ffffff; color:{$aData.SECOND_COLOR};" {/if}>
+												<li class="col"><a class="buttonTransversalInvert" href="{urlParser url=$aVisuelMosaique[i].PAGE_ZONE_MULTI_URL4}"><span>{$aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL2}</span></a></li>
+											</ul><!-- / .cta -->
+										{/if}
+									</div>
+									<figure class="col row">{if $aData.ZONE_TITRE3 eq 1}<span class="optiontitle">{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TITRE3}</span>{/if}<img class="lazy" src="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/tile.png" data-original="{"{Pelican::$config.MEDIA_HTTP}{$aVisuelMosaique[i].MEDIA_ID3}"|format:Pelican::$config.MEDIA_FORMAT_ID.WEB_MOSAIQUE_300x395}" alt="" /></figure>
+									<div class="ctnt">
+										<h6 class="parttitle" {if ($aData.SECOND_COLOR|count_characters)==7 } style="color:{$aData.SECOND_COLOR};" {/if}>{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TITRE3}</h6>
+										<p>
+											{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TEXT3}
+										</p>
+										{if $aVisuelMosaique[i].PAGE_ZONE_MULTI_URL10 && $aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL5}
+											<ul class="link-chev">
+												<li>
+													<a class="buttonLink" href="{urlParser url=$aVisuelMosaique[i].PAGE_ZONE_MULTI_URL10}">
+														{$aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL5}
+													</a>
+												</li>
+											</ul>
+										{/if}
+										{if $aVisuelMosaique[i].PAGE_ZONE_MULTI_URL12 && $aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL6}
+											<ul class="actions row" {if ($aData.PRIMARY_COLOR|count_characters)==7 } data-off="background:{$aData.SECOND_COLOR}; color:#ffffff;" data-hover="border:4px solid {$aData.SECOND_COLOR}; background:#ffffff; color:{$aData.SECOND_COLOR};" {/if}>
+												<li class="col"><a class="buttonTransversalInvert" href="{urlParser url=$aVisuelMosaique[i].PAGE_ZONE_MULTI_URL12}"><span>{$aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL6}</span></a></li>
+											</ul><!-- / .cta -->
+										{/if}
+									</div>
+
+								</div>
+							</div>
+
+						{elseif $aVisuelMosaique[i].PAGE_ZONE_MULTI_ATTRIBUT == 2}
+
+							<div class="item shown">
+								<div class="row">
+									<figure class="col row">{if $aData.ZONE_TITRE3 eq 1}<span class="optiontitle">{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TITRE}</span>{/if}<img class="lazy" src="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/tile-2col.png" data-original="{"{Pelican::$config.MEDIA_HTTP}{$aVisuelMosaique[i].MEDIA_ID}"|format:Pelican::$config.MEDIA_FORMAT_ID.WEB_MOSAIQUE_600x395}" alt="" /></figure>
+									<div class="ctnt">
+										<h6 class="parttitle" {if ($aData.SECOND_COLOR|count_characters)==7 } style="color:{$aData.SECOND_COLOR};" {/if}>{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TITRE}</h6>
+										<p>
+											{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TEXT}
+										</p>
+										{if $aVisuelMosaique[i].PAGE_ZONE_MULTI_URL2 && $aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL}
+											<ul class="link-chev">
+												<li>
+													<a class="buttonLink" href="{urlParser url=$aVisuelMosaique[i].PAGE_ZONE_MULTI_URL2}">
+														<span>{$aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL}</span>
+													</a>
+												</li>
+											</ul>
+										{/if}
+										{if $aVisuelMosaique[i].PAGE_ZONE_MULTI_URL4 && $aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL2}
+											<ul class="actions row" {if ($aData.PRIMARY_COLOR|count_characters)==7 } data-off="background:{$aData.SECOND_COLOR}; color:#ffffff;" data-hover="border:4px solid {$aData.SECOND_COLOR}; background:#ffffff; color:{$aData.SECOND_COLOR};" {/if}>
+												<li class="col"><a class="buttonTransversalInvert" href="{urlParser url=$aVisuelMosaique[i].PAGE_ZONE_MULTI_URL4}"><span>{$aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL2}</span></a></li>
+											</ul><!-- / .cta -->
+										{/if}
+									</div>
+								</div>
+								<div class="row">
+									<figure class="col row">{if $aData.ZONE_TITRE3 eq 1}<span class="optiontitle">{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TITRE2}</span>{/if}<img class="lazy" src="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/tile-2col.png" data-original="{"{Pelican::$config.MEDIA_HTTP}{$aVisuelMosaique[i].MEDIA_ID2}"|format:Pelican::$config.MEDIA_FORMAT_ID.WEB_MOSAIQUE_600x395}" alt="" /></figure>
+									<div class="ctnt">
+										<h6 class="parttitle" {if ($aData.SECOND_COLOR|count_characters)==7 } style="color:{$aData.SECOND_COLOR};" {/if}>{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TITRE2}</h6>
+										<p>
+											{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TEXT2}
+										</p>
+
+										{if $aVisuelMosaique[i].PAGE_ZONE_MULTI_URL6 && $aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL3}
+											<ul class="link-chev">
+												<li>
+													<a class="buttonLink" href="{urlParser url=$aVisuelMosaique[i].PAGE_ZONE_MULTI_URL6}">
+														<span>{$aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL3}</span>
+													</a>
+												</li>
+											</ul>
+										{/if}
+										{if $aVisuelMosaique[i].PAGE_ZONE_MULTI_URL8 && $aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL4}
+											<ul class="actions row" {if ($aData.PRIMARY_COLOR|count_characters)==7 } data-off="background:{$aData.SECOND_COLOR}; color:#ffffff;" data-hover="border:4px solid {$aData.SECOND_COLOR}; background:#ffffff; color:{$aData.SECOND_COLOR};" {/if}>
+												<li class="col"><a class="buttonTransversalInvert" href="{urlParser url=$aVisuelMosaique[i].PAGE_ZONE_MULTI_URL8}"><span>{$aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL4}</span></a></li>
+											</ul><!-- / .cta -->
+										{/if}
+									</div>
+								</div>
+							</div>
+						{elseif $aVisuelMosaique[i].PAGE_ZONE_MULTI_ATTRIBUT == 3}
+
+
+							<div class="item shown">
+								<div class="row">
+									<figure class="col row">{if $aData.ZONE_TITRE3 eq 1}<span class="optiontitle">{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TITRE}</span>{/if}<img class="lazy" src="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/tile-2col.png" data-original="{"{Pelican::$config.MEDIA_HTTP}{$aVisuelMosaique[i].MEDIA_ID}"|format:Pelican::$config.MEDIA_FORMAT_ID.WEB_MOSAIQUE_600x395}" alt="" /></figure>
+									<div class="ctnt">
+
+
+										<h6 class="parttitle" {if ($aData.SECOND_COLOR|count_characters)==7 } style="color:{$aData.SECOND_COLOR};" {/if}>{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TITRE}</h6>
+										<p>
+											{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TEXT}
+										</p>
+										{if $aVisuelMosaique[i].PAGE_ZONE_MULTI_URL2 && $aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL}
+											<ul class="link-chev">
+												<li>
+													<a class="buttonLink" href="{urlParser url=$aVisuelMosaique[i].PAGE_ZONE_MULTI_URL2}">
+														{$aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL}
+													</a>
+												</li>
+											</ul>
+										{/if}
+										{if $aVisuelMosaique[i].PAGE_ZONE_MULTI_URL4 && $aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL2}
+											<ul class="actions row" {if ($aData.PRIMARY_COLOR|count_characters)==7 } data-off="background:{$aData.SECOND_COLOR}; color:#ffffff;" data-hover="border:4px solid {$aData.SECOND_COLOR}; background:#ffffff; color:{$aData.SECOND_COLOR};" {/if}>
+												<li class="col"><a class="buttonTransversalInvert" href="{urlParser url=$aVisuelMosaique[i].PAGE_ZONE_MULTI_URL4}"><span>{$aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL2}</span></a></li>
+											</ul><!-- / .cta -->
+										{/if}
+									</div>
+								</div>
+								<div class="of2 row">
+									<figure class="col row">{if $aData.ZONE_TITRE3 eq 1}<span class="optiontitle">{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TITRE2}</span>{/if}<img class="lazy" src="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/tile.png" data-original="{"{Pelican::$config.MEDIA_HTTP}{$aVisuelMosaique[i].MEDIA_ID2}"|format:Pelican::$config.MEDIA_FORMAT_ID.WEB_MOSAIQUE_300x395}" alt="" /></figure>
+									<div class="ctnt">
+										<h6 class="parttitle" {if ($aData.SECOND_COLOR|count_characters)==7 } style="color:{$aData.SECOND_COLOR};" {/if}>{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TITRE2}</h6>
+										<p>
+											{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TEXT2}
+										</p>
+										{if $aVisuelMosaique[i].PAGE_ZONE_MULTI_URL6 && $aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL3}
+											<ul class="link-chev">
+												<li>
+													<a class="buttonLink" href="{urlParser url=$aVisuelMosaique[i].PAGE_ZONE_MULTI_URL6}">
+														{$aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL3}
+													</a>
+												</li>
+											</ul>
+										{/if}
+										{if $aVisuelMosaique[i].PAGE_ZONE_MULTI_URL8 && $aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL4}
+											<ul class="actions row" {if ($aData.PRIMARY_COLOR|count_characters)==7 } data-off="background:{$aData.SECOND_COLOR}; color:#ffffff;" data-hover="border:4px solid {$aData.SECOND_COLOR}; background:#ffffff; color:{$aData.SECOND_COLOR};" {/if}>
+												<li class="col"><a class="buttonTransversalInvert" href="{urlParser url=$aVisuelMosaique[i].PAGE_ZONE_MULTI_URL8}"><span>{$aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL4}</span></a></li>
+											</ul><!-- / .cta -->
+										{/if}
+									</div>
+									<figure class="col row">{if $aData.ZONE_TITRE3 eq 1}<span class="optiontitle">{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TITRE3}</span>{/if}<img class="lazy" src="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/tile.png" data-original="{"{Pelican::$config.MEDIA_HTTP}{$aVisuelMosaique[i].MEDIA_ID3}"|format:Pelican::$config.MEDIA_FORMAT_ID.WEB_MOSAIQUE_300x395}" alt="" /></figure>
+									<div class="ctnt">
+										<h6 class="parttitle" {if ($aData.SECOND_COLOR|count_characters)==7 } style="color:{$aData.SECOND_COLOR};" {/if}>{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TITRE3}</h6>
+										<p>
+											{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TEXT3}
+										</p>
+										{if $aVisuelMosaique[i].PAGE_ZONE_MULTI_URL10 && $aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL5}
+											<ul class="link-chev">
+												<li>
+													<a class="buttonLink" href="{urlParser url=$aVisuelMosaique[i].PAGE_ZONE_MULTI_URL10}">
+														{$aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL5}
+													</a>
+												</li>
+											</ul>
+										{/if}
+										{if $aVisuelMosaique[i].PAGE_ZONE_MULTI_URL12 && $aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL6}
+											<ul class="actions row" {if ($aData.PRIMARY_COLOR|count_characters)==7 } data-off="background:{$aData.SECOND_COLOR}; color:#ffffff;" data-hover="border:4px solid {$aData.SECOND_COLOR}; background:#ffffff; color:{$aData.SECOND_COLOR};" {/if}>
+												<li class="col"><a class="buttonTransversalInvert" href="{urlParser url=$aVisuelMosaique[i].PAGE_ZONE_MULTI_URL12}"><span>{$aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL6}</span></a></li>
+											</ul><!-- / .cta -->
+										{/if}
+									</div>
+
+								</div>
+							</div>
+
+
+
+						{elseif $aVisuelMosaique[i].PAGE_ZONE_MULTI_ATTRIBUT == 4}
+
+							<div class="item shown">
+
+								<div class="row">
+									<figure class="col row">{if $aData.ZONE_TITRE3 eq 1}<span class="optiontitle">{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TITRE}</span>{/if}<img class="lazy" src="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/tile-2col-2row.png" data-original="{"{Pelican::$config.MEDIA_HTTP}{$aVisuelMosaique[i].MEDIA_ID}"|format:Pelican::$config.MEDIA_FORMAT_ID.WEB_MOSAIQUE_600x790}" alt="" /></figure>
+									<div class="ctnt">
+										<h6 class="parttitle" {if ($aData.SECOND_COLOR|count_characters)==7 } style="color:{$aData.SECOND_COLOR};" {/if}>{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TITRE}</h6>
+										<p>
+											{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TEXT}
+										</p>
+
+										{if $aVisuelMosaique[i].PAGE_ZONE_MULTI_URL2 && $aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL}
+											<ul class="link-chev">
+												<li>
+													<a class="buttonLink" href="{urlParser url=$aVisuelMosaique[i].PAGE_ZONE_MULTI_URL2}">
+														<span>{$aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL}</span>
+													</a>
+												</li>
+											</ul>
+										{/if}
+										{if $aVisuelMosaique[i].PAGE_ZONE_MULTI_URL4 && $aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL2}
+											<ul class="actions row" {if ($aData.PRIMARY_COLOR|count_characters)==7 } data-off="background:{$aData.SECOND_COLOR}; color:#ffffff;" data-hover="border:4px solid {$aData.SECOND_COLOR}; background:#ffffff; color:{$aData.SECOND_COLOR};" {/if}>
+												<li class="col"><a class="buttonTransversalInvert" href="{urlParser url=$aVisuelMosaique[i].PAGE_ZONE_MULTI_URL4}"><span>{$aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL2}</span></a></li>
+											</ul><!-- / .cta -->
+										{/if}
+									</div>
+								</div>
+								<div class="of2 row">
+
+
+									<figure class="col row">{if $aData.ZONE_TITRE3 eq 1}<span class="optiontitle">{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TITRE4}</span>{/if}<img class="lazy" src="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/tile-2row.png" data-original="{"{Pelican::$config.MEDIA_HTTP}{$aVisuelMosaique[i].MEDIA_ID4}"|format:Pelican::$config.MEDIA_FORMAT_ID.WEB_MOSAIQUE_300x790}" alt="" /></figure>
+									<div class="ctnt">
+										<h6 class="parttitle" {if ($aData.SECOND_COLOR|count_characters)==7 } style="color:{$aData.SECOND_COLOR};" {/if}>{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TITRE4}</h6>
+										<p>
+											{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TEXT4}
+										</p>
+
+										{if $aVisuelMosaique[i].PAGE_ZONE_MULTI_URL14 && $aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL7}
+											<ul class="link-chev">
+												<li>
+													<a class="buttonLink" href="{urlParser url=$aVisuelMosaique[i].PAGE_ZONE_MULTI_URL14}">
+														<span>{$aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL7}</span>
+													</a>
+												</li>
+											</ul>
+										{/if}
+										{if $aVisuelMosaique[i].PAGE_ZONE_MULTI_URL16 && $aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL8}
+											<ul class="actions row" {if ($aData.PRIMARY_COLOR|count_characters)==7 } data-off="background:{$aData.SECOND_COLOR}; color:#ffffff;" data-hover="border:4px solid {$aData.SECOND_COLOR}; background:#ffffff; color:{$aData.SECOND_COLOR};" {/if}>
+												<li class="col"><a class="buttonTransversalInvert" href="{urlParser url=$aVisuelMosaique[i].PAGE_ZONE_MULTI_URL16}"><span>{$aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL8}</span></a></li>
+											</ul><!-- / .cta -->
+										{/if}
+									</div>
+
+
+
+									<div class="of1 col row">
+
+
+
+
+										<figure class="col row">{if $aData.ZONE_TITRE3 eq 1}<span class="optiontitle">{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TITRE2}</span>{/if}<img class="lazy" src="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/tile-2col.png" data-original="{"{Pelican::$config.MEDIA_HTTP}{$aVisuelMosaique[i].MEDIA_ID2}"|format:Pelican::$config.MEDIA_FORMAT_ID.WEB_MOSAIQUE_300x395}" alt="" /></figure>
+										<div class="ctnt">
+											<h6 class="parttitle" {if ($aData.SECOND_COLOR|count_characters)==7 } style="color:{$aData.SECOND_COLOR};" {/if}>{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TITRE2}</h6>
+											<p>
+												{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TEXT2}
+											</p>
+
+											{if $aVisuelMosaique[i].PAGE_ZONE_MULTI_URL6 && $aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL3}
+												<ul class="link-chev">
+													<li>
+														<a class="buttonLink" href="{urlParser url=$aVisuelMosaique[i].PAGE_ZONE_MULTI_URL6}">
+															<span>{$aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL3}</span>
+														</a>
+													</li>
+												</ul>
+											{/if}
+											{if $aVisuelMosaique[i].PAGE_ZONE_MULTI_URL8 && $aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL4}
+												<ul class="actions row" {if ($aData.PRIMARY_COLOR|count_characters)==7 } data-off="background:{$aData.SECOND_COLOR}; color:#ffffff;" data-hover="border:4px solid {$aData.SECOND_COLOR}; background:#ffffff; color:{$aData.SECOND_COLOR};" {/if}>
+													<li class="col"><a class="buttonTransversalInvert" href="{urlParser url=$aVisuelMosaique[i].PAGE_ZONE_MULTI_URL8}"><span>{$aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL4}</span></a></li>
+												</ul><!-- / .cta -->
+											{/if}
+										</div>
+
+										<figure class="col row">{if $aData.ZONE_TITRE3 eq 1}<span class="optiontitle">{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TITRE3}</span>{/if}<img class="lazy" src="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/tile-2col.png" data-original="{"{Pelican::$config.MEDIA_HTTP}{$aVisuelMosaique[i].MEDIA_ID3}"|format:Pelican::$config.MEDIA_FORMAT_ID.WEB_MOSAIQUE_300x395}" alt="" /></figure>
+										<div class="ctnt">
+											<h6 class="parttitle" {if ($aData.SECOND_COLOR|count_characters)==7 } style="color:{$aData.SECOND_COLOR};" {/if}>{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TITRE3}</h6>
+											<p>
+												{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TEXT3}
+											</p>
+
+											{if $aVisuelMosaique[i].PAGE_ZONE_MULTI_URL10 && $aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL5}
+												<ul class="link-chev">
+													<li>
+														<a class="buttonLink" href="{urlParser url=$aVisuelMosaique[i].PAGE_ZONE_MULTI_URL10}">
+															<span>{$aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL5}</span>
+														</a>
+													</li>
+												</ul>
+											{/if}
+											{if $aVisuelMosaique[i].PAGE_ZONE_MULTI_URL12 && $aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL6}
+												<ul class="actions row" {if ($aData.PRIMARY_COLOR|count_characters)==7 } data-off="background:{$aData.SECOND_COLOR}; color:#ffffff;" data-hover="border:4px solid {$aData.SECOND_COLOR}; background:#ffffff; color:{$aData.SECOND_COLOR};" {/if}>
+													<li class="col"><a class="buttonTransversalInvert" href="{urlParser url=$aVisuelMosaique[i].PAGE_ZONE_MULTI_URL12}"><span>{$aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL6}</span></a></li>
+												</ul><!-- / .cta -->
+											{/if}
+										</div>
+									</div>
+								</div>
+							</div>
+
+						{/if}
+					{/section}
+
+
+
+					{*		FIN NEW SECTION....   *}
+
+					{if $NbVisuelMosaique > 1}
+						{section name=i loop=$aVisuelMosaique start=$iMaxBoucleGene max=$iMaxBoucleMore}
+							{if $aVisuelMosaique[i].PAGE_ZONE_MULTI_ATTRIBUT == 1}
+
+								<div class="item hidden">
+									<div class="row">
+										<figure class="col row">{if $aData.ZONE_TITRE3 eq 1}<span class="optiontitle">{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TITRE2}</span>{/if}<img class="lazy" src="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/tile-2col.png" data-original="{"{Pelican::$config.MEDIA_HTTP}{$aVisuelMosaique[i].MEDIA_ID2}"|format:Pelican::$config.MEDIA_FORMAT_ID.WEB_MOSAIQUE_600x395}" alt="" /></figure>
+										<div class="ctnt">
+
+
+											<h6 class="parttitle" {if ($aData.SECOND_COLOR|count_characters)==7 } style="color:{$aData.SECOND_COLOR};" {/if}>{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TITRE2}</h6>
+											<p>
+												{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TEXT2}
+											</p>
+											{if $aVisuelMosaique[i].PAGE_ZONE_MULTI_URL6 && $aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL3}
+												<ul class="link-chev">
+													<li>
+														<a class="buttonLink" href="{urlParser url=$aVisuelMosaique[i].PAGE_ZONE_MULTI_URL6}">
+															{$aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL3}
+														</a>
+													</li>
+												</ul>
+											{/if}
+											{if $aVisuelMosaique[i].PAGE_ZONE_MULTI_URL8 && $aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL4}
+												<ul class="actions row" {if ($aData.PRIMARY_COLOR|count_characters)==7 } data-off="background:{$aData.SECOND_COLOR}; color:#ffffff;" data-hover="border:4px solid {$aData.SECOND_COLOR}; background:#ffffff; color:{$aData.SECOND_COLOR};" {/if}>
+													<li class="col"><a class="buttonTransversalInvert" href="{urlParser url=$aVisuelMosaique[i].PAGE_ZONE_MULTI_URL8}"><span>{$aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL4}</span></a></li>
+												</ul><!-- / .cta -->
+											{/if}
+										</div>
+									</div>
+									<div class="of2 row">
+										<figure class="col row">{if $aData.ZONE_TITRE3 eq 1}<span class="optiontitle">{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TITRE}</span>{/if}<img class="lazy" src="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/tile.png" data-original="{"{Pelican::$config.MEDIA_HTTP}{$aVisuelMosaique[i].MEDIA_ID}"|format:Pelican::$config.MEDIA_FORMAT_ID.WEB_MOSAIQUE_600x395}" alt="" /></figure>
+										<div class="ctnt">
+											<h6 class="parttitle" {if ($aData.SECOND_COLOR|count_characters)==7 } style="color:{$aData.SECOND_COLOR};" {/if}>{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TITRE}</h6>
+											<p>
+												{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TEXT}
+											</p>
+											{if $aVisuelMosaique[i].PAGE_ZONE_MULTI_URL2 && $aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL}
+												<ul class="link-chev">
+													<li>
+														<a class="buttonLink" href="{urlParser url=$aVisuelMosaique[i].PAGE_ZONE_MULTI_URL2}">
+															{$aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL}
+														</a>
+													</li>
+												</ul>
+											{/if}
+											{if $aVisuelMosaique[i].PAGE_ZONE_MULTI_URL4 && $aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL2}
+												<ul class="actions row" {if ($aData.PRIMARY_COLOR|count_characters)==7 } data-off="background:{$aData.SECOND_COLOR}; color:#ffffff;" data-hover="border:4px solid {$aData.SECOND_COLOR}; background:#ffffff; color:{$aData.SECOND_COLOR};" {/if}>
+													<li class="col"><a class="buttonTransversalInvert" href="{urlParser url=$aVisuelMosaique[i].PAGE_ZONE_MULTI_URL4}"><span>{$aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL2}</span></a></li>
+												</ul><!-- / .cta -->
+											{/if}
+										</div>
+										<figure class="col row">{if $aData.ZONE_TITRE3 eq 1}<span class="optiontitle">{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TITRE3}</span>{/if}<img class="lazy" src="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/tile.png" data-original="{"{Pelican::$config.MEDIA_HTTP}{$aVisuelMosaique[i].MEDIA_ID3}"|format:Pelican::$config.MEDIA_FORMAT_ID.WEB_MOSAIQUE_300x395}" alt="" /></figure>
+										<div class="ctnt">
+											<h6 class="parttitle" {if ($aData.SECOND_COLOR|count_characters)==7 } style="color:{$aData.SECOND_COLOR};" {/if}>{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TITRE3}</h6>
+											<p>
+												{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TEXT3}
+											</p>
+											{if $aVisuelMosaique[i].PAGE_ZONE_MULTI_URL10 && $aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL5}
+												<ul class="link-chev">
+													<li>
+														<a class="buttonLink" href="{urlParser url=$aVisuelMosaique[i].PAGE_ZONE_MULTI_URL10}">
+															{$aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL5}
+														</a>
+													</li>
+												</ul>
+											{/if}
+											{if $aVisuelMosaique[i].PAGE_ZONE_MULTI_URL12 && $aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL6}
+												<ul class="actions row" {if ($aData.PRIMARY_COLOR|count_characters)==7 } data-off="background:{$aData.SECOND_COLOR}; color:#ffffff;" data-hover="border:4px solid {$aData.SECOND_COLOR}; background:#ffffff; color:{$aData.SECOND_COLOR};" {/if}>
+													<li class="col"><a class="buttonTransversalInvert" href="{urlParser url=$aVisuelMosaique[i].PAGE_ZONE_MULTI_URL12}"><span>{$aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL6}</span></a></li>
+												</ul><!-- / .cta -->
+											{/if}
+										</div>
+
+									</div>
+								</div>
+
+
+							{elseif $aVisuelMosaique[i].PAGE_ZONE_MULTI_ATTRIBUT == 2}
+								<div class="item hidden">
+									<div class="row">
+										<figure class="col row">{if $aData.ZONE_TITRE3 eq 1}<span class="optiontitle">{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TITRE}</span>{/if}<img class="lazy" src="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/tile-2col.png" data-original="{"{Pelican::$config.MEDIA_HTTP}{$aVisuelMosaique[i].MEDIA_ID}"|format:Pelican::$config.MEDIA_FORMAT_ID.WEB_MOSAIQUE_600x395}" alt="" /></figure>
+										<div class="ctnt">
+											<h6 class="parttitle" {if ($aData.SECOND_COLOR|count_characters)==7 } style="color:{$aData.SECOND_COLOR};" {/if}>{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TITRE}</h6>
+											<p>
+												{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TEXT}
+											</p>
+											{if $aVisuelMosaique[i].PAGE_ZONE_MULTI_URL2 && $aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL}
+												<ul class="link-chev">
+													<li>
+														<a class="buttonLink" href="{urlParser url=$aVisuelMosaique[i].PAGE_ZONE_MULTI_URL2}">
+															<span>{$aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL}</span>
+														</a>
+													</li>
+												</ul>
+											{/if}
+											{if $aVisuelMosaique[i].PAGE_ZONE_MULTI_URL4 && $aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL2}
+												<ul class="actions row" {if ($aData.PRIMARY_COLOR|count_characters)==7 } data-off="background:{$aData.SECOND_COLOR}; color:#ffffff;" data-hover="border:4px solid {$aData.SECOND_COLOR}; background:#ffffff; color:{$aData.SECOND_COLOR};" {/if}>
+													<li class="col"><a class="buttonTransversalInvert" href="{urlParser url=$aVisuelMosaique[i].PAGE_ZONE_MULTI_URL4}"><span>{$aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL2}</span></a></li>
+												</ul><!-- / .cta -->
+											{/if}
+										</div>
+									</div>
+									<div class="row">
+										<figure class="col row">{if $aData.ZONE_TITRE3 eq 1}<span class="optiontitle">{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TITRE2}</span>{/if}<img class="lazy" src="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/tile-2col.png" data-original="{"{Pelican::$config.MEDIA_HTTP}{$aVisuelMosaique[i].MEDIA_ID2}"|format:Pelican::$config.MEDIA_FORMAT_ID.WEB_MOSAIQUE_600x395}" alt="" /></figure>
+										<div class="ctnt">
+											<h6 class="parttitle" {if ($aData.SECOND_COLOR|count_characters)==7 } style="color:{$aData.SECOND_COLOR};" {/if}>{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TITRE2}</h6>
+											<p>
+												{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TEXT2}
+											</p>
+
+											{if $aVisuelMosaique[i].PAGE_ZONE_MULTI_URL6 && $aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL3}
+												<ul class="link-chev">
+													<li>
+														<a class="buttonLink" href="{urlParser url=$aVisuelMosaique[i].PAGE_ZONE_MULTI_URL6}">
+															<span>{$aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL3}</span>
+														</a>
+													</li>
+												</ul>
+											{/if}
+											{if $aVisuelMosaique[i].PAGE_ZONE_MULTI_URL8 && $aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL4}
+												<ul class="actions row" {if ($aData.PRIMARY_COLOR|count_characters)==7 } data-off="background:{$aData.SECOND_COLOR}; color:#ffffff;" data-hover="border:4px solid {$aData.SECOND_COLOR}; background:#ffffff; color:{$aData.SECOND_COLOR};" {/if}>
+													<li class="col"><a class="buttonTransversalInvert" href="{urlParser url=$aVisuelMosaique[i].PAGE_ZONE_MULTI_URL8}"><span>{$aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL4}</span></a></li>
+												</ul><!-- / .cta -->
+											{/if}
+										</div>
+									</div>
+								</div>
+							{elseif $aVisuelMosaique[i].PAGE_ZONE_MULTI_ATTRIBUT == 3}
+
+
+
+
+
+								<div class="item hidden">
+									<div class="row">
+										<figure class="col row">{if $aData.ZONE_TITRE3 eq 1}<span class="optiontitle">{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TITRE}</span>{/if}<img class="lazy" src="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/tile-2col.png" data-original="{"{Pelican::$config.MEDIA_HTTP}{$aVisuelMosaique[i].MEDIA_ID}"|format:Pelican::$config.MEDIA_FORMAT_ID.WEB_MOSAIQUE_600x395}" alt="" /></figure>
+										<div class="ctnt">
+
+
+											<h6 class="parttitle" {if ($aData.SECOND_COLOR|count_characters)==7 } style="color:{$aData.SECOND_COLOR};" {/if}>{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TITRE}</h6>
+											<p>
+												{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TEXT}
+											</p>
+											{if $aVisuelMosaique[i].PAGE_ZONE_MULTI_URL2 && $aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL}
+												<ul class="link-chev">
+													<li>
+														<a class="buttonLink" href="{urlParser url=$aVisuelMosaique[i].PAGE_ZONE_MULTI_URL2}">
+															{$aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL}
+														</a>
+													</li>
+												</ul>
+											{/if}
+											{if $aVisuelMosaique[i].PAGE_ZONE_MULTI_URL4 && $aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL2}
+												<ul class="actions row" {if ($aData.PRIMARY_COLOR|count_characters)==7 } data-off="background:{$aData.SECOND_COLOR}; color:#ffffff;" data-hover="border:4px solid {$aData.SECOND_COLOR}; background:#ffffff; color:{$aData.SECOND_COLOR};" {/if}>
+													<li class="col"><a class="buttonTransversalInvert" href="{urlParser url=$aVisuelMosaique[i].PAGE_ZONE_MULTI_URL4}"><span>{$aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL2}</span></a></li>
+												</ul><!-- / .cta -->
+											{/if}
+										</div>
+									</div>
+									<div class="of2 row">
+										<figure class="col row">{if $aData.ZONE_TITRE3 eq 1}<span class="optiontitle">{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TITRE2}</span>{/if}<img class="lazy" src="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/tile.png" data-original="{"{Pelican::$config.MEDIA_HTTP}{$aVisuelMosaique[i].MEDIA_ID2}"|format:Pelican::$config.MEDIA_FORMAT_ID.WEB_MOSAIQUE_300x395}" alt="" /></figure>
+										<div class="ctnt">
+											<h6 class="parttitle" {if ($aData.SECOND_COLOR|count_characters)==7 } style="color:{$aData.SECOND_COLOR};" {/if}>{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TITRE2}</h6>
+											<p>
+												{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TEXT2}
+											</p>
+											{if $aVisuelMosaique[i].PAGE_ZONE_MULTI_URL6 && $aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL3}
+												<ul class="link-chev">
+													<li>
+														<a class="buttonLink" href="{urlParser url=$aVisuelMosaique[i].PAGE_ZONE_MULTI_URL6}">
+															{$aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL3}
+														</a>
+													</li>
+												</ul>
+											{/if}
+											{if $aVisuelMosaique[i].PAGE_ZONE_MULTI_URL8 && $aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL4}
+												<ul class="actions row" {if ($aData.PRIMARY_COLOR|count_characters)==7 } data-off="background:{$aData.SECOND_COLOR}; color:#ffffff;" data-hover="border:4px solid {$aData.SECOND_COLOR}; background:#ffffff; color:{$aData.SECOND_COLOR};" {/if}>
+													<li class="col"><a class="buttonTransversalInvert" href="{urlParser url=$aVisuelMosaique[i].PAGE_ZONE_MULTI_URL8}"><span>{$aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL4}</span></a></li>
+												</ul><!-- / .cta -->
+											{/if}
+										</div>
+										<figure class="col row">{if $aData.ZONE_TITRE3 eq 1}<span class="optiontitle">{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TITRE3}</span>{/if}<img class="lazy" src="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/tile.png" data-original="{"{Pelican::$config.MEDIA_HTTP}{$aVisuelMosaique[i].MEDIA_ID3}"|format:Pelican::$config.MEDIA_FORMAT_ID.WEB_MOSAIQUE_300x395}" alt="" /></figure>
+										<div class="ctnt">
+											<h6 class="parttitle" {if ($aData.SECOND_COLOR|count_characters)==7 } style="color:{$aData.SECOND_COLOR};" {/if}>{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TITRE3}</h6>
+											<p>
+												{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TEXT3}
+											</p>
+											{if $aVisuelMosaique[i].PAGE_ZONE_MULTI_URL10 && $aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL5}
+												<ul class="link-chev">
+													<li>
+														<a class="buttonLink" href="{urlParser url=$aVisuelMosaique[i].PAGE_ZONE_MULTI_URL10}">
+															{$aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL5}
+														</a>
+													</li>
+												</ul>
+											{/if}
+											{if $aVisuelMosaique[i].PAGE_ZONE_MULTI_URL12 && $aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL6}
+												<ul class="actions row" {if ($aData.PRIMARY_COLOR|count_characters)==7 } data-off="background:{$aData.SECOND_COLOR}; color:#ffffff;" data-hover="border:4px solid {$aData.SECOND_COLOR}; background:#ffffff; color:{$aData.SECOND_COLOR};" {/if}>
+													<li class="col"><a class="buttonTransversalInvert" href="{urlParser url=$aVisuelMosaique[i].PAGE_ZONE_MULTI_URL12}"><span>{$aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL6}</span></a></li>
+												</ul><!-- / .cta -->
+											{/if}
+										</div>
+
+									</div>
+								</div>
+
+							{elseif $aVisuelMosaique[i].PAGE_ZONE_MULTI_ATTRIBUT == 4}
+								<div class="item hidden">
+
+									<div class="row">
+										<figure class="col row">{if $aData.ZONE_TITRE3 eq 1}<span class="optiontitle">{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TITRE}</span>{/if}<img class="lazy" src="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/tile-2col-2row.png" data-original="{"{Pelican::$config.MEDIA_HTTP}{$aVisuelMosaique[i].MEDIA_ID}"|format:Pelican::$config.MEDIA_FORMAT_ID.WEB_MOSAIQUE_600x790}" alt="" /></figure>
+										<div class="ctnt">
+											<h6 class="parttitle" {if ($aData.SECOND_COLOR|count_characters)==7 } style="color:{$aData.SECOND_COLOR};" {/if}>{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TITRE}</h6>
+											<p>
+												{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TEXT}
+											</p>
+
+											{if $aVisuelMosaique[i].PAGE_ZONE_MULTI_URL2 && $aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL}
+												<ul class="link-chev">
+													<li>
+														<a class="buttonLink" href="{urlParser url=$aVisuelMosaique[i].PAGE_ZONE_MULTI_URL2}">
+															<span>{$aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL}</span>
+														</a>
+													</li>
+												</ul>
+											{/if}
+											{if $aVisuelMosaique[i].PAGE_ZONE_MULTI_URL4 && $aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL2}
+												<ul class="actions row" {if ($aData.PRIMARY_COLOR|count_characters)==7 } data-off="background:{$aData.SECOND_COLOR}; color:#ffffff;" data-hover="border:4px solid {$aData.SECOND_COLOR}; background:#ffffff; color:{$aData.SECOND_COLOR};" {/if}>
+													<li class="col"><a class="buttonTransversalInvert" href="{urlParser url=$aVisuelMosaique[i].PAGE_ZONE_MULTI_URL4}"><span>{$aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL2}</span></a></li>
+												</ul><!-- / .cta -->
+											{/if}
+										</div>
+									</div>
+									<div class="of2 row">
+
+
+										<figure class="col row">{if $aData.ZONE_TITRE3 eq 1}<span class="optiontitle">{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TITRE4}</span>{/if}<img class="lazy" src="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/tile-2row.png" data-original="{"{Pelican::$config.MEDIA_HTTP}{$aVisuelMosaique[i].MEDIA_ID4}"|format:Pelican::$config.MEDIA_FORMAT_ID.WEB_MOSAIQUE_300x790}" alt="" /></figure>
+										<div class="ctnt">
+											<h6 class="parttitle" {if ($aData.SECOND_COLOR|count_characters)==7 } style="color:{$aData.SECOND_COLOR};" {/if}>{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TITRE4}</h6>
+											<p>
+												{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TEXT4}
+											</p>
+
+											{if $aVisuelMosaique[i].PAGE_ZONE_MULTI_URL14 && $aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL7}
+												<ul class="link-chev">
+													<li>
+														<a class="buttonLink" href="{urlParser url=$aVisuelMosaique[i].PAGE_ZONE_MULTI_URL14}">
+															<span>{$aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL7}</span>
+														</a>
+													</li>
+												</ul>
+											{/if}
+											{if $aVisuelMosaique[i].PAGE_ZONE_MULTI_URL16 && $aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL8}
+												<ul class="actions row" {if ($aData.PRIMARY_COLOR|count_characters)==7 } data-off="background:{$aData.SECOND_COLOR}; color:#ffffff;" data-hover="border:4px solid {$aData.SECOND_COLOR}; background:#ffffff; color:{$aData.SECOND_COLOR};" {/if}>
+													<li class="col"><a class="buttonTransversalInvert" class="buttonLink" href="{urlParser url=$aVisuelMosaique[i].PAGE_ZONE_MULTI_URL16}"><span>{$aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL8}</span></a></li>
+												</ul><!-- / .cta -->
+											{/if}
+										</div>
+
+
+
+										<div class="of1 col row">
+
+
+
+
+											<figure class="col row">{if $aData.ZONE_TITRE3 eq 1}<span class="optiontitle">{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TITRE2}</span>{/if}<img class="lazy" src="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/tile-2col.png" data-original="{"{Pelican::$config.MEDIA_HTTP}{$aVisuelMosaique[i].MEDIA_ID2}"|format:Pelican::$config.MEDIA_FORMAT_ID.WEB_MOSAIQUE_300x395}" alt="" /></figure>
+											<div class="ctnt">
+												<h6 class="parttitle" {if ($aData.SECOND_COLOR|count_characters)==7 } style="color:{$aData.SECOND_COLOR};" {/if}>{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TITRE2}</h6>
+												<p>
+													{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TEXT2}
+												</p>
+
+												{if $aVisuelMosaique[i].PAGE_ZONE_MULTI_URL6 && $aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL3}
+													<ul class="link-chev">
+														<li>
+															<a class="buttonLink" href="{urlParser url=$aVisuelMosaique[i].PAGE_ZONE_MULTI_URL6}">
+																<span>{$aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL3}</span>
+															</a>
+														</li>
+													</ul>
+												{/if}
+												{if $aVisuelMosaique[i].PAGE_ZONE_MULTI_URL8 && $aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL4}
+													<ul class="actions row" {if ($aData.PRIMARY_COLOR|count_characters)==7 } data-off="background:{$aData.SECOND_COLOR}; color:#ffffff;" data-hover="border:4px solid {$aData.SECOND_COLOR}; background:#ffffff; color:{$aData.SECOND_COLOR};" {/if}>
+														<li class="col"><a class="buttonTransversalInvert" class="buttonLink" href="{urlParser url=$aVisuelMosaique[i].PAGE_ZONE_MULTI_URL8}"><span>{$aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL4}</span></a></li>
+													</ul><!-- / .cta -->
+												{/if}
+											</div>
+
+											<figure class="col row">{if $aData.ZONE_TITRE3 eq 1}<span class="optiontitle">{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TITRE3}</span>{/if}<img class="lazy" src="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/tile-2col.png" data-original="{"{Pelican::$config.MEDIA_HTTP}{$aVisuelMosaique[i].MEDIA_ID3}"|format:Pelican::$config.MEDIA_FORMAT_ID.WEB_MOSAIQUE_300x395}" alt="" /></figure>
+											<div class="ctnt">
+												<h6 class="parttitle" {if ($aData.SECOND_COLOR|count_characters)==7 } style="color:{$aData.SECOND_COLOR};" {/if}>{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TITRE3}</h6>
+												<p>
+													{$aVisuelMosaique[i].PAGE_ZONE_MULTI_TEXT3}
+												</p>
+
+												{if $aVisuelMosaique[i].PAGE_ZONE_MULTI_URL10 && $aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL5}
+													<ul class="link-chev">
+														<li>
+															<a class="buttonLink" href="{urlParser url=$aVisuelMosaique[i].PAGE_ZONE_MULTI_URL10}">
+																<span>{$aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL5}</span>
+															</a>
+														</li>
+													</ul>
+												{/if}
+												{if $aVisuelMosaique[i].PAGE_ZONE_MULTI_URL12 && $aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL6}
+													<ul class="actions row" {if ($aData.PRIMARY_COLOR|count_characters)==7 } data-off="background:{$aData.SECOND_COLOR}; color:#ffffff;" data-hover="border:4px solid {$aData.SECOND_COLOR}; background:#ffffff; color:{$aData.SECOND_COLOR};" {/if}>
+														<li class="col"><a class="buttonTransversalInvert" href="{urlParser url=$aVisuelMosaique[i].PAGE_ZONE_MULTI_URL12}"><span>{$aVisuelMosaique[i].PAGE_ZONE_MULTI_LABEL6}</span></a></li>
+													</ul><!-- / .cta -->
+												{/if}
+											</div>
+										</div>
+									</div>
+								</div>
+							{/if}
+						{/section}
+						<div class="loadMore loadMoreArticles" data-toggle-open="{t("Voir plus")}" data-toggle-close="{'VOIR_MOINS'|t}"><a href="#0" {gtm data=$aData name="mobile_mosaique_interactive_clic_sur_en_savoir_en_plus" datasup=['value' => 'loadMoreArticles'] labelvars=['%position%' => '1', '%nom du button%' => 'Charger plus de résultats', '%id du lien%' => 'loadMoreArticles']}>{t('Voir plus')}</a></div>
+					{/if}
+
+				</div>
+			{/if}
+			{if $aData.ZONE_TITRE6}
+				{if $aData.ZONE_TITRE5 == "POP_IN" && $urlPopInMention != ""}
+					<em class="notice"><span>{$aData.ZONE_TITRE6}</span></em>
+					<div class="notice-text" data-close="Fermer">
+						<h6 class="title-lvl1 centered nobg">{"MENTION_LEG_LIB"|t}</h6>
+						<p>
+							<iframe id="iframe_popin" class="iframe_popin_style" src="{$urlPopInMention}"></iframe>
+						</p>
+					</div>
+				{elseif $aData.ZONE_TITRE5 == "ROLL"}
+					<em class="notice"><span>{$aData.ZONE_TITRE6}</span></em>
+					<div class="notice-text" data-close="Fermer">
+						{if $MEDIA_PATH4 != ""}<figure><img class="lazy noscale" src="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/235-100.png" data-original="{"{Pelican::$config.MEDIA_HTTP}{$MEDIA_PATH4}"|format:Pelican::$config.MEDIA_FORMAT_ID.MOBILE_MENTION}" width="580" height="247" alt="{$MEDIA_TITLE4}" /></figure>{/if}
+						<h6 class="title-lvl1 centered nobg">{"MENTION_LEG_LIB"|t}</h6>
+						<p>
+							{$aData.ZONE_TEXTE4}
+						</p>
+					</div>
+				{/if}
+			{/if}
+			{if $aData.ZONE_TITRE5 == "TEXT" && $aData.ZONE_TEXTE4 neq ""}
+				{if $MEDIA_PATH4 != ""}<figure class="visual"><img class="lazy noscale" src="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/235-100.png" data-original="{"{Pelican::$config.MEDIA_HTTP}{$MEDIA_PATH4}"|format:Pelican::$config.MEDIA_FORMAT_ID.MOBILE_MENTION}" width="580" height="247" alt="{$MEDIA_TITLE4}" /></figure>{/if}
+				<em class="notice">{$aData.ZONE_TITRE6}<br>{$aData.ZONE_TEXTE4}</em>
+			{/if}
+		</section>
+	</div>
+{/if}

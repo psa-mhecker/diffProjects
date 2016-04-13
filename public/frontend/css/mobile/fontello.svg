@@ -1,0 +1,17 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2015 by original authors @ fontello.com</metadata>
+<defs>
+<font id="fontello" horiz-adv-x="1000" >
+<font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="arrow-bottom" unicode="&#xe800;" d="m528 39c180 127 356 316 472 491l-150 135c-86-135-215-274-347-381-138 107-270 253-356 385l-147-132c107-167 286-360 479-499 12-7 18-7 24-7 10 1 21 5 25 8" horiz-adv-x="1000" />
+<glyph glyph-name="arrow" unicode="&#xe801;" d="m805 373c-108 154-269 303-417 402l-115-128c115-73 233-182 323-294-90-118-214-230-326-303l112-125c142 91 305 243 423 407 6 10 6 15 6 21 0 7-3 17-6 20" horiz-adv-x="1000" />
+<glyph glyph-name="arrow-top" unicode="&#xe802;" d="m473 662c-181-128-356-317-473-492l150-135c86 135 215 274 347 381 138-107 270-253 356-384l147 131c-107 167-285 360-478 499-13 7-19 7-25 7-9 0-20-4-24-7" horiz-adv-x="1000" />
+<glyph glyph-name="arrow-right" unicode="&#xe803;" d="m7 322c128-180 317-355 491-472l135 150c-135 86-274 215-380 347 106 138 252 270 384 356l-132 147c-167-107-359-285-498-478-7-13-7-19-7-25 0-9 4-20 7-25" horiz-adv-x="637" />
+<glyph glyph-name="play" unicode="&#xe804;" d="m772 333l-741-412q-13-7-22-2t-9 20v822q0 14 9 20t22-2l741-412q13-7 13-17t-13-17z" horiz-adv-x="785.7" />
+<glyph glyph-name="pause" unicode="&#xe805;" d="m857 743v-786q0-14-10-25t-26-11h-285q-15 0-25 11t-11 25v786q0 14 11 25t25 11h285q15 0 26-11t10-25z m-500 0v-786q0-14-10-25t-26-11h-285q-15 0-25 11t-11 25v786q0 14 11 25t25 11h285q15 0 26-11t10-25z" horiz-adv-x="857.1" />
+</font>
+</defs>
+</svg>

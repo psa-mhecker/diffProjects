@@ -1,0 +1,4462 @@
+a{ color: #18417F; text-decoration: none; }
+/** liens avec chevrons */
+.chevron {background:url("../images/pict_liste_liens.png") no-repeat 0em 0.4em; margin-bottom:0.2em;padding-left:0.6em;}
+
+a:visited{ }
+a:hover{ text-decoration: underline; }
+a:active{ }
+acronym{ border: none; cursor: help; }
+blockquote{ margin: 0; padding: 0; }
+caption{ color: #FF500B; font-size: 110%; font-weight: normal; margin: 1.8em 0 0.5em; text-align: left; }
+dd{ margin: 0.5em 0; }
+div#toc { clear: both; margin: 0em 0 2.7em 0; }
+div#toc li { background: url("../images/pict_liste_liens.png") no-repeat 0 0.4em; margin-bottom: 0.2em; margin-left: 0em; }
+div#toc li a{ font-size: 100%; font-weight: normal; }
+div#toc ul{ border-left: 4px solid #FF500B; margin-top: 0em; padding-left: 5px; }
+dt{ color: #FF500B; font-size: 110%; font-weight: normal; margin: 1.8em 0 0.5em !important; text-align: left; }
+h4{ border-bottom: 1px solid #CCC; color: #FF500B; font-size: 120%; letter-spacing: 0.05em; margin-bottom: 0.5em; padding-bottom: 0.3em; position: relative; }
+h4 a.top{ display: block; position: absolute; right: 0; top: 0; }
+h5{ color: #FF500B; font-size: 110%; font-weight: normal; margin: 1.8em 0 0.5em; }
+h6{ font-size: 100%; font-weight: normal; margin: 1.8em 0 0; }
+img{ border: none; text-decoration: none; }
+ol{ list-style: decimal inside; margin-left: 0; padding-left: 0; }
+ol li{ }
+ol ol{ margin-bottom: 0.5em; padding-left: 18px; }
+p{ }
+table{ background-color: #FDEEE9; border-collapse: collapse; border-spacing: 0; width: 100%; }
+tbody th{ color: #FF500B; }
+th,td{ border: 1px solid #FFF; margin: 0; padding: 2px 4px; text-align: left; vertical-align: top; }
+thead th{ background-color: #FF9420; color: #FFF; }
+ul{ list-style: none; margin-left: 0; padding: 0; }
+ul li{ background: url("../images/pict_liste.png") no-repeat 0 0.5em; padding-left: 10px; }
+.attention{ background: url("../images/pict_attention.png") no-repeat 0 1px; color: #BF002E; font-weight: bold; padding: 2px 0 3px 22px; }
+.centre{ text-align: center; }
+.date{ color: #666; display: block; font-weight: normal; letter-spacing: 0.1em; }
+.download{ background: url("../images/pict_download.png") no-repeat 0 4px; padding-left: 18px; }
+.droite{ text-align: right; }
+.gauche{ text-align: left; }
+.help-plugin{ background-color: #EEE; clear: both; margin-top: 40px !important; padding: 2px 0; text-align: center; }
+.information{ background: url("../images/pict_information.png") no-repeat 0 2px; padding: 1px 0 1px 18px; }
+.label-coord{ color: #FF500B; text-align: left; }
+.legende-graph { background: url("../images/bg_legende_top.png") no-repeat 50% 0; padding: 1em 0.5em; }
+.legende-table { font-size: 90%; }
+.vignette-left{ background-color: #CCC; float: left; margin: 0 0.5em 0.5em 0 !important; }
+.vignette-left span.legende, .vignette-right span.legende{ display: block; font-size: 90%; padding: 2px 4px; text-align: right; }
+.vignette-right{ background-color: #CCC; float: right; margin: 0 0 0 0.5em !important; }
+
+/**/
+.bkgNeutre {
+  background: #e5e5e5;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjI3JSIgc3RvcC1jb2xvcj0iI2Y5ZjlmOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjcxJSIgc3RvcC1jb2xvcj0iI2U5ZTllOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlNWU1ZTUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top, #ffffff 0%, #f9f9f9 25%, #e9e9e9 75%, #e5e5e5 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(25%, #f9f9f9), color-stop(75%, #e9e9e9), color-stop(100%, #e5e5e5));
+  background: -webkit-linear-gradient(top, #ffffff 0%, #f9f9f9 25%, #e9e9e9 75%, #e5e5e5 100%);
+  background: -o-linear-gradient(top, #ffffff 0%, #f9f9f9 25%, #e9e9e9 75%, #e5e5e5 100%);
+  background: -ms-linear-gradient(top, #ffffff 0%, #f9f9f9 25%, #e9e9e9 75%, #e5e5e5 100%);
+  background: linear-gradient(top, #ffffff 0%, #f9f9f9 25%, #e9e9e9 75%, #e5e5e5 100%);
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#e5e5e5', GradientType=0);
+}
+.bkgActif {
+  background: #006851;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzNkYTg5MCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjI3JSIgc3RvcC1jb2xvcj0iIzFjYTc4OCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjgxJSIgc3RvcC1jb2xvcj0iIzAwN2I1ZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDY4NTEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top, #3da890 0%, #1ca788 25%, #007b5f 75%, #006851 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3da890), color-stop(25%, #1ca788), color-stop(75%, #007b5f), color-stop(100%, #006851));
+  background: -webkit-linear-gradient(top, #3da890 0%, #1ca788 25%, #007b5f 75%, #006851 100%);
+  background: -o-linear-gradient(top, #3da890 0%, #1ca788 25%, #007b5f 75%, #006851 100%);
+  background: -ms-linear-gradient(top, #3da890 0%, #1ca788 25%, #007b5f 75%, #006851 100%);
+  background: linear-gradient(top, #3da890 0%, #1ca788 25%, #007b5f 75%, #006851 100%);
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#3da890', endColorstr='#006851', GradientType=0);
+}
+.bkgFooter {
+  background-color: #006d55;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzJiNzE2MiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwJSIgc3RvcC1jb2xvcj0iIzM4OTc4MiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjI2JSIgc3RvcC1jb2xvcj0iIzNhYTg4ZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzBkOTg3OSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDZkNTUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top, #2b7162 0%, #389782 10%, #3aa88f 26%, #0d9879 50%, #006d55 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #2b7162), color-stop(10%, #389782), color-stop(26%, #3aa88f), color-stop(50%, #0d9879), color-stop(100%, #006d55));
+  background: -webkit-linear-gradient(top, #2b7162 0%, #389782 10%, #3aa88f 26%, #0d9879 50%, #006d55 100%);
+  background: -o-linear-gradient(top, #2b7162 0%, #389782 10%, #3aa88f 26%, #0d9879 50%, #006d55 100%);
+  background: -ms-linear-gradient(top, #2b7162 0%, #389782 10%, #3aa88f 26%, #0d9879 50%, #006d55 100%);
+  background: linear-gradient(top, #2b7162 0%, #389782 10%, #3aa88f 26%, #0d9879 50%, #006d55 100%);
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#2b7162', endColorstr='#006d55', GradientType=0);
+}
+.bkgSante {
+  background: #cb4c8e;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2NiNGM4ZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNhMjE4NjAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top, #cb4c8e 0%, #a21860 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #cb4c8e), color-stop(100%, #a21860));
+  background: -webkit-linear-gradient(top, #cb4c8e 0%, #a21860 100%);
+  background: -o-linear-gradient(top, #cb4c8e 0%, #a21860 100%);
+  background: -ms-linear-gradient(top, #cb4c8e 0%, #a21860 100%);
+  background: linear-gradient(top, #cb4c8e 0%, #a21860 100%);
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#cb4c8e', endColorstr='#a21860', GradientType=0);
+}
+.bkgPret {
+  background: #ffa317;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmYTMxNyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjI1JSIgc3RvcC1jb2xvcj0iI2ZkYTExNSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijc1JSIgc3RvcC1jb2xvcj0iI2RlOGQxMSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNjYjgyMTEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top, #ffa317 0%, #fda115 25%, #de8d11 75%, #cb8211 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffa317), color-stop(25%, #fda115), color-stop(75%, #de8d11), color-stop(100%, #cb8211));
+  background: -webkit-linear-gradient(top, #ffa317 0%, #fda115 25%, #de8d11 75%, #cb8211 100%);
+  background: -o-linear-gradient(top, #ffa317 0%, #fda115 25%, #de8d11 75%, #cb8211 100%);
+  background: -ms-linear-gradient(top, #ffa317 0%, #fda115 25%, #de8d11 75%, #cb8211 100%);
+  background: linear-gradient(top, #ffa317 0%, #fda115 25%, #de8d11 75%, #cb8211 100%);
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ffa317', endColorstr='#cb8211', GradientType=0);
+}
+#resolution {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #FFF;
+  background: red;
+  padding: 3px 5px;
+  display: none;
+}
+sup {
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: super;
+}
+.minuscule {
+  text-transform: lowercase;
+}
+.size100 {
+  width: 100%;
+}
+.txtC {
+  text-align: center;
+}
+#aboveMenu {
+  text-align: right;
+}
+.mea li {
+  text-transform: uppercase;
+}
+.mea_internet li {
+  text-transform: uppercase;
+}
+.ariane {
+  font-size: 0.85em;
+  margin: 0 0 20px 0;
+}
+.bkg_pointille_epargne {
+  background: url('../images/skin/pointille_epargne.png') repeat-x top left transparent;
+  float: right;
+}
+.bkg_pointille_famille {
+  background: url('../images/skin/pointille_famille.png') repeat-x top left transparent;
+  float: right;
+}
+.bkg_pointille_pret {
+  background: url('../images/skin/pointille_pret.png') repeat-x top left transparent;
+  float: right;
+}
+.bkg_pointille_retraite {
+  background: url('../images/skin/pointille_retraite.png') repeat-x top left transparent;
+  float: right;
+}
+.bkg_pointille_sante {
+  background: url('../images/skin/pointille_sante.png') repeat-x top left transparent;
+  float: right;
+}
+.noBorder {
+  border: 1px solid #ffffff !important;
+}
+.cge_label {
+  background: url(../images/pub/LabelExcellence2012logo.jpg) no-repeat 50% top;
+  height: 65px;
+  width: 70px;
+  float: right;
+}
+#produitContent {
+  position: absolute;
+}
+.blocInfos,
+.blocInfosContent {
+  background: url("../images/skin/large_popup_bkg_V.png") repeat-y left top;
+}
+.blocInfos {
+  margin-top: 20px;
+}
+.blocInfos .roundTop {
+  padding-left: 10px;
+}
+.blocInfos .roundTop,
+.blocInfos .roundTop b,
+.blocInfos .roundBottom,
+.blocInfos .roundBottom b {
+  background: url("../images/skin/large_popup_bkg_H.png") no-repeat left top;
+  display: block;
+  font-size: 1%;
+  height: 15px;
+}
+.blocInfos .roundTop b {
+  background-position: right top;
+}
+.blocInfos .blocInfosContent {
+  background-position: right top;
+  margin-left: 7px;
+  padding: 4px 14px 4px 2px;
+}
+.blocInfos .roundBottom {
+  background-position: left bottom;
+  padding-left: 10px;
+}
+.blocInfos .roundBottom b {
+  background-position: right bottom;
+}
+.ctnBlocInfos p {
+  color: #008b6c;
+}
+.ctnBlocInfos dt {
+  color: #008b6c;
+}
+#titre_divers {
+  margin: 0 0 10px 0;
+}
+#titre_divers H1 {
+  color: #008b6c;
+  border-bottom: 1px solid #dcdcdc;
+  padding: 0 0 50px;
+  line-height: 24px;
+}
+h2.sante {
+  background: url(../images/skin/small_mea_sante.png) no-repeat -10px -10px;
+  color: #ba2070;
+  padding-left: 40px;
+}
+h2.pret {
+  margin: 20px 0 0 ;
+  background: url(../images/skin/small_mea_pret.png) no-repeat -7px -10px;
+  color: #ffa317;
+  padding-left: 40px;
+}
+h2.famille {
+  margin: 20px 0 0 ;
+  background: url(../images/skin/small_mea_famille.png) no-repeat -7px -10px;
+  color: #178bc1;
+  padding-left: 40px;
+}
+h2.epargne {
+  margin: 20px 0 0 ;
+  background: url(../images/skin/small_mea_epargne.png) no-repeat -4px -10px;
+  color: #a8d64e;
+  padding-left: 40px;
+}
+h2.retraite {
+  margin: 20px 0 0 ;
+  background: url(../images/skin/small_mea_retraite.png) no-repeat -7px -10px;
+  color: #e26969;
+  padding-left: 40px;
+}
+.disclaimer a {
+  text-decoration: underline;
+}
+.implantation_cardif {
+  background: url("../images/visuels/large_implantation_cardif.png") no-repeat left top;
+  width: 700px;
+  height: 416px;
+}
+.avertissement {
+  float: left;
+  width: 100%;
+  text-align: center;
+  margin: 20px 0 0 0;
+  font-size: 0.846153846153846em;
+}
+/* **************** COMMUN SMALL PHONE ET LANDSCAPE PHONE *********************************** */
+@media (max-width: 767px) {
+  .btn_tarif {
+    float: left;
+    display: block;
+    width: 51px;
+    height: 37px;
+    margin: 0 0 5px;
+  }
+  .btn_tarif img {
+    background: url("../images/skin/small_btn_tarif_off.jpg") no-repeat scroll left top transparent;
+    display: block;
+    width: 100%;
+    height: 37px;
+  }
+  .btn_rappel_sante {
+    float: right;
+    display: block;
+    width: 78px;
+    height: 37px;
+  }
+  .btn_rappel_sante img {
+    background: url("../images/skin/small_btn_rappel_sante.jpg") no-repeat scroll left top transparent;
+    display: block;
+    width: 100%;
+    height: 37px;
+  }
+  .btn_rappel_pret {
+    float: right;
+    display: block;
+    width: 78px;
+    height: 37px;
+  }
+  .btn_rappel_pret img {
+    background: url("../images/skin/small_btn_rappel_pret.jpg") no-repeat scroll left top transparent;
+    display: block;
+    width: 100%;
+    height: 37px;
+  }
+  .btn_savoir {
+    float: right;
+    display: block;
+    width: 132px;
+    height: 37px;
+  }
+  .btn_savoir img {
+    background: url("../images/skin/small_btn_savoir_off.jpg") no-repeat scroll center top transparent;
+    display: block;
+    width: 132px;
+    height: 37px;
+  }
+  #produit_detail h3 {
+    color: white;
+    line-height: 1.5em;
+    font-size: 1em;
+    padding: 5px;
+    margin: 20px 0 0 0;
+  }
+  #produit_detail h3.famille {
+    background-color: #178bc1;
+  }
+  #produit_detail h3.couv_perso {
+    display: inline-block;
+  }
+  #produit_detail h3.couv_pro {
+    display: inline-block;
+  }
+  #produit_detail h3.couv_entreprise {
+    display: inline-block;
+  }
+  #produit_detail h3.epargne {
+    background-color: #a8d64e;
+  }
+  #produit_detail h3.cmp3i {
+    display: inline-block;
+  }
+  #produit_detail h3.cmp3_capi {
+    display: inline-block;
+  }
+  #produit_detail h3.perspective {
+    display: inline-block;
+  }
+  #produit_detail h3.retraite {
+    background-color: #e26969;
+  }
+  #produit_detail h3.crp_plus {
+    display: inline-block;
+  }
+  #produit_detail h3.cmp_perp {
+    display: inline-block;
+  }
+  #produit_detail h3.crp_agri {
+    display: inline-block;
+  }
+  #produit_detail h3.pret {
+    background-color: #ffa317;
+    display: inline-block;
+  }
+  #produit_detail h3.sante {
+    background-color: #ba2070;
+    display: inline-block;
+  }
+}
+/********************************* Small Phone *********************/
+@media (max-width: 479px) {
+  #resolution:after {
+    content: '< 479';
+  }
+  body {
+    font-size: 11px;
+  }
+  h2 {
+    font-size: 1.636363636em;
+  }
+  .bkgNeutreMobile {
+    background: #e5e5e5;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjI3JSIgc3RvcC1jb2xvcj0iI2Y5ZjlmOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjcxJSIgc3RvcC1jb2xvcj0iI2U5ZTllOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlNWU1ZTUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top, #ffffff 0%, #f9f9f9 25%, #e9e9e9 75%, #e5e5e5 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(25%, #f9f9f9), color-stop(75%, #e9e9e9), color-stop(100%, #e5e5e5));
+    background: -webkit-linear-gradient(top, #ffffff 0%, #f9f9f9 25%, #e9e9e9 75%, #e5e5e5 100%);
+    background: -o-linear-gradient(top, #ffffff 0%, #f9f9f9 25%, #e9e9e9 75%, #e5e5e5 100%);
+    background: -ms-linear-gradient(top, #ffffff 0%, #f9f9f9 25%, #e9e9e9 75%, #e5e5e5 100%);
+    background: linear-gradient(top, #ffffff 0%, #f9f9f9 25%, #e9e9e9 75%, #e5e5e5 100%);
+    filter: progid:dximagetransform.microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#e5e5e5', GradientType=0);
+  }
+  .navbar-inner {
+    border: none;
+  }
+  .positionHeader {
+    float: left;
+    width: 50%;
+  }
+  .positionMenu {
+    float: right;
+    width: 50%;
+    margin: 19px 0 0;
+  }
+  #header {
+    width: 50%;
+    min-width: 172px;
+  }
+  #bandeau_logo {
+    background: url("../logos/small_logo_cardif.jpg") no-repeat;
+    height: 38px;
+    margin: 19px 0;
+  }
+  #bandeau_logo a {
+    display: block;
+    height: 38px;
+    width: 200px;
+    cursor: pointer;
+  }
+  .mea li {
+    border: 1px solid #dcdcdc;
+    display: block;
+    height: 47px;
+    margin-bottom: 10px;
+    padding: 10px 0 0 42px;
+    font-weight: bold;
+  }
+  .mea_texte {
+    float: left;
+    margin-left: 4px;
+    width: 38%;
+  }
+  #mea1 {
+    background: url("../images/skin/small_mea_sante.png") -2px center no-repeat;
+  }
+  #mea1 .mea_texte_int {
+    float: left;
+  }
+  #mea1 .mea_zoom {
+    color: #ba2070;
+  }
+  #mea2 {
+    background: url("../images/skin/small_mea_pret.png") -2px center no-repeat;
+  }
+  #mea2 .mea_texte_int {
+    float: left;
+  }
+  #mea2 .mea_zoom {
+    color: #ffa317;
+  }
+  #mea3 {
+    background: url("../images/skin/small_mea_famille.png") -2px center no-repeat;
+  }
+  #mea3 .mea_texte_int {
+    float: left;
+  }
+  #mea3 .mea_zoom {
+    color: #178bc1;
+  }
+  #mea4 {
+    background: url("../images/skin/small_mea_epargne.png") -2px center no-repeat;
+  }
+  #mea4 .mea_texte_int {
+    float: left;
+  }
+  #mea4 .mea_zoom {
+    color: #a8d64e;
+  }
+  #mea5 {
+    background: url("../images/skin/small_mea_retraite.png") -2px center no-repeat;
+  }
+  #mea5 .mea_texte_int {
+    float: left;
+  }
+  #mea5 .mea_zoom {
+    color: #e26969;
+  }
+  .btn_mea,
+  .btn_mea2 {
+    margin-right: 8px;
+    font-size: 1em;
+  }
+  #produit_detail h2 {
+    font-size: 1em;
+    text-transform: uppercase;
+    padding: 25px 0 0 35px;
+    height: 25px;
+    color: #008b6c;
+    line-height: 1.09090909090909em;
+  }
+  #produit_detail .produit_detail_1 {
+    float: left;
+    background: url("../images/skin/produit_detail_1.png") no-repeat;
+    width: 100%;
+  }
+  #produit_detail .produit_detail_2 {
+    float: left;
+    background: url("../images/skin/produit_detail_2.png") no-repeat;
+    width: 100%;
+  }
+  #produit_detail .produit_detail_3 {
+    float: left;
+    background: url("../images/skin/produit_detail_3.png") no-repeat;
+    width: 100%;
+  }
+  #produit_detail .produit_detail_4 {
+    float: left;
+    background: url("../images/skin/produit_detail_4.png") no-repeat;
+    width: 100%;
+  }
+  #produit_detail .produit_detail_5 {
+    float: left;
+    background: url("../images/skin/produit_detail_5.png") no-repeat;
+    width: 100%;
+  }
+  #produit_detail .produit_detail_6 {
+    float: left;
+    background: url("../images/skin/produit_detail_6.png") no-repeat;
+    width: 100%;
+  }
+  #produit_detail .produit_detail_7 {
+    float: left;
+    background: url("../images/skin/produit_detail_7.png") no-repeat;
+    width: 100%;
+  }
+  #produit_detail .trois_lignes {
+    height: 35px;
+    padding: 17px 0 0 35px;
+  }
+  #produit_detail .detail_supplement {
+    float: left;
+    width: 100%;
+    padding: 27px 0 0 0;
+  }
+  #produit_detail .detail_supplement h2 {
+    padding: 0;
+    float: left;
+  }
+  #produit_detail .txt_label {
+    float: left;
+    width: 70%;
+  }
+  #produit_detail ul {
+    display: block;
+    float: left;
+    font-size: 1em;
+    margin: 0 0 0 35px;
+  }
+  #produit_detail .puce {
+    list-style: none outside none;
+  }
+  #produit_detail .puce li {
+    background: url("../images/skin/puce.png") no-repeat scroll 0 8px transparent;
+    padding-left: 10px;
+  }
+  #produit_detail .souspuce {
+    list-style: disc outside none;
+  }
+  #produit_detail .souspuce li {
+    background: none;
+    padding-left: 0;
+  }
+  #produit_detail a {
+    color: #008b6c;
+    font-weight: bold;
+    font-style: italic;
+  }
+  #produit_zoom {
+    float: left;
+    padding: 15px 10px;
+    margin: 20px 0 0 0;
+  }
+  #produit_zoom h2 {
+    font-size: 1.27272727272727em ;
+    color: #008b6c;
+    line-height: 1.63636363636364em;
+    text-transform: uppercase;
+  }
+  #produit_zoom p {
+    margin: 5px 0;
+    font-size: 1em;
+  }
+  #produit_zoom .puce {
+    list-style: none outside none;
+  }
+  #produit_zoom .puce li {
+    background: url("../images/skin/puce_chevron.png") no-repeat scroll 0 5px transparent;
+    padding-left: 10px;
+  }
+  .zoom_retraite {
+    border: 1px solid #e26969;
+  }
+  .zoom_epargne {
+    border: 1px solid #a8d64e;
+  }
+  .zoom_famille {
+    border: 1px solid #178bc1;
+  }
+  .zoom_pret {
+    border: 1px solid #ffa317;
+  }
+  .zoom_sante {
+    border: 1px solid #ba2070;
+  }
+  .disclaimer {
+    margin: 15px 0 0 0;
+    font-size: 1em;
+    width: 100%;
+  }
+  #btn_faq {
+    float: left;
+    width: 100%;
+    padding: 20px 0 0 0;
+    margin: 20px 0 0 0;
+    border-top: 1px solid #dcdcdc;
+  }
+  #btn_faq .btn_faq {
+    font-size: 1.18181818181818em;
+    padding: 9px 0 0 34px;
+    height: 25px;
+    margin: 0 auto;
+    font-weight: bold;
+  }
+  #btn_faq a {
+    color: white;
+  }
+  #btn_faq .picto {
+    float: left;
+    background: url("../images/skin/chevron_blanc.png") no-repeat;
+    width: 7px;
+    height: 11px;
+    padding: 0 5px 0 0;
+    margin: 3px 0 0;
+  }
+  #produit_titre {
+    border-bottom: 1px solid #dcdcdc;
+    padding: 0 0 18px 0;
+  }
+  #produit_titre .picto_produit_famille {
+    float: left;
+    height: 50px;
+    width: 50px;
+    background: url("../images/skin/small_picto_produit_famille.png") no-repeat;
+  }
+  #produit_titre .picto_produit_epargne {
+    float: left;
+    height: 50px;
+    width: 50px;
+    background: url("../images/skin/small_picto_produit_epargne.png") no-repeat;
+  }
+  #produit_titre .picto_produit_retraite {
+    float: left;
+    height: 50px;
+    width: 50px;
+    background: url("../images/skin/small_picto_produit_retraite.png") no-repeat;
+  }
+  #produit_titre .picto_produit_sante {
+    float: left;
+    height: 50px;
+    width: 50px;
+    background: url("../images/skin/small_picto_produit_sante.png") no-repeat;
+  }
+  #produit_titre .picto_produit_pret {
+    float: left;
+    height: 50px;
+    width: 50px;
+    background: url("../images/skin/small_picto_produit_pret.png") no-repeat;
+  }
+  #produit_titre h1 {
+    padding: 0px 0 20px 80px;
+    font-size: 1.63636363636364em;
+    line-height: 1.18181818181818em;
+  }
+  #produit_titre h1.famille {
+    color: #178bc1;
+  }
+  #produit_titre h1.epargne {
+    color: #a8d64e;
+  }
+  #produit_titre h1.retraite {
+    color: #e26969;
+  }
+  #produit_titre h1.pret {
+    color: #ffa317;
+  }
+  #produit_titre h1.sante {
+    color: #ba2070;
+  }
+  #produit_titre_sommaire {
+    border-bottom: 1px solid #dcdcdc;
+    padding: 0 0 18px 0;
+  }
+  #produit_titre_sommaire .picto_produit_famille {
+    float: left;
+    height: 50px;
+    width: 50px;
+    background: url("../images/skin/small_picto_produit_famille.png") no-repeat;
+  }
+  #produit_titre_sommaire .picto_produit_epargne {
+    float: left;
+    height: 50px;
+    width: 50px;
+    background: url("../images/skin/small_picto_produit_epargne.png") no-repeat;
+  }
+  #produit_titre_sommaire .picto_produit_retraite {
+    float: left;
+    height: 50px;
+    width: 50px;
+    background: url("../images/skin/small_picto_produit_retraite.png") no-repeat;
+  }
+  #produit_titre_sommaire h1 {
+    padding: 0px 0 20px 60px;
+    font-size: 2.54545454545455em;
+  }
+  #produit_titre_sommaire h1.famille {
+    color: #178bc1;
+  }
+  #produit_titre_sommaire h1.epargne {
+    color: #a8d64e;
+  }
+  #produit_titre_sommaire h1.retraite {
+    color: #e26969;
+  }
+  #produit_titre_sommaire h1.pret {
+    color: #ffa317;
+  }
+  #produit_sommaire_intro p {
+    font-size: 1.09090909090909em;
+    color: #666666;
+    margin: 20px 0 7px 0;
+  }
+  #sommaire_produit_retraite {
+    float: left;
+    width: 100%;
+    font-size: 2em;
+  }
+  #sommaire_produit_retraite .produit_1 {
+    float: left;
+    margin: 10px 0 0 0;
+    width: 85%;
+    padding: 20px;
+    border: 1px solid #dcdcdc;
+    line-height: 1.18181818181818em;
+  }
+  #sommaire_produit_retraite .produit_2 {
+    float: left;
+    margin: 10px 0 0 0;
+    width: 85%;
+    padding: 20px;
+    border: 1px solid #dcdcdc;
+    line-height: 1.18181818181818em;
+  }
+  #sommaire_produit_retraite .produit_3 {
+    float: left;
+    margin: 10px 0 0 0;
+    width: 85%;
+    padding: 20px;
+    border: 1px solid #dcdcdc;
+    line-height: 1.18181818181818em;
+  }
+  #sommaire_produit_retraite .nom_produit_retraite {
+    color: #e26969;
+    font-weight: bold;
+  }
+  #sommaire_produit_retraite .decouvrir {
+    font-size: 0.5em;
+    font-weight: bold;
+  }
+  #sommaire_produit_famille {
+    float: left;
+    width: 100%;
+  }
+  #sommaire_produit_famille .produit_1 {
+    float: left;
+    margin: 10px 0 0 0;
+    width: 85%;
+    padding: 20px;
+    border: 1px solid #dcdcdc;
+    font-size: 2em;
+    line-height: 1.18181818181818em;
+  }
+  #sommaire_produit_famille .produit_2 {
+    float: left;
+    margin: 10px 0 0 0;
+    width: 85%;
+    padding: 20px;
+    border: 1px solid #dcdcdc;
+    font-size: 2em;
+    line-height: 1.18181818181818em;
+  }
+  #sommaire_produit_famille .produit_3 {
+    float: left;
+    margin: 10px 0 0 0;
+    width: 85%;
+    padding: 20px;
+    border: 1px solid #dcdcdc;
+    font-size: 2em;
+    line-height: 1.18181818181818em;
+  }
+  #sommaire_produit_famille .nom_produit_famille {
+    color: #178bc1;
+    font-weight: bold;
+  }
+  #sommaire_produit_famille .decouvrir {
+    font-size: 0.5em;
+    font-weight: bold;
+  }
+  .sommaire_produit_epargne {
+    float: left;
+    width: 100%;
+    font-size: 2em;
+  }
+  .sommaire_produit_epargne .produit_1 {
+    float: left;
+    margin: 10px 0 0 0;
+    width: 85%;
+    padding: 20px;
+    border: 1px solid #dcdcdc;
+    line-height: 1.18181818181818em;
+  }
+  .sommaire_produit_epargne .produit_2 {
+    float: left;
+    margin: 10px 0 0 0;
+    width: 85%;
+    padding: 20px;
+    border: 1px solid #dcdcdc;
+    line-height: 1.18181818181818em;
+  }
+  .sommaire_produit_epargne .produit_3 {
+    float: left;
+    margin: 10px 0 0 0;
+    width: 85%;
+    padding: 20px;
+    border: 1px solid #dcdcdc;
+    line-height: 1.18181818181818em;
+  }
+  .sommaire_produit_epargne .nom_produit_epargne {
+    color: #a8d64e;
+    font-weight: bold;
+  }
+  .sommaire_produit_epargne .decouvrir {
+    font-size: 0.5em;
+    font-weight: bold;
+  }
+  .produit_sommaire_sous_partie {
+    float: left;
+    margin: 21px 0 0 0;
+  }
+  .produit_sommaire_sous_partie h3 {
+    color: #008b6c;
+    font-size: 1.18181818181818em;
+  }
+  .produit_sommaire_sous_partie h3 span.assurancevie {
+    background-position: -2px;
+    width: 58%;
+  }
+  .produit_sommaire_sous_partie h3 span.diversification {
+    background-position: -2px;
+    width: 55%;
+  }
+  .bloc_btn {
+    float: left;
+    width: 100%;
+    border-bottom: 1px solid #dcdcdc;
+    padding: 0 0 20px 0;
+    margin: 20px 0 0 0;
+    font-weight: bold;
+  }
+  .bloc_btn .btnPret .btn_rappel_off span {
+    color: #ffffff;
+  }
+  .bloc_btn .btnSante li {
+    display: inline-block;
+    width: 49%;
+    text-align: center;
+  }
+  .bloc_btn .btnSante li.last {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin: 10px 0 0;
+  }
+  .bloc_btn .btnPret li {
+    display: inline-block;
+    width: 49%;
+    text-align: center;
+  }
+  .bloc_btn .btn_devis_off {
+    float: left;
+    width: 110px;
+    padding: 10px 15px;
+  }
+  .bloc_btn .btn_devis_off .picto {
+    float: left;
+    background: url("../images/skin/chevron_noir_btn.png") no-repeat;
+    width: 15px;
+    height: 28px;
+    margin: 2px 0 0;
+  }
+  .bloc_btn .btn_devis_off .texte {
+    vertical-align: top;
+    width: 90%;
+  }
+  .bloc_btn .btn_rappel_off {
+    float: right;
+    width: 120px;
+    padding: 10px 5px;
+  }
+  .bloc_btn .btn_rappel_off .picto {
+    float: left;
+    background: url("../images/skin/picto_telephone_btn.png") no-repeat;
+    width: 23px;
+    height: 30px;
+    margin: 6px 0 0 15px;
+  }
+  .bloc_btn .btn_rappel_off .picto_blanc {
+    background: url("../images/skin/chevron_blanc.png") no-repeat left 2px;
+    padding-left: 15px;
+  }
+  .bloc_btn .btn_rappel_off .texte {
+    vertical-align: top;
+    width: 90%;
+  }
+  .bloc_btn .btn_adhesion_on {
+    clear: both;
+    display: block;
+    color: #ffffff;
+    height: 25px;
+    padding: 9px 0 0 0;
+  }
+  .bloc_btn .btn_adhesion_on .picto {
+    background: url("../images/skin/chevron_blanc.png") no-repeat;
+    width: 7px;
+    height: 11px;
+    padding: 0 15px 0 0;
+    margin: 2px 0 0;
+  }
+  .bloc_btn .btn_adhesion_on .texte {
+    vertical-align: top;
+    width: 90%;
+    color: #ffffff;
+  }
+  h2 span.faqSante {
+    background-position: -2px 69%;
+    width: 63%;
+  }
+  h2 span.faqPret {
+    background-position: -2px 69%;
+    width: 11%;
+  }
+  h2 span.faqFamille {
+    background-position: -2px 69%;
+    width: 8%;
+  }
+  h2 span.faqEpargne {
+    background-position: -2px 69%;
+    width: 51%;
+  }
+  h2 span.faqRetraite {
+    background-position: -2px 69%;
+    width: 58%;
+  }
+  #bloc_espace_client h1 {
+    color: #008b6c;
+    border-bottom: 1px solid #dcdcdc;
+    padding: 0 0 20px;
+    padding: 0 0 15px;
+    line-height: 24px;
+  }
+  #bloc_espace_client h2 {
+    color: #008b6c;
+    text-transform: uppercase;
+    line-height: 20px;
+    font-size: 1.18181818181818em;
+  }
+  #bloc_espace_client .puce {
+    list-style: none outside none;
+  }
+  #bloc_espace_client .puce li {
+    background: url("../images/skin/puce.png") no-repeat scroll 0 5px transparent;
+    padding-left: 10px;
+  }
+  #bloc_espace_client .client_sante {
+    margin: 20px 0 0 0;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid #dcdcdc;
+  }
+  #bloc_espace_client .client_cardif {
+    margin: 20px 0 0 0;
+  }
+  #bloc_espace_client a.btn_espace_client {
+    display: block;
+    width: 100%;
+    height: 27px;
+    margin: 18px 0 0;
+    padding: 10px 0 0 10px;
+    font-weight: bold;
+    color: #ffffff;
+  }
+  #bloc_espace_client .picto {
+    float: left;
+    background: url("../images/skin/chevron_blanc.png") no-repeat;
+    width: 7px;
+    height: 11px;
+    margin: 3px 5px 0 0;
+  }
+  #bloc_espace_client .texte {
+    vertical-align: top;
+    text-transform: uppercase;
+  }
+  #bloc_plan h1 {
+    color: #008b6c;
+    border-bottom: 1px solid #dcdcdc;
+    padding: 0 0 20px;
+  }
+  #bloc_plan h2 {
+    font-size: 1.45454545454545em;
+  }
+  #bloc_plan .plan {
+    margin: 20px 0 0 0;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid #dcdcdc;
+  }
+  #bloc_plan .plan h2 a {
+    color: #008b6c;
+    text-transform: uppercase;
+    line-height: 1.81818181818182em;
+  }
+  #bloc_plan .plan .puce {
+    list-style: none outside none;
+    margin: 0 0 10px 10px;
+  }
+  #bloc_plan .plan .puce strong {
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+    font-size: 1.09090909090909em;
+  }
+  #bloc_plan .plan .puce strong a {
+    color: #008b6c;
+  }
+  #bloc_plan .plan .puce li {
+    margin-left: 10px;
+    background: url("../images/skin/puce.png") no-repeat scroll 0 7px transparent;
+    padding-left: 10px;
+  }
+  #bloc_plan .plan .puce li a:hover {
+    text-decoration: underline;
+  }
+  #bloc_nous_connaitre h1 {
+    color: #008b6c;
+    border-bottom: 1px solid #dcdcdc;
+    padding: 0 0 20px;
+  }
+  #bloc_nous_connaitre h2 {
+    color: #008b6c;
+    text-transform: uppercase;
+    font-size: 1.18181818181818em;
+    padding: 20px 0 0;
+    line-height: 18px;
+  }
+  #bloc_nous_connaitre p {
+    margin: 0;
+    padding: 0;
+  }
+  #bloc_nous_connaitre a {
+    color: #008b6c;
+    font-weight: bold;
+    font-size: 1em;
+  }
+  #bloc_nous_connaitre ul {
+    list-style: none;
+    margin: 10px 0 10px 10px;
+  }
+  #bloc_nous_connaitre ul li {
+    background: url("../images/skin/puce.png") no-repeat scroll 0 8px transparent;
+    padding-left: 10px;
+  }
+  #bloc_nous_connaitre em.disclaimer {
+    display: block;
+    margin-top: 5px;
+    line-height: 15px;
+  }
+  #footer {
+    margin: 40px 0 0;
+    padding: 10px;
+  }
+  #aboveFooter li {
+    display: block;
+    height: 42px;
+    margin: 0 0 10px;
+    background: url("../images/skin/bkg_btn_neutre.png") repeat-x;
+  }
+  #aboveFooter .chevron {
+    float: right;
+    width: 12px;
+    background: url("../images/skin/small_picto_chevron.png") no-repeat;
+    margin: 12px 10px 0 0;
+  }
+  #aboveFooter .footer_L1 .picto {
+    float: left;
+    height: 41px;
+    width: 42px;
+    background: url("../images/skin/small_picto_info.png") no-repeat;
+  }
+  #aboveFooter .footer_L2 .picto {
+    float: left;
+    height: 41px;
+    width: 42px;
+    background: url("../images/skin/small_picto_client.png") no-repeat;
+  }
+  #aboveFooter .footer_L3 .picto {
+    float: left;
+    height: 41px;
+    width: 42px;
+    background: url("../images/skin/small_picto_courtier.png") no-repeat;
+  }
+  #aboveFooter .footer_L4 {
+    margin: 0 !important;
+  }
+  #aboveFooter .footer_L4 .picto {
+    float: left;
+    height: 41px;
+    width: 42px;
+    background: url("../images/skin/small_picto_contact.png") no-repeat;
+  }
+  #aboveFooter .texte_footer {
+    float: left;
+    margin: 11px 0 0 5px;
+    font-weight: bold;
+  }
+  #footer_etendu1 {
+    float: left;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 0 0 20px 0;
+    margin: 20px 0 0;
+  }
+  #footer_etendu1 a {
+    color: #ffffff;
+  }
+  #footer_etendu1 .tiret:after {
+    content: "\00a0 \2013 \00a0";
+  }
+  #footer_etendu1 li {
+    float: left;
+  }
+  #footer_etendu1 .fligne1 {
+    display: block;
+  }
+  #footer_etendu1 .fligne2 {
+    display: block;
+  }
+  #footer_etendu1 .fligne3 {
+    display: block;
+  }
+  #footer_etendu1 .fbloc {
+    display: inline-block;
+  }
+}
+/********************************** Landscape phone *********************************************/
+@media (min-width: 480px) and (max-width: 767px) {
+  #resolution:after {
+    content: ' 480 - 767 ';
+  }
+  .bkgNeutreMobile {
+    background: #e5e5e5;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjI3JSIgc3RvcC1jb2xvcj0iI2Y5ZjlmOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjcxJSIgc3RvcC1jb2xvcj0iI2U5ZTllOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlNWU1ZTUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top, #ffffff 0%, #f9f9f9 25%, #e9e9e9 75%, #e5e5e5 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(25%, #f9f9f9), color-stop(75%, #e9e9e9), color-stop(100%, #e5e5e5));
+    background: -webkit-linear-gradient(top, #ffffff 0%, #f9f9f9 25%, #e9e9e9 75%, #e5e5e5 100%);
+    background: -o-linear-gradient(top, #ffffff 0%, #f9f9f9 25%, #e9e9e9 75%, #e5e5e5 100%);
+    background: -ms-linear-gradient(top, #ffffff 0%, #f9f9f9 25%, #e9e9e9 75%, #e5e5e5 100%);
+    background: linear-gradient(top, #ffffff 0%, #f9f9f9 25%, #e9e9e9 75%, #e5e5e5 100%);
+    filter: progid:dximagetransform.microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#e5e5e5', GradientType=0);
+  }
+  .navbar-inner {
+    border: none;
+  }
+  .positionHeader {
+    float: left;
+    width: 50%;
+  }
+  .positionMenu {
+    margin: 19px 0 0;
+  }
+  #header {
+    width: 50%;
+    min-width: 172px;
+  }
+  #bandeau_logo {
+    background: url("../logos/small_logo_cardif.jpg") no-repeat;
+    height: 38px;
+    margin: 19px 0;
+  }
+  #bandeau_logo a {
+    display: block;
+    height: 38px;
+    width: 200px;
+    cursor: pointer;
+  }
+  .txt-bar {
+    font-weight: bold;
+    margin-right: 13px;
+  }
+  .mea li {
+    border: 1px solid #dcdcdc;
+    display: block;
+    height: 47px;
+    margin-bottom: 10px;
+    padding: 10px 0 0 48px;
+    font-weight: bold;
+  }
+  .mea_texte {
+    float: left;
+    margin-left: 8px;
+  }
+  #mea1 {
+    background: url("../images/skin/small_mea_sante.png") left center no-repeat;
+  }
+  #mea1 .mea_texte_int {
+    float: left;
+    width: 100px;
+  }
+  #mea1 .mea_zoom {
+    color: #ba2070;
+  }
+  #mea2 {
+    background: url("../images/skin/small_mea_pret.png") left center no-repeat;
+  }
+  #mea2 .mea_texte_int {
+    float: left;
+    width: 90px;
+  }
+  #mea2 .mea_zoom {
+    color: #ffa317;
+  }
+  #mea3 {
+    background: url("../images/skin/small_mea_famille.png") left center no-repeat;
+  }
+  #mea3 .mea_texte_int {
+    float: left;
+    width: 90px;
+  }
+  #mea3 .mea_zoom {
+    color: #178bc1;
+  }
+  #mea4 {
+    background: url("../images/skin/small_mea_epargne.png") left center no-repeat;
+  }
+  #mea4 .mea_texte_int {
+    float: left;
+    width: 100px;
+  }
+  #mea4 .mea_zoom {
+    color: #a8d64e;
+  }
+  #mea5 {
+    background: url("../images/skin/small_mea_retraite.png") left center no-repeat;
+  }
+  #mea5 .mea_texte_int {
+    float: left;
+    width: 90px;
+  }
+  #mea5 .mea_zoom {
+    color: #e26969;
+  }
+  .btn_mea,
+  .btn_mea2 {
+    float: right;
+    margin-right: 10px;
+    font-size: 0.923076923em;
+  }
+  .btn_tarif {
+    margin-right: 10px;
+  }
+  #footer {
+    margin: 40px 0 0;
+    padding: 10px;
+  }
+  #aboveFooter .texte_footer {
+    float: left;
+    margin: 11px 0 0 5px;
+    font-weight: bold;
+  }
+  #aboveFooter li {
+    display: block;
+    height: 42px;
+    margin: 0 0 10px;
+    background: url("../images/skin/bkg_btn_neutre.png") repeat-x;
+  }
+  #aboveFooter .chevron {
+    float: right;
+    width: 12px;
+    background: url("../images/skin/small_picto_chevron.png") no-repeat;
+    margin: 12px 10px 0 0;
+  }
+  #aboveFooter .footer_L1 .picto {
+    float: left;
+    height: 41px;
+    width: 42px;
+    background: url("../images/skin/small_picto_info.png") no-repeat;
+  }
+  #aboveFooter .footer_L2 .picto {
+    float: left;
+    height: 41px;
+    width: 42px;
+    background: url("../images/skin/small_picto_client.png") no-repeat;
+  }
+  #aboveFooter .footer_L3 .picto {
+    float: left;
+    height: 41px;
+    width: 42px;
+    background: url("../images/skin/small_picto_courtier.png") no-repeat;
+  }
+  #aboveFooter .footer_L4 {
+    margin: 0 !important;
+  }
+  #aboveFooter .footer_L4 .picto {
+    float: left;
+    height: 41px;
+    width: 42px;
+    background: url("../images/skin/small_picto_contact.png") no-repeat;
+  }
+  #footer_etendu1 {
+    float: left;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 0 0 20px 0;
+    margin: 20px 0 0;
+  }
+  #footer_etendu1 a {
+    color: #ffffff;
+  }
+  #footer_etendu1 .tiret:after {
+    content: "\00a0 \2013 \00a0";
+  }
+  #footer_etendu1 li {
+    float: left;
+  }
+  #footer_etendu1 .fligne1 {
+    display: block;
+  }
+  #footer_etendu1 .fligne2 {
+    display: block;
+  }
+  #footer_etendu1 .fligne3 {
+    display: block;
+  }
+  #footer_etendu1 .fbloc {
+    display: inline-block;
+  }
+  #produit_titre {
+    border-bottom: 1px solid #dcdcdc;
+    padding: 0 0 18px 0;
+  }
+  #produit_titre .picto_produit_famille {
+    float: left;
+    height: 50px;
+    width: 50px;
+    background: url("../images/skin/small_picto_produit_famille.png") no-repeat;
+  }
+  #produit_titre .picto_produit_epargne {
+    float: left;
+    height: 50px;
+    width: 50px;
+    background: url("../images/skin/small_picto_produit_epargne.png") no-repeat;
+  }
+  #produit_titre .picto_produit_retraite {
+    float: left;
+    height: 50px;
+    width: 50px;
+    background: url("../images/skin/small_picto_produit_retraite.png") no-repeat;
+  }
+  #produit_titre .picto_produit_sante {
+    float: left;
+    height: 50px;
+    width: 50px;
+    background: url("../images/skin/small_picto_produit_sante.png") no-repeat;
+  }
+  #produit_titre .picto_produit_pret {
+    float: left;
+    height: 50px;
+    width: 50px;
+    background: url("../images/skin/small_picto_produit_pret.png") no-repeat;
+  }
+  #produit_titre h1 {
+    padding: 0px 0 20px 80px;
+    font-size: 1.84615385em;
+    line-height: 1.20833333333333em;
+  }
+  #produit_titre h1.famille {
+    color: #178bc1;
+  }
+  #produit_titre h1.epargne {
+    color: #a8d64e;
+  }
+  #produit_titre h1.retraite {
+    color: #e26969;
+  }
+  #produit_titre h1.pret {
+    color: #ffa317;
+  }
+  #produit_titre h1.sante {
+    color: #ba2070;
+  }
+  #produit_titre_sommaire {
+    border-bottom: 1px solid #dcdcdc;
+    padding: 0 0 18px 0;
+  }
+  #produit_titre_sommaire .picto_produit_famille {
+    float: left;
+    height: 50px;
+    width: 50px;
+    background: url("../images/skin/small_picto_produit_famille.png") no-repeat;
+  }
+  #produit_titre_sommaire .picto_produit_epargne {
+    float: left;
+    height: 50px;
+    width: 50px;
+    background: url("../images/skin/small_picto_produit_epargne.png") no-repeat;
+  }
+  #produit_titre_sommaire .picto_produit_retraite {
+    float: left;
+    height: 50px;
+    width: 50px;
+    background: url("../images/skin/small_picto_produit_retraite.png") no-repeat;
+  }
+  #produit_titre_sommaire h1 {
+    padding: 0px 0 20px 60px;
+    font-size: 2.30769231em;
+  }
+  #produit_titre_sommaire h1.famille {
+    color: #178bc1;
+  }
+  #produit_titre_sommaire h1.epargne {
+    color: #a8d64e;
+  }
+  #produit_titre_sommaire h1.retraite {
+    color: #e26969;
+  }
+  #produit_titre_sommaire h1.pret {
+    color: #ffa317;
+  }
+  #produit_sommaire_intro p {
+    font-size: 1.07692307692308em;
+    color: #666666;
+    margin: 20px 0 7px 0;
+  }
+  #sommaire_produit_retraite {
+    float: left;
+    width: 100%;
+    font-size: 1.84615384615385em;
+  }
+  #sommaire_produit_retraite .produit_1 {
+    float: left;
+    margin: 10px 0 0 0;
+    width: 90%;
+    padding: 20px;
+    border: 1px solid #dcdcdc;
+    line-height: 29px;
+  }
+  #sommaire_produit_retraite .produit_2 {
+    float: left;
+    margin: 10px 0 0 0;
+    width: 90%;
+    padding: 20px;
+    border: 1px solid #dcdcdc;
+    line-height: 29px;
+  }
+  #sommaire_produit_retraite .produit_3 {
+    float: left;
+    margin: 10px 0 0 0;
+    width: 90%;
+    padding: 20px;
+    border: 1px solid #dcdcdc;
+    line-height: 29px;
+  }
+  #sommaire_produit_retraite .nom_produit_retraite {
+    color: #e26969;
+    font-weight: bold;
+  }
+  #sommaire_produit_retraite .decouvrir {
+    font-size: 0.5em;
+    font-weight: bold;
+  }
+  #sommaire_produit_famille {
+    float: left;
+    width: 100%;
+  }
+  #sommaire_produit_famille .produit_1 {
+    float: left;
+    margin: 10px 0 0 0;
+    width: 90%;
+    padding: 20px;
+    border: 1px solid #dcdcdc;
+    font-size: 1.84615384615385em;
+    line-height: 29px;
+  }
+  #sommaire_produit_famille .produit_2 {
+    float: left;
+    margin: 10px 0 0 0;
+    width: 90%;
+    padding: 20px;
+    border: 1px solid #dcdcdc;
+    font-size: 1.84615384615385em;
+    line-height: 29px;
+  }
+  #sommaire_produit_famille .produit_3 {
+    float: left;
+    margin: 10px 0 0 0;
+    width: 90%;
+    padding: 20px;
+    border: 1px solid #dcdcdc;
+    font-size: 1.84615384615385em;
+    line-height: 29px;
+  }
+  #sommaire_produit_famille .nom_produit_famille {
+    color: #178bc1;
+    font-weight: bold;
+  }
+  #sommaire_produit_famille .decouvrir {
+    font-size: 0.5em;
+    font-weight: bold;
+  }
+  .sommaire_produit_epargne {
+    float: left;
+    width: 100%;
+    font-size: 1.84615384615385em;
+  }
+  .sommaire_produit_epargne .produit_1 {
+    float: left;
+    margin: 10px 0 0 0;
+    width: 90%;
+    padding: 20px;
+    border: 1px solid #dcdcdc;
+    line-height: 29px;
+  }
+  .sommaire_produit_epargne .produit_2 {
+    float: left;
+    margin: 10px 0 0 0;
+    width: 90%;
+    padding: 20px;
+    border: 1px solid #dcdcdc;
+    line-height: 29px;
+  }
+  .sommaire_produit_epargne .produit_3 {
+    float: left;
+    margin: 10px 0 0 0;
+    width: 90%;
+    padding: 20px;
+    border: 1px solid #dcdcdc;
+    line-height: 29px;
+  }
+  .sommaire_produit_epargne .nom_produit_epargne {
+    color: #a8d64e;
+    font-weight: bold;
+  }
+  .sommaire_produit_epargne .decouvrir {
+    font-size: 0.5em;
+    font-weight: bold;
+  }
+  .produit_sommaire_sous_partie {
+    float: left;
+    margin: 21px 0 0 0;
+  }
+  .produit_sommaire_sous_partie h3 {
+    color: #008b6c;
+    font-size: 1.07692307692308em;
+  }
+  .produit_sommaire_sous_partie h3 span.assurancevie {
+    background-position: -2px;
+    width: 72%;
+  }
+  .produit_sommaire_sous_partie h3 span.diversification {
+    background-position: -2px;
+    width: 70%;
+  }
+  .bloc_btn {
+    float: left;
+    width: 100%;
+    border-bottom: 1px solid #dcdcdc;
+    padding: 0 0 20px 0;
+    margin: 20px 0 0 0;
+    font-weight: bold;
+  }
+  .bloc_btn .btnPret .btn_rappel_off span {
+    color: #ffffff;
+  }
+  .bloc_btn .btnSante li {
+    display: inline-block;
+    width: 49%;
+    text-align: center;
+  }
+  .bloc_btn .btnSante li.last {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin: 10px 0 0;
+  }
+  .bloc_btn .btnPret li {
+    display: inline-block;
+    width: 49%;
+    text-align: center;
+  }
+  .bloc_btn .btn_devis_off {
+    display: inline-block;
+    padding: 10px 0;
+    width: 200px;
+  }
+  .bloc_btn .picto {
+    background: url("../images/skin/chevron_noir_btn.png") no-repeat left 2px;
+    padding-left: 25px;
+  }
+  .bloc_btn .texte {
+    vertical-align: top;
+  }
+  .btn_rappel_off {
+    display: inline-block;
+    padding: 10px 0;
+    width: 200px;
+  }
+  .btn_rappel_off .picto {
+    background: url("../images/skin/picto_telephone_btn.png") no-repeat;
+    padding-left: 25px;
+  }
+  .btn_rappel_off .picto_blanc {
+    background: url("../images/skin/chevron_blanc.png") no-repeat left 2px;
+    padding-left: 25px;
+  }
+  .btn_rappel_off .texte {
+    vertical-align: top;
+  }
+  .btn_adhesion_on {
+    display: inline-block;
+    padding: 10px 0;
+    width: 220px;
+    color: #ffffff;
+  }
+  .btn_adhesion_on .picto {
+    background: url("../images/skin/chevron_blanc.png") no-repeat left 2px;
+    padding-left: 25px;
+  }
+  .btn_adhesion_on .texte {
+    vertical-align: top;
+  }
+  #produit_detail h2 {
+    font-size: 0.92307692em;
+    text-transform: uppercase;
+    padding: 25px 0 0 35px;
+    height: 25px;
+    color: #008b6c;
+    line-height: 1.08333333em;
+  }
+  #produit_detail .produit_detail_1 {
+    float: left;
+    background: url("../images/skin/produit_detail_1.png") no-repeat;
+    width: 100%;
+  }
+  #produit_detail .produit_detail_2 {
+    float: left;
+    background: url("../images/skin/produit_detail_2.png") no-repeat;
+    width: 100%;
+  }
+  #produit_detail .produit_detail_3 {
+    float: left;
+    background: url("../images/skin/produit_detail_3.png") no-repeat;
+    width: 100%;
+  }
+  #produit_detail .produit_detail_4 {
+    float: left;
+    background: url("../images/skin/produit_detail_4.png") no-repeat;
+    width: 100%;
+  }
+  #produit_detail .produit_detail_5 {
+    float: left;
+    background: url("../images/skin/produit_detail_5.png") no-repeat;
+    width: 100%;
+  }
+  #produit_detail .produit_detail_6 {
+    float: left;
+    background: url("../images/skin/produit_detail_6.png") no-repeat;
+    width: 100%;
+  }
+  #produit_detail .produit_detail_7 {
+    float: left;
+    background: url("../images/skin/produit_detail_7.png") no-repeat;
+    width: 100%;
+  }
+  #produit_detail .trois_lignes {
+    height: 35px;
+    padding: 17px 0 0 35px;
+  }
+  #produit_detail .detail_supplement {
+    float: left;
+    width: 100%;
+    padding: 27px 0 0 0;
+  }
+  #produit_detail .detail_supplement h2 {
+    padding: 0;
+    float: left;
+  }
+  #produit_detail .txt_label {
+    float: left;
+    width: 80%;
+  }
+  #produit_detail ul {
+    display: block;
+    float: left;
+    font-size: 0.92307692em;
+    margin: 0 0 0 35px;
+  }
+  #produit_detail .puce {
+    list-style: none outside none;
+  }
+  #produit_detail .puce li {
+    background: url("../images/skin/puce.png") no-repeat scroll 0 8px transparent;
+    padding-left: 10px;
+  }
+  #produit_detail .souspuce {
+    list-style: disc outside none;
+  }
+  #produit_detail .souspuce li {
+    background: none;
+    padding-left: 0;
+  }
+  #produit_detail a {
+    color: #008b6c;
+    font-weight: bold;
+    font-style: italic;
+  }
+  #produit_zoom {
+    float: left;
+    padding: 15px 10px;
+    margin: 20px 0 0 0;
+  }
+  #produit_zoom h2 {
+    font-size: 1.38461538461538em;
+    color: #008b6c;
+    line-height: 1.53846153846154em;
+    text-transform: uppercase;
+  }
+  #produit_zoom p {
+    margin: 5px 0;
+    font-size: 0.916666666666667em;
+  }
+  #produit_zoom .puce {
+    list-style: none outside none;
+  }
+  #produit_zoom .puce li {
+    background: url("../images/skin/puce_chevron.png") no-repeat scroll 0 5px transparent;
+    padding-left: 10px;
+  }
+  .ctnBlocInfos {
+    margin: 10px;
+    width: 250px;
+  }
+  .zoom_retraite {
+    border: 1px solid #e26969;
+  }
+  .zoom_epargne {
+    border: 1px solid #a8d64e;
+  }
+  .zoom_famille {
+    border: 1px solid #178bc1;
+  }
+  .zoom_pret {
+    border: 1px solid #ffa317;
+  }
+  .zoom_sante {
+    border: 1px solid #ba2070;
+  }
+  .disclaimer {
+    margin: 15px 0 0 0;
+    font-size: 0.846153846153846em;
+    width: 100%;
+  }
+  #btn_faq {
+    float: left;
+    width: 100%;
+    padding: 20px 0 0 0;
+    margin: 20px 0 0 0;
+    border-top: 1px solid #dcdcdc;
+  }
+  #btn_faq .btn_faq {
+    font-size: 1.16666666666667em;
+    padding: 9px 0 0 100px;
+    height: 25px;
+    margin: 0 auto;
+    font-weight: bold;
+  }
+  #btn_faq a {
+    color: white;
+  }
+  #btn_faq .picto {
+    float: left;
+    background: url("../images/skin/chevron_blanc.png") no-repeat;
+    width: 7px;
+    height: 11px;
+    padding: 0 5px 0 0;
+    margin: 3px 0 0;
+  }
+  h2 span.faqSante {
+    background-position: -2px 69%;
+    width: 72%;
+  }
+  h2 span.faqPret {
+    background-position: -2px 69%;
+    width: 30%;
+  }
+  h2 span.faqFamille {
+    background-position: -2px 69%;
+    width: 28%;
+  }
+  h2 span.faqEpargne {
+    background-position: -2px 69%;
+    width: 60%;
+  }
+  h2 span.faqRetraite {
+    background-position: -2px 69%;
+    width: 68%;
+  }
+  #bloc_espace_client h1 {
+    color: #008b6c;
+    border-bottom: 1px solid #dcdcdc;
+    padding: 0 0 20px;
+    padding: 0 0 15px;
+    line-height: 24px;
+  }
+  #bloc_espace_client h2 {
+    color: #008b6c;
+    text-transform: uppercase;
+    line-height: 20px;
+    font-size: 1.16666666666667em;
+  }
+  #bloc_espace_client .puce {
+    list-style: none outside none;
+  }
+  #bloc_espace_client .puce li {
+    background: url("../images/skin/puce.png") no-repeat scroll 0 5px transparent;
+    padding-left: 10px;
+  }
+  #bloc_espace_client .client_sante {
+    margin: 20px 0 0 0;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid #dcdcdc;
+  }
+  #bloc_espace_client .client_cardif {
+    margin: 20px 0 0 0;
+  }
+  #bloc_espace_client a.btn_espace_client {
+    display: block;
+    width: 330px;
+    height: 27px;
+    margin: 18px 0 0;
+    padding: 10px 0 0 10px;
+    font-weight: bold;
+    color: #ffffff;
+  }
+  #bloc_espace_client .picto {
+    float: left;
+    background: url("../images/skin/chevron_blanc.png") no-repeat;
+    width: 7px;
+    height: 11px;
+    margin: 3px 5px 0 0;
+  }
+  #bloc_espace_client .texte {
+    vertical-align: top;
+    text-transform: uppercase;
+  }
+  #bloc_plan h1 {
+    color: #008b6c;
+    border-bottom: 1px solid #dcdcdc;
+    padding: 0 0 20px;
+  }
+  #bloc_plan .plan {
+    margin: 20px 0 0 0;
+    padding: 0 0 20px 20px;
+    border-bottom: 1px solid #dcdcdc;
+  }
+  #bloc_plan .plan h2 a {
+    color: #008b6c;
+    text-transform: uppercase;
+    line-height: 20px;
+    font-size: 1em;
+  }
+  #bloc_plan .plan .puce {
+    list-style: none outside none;
+    margin: 0 0 10px 10px;
+  }
+  #bloc_plan .plan .puce strong {
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+  #bloc_plan .plan .puce strong a {
+    color: #008b6c;
+  }
+  #bloc_plan .plan .puce li {
+    margin-left: 10px;
+    background: url("../images/skin/puce.png") no-repeat scroll 0 7px transparent;
+    padding-left: 10px;
+  }
+  #bloc_plan .plan .puce li a:hover {
+    text-decoration: underline;
+  }
+  #bloc_nous_connaitre h1 {
+    color: #008b6c;
+    border-bottom: 1px solid #dcdcdc;
+    padding: 0 0 20px;
+  }
+  #bloc_nous_connaitre h2 {
+    color: #008b6c;
+    text-transform: uppercase;
+    font-size: 1.16666666666667em;
+    padding: 20px 0 0;
+    line-height: 18px;
+  }
+  #bloc_nous_connaitre p {
+    margin: 0;
+    padding: 0;
+  }
+  #bloc_nous_connaitre a {
+    color: #008b6c;
+    font-weight: bold;
+    font-size: 1em;
+  }
+  #bloc_nous_connaitre ul {
+    list-style: none;
+    margin: 10px 0 10px 10px;
+  }
+  #bloc_nous_connaitre ul li {
+    background: url("../images/skin/puce.png") no-repeat scroll 0 8px transparent;
+    padding-left: 10px;
+  }
+  #bloc_nous_connaitre em.disclaimer {
+    display: block;
+    margin-top: 5px;
+    line-height: 15px;
+  }
+}
+/********************************** COMMUN TABLETTES ET PC ***/
+@media (min-width: 768px) {
+  #resolution:after {
+    content: '> 768';
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'BNPP Sans Bold';
+  }
+  .bkgNeutreMobile {
+    background: #e5e5e5;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjI3JSIgc3RvcC1jb2xvcj0iI2Y5ZjlmOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjcxJSIgc3RvcC1jb2xvcj0iI2U5ZTllOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlNWU1ZTUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top, #ffffff 0%, #f9f9f9 25%, #e9e9e9 75%, #e5e5e5 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(25%, #f9f9f9), color-stop(75%, #e9e9e9), color-stop(100%, #e5e5e5));
+    background: -webkit-linear-gradient(top, #ffffff 0%, #f9f9f9 25%, #e9e9e9 75%, #e5e5e5 100%);
+    background: -o-linear-gradient(top, #ffffff 0%, #f9f9f9 25%, #e9e9e9 75%, #e5e5e5 100%);
+    background: -ms-linear-gradient(top, #ffffff 0%, #f9f9f9 25%, #e9e9e9 75%, #e5e5e5 100%);
+    background: linear-gradient(top, #ffffff 0%, #f9f9f9 25%, #e9e9e9 75%, #e5e5e5 100%);
+    filter: progid:dximagetransform.microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#e5e5e5', GradientType=0);
+  }
+  .mea {
+    font-family: 'BNPP Sans Bold';
+  }
+  .mea_droite {
+    font-family: 'BNPPSans';
+  }
+  .mea_droite_bloc2 span {
+    font-family: 'BNPP Sans Bold';
+  }
+  #aboveMenu li {
+    height: 18px;
+    margin: 0 0 8px 15px;
+  }
+  #brandflag {
+    float: right;
+    margin: 60px 118px 0 0;
+    text-align: right;
+  }
+  #brandflag h1 {
+    color: #000000;
+    font-size: 24px;
+    line-height: 26px;
+  }
+  .brandflag_texte {
+    margin: 19px 0 0 24px;
+  }
+  .brandflag-title {
+    font-family: 'BNPP Sans Bold';
+  }
+  .brandflag-subtitle {
+    font-family: 'BNPP Sans Bold';
+  }
+  .btn_tarif {
+    display: block;
+    width: 100%;
+    height: 21px;
+    margin: 0 0 5px;
+  }
+  .btn_tarif img {
+    background: url("../images/skin/large_btn_tarif_off.png") no-repeat scroll left top transparent;
+    display: block;
+    width: 100%;
+    height: 21px;
+  }
+  .btn_rappel_sante {
+    display: block;
+    width: 100%;
+    height: 21px;
+  }
+  .btn_rappel_sante img {
+    background: url("../images/skin/large_btn_rappel_sante_on.png") no-repeat scroll left top transparent;
+    display: block;
+    width: 100%;
+    height: 21px;
+  }
+  .btn_rappel_pret {
+    display: block;
+    width: 100%;
+    height: 21px;
+  }
+  .btn_rappel_pret img {
+    background: url("../images/skin/large_btn_rappel_pret_on.png") no-repeat scroll left top transparent;
+    display: block;
+    width: 100%;
+    height: 21px;
+  }
+  .btn_savoir {
+    display: block;
+    width: 100%;
+    height: 21px;
+  }
+  .btn_savoir img {
+    background: url("../images/skin/large_btn_savoir_off.png") no-repeat scroll left top transparent;
+    display: block;
+    width: 100%;
+    height: 21px;
+  }
+  .trois_lignes {
+    height: 35px;
+    padding: 17px 0 0 35px;
+  }
+  .bloc_btn {
+    float: left;
+    width: 100%;
+    font-family: 'BNPP Sans Bold';
+    border-bottom: 1px solid #dcdcdc;
+    padding: 0 0 20px 0;
+    margin: 20px 0 0 0;
+  }
+  .bloc_btn .btnPret .btn_rappel_off span {
+    color: #ffffff;
+  }
+  .bloc_btn .btnSante li {
+    display: inline-block;
+    width: 33%;
+    text-align: center;
+  }
+  .bloc_btn .btnPret li {
+    display: inline-block;
+    width: 49%;
+    text-align: center;
+  }
+  .bloc_btn .btn_devis_off {
+    display: inline-block;
+    padding: 10px 0;
+    width: 220px;
+  }
+  .bloc_btn .btn_devis_off .picto {
+    background: url("../images/skin/chevron_noir_btn.png") no-repeat left 2px;
+    padding-left: 25px;
+  }
+  .bloc_btn .btn_devis_off .texte {
+    vertical-align: top;
+  }
+  .bloc_btn .btn_rappel_off {
+    display: inline-block;
+    padding: 10px 0;
+    width: 220px;
+  }
+  .bloc_btn .btn_rappel_off .picto {
+    background: url("../images/skin/picto_telephone_btn.png") no-repeat;
+    padding-left: 25px;
+  }
+  .bloc_btn .btn_rappel_off .picto_blanc {
+    background: url("../images/skin/chevron_blanc.png") no-repeat left 2px;
+    padding-left: 25px;
+  }
+  .bloc_btn .btn_rappel_off .texte {
+    vertical-align: top;
+  }
+  .bloc_btn .btn_adhesion_on {
+    display: inline-block;
+    padding: 10px 0;
+    width: 220px;
+    color: #ffffff;
+  }
+  .bloc_btn .btn_adhesion_on .picto {
+    background: url("../images/skin/chevron_blanc.png") no-repeat left 2px;
+    padding-left: 25px;
+  }
+  .bloc_btn .btn_adhesion_on .texte {
+    vertical-align: top;
+  }
+  .ctnBlocInfos {
+    margin: 10px;
+    width: 390px;
+  }
+  .ctnBlocInfos p {
+    font-family: 'BNPP Sans Bold';
+  }
+  h2 span.faqSante {
+    background-position: -2px 50%;
+    width: 84%;
+  }
+  h2 span.faqPret {
+    background-position: -2px 50%;
+    width: 60%;
+  }
+  h2 span.faqFamille {
+    background-position: -2px 50%;
+    width: 59%;
+  }
+  h2 span.faqEpargne {
+    background-position: -2px 50%;
+    width: 78%;
+  }
+  h2 span.faqRetraite {
+    background-position: -2px 50%;
+    width: 80%;
+  }
+}
+/********************************** Tablettes (portrait and lanscape) **********************************************/
+@media (min-width: 768px) and (max-width: 979px) {
+  #resolution:after {
+    content: '768 - 979';
+  }
+  .span12 {
+    max-width: 700px;
+  }
+  body {
+    background: url("../logos/medium_logo_bkg.png") repeat-x;
+  }
+  #header {
+    width: 100%;
+  }
+  #bandeau_logo {
+    height: 91px;
+    background: url("../logos/medium_logo_cardif.png") no-repeat;
+  }
+  #bandeau_logo a {
+    display: block;
+    height: 76px;
+    width: 200px;
+    cursor: pointer;
+  }
+  #aboveMenu {
+    margin: 15px 0 0;
+  }
+  #aboveMenu .picto_menu_client {
+    display: inline-block;
+    background: url("../images/skin/medium_picto_menu_client.png") no-repeat top left;
+    padding-left: 24px;
+    margin: 0 10px 0 0;
+  }
+  #aboveMenu .picto_menu_contact {
+    display: inline-block;
+    background: url("../images/skin/medium_picto_menu_contact.png") no-repeat top left;
+    padding-left: 24px;
+    margin: 0 5px 0 0;
+  }
+  #aboveMenu .picto_menu_courtier {
+    display: inline-block;
+    background: url("../images/skin/medium_picto_menu_courtier.png") no-repeat top left;
+    padding-left: 24px;
+  }
+  #bloc_gauche_home {
+    float: left;
+    width: 97.5%;
+  }
+  #bloc_principal_home {
+    background: url("../images/visuels/medium_visuel_home.png") left top no-repeat;
+    height: 270px;
+  }
+  .mea li {
+    display: inline;
+    float: left;
+    height: 199px;
+    text-align: center;
+    width: 140px;
+  }
+  #mea1 {
+    background: url("../images/skin/large_mea_sante_off.png") left top no-repeat;
+  }
+  #mea1 .mea_texte {
+    float: left;
+    margin: 15px 0 0;
+  }
+  #mea1 .mea_texte_int {
+    text-align: center;
+    padding: 0 12px;
+  }
+  #mea1 .mea_zoom {
+    color: #ba2070;
+  }
+  #mea2 {
+    background: url("../images/skin/large_mea_pret_off.png") left top no-repeat;
+  }
+  #mea2 .mea_texte {
+    float: left;
+    margin: 15px 0 0;
+  }
+  #mea2 .mea_texte_int {
+    text-align: center;
+    padding: 0 32px;
+  }
+  #mea2 .mea_zoom {
+    color: #ffa317;
+  }
+  #mea3 {
+    background: url("../images/skin/large_mea_famille_off.png") left top no-repeat;
+  }
+  #mea3 .mea_texte {
+    float: left;
+    margin: 15px 0 0;
+  }
+  #mea3 .mea_texte_int {
+    text-align: center;
+    padding: 0 32px;
+  }
+  #mea3 .mea_zoom {
+    color: #178bc1;
+  }
+  #mea4 {
+    background: url("../images/skin/large_mea_epargne_off.png") left top no-repeat;
+  }
+  #mea4 .mea_texte {
+    float: left;
+    margin: 15px 0 0;
+  }
+  #mea4 .mea_texte_int {
+    text-align: center;
+    padding: 0 22px;
+  }
+  #mea4 .mea_zoom {
+    color: #a8d64e;
+  }
+  #mea5 {
+    background: url("../images/skin/large_mea_retraite_off.png") left top no-repeat;
+  }
+  #mea5 .mea_texte {
+    float: left;
+    margin: 15px 0 0;
+  }
+  #mea5 .mea_texte_int {
+    text-align: center;
+    padding: 0 32px;
+  }
+  #mea5 .mea_zoom {
+    color: #e26969;
+  }
+  .btn_mea {
+    margin: 140px 10px 0;
+  }
+  .btn_mea span {
+    display: none;
+  }
+  .btn_mea2 {
+    margin: 166px 10px 0;
+  }
+  .btn_mea2 span {
+    display: none;
+  }
+  .mea_internet {
+    float: left;
+    width: 100%;
+    color: #ffffff;
+  }
+  .mea_internet li {
+    display: inline;
+    float: left;
+    font-family: 'BNPP Sans Bold';
+    font-size: 1.076923077em;
+    height: 21px;
+    padding-top: 3px;
+    text-align: center;
+    width: 279px;
+    border: 1px solid #008b6c;
+    background: #006851;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzNkYTg5MCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjI3JSIgc3RvcC1jb2xvcj0iIzFjYTc4OCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjgxJSIgc3RvcC1jb2xvcj0iIzAwN2I1ZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDY4NTEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top, #3da890 0%, #1ca788 25%, #007b5f 75%, #006851 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3da890), color-stop(25%, #1ca788), color-stop(75%, #007b5f), color-stop(100%, #006851));
+    background: -webkit-linear-gradient(top, #3da890 0%, #1ca788 25%, #007b5f 75%, #006851 100%);
+    background: -o-linear-gradient(top, #3da890 0%, #1ca788 25%, #007b5f 75%, #006851 100%);
+    background: -ms-linear-gradient(top, #3da890 0%, #1ca788 25%, #007b5f 75%, #006851 100%);
+    background: linear-gradient(top, #3da890 0%, #1ca788 25%, #007b5f 75%, #006851 100%);
+    filter: progid:dximagetransform.microsoft.gradient(startColorstr='#3da890', endColorstr='#006851', GradientType=0);
+  }
+  #bloc_droite_home {
+    float: left;
+    width: 97.5%;
+    margin: 10px 20px;
+    background-color: '../images/skin/medium_bkgDroite.png';
+  }
+  #bloc_droite_home li {
+    display: inline-block;
+    width: 44%;
+    vertical-align: top;
+    background: url("../images/skin/puce.png") no-repeat scroll 0 6px transparent;
+    line-height: 14px;
+    padding: 2px 10px;
+  }
+  #bloc_droite_home .mea_droite {
+    float: left;
+    margin: 0 0 20px;
+    background: #f6f6f6 url(../images/skin/medium_bkgDroite.png) bottom right no-repeat;
+  }
+  #bloc_droite_home .mea_droite_texte {
+    float: left;
+    margin: 15px 20px;
+  }
+  #bloc_droite_home .mea_droite_bloc1 {
+    float: left;
+    width: 30%;
+    margin-right: 35px;
+  }
+  #bloc_droite_home .mea_droite_bloc2 {
+    float: left;
+    width: 90%;
+  }
+  #bloc_droite_home .mea_droite_bloc3 {
+    float: left;
+    margin-top: 10px;
+  }
+  #bloc_droite_home .mea_droite_bloc3 p {
+    margin: 0;
+  }
+  #bloc_droite_produit {
+    float: left;
+    width: 97.5%;
+    margin: 20px;
+  }
+  #bloc_droite_produit h3 {
+    text-transform: uppercase;
+    font-size: 1.38461538461538em;
+    padding: 18px 0 0 0;
+    line-height: 20px;
+  }
+  #bloc_droite_produit .faq_droite {
+    float: left;
+    margin: 0 0 20px;
+    background: #f6f6f6 url("../images/skin/medium_bkgDroite2.png") top right no-repeat;
+  }
+  #bloc_droite_produit .faq_droite_logo {
+    background: url("../images/skin/medium_picto_faq.png") no-repeat top left;
+    height: 20px;
+    width: 37px;
+  }
+  #bloc_droite_produit .faq_droite_texte {
+    float: left;
+    margin: 10px;
+  }
+  #bloc_droite_produit a {
+    color: #008b6c;
+    font-weight: bold;
+    font-size: 0.846153846153846em;
+  }
+  #bloc_droite_produit .filet_question {
+    border-top: 1px solid #dcdcdc;
+  }
+  #bloc_droite_produit p {
+    padding: 0 0 18px 0;
+    margin: 0;
+  }
+  #produit_titre {
+    float: left;
+    width: 100%;
+    border-bottom: 1px solid #dcdcdc;
+    padding: 0 0 18px 0;
+  }
+  #produit_titre .picto_produit_famille {
+    float: left;
+    height: 50px;
+    width: 50px;
+    background: url("../images/skin/medium_picto_produit_famille.png") no-repeat;
+  }
+  #produit_titre .picto_produit_epargne {
+    float: left;
+    height: 50px;
+    width: 50px;
+    background: url("../images/skin/medium_picto_produit_epargne.png") no-repeat;
+  }
+  #produit_titre .picto_produit_retraite {
+    float: left;
+    height: 50px;
+    width: 50px;
+    background: url("../images/skin/medium_picto_produit_retraite.png") no-repeat;
+  }
+  #produit_titre .picto_produit_sante {
+    float: left;
+    height: 50px;
+    width: 50px;
+    background: url("../images/skin/medium_picto_produit_sante.png") no-repeat;
+  }
+  #produit_titre .picto_produit_pret {
+    float: left;
+    height: 50px;
+    width: 50px;
+    background: url("../images/skin/medium_picto_produit_pret.png") no-repeat;
+  }
+  #produit_titre h1 {
+    padding: 0px 0 20px 80px;
+    font-size: 1.84615385em;
+    line-height: 1.20833333333333em;
+  }
+  #produit_titre h1.famille {
+    color: #178bc1;
+  }
+  #produit_titre h1.epargne {
+    color: #a8d64e;
+  }
+  #produit_titre h1.retraite {
+    color: #e26969;
+  }
+  #produit_titre h1.pret {
+    color: #ffa317;
+  }
+  #produit_titre h1.sante {
+    color: #ba2070;
+  }
+  #produit_titre .sous_titre_produit {
+    color: #666666;
+    display: block;
+    font-size: 0.625em;
+    line-height: 20px;
+  }
+  #produit_titre_sommaire {
+    border-bottom: 1px solid #dcdcdc;
+    padding: 0 0 18px 0;
+  }
+  #produit_titre_sommaire .picto_produit_famille {
+    float: left;
+    height: 50px;
+    width: 50px;
+    background: url("../images/skin/small_picto_produit_famille.png") no-repeat;
+  }
+  #produit_titre_sommaire .picto_produit_epargne {
+    float: left;
+    height: 50px;
+    width: 50px;
+    background: url("../images/skin/small_picto_produit_epargne.png") no-repeat;
+  }
+  #produit_titre_sommaire .picto_produit_retraite {
+    float: left;
+    height: 50px;
+    width: 50px;
+    background: url("../images/skin/small_picto_produit_retraite.png") no-repeat;
+  }
+  #produit_titre_sommaire h1 {
+    padding: 0px 0 20px 80px;
+    font-size: 2.30769230769231em;
+  }
+  #produit_titre_sommaire h1.famille {
+    color: #178bc1;
+  }
+  #produit_titre_sommaire h1.epargne {
+    color: #a8d64e;
+  }
+  #produit_titre_sommaire h1.retraite {
+    color: #e26969;
+  }
+  #produit_titre_sommaire h1.pret {
+    color: #ffa317;
+  }
+  #produit_sommaire_intro p {
+    font-size: 1.07692307692308em;
+    color: #666666;
+    margin: 20px 0 7px 0;
+  }
+  #sommaire_produit_retraite {
+    float: left;
+    width: 100%;
+    font-family: 'BNPPSlabSerifRegular';
+    font-size: 1.84615384615385em;
+  }
+  #sommaire_produit_retraite .produit_1 {
+    float: left;
+    width: 26.2%;
+    margin: 10px 10px 0 0;
+    padding: 20px;
+    border: 1px solid #dcdcdc;
+    line-height: 1.20833333em;
+  }
+  #sommaire_produit_retraite .produit_2 {
+    float: left;
+    width: 26.2%;
+    margin: 10px 10px 0 0;
+    padding: 20px;
+    border: 1px solid #dcdcdc;
+    line-height: 1.20833333em;
+  }
+  #sommaire_produit_retraite .produit_3 {
+    float: left;
+    width: 26.2%;
+    margin: 10px 0 0 0;
+    padding: 20px;
+    border: 1px solid #dcdcdc;
+    line-height: 1.20833333em;
+  }
+  #sommaire_produit_retraite .nom_produit_retraite {
+    color: #e26969;
+    font-family: 'BNPP Sans Bold';
+  }
+  #sommaire_produit_retraite .decouvrir {
+    font-size: 0.5em;
+    font-family: 'BNPP Sans Bold';
+  }
+  #sommaire_produit_famille {
+    float: left;
+    width: 100%;
+    font-family: 'BNPPSlabSerifRegular';
+  }
+  #sommaire_produit_famille .produit_1 {
+    float: left;
+    width: 26.2%;
+    margin: 10px 10px 0 0;
+    padding: 20px;
+    border: 1px solid #dcdcdc;
+    font-size: 1.84615384615385em;
+    line-height: 1.20833333em;
+  }
+  #sommaire_produit_famille .produit_2 {
+    float: left;
+    width: 26.2%;
+    margin: 10px 10px 0 0;
+    padding: 20px;
+    border: 1px solid #dcdcdc;
+    font-size: 1.84615384615385em;
+    line-height: 1.20833333em;
+  }
+  #sommaire_produit_famille .produit_3 {
+    float: left;
+    width: 26.2%;
+    margin: 10px 0 0 0;
+    padding: 20px;
+    border: 1px solid #dcdcdc;
+    font-size: 1.84615384615385em;
+    line-height: 1.20833333em;
+  }
+  #sommaire_produit_famille .nom_produit_famille {
+    color: #178bc1;
+    font-family: 'BNPP Sans Bold';
+  }
+  #sommaire_produit_famille .nom_produit_epargne {
+    color: #178bc1;
+    font-family: 'BNPP Sans Bold';
+  }
+  #sommaire_produit_famille .decouvrir {
+    font-size: 0.5em;
+    font-family: 'BNPP Sans Bold';
+  }
+  .sommaire_produit_epargne {
+    float: left;
+    width: 100%;
+    font-family: 'BNPPSlabSerifRegular';
+    font-size: 1.84615384615385em;
+  }
+  .sommaire_produit_epargne .produit_1 {
+    float: left;
+    width: 26.2%;
+    margin: 10px 10px 0 0;
+    padding: 20px;
+    border: 1px solid #dcdcdc;
+    line-height: 1.20833333em;
+  }
+  .sommaire_produit_epargne .produit_2 {
+    float: left;
+    width: 26.2%;
+    margin: 10px 10px 0 0;
+    padding: 20px;
+    border: 1px solid #dcdcdc;
+    line-height: 1.20833333em;
+  }
+  .sommaire_produit_epargne .produit_3 {
+    float: left;
+    width: 26.2%;
+    margin: 10px 0 0 0;
+    padding: 20px;
+    border: 1px solid #dcdcdc;
+    line-height: 1.20833333em;
+  }
+  .sommaire_produit_epargne .nom_produit_epargne {
+    color: #a8d64e;
+    font-family: 'BNPP Sans Bold';
+  }
+  .sommaire_produit_epargne .decouvrir {
+    font-size: 0.5em;
+    font-family: 'BNPP Sans Bold';
+  }
+  .produit_sommaire_sous_partie {
+    float: left;
+    margin: 21px 0 0 0;
+  }
+  .produit_sommaire_sous_partie h3 {
+    color: #008b6c;
+    font-size: 1.07692307692308em;
+  }
+  .produit_sommaire_sous_partie h3 span.assurancevie {
+    background-position: -2px;
+    width: 84%;
+  }
+  .produit_sommaire_sous_partie h3 span.diversification {
+    background-position: -2px;
+    width: 83%;
+  }
+  #produit_mea {
+    float: left;
+    padding: 20px 0 0 0;
+  }
+  #produit_mea .visuel_sante {
+    float: left;
+    background: url("../images/visuels/Sante_Visuel.jpg") no-repeat;
+    height: 150px;
+    width: 220px;
+  }
+  #produit_mea .visuel_cge {
+    float: left;
+    background: url("../images/visuels/CGE_Visuel.jpg") no-repeat;
+    height: 150px;
+    width: 220px;
+  }
+  #produit_mea .visuel_entreprise {
+    float: left;
+    background: url("../images/visuels/CouvertureEntreprise_Visuel.jpg") no-repeat;
+    height: 150px;
+    width: 220px;
+  }
+  #produit_mea .visuel_personnelle {
+    float: left;
+    background: url("../images/visuels/CouverturePersonnelle_Visuel.jpg") no-repeat;
+    height: 150px;
+    width: 220px;
+  }
+  #produit_mea .visuel_professionnelle {
+    float: left;
+    background: url("../images/visuels/CouvetureProfessionnelle_Visuel.jpg") no-repeat;
+    height: 150px;
+    width: 220px;
+  }
+  #produit_mea .visuel_mp3i {
+    float: left;
+    background: url("../images/visuels/Multi-Plus-3I_Visuel.jpg") no-repeat;
+    height: 150px;
+    width: 220px;
+  }
+  #produit_mea .visuel_mp3capi {
+    float: left;
+    background: url("../images/visuels/Multi-Plus3Capitalisation_Visuel.jpg") no-repeat;
+    height: 150px;
+    width: 220px;
+  }
+  #produit_mea .visuel_perp {
+    float: left;
+    background: url("../images/visuels/MultiplusPERP_Visuel.jpg") no-repeat;
+    height: 150px;
+    width: 220px;
+  }
+  #produit_mea .visuel_agricole {
+    float: left;
+    background: url("../images/visuels/RetraiteProfessionnelleAgricole_Visuel.jpg") no-repeat;
+    height: 150px;
+    width: 220px;
+  }
+  #produit_mea .visuel_proplus {
+    float: left;
+    background: url("../images/visuels/RetraiteProfessionnelsPlus_Visuel.jpg") no-repeat;
+    height: 150px;
+    width: 220px;
+  }
+  #produit_mea .visuel_perspective {
+    float: left;
+    background: url("../images/visuels/MultiplusPerspective_Visuel.jpg") no-repeat;
+    height: 150px;
+    width: 220px;
+  }
+  #produit_mea .droite_produit_mea {
+    float: right;
+    padding: 0 0 0 20px;
+    width: 65%;
+  }
+  #produit_zoom {
+    float: left;
+    padding: 15px 10px;
+    margin: 20px 0 0 0;
+  }
+  #produit_zoom h2 {
+    font-size: 1.38461538461538em;
+    color: #008b6c;
+    line-height: 1.53846153846154em;
+    text-transform: uppercase;
+  }
+  #produit_zoom p {
+    margin: 5px 0;
+  }
+  #produit_zoom .puce {
+    list-style: none outside none;
+  }
+  #produit_zoom .puce li {
+    background: url("../images/skin/puce_chevron.png") no-repeat scroll 0 5px transparent;
+    padding-left: 10px;
+  }
+  .zoom_retraite {
+    border: 1px solid #e26969;
+  }
+  .zoom_epargne {
+    border: 1px solid #a8d64e;
+  }
+  .zoom_famille {
+    border: 1px solid #178bc1;
+  }
+  .zoom_pret {
+    border: 1px solid #ffa317;
+  }
+  .zoom_sante {
+    border: 1px solid #ba2070;
+  }
+  .disclaimer {
+    margin: 15px 0 0 0;
+    font-size: 0.846153846153846em;
+    width: 100%;
+  }
+  #produit_detail {
+    float: left;
+    margin: 20px 0 0 0;
+  }
+  #produit_detail h2 {
+    font-size: 0.92307692em;
+    text-transform: uppercase;
+    padding: 27px 0 0 35px;
+    color: #008b6c;
+    line-height: 1em;
+  }
+  #produit_detail h3 {
+    color: white;
+    line-height: 1.53846153846154em;
+    font-size: 1.07692307692308em;
+    padding: 5px 5px 0 5px;
+  }
+  #produit_detail h3.famille {
+    background-color: #178bc1;
+  }
+  #produit_detail h3.couv_perso {
+    /*width:48%; */
+    display: inline-block;
+  }
+  #produit_detail h3.couv_pro {
+    /*width:52%; */
+    display: inline-block;
+  }
+  #produit_detail h3.couv_entreprise {
+    /*width:47%; */
+    display: inline-block;
+  }
+  #produit_detail h3.epargne {
+    background-color: #a8d64e;
+  }
+  #produit_detail h3.cmp3i {
+    /*width:27%;*/
+    display: inline-block;
+  }
+  #produit_detail h3.cmp3_capi {
+    /*width:42%;*/
+    display: inline-block;
+  }
+  #produit_detail h3.perspective {
+    /*width:36%;*/
+    display: inline-block;
+  }
+  #produit_detail h3.retraite {
+    background-color: #e26969;
+  }
+  #produit_detail h3.crp_plus {
+    /*width:44%;*/
+    display: inline-block;
+  }
+  #produit_detail h3.cmp_perp {
+    /*width:30%;*/
+    display: inline-block;
+  }
+  #produit_detail h3.crp_agri {
+    /*width:49%; */
+    display: inline-block;
+  }
+  #produit_detail h3.pret {
+    background-color: #ffa317;
+    /*width:36%; */
+    display: inline-block;
+  }
+  #produit_detail h3.sante {
+    background-color: #ba2070;
+    /* width:20%; */
+    display: inline-block;
+  }
+  #produit_detail .produit_detail_1 {
+    float: left;
+    background: url("../images/skin/produit_detail_1.png") no-repeat;
+    width: 100%;
+  }
+  #produit_detail .produit_detail_2 {
+    float: left;
+    background: url("../images/skin/produit_detail_2.png") no-repeat;
+    width: 100%;
+  }
+  #produit_detail .produit_detail_3 {
+    float: left;
+    background: url("../images/skin/produit_detail_3.png") no-repeat;
+    width: 100%;
+  }
+  #produit_detail .produit_detail_4 {
+    float: left;
+    background: url("../images/skin/produit_detail_4.png") no-repeat;
+    width: 100%;
+  }
+  #produit_detail .produit_detail_5 {
+    float: left;
+    background: url("../images/skin/produit_detail_5.png") no-repeat;
+    width: 100%;
+  }
+  #produit_detail .produit_detail_6 {
+    float: left;
+    background: url("../images/skin/produit_detail_6.png") no-repeat;
+    width: 100%;
+  }
+  #produit_detail .produit_detail_7 {
+    float: left;
+    background: url("../images/skin/produit_detail_7.png") no-repeat;
+    width: 100%;
+  }
+  #produit_detail .trois_lignes {
+    height: 35px;
+    padding: 17px 0 0 35px;
+  }
+  #produit_detail .detail_supplement {
+    float: left;
+    width: 100%;
+    padding: 27px 0 0 0;
+  }
+  #produit_detail .detail_supplement h2 {
+    padding: 0;
+    float: left;
+  }
+  #produit_detail .txt_label {
+    float: left;
+    width: 90%;
+  }
+  #produit_detail ul {
+    display: block;
+    float: left;
+    font-size: 0.92307692em;
+    margin: 0 0 0 35px;
+  }
+  #produit_detail .puce {
+    list-style: none outside none;
+  }
+  #produit_detail .puce li {
+    background: url("../images/skin/puce.png") no-repeat scroll 0 8px transparent;
+    padding-left: 10px;
+  }
+  #produit_detail .souspuce {
+    list-style: disc outside none;
+  }
+  #produit_detail .souspuce li {
+    background: none;
+    padding-left: 0;
+  }
+  #produit_detail a {
+    color: #008b6c;
+    font-weight: bold;
+    font-style: italic;
+    padding-right: 5px;
+  }
+  #produit_detail .picto_pop_in {
+    display: inline-block;
+    background-image: url("../images/skin/picto_pop_in.png");
+    background-repeat: no-repeat;
+    width: 16px;
+  }
+  .blocInfos,
+  .blocInfosContent {
+    background: url("../images/skin/small_popup_bkg_V.png") repeat-y left top;
+  }
+  .blocInfos {
+    margin-top: 20px;
+  }
+  .blocInfos .roundTop {
+    padding-left: 10px;
+  }
+  .blocInfos .roundTop,
+  .blocInfos .roundTop b,
+  .blocInfos .roundBottom,
+  .blocInfos .roundBottom b {
+    background: url("../images/skin/small_popup_bkg_H.png") no-repeat left top;
+    display: block;
+    font-size: 1%;
+    height: 1px;
+  }
+  .blocInfos .roundTop b {
+    background-position: right top;
+  }
+  .blocInfos .blocInfosContent {
+    background-position: right top;
+    margin-left: 2px;
+    padding: 4px 14px 4px 2px;
+  }
+  .blocInfos .roundBottom {
+    background-position: left bottom;
+    padding-left: 10px;
+  }
+  .blocInfos .roundBottom b {
+    background-position: right bottom;
+  }
+  #background_testimoniaux {
+    float: left;
+    width: 100%;
+    background-color: #f6f6f6;
+  }
+  #produit_testimoniaux {
+    float: left;
+    width: 100%;
+    border-bottom: 1px solid #dcdcdc;
+    margin: 20px 0 0 0;
+    padding: 0 0 20px 0;
+  }
+  #produit_testimoniaux .visuel_testimoniaux_sante {
+    float: left;
+    background: url("../images/visuels/Sante_Temoignage.jpg") no-repeat;
+    height: 150px;
+    width: 220px;
+  }
+  #produit_testimoniaux .visuel_testimoniaux_cge {
+    float: left;
+    background: url("../images/visuels/CGE_Temoignage.jpg") no-repeat;
+    height: 150px;
+    width: 220px;
+  }
+  #produit_testimoniaux .visuel_testimoniaux_entreprise {
+    float: left;
+    background: url("../images/visuels/CouvertureEntreprise_Temoignage.jpg") no-repeat;
+    height: 150px;
+    width: 220px;
+  }
+  #produit_testimoniaux .visuel_testimoniaux_personnelle {
+    float: left;
+    background: url("../images/visuels/CouverturePersonnelle_Temoignage.jpg") no-repeat;
+    height: 150px;
+    width: 220px;
+  }
+  #produit_testimoniaux .visuel_testimoniaux_professionnelle {
+    float: left;
+    background: url("../images/visuels/CouvertureProfessionnelle_Temoignage.jpg") no-repeat bottom right;
+    height: 190px;
+    width: 220px;
+  }
+  #produit_testimoniaux .visuel_testimoniaux_mp3i {
+    float: left;
+    background: url("../images/visuels/Multiplus3I_temoignage.jpg") no-repeat;
+    height: 150px;
+    width: 220px;
+  }
+  #produit_testimoniaux .visuel_testimoniaux_mp3capi {
+    float: left;
+    background: url("../images/visuels/Multi-Plus3Capitalisation_Temoignage.jpg") no-repeat;
+    height: 150px;
+    width: 220px;
+  }
+  #produit_testimoniaux .visuel_testimoniaux_perp {
+    float: left;
+    background: url("../images/visuels/MultiplusPERP_Temoignage.jpg") no-repeat;
+    height: 150px;
+    width: 220px;
+  }
+  #produit_testimoniaux .visuel_testimoniaux_agricole {
+    float: left;
+    background: url("../images/visuels/RetraiteProfessionnelleAgricole_Temoignage.jpg") no-repeat bottom right;
+    height: 190px;
+    width: 220px;
+  }
+  #produit_testimoniaux .visuel_testimoniaux_proplus {
+    float: left;
+    background: url("../images/visuels/RetraiteProfessionnelsPlus_Temoignage.jpg") no-repeat;
+    height: 150px;
+    width: 220px;
+  }
+  #produit_testimoniaux .visuel_testimoniaux_perspective {
+    float: left;
+    background: url("../images/visuels/MultiplusPerspective_Temoignage.jpg") no-repeat;
+    height: 150px;
+    width: 220px;
+  }
+  #produit_testimoniaux .droite_testimoniaux {
+    float: right;
+    padding: 12px 20px 0 20px;
+    width: 62%;
+  }
+  #produit_testimoniaux .titre_testimoniaux {
+    color: #008b6c;
+    font-size: 1.23076923076923em;
+    font-family: 'BNPP Sans Bold';
+  }
+  #produit_testimoniaux p {
+    font-size: 0.923076923076923em;
+  }
+  #bloc_espace_client h1 {
+    color: #008b6c;
+    border-bottom: 1px solid #dcdcdc;
+    padding: 0 0 20px;
+    padding: 0 0 15px;
+    line-height: 24px;
+  }
+  #bloc_espace_client h2 {
+    color: #008b6c;
+    text-transform: uppercase;
+    font-size: 1.07692em;
+  }
+  #bloc_espace_client .puce {
+    list-style: none outside none;
+  }
+  #bloc_espace_client .puce li {
+    background: url("../images/skin/puce.png") no-repeat scroll 0 5px transparent;
+    padding-left: 10px;
+  }
+  #bloc_espace_client .client_sante {
+    margin: 20px 0 0 0;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid #dcdcdc;
+  }
+  #bloc_espace_client .client_cardif {
+    margin: 20px 0 0 0;
+  }
+  #bloc_espace_client a.btn_espace_client {
+    display: block;
+    width: 300px;
+    height: 27px;
+    margin: 18px 0 0;
+    padding: 10px 0 0 20px;
+    font-family: 'BNPP Sans Bold';
+    color: #ffffff;
+  }
+  #bloc_espace_client .picto {
+    float: left;
+    background: url("../images/skin/chevron_blanc.png") no-repeat;
+    width: 7px;
+    height: 11px;
+    margin: 2px 5px 0 0;
+  }
+  #bloc_espace_client .texte {
+    vertical-align: top;
+    text-transform: uppercase;
+  }
+  #bloc_plan h1 {
+    color: #008b6c;
+    border-bottom: 1px solid #dcdcdc;
+    padding: 0 0 20px;
+  }
+  #bloc_plan .plan {
+    margin: 20px 0 0 0;
+    padding: 0 0 20px 20px;
+    border-bottom: 1px solid #dcdcdc;
+  }
+  #bloc_plan .plan h2 a {
+    color: #008b6c;
+    text-transform: uppercase;
+    line-height: 20px;
+    font-size: 1em;
+  }
+  #bloc_plan .plan .puce {
+    list-style: none outside none;
+    margin: 0 0 10px 10px;
+  }
+  #bloc_plan .plan .puce strong {
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+  #bloc_plan .plan .puce strong a {
+    color: #008b6c;
+  }
+  #bloc_plan .plan .puce li {
+    margin-left: 10px;
+    background: url("../images/skin/puce.png") no-repeat scroll 0 7px transparent;
+    padding-left: 10px;
+  }
+  #bloc_plan .plan .puce li a:hover {
+    text-decoration: underline;
+  }
+  #bloc_nous_connaitre h1 {
+    color: #008b6c;
+    border-bottom: 1px solid #dcdcdc;
+    padding: 0 0 20px;
+  }
+  #bloc_nous_connaitre h2 {
+    color: #008b6c;
+    text-transform: uppercase;
+    font-size: 1.07692em;
+    padding: 20px 0 0;
+    line-height: 18px;
+  }
+  #bloc_nous_connaitre p {
+    margin: 0;
+    padding: 0;
+  }
+  #bloc_nous_connaitre a {
+    color: #008b6c;
+    font-family: 'BNPP Sans Bold';
+    font-size: 0.923076923076923em;
+  }
+  #bloc_nous_connaitre ul {
+    list-style: none;
+    margin: 10px 0 10px 10px;
+  }
+  #bloc_nous_connaitre ul li {
+    background: url("../images/skin/puce.png") no-repeat scroll 0 8px transparent;
+    padding-left: 10px;
+  }
+  #bloc_nous_connaitre em.disclaimer {
+    display: block;
+    margin-top: 5px;
+    line-height: 15px;
+  }
+  #footer {
+    font-family: 'BNPPSans';
+    margin: 15px 0 0;
+    padding-bottom: 25px;
+  }
+  #footer li {
+    float: left;
+  }
+  #footer a {
+    color: #000000;
+  }
+  #aboveFooter li {
+    display: block;
+    height: 42px;
+    width: 31.902%;
+    margin: 22px 0;
+    background: url("../images/skin/bkg_btn_neutre.png") repeat-x;
+  }
+  #aboveFooter .texte_footer {
+    float: left;
+    margin: 13px 0 0 5px;
+    font-weight: normal;
+  }
+  #aboveFooter .chevron {
+    float: right;
+    width: 12px;
+    background: url("../images/skin/medium_picto_chevron.png") no-repeat;
+    margin: 12px 10px 0 0;
+  }
+  #aboveFooter .footer_L1 {
+    margin-right: 2.15%;
+  }
+  #aboveFooter .footer_L1 .picto {
+    float: left;
+    height: 41px;
+    width: 42px;
+    background: url("../images/skin/medium_picto_info.png") no-repeat;
+  }
+  #aboveFooter .footer_L2 {
+    margin-right: 2.15%;
+  }
+  #aboveFooter .footer_L2 .picto {
+    float: left;
+    height: 41px;
+    width: 42px;
+    background: url("../images/skin/medium_picto_client.png") no-repeat;
+  }
+  #aboveFooter .footer_L3 .picto {
+    float: left;
+    height: 41px;
+    width: 42px;
+    background: url("../images/skin/medium_picto_courtier.png") no-repeat;
+  }
+  #footer_etendu {
+    clear: both;
+    color: #ffffff;
+  }
+  #footer_etendu a {
+    color: #ffffff;
+  }
+  #footer_etendu .titre {
+    font-family: 'BNPP Sans Bold';
+    display: block;
+  }
+  #footer_etendu1 {
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 1px solid #dcdcdc;
+    padding: 0 0 20px 0;
+    margin: 0px;
+  }
+  #footer_etendu1 .tiret:after {
+    content: "\00a0 \2013 \00a0";
+  }
+  #footer_etendu1 .fligne1 {
+    display: inline-block;
+  }
+  #footer_etendu1 .fligne1:after {
+    display: inline-block;
+    content: "\00a0 \2013 \00a0";
+  }
+  #footer_etendu1 .fligne2 {
+    display: inline-block;
+  }
+  #footer_etendu1 .fligne3 {
+    display: block;
+  }
+  #footer_etendu1 .fbloc {
+    display: inline-block;
+  }
+  #footer_etendu2 {
+    width: 100%;
+    margin: 20px 0 0;
+  }
+  #footer_etendu2 .niveau1 {
+    float: left;
+    width: 20%;
+  }
+  #footer_etendu2 .niveau1 ul {
+    margin-left: 15px;
+  }
+  #footer_etendu2 .niveau2 {
+    display: block;
+  }
+  #footer_etendu2 .niveau2 a {
+    font-family: 'BNPPSans';
+  }
+  #footer_etendu2 .fsante {
+    width: 10%;
+  }
+  #footer_etendu2 .fpret {
+    width: 17%;
+  }
+  #footer_etendu2 .ffamille {
+    width: 26%;
+  }
+  #footer_etendu2 .fepargne {
+    width: 27%;
+  }
+  #footer_etendu2 .fretraite {
+    width: 20%;
+  }
+}
+/********************************** Desktops and laptops **********************************************/
+@media only screen and (min-width: 980px) {
+  #resolution:after {
+    content: '> 980';
+  }
+  .container,
+  .navbar-fixed-top .container,
+  .navbar-fixed-bottom .container {
+    width: 940px;
+  }
+  .span12 {
+    max-width: 940px;
+  }
+  .span9 {
+    max-width: 700px;
+  }
+  .span3 {
+    max-width: 220px;
+  }
+  [class*="span"] {
+    float: left;
+    margin-left: 20px;
+  }
+  body {
+    background: url("../logos/large_logo_bkg.png") repeat-x;
+  }
+  #bandeau_logo {
+    height: 91px;
+    background: url("../logos/large_logo_cardif.png") no-repeat;
+  }
+  #bandeau_logo a {
+    display: block;
+    height: 76px;
+    width: 200px;
+    cursor: pointer;
+  }
+  #aboveMenu .picto_menu_client {
+    display: inline-block;
+    background: url("../images/skin/large_picto_menu_client.png") no-repeat top left;
+    padding-left: 24px;
+  }
+  #aboveMenu .picto_menu_contact {
+    display: inline-block;
+    background: url("../images/skin/large_picto_menu_contact.png") no-repeat top left;
+    padding-left: 24px;
+  }
+  #aboveMenu .picto_menu_courtier {
+    display: inline-block;
+    background: url("../images/skin/large_picto_menu_courtier.png") no-repeat top left;
+    padding-left: 24px;
+  }
+  #bloc_principal_home {
+    background: url("../images/visuels/large_visuel_home.png") left top no-repeat;
+    height: 270px;
+  }
+  .mea li {
+    display: inline;
+    float: left;
+    height: 199px;
+    text-align: center;
+    width: 140px;
+  }
+  #mea1 {
+    background: url("../images/skin/large_mea_sante_off.png") left top no-repeat;
+  }
+  #mea1 .mea_texte {
+    float: left;
+    margin: 15px 0 0;
+  }
+  #mea1 .mea_texte_int {
+    text-align: center;
+    padding: 0 12px;
+  }
+  #mea1 .mea_zoom {
+    color: #ba2070;
+    font-weight: bold;
+  }
+  #mea1.survol {
+    background: url("../images/skin/large_mea_sante_on.png") left top no-repeat;
+  }
+  #mea1.survol .mea_texte,
+  #mea1.survol .mea_zoom {
+    color: #ffffff;
+  }
+  #mea1.survol .btn_rappel {
+    background: url("../images/skin/large_btn_rappel_off.png") no-repeat;
+    height: 21px;
+  }
+  #mea1.survol .btn_rappel a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  #mea2 {
+    background: url("../images/skin/large_mea_pret_off.png") left top no-repeat;
+  }
+  #mea2 .mea_texte {
+    float: left;
+    margin: 15px 0 0;
+  }
+  #mea2 .mea_texte_int {
+    text-align: center;
+    padding: 0 32px;
+  }
+  #mea2 .mea_zoom {
+    color: #ffa317;
+    font-weight: bold;
+  }
+  #mea2.survol {
+    background: url("../images/skin/large_mea_pret_on.png") left top no-repeat;
+  }
+  #mea2.survol .mea_texte,
+  #mea2.survol .mea_zoom {
+    color: #ffffff;
+  }
+  #mea2.survol .btn_rappel2 {
+    background: url("../images/skin/large_btn_rappel_off.png") no-repeat;
+    height: 21px;
+  }
+  #mea2.survol .btn_rappel2 a {
+    display: block;
+    width: 119px;
+  }
+  #mea3 {
+    background: url("../images/skin/large_mea_famille_off.png") left top no-repeat;
+  }
+  #mea3 .mea_texte {
+    float: left;
+    margin: 15px 0 0;
+  }
+  #mea3 .mea_texte_int {
+    text-align: center;
+    padding: 0 25px;
+  }
+  #mea3 .mea_zoom {
+    color: #178bc1;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+  #mea3.survol {
+    background: url("../images/skin/large_mea_famille_on.png") left top no-repeat;
+  }
+  #mea3.survol .mea_texte,
+  #mea3.survol .mea_zoom {
+    color: #ffffff;
+  }
+  #mea4 {
+    background: url("../images/skin/large_mea_epargne_off.png") left top no-repeat;
+  }
+  #mea4 .mea_texte {
+    float: left;
+    margin: 15px 0 0;
+  }
+  #mea4 .mea_texte_int {
+    text-align: center;
+    padding: 0 22px;
+  }
+  #mea4 .mea_zoom {
+    color: #a8d64e;
+    font-weight: bold;
+  }
+  #mea4.survol {
+    background: url("../images/skin/large_mea_epargne_on.png") left top no-repeat;
+  }
+  #mea4.survol .mea_texte,
+  #mea4.survol .mea_zoom {
+    color: #ffffff;
+  }
+  #mea5 {
+    background: url("../images/skin/large_mea_retraite_off.png") left top no-repeat;
+  }
+  #mea5 .mea_texte {
+    float: left;
+    margin: 15px 0 0;
+  }
+  #mea5 .mea_texte_int {
+    text-align: center;
+    padding: 0 25px;
+  }
+  #mea5 .mea_zoom {
+    color: #e26969;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+  #mea5.survol {
+    background: url("../images/skin/large_mea_retraite_on.png") left top no-repeat;
+  }
+  #mea5.survol .mea_texte,
+  #mea5.survol .mea_zoom {
+    color: #ffffff;
+  }
+  .btn_mea {
+    margin: 140px 10px 0;
+  }
+  .btn_mea span {
+    display: none;
+  }
+  .btn_mea2 {
+    margin: 166px 10px 0;
+  }
+  .btn_mea2 span {
+    display: none;
+  }
+  .mea_internet {
+    float: left;
+    width: 100%;
+    color: #ffffff;
+  }
+  .mea_internet li {
+    display: inline;
+    float: left;
+    font-family: 'BNPP Sans Bold';
+    font-size: 1.076923077em;
+    height: 21px;
+    padding-top: 3px;
+    text-align: center;
+    width: 279px;
+    border: 1px solid #008b6c;
+    background: #006851;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzNkYTg5MCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjI3JSIgc3RvcC1jb2xvcj0iIzFjYTc4OCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjgxJSIgc3RvcC1jb2xvcj0iIzAwN2I1ZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDY4NTEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top, #3da890 0%, #1ca788 25%, #007b5f 75%, #006851 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3da890), color-stop(25%, #1ca788), color-stop(75%, #007b5f), color-stop(100%, #006851));
+    background: -webkit-linear-gradient(top, #3da890 0%, #1ca788 25%, #007b5f 75%, #006851 100%);
+    background: -o-linear-gradient(top, #3da890 0%, #1ca788 25%, #007b5f 75%, #006851 100%);
+    background: -ms-linear-gradient(top, #3da890 0%, #1ca788 25%, #007b5f 75%, #006851 100%);
+    background: linear-gradient(top, #3da890 0%, #1ca788 25%, #007b5f 75%, #006851 100%);
+    filter: progid:dximagetransform.microsoft.gradient(startColorstr='#3da890', endColorstr='#006851', GradientType=0);
+  }
+  #produit_titre {
+    float: left;
+    width: 100%;
+    border-bottom: 1px solid #dcdcdc;
+    padding: 0 0 18px 0;
+  }
+  #produit_titre .picto_produit_famille {
+    float: left;
+    height: 50px;
+    width: 50px;
+    background: url("../images/skin/medium_picto_produit_famille.png") no-repeat;
+  }
+  #produit_titre .picto_produit_epargne {
+    float: left;
+    height: 50px;
+    width: 50px;
+    background: url("../images/skin/medium_picto_produit_epargne.png") no-repeat;
+  }
+  #produit_titre .picto_produit_retraite {
+    float: left;
+    height: 50px;
+    width: 50px;
+    background: url("../images/skin/medium_picto_produit_retraite.png") no-repeat;
+  }
+  #produit_titre .picto_produit_sante {
+    float: left;
+    height: 50px;
+    width: 50px;
+    background: url("../images/skin/medium_picto_produit_sante.png") no-repeat;
+  }
+  #produit_titre .picto_produit_pret {
+    float: left;
+    height: 50px;
+    width: 50px;
+    background: url("../images/skin/medium_picto_produit_pret.png") no-repeat;
+  }
+  #produit_titre h1 {
+    padding: 0px 0 20px 80px;
+    font-size: 1.84615385em;
+    line-height: 1.20833333333333em;
+  }
+  #produit_titre h1.famille {
+    color: #178bc1;
+  }
+  #produit_titre h1.epargne {
+    color: #a8d64e;
+  }
+  #produit_titre h1.retraite {
+    color: #e26969;
+  }
+  #produit_titre h1.pret {
+    color: #ffa317;
+  }
+  #produit_titre h1.sante {
+    color: #ba2070;
+  }
+  #produit_titre .sous_titre_produit {
+    color: #666666;
+    display: block;
+    font-size: 0.625em;
+    line-height: 20px;
+  }
+  #produit_titre_sommaire {
+    border-bottom: 1px solid #dcdcdc;
+    padding: 0 0 18px 0;
+  }
+  #produit_titre_sommaire .picto_produit_famille {
+    float: left;
+    height: 50px;
+    width: 50px;
+    background: url("../images/skin/small_picto_produit_famille.png") no-repeat;
+  }
+  #produit_titre_sommaire .picto_produit_epargne {
+    float: left;
+    height: 50px;
+    width: 50px;
+    background: url("../images/skin/small_picto_produit_epargne.png") no-repeat;
+  }
+  #produit_titre_sommaire .picto_produit_retraite {
+    float: left;
+    height: 50px;
+    width: 50px;
+    background: url("../images/skin/small_picto_produit_retraite.png") no-repeat;
+  }
+  #produit_titre_sommaire h1 {
+    padding: 0px 0 20px 80px;
+    font-size: 2.30769231em;
+  }
+  #produit_titre_sommaire h1.famille {
+    color: #178bc1;
+  }
+  #produit_titre_sommaire h1.epargne {
+    color: #a8d64e;
+  }
+  #produit_titre_sommaire h1.retraite {
+    color: #e26969;
+  }
+  #produit_titre_sommaire h1.pret {
+    color: #ffa317;
+  }
+  #produit_sommaire_intro p {
+    font-size: 1.07692307692308em;
+    color: #666666;
+    margin: 20px 0 7px 0;
+  }
+  #sommaire_produit_retraite {
+    float: left;
+    width: 100%;
+    font-family: 'BNPPSlabSerifRegular';
+    font-size: 1.84615384615385em;
+  }
+  #sommaire_produit_retraite .produit_1 {
+    float: left;
+    width: 26.2%;
+    margin: 10px 10px 0 0;
+    padding: 20px;
+    border: 1px solid #dcdcdc;
+    background: url("../images/skin/large_sommaire_off.png") repeat-x bottom left;
+    line-height: 1.20833333em;
+  }
+  #sommaire_produit_retraite .produit_2 {
+    float: left;
+    width: 26.2%;
+    margin: 10px 10px 0 0;
+    padding: 20px;
+    border: 1px solid #dcdcdc;
+    background: url("../images/skin/large_sommaire_off.png") repeat-x bottom left;
+    line-height: 1.20833333em;
+  }
+  #sommaire_produit_retraite .produit_3 {
+    float: left;
+    width: 26.2%;
+    margin: 10px 0 0 0;
+    padding: 20px;
+    border: 1px solid #dcdcdc;
+    background: url("../images/skin/large_sommaire_off.png") repeat-x bottom left;
+    line-height: 1.20833333em;
+  }
+  #sommaire_produit_retraite .survol {
+    background: url("../images/skin/large_sommaire_retraite_on.png") repeat bottom left;
+    color: #ffffff;
+  }
+  #sommaire_produit_retraite .survol span {
+    color: #ffffff;
+  }
+  #sommaire_produit_retraite .nom_produit_retraite {
+    color: #e26969;
+    font-family: 'BNPP Sans Bold';
+  }
+  #sommaire_produit_retraite .decouvrir {
+    font-size: 0.5em;
+    font-family: 'BNPP Sans Bold';
+  }
+  #sommaire_produit_famille {
+    float: left;
+    width: 100%;
+    font-family: 'BNPPSlabSerifRegular';
+    font-size: 1.84615384615385em;
+  }
+  #sommaire_produit_famille .survol span {
+    color: #ffffff;
+  }
+  #sommaire_produit_famille .survol li {
+    background: url("../images/skin/large_sommaire_famille_on.png");
+  }
+  #sommaire_produit_famille .nom_produit_famille {
+    color: #178bc1;
+    font-family: 'BNPP Sans Bold';
+  }
+  #sommaire_produit_famille .decouvrir {
+    font-size: 0.5em;
+    font-family: 'BNPP Sans Bold';
+  }
+  #produit1 {
+    float: left;
+    width: 26.2%;
+    margin: 10px 10px 0 0;
+    padding: 20px;
+    border: 1px solid #dcdcdc;
+    background: url("../images/skin/large_sommaire_off.png") repeat-x bottom left;
+    line-height: 1.20833333em;
+  }
+  #produit2 {
+    float: left;
+    width: 26.2%;
+    margin: 10px 10px 0 0;
+    padding: 20px;
+    border: 1px solid #dcdcdc;
+    background: url("../images/skin/large_sommaire_off.png") repeat-x bottom left;
+    line-height: 1.20833333em;
+  }
+  #produit3 {
+    float: left;
+    width: 26.2%;
+    margin: 10px 0 0 0;
+    padding: 20px;
+    border: 1px solid #dcdcdc;
+    background: url("../images/skin/large_sommaire_off.png") repeat-x bottom left;
+    line-height: 1.20833333em;
+  }
+  #produit1.survol,
+  #produit2.survol,
+  #produit3.survol {
+    background: url("../images/skin/large_sommaire_famille_on.png") repeat bottom left;
+    color: #ffffff;
+  }
+  .sommaire_produit_epargne {
+    float: left;
+    width: 100%;
+    font-family: 'BNPPSlabSerifRegular';
+    font-size: 1.84615384615385em;
+  }
+  .sommaire_produit_epargne .produit_1 {
+    float: left;
+    width: 26.2%;
+    margin: 10px 10px 0 0;
+    padding: 20px;
+    border: 1px solid #dcdcdc;
+    background: url("../images/skin/large_sommaire_off.png") repeat-x bottom left;
+    line-height: 1.20833333em;
+  }
+  .sommaire_produit_epargne .produit_2 {
+    float: left;
+    width: 26.2%;
+    margin: 10px 10px 0 0;
+    padding: 20px;
+    border: 1px solid #dcdcdc;
+    background: url("../images/skin/large_sommaire_off.png") repeat-x bottom left;
+    line-height: 1.20833333em;
+  }
+  .sommaire_produit_epargne .produit_3 {
+    float: left;
+    width: 26.2%;
+    margin: 10px 0 0 0;
+    padding: 20px;
+    border: 1px solid #dcdcdc;
+    background: url("../images/skin/large_sommaire_off.png") repeat-x bottom left;
+    line-height: 1.20833333em;
+  }
+  .sommaire_produit_epargne .survol {
+    background: url("../images/skin/large_sommaire_epargne_on.png") repeat bottom left;
+    color: #ffffff;
+  }
+  .sommaire_produit_epargne .survol span {
+    color: #ffffff;
+  }
+  .sommaire_produit_epargne .nom_produit_epargne {
+    color: #a8d64e;
+    font-family: 'BNPP Sans Bold';
+  }
+  .sommaire_produit_epargne .decouvrir {
+    font-size: 0.5em;
+    font-family: 'BNPP Sans Bold';
+  }
+  .sommaire_produit_epargne .survol {
+    z-index: 1000;
+  }
+  .produit_sommaire_sous_partie {
+    float: left;
+    margin: 21px 0 0 0;
+  }
+  .produit_sommaire_sous_partie h3 {
+    color: #008b6c;
+    font-size: 1.07692307692308em;
+  }
+  .produit_sommaire_sous_partie h3 span.assurancevie {
+    background-position: -2px;
+    width: 84%;
+  }
+  .produit_sommaire_sous_partie h3 span.diversification {
+    background-position: -2px;
+    width: 83%;
+  }
+  #produit_mea {
+    float: left;
+    padding: 20px 0 0 0;
+  }
+  #produit_mea .visuel_sante {
+    float: left;
+    background: url("../images/visuels/Sante_Visuel.jpg") no-repeat;
+    height: 150px;
+    width: 220px;
+  }
+  #produit_mea .visuel_cge {
+    float: left;
+    background: url("../images/visuels/CGE_Visuel.jpg") no-repeat;
+    height: 150px;
+    width: 220px;
+  }
+  #produit_mea .visuel_entreprise {
+    float: left;
+    background: url("../images/visuels/CouvertureEntreprise_Visuel.jpg") no-repeat;
+    height: 150px;
+    width: 220px;
+  }
+  #produit_mea .visuel_personnelle {
+    float: left;
+    background: url("../images/visuels/CouverturePersonnelle_Visuel.jpg") no-repeat;
+    height: 150px;
+    width: 220px;
+  }
+  #produit_mea .visuel_professionnelle {
+    float: left;
+    background: url("../images/visuels/CouvetureProfessionnelle_Visuel.jpg") no-repeat;
+    height: 150px;
+    width: 220px;
+  }
+  #produit_mea .visuel_mp3i {
+    float: left;
+    background: url("../images/visuels/Multi-Plus-3I_Visuel.jpg") no-repeat;
+    height: 150px;
+    width: 220px;
+  }
+  #produit_mea .visuel_mp3capi {
+    float: left;
+    background: url("../images/visuels/Multi-Plus3Capitalisation_Visuel.jpg") no-repeat;
+    height: 150px;
+    width: 220px;
+  }
+  #produit_mea .visuel_perp {
+    float: left;
+    background: url("../images/visuels/MultiplusPERP_Visuel.jpg") no-repeat;
+    height: 150px;
+    width: 220px;
+  }
+  #produit_mea .visuel_agricole {
+    float: left;
+    background: url("../images/visuels/RetraiteProfessionnelleAgricole_Visuel.jpg") no-repeat;
+    height: 150px;
+    width: 220px;
+  }
+  #produit_mea .visuel_proplus {
+    float: left;
+    background: url("../images/visuels/RetraiteProfessionnelsPlus_Visuel.jpg") no-repeat;
+    height: 150px;
+    width: 220px;
+  }
+  #produit_mea .visuel_perspective {
+    float: left;
+    background: url("../images/visuels/MultiplusPerspective_Visuel.jpg") no-repeat;
+    height: 150px;
+    width: 220px;
+  }
+  #produit_mea .droite_produit_mea {
+    float: right;
+    padding: 0 0 0 20px;
+    width: 65%;
+  }
+  #produit_mea .produit_zoom_epargne {
+    float: left;
+    border: 1px solid #a8d64e;
+    padding: 15px 10px;
+  }
+  #produit_mea .produit_zoom_epargne h2 {
+    font-size: 1.38461538461538em;
+    color: #008b6c;
+    line-height: 1.53846153846154em;
+    text-transform: uppercase;
+  }
+  #produit_mea .puce {
+    list-style: none outside none;
+  }
+  #produit_mea .puce li {
+    background: url("../images/skin/puce_chevron.png") no-repeat scroll 0 5px transparent;
+    padding-left: 10px;
+  }
+  #produit_zoom {
+    float: left;
+    padding: 15px 10px;
+    margin: 20px 0 0 0;
+  }
+  #produit_zoom h2 {
+    font-size: 1.38461538461538em;
+    color: #008b6c;
+    line-height: 1.53846153846154em;
+    text-transform: uppercase;
+  }
+  #produit_zoom p {
+    margin: 5px 0;
+  }
+  #produit_zoom .puce {
+    list-style: none outside none;
+  }
+  #produit_zoom .puce li {
+    background: url("../images/skin/puce_chevron.png") no-repeat scroll 0 5px transparent;
+    padding-left: 10px;
+  }
+  .zoom_retraite {
+    border: 1px solid #e26969;
+  }
+  .zoom_epargne {
+    border: 1px solid #a8d64e;
+  }
+  .zoom_famille {
+    border: 1px solid #178bc1;
+  }
+  .zoom_pret {
+    border: 1px solid #ffa317;
+  }
+  .zoom_sante {
+    border: 1px solid #ba2070;
+  }
+  .disclaimer {
+    margin: 15px 0 0 0;
+    font-size: 0.846153846153846em;
+    width: 100%;
+  }
+  #produit_detail {
+    float: left;
+    margin: 20px 0 0 0;
+  }
+  #produit_detail h2 {
+    font-size: 0.92307692em;
+    text-transform: uppercase;
+    padding: 27px 0 0 35px;
+    color: #008b6c;
+    line-height: 1em;
+  }
+  #produit_detail h3 {
+    color: white;
+    line-height: 1.53846153846154em;
+    font-size: 1.07692307692308em;
+    padding: 5px 5px 0 5px;
+  }
+  #produit_detail h3.famille {
+    background-color: #178bc1;
+  }
+  #produit_detail h3.couv_perso {
+    /*width:48%; */
+    display: inline-block;
+  }
+  #produit_detail h3.couv_pro {
+    /*width:52%; */
+    display: inline-block;
+  }
+  #produit_detail h3.couv_entreprise {
+    /*width:47%; */
+    display: inline-block;
+  }
+  #produit_detail h3.epargne {
+    background-color: #a8d64e;
+  }
+  #produit_detail h3.cmp3i {
+    /*width:27%;*/
+    display: inline-block;
+  }
+  #produit_detail h3.cmp3_capi {
+    /*width:42%;*/
+    display: inline-block;
+  }
+  #produit_detail h3.perspective {
+    /*width:36%;*/
+    display: inline-block;
+  }
+  #produit_detail h3.retraite {
+    background-color: #e26969;
+  }
+  #produit_detail h3.crp_plus {
+    /*width:44%;*/
+    display: inline-block;
+  }
+  #produit_detail h3.cmp_perp {
+    /*width:30%;*/
+    display: inline-block;
+  }
+  #produit_detail h3.crp_agri {
+    /*width:49%; */
+    display: inline-block;
+  }
+  #produit_detail h3.pret {
+    background-color: #ffa317;
+    /*width:36%; */
+    display: inline-block;
+  }
+  #produit_detail h3.sante {
+    background-color: #ba2070;
+    /* width:20%; */
+    display: inline-block;
+  }
+  #produit_detail .produit_detail_1 {
+    float: left;
+    background: url("../images/skin/produit_detail_1.png") no-repeat;
+    width: 100%;
+  }
+  #produit_detail .produit_detail_2 {
+    float: left;
+    background: url("../images/skin/produit_detail_2.png") no-repeat;
+    width: 100%;
+  }
+  #produit_detail .produit_detail_3 {
+    float: left;
+    background: url("../images/skin/produit_detail_3.png") no-repeat;
+    width: 100%;
+  }
+  #produit_detail .produit_detail_4 {
+    float: left;
+    background: url("../images/skin/produit_detail_4.png") no-repeat;
+    width: 100%;
+  }
+  #produit_detail .produit_detail_5 {
+    float: left;
+    background: url("../images/skin/produit_detail_5.png") no-repeat;
+    width: 100%;
+  }
+  #produit_detail .produit_detail_6 {
+    float: left;
+    background: url("../images/skin/produit_detail_6.png") no-repeat;
+    width: 100%;
+  }
+  #produit_detail .produit_detail_7 {
+    float: left;
+    background: url("../images/skin/produit_detail_7.png") no-repeat;
+    width: 100%;
+  }
+  #produit_detail .trois_lignes {
+    height: 35px;
+    padding: 17px 0 0 35px;
+  }
+  #produit_detail .detail_supplement {
+    float: left;
+    width: 100%;
+    padding: 27px 0 0 0;
+  }
+  #produit_detail .detail_supplement h2 {
+    padding: 0;
+    float: left;
+  }
+  #produit_detail .txt_label {
+    float: left;
+    width: 90%;
+  }
+  #produit_detail ul {
+    display: block;
+    float: left;
+    font-size: 0.92307692em;
+    margin: 0 0 0 35px;
+    width: 95% !important;
+  }
+  #produit_detail .puce {
+    list-style: none outside none;
+  }
+  #produit_detail .puce li {
+    background: url("../images/skin/puce.png") no-repeat scroll 0 8px transparent;
+    padding-left: 10px;
+  }
+  #produit_detail .souspuce {
+    list-style: disc outside none;
+    font-size: 1em;
+  }
+  #produit_detail .souspuce li {
+    background: none;
+    padding-left: 0;
+  }
+  #produit_detail a {
+    color: #008b6c;
+    font-weight: bold;
+    font-style: italic;
+    padding-right: 5px;
+  }
+  #produit_detail .picto_pop_in {
+    display: inline-block;
+    background-image: url("../images/skin/picto_pop_in.png");
+    background-repeat: no-repeat;
+    width: 16px;
+  }
+  #background_testimoniaux {
+    float: left;
+    width: 100%;
+    background-color: #f6f6f6;
+  }
+  #produit_testimoniaux {
+    float: left;
+    width: 100%;
+    border-bottom: 1px solid #dcdcdc;
+    margin: 20px 0 0 0;
+    padding: 0 0 20px 0;
+  }
+  #produit_testimoniaux .visuel_testimoniaux_sante {
+    float: left;
+    background: url("../images/visuels/Sante_Temoignage.jpg") no-repeat;
+    height: 150px;
+    width: 220px;
+  }
+  #produit_testimoniaux .visuel_testimoniaux_cge {
+    float: left;
+    background: url("../images/visuels/CGE_Temoignage.jpg") no-repeat;
+    height: 150px;
+    width: 220px;
+  }
+  #produit_testimoniaux .visuel_testimoniaux_entreprise {
+    float: left;
+    background: url("../images/visuels/CouvertureEntreprise_Temoignage.jpg") no-repeat;
+    height: 150px;
+    width: 220px;
+  }
+  #produit_testimoniaux .visuel_testimoniaux_personnelle {
+    float: left;
+    background: url("../images/visuels/CouverturePersonnelle_Temoignage.jpg") no-repeat;
+    height: 150px;
+    width: 220px;
+  }
+  #produit_testimoniaux .visuel_testimoniaux_professionnelle {
+    float: left;
+    display: block;
+    background: url("../images/visuels/CouvertureProfessionnelle_Temoignage.jpg") no-repeat bottom right;
+    height: 190px;
+    width: 220px;
+  }
+  #produit_testimoniaux .visuel_testimoniaux_mp3i {
+    float: left;
+    background: url("../images/visuels/Multiplus3I_temoignage.jpg") no-repeat;
+    height: 150px;
+    width: 220px;
+  }
+  #produit_testimoniaux .visuel_testimoniaux_mp3capi {
+    float: left;
+    background: url("../images/visuels/Multi-Plus3Capitalisation_Temoignage.jpg") no-repeat;
+    height: 150px;
+    width: 220px;
+  }
+  #produit_testimoniaux .visuel_testimoniaux_perp {
+    float: left;
+    background: url("../images/visuels/MultiplusPERP_Temoignage.jpg") no-repeat;
+    height: 150px;
+    width: 220px;
+  }
+  #produit_testimoniaux .visuel_testimoniaux_agricole {
+    float: left;
+    display: block;
+    background: url("../images/visuels/RetraiteProfessionnelleAgricole_Temoignage.jpg") no-repeat bottom right;
+    height: 190px;
+    width: 220px;
+  }
+  #produit_testimoniaux .visuel_testimoniaux_proplus {
+    float: left;
+    background: url("../images/visuels/RetraiteProfessionnelsPlus_Temoignage.jpg") no-repeat;
+    height: 150px;
+    width: 220px;
+  }
+  #produit_testimoniaux .visuel_testimoniaux_perspective {
+    float: left;
+    background: url("../images/visuels/MultiplusPerspective_Temoignage.jpg") no-repeat;
+    height: 150px;
+    width: 220px;
+  }
+  #produit_testimoniaux .droite_testimoniaux {
+    float: right;
+    padding: 12px 20px 0 20px;
+    width: 62%;
+  }
+  #produit_testimoniaux .titre_testimoniaux {
+    color: #008b6c;
+    font-size: 1.23076923076923em;
+    font-family: 'BNPP Sans Bold';
+  }
+  #produit_testimoniaux p {
+    font-size: 0.923076923076923em;
+  }
+  #bloc_droite_home {
+    float: left;
+    width: 100%;
+  }
+  #bloc_droite_home .bloc_droite-space {
+    display: block;
+    height: 112px;
+  }
+  #bloc_droite_home li {
+    display: block;
+    float: left;
+    width: 100%;
+    background: url("../images/skin/puce.png") no-repeat scroll 0 6px transparent;
+    padding-left: 10px;
+  }
+  #bloc_droite_home .mea_droite {
+    float: left;
+    margin: 0 0 20px;
+    background: #f6f6f6 url("../images/skin/large_bkgDroite.png") top right no-repeat;
+  }
+  #bloc_droite_home .mea_droite_texte {
+    float: left;
+    margin: 15px 20px;
+  }
+  #bloc_droite_home .mea_droite_bloc1 {
+    float: left;
+  }
+  #bloc_droite_home .mea_droite_bloc2 {
+    float: left;
+  }
+  #bloc_droite_home .mea_droite_bloc3 {
+    float: left;
+    margin-top: 10px;
+  }
+  #bloc_droite_home .mea_droite_bloc3 p {
+    margin: 0;
+  }
+  #bloc_droite_home .push {
+    float: left;
+  }
+  #bloc_droite_home .push span {
+    display: block;
+    background: url("../images/pub/push.png") no-repeat;
+    height: 182px;
+    width: 220px;
+  }
+  #bloc_droite_produit {
+    float: left;
+    width: 100%;
+  }
+  #bloc_droite_produit .bloc_droite-space {
+    display: block;
+    height: 125px;
+  }
+  #bloc_droite_produit h3 {
+    text-transform: uppercase;
+    font-size: 1.38461538461538em;
+    padding: 18px 0 0 0;
+    line-height: 20px;
+  }
+  #bloc_droite_produit .faq_droite {
+    float: left;
+    margin: 0 0 20px;
+    background: #f6f6f6 url("../images/skin/large_bkgDroite2.png") top right no-repeat;
+  }
+  #bloc_droite_produit .faq_droite_logo {
+    background: url("../images/skin/large_picto_faq.png") no-repeat top left;
+    height: 20px;
+    width: 37px;
+  }
+  #bloc_droite_produit .faq_droite_texte {
+    float: left;
+    margin: 10px;
+  }
+  #bloc_droite_produit a {
+    color: #008b6c;
+    font-weight: bold;
+    font-size: 0.846153846153846em;
+  }
+  #bloc_droite_produit .filet_question {
+    border-top: 1px solid #dcdcdc;
+  }
+  #bloc_droite_produit p {
+    padding: 0 0 18px 0;
+    margin: 0;
+  }
+  #bloc_droite_produit ul {
+    padding: 0 0 18px 0;
+  }
+  #bloc_espace_client h1 {
+    color: #008b6c;
+    border-bottom: 1px solid #dcdcdc;
+    padding: 0 0 15px;
+    line-height: 24px;
+  }
+  #bloc_espace_client h2 {
+    color: #008b6c;
+    text-transform: uppercase;
+    font-size: 1.07692em;
+  }
+  #bloc_espace_client .puce {
+    list-style: none outside none;
+  }
+  #bloc_espace_client .puce li {
+    background: url("../images/skin/puce.png") no-repeat scroll 0 5px transparent;
+    padding-left: 10px;
+  }
+  #bloc_espace_client .client_sante {
+    margin: 20px 0 0 0;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid #dcdcdc;
+  }
+  #bloc_espace_client .client_cardif {
+    margin: 20px 0 0 0;
+  }
+  #bloc_espace_client a.btn_espace_client {
+    display: block;
+    width: 300px;
+    height: 27px;
+    margin: 18px 0 0;
+    padding: 10px 0 0 20px;
+    font-family: 'BNPP Sans Bold';
+    color: #ffffff;
+  }
+  #bloc_espace_client .picto {
+    float: left;
+    background: url("../images/skin/chevron_blanc.png") no-repeat;
+    width: 7px;
+    height: 11px;
+    margin: 2px 5px 0 0;
+  }
+  #bloc_espace_client .texte {
+    vertical-align: top;
+    text-transform: uppercase;
+  }
+  #bloc_plan h1 {
+    color: #008b6c;
+    border-bottom: 1px solid #dcdcdc;
+    padding: 0 0 20px;
+  }
+  #bloc_plan .plan {
+    margin: 20px 0 0 0;
+    padding: 0 0 20px 20px;
+    border-bottom: 1px solid #dcdcdc;
+  }
+  #bloc_plan .plan h2 a {
+    color: #008b6c;
+    text-transform: uppercase;
+    line-height: 20px;
+    font-size: 1em;
+  }
+  #bloc_plan .plan .puce {
+    list-style: none outside none;
+    margin: 0 0 10px 10px;
+  }
+  #bloc_plan .plan .puce strong {
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+  #bloc_plan .plan .puce strong a {
+    color: #008b6c;
+  }
+  #bloc_plan .plan .puce li {
+    margin-left: 10px;
+    background: url("../images/skin/puce.png") no-repeat scroll 0 7px transparent;
+    padding-left: 10px;
+  }
+  #bloc_plan .plan .puce li a:hover {
+    text-decoration: underline;
+  }
+  #bloc_nous_connaitre h1 {
+    color: #008b6c;
+    border-bottom: 1px solid #dcdcdc;
+    padding: 0 0 20px;
+  }
+  #bloc_nous_connaitre h2 {
+    color: #008b6c;
+    text-transform: uppercase;
+    font-size: 1.07692em;
+    padding: 20px 0 0;
+    line-height: 18px;
+  }
+  #bloc_nous_connaitre p {
+    margin: 0;
+    padding: 0;
+  }
+  #bloc_nous_connaitre a {
+    color: #008b6c;
+    font-family: 'BNPP Sans Bold';
+    font-size: 0.923076923076923em;
+  }
+  #bloc_nous_connaitre ul {
+    list-style: none;
+    margin: 10px 0 10px 10px;
+  }
+  #bloc_nous_connaitre ul li {
+    background: url("../images/skin/puce.png") no-repeat scroll 0 8px transparent;
+    padding-left: 10px;
+  }
+  #bloc_nous_connaitre em.disclaimer {
+    display: block;
+    margin-top: 5px;
+    line-height: 15px;
+  }
+  #footer {
+    font-family: 'BNPPSans';
+    margin: 40px 0 0;
+    padding-bottom: 25px;
+  }
+  #footer li {
+    float: left;
+  }
+  #footer a {
+    color: #ffffff;
+  }
+  #aboveFooter {
+    float: left;
+    width: 100%;
+    border-bottom: 1px solid #5cbda8;
+  }
+  #aboveFooter a {
+    color: #000000;
+    text-decoration: none;
+  }
+  #aboveFooter .texte_footer {
+    float: left;
+    margin: 13px 0 0 5px;
+    font-weight: normal;
+  }
+  #aboveFooter li {
+    display: block;
+    height: 42px;
+    width: 31.902%;
+    margin: 22px 0;
+    background: url("../images/skin/bkg_btn_neutre.png") repeat-x;
+  }
+  #aboveFooter .chevron {
+    float: right;
+    width: 12px;
+    background: url("../images/skin/large_picto_chevron.png") no-repeat;
+    margin: 12px 10px 0 0;
+  }
+  #aboveFooter .footer_L1 {
+    margin-right: 2.15%;
+  }
+  #aboveFooter .footer_L1 .picto {
+    float: left;
+    height: 41px;
+    width: 42px;
+    background: url("../images/skin/large_picto_info.png") no-repeat;
+  }
+  #aboveFooter .footer_L2 {
+    margin-right: 2.15%;
+  }
+  #aboveFooter .footer_L2 .picto {
+    float: left;
+    height: 41px;
+    width: 42px;
+    background: url("../images/skin/large_picto_client.png") no-repeat;
+  }
+  #aboveFooter .footer_L3 .picto {
+    float: left;
+    height: 41px;
+    width: 42px;
+    background: url("../images/skin/large_picto_courtier.png") no-repeat;
+  }
+  #footer_etendu {
+    width: 100%;
+    margin-top: 22px;
+  }
+  #footer_etendu span {
+    color: #ffffff;
+  }
+  #footer_etendu .titre {
+    font-family: 'BNPP Sans Bold';
+    display: block;
+  }
+  #footer_etendu1 {
+    float: right;
+    width: 15%;
+    text-transform: uppercase;
+    font-family: 'BNPP Sans Bold';
+  }
+  #footer_etendu1 li {
+    float: left;
+    width: 100%;
+  }
+  #footer_etendu2 {
+    width: 80%;
+  }
+  #footer_etendu2 .niveau1 {
+    float: left;
+  }
+  #footer_etendu2 .niveau1 ul {
+    margin-left: 15px;
+  }
+  #footer_etendu2 .niveau2 {
+    display: block;
+  }
+  #footer_etendu2 .niveau2 a {
+    font-family: 'BNPPSans';
+  }
+  #footer_etendu2 .fsante {
+    width: 13%;
+  }
+  #footer_etendu2 .fpret {
+    width: 16%;
+  }
+  #footer_etendu2 .ffamille {
+    width: 24%;
+  }
+  #footer_etendu2 .fepargne {
+    width: 27%;
+  }
+  #footer_etendu2 .fretraite {
+    width: 20%;
+  }
+}

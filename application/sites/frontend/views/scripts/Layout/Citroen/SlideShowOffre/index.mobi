@@ -1,0 +1,48 @@
+{if $aData.ZONE_MOBILE ==1}
+<div class="sliceNew sliceSlideShowOfferMobile">
+	<section id="slideshow-offre_1972" class=" no-title afterIntro">
+		<div class="slider offre evf set" data-gtm-js="{literal}{&quot;type&quot;:&quot;slider&quot;,&quot;0&quot;:&quot;eventGTM|SlideshowOffer|click|||&quot;}{/literal}">
+
+{*  Compte le nombre d'items du slideshow pour le mobile *}
+
+			{assign var="MobileViewCount" value=0}
+			{foreach from=$aMulti item=Multi}
+				{assign var="Media" value=$Multi.MEDIA_ID2}
+				{if $Media}
+					{$MobileViewCount = $MobileViewCount + 1}
+				{/if}
+			{/foreach}
+
+			<div class="row of2">
+				{foreach from=$aMulti item=Multi name=foo}
+					{if $Multi.PAGE_ZONE_MULTI_ATTRIBUT == 1}
+						{assign var="target" value="_self"}
+					{elseif $Multi.PAGE_ZONE_MULTI_ATTRIBUT == 2}
+						{assign var="target" value="_blank"}
+					{/if}
+					{assign var="url" value=$Multi.PAGE_ZONE_MULTI_URL2}
+					{assign var="Media" value=$Multi.MEDIA_ID2}
+					{if $Media}
+
+						{assign var="style" value="" }
+						{if $MobileViewCount<= 2 }
+							{assign var="style" value="style='padding-right:5px;'" }
+							{if $smarty.foreach.foo.iteration>1}
+								{assign var="style" value="style='padding-left:5px;'" }
+							{/if}
+						{/if}
+
+						<article class="col columns" {$style}>
+							<figure class="item">
+								<a href="{urlParser url=$url}" target="{$target}"><img class="lazy" src="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/lazy-145-111.png" data-original="{$Media}" alt="{$Multi.MEDIA_ALT}" {gtm action="Click" data=$aData datasup=[ 'eventLabel' => $Multi.PAGE_ZONE_MULTI_TITRE, 'value' => $Multi.PAGE_ZONE_MULTI_ORDER]} /></a>
+								<figcaption>{$Multi.PAGE_ZONE_MULTI_TITRE}</figcaption>
+							</figure>
+							{if true == false}<span class="cta">profitez-en !</span>{/if}
+						</article>
+					{/if}
+				{/foreach}
+			</div>
+		</div>
+	</section>
+</div>
+{/if}

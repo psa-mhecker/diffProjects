@@ -1,0 +1,23 @@
+{*{if $aParams.ZONE_MOBILE && $actualites}
+<section id="{$aParams.ID_HTML}" class="afterIntro">
+    <div class="actus">
+        <h2 class="title-lvl1 full"><span>{$aParams.ZONE_TITRE}</span></h2>
+        <div class="news-list">
+            {foreach from=$actualites item=actualite name=actualites}
+            <article>
+                <a href="{urlParser url=$actualite.PAGE_CLEAR_URL}">
+                {if $actualite.MEDIA_PATH}
+                    <figure>{if $actualite.MEDIA_PATH}<img class="lazy" src="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/lazy-16-9.png" data-original="{Pelican::$config.MEDIA_HTTP}{$actualite.MEDIA_PATH}" alt="{$actualite.MEDIA_ALT|escape}" />{/if}</figure>
+                {/if}    
+                    <span><small class="date">{if $actualite.CONTENT_CODE2=='2'}{$actualite.DATE_FR}{else}{$actualite.DATE_UK}{/if}</small>
+                    <strong class="title-lvl1">{$actualite.CONTENT_TITLE}</strong></span>
+                </a>
+            </article>
+            {/foreach}
+        </div>
+    </div>
+    <ul class="cta row of1">
+        <li class="col"><a href="{if $aParams.ZONE_URL2}{urlParser url=$aParams.ZONE_URL2}{else}{urlParser url=$aParams.ZONE_URL}{/if}"><span>{$aParams.ZONE_TITRE2}</span></a></li>
+    </ul>
+</section>
+{/if}*}

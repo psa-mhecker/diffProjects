@@ -1,0 +1,236 @@
+
+.tagdate {
+    content: '2015 06 11'
+}
+
+body {font:normal 15px/1.3 Arial, sans-serif;}
+input[type='file'] {font:normal 0.9em Arial, Verdana, sans-serif;}
+input, textarea, select{ font-size:1em; font-family: Arial, sans-serif; }
+
+h1, h2, h3, h4, h5, h6{ font-size:1em;}
+sup{ font-size:0.833em; }
+strong{ font:bold 15px Arial, sans-serif; }
+
+input[type='file'] ~ .folder{ font:bold 12px/20px Arial, Verdana, sans-serif; }
+.form p em{ font:normal 18px  Arial, sans-serif;}
+.form .button.big{ font-size:18px; }
+.error{ font-size:13px; }
+.checktable .dl{ font-size:13px; }
+.listlinks ul{ font:normal 9px Arial, Verdana, sans-serif; }
+.title{ font:normal 28px/1em  Arial, sans-serif; }
+.title.strike .line span { font-family: Arial, sans-serif;}
+.title.strike .line span { font-size: 32px; }
+.title.strike.thin .line span { font-family: Arial, sans-serif; }
+.subtitle {font:normal 26px/1em Arial, sans-serif;}
+.parttitle {font:normal 18px  Arial, sans-serif; }
+.parttitle.tall { font-size:20px; }
+.parttitle.bold {font:normal 15px Arial, sans-serif; font-weight:bold; }
+.hat { font:normal 18px Arial, sans-serif; }
+.prices { font:normal 18px/1.25em  Arial, sans-serif; }
+
+/* CPW-3301 */
+.layer .cars>.col.vehicle .subtitle{
+	font-size:28px!important;
+}
+.layer .cars .col.zoner figcaption{
+	font-size:12px!important;
+  line-height: 18px!important;
+}
+.layer .cars .col.zoner figcaption strong{
+	font-size:14px!important;
+}
+.layer .cars .col.zoner figcaption em{
+	font-size:12px!important;
+}
+.layer .cars .tools-expand li span{
+	font-size:15px!important;
+	line-height:15px!important
+}
+
+.prices em { font:normal 18px/1.25em Arial, sans-serif; color:#DC002E; font-weight:bold;}
+.prices strong { font-size:28px; }
+.prices { font-family: Arial, sans-serif; }
+.prices strong, .prices em { font-family: Arial, sans-serif; font-style: normal;}
+.legal { font:italic 9px Arial, Verdana, sans-serif; }
+.thin.list a { font:normal 9px Arial, Verdana,sans-serif; }
+.listed em { font:normal 15px Arial, sans-serif; font-weight:bold; }
+.offline .parttitle { font:normal 26px/1em  Arial, sans-serif; }
+nav a span { font:normal 14px Arial, sans-serif; }
+
+@media screen and (max-width:1150px){
+	nav a span{ font-size:12px; }
+}
+
+.services a {font-size:10px;}
+.services .shopping a{ font-size:15px; }
+.services .search input{ font:normal 15px/1em  Arial, sans-serif; }
+.projects a {font:normal 10px  Arial, sans-serif;}
+.projects a span{ font-size:13px;}
+
+@media screen and (max-width:960px){
+	.layer .tabbed .tabs li > * { font-size: .8em }
+}
+
+.layer figcaption strong {font-size:13px;}
+.shop .parttitle {font-size:18px;}
+.shop .client{font:normal 10px Arial, sans-serif; font-weight:bold; }
+
+
+.path .text{ font:normal 10px/20px  Arial, sans-serif;}
+.path h1,
+.path li a {font:normal 10px/20px Arial, sans-serif;}
+.path li strong { font-family: Arial, sans-serif; font-weight:bold;}
+.path li a, .path li strong, .path h1 {
+       font: 11px/20px Arial,sans-serif;
+}
+.path h1 {font-family: Arial, sans-serif; line-height:23px;}
+.banner .title { font-size:48px; font-family: Arial, sans-serif; font-weight:bold; }
+.colors .title { font-family: Arial, sans-serif; font-size:48px; font-weight:bold; }
+.colors .more { font-size:18px; }
+.colors .more small { font:normal 9px/15px Arial, Verdana, sans-serif !important; }
+.colors ul:before { font-size:15px; }
+.layertip small { font-size:10px; }
+.layerpop small * { font-size:10px; }
+.caller strong {  font:normal 26px/0.9em Arial, sans-serif; }
+.caller small { font:normal 10px Arial, Verdana, sans-serif;  }
+.simple .folder a span{ font-size:15px; }
+.cart .button { font-size: 13px; }
+.tabs li > * { font-family:normal 20px/0.9em  Arial, sans-serif; }
+.zoner .parttitle { font-size: 15px; }
+.others .parttitle { font-family: Arial, sans-serif; font-weight:bold; }
+.toggle.faq .toghead .parttitle{ font-size: 16px; }
+.thumbs span { font:normal 9px Arial, Verdana, sans-serif; }
+.actions a { font-size:15px; line-height:1em; max-width: 13em; }
+.tools .title { font: normal 26px/1em Arial, sans-serif; }
+.tools li a { font:normal 15px/0.9em Arial, sans-serif; }
+.anchored li a { font:normal 15px/0.9em  Arial, sans-serif; }
+.sticky li a { font:normal 15px/0.9em  Arial, sans-serif!important; }
+@media screen and (max-width: 1279px) and (min-width: 1025px){
+	.sticky li a { font:normal 15px/0.9em  Arial, sans-serif!important; }
+}
+@media screen and (max-width: 1024px){
+	.sticky li a {
+	  font:normal 12px/0.9em  Arial, sans-serif!important; font-weight:bold!important;
+	}
+	.showroom.stickyplaceholder .sticky li a {
+		font-weight:normal!important;
+	}
+}
+.dates a { font-family: Arial, sans-serif; }
+.dates a:active { font-size:15px; }
+.timeline .strike { font-size:48px; }
+.timeline .parttitle { font-size:15px; }
+.timeline .wait:before { font:normal 32px/3em Arial, sans-serif;}
+.tmtl .boxtitle { font-family: Arial, sans-serif; font-weight:bold; }
+.overview li a { font:normal 15px/1em Arial, sans-serif;}
+.dragnchange figcaption .parttitle {font-family: Arial, sans-serif; font-weight:bold; }
+.section h2.parttitle { font-size: 15px !important;}
+.slider.banner .title { font-size:58px; }
+.slider.banner .parttitle { font-size:28px; }
+.slider.sepbot .subtitle{ color:#4B4A4D; font:normal 26px Arial, sans-serif; }
+.slider.sepbot .prices { font-size:16px; }
+.slider.sepbot .prices em { font:normal 18px/1.25em Arial, sans-serif; }
+.slider.sepbot .prices strong { font-size:18px; }
+.headlines .parttitle { font-size:18px; }
+.news .subtitle {font:normal 18px/1.1em arial,sans-serif; }
+.sidebar .newsletter legend { font:normal 26px/1em Arial, sans-serif;}
+.follow .title { font-size:26px; }
+/*
+.mastercars .title { font:normal 32px Arial, sans-serif; }
+.mastercars .item .parttitle { font:normal 15px/1em Arial, sans-serif; font-weight:bold; }
+.mastercars .item p { font-family: Arial, sans-serif;}
+.mastercars .item strong{font-family: Arial, sans-serif; font-weight: normal!important; }*/
+.stocks > .item .legal p{font-size: 10px;}
+.stocks figure[data-minus]:before { font:normal 17px/25px Arial, sans-serif; font-weight:bold;  }
+.stocks .price { font:normal 26px Arial, sans-serif; font-weight:bold; }
+.stocks .price sup { font:normal 15px Arial, sans-serif; }
+.stocks .strike { font:normal 15px Arial, sans-serif;}
+.stores > .parttitle { font-size: 15px; }
+.stores .item { font:normal 10px Arial, Verdana, sans-serif; }
+.stores .item strong{ font: italic 11px Arial, Verdana, sans-serif; }
+.chosen small{  font:normal 10px/1.25em Arial, Verdana, sans-serif; color:#868689; }
+.notfound .title{ font-size:32px; }
+.notfound .subtitle{ font: normal 26px Arial, sans-serif; }
+.notfound input{ font:normal 23px Arial, sans-serif;}
+.mea .title{ font-size:48px; }
+.results input{ font-size:23px;font-family: arial, sans-serif; }
+.results .subtitle{ font:normal 26px Arial, sans-serif; }
+.results > aside .parttitle { font:normal 15px Arial, sans-serif; }
+.funding .modify:active {font-size: 15px;}
+.datas .prices strong,
+.datas .prices em {font-size:13px;}
+.overall:before { font:normal 15px/26px Arial, Verdana, sans-serif;}
+.selector .folder { font-size:18px; }
+.selector .count { font:normal 18px Arial, sans-serif;  font-weight: bold; }
+.selector .count span{ font-family: Arial, sans-serif; font-weight:normal; }
+.disconnect a {font-size: 15px;}
+.projectbar li{ font-size:15px; }
+.projectbar li a { font-family:Arial, sans-serif; font-size:  15px/0.9em; }
+.formproject .vehiculesProjets .parttitle { font-size:15px; }
+.formproject .selectedCar .descCar p {font-size: 16px;font-family: arial, verdana,sans-serif;}
+.formproject .legal {font-family: arial,verdana,sans-serif;font-size: 10px;}
+.formproject.mesPreferences .col .meaSubTilte {font-family: arial, sans-serif;font-size: 15px/0.9em;}
+.historique h3 {font-size: 17px;}
+.container > aside .title{ font-size:26px; }
+.feeds .head .instabutton{ font:normal 9px/20px Arial, Verdana, sans-serif;}
+.container > footer .map .footfold{ font-family: Arial, sans-serif; font-weight: bold; }
+.container > footer .map .maptitle{ font:normal 14px Arial, sans-serif; }
+.legals .links li{ font:normal 9px/8px Arial, Verdana, sans-serif; }
+.fancybox-error { font:12px/20px Arial,sans-serif; }
+.fancybox-title { font:normal 11px/20px 'Helvetica Neue',Helvetica,Arial,sans-serif; }
+.tt-suggestions p {font-size:20px;}
+.masonry .item .head span { font-family:arial,verdana,sans-serif; font-size: 10px; font-weight:bold; }
+.masonry .item .head span a strong { font-family: arial,verdana,sans-serif;}
+.masonry .item .text{font-family: arial,verdana,sans-serif; font-size: 15px;}
+.masonry .item .title a {font-family: arial,verdana,sans-serif; font-size: 15px;}
+.container .networkWall aside .bloc h3 {font-family: arial,verdana,sans-serif;font-size: 20px;}
+.container .networkWall aside .bloc a {font-family: arial,verdana,sans-serif;font-size: 15px;}
+
+.mea .title  {font-family: Arial, sans-serif; font-size: 38px;}
+.mea .title em {font-family: Arial, sans-serif; font-weight: normal;}
+
+.mea .prices {font: normal 12px/1.25em Arial, sans-serif; }
+.mea .prices strong {font-size: 19px;}
+.colors.clsselecteurteinte .title {font-family: Arial, sans-serif; font-size: 36px;}
+.colors.clsselecteurteinte .title em {font-family: Arial, sans-serif; font-style: normal;  font-weight: normal; }
+.clsselecteurteinte .prices {font: normal 12px/1.25em Arial, sans-serif;  font-weight: bold; }
+.clsselecteurteinte .prices strong {font-size: 19px;  font-weight: normal; }
+.colors.clsselecteurteinte .more {font-size: 16px;  font-weight: bold; }
+
+.ds .ds.mea .title {font-family: Arial, sans-serif; font-size: 38px; }
+.ds .ds.mea .title em {font-family: Arial, sans-serif; font-style: normal; }
+.ds .ds.mea .prices { font: normal 12px/1.25em Arial, sans-serif;}
+.ds .ds.mea .prices strong {font-size: 19px;}
+.simple.ds .cont .inner strong,
+.simple.ds .cont .inner em,
+.simple.ds .cont .inner span,
+.simple.ds .cont .inner { font: normal 15px Arial, sans-serif; }
+section .mgcoltitle h4 { padding-top:5px; font-family: Arial, sans-serif; font-weight:bold; }
+section .mgcoltitle h4.lefttitle { font-family: Arial, sans-serif; font-weight:bold; }
+.clsfinitions .finition.subtitle { font: normal 26px/1em Arial, sans-serif; }
+.clsfinitions .slider.sepbot .subtitle .line {font: normal 26px Arial, sans-serif; }
+.clsdraganddrop h5, .clsdraganddrop figcaption > p {font-family: Arial, sans-serif; }
+th, td { font-size:1em; }
+.sitemap .subtitle a{  font-family: Arial, sans-serif; }
+
+.ds .stores .name { font-family: Arial, sans-serif; font-weight:bold;  }
+
+.carshape-visual figcaption p { font-family: Arial, sans-serif; font-weight:bold;  }
+.carshape-visual figcaption em { font-weight:normal;  }
+
+/*.stickyplaceholder.showroom .sticky li a span{ font-family: Arial, sans-serif!important; font-size: 15px; }*/
+.showroom.clsfinitions .prices em{font-family: Arial, sans-serif; font-weight:bold;  }
+.showroom.clsfinitions .slider.sepbot .subtitle{font-family: Arial, sans-serif; font-weight:bold; }
+.showroom.clscomparateur .datas .folder{font-family: Arial, sans-serif; font-weight:bold; }
+.showroom.showroom-formhead section h2.subtitle, 
+.showroom.showroom-formhead section div.subtitle{font-family: Arial, sans-serif; font-weight:bold; }
+.showroom.form .actions li a{font-family: Arial, sans-serif; font-weight:bold; }
+.titre_module_home{font-family: Arial, sans-serif; font-weight:bold; }
+section.showroom.clscomparateur .actions a span,
+section.showroom.clscomparateur .prices em,
+section.showroom.clscomparateur .prices strong,
+.showroom.clscomparateur input[type="checkbox"] + label{font-family: Arial, sans-serif; font-weight:bold; }
+.showroom.clsfinitions .prices em,
+.showroom.clsfinitions .prices strong{font-family: Arial, sans-serif; font-weight:bold; }
+
+section.ds select  {font-family: Arial, sans-serif; font-size: 1em; font-weight: bold;  color: #cfc3b8;}

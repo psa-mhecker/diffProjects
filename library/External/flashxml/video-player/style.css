@@ -1,0 +1,72 @@
+sub
+{
+	font-family: Verdana;
+    font-size: 15px;
+	color: #ffffff;
+	font-weight: bold;
+	opacity:.7;
+	backgroundColor: 0x000000;
+	corner-radius:7;
+	subPadding:4;
+}
+info
+{
+	infoHeight:100;
+	infoPadding:5;
+	infoDetailPading:10;
+	opacity:1;
+	backgroundColor: 0x222222;
+	corner-radius:5;
+	halign:center;
+	valign:bottom;
+}
+infoTitle
+{
+	font-family: Verdana;
+    font-size: 16px;
+	color: #ffffff;
+	font-weight: bold;
+	text-align:left;
+	
+}
+infoDesc
+{
+	font-family: Verdana;
+    font-size: 11px;
+	color: #dddddd;
+	font-weight: normal;
+	text-align:left;
+}
+listConfig
+{
+	listBackgroundColor: 0x222222;
+	listBackgroundAlpha: 0;
+	listItemColor: 0x333333;
+	listItemAlpha: 55;
+	listItemRollOverColor: 0x444444;
+	listItemRollOverAlpha: 65;
+	listWidth:80;
+	listItemHeight:80;
+	listItemWidth:150;
+	listItemPadding:3;
+	thumbPhotoWidth:70;
+	thumbPhotoHeight:70;
+	thumbPhotoPadding:5;
+	thumbPhotoAspectRatio:true;
+}
+listTitleStyle
+{
+	font-family: Verdana;
+    font-size: 11px;
+	color: #eeeeee;
+	font-weight: bold;
+	text-align:center;
+}
+listDescStyle
+{
+	font-family: Verdana;
+    font-size: 10px;
+	color: #bbbbbb;
+	font-weight: normal;
+	text-align:justify;
+}

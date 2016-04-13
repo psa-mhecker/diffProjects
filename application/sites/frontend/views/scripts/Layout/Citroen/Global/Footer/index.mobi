@@ -1,0 +1,88 @@
+
+{if !$smarty.get.popinMobile}
+<div class="footerReviewMobile sliceNew">
+<footer>
+<div class="wrapperSocial">
+    {if $footerHomeMobile}
+   
+    {if $abonnements.ZONE_TITRE10=='1'}
+       
+            <h3 class="parttitle">{$abonnements.ZONE_TITRE4}</h3>
+			<ul class="listSocials">
+            {foreach from=$reseauxSociauxSelected item=rs name=rs}
+                {if $reseauxSociaux[$rs]}
+                <li>
+				<a  class="activeRoll" href="{urlParser url=$reseauxSociaux[$rs].RESEAU_SOCIAL_URL_MOBILE}" target="_blank" {gtm action="Social" data=$aParams datasup=[ 'eventLabel' => $reseauxSociaux[$rs].RESEAU_SOCIAL_LABEL]}><img src="{Pelican::$config.MEDIA_HTTP}{$reseauxSociaux[$rs].MEDIA_PATH}" alt="{$reseauxSociaux[$rs].RESEAU_SOCIAL_LABEL|escape}" /></a>
+				 </li>
+                {/if}
+            {/foreach}
+			</ul>
+        
+    {/if}
+    {if $abonnements.ZONE_TITRE11=='1'}
+       	<form class="newsletter" novalidate action="{$abonnements.ZONE_URL2}">
+					<fieldset>
+						<legend>{$abonnements.ZONE_TITRE2}</legend>
+						<div class="field include">
+							<input type="email" name="email" placeholder="{'VOTRE_EMAIL'|t}" />
+						</div>
+						<input {gtm action="Newsletter" data=$aParams datasup=[ 'eventLabel' => 'OK']} type="submit" class="grey" name="register" value="{$abonnements.ZONE_TITRE3}" />
+					</fieldset>
+				</form>
+    {/if}
+    {*{if $ctaMobile && $bTplHome}
+        <ul class="links">
+            {if $ctaMobile.ZONE_TITRE && $ctaMobile.ZONE_URL}<li><a href="{urlParser url=$ctaMobile.ZONE_URL}"{if $ctaMobile.ZONE_TITRE3=='2'} target="_blank"{/if}><span>{$ctaMobile.ZONE_TITRE}</span></a></li>{/if}
+            {if $ctaMobile.ZONE_TITRE && $ctaMobile.ZONE_URL2}<li><a href="{urlParser url=$ctaMobile.ZONE_URL2}"{if $ctaMobile.ZONE_TITRE4=='2'} target="_blank"{/if}><span>{$ctaMobile.ZONE_TITRE2}</span></a></li>{/if}
+        </ul>
+    {/if}*}
+    
+    {/if}
+
+     <div class="ctaWrapper">
+        <ul class="footer row">
+           
+            {if $elementsLegaux.ZONE_TITRE && $elementsLegaux.ZONE_URL}
+                <li><a  class="activeRoll" {gtm action="Redirection" data=$aParams datasup=[ 'eventLabel' => $elementsLegaux.ZONE_TITRE]} href="{urlParser url=$elementsLegaux.ZONE_URL}" rel="nofollow">{$elementsLegaux.ZONE_TITRE}</a></li>
+            {/if}
+            {if $elementsLegaux.ZONE_TITRE2 && $elementsLegaux.ZONE_URL2}
+                {if $cookieType == "2"}
+                    <li><a id="_bapw-link" href="#" target="_blank" style="text-decoration:none !important"><span style="vertical-align:middle !important">{$elementsLegaux.ZONE_TITRE2}</span></a></li>
+                {else}
+                    <li><a class="activeRoll" {gtm action="Redirection" data=$aParams datasup=[ 'eventLabel' => $elementsLegaux.ZONE_TITRE2]} href="{urlParser url=$elementsLegaux.ZONE_URL2}" rel="nofollow">{$elementsLegaux.ZONE_TITRE2}</a></li>
+                {/if}
+            {/if}
+            {foreach from=$navigationElementsLegaux item=navigation name=navigation}
+                {if $navigation.PAGE_ZONE_MULTI_URL2}
+                    <li><a  class="activeRoll" href="{urlParser url=$navigation.PAGE_ZONE_MULTI_URL2}"{if $navigation.PAGE_ZONE_MULTI_OPTION=='2'} target="_blank"{/if} {gtm action="Redirection" data=$aParams datasup=[ 'eventLabel' => $navigation.PAGE_ZONE_MULTI_LABEL]}>{$navigation.PAGE_ZONE_MULTI_LABEL}</a></li>
+                {/if}
+            {/foreach}
+			 <li><a {gtm action="Redirection" data=$aParams datasup=[ 'eventLabel' => 'VOIR_VERSION_CLASSIQUE_SITE'|t]} href="#" class="site-version" data-version="desktop">{'VOIR_VERSION_CLASSIQUE_SITE'|t}</a></li>
+        </ul>
+		
+        {if $siteLangues|sizeof>1}
+        <!-- div class="languageSelect">
+            <select>
+                {foreach from=$siteLangues item=site}
+                <option {if $site.LANGUE_ID == $session.LANGUE_ID}selected="selected"{/if} {gtm action="Language" data=$aParams datasup=[ 'eventLabel' => $site.LANGUE_TRANSLATE]} value="{$site.LANGUE_CODE}" data-href="{urlParser url=$pageLangue.{$site.LANGUE_ID}.PAGE_CLEAR_URL}">{$site.LANGUE_TRANSLATE}</option>
+                {/foreach}
+            </select>
+        </div -->
+		
+        {/if}
+    </div>
+	<a class="btn-up {if ($aShowroom.PRIMARY_COLOR|count_characters)==7 }showroom{/if}" href="#top" {gtm action="BackToTop" data=$aParams datasup=[ 'eventLabel' => 'Arrow']} {if ($aShowroom.PRIMARY_COLOR|count_characters)==7 }style="background-color:{$aShowroom.PRIMARY_COLOR}!important;"{/if}>TOP</a>
+ {/if}
+ {if $smarty.get.popinMobile}
+ </div>
+ </footer>
+</div>
+{/if}
+</div>
+</div>
+</div>
+{literal}
+<script type="text/javascript" >
+    var page_vehicule_label="{$vehicule_label}";
+</script>
+{/literal}

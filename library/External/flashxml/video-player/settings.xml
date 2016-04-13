@@ -1,0 +1,100 @@
+<settings>
+  <settings>
+    <settings value="settings.xml"/>
+  </settings>
+  <General_Properties>
+    <showAbout value="true"/>
+    <autoLoad value="true"/>
+    <autoPlay value="true"/>
+    <autoNext value="true"/>
+    <loopVideo value="false"/>
+    <repeatList value="true"/>
+    <shuffleList value="false"/>
+    <background value="0x000000"/>
+    <clickOnVideo value="true"/>
+    <spaceOnVideo value="true"/>
+    <mouseWheel value="volumeSlider"/>
+    <arrowKeys value="true"/>
+    <skipInterval value="2"/>
+  </General_Properties>
+  <Video_Size>
+    <autoResize value="false"/>
+    <keepAspectRatio value="true"/>
+    <custAspectRatioW value="1"/>
+    <custAspectRatioH value="1"/>
+    <appWidth value="600"/>
+    <appHeight value="360"/>
+  </Video_Size>
+  <Watermark>
+    <enabled value="true"/>
+    <valign value="bottom"/>
+    <halign value="right"/>
+    <spacing value="34"/>
+    <transparency value="50"/>
+  </Watermark>
+  <Control_Properties>
+    <position value="bottom"/>
+    <controlOverVideo value="true"/>
+    <transparency value="100"/>
+  </Control_Properties>
+  <Controls_Order>
+    <previous value="true"/>
+    <rewind value="true"/>
+    <stop value="true"/>
+    <play value="true"/>
+    <pause value="true"/>
+    <fastForward value="true"/>
+    <next value="true"/>
+    <currentTime value="true"/>
+    <scrubber value="true"/>
+    <totalTime value="true"/>
+    <volumeButton value="true"/>
+    <volumeSlider value="true"/>
+    <repeat value="true"/>
+    <shuffle value="true"/>
+    <info value="true"/>
+    <list value="true"/>
+    <fullscreen value="true"/>
+  </Controls_Order>
+  <Play_Over_Pause>
+    <enabled value="true"/>
+  </Play_Over_Pause>
+  <Use_Start_Image>
+    <enabled value="false"/>
+    <showImgOnPause value="true"/>
+  </Use_Start_Image>
+  <List_Properties>
+    <listPosition value="right"/>
+    <listActiveOnStart value="true"/>
+    <listTweenFunction value="Regular"/>
+    <listTweenMethod value="easeOut"/>
+    <listTweenDuration value="0.6"/>
+  </List_Properties>
+  <Slide_Out_Control>
+    <enabled value="false"/>
+    <slideType value="Fade"/>
+    <wait value="1"/>
+    <duration value="1"/>
+  </Slide_Out_Control>
+  <media_url>
+    <url value="media.xml"/>
+  </media_url>
+  <skin_url>
+    <url value="skin1/skin1.xml"/>
+  </skin_url>
+  <Font_Style>
+    <font value="Verdana"/>
+    <size value="10"/>
+    <color value="0xFFFFFF"/>
+  </Font_Style>
+  <Subtitle_CSS_Url>
+    <url value="style.css"/>
+  </Subtitle_CSS_Url>
+  <Center_Button_Properties>
+    <rollOverAlpha value="40"/>
+    <rollOutAlpha value="60"/>
+    <easingType value="Elastic"/>
+    <easingMethod value="easeOut"/>
+    <easingDuration value="1"/>
+  </Center_Button_Properties>
+</settings>

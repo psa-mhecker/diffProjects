@@ -1,0 +1,47 @@
+
+{if $aParams.ZONE_MOBILE}
+
+{literal}
+<style type="text/css">
+
+.sliceOngletMobile .all-toggle-btn:before {
+	background-color : {/literal}{$aData.SECOND_COLOR}{literal}!important;
+}               
+</style>
+{/literal}
+<div class="sliceNew sliceOngletMobile">
+    {if $aParams.ZONE_TITRE}<h2 class="subtitle" {if ($aData.PRIMARY_COLOR|count_characters)==7 } style="color:{$aData.PRIMARY_COLOR};" {/if}>{$aParams.ZONE_TITRE|escape}</h2>{/if}
+    {if $aParams.ZONE_TITRE2}<h3 class="parttitle"{if ($aData.SECOND_COLOR|count_characters)==7 } style="color:{$aData.SECOND_COLOR};" {/if}>{$aParams.ZONE_TITRE2|escape}</h3>{/if}
+    {if $aParams.ZONE_TEXTE}
+        <div class="mgchapo">
+            <strong>{$aParams.ZONE_TEXTE}</strong>
+        </div>
+    {/if}
+    <div class="js-toggle-all-context">
+         <div class="all-toggle-actions">
+            <button class="all-toggle-btn js-toggle-all-open-btn">
+                <span>{'OPEN_ALL'|t}</span>
+            </button>
+            <button class="all-toggle-btn js-toggle-all-close-btn">
+                <span>{'CLOSE_ALL'|t}</span>
+            </button>
+        </div>
+        {foreach from=$aOnglets key=k item=onglet}
+            <div class="toggle-list js-toggle-context {if $k == 0}js-toggle-opened{/if}">
+                <button class="toggle-btn js-toggle-btn">
+                    {$onglet.PAGE_ZONE_MULTI_LABEL|escape}
+                </button>
+				 <div class="js-toggle-content">
+                <div class="tabcontent">
+                  <div class="item onglet-{$aParams.AREA_ID}-{$aParams.ZONE_ORDER}-{$onglet.PAGE_ZONE_MULTI_ID}">
+            </div>
+                </div>
+            </div>
+            </div>
+
+            
+        {/foreach}
+    </div>
+</div>
+{/if}
+

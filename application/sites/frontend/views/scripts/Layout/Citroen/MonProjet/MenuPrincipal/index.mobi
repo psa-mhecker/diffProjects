@@ -1,0 +1,13 @@
+
+	<div id="{$aParams.ID_HTML}" class="head full">
+		<header>
+			<div class="txt">
+				{foreach from=$aMenu item=menu}
+				{if $menu.PAGE_ID == $aParams.pid}
+				<h1 class="title-lvl0"><span>{$menu.PAGE_TITLE_BO}</span></h1>
+					{/if}
+				{/foreach}
+			</div>
+		</header>
+	</div>
+	{if $user && $user->isLogged()}<section><div class="text"><p>{'BONJOUR'|t}, {$user->getFirstname()} {$user->getLastname()}</p></div></section>{/if}

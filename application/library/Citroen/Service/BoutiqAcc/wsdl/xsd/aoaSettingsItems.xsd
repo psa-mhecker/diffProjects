@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns:si="http://aoa.inetpsa.com/ws/setting/items" 
+	xmlns:c="http://aoa.inetpsa.com/ws/common" 
+	targetNamespace="http://aoa.inetpsa.com/ws/setting/items">
+
+	<xs:import namespace="http://aoa.inetpsa.com/ws/common" schemaLocation="aoaCommonItems.xsd"/>
+	
+	<xs:element name="ItemsInput">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="References" type="si:ReferencesType" minOccurs="0"/>
+				<!-- références pour lesquels on souhaite obtenir des informations, 
+								si pas de références, la requêtes est sur l'ensemble des références (les résultats sont paginés) -->
+				<xs:element name="Dealer" type="c:DealerType"/>
+				<xs:element name="Client" type="si:ClientType" minOccurs="0"/>
+				<!-- destinataires des informations, en v1 il n'y aura que des informations pour internet grand public, 
+								en lot 2 des promotions B2B sont à prévoir -->
+				<xs:element name="Language" type="xs:string" minOccurs="0"/>
+				<!-- de la forme fr_FR -->
+				<xs:element name="Search" type="si:SearchType" minOccurs="0"/>
+				<!-- critères supplémentaires sur la requète-->
+				<xs:element name="ResponseContent" type="si:ResponseContentType" minOccurs="0"/>
+				<!-- contenu de la réponse souhaité, en lot1 on ne récupèrera quoi qu'il arrive que les prix -->
+				<xs:any namespace="##other" processContents="skip" minOccurs="0"/>
+				<!-- [lot2+] joker -->
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:complexType name="ReferencesType">
+		<xs:sequence>
+			<xs:element name="Reference" type="xs:string" minOccurs="0" maxOccurs="40"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ClientType">
+		<xs:sequence>
+			<xs:element name="Client" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="SearchType">
+		<!-- critère de recherche-->
+		<xs:sequence>
+			<xs:element name="HierarchyCode" type="xs:integer" minOccurs="0"/>
+			<!-- [lot2+] code localisation / codesi -->
+			<xs:element name="Applicability" type="c:ApplicabilityType" minOccurs="0"/>
+			<!-- [lot2+] applicabilité -->
+			<xs:element name="Index" type="xs:string" minOccurs="0"/>
+			<!-- [lot2+] nom de l'index dans lequel on souhaite chercher la pièce, par défaut keywords-->
+			<xs:element name="Query" type="xs:string" minOccurs="0"/>
+			<!--[lot2+] objet de la recherche-->
+			<xs:element name="ItemsPerPage" type="xs:integer" minOccurs="0"/>
+			<!-- nombre de résultat par page, 40 par défaut-->
+			<xs:element name="Page" type="xs:integer" minOccurs="0"/>
+			<!-- page de résultat souhaité lorsqu'il y a plus de 40 (ou ItemsPerPage) résultats-->
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="ResponseContentType">
+		<xs:sequence>
+			<xs:element name="HierarchyValue" type="xs:boolean" minOccurs="0"/>
+			<!-- [lot2+] noeud d'appartenance dans la hierarchie de la pièce, c-à-d codesi (ignoré en lot 1)-->
+			<xs:element name="AttributesValue" type="xs:boolean" minOccurs="0"/>
+			<!--[lot2+] attributs de la piece (ignoré en lot 1)-->
+			<xs:element name="FilesValue" type="xs:boolean" minOccurs="0"/>
+			<!--[lot2+] fichiers (images) de la piece (ignoré en lot 1)-->
+			<xs:element name="PriceValue" type="xs:boolean" minOccurs="0"/>
+			<!-- on souhaite obtenir le prix des pièces-->
+			<xs:any namespace="##other" processContents="skip" minOccurs="0"/>
+			<!--[lot2+] joker (ignoré en lot 1)-->
+		</xs:sequence>
+	</xs:complexType>
+
+</xs:schema>

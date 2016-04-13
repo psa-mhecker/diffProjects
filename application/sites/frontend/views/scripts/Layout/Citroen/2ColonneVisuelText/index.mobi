@@ -1,0 +1,136 @@
+{literal}
+<style>
+    {/literal}
+    {if ($aData.SECOND_COLOR|count_characters)==7}
+    {literal}
+    .slice2ColonnesVisuelTextMobile .actions .buttonTransversalInvert, .slice2ColonnesVisuelTextMobile .buttonTransversalInvert{
+    {/literal}{if ($aData.SECOND_COLOR|count_characters)==7 }{literal}
+        background-color:{/literal}{$aData.SECOND_COLOR}{literal}!important;
+        border-color:{/literal}{$aData.SECOND_COLOR}{literal}!important;
+        color:#ffffff!important;
+    {/literal}{/if}{literal}
+    }
+    .slice2ColonnesVisuelTextMobile .actions .buttonTransversalInvert:hover, .slice2ColonnesVisuelTextMobile .actions .buttonTransversalInvert:active, .slice2ColonnesVisuelTextMobile .buttonTransversalInvert:hover, .slice2ColonnesVisuelTextMobile .buttonTransversalInvert:active:hover ,.slice2ColonnesVisuelTextMobile .buttonTransversalInvert:hover span {
+    {/literal}{if ($aData.SECOND_COLOR|count_characters)==7 }{literal}
+        background-color:#ffffff!important;
+        border-color:{/literal}{$aData.SECOND_COLOR}{literal}!important;
+        color:{/literal}{$aData.SECOND_COLOR} {literal}!important;
+    {/literal}{/if}{literal}
+    }
+    {/literal}
+    {/if}
+    {literal}
+</style>
+{/literal}
+
+
+{if $aData.ZONE_MOBILE == 1 && $iNbMultiVisuel >= 2}
+    <div class="sliceNew slice2ColonnesVisuelTextMobile">
+    <section class="{$aData.ZONE_SKIN} {if $aData.ZONE_TITRE ==""}no-title{/if}" id="{$aData.ID_HTML}">
+	<hr class="full" />
+    {if $aData.ZONE_TITRE}<h2 class="subtitle"{if ($aData.PRIMARY_COLOR|count_characters)==7 } style="color:{$aData.PRIMARY_COLOR};"  {/if}>{$aData.ZONE_TITRE}</h2>{/if}
+    {if $aData.ZONE_TITRE2}<h3 class="parttitle" {if ($aData.SECOND_COLOR|count_characters)==7 } style="color:{$aData.SECOND_COLOR};"  {/if}>{$aData.ZONE_TITRE2}</h3>{/if}
+    {if $aData.ZONE_TEXTE}
+        <div class="mgchapo">
+            {$aData.ZONE_TEXTE}
+        </div>
+    {/if}
+	{assign var='new' value='true'}
+	{foreach from=$aMultiVisuel item=multi}
+		<article class="post">
+			<figure class="visual"><img class="lazy" src="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/lazy-145-145.png" data-original="{$multi.MEDIA_ID}" alt="" /></figure>
+			<h5 class="parttitle"  {if ($aData.SECOND_COLOR|count_characters)==7 } style="color:{$aData.SECOND_COLOR};"  {/if}>{$multi.PAGE_ZONE_MULTI_TITRE}</h5>
+			<div class="text">{$multi.PAGE_ZONE_MULTI_TEXT}</div>
+		</article>
+	{/foreach}
+
+
+    {if $aData.ZONE_TITRE6}
+        {if $aData.ZONE_TITRE5 == "POP_IN" && $aData.PAGE_CLEAR_URL != ""}
+            <em class="notice"><span {gtmjs type='toggle' action='Display::ToolTip|' eventGTM='over'  data=$aData datasup=['eventLabel' =>  $aData.ZONE_TITRE6]}>{$aData.ZONE_TITRE6}</span></em>
+            <div class="notice-text" data-close="Fermer">
+                <h6 class="title-lvl1 centered nobg">{$titlePopInMention}</h6>
+                <iframe id="iframe_popin" class="iframe_popin_style" src="{$aData.PAGE_CLEAR_URL}?popinMobile=1"></iframe>
+            </div>
+        {elseif $aData.ZONE_TITRE5 == "ROLL"}
+            <em class="notice"><span>{$aData.ZONE_TITRE6}</span></em>
+            <div class="notice-text" data-close="Fermer">
+                {if $aData.MEDIA_ID4 != ""}<figure><img class="lazy noscale" src="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/235-100.png" data-original="{$aData.MEDIA_ID4}" alt="{$aData.MEDIA_ALT4}" /></figure>{/if}
+                <h6 class="title-lvl1 centered nobg">{$aData.ZONE_TITRE6}</h6>
+                <p>
+                    {$aData.ZONE_TEXTE4}
+                </p>
+            </div>
+        {/if}
+    {/if}
+	{if $aData.ZONE_TITRE5 == "TEXT" && $aData.ZONE_TEXTE4 neq ""}
+        {if $MEDIA_PATH4 != ""}<figure class="visual"><img class="lazy noscale" src="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/235-100.png" data-original="{"{Pelican::$config.MEDIA_HTTP}{$MEDIA_PATH4}"|format:Pelican::$config.MEDIA_FORMAT_ID.MOBILE_MENTION}" alt="{$MEDIA_ALT4}" /></figure>{/if}
+        <em class="notice">{$aData.ZONE_TITRE6}<br>{$aData.ZONE_TEXTE4}</em>
+    {/if}
+        {if $aMedias|@sizeof > 0}
+            <div class="media row of3">
+            {foreach $aMedias as $aMedia  key=key}
+                {if $aMedia.VIDEO}
+                                
+                    {if $aMedia.VIDEO.YOUTUBE_ID}
+            
+                    <a class="video col galleryPop popThis" {if $aMedia.VIDEO.OTHER_MEDIA_PATH}data-video="{$aMedia.VIDEO.OTHER_MEDIA_PATH}"{/if} href="{if $aMedia.VIDEO.YOUTUBE_URL}{urlParser url=$aMedia.VIDEO.YOUTUBE_URL}{/if}" data-bundle="gallery-videos" {gtm action='Display::Video' data=$aData datasup=['eventLabel'=>{$aMedia.VIDEO.MEDIA_ALT}]}>
+
+                    {else}
+                    <a class="video col galleryPop popThis" {if $aMedia.VIDEO.OTHER_MEDIA_PATH}data-video="{$aMedia.VIDEO.OTHER_MEDIA_PATH}"{/if} href="{if $aMedia.VIDEO.MEDIA_PATH}{urlParser url={Pelican::$config.MEDIA_HTTP|cat:$aMedia.VIDEO.MEDIA_PATH}}{/if}" data-bundle="gallery-videos" {gtm action='Display::Video' data=$aData datasup=['eventLabel'=>{$aMedia.VIDEO.MEDIA_ALT}]}>
+                    {/if}
+                    
+                        <!--shadow video-->
+                        <figure class="shadow">
+                            <img class="lazy" src="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/235-100.png" data-original="{if $aMedia.VIDEO.MEDIA_PATH}{Pelican::$config.MEDIA_HTTP}{$aMedia.VIDEO.MEDIA_PATH2}{/if}" alt="{$aMedia.VIDEO.MEDIA_ALT2}" />
+                        </figure>
+                        <span>{$aMedia.VIDEO.MEDIA_TITLE}</span>
+                    </a>
+                {/if}
+                {if $aMedia.IMAGE}
+                    {section name=push loop=$aMedia.IMAGE}
+                        {if $smarty.section.push.first}
+                      
+
+                            <a class="col galleryPop popThis" href="{urlParser url={Pelican::$config.MEDIA_HTTP|cat:$aMedia.IMAGE[push].MEDIA_PATH}}" data-other="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/235-100.png" data-bundle="group{$key}" title="{$aPush[push].MEDIA_TITLE}" {gtm action='Zoom' data=$aData datasup=['eventLabel'=>{$aMedia.MEDIA_TITLE}]}>
+                                <figure>
+                                  {IF $VIGN_GALLERY}
+                                        {assign var="Vignette_Gal" value="$VIGN_GALLERY"}
+                                        {ELSE}
+                                        {assign var="Vignette_Gal" value=$aMedia.IMAGE[push].MEDIA_PATH}
+                                    {/IF}
+                         <img class="lazy" src="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/235-100.png" data-original="{"{Pelican::$config.MEDIA_HTTP}{$Vignette_Gal}"|format:Pelican::$config.MEDIA_FORMAT_ID.MOBILE_PUSH}" alt="{$aMedia.IMAGE[push].MEDIA_ALT}" /></figure>
+                                <span>{$aMedia.MEDIA_TITLE}</span>
+                            </a><!-- / .col -->
+                            <ul class="hideThis">
+                        {else}
+                            <li>
+                                <a class="galleryPop" href="{urlParser url={Pelican::$config.MEDIA_HTTP|cat:$aMedia.IMAGE[push].MEDIA_PATH}}" data-other="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/235-100.png" data-bundle="group{$key}" title="{$aMedia.IMAGE[push].MEDIA_ALT}" {gtm action='Zoom' data=$aData datasup=['eventLabel'=> $aMedia.IMAGE[push].MEDIA_ALT]}>
+                                    <img class="lazy" src="{Pelican::$config.IMAGE_FRONT_HTTP}/lazy/235-100.png" data-original="{"{Pelican::$config.MEDIA_HTTP}{$aMedia.IMAGE[push].MEDIA_PATH}"|format:Pelican::$config.MEDIA_FORMAT_ID.MOBILE_PUSH}" alt="{$aMedia.IMAGE[push].MEDIA_ALT}" />
+                                </a>
+                            </li>
+                        {/if}
+                    {/section}
+                     </ul>
+                {/if}
+            {/foreach}
+            </div>
+        {/if}
+			
+	{if $aCta|@sizeof > 0}
+		<ul class="actions">
+            {section name=cta loop=$aCta}
+                <li class="col">
+                {if $aCta[cta].OUTIL}
+                        {$aCta[cta].OUTIL}
+                {else}
+                    <a class="buttonTransversalInvert" {gtm action="Push" data=$aData datasup=['eventLabel' => $aCta[cta].PAGE_ZONE_MULTI_LABEL,'eventCategory'=>'Content']}  href="{if $aCta[cta].PAGE_ZONE_MULTI_URL2}{urlParser url=$aCta[cta].PAGE_ZONE_MULTI_URL2}{else}{urlParser url=$aCta[cta].PAGE_ZONE_MULTI_URL}{/if}" target="_{$aCta[cta].PAGE_ZONE_MULTI_VALUE}"><span>{$aCta[cta].PAGE_ZONE_MULTI_LABEL}</a>
+                {/if}
+                </li>
+
+            {/section}
+        </ul><!-- / .cta -->
+	{/if}
+</section>
+    </div>
+{/if}

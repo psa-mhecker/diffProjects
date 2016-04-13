@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wurfl_patch>
+    <version>
+        <last_updated>November 21, 2011</last_updated>
+    </version>
+    <devices>
+        <!-- Overriding generic will make all your undetected UA strings be considered as web browsers -->
+        <device id="stb" user_agent="" fall_back="root">
+            <group id="product_info">
+                <capability name="brand_name" value="generic STB browser"/>
+                <capability name="model_name" value=""/>
+                <capability name="pointing_method" value="remote control"/>
+                <capability name="is_wireless_device" value="false"/>
+                <capability name="is_stb" value="true"/>
+            </group>
+        </device>
+
+        <!-- Web browsers -->
+        <device user_agent="DO_NOT_MATCH_GENERIC_STB_BROWSER" fall_back="stb" id="generic_stb_browser">
+            <group id="product_info">
+                <capability name="brand_name" value="generic STB browser"/>
+                <capability name="model_name" value=""/>
+                <capability name="pointing_method" value="remote control"/>
+                <capability name="is_wireless_device" value="false"/><capability
+                	name="is_stb" value="true">
+</capability>
+            </group>
+            <group id="display">
+                <capability name="resolution_width" value="800"/>
+                <capability name="resolution_height" value="600"/>
+            </group>
+            <group id="markup">
+                <capability name="xhtml_support_level" value="4"/>
+                <capability name="preferred_markup" value="html_web_4_0"/>
+            </group>
+            <group id="ajax">
+                <capability name="ajax_support_javascript" value="false"/>
+            </group>
+        </device>
+
+           <device id="stb_bbox_thomson_ver5" user_agent="stb bbox thomson" fall_back="generic_stb_browser">
+            <group id="product_info">
+                <capability name="brand_name" value="stb"/>
+                <capability name="model_name" value="thomson"/>
+            </group>
+        </device>
+    </devices>
+</wurfl_patch>
