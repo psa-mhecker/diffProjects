@@ -1,0 +1,36 @@
+<section class="slice-pc78 {if isset($slicePC78.anchorId)} {$slicePC78.anchorId} {/if}" {if isset($slicePC78.anchorId)} id="{$slicePC78.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePC78' } ]" datalayer="{$slicePC78.datalayer}">
+  <h2>{$slicePC78.title}</h2>
+  {foreach $slicePC78.articles as $line}
+    <section class="line">
+        {foreach $line.cols as $col}
+            <div class="col{if isset($line.unique) and $line.unique === true} unique{/if}">
+              {foreach $col as $item}
+                <article data-index="{$item.index}" {if isset($item.small)}class="parDeux" {/if}>
+                  <header>
+                    <i class="icon"></i>
+                  </header>
+                  <figure>
+                    <img src="{$item.img.src}" alt="{$item.img.alt}">
+                  </figure>
+                  <footer>
+                    <p>{$item.text}</p>
+                  </footer>
+                </article>
+              {/foreach}
+            </div>
+        {/foreach}
+    </section>
+  {/foreach}
+  <section class="overlay" data-id-tranche-popin = "{$slicePC78.popinIds}">
+    <div class="overlay-color close-carousel"></div>
+    <div class="popin scroller">
+      <div class="close-carousel">{$slicePC78.close}</div>
+        <div class="clearfix slice-pad slide owl-carousel">
+        
+          <!-- ###### RECUPERATION HTML TRANCHE POUR LA POPIN AVEC JAVASCRIPT ###### -->
+
+        </div>
+    </div>
+  </section>
+</section>
+  

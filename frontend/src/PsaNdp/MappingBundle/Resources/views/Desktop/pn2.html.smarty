@@ -1,0 +1,13 @@
+<section class="slice-pn2 {if isset($slicePN2.anchorId)} {$slicePN2.anchorId} {/if}" {if isset($slicePN2.anchorId)} id="{$slicePN2.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePN2' } ]" datalayer="{$slicePN2.datalayer}">
+    <ul class="iso-tabs">
+      {foreach $slicePN2.items as $item}
+        <li data-count="{$item.count}">{$item.title}</li>
+      {/foreach}
+    </ul>
+    <div class="iso-tabs-content">
+      <div class="iso-tab-cont results"></div>
+      <div class="iso-tab-cont results"></div>
+    </div>
+</section>
+
+

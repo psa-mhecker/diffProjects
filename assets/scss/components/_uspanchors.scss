@@ -1,0 +1,37 @@
+@charset 'UTF-8';
+
+$default-anchor-bg-color: #ececee !default;
+$default-hover-anchor-bg-color: #cdcdcd !default;
+$default-anchor-color: #3c353f !default;
+
+.usp-links {
+  text-align: center;
+
+  li {
+    display: inline-block;
+    margin: 10px 5px;
+  }
+
+  .usp-anchor {
+    transition: all 150ms ease-in-out;
+    display: inline-block;
+    background: $default-anchor-bg-color;
+    padding: 10px 25px;
+    color: $default-anchor-color;
+
+    &:hover {
+      background: $default-hover-anchor-bg-color;
+    }
+  }
+
+  @media #{$small-only} {
+    li {
+      margin: 10px 0;
+      width: 100%;
+    }
+
+    .usp-anchor {
+      width: 100%;
+    }
+  }
+}

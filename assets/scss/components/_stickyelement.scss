@@ -1,0 +1,58 @@
+@charset 'UTF-8';
+
+@mixin stickysettings {
+	position: fixed;
+	z-index: 9;
+}
+
+@mixin commoncontainerrecap {
+	height: 51px;
+}
+
+.container-recap {
+	@include commoncontainerrecap;
+	background: $default-color;
+}
+
+.container-recap-mobile {
+	@include commoncontainerrecap;
+	background: $white-color;
+}
+
+.links-container {
+	display: inline-block;
+	margin-top: 0;
+	padding-left: 10px;
+	width: 24%;
+	text-align: center;
+}
+
+.stick,
+.stick-mobile {
+	@include stickysettings;
+	bottom: 0;
+	padding: 0;
+
+	.columns {
+		padding: 0;
+	}
+}
+
+.cta-recap {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+.main-button-container {
+	display: inline-block;
+	width: 25%;
+}
+
+.fix-sticky-font {
+	font-size: 0;
+}
+
+.container-sticky {
+	margin: 0;
+}

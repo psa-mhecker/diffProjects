@@ -1,0 +1,14 @@
+@charset 'UTF-8';
+@import '../../../../scss/components/uspanchors';
+
+.usp-links{
+	li {
+		margin: 0 20px 10px 0;
+	}
+
+	@media #{$small-only} {
+		li {
+			margin: 10px 0;
+		}
+	}
+}

@@ -1,0 +1,22 @@
+{assign var="gtmCategory" value="{$slicePF23.blockName}::position-{$slicePF23.blockOrder}"}
+<section class="slice-pf23 slice-full-size no-margin-top {if isset($slicePF23.anchorId)} {$slicePF23.anchorId} {/if}" {if isset($slicePF23.anchorId)} id="{$slicePF23.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePf23' } ]" datalayer="{$slicePF23.datalayer}" data-gtm-category="{$gtmCategory}">
+
+	<nav class="range-bar">
+		<ul>
+			<a class="show-for-small-only range-bar-header" data-gtm-event-label="{$slicePF23.mobileLabel|escape:html}">
+				<span class="range-bar-title">
+					{$slicePF23.mobileLabel}
+					<i class='js-toggle-icon toggle-icon toggle-icon-expand'></i>
+				</span>
+			</a>
+			<ul class="range-bar-list">
+				{foreach $slicePF23.models as $model}
+					<li class="range-bar-item">
+						<a href="{$model.url}" data-gtm='{ldelim}"eventType":"click","dataList":{ldelim}"event":"uaevent","eventCategory":"{$slicePF23.blockName}::position-{$slicePF23.blockOrder}","eventAction":"Redirection","eventLabel":"{$model.title|escape:html}"{rdelim}{rdelim}'>{$model.title}</a>
+					</li>
+				{/foreach}
+			</ul>
+		</ul>
+	</nav>
+
+</section>

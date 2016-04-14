@@ -1,0 +1,6 @@
+@charset "UTF-8";
+@import "../../../../scss/common/layout";
+// Code pour compatibilite patternlab
+.sg-body-pattern:not(.single) .body {
+	margin-left: 0;
+}

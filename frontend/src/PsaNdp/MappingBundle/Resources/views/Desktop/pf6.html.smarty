@@ -1,0 +1,40 @@
+<section class="slice-pf6 {if isset($slicePF6.anchorId)} {$slicePF6.anchorId} {/if}" {if isset($slicePF6.anchorId)} id="{$slicePF6.anchorId}" {/if} {if isset($slicePF6.popintrancheid)} data-popintrancheid = "{$slicePF6.popintrancheid}" {/if} data-jsobj="[ { 'obj':'slicePF6' } ]" datalayer="{$slicePF6.datalayer}">
+    {if isset($slicePF6.title)}<h2 class="title">{$slicePF6.title}</h2>{/if}
+
+    {if isset($slicePF6.subTitle)}<h3 class="subtitle">{$slicePF6.subTitle}</h3>{/if}
+
+    <div class="row collapse">
+        <div class="small-12 columns">
+            <div class="twentytwenty-container" {if $slicePF6.direction}data-orientation="{$slicePF6.direction}"{/if}>
+
+                {include file='../Components/images.html.smarty' image=$slicePF6.before lazy=false}
+                {include file='../Components/images.html.smarty' image=$slicePF6.after lazy=false}
+            </div>
+        </div>
+        {if $slicePF6.columnsTitle}
+            <h4>{$slicePF6.columnsTitle}</h4>
+        {/if}
+        <div class="row  text-container">
+
+            {if $slicePF6.columns}
+                {assign  var="count" value=$slicePF6.columns|count}
+                {foreach $slicePF6.columns as $column}
+                    <div class="small-12 {if $slicePF6.columns|count === 2}medium-6 {if $column@index == 0}panel-no-padding-left{else}panel-no-padding-right{/if} {else}medium-12 panel-no-padding{/if} columns">
+                        {$column.text}
+                    </div>
+                {/foreach}
+            {/if}
+            {if isset($slicePF6.ctaList)}
+                <div class="inline-cta">
+                    {foreach $slicePF6.ctaList as $cta}
+                        {include file="../Components/cta.html.smarty" widthClass="short-width"}
+                    {/foreach}
+                </div>
+            {/if}
+        </div>
+    </div>
+
+
+
+
+</section>

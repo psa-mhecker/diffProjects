@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions
+        targetNamespace="http://xml.inetpsa.com/Services/Cfg/EngineCriteria"
+        xmlns:cxl="http://fault.core.cxl.inetpsa.com"
+        xmlns:soap11="http://schemas.xmlsoap.org/soap/envelope/"
+        xmlns:soap12="http://www.w3.org/2003/05/soap-envelope"
+        xmlns:soapenc11="http://schemas.xmlsoap.org/soap/encoding/"
+        xmlns:soapenc12="http://www.w3.org/2003/05/soap-encoding"
+        xmlns:tn="http://inetpsa.com/cfg"
+        xmlns:tns="http://xml.inetpsa.com/Services/Cfg/EngineCriteria"
+        xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+        xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <wsdl:types>
+        <xsd:schema attributeFormDefault="unqualified"
+                    elementFormDefault="qualified"
+                    targetNamespace="http://inetpsa.com/cfg"
+                    xmlns:tns="http://inetpsa.com/cfg" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <xs:element name="EngineCriteria" type="tns:EngineCriteriaType"/>
+            <xs:element name="EngineCriteriaResponse" type="tns:EngineCriteriaResponseType"/>
+            <xs:complexType name="EngineCriteriaType">
+                <xs:sequence>
+                    <xs:element minOccurs="1" name="ContextRequest" type="tns:ContextRequest"/>
+                    <xs:element minOccurs="1" name="EngineCriteriaParameter" type="tns:EngineCriteriaParameter"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ContextRequest">
+                <xs:sequence>
+                    <xs:element minOccurs="1" name="Client" type="xs:string"/>
+                    <xs:element minOccurs="1" name="Brand">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:length value="1"/>
+                                <xs:enumeration value="P"/>
+                                <xs:enumeration value="C"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element minOccurs="1" name="Country" type="xs:string"/>
+                    <xs:element minOccurs="1" name="Date" type="xs:date"/>
+                    <xs:element maxOccurs="1" minOccurs="0" name="LanguageID" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="EngineCriteriaParameter">
+                <xs:sequence>
+                    <xs:element maxOccurs="1" name="Version" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="EngineCriteriaResponseType">
+                <xs:sequence>
+                    <xs:element maxOccurs="1" name="Version" type="tns:Version"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Version">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="Co2Class" type="xs:string"/>
+                    <xs:element minOccurs="0" name="EcoLabel" type="xs:boolean"/>
+                    <xs:element minOccurs="1" name="TechnicalCharacteristics" type="tns:TechnicalCharacteristicsCategories"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="TechnicalCharacteristicsCategories">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0"
+                                name="Category" type="tns:TechnicalCharacteristicCategory"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="TechnicalCharacteristicCategory">
+                <xs:sequence>
+                    <xs:element minOccurs="1" name="id" type="xs:string"/>
+                    <xs:element minOccurs="1" name="label" type="xs:string"/>
+                    <xs:element minOccurs="1" name="rank" type="xs:int"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0"
+                                name="TechnicalCharacteristic" type="tns:TechnicalCharacteristic"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="TechnicalCharacteristic">
+                <xs:sequence>
+                    <xs:element minOccurs="1" name="id" type="xs:string"/>
+                    <xs:element minOccurs="1" name="label" type="xs:string"/>
+                    <xs:element minOccurs="1" name="value" type="xs:string"/>
+                    <xs:element minOccurs="1" name="rank" type="xs:int"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xsd:schema>
+        <xsd:schema attributeFormDefault="unqualified"
+                    elementFormDefault="qualified" targetNamespace="http://fault.core.cxl.inetpsa.com">
+            <xsd:complexType name="ServiceException"/>
+        </xsd:schema>
+        <xsd:schema attributeFormDefault="unqualified"
+                    elementFormDefault="qualified"
+                    targetNamespace="http://xml.inetpsa.com/Services/Cfg/EngineCriteria" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <xsd:import namespace="http://fault.core.cxl.inetpsa.com"/>
+            <xsd:import namespace="http://inetpsa.com/cfg"/>
+            <xsd:element name="EngineCriteria">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="tn:EngineCriteria"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="EngineCriteriaResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="tn:EngineCriteriaResponse"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="ServiceException" type="cxl:ServiceException"/>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="EngineCriteriaRequest">
+        <wsdl:part element="tns:EngineCriteria" name="parameters"/>
+    </wsdl:message>
+    <wsdl:message name="ServiceException">
+        <wsdl:part element="tns:ServiceException" name="ServiceException"/>
+    </wsdl:message>
+    <wsdl:message name="EngineCriteriaResponse">
+        <wsdl:part element="tns:EngineCriteriaResponse" name="parameters"/>
+    </wsdl:message>
+    <wsdl:portType name="EngineCriteriaPortType">
+        <wsdl:operation name="EngineCriteria">
+            <wsdl:input message="tns:EngineCriteriaRequest" name="EngineCriteriaRequest"/>
+            <wsdl:output message="tns:EngineCriteriaResponse" name="EngineCriteriaResponse"/>
+            <wsdl:fault message="tns:ServiceException" name="ServiceException"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="EngineCriteriaHttpBinding" type="tns:EngineCriteriaPortType">
+        <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="EngineCriteria">
+            <wsdlsoap:operation soapAction="http://xml.inetpsa.com/Services/Cfg/EngineCriteria#EngineCriteria"/>
+            <wsdl:input name="EngineCriteriaRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="EngineCriteriaResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <wsdlsoap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="EngineCriteria">
+        <wsdl:port binding="tns:EngineCriteriaHttpBinding" name="EngineCriteriaHttpPort">
+            <wsdlsoap:address location="http://localhost:8080/cfg00Web/services/EngineCriteria"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

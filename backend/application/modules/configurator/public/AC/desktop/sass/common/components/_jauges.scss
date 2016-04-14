@@ -1,0 +1,24 @@
+.jauges-lvl-container{
+  width:30px;
+  .jauges-barre{
+    width:100%;
+    height:4px;
+    margin-top:4px;
+    &:first-child{
+      margin-top:0;
+    }
+  }
+  &.small{
+    width: 21px;
+    background: white;
+    padding: 3px;
+
+    .jauges-barre{
+      height:2px;
+      margin-top:2px;
+      &:first-child{
+        margin-top:0;
+      }
+    }
+  }
+}

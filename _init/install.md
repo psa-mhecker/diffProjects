@@ -1,7 +1,7 @@
-# psa-cppv2 install on dev environment #
+# PSA-NDP install on dev environment #
 --------
 
-This tutorial is going to describe the step by step installation for the psa-cppv2 global environment:
+This tutorial is going to describe the step by step installation for the psa-ndp global environment:
 
 ## Install OS
 It is a requirement that every developper run under an unix or windoww OS, 64 bits version.
@@ -12,7 +12,8 @@ The project is running on a virtual environment to be production ready
 ### Linux ###
 
     aptitude install virtualbox
-
+    apt-get install virtualbox
+    
 ### Mac OS ###
 
     download http://download.virtualbox.org/virtualbox/4.3.20/VirtualBox-4.3.20-96996-OSX.dmg
@@ -37,40 +38,53 @@ We are going to use the vagrant project to manage all the vitualbox
 
     download https://dl.bintray.com/mitchellh/vagrant/vagrant_1.7.2.msi
 
-Once vagrant installed, add the NFS support if the host is Linux or Mac OS
+IMPORTANT : under windows, 
 
-    vagrant plugin install vagrant-bindfs
-    
-IMPORTANT : under windonws, this must executed before git clone
+  you must use a console emulator like cmder
+
+    download http://gooseberrycreative.com/cmder/
+  
+  this must executed before git clone
 
     git config --global core.autocrlf false
+
+  you must install the vagrant plugin vagrant-winnfsd because the shared folder is setup with 'nfs' type
+
+    vagrant plugin install vagrant-winnfsd
+
+  NOTE: nfs shared folder are fastest in almost all environment, see http://docs.vagrantup.com/v2/synced-folders/nfs.html for more details
+
 
 ## Clone the front repository
 In the parent directory of the current directory run
 
     cd [your root directory]
-    git clone -b new-iteration2 https://github.com/itkg/psa-cppv2.git cppv2
-
-NOTE : the new directory is replaced by cppv2 to avoid a vagrant bug under Windows with "-" or " " in the path
-
+    git clone https://github.com/itkg/psa-ndp.git
+    
 ## Launch the box
-Change the root directory in cppv2/_init/vagrant/puphpet/config.yaml
+Create a symlink to your project directory
 
-    replace   'D:\Documents\GitHub'
+    ln -s /your/project/dir /var/www/psa-ndp
 
-    by        '[your root directory]' 
+for windows
+
+Change the root directory in psa-npd/_init/vagrantv2/puphpet/config.yaml
+
+replace   '/var/www/psa-ndp'
+
+by        '[your root directory]/psa-ndp' 
 
 ## If something goes wrong
 
 the vagrant up is cancelled or an error occured (no internet connection, error message in provisioning)
 do, after resolution of issues 
 
-    vagrant reload --provision
+    vagrant provision
     
 if all is really bad
 
-    rm -rf [your root directory]/cppv2/_init/vagrant/.vagrant
-    
+    rm -rf [your root directory]/psa-ndp/_init/vagrantv2/.vagrant
+
 retry vagrant up from zero
 
     vagrant up
@@ -81,49 +95,73 @@ Import the base box,
 Launch it,
 Run all the provisionning scripts
 
-    cd cppv2/_init/vagrant
+    cd psa-ndp/_init/vagrantv2
     vagrant up
 
 ## Finalize the installation
+You need to install all the php dependencies before starting the project
+
+    vagrant ssh
+    export SYMFONY__HTTP__MEDIA="http://media.psa-ndp.com"
+    export SYMFONY__REDIS__CONNECTION="tcp://127.0.0.1:6379"
+    sudo mkdir -p /cache
+    sudo mkdir -p /logs
+    sudo chmod -R 777 /cache
+    sudo chmod -R 777 /logs
+    cd /var/www
+
+    ### Dev ###
+    composer install
+
+    ### Prod ###
+    composer install --no-dev --no-scripts  -o
+    php frontend/app/console cache:clear --env=prod
+
+
 Launch the post-installation script shell
 
+    exit
     vagrant halt
     vagrant up
     
-the new vagrant up launch a complementary script in _init/vagrant/puppet/files/startup-once/install.sh
+the new vagrant up launch a complementary script in _init/vagrantv2/puppet/files/startup-once/install.sh
 
 ## Override the dns redirection
 In the `/etc/hosts` file of your computer add the following lines :
 
-    192.168.10.10 backend.psa-cppv2.com
-    192.168.10.10 fr.psa-cppv2.com
-    192.168.10.10 be.psa-cppv2.com
-    192.168.10.10 cz.psa-cppv2.com
-    192.168.10.10 de.psa-cppv2.com
-    192.168.10.10 master.psa-cppv2.com
-    192.168.10.10 media.psa-cppv2.com
+    192.168.10.10 backend.psa-ndp.com
+    192.168.10.10 fr.psa-ndp.com
+    192.168.10.10 be.psa-ndp.com
+    192.168.10.10 cz.psa-ndp.com
+    192.168.10.10 de.psa-ndp.com
+    192.168.10.10 master.psa-ndp.com
+    192.168.10.10 media.psa-ndp.com
 
 ## Result
 The access to he backend is :
 
-- [http://backend.psa-cppv2.com](http://backend.psa-cppv2.com)
+- [http://backend.psa-ndp.com](http://backend.psa-ndp.com)
 
     admin / adminAL83
 
 The other tools have the following urls :
 
-- Adminer : [http://192.168.10.10/adminer](http://192.168.10.10/adminer) 
-- user/pwd/database => psa-cppv2/psa-cppv2/psa-cppv2
+- Adminer : [http://192.168.10.10/phpmyadmin](http://192.168.10.10/phpmyadmin) 
+- user/pwd/database => psa-ndp/psa-ndp/psa-ndp
 
 - MailCatcher : [http://192.168.10.10:1080](http://192.168.10.10:1080)
 
 - Xhprof :  [http://192.168.10.10/xhprof/xhprof_html](http://192.168.10.10/xhprof/xhprof_html)
 
-- Mongodb : 192.168.10.10:27017
-- user/pwd/database => cppv2/cppv2/cppv2
+- Webgrind :  [http://192.168.10.10/webgrind](http://192.168.10.10/webgrind)
 
-- mongo-express : http://192.168.10.10:8081
+- Pimpmylog :  [http://192.168.10.10/pimpmylog](http://192.168.10.10/pimpmylog)
+
+- Mongodb : 192.168.10.10:27017
+- user/pwd/database => psa-ndp/psa-ndp/psa-ndp
 
 The Root access to mysql :
+
+    psa-ndp / psa-ndp
 
     root / root

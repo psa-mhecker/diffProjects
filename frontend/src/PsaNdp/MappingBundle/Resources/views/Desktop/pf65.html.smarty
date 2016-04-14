@@ -1,0 +1,97 @@
+<section class="slice-pf65 {if isset($slicePF65.anchorId)} {$slicePF65.anchorId} {/if}" {if isset($slicePF65.anchorId)} id="{$slicePF65.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePF65' } ]">
+  <h2 class="title">sauvegarder<br>votre configuration</h2>
+  <div class="init">
+    <div class="save-head">
+      <div class="visuel">
+        <img src="../../../img/confishow/car.jpg" class="info-energy" alt="energy">
+      </div>
+      <div class="desc">
+        <p class="model">nouvelle peugeot 308</p>
+        <p class="finition">Access</p>
+        <p class="motor">1.2L PureTech 82 BVM 5</p>
+      </div>
+    </div>  
+    <div class="save-notif">
+      {if isset($slicePF65.notification)}
+        {foreach $slicePF65.notification as $notification}
+          {include file="../../notification/notification.tpl"}
+        {/foreach}
+      {/if}
+    </div>
+    <div class="save-form">
+      <div class="config-save" style="display: block;">
+        <form action="" method="post" class="config-form" novalide>
+          <div class="config-box-input">
+            <div class="input-text">
+              <label class="control-label" for="configemail">Votre adresse email Lorem ipsum dolor sit posueres</label>
+              <div class="form-control">
+                <input type="email" name="configemail" data-rule-email="true" id="configemail" data-msg-email="Votre e-mail est incorrect. Veuillez le saisir à nouveau." required="" data-msg-required="Ces champs sont obligatoires." aria-required="true" class="checked">
+              </div>
+            </div>
+            <div class="input-text last">
+              <label class="control-label" for="configname">Nom de la configuration</label>
+              <div class="form-control">
+                <input type="text" name="configname" id="configname" required="" data-msg-required="Ces champs sont obligatoires." aria-required="true" class="checked" >
+              </div>
+            </div>
+            <br class="clr">
+          </div>
+          <p class="mentions-legales">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae justo eu odio dictum lobortis. <br>Praesent facilisis eleifend ipsum, eget tincidunt sapien faucibus in. Sed sit amet erat ut lectus
+          </p>
+          <p class="confirm-mentions">
+            <label for="000002">
+              <input type="checkbox" required="" data-msg-required="Vous n'avez pas accepté les mentions légales" aria-required="true" name="confirmMentions" id="000002" class="checked" style="visibility: hidden; position: absolute;">
+              <span class="checkbox"></span>
+              J'ai bien lu les mentions légales et je les approuve
+            </label>
+          </p>                                  
+        </form>
+      </div>
+      <div class="save-nav">
+        <div class="control-box custom-button-group clearfix">
+          {foreach $slicePF65.mdc.return.ctaList as $cta}
+              {include file="./cta.html.smarty"}
+          {/foreach}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="details">
+    <div class="save-notif">
+      {if isset($slicePF65.confirmation)}
+        {foreach $slicePF65.confirmation as $notification}
+          {include file="../../notification/notification.tpl"}
+        {/foreach}
+      {/if}
+    </div>
+    <div class="confirm">
+      <div class="visuel">
+        <img src="../../../img/confishow/car.jpg" class="info-energy" alt="energy">
+      </div>
+      <div class="desc">
+        <p class="model">nouvelle peugeot 308</p>
+        <p class="finition">Access</p>
+        <p class="motor">1.2L PureTech 82 BVM 5</p>
+        <ul>
+          <li>
+            <a href="#" class="link"><span>Essayer-la</span></a>
+          </li>
+          <li>
+            <a href="#" class="link"><span>Trouvez-la en stock</span></a>
+          </li>
+          <li>
+            <a href="#" class="link"><span>Demandez une brochure</span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="save-nav">
+      <div class="control-box custom-button-group clearfix">
+        <a href="#" class="cta-link cta-inline  go-back"><span>Retournez à votre configuration</span></a>
+        <a href="#" class="cta-inline cta-btn cta-btn-4 pull-right"><span>Accedez au detail</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+

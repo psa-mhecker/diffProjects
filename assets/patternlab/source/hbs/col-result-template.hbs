@@ -1,0 +1,13 @@
+{{#infos}}
+<div>
+  {{#each disponibility}}
+  <div class="choice">
+	{{#if checked}}
+	<span class="checked"><img src="{{checkvisu}}" alt="" /></span>
+	{{else}}
+	<span class="option">{{option}}</span>
+	{{/if}}
+  </div>
+  {{/each}}
+</div>
+{{/infos}}

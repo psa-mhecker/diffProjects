@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:cxl="http://fault.core.cxl.inetpsa.com" xmlns:soap11="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope" xmlns:soapenc11="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soapenc12="http://www.w3.org/2003/05/soap-encoding" xmlns:tn="http://inetpsa.com/cfg" xmlns:tns="http://xml.inetpsa.com/Services/Cfg/CompareGrade" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://xml.inetpsa.com/Services/Cfg/CompareGrade">
+      
+<xsd:import schemaLocation="CompareGrade.xsd2.xsd" namespace="http://fault.core.cxl.inetpsa.com"/>
+      
+<xsd:import schemaLocation="CompareGrade.xsd1.xsd" namespace="http://inetpsa.com/cfg"/>
+      
+<xsd:element name="CompareGrades">
+        
+<xsd:complexType>
+          
+<xsd:sequence>
+            
+<xsd:element maxOccurs="1" minOccurs="1" ref="tn:CompareGrades"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      
+<xsd:element name="CompareGradesResponse">
+        
+<xsd:complexType>
+          
+<xsd:sequence>
+            
+<xsd:element maxOccurs="1" minOccurs="1" ref="tn:CompareGradesResponse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      
+<xsd:element name="ServiceException" type="cxl:ServiceException"/>
+    </xsd:schema>

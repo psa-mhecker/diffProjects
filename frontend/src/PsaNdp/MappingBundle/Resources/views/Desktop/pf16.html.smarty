@@ -1,0 +1,21 @@
+<section class="slice-pf16 {if isset($slicePF14.anchorId)} {$slicePF14.anchorId} {/if}" {if isset($slicePF14.anchorId)} id="{$slicePF14.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePF16' } ]" datalayer="{$slicePF16.datalayer}">
+ <h2>{$slicePF16.otherSocialMediaTitle}</h2>
+ <section>
+  <ul class="intro-social grid-group">
+   <li class="grid-col span_6_of_12 left"><p>{$slicePF16.otherSocialMediaFirstParagraph}</p></li>
+   <li class="grid-col span_6_of_12 right"><p>{$slicePF16.otherSocialMediaSecondParagraph}</p></li>
+ </ul>
+</section>
+<section>
+  <ul class="social">
+   {foreach $slicePF16.otherSocialMediaItem as $social}
+   <li>
+     <a href="{$social.url}"{if isset($social.target)} target="{$social.target}"{/if} title="{$social.title}">
+      <img src="{$social.src}" alt="{$social.title}" width="36.5" height="36.5"/>
+    </a>
+  </li>
+  {/foreach}
+</ul>
+</section>
+    
+</section>

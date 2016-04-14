@@ -1,0 +1,21 @@
+{
+  "timerSpeed": "5000",
+  "slideshow": [
+    {
+      "src": "http://dummyimage.com/1280x720/000/fff.png",
+      "alt": ""
+    },
+    {
+      "src": "http://dummyimage.com/1280x720/000/fff.png",
+      "alt": ""
+    },
+    {
+      "src": "http://dummyimage.com/1280x720/000/fff.png",
+      "alt": ""
+    },
+    {
+      "src": "http://dummyimage.com/1280x720/000/fff.png",
+      "alt": ""
+    }
+  ]
+}

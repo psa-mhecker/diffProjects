@@ -1,0 +1,25 @@
+@charset 'UTF-8';
+//@import '../../../../scss/components/mosaicusp';
+
+.item-usp {
+	position: relative;
+
+	.title {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		background: rgba(100, 100, 100, .75);
+	}
+
+	.selected & {
+		border-bottom: 3px solid orange;
+	}
+
+}
+
+.usp-block {
+	display: none;
+	margin: 2.5%;
+	width: 95%;
+
+}

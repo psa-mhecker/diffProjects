@@ -1,0 +1,11 @@
+{
+  "list-thumbnail" : [
+    {
+      "label" : "longueur",
+      "url" : "http://dummyimage.com/200x100/999/fff",
+      "alt" : "vignette",
+      "active" : "true",
+      "link" : "headline-1"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+<section class="slice-pc61">
+    <h3>{$visuelBoussoleTitle}</h3>
+    <div class="wrap">
+        <ul class="list-vehicle list_style slice-inside-margin clearfix">
+            {foreach $visuelBoussoleBox as $vbb}
+                <li class="choice grid-col span_3_of_12">
+                    {if isset($vbb.file)}
+                        <img src="{$vbb.file}" alt="{$vbb.alt}" />
+                    {/if}
+                    <h4>{$vbb.title}</h4>
+                    <p>{$vbb.subtitle}</p>
+                    <a href="{$vbb.link}" class="more"{if isset($vbb.target)} target="{$vbb.target}"{/if}>{$visuelBoussoleLinkPlus}</a>
+                </li>
+            {/foreach}
+        </ul>
+    </div>
+</section>

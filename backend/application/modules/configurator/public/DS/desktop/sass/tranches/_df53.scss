@@ -1,0 +1,449 @@
+.slice-df53 {
+
+  figure:after{
+  }
+
+  .notification{
+    &.center{
+      text-align: center;
+    }
+  }
+
+  > h2{
+    font-family: $font-family-brand;
+    font-size: 30px;
+    color: $lame-border-selected;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 15px;
+  }
+  .btn-not {
+    padding-left: 0;
+    padding-top: 10px;
+    text-align: center;
+    .cta {
+      margin: 0 4px;
+    }
+  }
+  .block-mentions,
+  .save-config{
+    margin-top: 20px;
+  }
+  .radio-group{
+    clear: both;
+  }
+  .notification-table{
+    overflow: hidden;
+    padding: 12px;
+    padding-bottom: 16px;
+    position: relative;
+    margin: 7px 0;
+    font-size: 12px;
+    &.light{
+      font-family: $font-family-base-light;
+      font-size: 13px;
+    }
+    &.center{
+      text-align: center;
+    }
+    .notification-action{
+      position: absolute;
+      display: block;
+      right: 55px;
+      top: 50%;
+      padding: 7px 28px;
+      border: 1px solid $dark-champagne;
+      font-size: 13px;
+      text-transform: uppercase;
+      line-height: 10px;
+      margin-top: -12px;
+      color: $dark-champagne;
+      cursor: pointer;
+      &:not(.goto-comparator):hover{
+        border-color: $champagne;
+        color: $champagne;
+      }
+      &.goto-comparator{
+        position: relative;
+        float: right;
+        margin-top: 0;
+        margin-right: 43px;
+        padding: 0;
+        border: none;
+        right: inherit;
+      }
+    }
+  }
+
+  .save-config{
+    .notification-txt{
+      font-weight:normal;
+    }
+  }
+
+  .notification-padding-fix{
+    padding:0 !important;
+  }
+
+  .notifFix{
+    line-height: 6px;
+  }
+
+  .notification-txt-bold{
+    font-family:$font-family-base-bold;
+    p {
+      margin-top: 14px;
+      margin-bottom: 0;
+    }
+  }
+  .notification-txt{
+    p {
+      margin-top: 12px;
+      margin-bottom: 7px;
+    }
+  }
+
+  .modification{
+    width: 100%;
+    display: block;
+    font-size: 0;
+    background: #f3efee;
+    min-height: 38px;
+    margin: 20px 0 0 0;
+    padding: 8px 0;
+    overflow: hidden;
+    margin-top: 0;
+    border: 1px solid #e6e0db;
+    font-size: 14px;
+    text-align: center;
+    font-family: $main_font_roboto;
+    b{
+      display: block;
+    }
+  }
+  .expand-content {
+    border-top: 0px;
+
+    .expand-title{
+      display: block;
+      clear: both;
+      text-align: center;
+      padding-top: 20px;
+      padding-bottom: 10px;
+      font: 500 12px/1.2 $font-family-base-regular, Arial;
+      color: $champagne;
+      text-transform: uppercase;
+    }
+    .list-style {
+      position: relative;
+      text-align: center;
+      margin: 12px 0 15px 0;
+    }
+    .colors {
+      margin: 0 0 20px -4px;
+      font-size: 0;
+      text-align: center;
+    }
+  }
+  .lame{
+    .expand-content .expand-readmore .include{
+      max-width: 90%;
+    }
+    .lame-header{
+      min-height: 37px;
+      line-height: 37px;
+    }
+    .lame-content{
+      padding-bottom: 20px;
+      .notification{
+        margin-left: 15px;
+        margin-right: 15px;
+        width: calc(100% - 30px);
+      }
+      .col-left-galerie{
+        margin-bottom: 20px;
+      }
+    }
+  }
+  .clearfix{ clear: both; }
+  .lame
+  .input-checkbox input[type="checkbox"] ~ label .input-text--checked,
+  .input-checkbox input[type="radio"] ~ label .input-text--checked,
+  .input-radio input[type="checkbox"] ~ label .input-text--checked,
+  .input-radio input[type="radio"] ~ label .input-text--checked {
+    display: none;
+  }
+  .input-checkbox input[type="checkbox"]:checked ~ label .input-text--checked,
+  .input-checkbox input[type="radio"]:checked ~ label .input-text--checked,
+  .input-radio input[type="checkbox"]:checked ~ label .input-text--checked,
+  .input-radio input[type="radio"]:checked ~ label .input-text--checked {
+    display: inline-block;
+  }
+  .input-checkbox input[type="checkbox"] ~ label .input-text,
+  .input-checkbox input[type="radio"] ~ label .input-text,
+  .input-radio input[type="checkbox"] ~ label .input-text,
+  .input-radio input[type="radio"] ~ label .input-text {
+    display: inline-block;
+  }
+  .input-checkbox input[type="checkbox"]:checked ~ label .input-text,
+  .input-checkbox input[type="radio"]:checked ~ label .input-text,
+  .input-radio input[type="checkbox"]:checked ~ label .input-text,
+  .input-radio input[type="radio"]:checked ~ label .input-text {
+    display: none;
+  }
+
+  .price {
+    color: $warm-black;
+    font-family: $font-family-base-regular;
+    font-size: 13px;
+  }
+  .priceDesc {
+    font-size: 11px;
+    line-height: 12px;
+    margin-top: 6px;
+    color: $warm-black;
+  }
+
+  .infoPrice {
+    cursor: pointer;
+    color: $warm-black;
+  }
+
+  .cta-sm{
+    width:180px;
+  }
+
+  .btn-not {
+    padding-left: 0;
+    padding-top: 10px;
+    text-align: center;
+
+    .cta {
+      margin: 0 4px;
+    }
+  }
+
+  .cta-addComparator{
+    &.disabled{
+      color: $champagne;
+      cursor: default;
+    }
+    .removed{
+       i.tit-toggle{
+        &:after{
+          @extend %_sprites;
+          @extend %_sprite-add-comparator-plus;
+        }
+      }
+    }
+    .added{
+      display: none;
+      i.tit-toggle{
+        &:after{
+          @extend %_sprites;
+          @extend %_sprite-close-panel;
+        }
+      }
+    }
+    &.open{
+      .added{
+        //display: block;
+      }
+      .removed{
+        //display: none;
+      }
+    }
+  }
+
+  .not-bold{
+    font-weight:normal;
+  }
+
+  .col-right-title{
+    font-family:$font-family-base-bold !important;
+    font-weight:normal !important;
+  }
+
+  .expand-addComparator{
+    .expand-title{
+      padding: 0;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      position: relative;
+      a.close-comparator{
+        position: absolute;
+        right: 15px;
+        &:after{
+          content: '';
+          display: block;
+          @extend %_sprites;
+          @extend %_sprite-close;
+        }
+      }
+    }
+  }
+
+  h3.lame-header--title{
+    color: $warm-black;
+  }
+
+  h3.nb-finitions{
+    font-size: 20px;
+    color: $warm-black;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: normal;
+    font-family: $font-family-base-regular;
+    b{
+      color: $champagne;
+      font-weight: normal;
+      margin-right: 10px;
+    }
+  }
+
+  .comparator-views{
+    margin: 0;
+    .item-comparator{
+      font-size: 13px;
+      text-transform: uppercase;
+      color: $warm-black;
+      position: relative;
+      img{
+        width: 100%;
+      }
+      div.close{
+        background: $default-color;
+        padding: 7px;
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        right: 0;
+        &:after{
+          content: "";
+          position: relative;
+          display: block;
+          @extend %_sprites;
+          @extend %_sprite-close-panel;
+        }
+      }
+    }
+  }
+
+  .notif-other-fin{
+    margin-top: 28px;
+  }
+
+  .badge{
+    font-size: 11px;
+    padding: 7px;
+    line-height: 11px;
+    margin: 0 3px;
+    &.nouveau{
+      background: $warm-black;
+      color: $champagne;
+    }
+    &.business{
+      background: $champagne;
+      color: $default-color;
+    }
+  }
+
+  a.gotoComparator{
+    padding: 14px 28px;
+    border: 1px solid $dark-champagne;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 11px;
+    color: $dark-champagne;
+    cursor: pointer;
+    margin-top: 28px;
+  }
+
+
+  .more-finitions{
+    border: 1px solid $champagne;
+    clear: left;
+    margin: 28px 0;
+    padding: 0;
+    &.ouvert{
+      .more-title{
+        color: $champagne;
+        .chevron{
+          @extend %_sprites;
+          @extend %_sprite-close-panel;
+        }
+      }
+    }
+    .more-title{
+      text-transform: uppercase;
+      position: relative;
+      font-size: 13px;
+      line-height: 17px;
+      display: block;
+      position: relative;
+      cursor: pointer;
+      padding: 25px 13px;
+      .chevron{
+        position: absolute;
+        top: 31px;
+        right: 20px;
+        @extend %_sprites;
+        @extend %_sprite-arrow-toggle-2;
+      }
+    }
+
+    .more-content{
+      display: none;
+      margin: 0 -1px;
+      .lame{
+        &:first-of-type{
+          margin-top: 0;
+        }
+      }
+    }
+    &.open{
+      color: $champagne;
+      .more-title{
+        .chevron{
+          @extend %_sprites;
+          @extend %_sprite-close-panel;
+        }
+      }
+    }
+  }
+
+  .cta.cta-readmore:after, .btn.cta-readmore:after{
+    display: none;
+  }
+
+  .cta.cta-readmore, .btn.cta-readmore{
+    margin-bottom: 0;
+  }
+
+  div.cta-readmore, div.cta-addComparator{
+    border-bottom: none;
+    &.border-bottom{
+      border-bottom: 1px solid $light-champagne;
+    }
+  }
+
+  .col-listes-right{
+    .listes{
+      padding-top: 7px;
+      margin: 0 auto;
+      width: 195px;
+    }
+  }
+}
+
+html.touch{
+  .notification{
+    .notification-action{
+      &:not(.goto-comparator):hover{
+        border-color: inherit;
+        color: inherit;
+      }
+    }
+  }
+}

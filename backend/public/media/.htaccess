@@ -1,0 +1,6 @@
+# Turn on URL rewriting engine
+<FilesMatch "\.(ttf|otf|eot|woff|woff2|svg)$">
+  <IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+  </IfModule>
+</FilesMatch>

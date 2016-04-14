@@ -1,0 +1,253 @@
+@charset "UTF-8";
+.slicecf58bis{
+  padding: 0 0 25px 0;
+  
+  & > div:not(.mentions){
+    padding-left:14px;
+    padding-right:14px;
+  }
+
+  .title {
+    text-transform: uppercase;
+    vertical-align: top;
+    text-align: center;
+    color:$beige;
+    font-family:$robotolight;
+    font-size:16px;
+  }
+  
+  .mentions{
+    margin-top: 15px;
+    line-height: 18px;
+    padding: 10px 25px;
+    
+    &.credit{background:$beige_light;}
+    
+    &.credit_2{background:$white_color;}
+  }
+  
+  .subtitle{
+    text-align: center;
+    margin: 0;
+    color: $cta_btn_8_txt_color;
+    font-size: 1.25rem;
+  }
+
+  .transmission{
+    text-align: center;
+    margin: 0;
+    color: $cta_btn_8_txt_color;
+  }
+
+  .finiplus{
+    display:inline-block;
+    color:#f1f1f1;
+    background:#ad9d90;
+    padding: 5px;
+    font-size: 11px;
+    font-family: $font_roboto-regular;
+    text-align: center;
+    margin: 20px 3px;
+  }
+  
+  ul{
+    list-style:none;
+    padding:0;
+  }
+
+  .popinmotor{
+    text-transform: uppercase;
+    margin: 0 10%;
+
+    img{
+      width: 100%;
+    }
+  }
+  
+  .finitions{
+    margin-top: 15px;
+    margin-bottom: 35px;
+
+    .mod-toggle-open {
+      .mod-toggle-content {
+        margin-bottom: 20px;
+      }
+    }
+  
+    > .accordion {
+      border: 1px solid $beige_light_4;
+      margin-bottom: 25px;
+      padding: 15px;
+      position: relative;
+
+      ul {
+        li{
+          border-bottom: 1px solid #f2efed;
+          padding: 5px 0;
+          &:last-child {
+            border: none;
+          }
+          h3{
+            color: #ad9d91;
+            display: inline-block;
+          }
+
+          p{
+            color: #1d1717;
+            display: inline-block;
+            position: absolute;
+            right: 0;
+            font-size: 12px;
+
+            .linkvisu{
+              display: inline-block;
+              vertical-align: top;
+              margin-left: 5px;
+              position: relative;
+              @extend %_sprites;
+              @extend %_sprite-icopie;
+            }
+          }
+        }
+      }
+
+      .popinmotorisations{
+        display: none;
+      }
+      
+      .finInfos{
+        position: relative;
+        text-align: center;
+        
+        .subtitle{
+          font-size: 16px;
+          font-family:$robotolight;
+          color:$marron_dark;
+          display: block;
+          font-weight: normal;
+          text-align: center;
+          vertical-align: super;
+        }
+        
+        figcaption{
+          min-height:25px;
+          line-height:25px;
+        }
+      }
+      
+      &.selected{
+        border: 1px solid $bordeaux;
+        
+        .finInfos .subtitle{color:$bordeaux;}
+      }
+      
+      .price{
+        min-height:35px;
+        background-color: $beige_light;
+        font-family: $robotoregular;
+        padding: 10px;
+        text-align: center;
+        font-size:$fontsizesite;
+        
+        sup{font-size:8px;}
+        
+        span{
+          //display:none;
+          
+          &.price-prefix{display:inline-block;}
+        }
+      }
+    
+      &.mod-toggle-open{
+        .chevron{
+          &:after{left: 0;}
+        }
+      }
+    
+      .chevron{
+        position: absolute;
+        top: 15px;
+        margin-top: -1px;
+        right: 0;
+      
+        &:after, &:before{
+          content: "";
+          display: block;
+          width: 10px;
+          height: 1px;
+          background-color: $beige;
+          margin-left: -2px;
+          bottom: 10px;
+        }
+      
+        &:after{
+          left: -7px;
+          position: absolute;
+          top: 0px;
+          @include css3(transform, rotate(45deg));
+        }
+      
+        &:before{@include css3(transform, rotate(-45deg));}
+      }
+      
+      .radio-group{
+        display:table;
+        margin: 0 auto;
+        font-size:14px;
+        vertical-align: top;
+        margin-bottom: 10px;
+        font-family: $robotoregular;
+      
+        span{
+          margin: 25px 0;
+          display: inline-block;
+          color: $beige_light_2;
+          background: $beige;
+          padding: 5px;
+        }
+      
+        p{
+          display: inline-block;
+          text-transform: uppercase;
+          margin-left: 10px;
+          font-family: $robotolight;
+          color:$beige_2;
+          font-size:$fontsizesite;
+        }
+      
+        label{
+          display:inline-block;
+          padding:10px;
+          margin-right:0;
+      
+          &.selected:before{
+            content: '';
+            width:23px;
+            @extend %_sprites;
+            @extend %_sprite-check;
+          }
+        
+          &:before {
+            width: 23px;
+            height: 21px;
+            @include css3(border-radius, 0);
+            margin: 0;
+          }
+      
+          .input.radio {display: none;}
+        }
+      }
+    
+      .namecontrast{
+        color:$beige;
+        font-family:$robotoregular;
+        text-align: center;
+        font-size: 14px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+      }
+    
+      .opened {display: block;}
+    }
+  }   
+}

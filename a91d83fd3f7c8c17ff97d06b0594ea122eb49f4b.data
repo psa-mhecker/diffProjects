@@ -1,0 +1,32 @@
+# features/NPDA_66_Afficher du texte en L avec un visuelslideshow ainsi que des liens en liste déroulante.feature
+# language: fr
+Fonctionnalité: NPDA_66_Afficher du texte en L avec un visuelslideshow ainsi que des liens en liste déroulante.feature
+  Afin de vérifier le collonnage
+  En tant qu'Internaute
+  Je dois visualiser un texte avec un ou plusieurs visuels, ainsi que des liens sous forme de liste déroulante. 
+
+  # Régles Métier :
+# Taille des visuels en 1280 max: 623px X 432px de base (variable)
+# Titre : 60 caractères max, facultatif centré au dessus du média
+# ...
+
+Contexte:
+  Etant donné je vais sur "/fr/services-et-accessoires/sprint-3-page-non-reg-behat.html"
+
+@javascript @Page
+Scénario: test technique de la Page
+ # Test technique de la page
+ # page sans erreur
+  Etant donné je ne devrais pas voir "RuntimeException"
+ 
+@javascript @PC9
+Scénario: test de la NDPA-66-PC9
+  Etant donné je devrais voir "TITRE PC9 AFFICHAGE DE TEXTE EN L"
+  # Colonne 1
+  Alors je devrais voir "SOUS TITRE PC9 TEXTE EN L VISUEL A DROITE "
+  Et je devrais voir "DEBUT PC9 Auxerunt"
+  Et je devrais voir "CTA 4"
+  Et je devrais voir "CTA2" 
+  Et je devrais voir "Essayez la 308"
+  Et je devrais voir "Prendre RDV" 
+

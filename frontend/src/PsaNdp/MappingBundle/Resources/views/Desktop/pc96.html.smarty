@@ -1,0 +1,15 @@
+<div class="slice-pc96 {if isset($slicePC96.anchorId)} {$slicePC96.anchorId} {/if}" {if isset($slicePC96.anchorId)} id="{$slicePC96.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePC96' } ]">
+  <h2>{$infosTranche.title}</h2>
+  <div class="slides{if isset($infosTranche.class)} {$infosTranche.class}{/if}" >
+    {foreach $infosTranche.slides as $slide}
+    <div class="item">
+      <figure >
+        <img src="{$slide.src}" alt="{$slide.alt}" />
+      </figure>
+    </div>
+    {/foreach}
+  </div>
+  <div class="content-description">
+    <p>{$infosTranche.textContent}</p>
+  </div>
+</div>

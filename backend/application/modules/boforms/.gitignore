@@ -1,0 +1,4 @@
+*.xml
+*.log
+/var
+/public/XML

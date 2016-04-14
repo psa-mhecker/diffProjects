@@ -1,0 +1,16 @@
+@charset "UTF-8";
+@import "../../../../scss/common/navigation";
+
+// FIX FOR PATTERNLAB
+.principal[role="navigation"] {
+	.styleguide & {
+		position: absolute;
+	}
+}
+@include logo;
+// Pour afficher le champ de recherche dans patternlab
+// ligne a supprimer au moment de l'intégration smarty
+body .sticky-search {
+	@include sticky-search();
+	display: block;
+}

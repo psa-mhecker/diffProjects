@@ -1,0 +1,311 @@
+.save-config {
+  background-color: $gray-lighter;
+  padding: 5px 15px;
+  margin-bottom: 2%;
+  span.input.checkbox {
+    display: none;
+  }
+  .notifications {
+    color: $gray-citroen;
+  }
+  .content-info {
+    .etape1 {
+      padding-left: 0;
+    }
+    /* .label-save{
+      margin-left: 55px;
+    } */
+    .confirmation {
+      display: none;
+      opacity: 1!important;
+      position: relative;
+      &:before {
+        content: "";
+        display: inline-block;
+        vertical-align: top;
+        float: left;
+        margin-right: 15px;
+      }
+    }
+    .confirm-save {
+      .elemnt_input.input-checkbox {
+        label {
+          display: inline-block;
+          font-family: $font_ubuntu-bold;
+          color: $brand-orange;
+          text-transform: uppercase;
+          .checkbox_btn {
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+          }
+          .label {
+            display: inline;
+          }
+        }
+        &.checked {
+          label {
+            position: relative;
+            display: inline-block;
+            .checkbox_btn {
+              border-color: $brand-orange;
+              border-width: 4px;
+              position: relative;
+              &:after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 14px;
+                height: 14px;
+                margin-left: -7px;
+                background-color: $brand-orange;
+                margin-top: -7px;
+                -moz-border-radius: 50%;
+                -webkit-border-radius: 50%;
+                border-radius: 50%;
+              }
+            }
+          }
+        }
+      }
+    }
+    span.error-msg {
+      text-align: left;
+      display: block;
+      font: 14px/1.2 $font-family-base-bold;
+      margin: 12px 0 0;
+      color: $brand-rose;
+      cursor: default;
+    }
+    .config-save {
+      display: none;
+      padding: 0 55px;
+      .cta-group {
+        .dont-save {
+          @include clearfix;
+          // display: inline;
+          span {
+            display: inline-block;
+            // padding-top: 20px !important;
+          }
+        }
+      }
+      .config-box-input {
+        overflow: visible;
+        font-size: 0;
+        margin-top: 22px;
+        .input-text {
+          margin: 10px 0 0;
+          position: relative;
+          .check--gray,
+          .cross--pink {
+            display: none;
+          }
+          &.valid {
+            .check--gray {
+              display: inline-block;
+              left: 29px;
+              top: 3px;
+            }
+          }
+          &.error {
+            input {
+              border-color: $error-color;
+            }
+            .cross--pink {
+              display: inline-block;
+              left: 29px;
+              top: -6px;
+            }
+          }
+          /* span.error-msg {
+            padding-left: 33%;
+          } */
+          input {
+            width: 100%;
+            padding: 11px 16px;
+            border: 1px solid $input-default-border;
+            font: 14px/1.2 $font-family-base-regular;
+            color: $gray-citroen-bold;
+            box-shadow: none;
+            border-radius: 0;
+          }
+          label,
+          .form-control {
+            display: inline-block;
+            vertical-align: middle;
+            width: 50%;
+            padding: 0;
+          }
+          .form-control {
+            position: relative;
+            padding-left: 11px;
+          }
+          label {
+            text-align: right;
+            vertical-align: top;
+            padding: 12px;
+            line-height: 1.2;
+            width: 40.5%;
+            margin: 0;
+            font-size: 16px;
+          }
+          &:first-child {
+            padding-top: 0;
+          }
+        }
+        .last.error{
+          .cross--pink {
+            display: inline-block;
+            left: 29px;
+            top: -13px;
+          }
+        }
+      }
+      .cta-group {
+        .cta-link {
+          text-align: center;
+          text-decoration: underline;
+          span {
+            padding: 0;
+            &:before {
+              display: none;
+            }
+          }
+        }
+      }
+      .mentions-legales {
+        font-size: 14px;
+        line-height: 20px;
+        margin: 30px 0;
+      }
+      .confirm-mentions {
+        margin-bottom: 30px;
+        .input-checkbox {
+          label {
+            display: inline-block;
+            .label {
+              display: inline;
+            }
+          }
+        }
+        .check--gray,
+        .cross--pink {
+          display: none;
+        }
+        .label {
+          font-family: $font-family-base-regular;
+          color: $gray-citroen;
+          text-transform: lowercase;
+        }
+        .elemnt_input.input-checkbox {
+          margin-left: 0;
+          span {
+            cursor: pointer;
+          }
+          &.checked input[type="checkbox"] ~ label .checkbox_btn,
+          input[type="checkbox"]:checked ~ label .checkbox_btn {
+            border-color: $brand-lavender-grey;
+            border-width: 4px;
+            span.check {
+              display: block;
+              &:before {
+                top: 11px;
+                left: 11px;
+              }
+            }
+            &:after,
+            &:before {
+              background: $brand-lavender-grey;
+            }
+          }
+          &.erreurbox {
+            .cross--pink {
+              position: static;
+              padding-left: 20px;
+            }
+          }
+        }
+        label {
+          position: relative;
+        }
+        label.checked {
+          .check--gray {
+            display: inline-block;
+            position: absolute;
+            left: 14px;
+            top: 0;
+          }
+          .input.checkbox {
+            border-width: 4px;
+          }
+        }
+        .erreurbox {
+          position: relative;
+          .cross--pink {
+            display: inline-block;
+            position: absolute;
+            right: -20px;
+            top: 0;
+            padding-right: 0;
+          }
+        }
+        .error-msg {
+          color: $brand-rose;
+          padding-left: 25%;
+        }
+      }
+    }
+    .etape3 {
+      display: none;
+      .notifications {
+        .not-text-2 {
+          font-family: $font-family-base-bold;
+        }
+        .not-text-1 {
+          font-family: $font-family-base-regular;
+        }
+      }
+    }
+  }
+  .config-form {
+    padding-bottom: 15px;
+    .cta-group {
+      text-align: center;
+      .cta-link {
+        display: block;
+        padding-top: 20px;
+        color: $gray-dark;
+        span {
+          padding: 0;
+          font-size: 14px;
+          text-decoration: underline;
+        }
+      }
+      &.v2 {
+        .min {
+          display: none;
+        }
+        .link {
+          text-align: center;
+          display: inherit;
+        }
+        .text {
+          text-align: center;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+.control-box {
+  .pull-left {
+    box-shadow: inset 0 0 0 4px #afadc3;
+    float: left;
+  }
+  .pull-right {
+    float: right;
+    padding: 13px 0 12px;
+  }
+}

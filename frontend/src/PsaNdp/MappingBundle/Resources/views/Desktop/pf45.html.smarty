@@ -1,0 +1,13 @@
+<section class="slice-pf45 {if isset($slicePF45.anchorId)} {$slicePF45.anchorId} {/if}" {if isset($slicePF45.anchorId)} id="{$slicePF45.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePF45' } ]" data-html="{$slicePF45.urlJson}" data-picto="{$slicePF45.mapPicto}" data-picto-active="{$slicePF45.mapPictoActive}" data-picto-grouped="{$slicePF45.mapPictoGrouped}" data-label-link="{$slicePF45.labelLink}" data-map-title-region="{$slicePF45.titlesConcat.map.region}" data-map-title-subregion="{$slicePF45.titlesConcat.map.subregion}" data-map-title-city="{$slicePF45.titlesConcat.map.city}">
+  <h1>{$slicePF45.directoryTitle} <span>{$slicePF45.titlesConcat.countryPrefix}</span></h1>
+  <section class="center-box clearfix">
+    {foreach $slicePF45.directoryTexts as $text}
+    <p class="grid-col span_6_of_12">{$text.txt}</p>
+    {/foreach}
+  </section>
+  <h2 class="h1 title-map">{$slicePF45.directoryMap.title}</h2>
+  <section class="map center-box clearfix" data-country="{$slicePF45.country}">
+    <div class="results"><div class="scroller"><div></div></div></div>
+    <div id="map-canvas" class="map-canvas"></div>
+  </section>
+</section>

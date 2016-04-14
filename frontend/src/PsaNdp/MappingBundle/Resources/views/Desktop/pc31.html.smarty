@@ -1,0 +1,32 @@
+<section class="slice-pc31 {if isset($slicePC31.anchorId)} {$slicePC31.anchorId} {/if}" {if isset($slicePC31.anchorId)} id="{$slicePC31.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePC31' } ]">
+  {if isset($slicePC31.title)}
+  <h2>{$slicePC31.title}</h2>
+  {/if}
+  {if isset($slicePC31.subTitle)}
+  <h3>{$slicePC31.subTitle}</h3>
+  {/if}
+  <div class="slides">
+    {foreach $slicePC31.slides as $slide}
+    <div class="item">
+      {if isset($slide.src) }
+      <figure>
+        <img src="{$slide.src}" alt="{$slide.alt}" />
+      </figure>
+      {/if}
+      <div class="slideshow-desc">
+        {if isset($slide.title)}
+        <h3>{$slide.title}</h3>
+        {/if}
+        {if isset($slide.subTitle)}
+        <h4 class="{if isset($slide.subTitle.isGrey) and $slide.subTitle.isGrey eq true}has-grey{/if}"> {$slide.subTitle.txt} </h4>
+        {/if}
+        {if isset($slide.ctaList)}
+          {foreach $slide.ctaList as $cta}
+          {include file="./cta.html.smarty"}
+          {/foreach}
+        {/if}
+      </div>
+    </div>
+    {/foreach}
+  </div>
+</section>

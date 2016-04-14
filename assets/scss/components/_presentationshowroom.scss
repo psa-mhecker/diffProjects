@@ -1,0 +1,167 @@
+@charset 'UTF-8';
+
+$description-panel-font: #3c353f !default;
+$description-panel-tooltip: #aba6a8 !default;
+$description-panel-tooltip-desktop: #142032 !default;
+$description-panel-background: #ececee !default;
+
+.showroom-presentation {
+	position: relative;
+}
+
+.description-panel {
+	@include panel(
+	$border: false,
+	$bg: $description-panel-background
+	);
+	display: block;
+	margin-bottom: 0;
+
+	h2 {
+		font-size: rem-calc(30);
+	}
+
+	.reveal-date {
+		text-align: center;
+		line-height: rem-calc(80);
+		font-size: rem-calc(80);
+	}
+
+	.legal-notice {
+		margin-bottom: 0;
+		line-height: rem-calc(12);
+	}
+
+	.inline-cta {
+		margin: 10px 0;
+	}
+
+	p {
+		padding-bottom: 0;
+	}
+}
+
+.technical-infos {
+	margin-bottom: 10px;
+
+	p {
+		position: relative;
+		text-align: center;
+		color: $description-panel-font;
+	}
+
+	small {
+		font-size: rem-calc(14);
+	}
+
+	strong {
+		@include font-family('light');
+		font-size: rem-calc(30);
+		font-weight: normal;
+	}
+
+	.price-zone small {
+		display: block;
+	}
+
+	.has-tip {
+		position: absolute;
+		right: 0;
+		float: right;
+		background: $description-panel-tooltip;
+	}
+
+	.vcenter p {
+		display: inline-block;
+		width: 80%;
+		white-space: nowrap;
+	}
+}
+
+@media #{$medium-up} {
+	.description-panel {
+		@include panel(
+		$border: false,
+		$bg: rgba(71, 91, 108, .6)
+		);
+		display: inline-block;
+		transition: all .6s ease-in-out;
+		opacity: 0;
+		width: 330px;
+
+		h2 {
+			font-size: rem-calc(24);
+		}
+
+		.technical-infos {
+			p {
+				margin-bottom: 10px;
+				text-align: left;
+				line-height: rem-calc(18);
+			}
+
+			strong {
+				font-size: rem-calc(24);
+			}
+
+			.has-tip {
+				background: $black;
+			}
+		}
+
+		&.active {
+			opacity: 1;
+		}
+
+		&.cta-only {
+			@include panel(
+			$border: false,
+			$bg: transparent
+			);
+		}
+	}
+
+	.showroom-presentation {
+		.description-panel {
+			position: absolute;
+			top: calc(50% + 20px);
+			transform: translate(0, -50%);
+			z-index: 5;
+
+			&.right-position {
+				right: 5%;
+			}
+
+			&.left-position {
+				left: 5%;
+			}
+		}
+	}
+}
+
+@media #{$medium-only} {
+	.description-panel {
+		padding: rem-calc(10);
+		width: 220px;
+
+		h2 {
+			font-size: rem-calc(16);
+		}
+
+		.reveal-date {
+			line-height: rem-calc(60);
+			font-size: rem-calc(60);
+		}
+
+		.technical-infos {
+			strong {
+				font-size: rem-calc(16);
+			}
+
+			p {
+				margin-bottom: 10px;
+				line-height: rem-calc(16);
+			}
+		}
+	}
+}

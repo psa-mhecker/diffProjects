@@ -1,0 +1,40 @@
+.ico{
+  @extend %_sprites;
+  display: inline-block;
+  vertical-align: middle;
+
+  &.ico-next{
+    @extend %_sprite-slide-arrow-next;
+  }
+  &.ico-prev{
+    @extend %_sprite-slide-arrow-prev;
+  }
+  &.ico-next2{
+    @extend %_sprite-slide-arrow-next-grey;
+  }
+  &.ico-prev2{
+    @extend %_sprite-slide-arrow-prev-grey;
+  }
+  &.ico-popin-vision-next{
+    @extend %_sprite-slideVision-arrow-next;
+  }
+  &.ico-popin-vision-prev{
+    @extend %_sprite-slideVision-arrow-prev;
+  }
+  &.ico-badge{
+    @extend %_sprite-ico-badge;
+  }
+  &.ico-test{
+    @extend %_sprite-ico-test;
+  }
+  &.ico-fb{
+    @extend %_sprite-ico-fb;
+  }
+  &.ico-inbox{
+    @extend %_sprite-inbox;
+  }
+  &.ico-euro{
+    @extend %_sprite-euro;
+  }
+}
+

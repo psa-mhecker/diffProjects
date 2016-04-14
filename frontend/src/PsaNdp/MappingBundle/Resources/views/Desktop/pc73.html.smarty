@@ -1,0 +1,9 @@
+<section class="slice-pc73 test {if isset($slicePC73.anchorId)} {$slicePC73.anchorId} {/if}" {if isset($slicePC73.anchorId)} id="{$slicePC73.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePC73' } ]">
+  <section class="megaban" data-url="{$slicePC73.linkMega.url}" data-target="{$slicePC73.linkMega.target}">
+    <div class="element ">
+      <img src="{$slicePC73.imgUrl}" alt="{$slicePC73.imgAlt}" class="visu">
+    </div>
+    <p class="element title">{$slicePC73.title}</p>
+    <span class="Voffre"><a href="{$slicePC73.link.url}" class="link"{if isset($slicePC73.link.target)} target="{$slicePC73.link.target}"{/if}>{$slicePC73.link.name}</a></span>
+  </section>
+</section>

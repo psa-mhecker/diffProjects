@@ -1,0 +1,27 @@
+.ico{
+  @extend %_sprites;
+  display: inline-block;
+  vertical-align: middle;
+
+  &.ico-next{
+    @extend %_sprite-slide-arrow-next;
+  }
+  &.ico-prev{
+    @extend %_sprite-slide-arrow-prev;
+  }
+  &.ico-next2{
+    @extend %_sprite-slide-arrow-next-grey;
+  }
+  &.ico-prev2{
+    @extend %_sprite-slide-arrow-prev-grey;
+  }
+  &.ico-popin-vision-next{
+    @extend %_sprite-slide-arrow-next;
+  }
+  &.ico-popin-vision-prev{
+    @extend %_sprite-slide-arrow-prev;
+  }
+  &.ico-enlarge{
+    @extend %_sprite-icon-enlarge;
+  }
+}

@@ -1,0 +1,137 @@
+{assign var=i value=1}
+<section class="slice-pf51 {if isset($slicePF51.anchorId)} {$slicePF51.anchorId} {/if}" {if isset($slicePF51.anchorId)} id="{$slicePF51.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePF51' } ]">
+
+    <!-- inscription -->
+    {if isset($slicePF51.inscription) && $slicePF51.inscription == true}
+        <form action="" method="post" class="form-horizontal">
+            <div class="errorbox"></div>
+            <div class="peugeot-id">
+                <p>{$slicePF51.text}</p>
+                <a href="#" class="cta-btn" {if isset($slicePF51.target)}target="{$slicePF51.target}"{/if}>
+                    {$slicePF51.linkId}
+                </a>
+            </div>
+            <div class="select">
+                <label class="control-label">{$slicePF51.label.Civility}</label>
+
+                <div class="form-control">
+                    <select name="civilité" class="select-js"
+                            {if isset($slicePF51.label.required) and $slicePF51.label.required eq true}required
+                            data-msg-required="{$slicePF51.label.errorMsg}"{/if}  {if isset($slicePF51.label.disabled) and $slicePF51.label.disabled eq true}disabled{/if}>
+                        {foreach $slicePF51.option.optionCivility as $civil}
+                            <option value="{$i++}"{if isset($civil.target)} data-target="{$civil.target}"{/if}>{$civil}</option>
+                        {/foreach}
+                    </select>
+                    <a href="#" class="help"><!-- help --></a>
+                </div>
+            </div>
+            <div class="input-text">
+                <label class="control-label" for="prenom">{$slicePF51.label.firstName}</label>
+
+                <div class="form-control">
+                    <input type="text" name="prenom" placeholder=""
+                           {if isset($slicePF51.label.required) and $slicePF51.label.required eq true}required
+                           data-msg-required="{$slicePF51.label.errorMsg}"{/if}  {if isset($slicePF51.label.disabled) and $slicePF51.label.disabled eq true}disabled{/if}>
+                </div>
+            </div>
+            <div class="input-text">
+                <label class="control-label" for="nom">{$slicePF51.label.name}</label>
+
+                <div class="form-control">
+                    <input type="text" name="nom" placeholder=""
+                           {if isset($slicePF51.label.required) and $slicePF51.label.required eq true}required
+                           data-msg-required="{$slicePF51.label.errorMsg}"{/if}  {if isset($slicePF51.label.disabled) and $slicePF51.label.disabled eq true}disabled{/if}>
+                </div>
+            </div>
+            <div class="input-text">
+                <label class="control-label" for="email">{$slicePF51.label.email.name}</label>
+
+                <div class="form-control">
+                    <input type="email" name="email" placeholder=""
+                           {if isset($slicePF51.label.required) and $slicePF51.label.required eq true}required
+                           data-msg-required="{$slicePF51.label.errorMsg}"{/if}  {if isset($slicePF51.label.disabled) and $slicePF51.label.disabled eq true}disabled{/if} {if isset($slicePF51.label.email)} data-rule-email="true" data-msg-email="{$slicePF51.label.email.errorMsg}" {/if}>
+                </div>
+            </div>
+
+            <div class="checkbox-group">
+                <p>{$slicePF51.textAcceptance}</p>
+                {foreach $slicePF51.checkbox as $item}
+                    <div class="checkbox">
+                        <input type="checkbox" name="{$item.name}" id="{$item.name}" value=""
+                               {if isset($item.required) and $item.required eq true}required
+                               data-msg-required="{$item.errorMsg}"{/if}  {if isset($item.disabled) and $item.disabled eq true}disabled{/if}>
+                        <label for="{$item.name}">{$item.txt}</label>
+                    </div>
+                {/foreach}
+            </div>
+            <p class="notice">{$slicePF51.requiredFields}</p>
+
+            <div class="form-action">
+                <label class="control-label">
+                    <a href="#" {if isset($slicePF51.target)}target="{$slicePF51.target}"{/if}>{$slicePF51.textValidation}</a>
+                </label>
+                <div class="form-control">
+                	<div class="custom-button-group">
+	                    <button class="cta-block cta-btn cta-btn-4">{$slicePF51.btnCTA}</button>
+                    </div>
+                </div>
+            </div>
+            <p class="law-notice">{$slicePF51.lawText}</p>
+        </form>
+    {/if}
+    <!-- unsubscribe -->
+    {if isset($slicePF51.unsubscribe)}
+        <form action="" method="post" class="form-horizontal">
+            <div class="errorbox"></div>
+            <div class="input-text">
+                <p>{$slicePF51.text}</p>
+                {if isset($slicePF51.label.email)}
+                    <label class="control-label" for="email">{$slicePF51.label.email.name}</label>
+                    <div class="form-control">
+                        <input type="email" name="email" placeholder=""
+                               {if isset($slicePF51.label.required) and $slicePF51.label.required eq true}required
+                               data-msg-required="{$slicePF51.label.errorMsg}"{/if}  {if isset($slicePF51.label.disabled) and $slicePF51.label.disabled eq true}disabled{/if} {if isset($slicePF51.label.email)} data-rule-email="true" data-msg-email="{$slicePF51.label.email.errorMsg}" {/if}>
+                    </div>
+                {/if}
+                {if isset($slicePF51.checkbox.validation)}
+                    <div class="checkbox">
+                        <input type="checkbox" name="checkbox_1" value="" id="checkbox_1"
+                               {if isset($checkbox.required) and $checkbox.required eq true}required
+                               data-msg-required="{$checkbox.errorMsg}"{/if}  {if isset($checkbox.disabled) and $checkbox.disabled eq true}disabled{/if}>
+                        <label for="checkbox_1">{$slicePF51.checkbox.validation}</label>
+                    </div>
+                {/if}
+            </div>
+
+            <div class="radio-group">
+                <p>{$slicePF51.improvementText}</p>
+                <ul class="list-radio-horizontal">
+                    {foreach $slicePF51.radio as $item}
+                        <li class="radio">
+                            <input type="radio" name="radioMainReason" value="" id="{$item.name}"
+                                   {if isset($item.required) and $item.required eq true}required
+                                   data-msg-required="{$item.errorMsg}"{/if}  {if isset($item.disabled) and $item.disabled eq true}disabled{/if}>
+                            <label for="{$item.name}">{$item.txt}</label>
+                        </li>
+                    {/foreach}
+                </ul>
+            </div>
+            <div class="comment fields-hide-2">
+                <textarea name=""></textarea>
+            </div>
+
+            <p class="notice">{$slicePF51.requiredFields}</p>
+
+            <div class="form-action">
+                <div class="form-control">
+                	<div class="custom-button-group">
+	                    <button class="cta-block cta-btn cta-btn-4">{$slicePF51.btnCTA}</button>
+                    </div>
+                </div>
+            </div>
+            <p class="law-notice">{$slicePF51.lawText}</p>
+        </form>
+    {/if}
+
+
+</section>

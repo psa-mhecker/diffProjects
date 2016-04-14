@@ -1,0 +1,5 @@
+{% if not translatedPages is empty %}
+    {% for translatedPage in translatedPages %}
+        <link rel="alternate" hreflang="{{ translatedPage.culture }}" href="{{translatedPage.url}}" />
+    {% endfor %}
+{% endif %}

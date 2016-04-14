@@ -1,0 +1,29 @@
+<section class="slice-pc79 {if isset($slicePC79.anchorId)} {$slicePC79.anchorId} {/if}" {if isset($slicePC79.anchorId)} id="{$slicePC79.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePC79' } ]" datalayer="{$slicePC79.datalayer}">
+
+  {if !empty($slicePC79.title)}
+    <div class="row">
+      <h2 class="title">{$slicePC79.title}</h2>
+    </div>
+  {/if}
+
+  {if !empty($slicePC79.gallery)}
+    <div class="row">
+        <ul class="small-block-grid-2 medium-block-grid-3 popin-links" >
+        {foreach $slicePC79.gallery as $image}
+            <li {if $image@first}class="big-mur-media"{/if}>
+              <a href="{$image.size.original}" data-gtm='{ldelim}"eventType":"click","dataList":{ldelim}"event":"uaevent","eventCategory":"{$slicePC79.blockName}::position-{$slicePC79.blockOrder}","eventAction":"Select::Zoom","eventLabel":"Icon::Zoom::{$image.title|escape:javascript}"{rdelim}{rdelim}'>
+                {include file='../Components/images.html.smarty' image=$image class="" currentIndex=$image@index}
+              </a>
+            </li>
+        {/foreach}
+        </ul>
+    </div>
+  {/if}
+
+  {if isset($slicePC79.ctaList)}
+    {foreach $slicePC79.ctaList as $cta}
+      {include file="../Components/cta.html.smarty"}
+    {/foreach}
+  {/if}
+
+</section>

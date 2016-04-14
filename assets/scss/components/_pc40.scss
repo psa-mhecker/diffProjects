@@ -1,0 +1,18 @@
+@charset 'grunt UTF-8';
+
+// pc40.scss
+
+.slice-pc40 {
+	h3 {
+		text-align: center;
+	}
+
+	.pc40-visuel {
+		margin-bottom: rem-calc(15);
+		width: 100%;
+	}
+
+	figure {
+		margin-bottom: rem-calc(15);
+	}
+}

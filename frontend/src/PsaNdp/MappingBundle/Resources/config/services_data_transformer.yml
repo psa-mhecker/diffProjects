@@ -1,0 +1,339 @@
+parameters:
+    psa_ndp_mapping.pc5_1_colonne_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pc51ColonneDataTransformer
+    psa_ndp_mapping.pc7_2_colonnes_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pc72ColonnesDataTransformer
+    psa_ndp_mapping.pc8_contenu_2_colonnes_texte_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pc8Contenu2ColonnesTexteDataTransformer
+    psa_ndp_mapping.pc9_contenu_1_article_1_visuel_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pc9Contenu1Article1VisuelDataTransformer
+    psa_ndp_mapping.pc12_3_colonnes_texte_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pc123ColonnesTexteDataTransformer
+    psa_ndp_mapping.pc16_verbatim_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pc16VerbatimDataTransformer
+    psa_ndp_mapping.pc19_slideshow_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pc19SlideshowDataTransformer
+    psa_ndp_mapping.pc23_mur_media_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pc23MurMediaDataTransformer
+    psa_ndp_mapping.pc36_faq_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pc36FAQDataTransformer
+    psa_ndp_mapping.pc39_slideshow_offre_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pc39SlideshowOffreDataTransformer
+    psa_ndp_mapping.pc40_cta_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pc40CTADataTransformer
+    psa_ndp_mapping.pc41_mentions_juridiques_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pc41MentionsJuridiquesDataTransformer
+    psa_ndp_mapping.pc42_actualites_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pc42ActualitesDataTransformer
+    psa_ndp_mapping.pc43_applications_mobiles_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pc43ApplicationsMobilesDataTransformer
+    psa_ndp_mapping.pc47_point_de_vente_unique_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pc47PointDeVenteUniqueDataTransformer
+    psa_ndp_mapping.pc52_apv_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pc52ApvDataTransformer
+    psa_ndp_mapping.pc53_apv_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pc53ApvDataTransformer
+    psa_ndp_mapping.pc59_tools_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pc59ToolsDataTransformer
+    psa_ndp_mapping.pc60_recapitulatif_et_cta_showroom_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pc60RecapitulatifEtCtaShowroomDataTransformer
+    psa_ndp_mapping.pc61_visuel_boussole_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pc61VisuelBoussoleDataTransformer
+    psa_ndp_mapping.pc62_application_boussole_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pc62ApplicationBoussoleDataTransformer
+    psa_ndp_mapping.pc63_lien_boussole_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pc63LienBoussoleDataTransformer
+    psa_ndp_mapping.pc68_contenu_1_article_2_ou_3_visuels_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pc68Contenu1Article2Ou3VisuelsDataTransformer
+    psa_ndp_mapping.pc69_contenu_2_colonnes_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pc69Contenu2ColonnesDataTransformer
+    psa_ndp_mapping.pc73_mega_banniere_dynamique_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pc73MegaBanniereDynamiqueDataTransformer
+    psa_ndp_mapping.pc77_dimension_vehicule_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pc77DimensionVehiculeDataTransformer
+    psa_ndp_mapping.pc79_mur_media_manuel_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pc79MurMediaManuelDataTransformer
+    psa_ndp_mapping.pc85_reevo_data_transformer.class: PsaNdp\MappingBundle\Transformers\PC85ReevoDataTransformer
+    psa_ndp_mapping.pc95_interested_by_data_transformer.class: PsaNdp\MappingBundle\Transformers\PC95InterestedByDataTransformer
+    psa_ndp_mapping.pc99_global_header_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pc99GlobalHeaderDataTransformer
+    psa_ndp_mapping.pf6_drag_and_drop_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pf6DragAndDropDataTransformer
+    psa_ndp_mapping.pf8_webstore_vehicle_neuf_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pf8WebstoreVehiculeNeufDataTransformer
+    psa_ndp_mapping.pf11_recherche_point_de_vente_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pf11RecherchePointDeVenteDataTransformer
+    psa_ndp_mapping.pf14_reseaux_sociaux_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pf14ReseauxSociauxDataTransformer
+    psa_ndp_mapping.pf16_autres_reseaux_sociaux_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pf16AutresReseauxSociauxDataTransformer
+    psa_ndp_mapping.pf27_car_picker_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pf27CarPickerDataTransformer
+    psa_ndp_mapping.pf30_popin_code_postal_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pf30PopinCodePostalDataTransformer
+    psa_ndp_mapping.pf32_filtre_apv_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pf32FiltreAPVDataTransformer
+    psa_ndp_mapping.pf33_car_compatibility_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pf33CarCompatibilityDataTransformer
+    psa_ndp_mapping.pf42_selectionneur_de_teinte_360_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pf42SelectionneurDeTeinte360DataTransformer
+    psa_ndp_mapping.pf44_devenir_agent_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pf44DevenirAgentDataTransformer
+    psa_ndp_mapping.pf53_finitions_motorisations_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pf53FinitionsMotorisationDataTransformer
+    psa_ndp_mapping.pn2_onglet_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pn2OngletDataTransformer
+    psa_ndp_mapping.pn3_toggle_accordeon_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pn3ToggleAccordeonDataTransformer
+    psa_ndp_mapping.pn7_en_tete_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pn7EnTeteDataTransformer
+    psa_ndp_mapping.pn13_ancres_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pn13AncresDataTransformer
+    psa_ndp_mapping.pn18_iframe_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pn18IFrameDataTransformer
+    psa_ndp_mapping.pf2_presentation_showroom_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pf2PresentationShowroomDataTransformer
+    psa_ndp_mapping.pt2_footer_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pt2FooterDataTransformer
+    psa_ndp_mapping.pt3_je_veux_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pt3JeVeuxDataTransformer
+    psa_ndp_mapping.pt15_plan_du_site_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pt15PlanDuSiteDataTransformer
+    psa_ndp_mapping.pt17_choix_de_la_langue_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pt17ChoixDeLaLangueDataTransformer
+    psa_ndp_mapping.pt18_pre_home_importateur_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pt18PreHomeImportateurDataTransformer
+    psa_ndp_mapping.pt19_engagements_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pt19EngagementsDataTransformer
+    psa_ndp_mapping.pt20_master_page_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pt20MasterPageDataTransformer
+    psa_ndp_mapping.pt21_navigation_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pt21NavigationDataTransformer
+    psa_ndp_mapping.pt22_my_peugeot_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pt22MyPeugeotDataTransformer
+    psa_ndp_mapping.pf23_range_bar_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pf23RangeBarDataTransformer
+    psa_ndp_mapping.pt23_module_qualification_data_transformer.class: PsaNdp\MappingBundle\Transformers\PT23ModuleQualificationDataTransformer
+    psa_ndp_mapping.pf17_formulaires_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pf17FormulairesDataTransformer
+    psa_ndp_mapping.pc78_usp_mosaique_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pc78UspMosaiqueDataTransformer
+    psa_ndp_mapping.pc84_catalogue_applications_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pc84CatalogueApplicationsDataTransformer
+    psa_ndp_mapping.pc83_contenu_accessoires_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pc83ContenuAccessoiresDataTransformer
+    psa_ndp_mapping.pf25_filtres_resultats_car_selector_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pf25FilterCarSelectorDataTransformer
+    psa_ndp_mapping.pn15_entete_confishow_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pn15EnteteConfishowDataTransformer
+    psa_ndp_mapping.pn14_navigation_confishow_data_transformer.class: PsaNdp\MappingBundle\Transformers\Pn14NavigationConfishowDataTransformer
+    psa_ndp_mapping.cs99_configshow_test_data_transformer.class: PsaNdp\MappingBundle\Transformers\Cs99ConfigshowTestDataTransformer
+services:
+    psa_ndp_mapping.pc5_1_colonne_data_transformer:
+        class: '%psa_ndp_mapping.pc5_1_colonne_data_transformer.class%'
+        arguments:
+            - '@psa_ndp_mapping.object.block.pc5_1_colonne'
+        tags:
+            - { name: psa_ndp.cta_aware }
+    psa_ndp_mapping.pc7_2_colonnes_data_transformer:
+        class: '%psa_ndp_mapping.pc7_2_colonnes_data_transformer.class%'
+        arguments:
+            - '@psa_ndp_mapping.object.block.pc7_2_colonnes'
+        tags:
+            - { name: psa_ndp.cta_aware }
+    psa_ndp_mapping.pc8_contenu_2_colonnes_texte_data_transformer:
+        class: '%psa_ndp_mapping.pc8_contenu_2_colonnes_texte_data_transformer.class%'
+        arguments:
+            - '@psa_ndp_mapping.object.block.pc8_content_2_column_text'
+        tags:
+            - { name: psa_ndp.cta_aware }
+    psa_ndp_mapping.pc9_contenu_1_article_1_visuel_data_transformer:
+        class: '%psa_ndp_mapping.pc9_contenu_1_article_1_visuel_data_transformer.class%'
+        arguments:
+            - '@psa_ndp_mapping.object.block.pc9_content_one_visual'
+        tags:
+            - { name: psa_ndp.cta_aware }
+    psa_ndp_mapping.pc12_3_colonnes_texte_data_transformer:
+        class: '%psa_ndp_mapping.pc12_3_colonnes_texte_data_transformer.class%'
+        arguments:
+            - '@psa_ndp_mapping.object.block.pc12_3_colonnes'
+        tags:
+            - { name: psa_ndp.cta_aware }
+    psa_ndp_mapping.pc16_verbatim_data_transformer:
+        class: '%psa_ndp_mapping.pc16_verbatim_data_transformer.class%'
+        tags:
+            - { name: psa_ndp.cta_aware }
+    psa_ndp_mapping.pc19_slideshow_data_transformer:
+        class: '%psa_ndp_mapping.pc19_slideshow_data_transformer.class%'
+        arguments:
+            - '@psa_ndp_mapping.object.block.pc19_slideshow'
+    psa_ndp_mapping.pc23_mur_media_data_transformer:
+        class: '%psa_ndp_mapping.pc23_mur_media_data_transformer.class%'
+        arguments:
+           - '@psa_ndp_mapping.object.block.pc23_mur_media'
+    psa_ndp_mapping.pc36_faq_data_transformer:
+        class: '%psa_ndp_mapping.pc36_faq_data_transformer.class%'
+        arguments:
+            - '@psa_ndp_mapping.object.block.pc36_faq'
+        tags:
+            - { name: psa_ndp.cta_aware }
+    psa_ndp_mapping.pc39_slideshow_offre_data_transformer:
+        class: '%psa_ndp_mapping.pc39_slideshow_offre_data_transformer.class%'
+    psa_ndp_mapping.pc40_cta_data_transformer:
+        class: '%psa_ndp_mapping.pc40_cta_data_transformer.class%'
+        arguments:
+            - '@psa_ndp_mapping.object.block.pc40_cta'
+        tags:
+            - { name: psa_ndp.cta_aware }
+    psa_ndp_mapping.pc41_mentions_juridiques_data_transformer:
+        class: '%psa_ndp_mapping.pc41_mentions_juridiques_data_transformer.class%'
+        arguments:
+            - '@psa_ndp_mapping.object.block.pc41_mentions_juridiques'
+    psa_ndp_mapping.pc42_actualites_data_transformer:
+        class: '%psa_ndp_mapping.pc42_actualites_data_transformer.class%'
+    psa_ndp_mapping.pc43_applications_mobiles_data_transformer:
+        class: '%psa_ndp_mapping.pc43_applications_mobiles_data_transformer.class%'
+    psa_ndp_mapping.pc47_point_de_vente_unique_data_transformer:
+        class: '%psa_ndp_mapping.pc47_point_de_vente_unique_data_transformer.class%'
+        tags:
+            - { name: psa_ndp.cta_aware }
+    psa_ndp_mapping.pc52_apv_data_transformer:
+        class: '%psa_ndp_mapping.pc52_apv_data_transformer.class%'
+        arguments: [@psa_ndp_mapping.object.block.pc52_apv]
+    psa_ndp_mapping.pc53_apv_data_transformer:
+        class: '%psa_ndp_mapping.pc53_apv_data_transformer.class%'
+        arguments: [@psa_ndp_mapping.object.block.pc53_apv]
+    psa_ndp_mapping.pc59_tools_data_transformer:
+            class: '%psa_ndp_mapping.pc59_tools_data_transformer.class%'
+            arguments: [@psa_ndp_mapping.object.block.pc59_tools]
+            tags:
+                - { name: psa_ndp.cta_aware }
+    psa_ndp_mapping.pc61_visuel_boussole_data_transformer:
+        class: '%psa_ndp_mapping.pc61_visuel_boussole_data_transformer.class%'
+    psa_ndp_mapping.pc63_lien_boussole_data_transformer:
+        class: '%psa_ndp_mapping.pc63_lien_boussole_data_transformer.class%'
+        tags:
+            - { name: psa_ndp.cta_aware }
+    psa_ndp_mapping.pc68_contenu_1_article_2_ou_3_visuels_data_transformer:
+        class: '%psa_ndp_mapping.pc68_contenu_1_article_2_ou_3_visuels_data_transformer.class%'
+        arguments:
+            - '@psa_ndp_mapping.object.block.pc68_contenu_1_article_2_ou_3_visuels'
+    psa_ndp_mapping.pc69_contenu_2_colonnes_data_transformer:
+        class: '%psa_ndp_mapping.pc69_contenu_2_colonnes_data_transformer.class%'
+        arguments:
+            - '@psa_ndp_mapping.object.block.pc69_contenu_2_colonnes'
+        tags:
+            - { name: psa_ndp.cta_aware }
+    psa_ndp_mapping.pc73_mega_banniere_dynamique_data_transformer:
+        class: '%psa_ndp_mapping.pc73_mega_banniere_dynamique_data_transformer.class%'
+        arguments:
+            - '@psa_ndp_mapping.object.block.pc73_mega_banniere_dynamique'
+    psa_ndp_mapping.pc77_dimension_vehicule_data_transformer:
+        class: '%psa_ndp_mapping.pc77_dimension_vehicule_data_transformer.class%'
+        arguments:
+            - '@psa_ndp_mapping.object.block.pc77_dimension_vehicule'
+    psa_ndp_mapping.pc79_mur_media_manuel_data_transformer:
+        class: '%psa_ndp_mapping.pc79_mur_media_manuel_data_transformer.class%'
+        arguments:
+            - '@psa_ndp_mapping.object.block.pc79_mur_media_manuel'
+            - '@psa_ndp_streamlike'
+    psa_ndp_mapping.pc85_reevo_data_transformer:
+        class: '%psa_ndp_mapping.pc85_reevo_data_transformer.class%'
+        arguments:
+            - '@psa_ndp_mapping.object.block.pc85_reevo'
+    psa_ndp_mapping.pc95_interested_by_data_transformer:
+        class: '%psa_ndp_mapping.pc95_interested_by_data_transformer.class%'
+        arguments:
+            - '@psa_ndp_mapping.object.block.pc95_interested_by'
+    psa_ndp_mapping.pc99_global_header_data_transformer:
+        class: '%psa_ndp_mapping.pc99_global_header_data_transformer.class%'
+    psa_ndp_mapping.pf6_drag_and_drop_data_transformer:
+        class: '%psa_ndp_mapping.pf6_drag_and_drop_data_transformer.class%'
+        arguments:
+            - '@psa_ndp_mapping.object.block.pf6_drag_drop'
+        tags:
+            - { name: psa_ndp.cta_aware }
+    psa_ndp_mapping.pf8_webstore_vehicle_neuf_data_transformer:
+        arguments:
+            - '@psa_ndp_mapping.object.block.pf8_webstore_vehicle_neuf'
+        class: '%psa_ndp_mapping.pf8_webstore_vehicle_neuf_data_transformer.class%'
+    psa_ndp_mapping.pf11_recherche_point_de_vente_data_transformer:
+        class: '%psa_ndp_mapping.pf11_recherche_point_de_vente_data_transformer.class%'
+        arguments:
+            - '@psa_ndp_mapping.object.block.pf11_recherche_point_de_vente'
+            - '@psa_ndp_mapping.object.block.pf11_recherche_point_de_vente_cas'
+    psa_ndp_mapping.pf14_reseaux_sociaux_data_transformer:
+        class: '%psa_ndp_mapping.pf14_reseaux_sociaux_data_transformer.class%'
+    psa_ndp_mapping.pf16_autres_reseaux_sociaux_data_transformer:
+        class: '%psa_ndp_mapping.pf16_autres_reseaux_sociaux_data_transformer.class%'
+    psa_ndp_mapping.pf23_range_bar_data_transformer:
+        class: '%psa_ndp_mapping.pf23_range_bar_data_transformer.class%'
+        arguments:
+            - '@psa_ndp_mapping.object.block.pf23_range_bar'
+    psa_ndp_mapping.pf27_car_picker_data_transformer:
+        class: '%psa_ndp_mapping.pf27_car_picker_data_transformer.class%'
+        arguments:
+            - '@psa_ndp_mapping.object.block.pf27_car_picker'
+    psa_ndp_mapping.pf30_popin_code_postal_data_transformer:
+        class: '%psa_ndp_mapping.pf30_popin_code_postal_data_transformer.class%'
+        arguments:
+            - '@psa_ndp_mapping.object.block.pf30_popin_code_postal'
+    psa_ndp_mapping.pf32_filtre_apv_data_transformer:
+        class: '%psa_ndp_mapping.pf32_filtre_apv_data_transformer.class%'
+    psa_ndp_mapping.pf33_car_compatibility_data_transformer:
+        class: '%psa_ndp_mapping.pf33_car_compatibility_data_transformer.class%'
+        arguments:
+            - '@psa_ndp_mapping.object.block.pf33_car_compatibility'
+    psa_ndp_mapping.pf42_selectionneur_de_teinte_360_data_transformer:
+        class: '%psa_ndp_mapping.pf42_selectionneur_de_teinte_360_data_transformer.class%'
+        arguments:
+            - '@psa_ndp_mapping.object.block.pf42_color_picker'
+    psa_ndp_mapping.pf44_devenir_agent_data_transformer:
+        class: '%psa_ndp_mapping.pf44_devenir_agent_data_transformer.class%'
+        arguments:
+            - '@psa_ndp_mapping.object.block.pf44_become_agent'
+    psa_ndp_mapping.pf53_finitions_motorisations_data_transformer:
+        class: '%psa_ndp_mapping.pf53_finitions_motorisations_data_transformer.class%'
+        arguments:
+            - '@psa_ndp_mapping.object.block.pf53_finitions'
+            - '@psa_ndp_mapping.object.block.pf58_object.pf58_motorisation'
+            - '@psa_ndp_mapping.object.block.pf53_finitions_mobile'
+            - '@psa_ndp_mapping.object.block.pf58_object.pf58_motorisation_mobile'
+            - '@psa_ndp_mapping.manager.price_manager'
+    psa_ndp_mapping.pc83_contenu_accessoires_data_transformer:
+        class: '%psa_ndp_mapping.pc83_contenu_accessoires_data_transformer.class%'
+        arguments:
+            - '@psa_ndp_mapping.object.block.pc83_contenu_accessoires'
+    psa_ndp_mapping.pn2_onglet_data_transformer:
+        class: '%psa_ndp_mapping.pn2_onglet_data_transformer.class%'
+    psa_ndp_mapping.pn3_toggle_accordeon_data_transformer:
+        class: '%psa_ndp_mapping.pn3_toggle_accordeon_data_transformer.class%'
+    psa_ndp_mapping.pn7_en_tete_data_transformer:
+        class: '%psa_ndp_mapping.pn7_en_tete_data_transformer.class%'
+        arguments:
+            - '@psa_ndp_mapping.object.block.pn7_en_tete_data'
+        tags:
+            - { name: psa_ndp.cta_aware }
+    psa_ndp_mapping.pn13_ancres_data_transformer:
+        class: '%psa_ndp_mapping.pn13_ancres_data_transformer.class%'
+        arguments: [@psa_ndp_mapping.object.block.pn13_anchor]
+    psa_ndp_mapping.pn18_iframe_data_transformer:
+        class: '%psa_ndp_mapping.pn18_iframe_data_transformer.class%'
+        arguments:
+            - '@psa_ndp_mapping.object.block.pn18_iframe'
+    psa_ndp_mapping.pf2_presentation_showroom_data_transformer:
+        class: '%psa_ndp_mapping.pf2_presentation_showroom_data_transformer.class%'
+        arguments:
+            - '@psa_ndp_mapping.object.block.pf2_presentation_showroom'
+    psa_ndp_mapping.pt2_footer_data_transformer:
+        class: '%psa_ndp_mapping.pt2_footer_data_transformer.class%'
+        arguments:
+            - '@psa_ndp_mapping.object.block.pt2_footer'
+        tags:
+            - { name: psa_ndp.cta_aware }
+    psa_ndp_mapping.pt3_je_veux_data_transformer:
+        class: '%psa_ndp_mapping.pt3_je_veux_data_transformer.class%'
+        tags:
+            - { name: psa_ndp.cta_aware }
+    psa_ndp_mapping.pt15_plan_du_site_data_transformer:
+        class: '%psa_ndp_mapping.pt15_plan_du_site_data_transformer.class%'
+        arguments:
+            - '@psa_ndp_mapping.object.block.pt15_site_map'
+    psa_ndp_mapping.pt17_choix_de_la_langue_data_transformer:
+        class: '%psa_ndp_mapping.pt17_choix_de_la_langue_data_transformer.class%'
+        tags:
+            - { name: psa_ndp.cta_aware }
+    psa_ndp_mapping.pt18_pre_home_importateur_data_transformer:
+        class: '%psa_ndp_mapping.pt18_pre_home_importateur_data_transformer.class%'
+    psa_ndp_mapping.pt19_engagements_data_transformer:
+        class: '%psa_ndp_mapping.pt19_engagements_data_transformer.class%'
+    psa_ndp_mapping.pt20_master_page_data_transformer:
+        class: '%psa_ndp_mapping.pt20_master_page_data_transformer.class%'
+        arguments:
+            - '@psa_ndp_mapping.object.block.pt20_master_page'
+        tags:
+            - { name: psa_ndp.cta_aware }
+    psa_ndp_mapping.pt21_navigation_data_transformer:
+        class: '%psa_ndp_mapping.pt21_navigation_data_transformer.class%'
+        arguments:
+            - '@psa_ndp_mapping.object.block.pt21_navigation_data'
+        tags:
+            - { name: psa_ndp.cta_aware }
+    psa_ndp_mapping.pt22_my_peugeot_data_transformer:
+        class: '%psa_ndp_mapping.pt22_my_peugeot_data_transformer.class%'
+        arguments:
+            - '@psa_ndp_mapping.object.block.pt22_my_peugeot'
+    psa_ndp_mapping.pt23_module_qualification_data_transformer:
+        class: '%psa_ndp_mapping.pt23_module_qualification_data_transformer.class%'
+        arguments:
+            - '@psa_ndp_mapping.object.block.pt23_module_qualification'
+    psa_ndp_mapping.pc60_recapitulatif_et_cta_showroom_data_transformer:
+        class: '%psa_ndp_mapping.pc60_recapitulatif_et_cta_showroom_data_transformer.class%'
+        arguments:
+            - '@psa_ndp_mapping.object.block.pc60_recapitulatif_et_cta_showroom'
+    psa_ndp_mapping.pf17_formulaires_data_transformer:
+        class: '%psa_ndp_mapping.pf17_formulaires_data_transformer.class%'
+        arguments:
+            - '@psa_ndp_mapping.object.block.pf17_formulaires'
+    psa_ndp_mapping.pc78_usp_mosaique_data_transformer:
+        class: '%psa_ndp_mapping.pc78_usp_mosaique_data_transformer.class%'
+        arguments:
+            - '@psa_ndp_mapping.object.block.pc78_usp_mosaique'
+    psa_ndp_mapping.pc84_catalogue_applications_data_transformer:
+        class: '%psa_ndp_mapping.pc84_catalogue_applications_data_transformer.class%'
+        arguments:
+            - '@psa_ndp_mapping.object.block.pc84_catalogue_applications'
+    psa_ndp_mapping.pf25_filtres_resultats_car_selector_data_transformer:
+        class: '%psa_ndp_mapping.pf25_filtres_resultats_car_selector_data_transformer.class%'
+        arguments:
+            - @psa_ndp_mapping.object.block.pf25_filter_car_selector
+    psa_ndp_mapping.pn15_entete_confishow_data_transformer:
+        class: '%psa_ndp_mapping.pn15_entete_confishow_data_transformer.class%'
+        arguments:
+            - '@psa_ndp_mapping.object.block.pn15_entete_confishow'
+    psa_ndp_mapping.pn14_navigation_confishow_data_transformer:
+        class: '%psa_ndp_mapping.pn14_navigation_confishow_data_transformer.class%'
+        arguments:
+            - '@psa_ndp_mapping.object.block.pn14_navigation_confishow'
+    psa_ndp_mapping.cs99_configshow_test_data_transformer:
+        class: '%psa_ndp_mapping.cs99_configshow_test_data_transformer.class%'
+        arguments:
+            - '@psa_ndp_mapping.object.block.cs99_configshow_test'

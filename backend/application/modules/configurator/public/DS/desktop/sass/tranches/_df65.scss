@@ -1,0 +1,276 @@
+.slice-df65 {
+        &__close {
+            position: absolute;
+            right: 25px;
+            top: 25px;
+            cursor: pointer;
+            &::before {
+                content: url(../img/cross.png);
+            }
+        }
+        p {
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        .ico {
+            vertical-align: middle;
+            margin-left: 15px;
+        }
+        .form-heading {
+            font-family: $font-family-base-regular;
+            font-weight: 300;
+            text-align: center;
+            color: $dark-champagne;
+            font-size: 13px;
+        }
+        .input-text {
+            margin: auto;
+            max-width: 700px;
+            padding: 16px 0 0;
+            position: relative;
+            text-align: center;
+            label {
+                width: 32%;
+                display: inline-block;
+                color: $warm-black;
+                font-family: $font-family-base-regular;
+                font-size: 13px;
+                margin-top: 10px;
+                vertical-align: top;
+                padding: 0 12px 0 32px;
+                text-align: left;
+                line-height: 2;
+                float: left;
+            }
+            input {
+                background-color: $light_champagne;
+                border: 1px solid transparent;
+                box-shadow: 0 0 0;
+                color: $gray-dark;
+                display: inline-block;
+                font: 12px/1.2 $font-family-base-regular;
+                outline: medium none;
+                padding: 11px 16px;
+                width: 50%;
+            }
+
+            .ico {
+                position: absolute;
+                right: 3%;
+                top: 21px;
+            }
+        }
+        h1 {
+            font-size: 30px;
+            color: $form_errors_color;
+            text-transform: uppercase;
+            text-align: center;
+            margin: auto;
+            font-family: $font-family-brand;
+            font-weight: 400;
+            width: 321px;
+            line-height: 1;
+        }
+        .elemnt_input {
+            .error-msg {
+                margin: 12px 0 0 41%;
+                font-size: 13px;
+                text-align: left;
+                color: $form_errors_color;
+                display: block;
+                width: 50%;
+                &.hidden {
+                    display: none;
+                }
+            }
+            .hidden {
+                display: none;
+            }
+            input.error {
+                border: 1px solid $form_errors_color;
+            }
+        }
+        .legal-info {
+            margin-bottom: 30px;
+            text-align: center;
+            width: 100%;
+            font-family: $font-family-base-regular;
+            p {
+                font-size: 14px;
+                line-height: 20px;
+                margin-top: 38px;
+                margin-bottom: 38px;
+                color: $dark-champagne;
+            }
+            .cross {
+                padding-left: 20px;
+            }
+            .error-msg {
+                display: block;
+                color: $form_errors_color;
+                text-align: center;
+                margin: 12px 0 0 0;
+                font: 12px/1.2 $font-family-base-regular;
+                &.hidden {
+                    display: none;
+                }
+            }
+        }
+        
+            margin-left: 0;
+            input[type="checkbox"]:checked ~ label .checkbox_btn {
+                border-color: $brand-lavender-grey;
+            }
+            label {
+                color: $gray-dark;
+                text-transform: inherit;
+                font-family: $font-family-base-regular;
+                position:relative;
+                .label {
+                    width: auto;
+                    font-size: 11px;
+                    text-transform: uppercase;
+                    color: $dark_champagne;
+                }
+                .ico--error {
+                    position:absolute;
+                }
+            }
+            .input-checkbox input[type="checkbox"] ~ label .label {
+                font-size: 11px;
+            }
+            .radio_btn {
+                margin:0 10px;
+            }
+        
+        .text-link {
+            text-decoration: none;
+            display: block;
+            text-align: right;
+            text-transform: uppercase;
+            float: left;
+            font-size: 13px;
+            color: $dark_champagne;
+            margin-top: 11px;
+            font-family: $font-family-base-regular;
+            width: 50%;
+            padding-right: 3%;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        .button-link {
+            text-align: left;
+            float: right;
+            font-family: $font-family-base-regular;
+            width: 50%;
+            padding-left: 4%;
+            .btn.btn-primary {
+                background-color: transparent;
+                color: $dark_champagne;
+                padding: 8px 0;
+                width: 50%;  
+                min-width: 144px;             
+
+                &:hover {
+                    color:$champagne;
+                    border-color:$champagne;
+                }
+            }
+            span:after {
+                @extend %_sprites;
+                @extend %_sprite-arrow-2-small;
+                content: "";
+                display: inline-block;
+                position: absolute;
+                height: 14px;
+                width: 12px;
+                right: 12px;
+                transform: rotate(180deg);
+                top: 11px;
+            }
+        }
+        .btn.return {
+            padding: 20px 20px 20px 10px;
+            width: 270px;
+            margin-top: 15px;
+
+            span {
+                padding: 0px;
+                &:before {
+                    content: "";
+                    width: 7px;
+                    height: 17px;
+                    background: url("../img/arrow.png") no-repeat center;
+                    display: inline-block;
+                    margin-right: 20px;
+                    vertical-align: bottom;
+                }
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+        .frame1 {
+            padding: 15px 50px 15px;
+            display: inline-block;
+        }
+        .ico--close {
+            margin-right: 3px;
+            margin-top: -13px;
+            padding: 0;
+        }
+        .frame2 {
+            text-align: center;
+            width: 100% !important;
+            padding: 16px 19px 17px;
+            display: inline-block;
+            p {
+                font-size: 14px;
+                color: $dark-champagne;
+                margin-top: 42px;
+                font-family: $font-family-base-regular;
+                line-height: 20px;
+            }
+            .legal-info__text {
+                margin-top: 28px;
+                margin-bottom: 42px;
+            }
+            .btn.return {
+                margin-top: -12px;
+                padding: 0;
+                width: auto;
+                border: 0;
+                color: $dark_champagne;
+                font-size: 11px;
+                text-transform: uppercase;
+                float: left;
+                font-family: $font-family-base-regular;
+                position:absolute;
+                left:25px;
+                font-size: 13px;
+                span:before {
+                    margin-right: 10px;
+                }
+                &:before {
+                    @extend %_sprites;
+                    @extend %_sprite-arrow-2-small;
+                    content: "";
+                    display: inline-block;
+                    position: absolute;
+                    height: 15px;
+                    width: 8px;
+                    left: 0;
+                    top: 2px;
+                }
+                span {
+                    padding: 8px 0;
+                    &:hover {
+                        color:$champagne;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+}

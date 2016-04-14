@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<plugin>
-	<title>Portail</title>
-	<description>Gestion de pages de type portail</description>
-	<version>2.0</version>
-	<date>27/06/2011</date>
-	<category>Widget</category>
-</plugin>

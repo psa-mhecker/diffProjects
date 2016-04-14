@@ -1,0 +1,118 @@
+<section class="slice-pe1 {if isset($slicePE1.anchorId)} {$slicePE1.anchorId} {/if}" {if isset($slicePE1.anchorId)} id="{$slicePE1.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePE1' } ]">
+{if isset($headerLight)}
+  <header>
+    <div class="logo"></div>
+    <h1 class="title"><span>{$headerLight.title}</span></h1>
+  </header>
+{else}
+  {assign  var="count" value=$slicePE1.navShoppingTools|count}
+  <nav class="clearfix">
+    <ul class="links">
+      {foreach $slicePE1.headerLightItems as $item}
+        <li>
+          <a href="{$item.url}" {if isset($item.class)}class="icon {$item.class}"{/if} {if isset($item.target)}target="{$item.target}"{/if}>{$item.txt}</a>
+        </li>
+      {/foreach}
+    </ul>
+    {if isset($slicePE1.navShoppingTools)}
+      <ul class="nav-shopping-tools">
+          {foreach $slicePE1.navShoppingTools as $item}
+            <li class="{if $item.txt=='MY PEUGEOT'}mypeugeot{else}liens-utiles{/if}">
+                <a href="{$item.url}" {if isset($item.target)}target="{$item.target}"{/if}><span>{$item.txt}</span></a>
+            </li>
+          {/foreach}
+      </ul>
+    {/if}
+  </nav>
+  <div>
+    <section class="menu-links-content {if $count eq 1 }pos-top{/if} ">
+      <h1>{$slicePE1.titleNavShopping}</h1>
+      {if isset($slicePE1.4col)}
+      <div class="cols col4 clearfix slice-inside-margin">
+        {foreach $slicePE1.4col as $col}
+        <div class="col grid-col span_3_of_12">
+          <div class="pe01head">
+            <img src="{$col.img}" alt="{$col.alt}" class="visuCol">
+          </div>
+            <h2>{$col.titleCol}</h2>
+          <ul class="list_style ">
+            {foreach $col.listLinks as $linkCol}
+              <li>
+                <a href="{$linkCol.url}"  {if isset($linkCol.target)}target="{$linkCol.target}"{/if}>
+                <span>{$linkCol.titleLink}</span>
+                </a>
+              </li>
+            {/foreach}
+          </ul>
+        </div>
+        {/foreach}
+      </div>
+      {/if}
+      {if isset($slicePE1.3col)}
+      <div class="cols  clearfix slice-inside-margin">
+        {foreach $slicePE1.3col as $col}
+        <div class="col grid-col span_3_of_12">
+          <img src="{$col.img}" alt="{$col.alt}" class="visuCol">
+          <h2>{$col.titleCol}</h2>
+          <ul class="list_style ">
+            {foreach $col.listLinks as $linkCol}
+              <li>
+                <a href="{$linkCol.url}"  {if isset($linkCol.target)}target="{$linkCol.target}"{/if}>
+                <span>{$linkCol.titleLink}</span>
+                </a>
+              </li>
+            {/foreach}
+          </ul>
+        </div>
+        {/foreach}
+      </div>
+      {/if}
+    </section>
+    <div class="overlay"></div>
+  </div>
+  <div class="header-bottom clearfix">
+    <div class="logo"><a href="{$slicePE1.logo.url}"><img src="{$slicePE1.logo.src}" alt="{$slicePE1.logo.alt}"></a></div>
+    <div class="title-header">
+      <div>
+        <h1>{$slicePE1.title}</h1>
+        <h2>{$slicePE1.subTitle}</h2>
+      </div>
+    </div>
+    {if isset($slicePE1.contact)}
+      <a href="#" class="contact {if !isset($slicePE1.headerMainMenu)}no-main-nav{/if}">
+        {$slicePE1.contact.txt}
+        <img src="{$slicePE1.contact.picto}" alt="{$slicePE1.contact.alt}">
+      </a>
+    {/if}
+    {if isset($slicePE1.headerMainMenu)}
+      <nav>
+        <ul>
+          {foreach $slicePE1.headerMainMenu as $item}
+          <li {if isset($item.isActive)}class="active"{/if}>
+            <a href="{$item.link.url}">{$item.link.title}</a>
+            {if isset($item.megaMenu)}
+              <div class="mega-menu">
+                  <h3>{$item.megaMenu.title}</h3>
+                  <p>{$item.megaMenu.description}</p>
+                  <div class="list-links">
+                    {foreach $item.megaMenu.subsMenu as $subMenu}
+                      <div>
+                        <h4>{$subMenu.title}</h4>
+                        <ol>
+                        {foreach $subMenu.links as $link}
+                          <li><a href="{$link.url}">{$link.title}</a></li>
+                        {/foreach}
+                        </ol>
+                      </div>
+                    {/foreach}
+                  </div>
+              </div>
+            {/if}
+          </li>
+          {/foreach}
+        </ul>
+      </nav>
+    {/if}
+  </div>
+{/if}
+</section>

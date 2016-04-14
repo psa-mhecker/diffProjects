@@ -1,0 +1,56 @@
+<section class="slice-pc36 {if isset($slicePC36.anchorId)} {$slicePC36.anchorId} {/if}" {if isset($slicePC36.anchorId)} id="{$slicePC36.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePC36' } ]" data-html="{$slicePC36.urlJson}" datalayer="{$slicePC36.datalayer}">
+  {if isset($slicePC36.faqTitle)}<h1>{$slicePC36.faqTitle}</h1>{/if}
+
+  {if isset($slicePC36.faqCat)}
+    <ul class="categ list_style clearfix slice-inside-margin">
+      {foreach $slicePC36.faqCat as $cat}
+        <li class="grid-col span_3_of_12"><a href="{$cat.url}" class="{if isset($cat.selected)}selected{/if}"{if isset($cat.target)} target="{$cat.target}"{/if}><span>{$cat.title}</span></a></li>
+      {/foreach}
+    </ul>
+  {/if}
+
+  <div class="list-questions slice-inside-margin hidden">
+    {literal}
+      {{#resultRubric}}
+        <h2 id="titre">{{ nameRubric }}</h2>
+        <aside class="accordion">
+            {{#listQuestions}}
+              {{#if question}}
+                <h1>{{ question }}</h1>
+                <div class="accordion-content">
+                  {{#listAnwsers}}
+                    {{#if show}}
+                      <h2>{{ question }}</h2>
+                      <div class="accordion-content">
+                        <div class="question">
+                          {{ answer }}
+                        </div>
+                        <div class="survey">
+                          <p class="survey-question">
+                            {{ surveyQuestion }}
+                            <a class="survey-question-yes" href="#"><span>{{translate.yes}}</span></a>
+                            <a class="survey-question-no" href="#"><span>{{translate.no}}</span></a>
+                          </p>
+                          <p class="survey-answer-yes">{{ surveyYes }}</p>
+                          <div class="survey-answer-no">
+                            {{ surveyNo }}
+                          </div>
+                        </div>
+                      </div>
+                    {{/if}}
+                  {{/listAnwsers}}
+                </div>
+              {{/if}}
+            {{/listQuestions}}
+          </aside>
+      {{/resultRubric}}
+    {/literal}
+
+    <div class="custom-button-group clearfix">
+      {foreach $slicePC36.faqCTA as $cta}
+        {include file="./cta.html.smarty"}
+      {/foreach}
+    </div>
+  </div>
+
+</section>

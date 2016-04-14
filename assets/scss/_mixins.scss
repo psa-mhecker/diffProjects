@@ -1,0 +1,138 @@
+@charset 'UTF-8';
+// mixins.scss
+@import 'foundation/components/global';
+//------------------------------------
+//    $FUNCTIONS
+//------------------------------------
+
+@function parseInt($n) {
+	@return $n / ($n * 0 + 1);
+}
+
+//------------------------------------
+//    $MIXINS
+//------------------------------------
+
+@mixin columns-gutter($gutter:$custom-column-gutter, $gutter-mobile:$custom-column-mobile-gutter) {
+	padding: 0 $gutter-mobile;
+
+	@media #{$medium-up} {
+		padding: 0 $gutter;
+	}
+}
+
+@mixin anti-columns-gutter() {
+	padding: 0;
+}
+
+@mixin slice-margin-bottom($margin-bottom:$slice-bottom, $margin-mobile-bottom:$slice-mobile-bottom) {
+	margin-bottom: $margin-mobile-bottom;
+
+	@media #{$medium-up} {
+		margin-bottom: $margin-bottom;
+	}
+}
+
+@mixin slice-margin-top($margin-top:$slice-top, $margin-mobile-top:$slice-mobile-top) {
+	margin-top: $margin-mobile-top;
+
+	@media #{$medium-up} {
+		margin-top: $margin-top;
+	}
+}
+
+@mixin panel-text($padding-right:$custom-column-gutter/2, $padding-left:$custom-column-gutter/2) {
+
+	padding-right: 0;
+	padding-left: 0;
+
+	@media #{$medium-up} {
+		padding-right: $padding-right;
+		padding-left: $padding-left;
+	}
+
+}
+
+@mixin clearfix() {
+	&:before,
+	&:after {
+		display: table;
+		content: '';
+	}
+
+	&:after {
+		clear: both;
+	}
+}
+
+@mixin rem($property, $values) {
+	$px: ();
+	$rem: ();
+
+	@each $value in $values {
+
+		@if $value == 0 or $value == auto {
+			$px: append($px, $value);
+			$rem: append($rem, $value);
+		} @else {
+			$unit: unit($value);
+			$val: parseInt($value);
+
+			@if $unit == 'px' {
+				$px: append($px, $value);
+				$rem: append($rem, ($val / $main_fontsize + rem));
+			}
+
+			@if $unit == 'rem' {
+				$px: append($px, ($val * $main_fontsize + px));
+				$rem: append($rem, $value);
+			}
+		}
+	}
+
+	@if $px == $rem {
+		#{$property}: $px;
+	} @else {
+		#{$property}: $px;
+		#{$property}: $rem;
+	}
+}
+
+@mixin hide-text() {
+	font: '0/0' a;
+	color: transparent;
+	text-shadow: none;
+	background-color: transparent;
+	border: 0;
+}
+
+// Rem Unit font sizes with relative fallback http:/seesparkbox.com/foundry/scss_rem_mixin_now_with_a_better_fallback
+//	Usage: @include font-size(1, large);
+//
+@mixin font-size($decimal-size, $keyword: null) {
+	@if $keyword {
+		font-size: $keyword;
+	} @else {
+		font-size: $decimal-size * $base-font-multiplier * 16px;
+	}
+	font-size: $decimal-size * 1rem;
+}
+
+@mixin font-family($weight: 'main') {
+	font-family: map-get((
+		main: $main-font-peugeot,
+		italic: $italic-font-peugeot,
+		light: $light-font-peugeot,
+		bold: $bold-font-peugeot
+	), $weight);
+
+	.no-custom-font & {
+		font-family: $font-family-no-peugeot;
+		@if $weight == 'bold' {
+			font-weight: bold;
+		}
+		@if $weight == 'italic' {
+			font-style: italic;
+		}
+	}
+}

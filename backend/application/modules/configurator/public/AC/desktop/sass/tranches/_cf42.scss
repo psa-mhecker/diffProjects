@@ -1,0 +1,230 @@
+.slice-cf42 {
+  color: $gray-citroen;
+  margin: 20px 0px;
+  .nb {
+    font-family: "ubuntubold", Arial;
+    font-size: 16px;
+    color: #646464;
+    line-height: 40px;
+    margin-right: 5px;
+    .kit-color {
+      font-size: 40px;
+      font-family: "ubunturegular", Arial;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .txt-teinte {
+      position: relative;
+      top: 8px;
+      display: inline-block;
+    }
+  }
+  .notifications {
+    margin-top: 20px;
+    .not-text-1, .not-text-2 {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .info--orange {
+      top: 33%;
+    }
+  }
+  .input.radio {
+    display: none;
+  }
+  .mentions-legale {
+    margin-top: 20px;
+    .mention-text {
+      font-family: $font-family-base-regular;
+    }
+  }
+
+  .list_dark{
+    padding-left: 10px;
+    &:before{
+      top: 5px;
+    }
+  }
+  p.disponility{
+    clear: both;
+    span{
+      font: 17px $font-family-base-bold;
+      clear: both;
+      color: $gray-citroen;
+      vertical-align: middle;
+      &.nbr{
+        font-size: 36px;
+        font-family: $font-family-base-regular;
+        margin-right: 5px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-top: -6px;
+      }
+    }
+  }
+  .toggle-finition{
+    .tit-toggle{
+      padding: 25px 20px;
+    }
+    .cont-toggle{
+      .i-cross{
+        height: auto;
+        width: auto;
+        &:before{
+          width: auto;
+          height: auto;
+        }
+      }
+    }
+  }
+  h3.category-title{
+    font-size: 20px;
+    font-family: $font_ubuntu-bold;
+    color: $gray-citroen;
+    margin-top: 40px;
+    &:first-of-type{
+      margin-top: 20px;
+    }
+  }
+  .cta-goToComparator{
+    padding: 15px 20px;
+    background-color: $comparator-btn-color;
+    color: $default-color;
+    font-size: 11px;
+  }
+  .expands {
+    .vignettes-toggle {
+      .vignette_bloc {
+        .row{
+          margin-left: 0;
+          margin-right: 0;
+        }
+        .input-radio {
+          display: table;
+          label {
+            display: table-row;
+            .radio_btn {
+              margin-top: 15px;
+            }
+          }
+        }
+      }
+    }
+    .list-vignette-toggle {
+      .x-bloc_carroussel li{
+        &.on,
+        &[data-actif]{
+          border-color: $brand-orange !important;
+          &.gray {
+            border-color: $brand-orange !important;
+          }
+        }
+      }
+    }
+  }
+  .lame.finition{
+    margin-right: 30px;
+    margin-left: 0px;
+    margin-top: 40px;
+    .pictures {
+      width: 41.66667%;
+      ul {
+        margin-top: 3px;
+      }
+    }
+  }
+  .lame.finition.finition > div aside > strong {
+    font: 18px/22px $font-family-base-bold;
+    color: $gray-dark;
+  }
+  .lame.finition .pictures .onHover:nth-of-type(3) {
+    padding-left: 5px !important;
+    padding-right: 0px !important;
+  }
+  .more-notif{
+    color: $gray-citroen;
+  }
+  .more-finitions{
+    border: 1px solid $more-finitions-border;
+    clear: left;
+    margin: 20px -20px;
+    padding: 20px;
+    .more-title{
+      font-size: 15px;
+      display: block;
+      position: relative;
+      cursor: pointer;
+      color: $gray-citroen;
+      .chevron{
+        position: absolute;
+        top: 0;
+        right: 45px;
+        @extend %_sprites;
+        @extend %_sprite-chevron-toggle-opened;
+      }
+    }
+
+    .more-content{
+      display: none;
+    }
+    &.open{
+      .more-title{
+        .chevron{
+          @extend %_sprites;
+          @extend %_sprite-chevron-toggle-closed;
+        }
+      }
+    }
+  }
+  .lame {
+    .expands {
+      clear: left;
+      .vignettes-toggle, .lames-toggle  {
+        .vignette_bloc, .lame_bloc {
+          .cta-details {
+            padding: 0;
+            border: none;
+            .span_detail {
+              padding: 20px 15px;
+              &:before {
+                display: none;
+              }
+            }
+          }
+        }
+        .list-vignette-toggle {
+          .cont-toggle {
+            padding: 0px;
+            border: none;
+            .pictures {
+              width: 100%;
+            }
+          }
+          .col-md-12 {
+            padding: 0px;
+          }
+        }
+      }
+      .lames-toggle  {
+        .row{
+          margin-left: 0;
+          margin-right: 0;
+        }
+        .list-vignette-toggle {
+          .cont-toggle {
+            .row.with-slide.with-select {
+              margin-left: -15px;
+              margin-right: -15px;
+            }
+          }
+        }
+      }
+    }
+    .listes {
+      font-size: 13px;
+      .list_rond, .list_dark {
+        padding-left: 17px;
+      }
+    }
+  }
+}

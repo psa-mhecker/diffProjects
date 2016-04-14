@@ -1,0 +1,37 @@
+<section class="slice-pc89 {if isset($slicePC89.anchorId)} {$slicePC89.anchorId} {/if}" {if isset($slicePC89.anchorId)} id="{$slicePC89.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePC89'} ]">
+  <h2>{$slicePC89.title}</h2>
+  {if isset($slicePC89.accessoires.items)}
+  <div class="clearfix items">
+    <ul>
+      {foreach $slicePC89.accessoires.items as $accessoire}
+        <li class="grid-col span_4_of_12">
+          <article>
+            <figure class="clearfix"><img src="{$accessoire.src}" alt="{if isset($accessoire.alt)}{$accessoire.alt}{else}{$accessoire.titre}{/if}"/></figure>
+            <div class="article">
+              <h3>{$accessoire.titre}</h3>
+              <div class="content-price">
+                <span class="price">{$accessoire.price}{$slicePC89.currency.normal}</span>
+                <span class="box-chose">
+                  <label class="label-chose" for="{$accessoire.id}">{$slicePC89.translate.choseLabel}
+                    <input type="checkbox" name="{$accessoire.name}" id="{$accessoire.id}"/>
+                  </label>
+                  <span class="compteur">
+                    <a href="#" class="decremente-prix" data-min="{$slicePC89.accessoires.min}" title="{$slicePC89.translate.titleDecrementer}">-</a>
+                    <input type="text" {if isset($accessoire.typeOption)}data-typeOption="{$accessoire.typeOption}"{/if} {if isset($accessoire.valueOption)}data-valueOption="{$accessoire.valueOption}"{/if} class="compteur-value" maxlength="5" value="1" name="{$accessoire.name}" id="{$accessoire.id}" readonly/>
+                    <a href="#" class="incremente-prix" data-max="{$slicePC89.accessoires.max}" title="{$slicePC89.translate.titleincrementer}">+</a>
+                  </span>
+                </span>
+              </div>
+              <p>{$accessoire.mentions}</p>
+            </div>
+          </article>
+        </li>
+      {/foreach}
+    </ul>
+  </div>
+  {/if}
+  <div class="mentions">
+    {if isset($slicePC89.mentionsPrix)}<p>{$slicePC89.mentionsPrix}</p>{/if}
+    {if isset($slicePC89.mentionsVisuels)}<p>{$slicePC89.mentionsVisuels}</p>{/if}
+  </div>
+</section>

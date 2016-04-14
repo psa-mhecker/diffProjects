@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head id="patternlab-head">
+    <title>Pattern Lab Sub-type Style Guide</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+      <link rel="stylesheet" href="../../styleguide/css/styleguide.css" media="all" />
+      <link rel="stylesheet" href="../../styleguide/css/styleguide-specific.css" media="all" />
+    <link rel="stylesheet" href="../../css/main.css" media="all" />
+    <script type="text/javascript" src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript">
+        if (!window.jQuery) { document.write('<sc'+'ript src="../../../../vendor/jquery/dist/jquery.min.js"></sc'+'ript>'); }
+    </script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+  </head>
+  <body class="sg-body-pattern all">
+  <script>
+	  <!-- PSA_dataLayer_v2 -->
+	  var dataLayer = [
+		  {
+			  "brand":"peugeot",
+			  "siteTarget":"all",
+			  "siteOwner":"central",
+			  "siteFamily":"brand",
+			  "siteTypeLevel1":"kpp",
+			  "siteTypeLevel2":"navigation",
+			  "pageCategory":null,
+			  "virtualPageUrl":"kpp\/",
+			  "language":"fr",
+			  "country":"fr",
+			  "pageName":"kpp\/navigation\/brand\/all\/central\/BLANC\/1\/Accueil"
+		  }
+	  ];
+	  <!-- enf of NBA_dataLayer_v1 -->
+  </script>
+  <!-- Google Tag Manager NBA_GTM_v1-->
+  <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-K8CPK8" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <script type="text/javascript">/*<![CDATA[*/(function(w,d,s,l,i){w[l]=w[l]||[]; w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'}); var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:''; j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl; f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-K8CPK8'); /*]]>*/</script>
+  <!-- End Google Tag Manager NBA_GTM_v1 -->
+    <!-- View All Patterns in a Pattern Sub-Type -->
+    <div class="sitecontainer" role="main">
+
+      <!-- Patterns -->
+      <div id="sg-patterns" class="body">
+        {{# partials }}
+          <div class="sg-pattern">
+            <h2 class="sg-pattern-head"><a href="../../patterns/{{ patternLink }}" class="patternLink" data-patternpartial="{{ patternPartialPath }}">{{ patternName }}</a></h2>
+            <div class="sg-pattern-body">
+              {{{ patternPartial }}}
+              <div class="sg-code" style="display: none">
+                {{# patternLineageExists }}
+                  <div class="sg-code-contains">
+                    This pattern contains:
+                    {{# patternLineages }}
+                      <a href="{{ lineagePath }}"><code>{{ lineagePattern }}</code></a>
+                    {{/ patternLineages }}
+                  </div>
+                {{/ patternLineageExists }}
+                <h3 class="sg-code-head">HTML</h3>
+                <pre class="sg-code-html">
+                  <code>
+                    {{ patternPartial }}
+                  </code>
+                </pre>
+                {{# patternCSSExists }}
+                  <h3 class="sg-code-head">CSS</h3>
+                  <pre class="sg-code-css">
+                    <code>
+                      {{ patternCSS }}
+                    </code>
+                  </pre>
+                {{/ patternCSSExists }}
+              </div>
+            </div>
+          </div>
+        {{/ partials }}
+      </div> <!--end #sg-patterns-->
+
+    </div><!--end .sg-main-->
+
+    <!-- JS to hook everything together and do annotations -->
+    <script>
+      // handle injection of items from patternlab.js
+      var patternPartial = "{{ patternPartial }}";
+      var lineage = "";
+      var baseurl = "{{{baseurl}}}";
+    </script>
+    <script src="../../styleguide/js/vendor/jwerty.js"></script>
+    <script src="../../styleguide/js/postmessage.js"></script>
+    <script src="../../data/annotations.js"></script>
+    <script src="../../styleguide/js/annotations-pattern.js"></script>
+    <script src="../../styleguide/js/code-pattern.js"></script>
+    <script type="text/javascript" src="../../js/vendor.js"></script>
+    <script type="text/javascript" src="../../js/front.js"></script>
+
+  </body>
+</html>

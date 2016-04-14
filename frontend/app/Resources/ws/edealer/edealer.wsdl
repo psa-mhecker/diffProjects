@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://dealers.peugeot.com/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://dealers.peugeot.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://dealers.peugeot.com/">
+      <s:element name="GetFavoriteOffersWithCriteria">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="geoSiteId" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="languageId" type="s:string"/>
+            <s:element minOccurs="1" maxOccurs="1" name="offerCount" type="s:int"/>
+            <s:element minOccurs="1" maxOccurs="1" name="criteria" type="tns:OfferSearchCriteria"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="OfferSearchCriteria">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Owner" nillable="true" type="tns:OfferOwnerType"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Contracts" type="tns:ArrayOfContractType"/>
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="OfferOwnerType">
+        <s:restriction base="s:string">
+          <s:enumeration value="OWNER_COUNTRY"/>
+          <s:enumeration value="OWNER_GROUP"/>
+          <s:enumeration value="OWNER_PDV"/>
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfContractType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ContractType" type="tns:ContractType"/>
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="ContractType">
+        <s:restriction base="s:string">
+          <s:enumeration value="VN"/>
+          <s:enumeration value="VN_PWS"/>
+          <s:enumeration value="RA"/>
+          <s:enumeration value="PR"/>
+          <s:enumeration value="VO"/>
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="GetFavoriteOffersWithCriteriaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFavoriteOffersWithCriteriaResult" type="tns:ArrayOfFavoriteOffer"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfFavoriteOffer">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="FavoriteOffer" type="tns:FavoriteOffer"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="FavoriteOffer">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ArticleUrl" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ImageUrl" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="PublicationStartDate" type="s:dateTime"/>
+          <s:element minOccurs="1" maxOccurs="1" name="PublicationEndDate" type="s:dateTime"/>
+          <s:element minOccurs="1" maxOccurs="1" name="OfferOwner" type="tns:OfferOwnerType"/>
+          <s:element minOccurs="1" maxOccurs="1" name="Contract" type="tns:ContractType"/>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetFavoriteOffersWithCount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="geoSiteId" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="languageId" type="s:string"/>
+            <s:element minOccurs="1" maxOccurs="1" name="offerCount" type="s:int"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFavoriteOffersWithCountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFavoriteOffersWithCountResult" type="tns:ArrayOfFavoriteOffer"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFavoriteOffers">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="geoSiteId" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="languageId" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFavoriteOffersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFavoriteOffersResult" type="tns:ArrayOfFavoriteOffer"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetFavoriteOffersWithCriteriaSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFavoriteOffersWithCriteria"/>
+  </wsdl:message>
+  <wsdl:message name="GetFavoriteOffersWithCriteriaSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFavoriteOffersWithCriteriaResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetFavoriteOffersWithCountSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFavoriteOffersWithCount"/>
+  </wsdl:message>
+  <wsdl:message name="GetFavoriteOffersWithCountSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFavoriteOffersWithCountResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetFavoriteOffersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFavoriteOffers"/>
+  </wsdl:message>
+  <wsdl:message name="GetFavoriteOffersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFavoriteOffersResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="OfferServiceSoap">
+    <wsdl:operation name="GetFavoriteOffersWithCriteria">
+      <wsdl:input message="tns:GetFavoriteOffersWithCriteriaSoapIn"/>
+      <wsdl:output message="tns:GetFavoriteOffersWithCriteriaSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetFavoriteOffersWithCount">
+      <wsdl:input message="tns:GetFavoriteOffersWithCountSoapIn"/>
+      <wsdl:output message="tns:GetFavoriteOffersWithCountSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetFavoriteOffers">
+      <wsdl:input message="tns:GetFavoriteOffersSoapIn"/>
+      <wsdl:output message="tns:GetFavoriteOffersSoapOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="OfferServiceSoap" type="tns:OfferServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetFavoriteOffersWithCriteria">
+      <soap:operation soapAction="http://dealers.peugeot.com/GetFavoriteOffersWithCriteria" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFavoriteOffersWithCount">
+      <soap:operation soapAction="http://dealers.peugeot.com/GetFavoriteOffersWithCount" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFavoriteOffers">
+      <soap:operation soapAction="http://dealers.peugeot.com/GetFavoriteOffers" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="OfferServiceSoap12" type="tns:OfferServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetFavoriteOffersWithCriteria">
+      <soap12:operation soapAction="http://dealers.peugeot.com/GetFavoriteOffersWithCriteria" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFavoriteOffersWithCount">
+      <soap12:operation soapAction="http://dealers.peugeot.com/GetFavoriteOffersWithCount" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFavoriteOffers">
+      <soap12:operation soapAction="http://dealers.peugeot.com/GetFavoriteOffers" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="OfferService">
+    <wsdl:port name="OfferServiceSoap" binding="tns:OfferServiceSoap">
+      <soap:address location="http://dealers.fr.peugeot.inetpsa.com/Services/offerservice.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="OfferServiceSoap12" binding="tns:OfferServiceSoap12">
+      <soap12:address location="http://dealers.fr.peugeot.inetpsa.com/Services/offerservice.asmx"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

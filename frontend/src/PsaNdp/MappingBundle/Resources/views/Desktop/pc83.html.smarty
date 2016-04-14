@@ -1,0 +1,60 @@
+{*<div class="container-aside">*}
+  <section class="slice-pc83 {if isset($slicePC83.anchorId)} {$slicePC83.anchorId} {/if}" {if isset($slicePC83.anchorId)} id="{$slicePC83.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePC83' } ]" datalayer="{$slicePC83.datalayer}">
+  <div class="wrap">
+    <h1>{$slicePC83.title}</h1>
+    <div class="accordion">
+      {if !isset($slicePC83.accessoires)}
+        <p class="error">{$slicePC83.error}</p>
+        {if isset($slicePC83.errorLink)}
+        <a href="{$slicePC83.errorLink.url}"{if isset($slicePC83.errorLink.target)} target="{$slicePC83.errorLink.target}"{/if} class="cta-inline cta-btn cta-btn-{$slicePC83.errorLink.version}">{$slicePC83.errorLink.title}</a>{/if}
+      {else}
+        {foreach $slicePC83.accessoires as $item}
+          <h2 class="title">{$item.titleAccessoires}</h2>
+          {if isset($item.contentAccordion)}
+            <div class="content">
+              <div class="content-accordion">
+                {foreach $item.contentAccordion as $content}
+                  <div class="item">
+                    <figure class="visual">
+                      <img src="{$content.imgAccessoires.src}" alt="{$content.imgAccessoires.alt}">
+                    </figure>
+                    <div class="content-acc">
+                      <h3>{$content.subTitleAccessoires}</h3>
+                      <div class="desc">
+                        {foreach $content.descAccessoires as $paragraph}
+                          <p>{$paragraph.paragraph}</p>
+                        {/foreach}
+                      </div>
+                      <ul>
+                        <li class="left">
+                          <div class="ref">{$content.refAccessoires.label} {$content.refAccessoires.value}</div>
+                          <div class="price">{$content.priceAccessoires}</div>
+                        </li>
+                        {if isset($content.linkToBayAccessoires)}
+                            <li class="right">
+                              <a target="{$content.linkToBayAccessoires.target}" href="{$content.linkToBayAccessoires.href}" title="{$content.linkToBayAccessoires.title}">{$content.linkToBayAccessoires.title}</a>
+                            </li>
+                        {/if}
+                      </ul>
+                    </div> <!-- .content-acc -->
+                    <div class="notice">{$content.noticeAccessoires}</div>
+                  </div>
+                {/foreach}
+                {if isset($slicePC83.seeMoreItems)}
+                     <p><a target="{$slicePC83.seeMoreItems.target}" href="{$slicePC83.seeMoreItems.href}" title="{$slicePC83.seeMoreItems.title}" class="more">{$slicePC83.seeMoreItems.title}</a></p>
+                {/if}
+              </div>
+            </div> <!-- .content -->
+          {/if}
+        {/foreach}
+        {if isset($slicePC83.seeOurStore)}
+      <p class="seeOurStore"><a target="{$slicePC83.seeOurStore.target}" href="{$slicePC83.seeOurStore.href}" title="{$slicePC83.seeOurStore.title}" class="more">{$slicePC83.seeOurStore.title}</a></p>{/if}
+      <div class="mentionsLegale">
+        <p>{$slicePC83.mentionsLegale}</p>
+      </div>
+      {/if}
+    </div> <!-- .accordion -->
+  </div>
+  </section>
+{*</div>*}
+{*<aside>{include file="../../../../../web/src/html/sections/pc60/html_no-nav-default.html"}</aside>*}

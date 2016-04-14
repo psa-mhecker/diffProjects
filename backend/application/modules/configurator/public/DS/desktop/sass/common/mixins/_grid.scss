@@ -1,0 +1,42 @@
+// Grid system
+//
+// Generate semantic grid columns with these mixins.
+
+// Centered container element
+@mixin container-fixed($gutter: $grid-gutter-width) {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left:  ($gutter / 2);
+  padding-right: ($gutter / 2);
+  @include clearfix;
+}
+
+// Creates a wrapper for a series of columns
+@mixin make-row($gutter: $grid-gutter-width) {
+  margin-left:  ceil(($gutter / -2));
+  margin-right: floor(($gutter / -2));
+  // @include clearfix;
+  overflow: hidden;
+}
+
+// Generate the medium columns
+@mixin make-md-column($columns, $gutter: $grid-gutter-width) {
+  position: relative;
+  min-height: 1px;
+  padding-left:  ($gutter / 2);
+  padding-right: ($gutter / 2);
+  float: left;
+  width: percentage(($columns / $grid-columns));
+}
+
+@mixin make-md-column-offset($columns) {
+  margin-left: percentage(($columns / $grid-columns));
+}
+
+@mixin make-md-column-push($columns) {
+  left: percentage(($columns / $grid-columns));
+}
+
+@mixin make-md-column-pull($columns) {
+    right: percentage(($columns / $grid-columns));
+}

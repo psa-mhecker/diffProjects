@@ -1,0 +1,206 @@
+--- 
+- 
+  hosts: "{{ NODE_ENV|default(staging) }}"
+  remote_user: vagrant
+  vars:
+    backend_app: backend
+    composer_path: /usr/local/bin/composer
+    frontend_app: frontend
+    http_port: 80
+    max_clients: 200
+    ssh_key_file: /home/vagrant/.ssh/id_rsa_itkg_recette
+    symfony2_project_branch: "{{ GIT_BRANCH|default(develop) }}"
+    symfony2_project_composer_opts: "--optimize-autoloader --no-interaction"
+    symfony2_project_console_opts: ""
+    symfony2_project_env: "{{ NODE_ENV|default(staging) }}"
+    symfony2_project_name: "Psa Peugeot NDP."
+    symfony2_project_release: "{{ansible_date_time.year}}{{ansible_date_time.month}}{{ansible_date_time.day}}{{ansible_date_time.hour}}{{ansible_date_time.minute}}{{ansible_date_time.second}}"
+    symfony2_project_repo: "git@github.com:itkg/psa-ndp.git"
+    symfony2_project_root: /var/www
+    frontend_var_path: /var/www/var/frontend
+    backend_var_path: /var/www/var/backend
+    mobile_var_path: /var/www/var/wurfl
+    export_http_media_env_var: "export SYMFONY__HTTP__MEDIA=http://recette-media.psa-ndp.com"
+    export_redis_connection: "export SYMFONY__REDIS__CONNECTION=tcp://127.0.0.1:6379"
+    export_frontend_var_path: "export FRONTEND_VAR_PATH={{frontend_var_path}}"
+    assets_version: " v{{symfony2_project_release}}"
+
+  tasks:
+
+    - 
+      file: "state=directory path={{symfony2_project_root}}/releases/{{symfony2_project_release}}"
+      name: "Create the release {{symfony2_project_release}} directory."
+    - 
+      file: "state=directory path={{symfony2_project_root}}/shared"
+      name: "Create the shared directory."
+    - 
+      file: "state=directory path={{symfony2_project_root}}/shared/app/config"
+      name: "Create the shared/app/config directory."
+    - 
+      file: "state=directory path={{symfony2_project_root}}/shared/web/uploads"
+      name: "Create the shared/web/uploads directory."
+    - 
+      file: "state=directory path={{symfony2_project_root}}/shared/app/logs"
+      name: "Create the shared/app/logs directory."
+    - 
+      git: "repo={{symfony2_project_repo}} dest={{symfony2_project_root}}/releases/{{symfony2_project_release}} version={{symfony2_project_branch}} accept_hostkey=yes key_file={{ssh_key_file}}"
+      name: "Pull sources from the repository."
+    - 
+      file: "state=link src={{symfony2_project_root}}/shared/app/logs path={{symfony2_project_root}}/releases/{{symfony2_project_release}}/{{frontend_app}}/app/logs force=yes"
+      name: "Create app/logs"
+    - 
+      file: "state=link src={{symfony2_project_root}}/shared/backend/public/media/image path={{symfony2_project_root}}/releases/{{symfony2_project_release}}/{{backend_app}}/public/media/image force=yes"
+      name: "Symlink backend image"
+    -
+      file: "state=link src={{symfony2_project_root}}/shared/backend/public/media/video path={{symfony2_project_root}}/releases/{{symfony2_project_release}}/{{backend_app}}/public/media/video force=yes"
+      name: "Symlink backend video"
+    -
+      file: "state=link src={{symfony2_project_root}}/shared/backend/public/media/file path={{symfony2_project_root}}/releases/{{symfony2_project_release}}/{{backend_app}}/public/media/file force=yes"
+      name: "Symlink backend file"
+    -
+      name: "Flush redis cache"
+      redis: "command=flush flush_mode=all"
+    
+    -
+      name: "copy parameters file"
+      shell: "cp {{symfony2_project_root}}/releases/{{symfony2_project_release}}/{{frontend_app}}/app/config/parameters.yml.dist  {{symfony2_project_root}}/releases/{{symfony2_project_release}}/{{frontend_app}}/app/config/parameters.yml" 
+
+    -
+      name: "copy behat parameters file"
+      shell: "cp {{symfony2_project_root}}/releases/{{symfony2_project_release}}/behat.yml.dist {{symfony2_project_root}}/releases/{{symfony2_project_release}}/behat.yml"
+
+    - 
+      name: "Run composer install"
+      shell: "{{export_http_media_env_var}} && {{export_redis_connection}} && cd {{symfony2_project_root}}/releases/{{symfony2_project_release}} && {{composer_path}} install {{symfony2_project_composer_opts}}"
+      register: command_result
+
+    -
+      name: "Generate Assets"
+      shell: "cd {{symfony2_project_root}}/releases/{{symfony2_project_release}}/assets/ && npm install && bower install && grunt build;"
+      environment:
+        LANG: "en_US.UTF-8"
+        LC_ALL: "en_US.UTF-8"
+
+    - 
+      name: Dump all MySQL databases to a single file
+      shell: "mysqldump -u psa-ndp -ppsa-ndp --routines psa-ndp > {{symfony2_project_root}}/backup-db/db_{{symfony2_project_release}}.sql"
+      sudo: yes
+
+    -
+      name: Backup media
+      shell: "cd {{symfony2_project_root}}/shared/backend/public/ && tar czvf {{symfony2_project_root}}/backup-media/media_{{symfony2_project_release}}.tar.gz media"
+      sudo: yes
+
+    -
+      name: Change owner of last backup db and media
+      shell: "chown www-data:www-data {{symfony2_project_root}}/backup-media/media_{{symfony2_project_release}}.tar.gz {{symfony2_project_root}}/backup-db/db_{{symfony2_project_release}}.sql"
+      sudo: yes
+         
+    -
+      name: "Run migrations"
+      shell: "{{export_http_media_env_var}} && {{export_redis_connection}} && cd {{symfony2_project_root}}/releases/{{symfony2_project_release}}/{{frontend_app}} && php app/console doctrine:migrations:migrate -n;"
+
+    -
+      name: "Stop php-fpm"
+      service: name=php5-fpm state=stopped
+      sudo: yes
+
+    - 
+      name: "remove symlink"
+      file: state=absent path={{symfony2_project_root}}/current
+      sudo: yes
+    
+    - 
+      name: "Create symlink"
+      file: state=link src={{symfony2_project_root}}/releases/{{symfony2_project_release}} path={{symfony2_project_root}}/current
+      sudo: yes
+
+    - 
+      name : create symbolic linc in web for db backup
+      file: "state=link src={{symfony2_project_root}}/backup-db/db_{{symfony2_project_release}}.sql path={{symfony2_project_root}}/releases/{{symfony2_project_release}}/{{frontend_app}}/web/export_latest_staging_db.sql force=yes"
+
+    -
+      name : create symbolic linc in web for media backup
+      file: "state=link src={{symfony2_project_root}}/backup-media/media_{{symfony2_project_release}}.tar.gz path={{symfony2_project_root}}/releases/{{symfony2_project_release}}/{{frontend_app}}/web/export_latest_staging_media.tar.gz force=yes"
+
+    - 
+      name: "remove frontend cache"
+      file: state=absent path={{frontend_var_path}}/cache/
+      sudo: yes
+    
+    - 
+      name: "remove backend cache"
+      file: state=absent path={{backend_var_path}}/cache/
+      sudo: yes
+
+    -
+      name: "remove mobile cache"
+      file: state=absent path={{mobile_var_path}}/cache/
+      sudo: yes
+
+    - 
+      name: "remove translations directory"
+      file: state=absent path={{symfony2_project_root}}/current/frontend/app/Resources/translations/
+      sudo: yes
+
+    - 
+      name: "create translations directory"
+      file: path={{symfony2_project_root}}/current/frontend/app/Resources/translations state=directory owner=www-data group=www-data mode=0777
+      sudo: yes
+      
+    - 
+      name: "Create frontend cache directory"
+      file: path={{frontend_var_path}}/cache/ state=directory owner=www-data group=www-data mode=0777
+      sudo: yes
+        
+    - 
+      name: "Create backend cache directory"
+      file: path={{backend_var_path}}/cache/ state=directory owner=www-data group=www-data mode=0777
+      sudo: yes
+
+    -
+      name: "Create mobile cache directory"
+      file: path={{mobile_var_path}}/cache/ state=directory owner=www-data group=www-data mode=0777
+      sudo: yes
+
+    -
+      name: "Add translations db files"
+      shell : "{{export_http_media_env_var}} && {{export_redis_connection}} && cd {{symfony2_project_root}}/releases/{{symfony2_project_release}}/{{frontend_app}} && php app/console psa:translation:init"
+
+    -
+      name: "Change owner of db files to www-data"
+      shell : "chown www-data:www-data {{symfony2_project_root}}/current/frontend/app/Resources/translations/*"
+      sudo: yes
+
+    -
+      name: "Generate SiteMap"
+      shell: "{{export_frontend_var_path}} && {{export_http_media_env_var}} && {{export_redis_connection}} && cd {{symfony2_project_root}}/releases/{{symfony2_project_release}}/{{frontend_app}} && php app/console psa:generate:sitemap --env=rec && chown -R www-data:www-data {{frontend_var_path}}/cache/rec"
+      sudo: yes
+
+    -
+      name: "Generate Assets Version"
+      copy: content="parameters:\n  assets_version:{{assets_version}}" dest={{symfony2_project_root}}/current/frontend/app/config/assets_version.yml
+
+    -
+      name: "Start php-fpm"
+      service: name=php5-fpm state=started
+      sudo: yes
+
+    - name: "Get release count"
+      shell: ls {{symfony2_project_root}}/releases/ | wc -l
+      register: release_count
+      changed_when: false
+
+    - name: "Remove old releases"
+      when: release_count.stdout|int >= 5
+      shell: cutoff=`ls -t {{symfony2_project_root}}/releases/ | head -5 | tail -1`; find {{symfony2_project_root}}/releases/ -maxdepth 1 ! -newer {{symfony2_project_root}}/releases/$cutoff -exec rm -rf '{}' \;
+      sudo: yes
+
+    - name: "Remove old DB Backup"
+      shell: cutoff=`ls -t {{symfony2_project_root}}/backup-db/ | head -5 | tail -1`; find {{symfony2_project_root}}/backup-db/ -maxdepth 1 ! -newer {{symfony2_project_root}}/backup-db/$cutoff -exec rm -rf '{}' \;    
+      sudo: yes
+
+    - name: "Remove old Media Backup"
+      shell: cutoff=`ls -t {{symfony2_project_root}}/backup-media/ | head -5 | tail -1`; find {{symfony2_project_root}}/backup-media/ -maxdepth 1 ! -newer {{symfony2_project_root}}/backup-media/$cutoff -exec rm -rf '{}' \;
+      sudo: yes
+      

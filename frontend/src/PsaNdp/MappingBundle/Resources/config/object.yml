@@ -1,0 +1,455 @@
+parameters:
+    psa_ndp_mapping.object.abstract_object.class: PsaNdp\MappingBundle\Object\AbstractObject
+    psa_ndp_mapping.object.cta.class: PsaNdp\MappingBundle\Object\Cta
+    psa_ndp_mapping.object.site_map.class: PsaNdp\MappingBundle\Object\SiteMap
+    psa_ndp_mapping.object.vehicle.class: PsaNdp\MappingBundle\Object\Vehicle
+
+    psa_ndp_mapping.object.price.class: PsaNdp\MappingBundle\Object\Price
+    psa_ndp_mapping.object.price_by_month.class: PsaNdp\MappingBundle\Object\PriceByMonth
+    psa_ndp_mapping.object.price_list.class: PsaNdp\MappingBundle\Object\PriceList
+    psa_ndp_mapping.object.transition.class: PsaNdp\MappingBundle\Object\Transition
+    psa_ndp_mapping.object.radio_button.class: PsaNdp\MappingBundle\Object\RadioButton
+
+    psa_ndp_mapping.object.block.pf27_car_picker.class: PsaNdp\MappingBundle\Object\Block\Pf27CarPicker
+    psa_ndp_mapping.object.block.pf42_color_picker.class: PsaNdp\MappingBundle\Object\Block\Pf42SelectionneurDeTeinte360
+    psa_ndp_mapping.object.block.pf44_become_agent.class: PsaNdp\MappingBundle\Object\Block\Pf44BecomeAgent
+    psa_ndp_mapping.object.block.pf30_popin_code_postal.class: PsaNdp\MappingBundle\Object\Block\Pf30PopinCodePostal
+    psa_ndp_mapping.object.block.pt22_my_peugeot.class: PsaNdp\MappingBundle\Object\Block\Pt22MyPeugeot
+    psa_ndp_mapping.object.block.pf23_range_bar.class: PsaNdp\MappingBundle\Object\Block\Pf23RangeBar
+    psa_ndp_mapping.object.block.pf33_car_compatibility.class: PsaNdp\MappingBundle\Object\Block\Pf33CarCompatibility
+    psa_ndp_mapping.object.block.pc73_mega_banniere_dynamique.class: PsaNdp\MappingBundle\Object\Block\Pc73MegaBanniereDynamique
+    psa_ndp_mapping.object.block.pc77_dimension_vehicule.class: PsaNdp\MappingBundle\Object\Block\Pc77DimensionVehicule
+    psa_ndp_mapping.object.block.pf11_recherche_point_de_vente.class: PsaNdp\MappingBundle\Object\Block\Pf11\Pf11RecherchePointDeVente
+    psa_ndp_mapping.object.block.map_options.class: PsaNdp\MappingBundle\Object\Block\Pf11\MapOptions
+    psa_ndp_mapping.object.block.pf11_recherche_point_de_vente_cas.class: PsaNdp\MappingBundle\Object\Block\Pf11\Pf11RecherchePointDeVenteCas
+    psa_ndp_mapping.object.block.pf53_finitions.class: PsaNdp\MappingBundle\Object\Block\Pf53Finitions
+    psa_ndp_mapping.object.block.pf53_finitions_mobile.class: PsaNdp\MappingBundle\Object\Block\Pf53Object\Pf53FinitionsMobile
+    psa_ndp_mapping.object.block.pf53_series.class: PsaNdp\MappingBundle\Object\Block\Pf53Series
+    psa_ndp_mapping.object.block.pf58_object.pf58_consommation.class: PsaNdp\MappingBundle\Object\Block\Pf58Object\Pf58Consommation
+    psa_ndp_mapping.object.block.pf58_object.pf58_finitions.class: PsaNdp\MappingBundle\Object\Block\Pf58Object\Pf58Finitions
+    psa_ndp_mapping.object.block.pf58_object.pf58_information.class: PsaNdp\MappingBundle\Object\Block\Pf58Object\Pf58Information
+    psa_ndp_mapping.object.block.pf58_object.pf58_label.class: PsaNdp\MappingBundle\Object\Block\Pf58Object\Pf58Label
+    psa_ndp_mapping.object.block.pf58_object.pf58_listing.class: PsaNdp\MappingBundle\Object\Block\Pf58Object\Pf58Listing
+    psa_ndp_mapping.object.block.pf58_object.pf58_listing_mobile.class: PsaNdp\MappingBundle\Object\Block\Pf58Object\Pf58ListingMobile
+    psa_ndp_mapping.object.block.pf58_object.pf58_motorisation.class: PsaNdp\MappingBundle\Object\Block\Pf58Object\Pf58Motorisations
+    psa_ndp_mapping.object.block.pf58_object.pf58_motorisation_mobile.class: PsaNdp\MappingBundle\Object\Block\Pf58Object\Pf58MotorisationMobile
+    psa_ndp_mapping.object.block.pf58_object.pf58_popin.class: PsaNdp\MappingBundle\Object\Block\Pf58Object\Pf58Popin
+    psa_ndp_mapping.object.block.pf58_object.pf58_toggle.class: PsaNdp\MappingBundle\Object\Block\Pf58Object\Pf58Toggle
+    psa_ndp_mapping.object.block.pc36_faq.class: PsaNdp\MappingBundle\Object\Block\Pc36FAQ
+    psa_ndp_mapping.object.block.pc79_mur_media_manuel.class: PsaNdp\MappingBundle\Object\Block\Pc79MurMediaManuel
+    psa_ndp_mapping.object.block.pc85_reevo.class: PsaNdp\MappingBundle\Object\Block\PC85Reevo
+    psa_ndp_mapping.object.block.pc95_interested_by.class: PsaNdp\MappingBundle\Object\Block\PC95InterestedBy
+    psa_ndp_mapping.object.block.pt23_module_qualification.class: PsaNdp\MappingBundle\Object\Block\PT23ModuleQualification
+    psa_ndp_mapping.object.block.pc60_recapitulatif_et_cta_showroom.class: PsaNdp\MappingBundle\Object\Block\Pc60RecapitulatifEtCtaShowroom
+    psa_ndp_mapping.object.block.pf17_formulaires.class: PsaNdp\MappingBundle\Object\Block\Pf17Formulaires
+    psa_ndp_mapping.object.block.pc41_mentions_juridiques.class: PsaNdp\MappingBundle\Object\Block\Pc41MentionsJuridiques
+    psa_ndp_mapping.object.block.pf8_webstore_vehicle_neuf.class: PsaNdp\MappingBundle\Object\Block\Pf8WebstoreVehicleNeuf
+    psa_ndp_mapping.object.block.pn18_iframe.class: PsaNdp\MappingBundle\Object\Block\Pn18IFrame
+    psa_ndp_mapping.object.block.pf2_presentation_showroom.class: PsaNdp\MappingBundle\Object\Block\Pf2PresentationShowroom
+    psa_ndp_mapping.object.block.pf6_drag_drop.class: PsaNdp\MappingBundle\Object\Block\Pf6DragDrop
+    psa_ndp_mapping.object.block.pc7_2_colonnes.class: PsaNdp\MappingBundle\Object\Block\Pc72Colonnes
+    psa_ndp_mapping.object.block.pc12_3_colonnes.class: PsaNdp\MappingBundle\Object\Block\Pc123ColonnesTexte
+    psa_ndp_mapping.object.block.pc19_slideshow.class: PsaNdp\MappingBundle\Object\Block\Pc19Slideshow
+    psa_ndp_mapping.object.block.pt21_navigation_data.class: PsaNdp\MappingBundle\Object\Block\Pt21NavigationData
+    psa_ndp_mapping.object.block.pn7_en_tete_data.class: PsaNdp\MappingBundle\Object\Block\Pn7EnTeteData
+    psa_ndp_mapping.object.block.pc52_apv.class: PsaNdp\MappingBundle\Object\Block\Pc52Apv
+    psa_ndp_mapping.object.block.pc53_apv.class: PsaNdp\MappingBundle\Object\Block\Pc53Apv
+
+
+    psa_ndp_mapping.object.details.detail.class: PsaNdp\MappingBundle\Object\Details\Detail
+    psa_ndp_mapping.object.details.equipments.class: PsaNdp\MappingBundle\Object\Details\Equipments
+    psa_ndp_mapping.object.details.equipment.class: PsaNdp\MappingBundle\Object\Details\Equipment
+    psa_ndp_mapping.object.details.motorisation.class: PsaNdp\MappingBundle\Object\Details\Motorisation
+    psa_ndp_mapping.object.details.finition.class: PsaNdp\MappingBundle\Object\Details\Finition
+
+    psa_ndp_mapping.object.popin.popin.class: PsaNdp\MappingBundle\Object\Popin\Popin
+    psa_ndp_mapping.object.popin.popin_new.class: PsaNdp\MappingBundle\Object\Popin\PopinNew
+    psa_ndp_mapping.object.popin.popin_equipments.class: PsaNdp\MappingBundle\Object\Popin\PopinEquipments
+    psa_ndp_mapping.object.popin.popin_financement.class: PsaNdp\MappingBundle\Object\Popin\PopinFinancement
+    psa_ndp_mapping.object.popin.popin_motor.class: PsaNdp\MappingBundle\Object\Popin\PopinMotor
+    psa_ndp_mapping.object.popin.mobile_popin.class: PsaNdp\MappingBundle\Object\Popin\MobilePopin
+    psa_ndp_mapping.object.popin.popin_financements.class: PsaNdp\MappingBundle\Object\Popin\PopinFinancements
+    psa_ndp_mapping.object.popin.popin_finition.class: PsaNdp\MappingBundle\Object\Popin\PopinFinition
+
+    psa_ndp_mapping.object.configuration.pf53_configuration1.class: PsaNdp\MappingBundle\Object\Configuration\Pf53Configuration1
+    psa_ndp_mapping.object.configuration.pf53_configuration2.class: PsaNdp\MappingBundle\Object\Configuration\Pf53Configuration2
+
+    psa_ndp_mapping.object.filters.energy.class: PsaNdp\MappingBundle\Object\Filters\Energy
+    psa_ndp_mapping.object.filters.filters.class: PsaNdp\MappingBundle\Object\Filters\Filters
+    psa_ndp_mapping.object.filters.gear.class: PsaNdp\MappingBundle\Object\Filters\Gear
+    psa_ndp_mapping.object.filters.price.class: PsaNdp\MappingBundle\Object\Filters\Price
+
+    psa_ndp_mapping.object.factory.cta.class: PsaNdp\MappingBundle\Object\Factory\CtaFactory
+    psa_ndp_mapping.object.factory.media.class: PsaNdp\MappingBundle\Object\Factory\MediaFactory
+    psa_ndp_mapping.object.slideshow.class: PsaNdp\MappingBundle\Object\Slideshow
+    psa_ndp_mapping.object.vignette.class: PsaNdp\MappingBundle\Object\Vignette
+
+    psa_ndp_mapping.object.block.pc23_mur_media.class: PsaNdp\MappingBundle\Object\Block\Pc23MurMedia
+    psa_ndp_mapping.object.block.pc78_usp_mosaique.class: PsaNdp\MappingBundle\Object\Block\Pc78UspMosaique
+    psa_ndp_mapping.object.block.pc84_catalogue_applications.class: PsaNdp\MappingBundle\Object\Block\Pc84CatalogueApplications
+    psa_ndp_mapping.object.block.pc83_contenu_accessoires.class: PsaNdp\MappingBundle\Object\Block\Pc83ContenuAccessoires
+    psa_ndp_mapping.object.block.pn15_entete_confishow.class: PsaNdp\MappingBundle\Object\Block\Pn15EnteteConfishow
+    psa_ndp_mapping.object.block.pn14_navigation_confishow.class: PsaNdp\MappingBundle\Object\Block\Pn14NavigationConfishow
+    psa_ndp_mapping.object.block.pc5_1_colonne.class: PsaNdp\MappingBundle\Object\Block\Pc51Colonne
+    psa_ndp_mapping.object.block.pc68_contenu_1_article_2_ou_3_visuels.class: PsaNdp\MappingBundle\Object\Block\Pc68Contenu1Article2Ou3Visuels
+    psa_ndp_mapping.object.block.pc40_cta.class: PsaNdp\MappingBundle\Object\Block\Pc40Cta
+    psa_ndp_mapping.object.block.pc69_contenu_2_colonnes.class: PsaNdp\MappingBundle\Object\Block\Pc69Contenu2Colonnes
+    psa_ndp_mapping.object.block.pc9_content_one_visual.class: PsaNdp\MappingBundle\Object\Block\Pc9ContentWithOneVisual
+    psa_ndp_mapping.object.block.pc8_content_2_column_text.class: PsaNdp\MappingBundle\Object\Block\Pc8Content2ColumnText
+    psa_ndp_mapping.object.block.pc59_tools.class: PsaNdp\MappingBundle\Object\Block\Pc59Tools
+    psa_ndp_mapping.object.block.cs99_configshow_test.class: PsaNdp\MappingBundle\Object\Block\Cs99ConfigshowTest
+    psa_ndp_mapping.object.block.pt2_footer.class: PsaNdp\MappingBundle\Object\Block\Pt2\Footer
+    psa_ndp_mapping.object.block.pn13_anchor.class: PsaNdp\MappingBundle\Object\Block\Pn13Anchor
+    psa_ndp_mapping.object.block.pt15_site_map.class: PsaNdp\MappingBundle\Object\Block\Pt15SiteMap
+    psa_ndp_mapping.object.block.pt20_master_page.class: PsaNdp\MappingBundle\Object\Block\Pt20MasterPage
+    psa_ndp_mapping.object.block.pf25_filter_car_selector.class: PsaNdp\MappingBundle\Object\Block\Pf25FilterCarSelector
+
+services:
+
+    psa_ndp_mapping.object.block.pc36_faq:
+        class: '%psa_ndp_mapping.object.block.pc36_faq.class%'
+        calls: [[setCtaFactory, ['@psa_ndp_mapping.object.factory.cta']]]
+    psa_ndp_mapping.object.block.pc73_mega_banniere_dynamique:
+        class: '%psa_ndp_mapping.object.block.pc73_mega_banniere_dynamique.class%'
+    psa_ndp_mapping.object.block.pc79_mur_media_manuel:
+        class: '%psa_ndp_mapping.object.block.pc79_mur_media_manuel.class%'
+        arguments:
+            - @psa_ndp_mapping.object.factory.cta
+            - @psa_ndp_sociallinks
+            - @psa_ndp_mapping.object.factory.media
+    psa_ndp_mapping.object.block.pf23_range_bar:
+        class: '%psa_ndp_mapping.object.block.pf23_range_bar.class%'
+        arguments:
+            - @psa_ndp_mapping.object.factory.cta
+            - @psa_ndp_mapping.manager.price_manager
+    psa_ndp_mapping.object.block.pf33_car_compatibility:
+        class: '%psa_ndp_mapping.object.block.pf33_car_compatibility.class%'
+        arguments:
+            - @psa_ndp_mapping.object.factory.cta
+            - @psa_ndp_mapping.manager.price_manager
+    psa_ndp_mapping.object.block.pf27_car_picker:
+        class: '%psa_ndp_mapping.object.block.pf27_car_picker.class%'
+        arguments:
+            - @psa_ndp_mapping.object.factory.cta
+            - @psa_ndp_mapping.manager.price_manager
+    psa_ndp_mapping.object.site_map:
+        class: '%psa_ndp_mapping.object.site_map.class%'
+        calls: [[setCtaFactory, ['@psa_ndp_mapping.object.factory.cta']]]
+    psa_ndp_mapping.object.block.pf42_color_picker:
+        class: '%psa_ndp_mapping.object.block.pf42_color_picker.class%'
+    psa_ndp_mapping.object.block.pf44_become_agent:
+        class: '%psa_ndp_mapping.object.block.pf44_become_agent.class%'
+        calls: [[setCtaFactory, ['@psa_ndp_mapping.object.factory.cta']]]
+    psa_ndp_mapping.object.block.pf30_popin_code_postal:
+        class: '%psa_ndp_mapping.object.block.pf30_popin_code_postal.class%'
+        calls: [[setCtaFactory, ['@psa_ndp_mapping.object.factory.cta']]]
+    psa_ndp_mapping.object.block.pf53_series:
+        class: '%psa_ndp_mapping.object.block.pf53_series.class%'
+        calls:
+            - [setMediaFactory, [@psa_ndp_mapping.object.factory.media]]
+    psa_ndp_mapping.object.block.pf53_finitions:
+        class: '%psa_ndp_mapping.object.block.pf53_finitions.class%'
+        arguments:
+            - '@psa_ndp_mapping.object.filters.filters'
+            - '@psa_ndp_mapping.manager.price_manager'
+            - '@psa_ndp_cta_repository'
+        calls:
+            - [setMediaFactory, [@psa_ndp_mapping.object.factory.media]]
+    psa_ndp_mapping.object.block.pf53_finitions_mobile:
+        class: '%psa_ndp_mapping.object.block.pf53_finitions_mobile.class%'
+        arguments: ['@psa_ndp_mapping.manager.price_manager']
+    psa_ndp_mapping.object.block.pf58_object.pf58_consommation:
+        class: '%psa_ndp_mapping.object.block.pf58_object.pf58_consommation.class%'
+    psa_ndp_mapping.object.block.pf58_object.pf58_finitions:
+        class: '%psa_ndp_mapping.object.block.pf58_object.pf58_finitions.class%'
+    psa_ndp_mapping.object.block.pf58_object.pf58_information:
+        class: '%psa_ndp_mapping.object.block.pf58_object.pf58_information.class%'
+        arguments: ['@psa_ndp_mapping.object.price_by_month']
+    psa_ndp_mapping.object.block.pf58_object.pf58_label:
+        class: '%psa_ndp_mapping.object.block.pf58_object.pf58_label.class%'
+    psa_ndp_mapping.object.block.pf58_object.pf58_listing:
+        class: '%psa_ndp_mapping.object.block.pf58_object.pf58_listing.class%'
+        arguments: ['@psa_ndp_mapping.object.block.pf58_object.pf58_popin']
+    psa_ndp_mapping.object.block.pf58_object.pf58_motorisation:
+        class: '%psa_ndp_mapping.object.block.pf58_object.pf58_motorisation.class%'
+        arguments:
+            - '@psa_ndp_mapping.manager.price_manager'
+            - '@psa_ndp_cta_repository'
+        calls:
+            - [setMediaFactory, [@psa_ndp_mapping.object.factory.media]]
+    psa_ndp_mapping.object.block.pf58_object.pf58_motorisation_mobile:
+        class: '%psa_ndp_mapping.object.block.pf58_object.pf58_motorisation_mobile.class%'
+        arguments: ['@psa_ndp_mapping.manager.price_manager']
+    psa_ndp_mapping.object.block.pf58_object.pf58_popin:
+        class: '%psa_ndp_mapping.object.block.pf58_object.pf58_popin.class%'
+        calls:
+            - [setMediaFactory, [@psa_ndp_mapping.object.factory.media]]
+    psa_ndp_mapping.object.block.pf58_object.pf58_toggle:
+        class: '%psa_ndp_mapping.object.block.pf58_object.pf58_toggle.class%'
+    psa_ndp_mapping.object.block.pt22_my_peugeot:
+        class: '%psa_ndp_mapping.object.block.pt22_my_peugeot.class%'
+        calls: [[setCtaFactory, ['@psa_ndp_mapping.object.factory.cta']]]
+
+    psa_ndp_mapping.object.block.map_options:
+      class: '%psa_ndp_mapping.object.block.map_options.class%'
+
+
+    psa_ndp_mapping.object.block.pf11_recherche_point_de_vente:
+        class: '%psa_ndp_mapping.object.block.pf11_recherche_point_de_vente.class%'
+        arguments:
+          - '@psa_ndp_mapping.object.block.map_options'
+          - '@serializer'
+    psa_ndp_mapping.object.block.pf11_recherche_point_de_vente_cas:
+        class: '%psa_ndp_mapping.object.block.pf11_recherche_point_de_vente_cas.class%'
+        arguments: ['@psa_ndp_dealer_service_repository']
+    psa_ndp_mapping.object.block.pc73_mega_banniere_dynamique:
+        class: '%psa_ndp_mapping.object.block.pc73_mega_banniere_dynamique.class%'
+    psa_ndp_mapping.object.factory.cta:
+        class: '%psa_ndp_mapping.object.factory.cta.class%'
+        arguments: ['@psa_ndp.services.media_server_initializer', '@request_stack', '@psa_ndp.services.share_object']
+    psa_ndp_mapping.object.block.pf11_recherche_point_de_vente:
+        class: '%psa_ndp_mapping.object.block.pf11_recherche_point_de_vente.class%'
+    psa_ndp_mapping.object.block.pf11_recherche_point_de_vente_cas:
+        class: '%psa_ndp_mapping.object.block.pf11_recherche_point_de_vente_cas.class%'
+        arguments: ['@psa_ndp_dealer_service_repository']
+    psa_ndp_mapping.object.block.pc77_dimension_vehicule:
+        class: '%psa_ndp_mapping.object.block.pc77_dimension_vehicule.class%'
+        calls:
+             - [setMediaFactory, [@psa_ndp_mapping.object.factory.media]]
+    psa_ndp_mapping.object.block.pc85_reevo:
+        class: '%psa_ndp_mapping.object.block.pc85_reevo.class%'
+    psa_ndp_mapping.object.block.pc95_interested_by:
+        class: '%psa_ndp_mapping.object.block.pc95_interested_by.class%'
+        arguments: [@psa_ndp_mapping.object.factory.cta, @psa_ndp_mapping.manager.price_manager ]
+    psa_ndp_mapping.object.block.pt23_module_qualification:
+        class: '%psa_ndp_mapping.object.block.pt23_module_qualification.class%'
+    psa_ndp_mapping.object.block.pf17_formulaires:
+        class: '%psa_ndp_mapping.object.block.pf17_formulaires.class%'
+        arguments:
+            - @psa_ndp_mapping.object.factory.cta
+            - @psa_ndp_mapping.object.factory.media
+    psa_ndp_mapping.object.block.pc60_recapitulatif_et_cta_showroom:
+        class: '%psa_ndp_mapping.object.block.pc60_recapitulatif_et_cta_showroom.class%'
+        arguments:
+            - '@psa_ndp_mapping.object.factory.cta'
+    psa_ndp_mapping.object.block.pf8_webstore_vehicle_neuf:
+        class: '%psa_ndp_mapping.object.block.pf8_webstore_vehicle_neuf.class%'
+        arguments:
+            - @psa_ndp_mapping.object.factory.cta
+    psa_ndp_mapping.object.block.pn18_iframe:
+        class: '%psa_ndp_mapping.object.block.pn18_iframe.class%'
+    psa_ndp_mapping.object.block.pf2_presentation_showroom:
+        class: '%psa_ndp_mapping.object.block.pf2_presentation_showroom.class%'
+        arguments:
+            - '@psa_ndp_mapping.manager.price_manager'
+        calls: [[setCtaFactory, ['@psa_ndp_mapping.object.factory.cta']], [setMediaFactory, ['@psa_ndp_mapping.object.factory.media']]]
+    psa_ndp_mapping.object.block.pf6_drag_drop:
+            class: '%psa_ndp_mapping.object.block.pf6_drag_drop.class%'
+            arguments:
+                - @psa_ndp_mapping.object.factory.cta
+                - @psa_ndp_mapping.object.factory.media
+                - @psa_ndp.services.media_server_initializer
+    psa_ndp_mapping.object.block.pc52_apv:
+            class: '%psa_ndp_mapping.object.block.pc52_apv.class%'
+            arguments:
+                - @psa_ndp_mapping.object.factory.cta
+                - @psa_ndp_mapping.object.factory.media
+                - @psa_ndp_mapping.object.formatter.price
+    psa_ndp_mapping.object.block.pc53_apv:
+            class: '%psa_ndp_mapping.object.block.pc53_apv.class%'
+            arguments:
+                - @psa_ndp_mapping.object.factory.cta
+                - @psa_ndp_mapping.object.factory.media
+    psa_ndp_mapping.object.cta:
+        class: '%psa_ndp_mapping.object.cta.class%'
+    psa_ndp_mapping.object.price:
+        class: '%psa_ndp_mapping.object.price.class%'
+    psa_ndp_mapping.object.price_by_month:
+        class: '%psa_ndp_mapping.object.price_by_month.class%'
+    psa_ndp_mapping.object.price_list:
+        class: '%psa_ndp_mapping.object.price_list.class%'
+    psa_ndp_mapping.object.transition:
+        class: '%psa_ndp_mapping.object.transition.class%'
+        arguments:
+            - @psa_ndp_mapping.object.factory.media
+            - @psa_ndp_mapping.object.configuration.pf53_configuration1
+            - @psa_ndp_mapping.object.configuration.pf53_configuration2
+    psa_ndp_mapping.object.radio_button:
+        class: %psa_ndp_mapping.object.radio_button.class%
+
+    psa_ndp_mapping.object.details.detail:
+        class: '%psa_ndp_mapping.object.details.detail.class%'
+    psa_ndp_mapping.object.details.equipments:
+        class: '%psa_ndp_mapping.object.details.equipments.class%'
+    psa_ndp_mapping.object.details.equipment:
+        class: '%psa_ndp_mapping.object.details.equipment.class%'
+    psa_ndp_mapping.object.details.motorisation:
+        class: '%psa_ndp_mapping.object.details.motorisation.class%'
+        calls:
+            - [setMediaFactory, [@psa_ndp_mapping.object.factory.media]]
+    psa_ndp_mapping.object.details.finition:
+        class: '%psa_ndp_mapping.object.details.finition.class%'
+        calls:
+            - [setMediaFactory, [@psa_ndp_mapping.object.factory.media]]
+
+    psa_ndp_mapping.object.popin.popin:
+        class: '%psa_ndp_mapping.object.popin.popin.class%'
+        arguments:
+            - @psa_ndp_mapping.object.popin.popin_new
+            - @psa_ndp_mapping.object.popin.popin_motor
+            - @psa_ndp_mapping.object.popin.popin_equipments
+            - @psa_ndp_mapping.object.popin.popin_financement
+            - @psa_ndp_mapping.object.popin.popin_finition
+    psa_ndp_mapping.object.popin.popin_new:
+        class: '%psa_ndp_mapping.object.popin.popin_new.class%'
+        calls:
+            - [setMediaFactory, [@psa_ndp_mapping.object.factory.media]]
+    psa_ndp_mapping.object.popin.popin_equipments:
+        class: '%psa_ndp_mapping.object.popin.popin_equipments.class%'
+    psa_ndp_mapping.object.popin.popin_financement:
+        class: '%psa_ndp_mapping.object.popin.popin_financement.class%'
+        calls:
+            - [setMediaFactory, [@psa_ndp_mapping.object.factory.media]]
+    psa_ndp_mapping.object.popin.popin_motor:
+        class: '%psa_ndp_mapping.object.popin.popin_motor.class%'
+        calls:
+            - [setMediaFactory, [@psa_ndp_mapping.object.factory.media]]
+    psa_ndp_mapping.object.popin.mobile_popin:
+        class: '%psa_ndp_mapping.object.popin.mobile_popin.class%'
+        arguments: ['@psa_ndp_mapping.object.popin.popin']
+    psa_ndp_mapping.object.popin.popin_financements:
+        class: '%psa_ndp_mapping.object.popin.popin_financements.class%'
+    psa_ndp_mapping.object.popin.popin_finition:
+        class: '%psa_ndp_mapping.object.popin.popin_finition.class%'
+
+    psa_ndp_mapping.object.configuration.pf53_configuration1:
+        class: '%psa_ndp_mapping.object.configuration.pf53_configuration1.class%'
+    psa_ndp_mapping.object.configuration.pf53_configuration2:
+        class: '%psa_ndp_mapping.object.configuration.pf53_configuration2.class%'
+
+    psa_ndp_mapping.object.filters.energy:
+        class: '%psa_ndp_mapping.object.filters.energy.class%'
+        arguments: ['@psa_ndp_mapping.object.block.pf58_object.pf58_label']
+    psa_ndp_mapping.object.filters.filters:
+        class: '%psa_ndp_mapping.object.filters.filters.class%'
+        arguments:
+            - '@psa_ndp_mapping.object.filters.price'
+            - '@psa_ndp_mapping.object.filters.energy'
+            - '@psa_ndp_mapping.object.filters.gear'
+    psa_ndp_mapping.object.filters.gear:
+        class: '%psa_ndp_mapping.object.filters.gear.class%'
+    psa_ndp_mapping.object.filters.price:
+        class: '%psa_ndp_mapping.object.filters.price.class%'
+    psa_ndp_mapping.object.factory.media:
+        class: '%psa_ndp_mapping.object.factory.media.class%'
+        arguments:
+            - @psa_ndp_streamlike
+            - @psa_ndp.services.media_server_initializer
+            - @psa_ndp_media_format_repository
+            - @open_orchestra_model.repository.site
+            - @?request_stack
+    psa_ndp_mapping.object.slideshow:
+            class: '%psa_ndp_mapping.object.slideshow.class%'
+            arguments:
+                - '@psa_ndp_mapping.object.factory.cta'
+                - '@psa_ndp_mapping.object.factory.media'
+    psa_ndp_mapping.object.vignette:
+            class: '%psa_ndp_mapping.object.vignette.class%'
+    psa_ndp_mapping.object.block.pc78_usp_mosaique:
+        class: '%psa_ndp_mapping.object.block.pc78_usp_mosaique.class%'
+    psa_ndp_mapping.object.block.pc41_mentions_juridiques:
+        class: '%psa_ndp_mapping.object.block.pc41_mentions_juridiques.class%'
+    psa_ndp_mapping.object.block.pc84_catalogue_applications:
+        class: '%psa_ndp_mapping.object.block.pc84_catalogue_applications.class%'
+        calls: [[setCtaFactory, ['@psa_ndp_mapping.object.factory.cta']], [setMediaFactory, [@psa_ndp_mapping.object.factory.media]]]
+    psa_ndp_mapping.object.block.pc83_contenu_accessoires:
+        class: '%psa_ndp_mapping.object.block.pc83_contenu_accessoires.class%'
+        arguments: ['@psa_ndp_cta_repository']
+        calls: [[setCtaFactory, ['@psa_ndp_mapping.object.factory.cta']]]
+    psa_ndp_mapping.object.block.pn15_entete_confishow:
+        class: '%psa_ndp_mapping.object.block.pn15_entete_confishow.class%'
+        calls: [[setCtaFactory, ['@psa_ndp_mapping.object.factory.cta']]]
+    psa_ndp_mapping.object.block.pn14_navigation_confishow:
+        class: '%psa_ndp_mapping.object.block.pn14_navigation_confishow.class%'
+        arguments: ['@psa_ndp_mapping.object.factory.cta']
+    psa_ndp_mapping.object.block.pc7_2_colonnes:
+        class: '%psa_ndp_mapping.object.block.pc7_2_colonnes.class%'
+        calls: [[setCtaFactory, ['@psa_ndp_mapping.object.factory.cta']], [setMediaFactory, ['@psa_ndp_mapping.object.factory.media']]]
+    psa_ndp_mapping.object.block.pc12_3_colonnes:
+        class: '%psa_ndp_mapping.object.block.pc12_3_colonnes.class%'
+        calls: [[setCtaFactory, ['@psa_ndp_mapping.object.factory.cta']], [setMediaFactory, ['@psa_ndp_mapping.object.factory.media']]]
+    psa_ndp_mapping.object.block.pc19_slideshow:
+        class: '%psa_ndp_mapping.object.block.pc19_slideshow.class%'
+        arguments:
+            - '@psa_ndp_mapping.object.factory.cta'
+            - '@psa_ndp_mapping.object.factory.media'
+    psa_ndp_mapping.object.block.pc23_mur_media:
+        class: '%psa_ndp_mapping.object.block.pc23_mur_media.class%'
+        calls: [[setMediaFactory, ['@psa_ndp_mapping.object.factory.media']]]
+
+    psa_ndp_mapping.object.block.pt21_navigation_data:
+        class: '%psa_ndp_mapping.object.block.pt21_navigation_data.class%'
+
+    psa_ndp_mapping.object.block.pn7_en_tete_data:
+        class: '%psa_ndp_mapping.object.block.pn7_en_tete_data.class%'
+        calls: [[setCtaFactory, ['@psa_ndp_mapping.object.factory.cta']], [setMediaFactory, ['@psa_ndp_mapping.object.factory.media']]]
+
+
+    psa_ndp_mapping.object.block.pc5_1_colonne:
+        class: '%psa_ndp_mapping.object.block.pc5_1_colonne.class%'
+        arguments:
+            - '@psa_ndp_mapping.object.factory.cta'
+            - '@psa_ndp_mapping.object.factory.media'
+    psa_ndp_mapping.object.block.pc68_contenu_1_article_2_ou_3_visuels:
+        class: %psa_ndp_mapping.object.block.pc68_contenu_1_article_2_ou_3_visuels.class%
+        arguments:
+            - '@psa_ndp_mapping.object.factory.cta'
+            - '@psa_ndp_mapping.object.factory.media'
+    psa_ndp_mapping.object.block.pc69_contenu_2_colonnes:
+        class: %psa_ndp_mapping.object.block.pc69_contenu_2_colonnes.class%
+        arguments:
+           - '@psa_ndp_mapping.object.factory.cta'
+           - '@psa_ndp_mapping.object.factory.media'
+
+    psa_ndp_mapping.object.block.pc9_content_one_visual:
+        class: '%psa_ndp_mapping.object.block.pc9_content_one_visual.class%'
+        arguments:
+            - '@psa_ndp_mapping.object.factory.cta'
+            - '@psa_ndp_mapping.object.factory.media'
+
+    psa_ndp_mapping.object.block.pc40_cta:
+        class: %psa_ndp_mapping.object.block.pc40_cta.class%
+        arguments:
+            - '@psa_ndp_mapping.object.factory.cta'
+            - '@psa_ndp_mapping.object.factory.media'
+    psa_ndp_mapping.object.block.pc8_content_2_column_text:
+        class: %psa_ndp_mapping.object.block.pc8_content_2_column_text.class%
+        arguments:
+            - '@psa_ndp_mapping.object.factory.cta'
+            - '@psa_ndp_mapping.object.factory.media'
+    psa_ndp_mapping.object.block.pc59_tools:
+        class: %psa_ndp_mapping.object.block.pc59_tools.class%
+        arguments:
+            - '@psa_ndp_mapping.object.factory.cta'
+            - '@psa_ndp_mapping.object.factory.media'
+    psa_ndp_mapping.object.block.cs99_configshow_test:
+        class: '%psa_ndp_mapping.object.block.cs99_configshow_test.class%'
+    psa_ndp_mapping.object.block.pt2_footer:
+        class: '%psa_ndp_mapping.object.block.pt2_footer.class%'
+        arguments:
+          - '@translator'
+          - '@psa_ndp_mapping.manager.tree_manager'
+          - '@psa_ndp.services.media_server_initializer'
+          - '@psa_ndp_mapping.object.factory.cta'
+    psa_ndp_mapping.object.block.pn13_anchor:
+        class: %psa_ndp_mapping.object.block.pn13_anchor.class%
+    psa_ndp_mapping.object.block.pt15_site_map:
+        class: %psa_ndp_mapping.object.block.pt15_site_map.class%
+
+    psa_ndp_mapping.object.block.pt20_master_page:
+        class: %psa_ndp_mapping.object.block.pt20_master_page.class%
+    psa_ndp_mapping.object.block.pf25_filter_car_selector:
+        class: %psa_ndp_mapping.object.block.pf25_filter_car_selector.class%
+    psa_ndp_mapping.object.vehicle:
+        class: %psa_ndp_mapping.object.vehicle.class%
+        arguments: [@psa_ndp.services.share_vehicle]

@@ -1,0 +1,29 @@
+{
+  "step": [
+    {
+      "step" : 0,
+      "title" : "Choisissez une finiton",
+      "urlHtml" : "../../../html/sections/df53bis/html_default-defaut.html"
+    },
+    {
+      "step" : 1,
+      "title" : "Choisissez une motorisation",
+      "urlHtml" : "../../../html/sections/df58bis/html_default-defaut.html"
+    },
+    {
+      "step" : 2,
+      "title" : "Choisissez une teinte et des Airbumps",
+      "urlHtml" : "../../../html/sections/df41bis/html_default-defaut.html"
+    },
+    {
+      "step" : 3,
+      "title" : "Choisissez un garnissage",
+      "urlHtml" : "../../../html/sections/df42bis/html_default-defaut.html"
+    },
+    {
+      "step" : 4,
+      "title" : "Choisissez les équipements",
+      "urlHtml" : "../../../html/sections/dc88bis/html_default-defaut.html"
+    }
+  ]
+}

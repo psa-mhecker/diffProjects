@@ -1,0 +1,51 @@
+{{#showroom-menu.1}}
+	<section class="slice-pn14 slice-full-size no-margin-top clearfix">
+		<div class="js-nav-showroom-container">
+			<nav class="nav-showroom js-nav-showroom hide-for-small-only">
+				{{! Présent qu'en mobile, déroule le menu }}
+				<a class="show-for-small-only nav-showroom-head js-nav-showroom-head">
+					<span class="nav-showroom-title">
+						Découvrez la Peugeot 308 5 portes
+						<i class="js-toggle-icon toggle-icon toggle-icon-expand"></i>
+					</span>
+				</a>
+				<ul class="nav-showroom-list small-block-grid-1 medium-block-grid-4 js-nav-showroom-list">
+				{{! Parcours de la liste des liens de premier niveau }}
+				{{#showroom-menu}}
+					<li {{#isActive}}id="js-nav-showroom-item-active"{{/isActive}} class="nav-showroom-item {{#isActive}}nav-showroom-item-active{{/isActive}} js-nav-showroom-item">
+						<a class="nav-showroom-link {{#isActive}}nav-showroom-link-active{{/isActive}}" href="{{href}}" {{#isActive}}style="border-color: #007EDB"{{/isActive}} >
+							<span class="nav-showroom-subtitle" {{#isActive}}style="color: #007EDB"{{/isActive}}>
+								<pre>{{title}}</pre>
+								{{#childs}}<i class="show-for-small-only toggle-icon toggle-icon-expand js-toggle-icon"></i>{{/childs}}
+							</span>
+						</a>
+						{{#childs.0}}
+							<ul class="nav-showroom-sublist small-block-grid-1 medium-block-grid-{$item.childs|@count} js-nav-showroom-sublist">
+								{{! Parcours de la liste de liens de second niveau }}
+								{{#childs}}
+									<li {{#isActive}}id="js-nav-showroom-item-active"{{/isActive}} class="nav-showroom-item nav-showroom-subitem {{#isActive}}nav-showroom-item-active{{/isActive}}">
+										<a class="nav-showroom-link nav-showroom-sublink {{#isActive}}nav-showroom-sublink-active{{/isActive}}" href="{{url}}">
+											<span class="nav-showroom-subtitle" {{#isActive}}style="color: #007EDB"{{/isActive}}>
+												<pre>{{title}}</pre>
+											</span>
+										</a>
+									</li>
+								{{/childs}}
+							</ul>
+						{{/childs.0}}
+					</li>
+				{{/showroom-menu}}
+				</ul>
+			</nav>
+		</div>
+	</section>
+{{/showroom-menu.1}}
+
+<section class="slice-pn14 clearfix">
+	<div class="row collapse">
+		<div class="large-12 js-gestion-panier">
+			<h2>Titre long de ma page showroom</h2>
+			<p class="text-center">Je suis le chapô de la page</p>
+		</div>
+	</div>
+</section>

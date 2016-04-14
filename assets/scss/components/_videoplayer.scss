@@ -1,0 +1,94 @@
+@charset 'UTF-8';
+// videoplayer.scss
+$play-button-background: #143c5f !default;
+
+.video-container {
+	position: relative;
+
+	video {
+		display: block;
+		width: 100%;
+	}
+
+	.play-video,
+	.play-video-from-wall {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 1;
+	}
+}
+
+.slide-error,
+.video-container {
+	.error {
+		position: relative;
+		background: url('../img/logo-peugeot.png') no-repeat;
+		background-position: center center;
+		width: 100%;
+		height: 450px;
+	}
+
+	.notification {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+	}
+}
+
+.slide-error .error {
+	display: block;
+	top: 10%;
+	margin: 0 auto;
+	background-color: $white-color;
+	width: 80%;
+	height: 80%;
+
+	.notification {
+		bottom: 40px;
+	}
+}
+
+
+@media #{$small-only} {
+	.video-container .error {
+		background-size: auto 44%;
+		height: 200px;
+	}
+}
+
+.play-video,
+.play-video-from-wall {
+	background-color: $play-button-background;
+	width: 50px;
+	height: 50px;
+
+	&::before {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		margin: auto;
+		border-top: 10px solid transparent;
+		border-bottom: 10px solid transparent;
+		border-left: 10px solid $white;
+		width: 0;
+		height: 0;
+		content: '';
+	}
+}
+
+// ==================================
+// Mobile Device use there own controls
+// ==================================
+
+// scss-lint:disable all
+.isMobile,
+.isTablet {
+	//Selector `isMobile isTablet` should be written in lowercase with hyphens
+	.play-video {
+		display: none;
+	}
+}

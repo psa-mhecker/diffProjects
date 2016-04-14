@@ -1,0 +1,98 @@
+@charset 'UTF-8';
+
+.no-custom-font {
+	font-family: $font-family-no-peugeot;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	@include font-family('light');
+	color: $text-color;
+	font-weight: normal;
+}
+
+h1 {
+	margin-bottom: 0;
+	text-transform: uppercase;
+	color: $white;
+
+	.slice-pn7 & {
+		color: $black;
+	}
+
+	.slice-pn7 &,
+	.slice-pn15 & {
+		padding: 0;
+	}
+
+	small {
+		padding-left: 10px;
+		color: inherit;
+		font-size: 45%;
+		font-weight: bold;
+	}
+}
+
+h2 {
+	@include slice-margin-bottom(30px, 30px);
+	text-align: center;
+	font-size: rem-calc(24);
+
+	&.article-title {
+		@include slice-margin-bottom(0, 0);
+	}
+}
+
+h3 {
+	margin-bottom: rem-calc(20);
+	text-align: center;
+	font-size: rem-calc(18);
+}
+
+h4 {
+	margin-bottom: rem-calc(20);
+	font-size: rem-calc(16);
+}
+
+p {
+	@include font-family('light');
+}
+
+ul,
+ol,
+dl {
+	@include font-family('main');
+}
+
+a {
+	text-decoration: none;
+	color: $main-color;
+}
+
+.legal-notice {
+	@include font-family('italic');
+	text-align: center;
+	font-size: rem-calc(12);
+	font-style: italic;
+}
+
+// ==========================================================================
+// LEGACY A REFACTORER
+// FONT FAMILY
+// ==========================================================================
+
+.font-light {
+	@include font-family('light');
+}
+
+.font-main {
+	@include font-family('main');
+}
+
+.font-bold {
+	@include font-family('bold');
+}

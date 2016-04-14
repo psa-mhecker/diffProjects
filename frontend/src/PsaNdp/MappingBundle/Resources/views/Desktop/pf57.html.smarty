@@ -1,0 +1,462 @@
+<section class="slice-pf57 {if isset($slicePF57.anchorId)} {$slicePF57.anchorId} {/if}" {if isset($slicePF57.anchorId)} id="{$slicePF57.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePF57' } ]">
+      <!--div class="slice-inside-margin"-->
+        {if isset($slicePF57.compatible)}
+          <h2>Choisissez votre finition <br> pour le moteur 1.6 blue hdi s&s 120 eat 6</h2>
+          <h3 class="titre"><span class="nbritems"></span> finitions disponibles</h3>
+        {else}
+            <h2>Pour continuer sélectionnez une autre finition</h2>
+            <h3 class="titre"><span class="nbritems"></span> finitions disponibles avec le moteur 1.6 blue hdi s&s 120 eat 6</h3>
+              <div class="custom-button-group clearfix help">
+                <a href="#" class="cta-link cta-block" target="_blank"><span>Besoin d’aide ?</span></a>
+              </div>
+        {/if}
+   <!-- -->
+    <span class="libelleCategorie">Véhicule particulier</span>
+
+    <div class="card serie clearfix" data-id="000000" data-color="#919191" data-typeOption="TypeOption" data-valueOption="ValueOption">
+      <section>
+        <aside style="background-color: #919191;">
+          <h4>
+            <span>
+              <strong>Allure</strong>
+               {if isset($slicePF57.series) and $slicePF57.series.logo eq true}
+             <img src="../../../img/logo-rg.png" alt="Série Roland Garros" class="logo">
+            {/if}
+            </span>
+          </h4>
+        </aside>
+        <section>
+          <figure data-openpopin="vehicule000000"><img src="../../../img/empty350x162.jpg" alt="Nouvelle peugeot 308 5 portes"></figure>
+          <figcaption>
+            {if isset($slicePF57.promotion) and $slicePF57.promotion.label eq true}
+              <p class="promotion">Offre Spéciale</p>
+            {/if}
+              <span class="special-offer">Offre spéciale</span>
+              <p>A partir de <strong class="price cash-element">13 000€ TTC*</strong></p>
+
+               {if isset($slicePF57.motor) }
+                <p>Avec le moteur 1,6L HDI 92 BVM5</p>
+               {/if}
+               {if isset($slicePF57.infoEquip)}
+               <p class="infoEquip inclus">Toit panoramique inclus</p>
+               {/if}
+          </figcaption>
+          <span class="zoom" data-openpopin="vehicule000000">Zoom</span>
+          <span class="choice">Choisir</span>
+          <div class="custom-button-group clearfix">
+            {if isset($slicePF57.compatible)}
+               <button class="cta-btn cta-btn-4 nextstep">Etape suivante</button>
+                {else}
+                 <button class="cta-btn cta-btn-4 validate">valider</button>
+            {/if}
+          </div>
+        </section>
+      </section>
+    </div>
+    <!-- -->
+    <div class="card serie clearfix" data-id="000001" data-mode="" data-color="#cdcdcd" data-typeOption="TypeOption" data-valueOption="ValueOption">
+      <section>
+        <aside style="background-color: #cdcdcd;">
+          <h4>
+            <span>
+              <strong>Active</strong>
+              {if isset($slicePF57.series) and $slicePF57.series.logo eq true}
+             <img src="../../../img/logo-rg.png" alt="Série Roland Garros" class="logo">
+            {/if}
+            </span>
+          </h4>
+        </aside>
+        <section>
+          <figure data-openpopin="vehicule000001"><img src="../../../img/empty350x162.jpg" alt="Nouvelle peugeot 308 5 portes"></figure>
+          <figcaption>
+              {if isset($slicePF57.promotion) and $slicePF57.promotion.label eq true}
+              <p class="promotion">Offre Spéciale</p>
+              {/if}
+              <p>A partir de <strong>13 000€ TTC*</strong></p>
+              {if isset($slicePF57.motor) }
+                <p>Avec le moteur 1,6L HDI 92 BVM5</p>
+              {/if}
+              {if isset($slicePF57.infoEquip)}
+               <p class="infoEquip">Toit panoramique en option</p>
+               {/if}
+          </figcaption>
+          <span class="zoom" data-openpopin="vehicule000001">Zoom</span>
+          <span class="choice">Choisir</span>
+           <div class="custom-button-group">
+            {if isset($slicePF57.compatible)}
+               <button class="cta-btn cta-btn-4 nextstep">Etape suivante</button>
+                {else}
+                 <button class="cta-btn cta-btn-4 validate">valider</button>
+            {/if}
+          </div>
+        </section>
+      </section>
+    </div>
+    <div class="card serie clearfix" data-id="000002" data-mode="" data-color="#ececee" data-typeOption="TypeOption" data-valueOption="ValueOption">
+      <section>
+        <aside style="background-color: #ececee;">
+          <h4>
+            <span>
+              <strong>Like</strong>
+               {if isset($slicePF57.series) and $slicePF57.series.logo eq true}
+             <img src="../../../img/logo-rg.png" alt="Série Roland Garros" class="logo">
+            {/if}
+            </span>
+
+          </h4>
+        </aside>
+        <section>
+          <figure data-openpopin="vehicule000002"><img src="../../../img/empty350x162.jpg" alt="Nouvelle peugeot 308 5 portes"></figure>
+          <figcaption>
+              {if isset($slicePF57.promotion) and $slicePF57.promotion.label eq true}
+                <p class="promotion">Offre Spéciale</p>
+              {/if}
+              <p>A partir de <strong class="price mensuel-element">13 000€ TTC/mois</strong><span class="info" data-openpopin="financement000002"></span></p>
+              <p>Après un loyer de 3 000€ TTC/mois</p>
+              {if isset($slicePF57.motor) }
+                <p>Avec le moteur 1,6L HDI 92 BVM5</p>
+              {/if}
+              {if isset($slicePF57.infoEquip)}
+               <p class="infoEquip inclus">Toit panoramique inclus</p>
+              {/if}
+          </figcaption>
+          {if isset($slicePF57.infoModif)}
+          <p class="infoModif">
+              <span class="info_picto"></span>
+              <span class="text">Elements modifiés si vous continuez: le moteur 1.6 blue hdi s&s 120 eat 6,   le garnissage cuir noir</span>
+          </p>
+          {/if}
+          <span class="zoom" data-openpopin="vehicule000002">Zoom</span>
+          <span class="choice">Choisir</span>
+           <div class="custom-button-group">
+            {if isset($slicePF57.compatible)}
+               <button class="cta-btn cta-btn-4 nextstep">Etape suivante</button>
+                {else}
+                 <button class="cta-btn cta-btn-4 validate">valider</button>
+            {/if}
+          </div>
+        </section>
+      </section>
+    </div>
+    <span class="libelleCategorie">Série spéciale</span>
+
+    <div class="card serie clearfix" data-id="000003" data-mode="" data-color="#c46225" data-typeOption="TypeOption" data-valueOption="ValueOption">
+      <section>
+        <aside style="background-color: #c46225;">
+          <h4>
+            <span>
+              <strong>Série Roland Garros</strong>
+              <img src="../../../img/logo-rg.png" alt="Série Roland Garros" class="logo">
+            </span>
+          </h4>
+        </aside>
+        <section>
+          <figure data-openpopin="vehicule000003"><img src="../../../img/empty350x162.jpg" alt="Nouvelle peugeot 308 5 portes"></figure>
+          <figcaption>
+              {if isset($slicePF57.promotion) and $slicePF57.promotion.label eq true}
+                <p class="promotion">Offre Spéciale</p>
+              {/if}
+              <p>A partir de <strong class="price mensuel-element">13 000€ TTC/mois</strong><span class="info" data-openpopin="financement000003"></span></p>
+              <p>Après un loyer de 3 000€ TTC/mois</p>
+              {if isset($slicePF57.motor) }
+                <p>Avec le moteur 1,6L HDI 92 BVM5</p>
+              {/if}
+              {if isset($slicePF57.infoEquip)}
+               <p class="infoEquip inclus">Toit panoramique inclus</p>
+              {/if}
+          </figcaption>
+          {if isset($slicePF57.infoModif)}
+          <p class="infoModif">
+              <span class="info_picto"></span>
+              <span class="text">Elements modifiés si vous continuez: le moteur 1.6 blue hdi s&s 120 eat 6,   le garnissage cuir noir</span>
+          </p>
+          {/if}
+          <span class="zoom" data-openpopin="vehicule000003">Zoom</span>
+          <span class="choice">Choisir</span>
+           <div class="custom-button-group">
+            {if isset($slicePF57.compatible)}
+               <button class="cta-btn cta-btn-4 nextstep">Etape suivante</button>
+                {else}
+                 <button class="cta-btn cta-btn-4 validate">valider</button>
+            {/if}
+          </div>
+        </section>
+      </section>
+    </div>
+
+    <p class="legal-mentions">*Un crédit vous engage et doit être remboursé. Verifiez vos capacités de remboursement avant de vous engager</p>
+    <p class="mentions">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt beatae possimus labore illo dignissimos eveniet voluptatibus corrupti. Enim voluptate, ut nesciunt, id tenetur delectus, vel impedit dolor, quibusdam explicabo dolore? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde animi tempore aspernatur esse molestiae? Autem, quas quo rerum asperiores est laudantium voluptatum aspernatur aperiam nemo doloribus eligendi minima numquam deleniti?</p>
+
+  {if isset($slicePF57.saveConfiguration.content)}
+        {foreach $slicePF57.saveConfiguration.content as $item}
+      <div class="save-config">
+          <div class="content-info">
+            <div class="etape1">
+            {if isset($item.mdc.saveConfig.info)}
+            {foreach $item.mdc.saveConfig.info as $notification}
+              {include file="../../notification/notification.tpl"}
+            {/foreach}
+            {/if}
+            </div>
+
+            <p class="confirm-save">
+              <label class="label-save" for="{$item.mdc.saveConfig.id}">
+                <input type="checkbox" name="{$item.mdc.saveConfig.name}" id="{$item.mdc.saveConfig.id}"/>
+                {$item.mdc.saveConfig.label}
+              </label>
+            </p>
+         <div class="config-save">
+              <form action="" method="post" class="config-form" novalidate>
+                <div class="config-box-input" data-msg-required="{$item.translate.configuration.email.txterror}">
+                  <div class="input-text">
+                    <label class="control-label" for="configname">{$item.translate.configuration.ConfigName.title}</label>
+                    <div class="form-control">
+                      <input type="text" name="configname" id="configname" data-msg-required="{$item.translate.configuration.ConfigName.txterror}" value="{if isset($item.config_value)}{$item.config_value}{/if}" placeholder="{if isset($item.config_value)}{$item.config_value}{/if}" data-required="true">
+                    </div>
+                  </div>
+                  <div class="input-text last">
+                    <label class="control-label" for="configemail">{$item.translate.configuration.email.title}</label>
+                    <div class="form-control">
+                      <input type="email" name="configemail" id="configemail" data-msg-email="{$item.translate.configuration.email.emailError}" data-required="true">
+                    </div>
+                  </div>
+                  <br class="clr" />
+                </div>
+                {if isset($item.translate.configuration.mentionsLegales)}
+                <p class="mentions-legales">{$item.translate.configuration.mentionsLegales}</p>
+                {/if}
+                {if isset($item.translate.configuration.confirmMentions) && $item.translate.configuration.confirmMentions.active eq true}
+                <p class="confirm-mentions">
+                  <label for="{$item.translate.configuration.confirmMentions.id}">
+                    <input type="checkbox" data-msg-required="{$item.translate.configuration.confirmMentions.txterror}" data-required="true" name="{$item.translate.configuration.confirmMentions.name}" id="{$item.translate.configuration.confirmMentions.id}"/>
+                    {$item.translate.configuration.confirmMentions.label}
+                  </label>
+                </p>
+                {/if}
+                {if isset($item.translate.configuration.ctaList)}
+                <div class="custom-button-group clearfix">
+                  <button class="cta-btn cta-btn-4 cta-sauvegarde">{$item.translate.configuration.sendButton}</button>
+                  {foreach $item.translate.configuration.ctaList as $cta}
+                  {include file="./cta.html.smarty"}
+                  {/foreach}
+                </div>
+                {/if}
+              </form>
+            </div>
+            <div class="etape3">
+              {if isset($item.mdc.saveConfig.confirm)}
+              {foreach $item.mdc.saveConfig.confirm as $notification}
+                {include file="../../notification/notification.tpl"}
+              {/foreach}
+              {/if}
+            </div>
+          </div>
+        </div>
+        {if isset($item.return.ctaList)}
+        <div class="control-box custom-button-group clearfix">
+          {foreach $item.return.ctaList as $cta}
+          {include file="./cta.html.smarty"}
+          {/foreach}
+        </div>
+        {/if}
+        {/foreach}
+    {/if}
+        <!--/div-->
+
+        <section class="popin_overlay" data-jsobj="[ { 'obj':'iso-popin' } ]">
+          <!-- POPIN VISUEL VEHICULE -->
+
+            <div class="color--blue1 close"></div>
+
+             <div class="popin popin--new scroller" data-popin="vehicule000000">
+              <span class="clbtn close">Fermer</span>
+              <div class="popinWrap">
+          <section class="slice-pc97" data-jsobj="[ { 'obj':'slicePC97' } ]">
+            <h2>Finition Allure</h2>
+        <div class="slides">
+                    <div class="item">
+                <figure>
+                    <img src="../../../img/ext-1030x476.jpg" alt="slide 1" />
+                </figure>
+            </div>
+                    <div class="item">
+                <figure>
+                    <img src="../../../img/ext-1030x476.jpg" alt="slide 2" />
+                </figure>
+            </div>
+                    <div class="item">
+                <figure>
+                    <img src="../../../img/ext-1030x476.jpg" alt="slide 3" />
+                </figure>
+            </div>
+            </div>
+    <div class="content-description">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas venenatis velit ac ligula dignissim lobortis. Nullam semper sapien risus, id tincidunt ex rhoncus sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas venenatis velit ac ligula dignissim lobortis. Nullam semper sapien risus, id tincidunt ex rhoncus sed. </p>
+    </div>
+</section>
+
+              </div>
+            </div>
+             <div class="popin popin--new scroller" data-popin="vehicule000001">
+              <span class="clbtn close">Fermer</span>
+                <div class="popinWrap">
+                           <section class="slice-pc97" data-jsobj="[ { 'obj':'slicePC97' } ]">
+            <h2>Finition Allure</h2>
+        <div class="slides">
+                    <div class="item">
+                <figure>
+                    <img src="../../../img/ext-1030x476.jpg" alt="slide 1" />
+                </figure>
+            </div>
+                    <div class="item">
+                <figure>
+                    <img src="../../../img/ext-1030x476.jpg" alt="slide 2" />
+                </figure>
+            </div>
+                    <div class="item">
+                <figure>
+                    <img src="../../../img/ext-1030x476.jpg" alt="slide 3" />
+                </figure>
+            </div>
+            </div>
+    <div class="content-description">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas venenatis velit ac ligula dignissim lobortis. Nullam semper sapien risus, id tincidunt ex rhoncus sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas venenatis velit ac ligula dignissim lobortis. Nullam semper sapien risus, id tincidunt ex rhoncus sed. </p>
+    </div>
+</section>
+                </div>
+              </div>
+               <div class="popin popin--new scroller" data-popin="vehicule000002">
+                <span class="clbtn close">Fermer</span>
+                <div class="popinWrap">
+                            <section class="slice-pc97" data-jsobj="[ { 'obj':'slicePC97' } ]">
+            <h2>Finition Allure</h2>
+        <div class="slides">
+                    <div class="item">
+                <figure>
+                    <img src="../../../img/ext-1030x476.jpg" alt="slide 1" />
+                </figure>
+            </div>
+                    <div class="item">
+                <figure>
+                    <img src="../../../img/ext-1030x476.jpg" alt="slide 2" />
+                </figure>
+            </div>
+                    <div class="item">
+                <figure>
+                    <img src="../../../img/ext-1030x476.jpg" alt="slide 3" />
+                </figure>
+            </div>
+            </div>
+    <div class="content-description">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas venenatis velit ac ligula dignissim lobortis. Nullam semper sapien risus, id tincidunt ex rhoncus sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas venenatis velit ac ligula dignissim lobortis. Nullam semper sapien risus, id tincidunt ex rhoncus sed. </p>
+    </div>
+</section>
+                </div>
+              </div>
+
+              <div class="popin popin--new scroller" data-popin="vehicule000003">
+                <span class="clbtn close">Fermer</span>
+                <div class="popinWrap">
+                            <section class="slice-pc97" data-jsobj="[ { 'obj':'slicePC97' } ]">
+            <h2>Finition Allure</h2>
+        <div class="slides">
+                    <div class="item">
+                <figure>
+                    <img src="../../../img/ext-1030x476.jpg" alt="slide 1" />
+                </figure>
+            </div>
+                    <div class="item">
+                <figure>
+                    <img src="../../../img/ext-1030x476.jpg" alt="slide 2" />
+                </figure>
+            </div>
+                    <div class="item">
+                <figure>
+                    <img src="../../../img/ext-1030x476.jpg" alt="slide 3" />
+                </figure>
+            </div>
+            </div>
+    <div class="content-description">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas venenatis velit ac ligula dignissim lobortis. Nullam semper sapien risus, id tincidunt ex rhoncus sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas venenatis velit ac ligula dignissim lobortis. Nullam semper sapien risus, id tincidunt ex rhoncus sed. </p>
+    </div>
+</section>
+                </div>
+              </div>
+              <!-- POPIN VISUEL VEHICULE -->
+              <!-- POPIN FINANCEMENT -->
+                      <div class="popin popin--financement scroller" data-popin="financement000002">
+                          <span class="clbtn close">Fermer</span>
+                          <div class="head">
+                            <img src="../../../img/empty350x162.jpg" alt="Série Roland Garros">
+                            <h3 class="model">108 3 portes</h3>
+                          </div>
+                          <section>
+                            <h4 class="title">LOCATION AVEC OPTION D'ACHAT (1)</h4>
+                            <ul class="list_style">
+                              <li>
+                                <p class="label">prix de vente</p>
+                                <p class="price">13 500 €</p>
+                            </li>
+                              <li>
+                              <p class="label">59 loyers suivant</p>
+                              <p class="price">4 050 €</p>
+                            </li>
+                            <li>
+                              <p class="label">nombre de loyers</p>
+                              <p class="price">60</p>
+                              <p class="label2">(hors prestations falcultatives)</p>
+                            </li>
+                            <li>
+                              <p class="label">option final d'achat</p>
+                              <p class="price">13 300 €</p>
+                            </li>
+                              <li>
+                              <p class="label">montant total du</p>
+                              <p class="price">3 300 €</p>
+                              <p class="label2">(hors prestations falcultatives)</p>
+                            </li>
+                          </ul>
+                        </section>
+                        <p class="asterix">*Un crédit vous engage et doit être remboursé. Verifiez vos capacités de remboursement avant de vous engager</p>
+                        <p class="mention">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt beatae possimus labore illo dignissimos eveniet voluptatibus corrupti. Enim voluptate, ut nesciunt, id tenetur delectus, vel impedit dolor, quibusdam explicabo dolore? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde animi tempore aspernatur esse molestiae? Autem, quas quo rerum asperiores est laudantium voluptatum aspernatur aperiam nemo doloribus eligendi minima numquam deleniti?</p>
+                      </div>
+
+                         <div class="popin popin--financement scroller" data-popin="financement000003">
+                          <span class="clbtn close">Fermer</span>
+                          <div class="head">
+                            <img src="../../../img/empty350x162.jpg" alt="Série Roland Garros">
+                            <h3 class="model">108 3 portes</h3>
+                          </div>
+                          <section>
+                            <h4 class="title">LOCATION AVEC OPTION D'ACHAT (1)</h4>
+                            <ul class="list_style">
+                              <li>
+                                <p class="label">prix de vente</p>
+                                <p class="price">13 500 €</p>
+                            </li>
+                              <li>
+                              <p class="label">59 loyers suivant</p>
+                              <p class="price">4 050 €</p>
+                            </li>
+                            <li>
+                              <p class="label">nombre de loyers</p>
+                              <p class="price">60</p>
+                              <p class="label2">(hors prestations falcultatives)</p>
+                            </li>
+                            <li>
+                              <p class="label">option final d'achat</p>
+                              <p class="price">13 300 €</p>
+                            </li>
+                              <li>
+                              <p class="label">montant total du</p>
+                              <p class="price">3 300 €</p>
+                              <p class="label2">(hors prestations falcultatives)</p>
+                            </li>
+                          </ul>
+                        </section>
+                        <p class="asterix">*Un crédit vous engage et doit être remboursé. Verifiez vos capacités de remboursement avant de vous engager</p>
+                        <p class="mention">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt beatae possimus labore illo dignissimos eveniet voluptatibus corrupti. Enim voluptate, ut nesciunt, id tenetur delectus, vel impedit dolor, quibusdam explicabo dolore? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde animi tempore aspernatur esse molestiae? Autem, quas quo rerum asperiores est laudantium voluptatum aspernatur aperiam nemo doloribus eligendi minima numquam deleniti?</p>
+                      </div>
+            <!-- POPIN FINANCEMENT -->
+        </section>
+</section>

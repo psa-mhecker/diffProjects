@@ -1,0 +1,29 @@
+{if $slicePT20.childrenContents|@count gt 0}
+
+<section class="slice-pt20 {if isset($slicePT20.anchorId)} {$slicePT20.anchorId} {/if}" {if isset($slicePT20.anchorId)} id="{$slicePT20.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePT20' } ]" datalayer="{$slicePT20.datalayer}">
+    <div class="master-page">
+        <div class="row" style="margin-top: 15px">
+        {foreach $slicePT20.childrenContents as $childrenContent}
+
+        {if ($childrenContent@iteration - 1) is div by 3}
+            {if not $childrenContent@first}
+            </div><div class="row">
+            {/if}
+        {/if}
+
+            <div class="master-page-block column medium-4 text-left end">
+                {foreach $childrenContent.ctaList as $cta}
+                    <a href="{$childrenContent.url}" {if isset($cta.target)} target="{$cta.target}"{/if}>
+                        <h2>{$childrenContent.title}</h2>
+                        <div class="description">{$childrenContent.description}</div>
+                    </a>
+                    {include file="../Components/cta.html.smarty" gtm="{ldelim}\"eventType\":\"click\",\"dataList\":{ldelim}\"event\":\"uaevent\",\"eventCategory\":\"{$slicePT20.blockName}::position-{$slicePT20.blockOrder}\",\"eventAction\":\"Redirection::NavigationLevel2\",\"eventLabel\":\"{$cta.title}\"{rdelim}{rdelim}"}
+                {/foreach}
+            </div>
+
+        {/foreach}
+        </div>
+    </div>
+</section>
+
+{/if}

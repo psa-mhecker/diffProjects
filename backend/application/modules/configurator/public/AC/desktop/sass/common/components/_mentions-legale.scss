@@ -1,0 +1,12 @@
+.mentions-legale{
+  padding: 18px 0;
+  font-size: 16px;
+  font-family: $font-family-brand-regular;
+  line-height: 21px;
+  position: relative;
+  background-color: $gray-lighter;
+  .mention-text {
+    display: block;
+    padding: 0 2%;
+  }
+}

@@ -1,3 +1,0 @@
-<bars>
-	<bar leftButton = "MyBar/Sun/l_btn.png" rightButton = "MyBar/Sun/r_btn.png" track = "MyBar/Sun/track.png" scrollButton = "MyBar/Sun/btn_track.png"></bar>
-</bars>

@@ -1,0 +1,29 @@
+<div class="list-result js-list-result scroller">
+    <div class="msg-info js-msg-info hide">Aucun résultat ne correspond à votre recherche. Veuillez modifier votre recherche.</div>
+    <div class="wrapper">
+        <div class="list-dealer js-list-dealer">
+            <h2 class="result"><span id="result-nbr" class="result-nbr">20</span>résultat(s) trouvé(s)</h2>
+            <div class="js-list-dealer-wrapper">
+                {{#list-result}}
+                    <div id="dealer-0000046733" class="dealer-item row">
+                        <div class="dist small-2 large-3 column">
+                            <div class="picto"></div>
+                            <div class="km">
+                                <span class="nb-km">{{dist}}</span><span class="unit">{{unit}}</span>
+                            </div>
+                        </div>
+
+                        <div class="coord small-10 large-9 column">
+                            <div class="dealer-name font-bold">{{name}}</div>
+                            <div class="dealer-type">{{type}}</div>
+                            <div class="dealer-street">{{street}}</div>
+                            <div class="dealer-city">{{city}}</div>
+                            <div class="dealer-phone"><span>Tel: </span><span class="phoneNumber">{{tel}}</span>
+                            </div>
+                        </div>
+                    </div>
+                {{/list-result}}
+            </div>
+        </div>
+    </div>
+</div>

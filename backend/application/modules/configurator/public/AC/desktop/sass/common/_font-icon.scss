@@ -1,0 +1,50 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon.eot?aaxhjz');
+	src:url('../fonts/icomoon.eot?aaxhjz#iefix') format('embedded-opentype'),
+		url('../fonts/icomoon.ttf?aaxhjz') format('truetype'),
+		url('../fonts/icomoon.woff?aaxhjz') format('woff'),
+		url('../fonts/icomoon.svg?aaxhjz#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'icomoon' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-bullet:before {
+	content: "\e900";
+}
+.icon-cercle:before {
+	content: "\e901";
+}
+.icon-fermer_AC:before {
+	content: "\e902";
+}
+.icon-flech_back:before {
+	content: "\e903";
+}
+.icon-flech_next:before {
+	content: "\e904";
+}
+.icon-picto-back-retina-AC:before {
+	content: "\e905";
+}
+.icon-picto-next-retina-AC:before {
+	content: "\e906";
+}
+.icon-Voiture:before {
+	content: "\e907";
+}

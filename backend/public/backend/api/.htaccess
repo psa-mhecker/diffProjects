@@ -1,0 +1,12 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} ^/api/([\w.-]+)
+RewriteCond %{DOCUMENT_ROOT}/api/%1 -d
+RewriteRule ^([\w.-]+)/ /api/$1/index.php [L]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteCond %{REQUEST_URI} ^/api/([\w.-]+)/v\d+/?$
+RewriteRule ^([\w.-]+)/ /api/$1/index.php [L]
+</IfModule>

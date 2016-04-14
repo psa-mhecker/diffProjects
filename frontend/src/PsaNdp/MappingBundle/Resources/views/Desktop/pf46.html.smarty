@@ -1,0 +1,92 @@
+<section class="slice-pf46 {if isset($slicePF46.version)}{$slicePF46.version}{/if}" {if isset($slicePF46.anchorId)} id="{$slicePF46.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePF46' } ]" data-html="">
+  <h2 class="title">{$slicePF46.title}</h2>
+  <p class="subtitle">{$slicePF46.subtitle}</p>
+  <div class="carousel clearfix">
+    <div class="carousel-frame">
+      <ul class="carousel-slider list_style">
+        {foreach $slicePF46.carousel as $thumbnail}
+        <li class="carousel-slide thumb" data-dealerid="{$thumbnail.id}" id="{$thumbnail.id}">
+          <a href="#" class="link" {if isset($thumbnail.target)}target="{$thumbnail.target}"{/if}>
+            <h3 class="title">{$thumbnail.title}</h3>
+            <figure>
+              <img src="{$thumbnail.img}" alt="{$thumbnail.alt}" />
+            </figure>
+          </a>
+        </li>
+        {/foreach}
+      </ul>
+    </div>
+  </div>
+  <div class="carousel-results">
+  {literal}
+    <div>
+     <div class="result mod-{{id}}">
+        <ul class="tabs">
+          {{#each items}}
+          <li data-id="{{this.id}}">{{this.type}}</li>
+          {{/each}}
+        </ul>
+        <div class="tabs-content iso-tabs-content">
+          {{#each items}}
+          <div class="tab-cont iso-tab-cont results">
+            <section class="videos">
+            {{#if videos}}
+              {{#each videos}}
+              <div class="video">
+                <img src="{{poster}}" alt="{{title}}"/>
+                <video width="100%" poster="{{poster}}" autobuffer id="media-{{id}}" title="{{title}}">
+                  <source src="{{baseurl}}/html5/idevicev2/media_id/{{id}}/width/1024/height/574" type="application/x-mpegURL" /> <!-- H.264 IPAD -->
+                  <source src="{{baseurl}}/html5/idevicev1/media_id/{{id}}/width/1024/height/574" type="application/x-mpegURL" /> <!-- H.264 IPHONE -->
+                  <source src="{{baseurl}}/html5/mp4low/media_id/{{id}}/width/1024/height/574" type="video/mp4" /> <!-- H.264 BASELINE -->
+                  <source src="{{baseurl}}/html5/webm/media_id/{{id}}/width/1024/height/574" type="video/webm" /> <!-- WEBM -->
+                  <div class="no-video">
+                    <div class="jp-video jp-video-360p" role="application"
+                     aria-label="media player">
+                      <div class="jp-type-single">
+                        <div class="jp-jplayer"></div>
+                        <div class="jp-gui">
+                          <div class="jp-interface">
+                            <div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </video>
+                <span class="play"></span>
+              </div>
+              {{/each}}
+              <nav class="deployed">
+                <span></span>
+                <span>{/literal}{$slicePF46.translate.associatedVideos}{literal}</span>
+                <ul>
+                  {{#each this.videos}}
+                  <li><img src="{{poster}}" alt="{{alt}}" /></li>
+                  {{/each}}
+                </ul>
+              </nav>
+            {{/if}}
+            </section>
+            <div class="content-txt">
+              <p class="span_4_of_12">{{text-column-1}}</p>
+              <p class="span_4_of_12">{{text-column-2}}</p>
+              <p class="span_4_of_12">{{text-column-3}}</p>
+            </div>
+            <div class="custom-button-group">
+              {{#each cta}}
+              <a href="{{url}}" class="cta-inline cta-btn" target="{{#if target}}{{target}}{{else}}_self{{/if}}">
+                <span>
+                  <i class="icon-download"></i>
+                  {{text}}
+                </span>
+              </a>
+              {{/each}}
+            </div>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+    {/literal}
+  </div>
+</section>

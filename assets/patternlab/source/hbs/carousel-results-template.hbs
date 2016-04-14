@@ -1,0 +1,38 @@
+{{#if legend }} <span class="hidden hasLegend" data-legend="{{{legend}}}"></span>  {{/if}}
+{{#if empty}}
+	<p class="typevide textaligncenter">Selon finition</p>
+{{else}}
+
+        <ul class="alltabs tabhaut">
+        {{#if full}}
+            <li class="fullfirstitem"></li>
+        {{/if}}
+        {{#tabhaut}}
+            <li><p>{{{label}}}</p></li>
+        {{/tabhaut}}
+    </ul>
+
+			{{#if light}}
+        <ul class="alltabs tabresponse tabresponsealone">
+            {{#line}}
+                {{#result}}
+                    <li class="deserieenoption {{label}}"><span></span></li>
+                {{/result}}
+            {{/line}}
+        </ul>
+    {{else}}
+        {{#line}}
+            <ul class="alltabs tabresponse tabresponsefull">
+                <li class="fullfirstitem"><span>{{{title}}}</span>{{{subtitle}}}</li>
+                {{#if empty}}
+                	<li class="fulltypevide"><p class="typevide">Selon finition</p></li>
+                {{else}}
+                    {{#result}}
+                        <li class="deserieenoption {{label}}"><span></span></li>
+                    {{/result}}
+                {{/if}}
+            </ul>
+        {{/line}}
+    {{/if}}
+
+{{/if}}

@@ -1,0 +1,8 @@
+parameters:
+    psa_ndp_socialnetwork.twitter.class: Abraham\TwitterOAuth\TwitterOAuth
+    psa_ndp_socialnetwork.nbitems: 3
+
+services:
+    psa_ndp_socialnetwork.twitter:
+        class: %psa_ndp_socialnetwork.twitter.class%
+        arguments: [%twitter_consumer_key%, %twitter_consumer_secret%,  %twitter_oauth_token%,  %twitter_oauth_tokensecret%]

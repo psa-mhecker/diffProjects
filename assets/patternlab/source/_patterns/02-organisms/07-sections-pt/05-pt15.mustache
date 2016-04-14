@@ -1,0 +1,15 @@
+<div class="row">
+    {{#list-sitemap}}
+        <div class="small-12 medium-4 columns">
+            <h2 class="title-list"><a href="#">{{title}}</a></h2>
+            {{#category}}
+                <ul class="bullet-list">
+                    <p><a href="#">{{title}}</a></p>
+                    {{#linky}}
+                        <li> <a href="{{src}}">{{title}}</a></li>
+                    {{/linky}}
+                </ul>
+            {{/category}}
+        </div>
+    {{/list-sitemap}}
+</div>

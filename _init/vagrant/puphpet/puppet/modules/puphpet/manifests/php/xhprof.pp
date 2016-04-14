@@ -52,6 +52,15 @@ class puphpet::php::xhprof (
       ensure       => 'present',
       require      => Exec['configure xhprof']
     }
+
+    composer::exec { 'xhprof-composer-run':
+      cmd     => 'install',
+      cwd     => "${webroot_location}/xhprof",
+      require => [
+        Class['composer'],
+        Exec['configure xhprof']
+      ]
+    }
   } else {
     $xhprof_package = $puphpet::params::xhprof_package
 
@@ -69,6 +78,15 @@ class puphpet::php::xhprof (
         require => Package['php'],
         notify  => $xhprof_package_notify,
       }
+    }
+
+    composer::exec { 'xhprof-composer-run':
+      cmd     => 'install',
+      cwd     => "${webroot_location}/xhprof",
+      require => [
+        Class['composer'],
+        File["${webroot_location}/xhprof/xhprof_html"]
+      ]
     }
   }
 

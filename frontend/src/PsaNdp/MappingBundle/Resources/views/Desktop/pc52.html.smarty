@@ -1,0 +1,26 @@
+<section id="filter-result" class="slice-pc52 {if isset($slicePC52.anchorId)} {$slicePC52.anchorId} {/if}" {if isset($slicePC52.anchorId)} id="{$slicePC52.anchorId}" {/if}  data-jsobj="[ { 'obj':'slicePC52' } ]">
+    <h2>{$slicePC52.Title}</h2>
+    <div class="services-selector">
+        {if $slicePC52.filters}
+            <div class="drop-filters row">
+                <div class="title open"><span>{if isset($slicePC52.filtersTitle)}{$slicePC52.filtersTitle}{/if}</span></div>
+                <div class="content">
+                    {foreach $slicePC52.filters as $filter}
+                        <div class="large-4 medium-6 columns">
+                            <div class="filter">
+                                <input id="filter-{$filter.id}" class="filter-checkbox show-for-sr" type="checkbox" name="{$filter.id}">
+                                <label for="filter-{$filter.id}">{$filter.label}</label>
+                            </div>
+                        </div>
+                    {/foreach}
+                </div>
+            </div>
+        {/if}
+        <div class="row">
+            {foreach $slicePC52.apv as $item}
+                {include file="../Components/vignette.html.smarty" blockOrder=$slicePC52.blockOrder blockName=$slicePC52.blockName imgSrc=$item.media.src  imgAlt=$item.media.alt}
+            {/foreach}
+        </div>
+    </div>
+    <div class="legal-notice">{$slicePC52.legalNotice}</div>
+</section>

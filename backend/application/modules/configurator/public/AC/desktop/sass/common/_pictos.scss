@@ -1,0 +1,266 @@
+
+#pictos{
+  background: #E6E3E3;
+  padding: 0 20px 20px;
+  span{
+    display: block;
+  }
+}
+
+.common-ico{
+  display: inline-block;
+}
+.common-ico-before{
+  content: '';
+  position: relative;
+  display: inline-block;
+  @extend %_sprites;
+}
+
+.info{
+  @extend .common-ico;
+  &--orange, &--blue{
+    &:before{
+      @extend .common-ico-before;
+    }
+  }
+  &--orange:before{
+    @extend %_sprite-info-orange;
+  }
+  &--blue:before{
+    @extend %_sprite-info-blue;
+  }
+}
+
+.check{
+  @extend .common-ico;
+  &--orange, &--pink, &--gray{
+    &:before{
+      @extend .common-ico-before;
+    }
+  }
+  &--orange:before{
+    @extend %_sprite-check-orange;
+  }
+  &--pink:before{
+    @extend %_sprite-check-pink;
+  }
+  &--gray:before{
+    @extend %_sprite-check-gray;
+  }
+}
+
+.cross{
+  @extend .common-ico;
+  &--gray, &--pink, &--pink, &--dark-gray{
+    &:before{
+      @extend .common-ico-before;
+    }
+  }
+  &--gray:before{
+    @extend %_sprite-cross-gray;
+  }
+  &--dark-gray:before{
+    @extend %_sprite-cross-dark-gray;
+  }
+  &--pink:before{
+    @extend %_sprite-cross-pink;
+  }
+}
+
+.arrow{
+  @extend .common-ico;
+  &--gray, &--gray-big, &--orange, &--white, &--dark-big, &--blue{
+    &-left, &-right, &-top, &-bottom{
+      &:before{
+        @extend .common-ico-before;
+      }
+    }
+    &-left{
+      @include rotate(0);
+    }
+    &-right{
+      @include rotate(180deg);
+    }
+    &-top{
+      @include rotate(90deg);
+    }
+    &-bottom{
+      @include rotate(-90deg);
+    }
+  }
+  &--dark-big{
+    &-left, &-right, &-top, &-bottom{
+      &:before{
+        @extend %_sprite-arrow-big-dark;
+      }
+    }
+  }
+  &--gray{
+    &-left, &-right, &-top, &-bottom{
+      &:before{
+        @extend %_sprite-arrow-gray;
+      }
+    }
+  }
+  &--blue{
+    &-left, &-right, &-top, &-bottom{
+      &:before{
+        @extend %_sprite-arrow-blue;
+      }
+    }
+  }
+  &--gray-big{
+    &-left, &-right, &-top, &-bottom{
+      &:before{
+        @extend %_sprite-arrow-big-gray;
+      }
+    }
+  }
+  &--gray-bottom-big:before{
+    @extend .common-ico-before;
+    @extend %_sprite-arrow-big-gray-bottom;
+  }
+  &--orange{
+    &-left, &-right, &-top, &-bottom{
+      &:before{
+        @extend %_sprite-arrow-orange;
+      }
+    }
+  }
+  &--white{
+    &-left, &-right, &-top, &-bottom{
+      &:before{
+        @extend %_sprite-arrow-white;
+      }
+    }
+  }
+  &--dark{
+    &-top {
+      &:before{
+          @extend .common-ico-before;
+          @extend %_sprite-arrow-dark-top;
+      }
+    }
+    &-bottom {
+      &:before {
+          @extend .common-ico-before;
+          @extend %_sprite-arrow-dark-bottom;
+      }
+    }
+    &-smaller {
+      &:before {
+          @extend .common-ico-before;
+          @extend %_sprite-arrow-dark-bottom-small;
+      }
+    }
+  }
+}
+
+
+.plus{
+  @extend .common-ico;
+  &--gray, &--light-gray, &--blue, &--dark-gray{
+    &:before{
+      @extend .common-ico-before;
+    }
+  }
+  &--blue:before{
+    @extend %_sprite-plus-blue;
+  }
+  &--gray:before{
+    @extend %_sprite-plus-gray;
+  }
+  &--light-gray:before{
+    @extend %_sprite-plus-light-gray;
+  }
+  &--dark-gray:before{
+    @extend %_sprite-plus-dark-gray;
+  }
+}
+
+.car{
+  @extend .common-ico;
+  &--check, &--gray, &--white, &--blue, &--black{
+    &:before{
+      @extend .common-ico-before;
+    }
+  }
+  &--check:before{
+    @extend %_sprite-car-check;
+  }
+  &--gray:before{
+    @extend %_sprite-car-gray;
+  }
+  &--white:before{
+    @extend %_sprite-car-white;
+  }
+  &--blue:before{
+    @extend %_sprite-car-blue;
+  }
+  &--black:before{
+    @extend %_sprite-car-black;
+  }
+}
+
+.ico{
+  @extend .common-ico;
+  &--gear, &--save, &--print,
+  &--motor, &--share, &--zoom-white,
+  &--pencil-gray, &--geo, &--hourglass, &--euro{
+    &:before{
+      @extend .common-ico-before;
+    }
+  }
+  &--gear:before{
+    @extend %_sprite-ico-gear;
+  }
+  &--save:before{
+    @extend %_sprite-ico-save;
+  }
+  &--print:before{
+    @extend %_sprite-ico-print;
+  }
+  &--motor:before{
+    @extend %_sprite-ico-motor;
+  }
+  &--share:before{
+    @extend %_sprite-ico-share;
+  }
+  &--zoom-white:before{
+    @extend %_sprite-zoom-white;
+  }
+  &--pencil-gray:before{
+    @extend %_sprite-pencil-gray;
+  }
+  &--geo:before{
+    @extend %_sprite-ico-geo;
+  }
+  &--hourglass:before{
+    @extend %_sprite-timeglass;
+  }
+  &--euro:before{
+    @extend %_sprite-euro;
+  }
+}
+
+.conf-icon {
+  &:before{
+    @extend .common-ico-before;
+  }
+  &--finish::before {
+    @extend %_sprite-conf-finish;
+  }
+  &--motorisation::before {
+    @extend %_sprite-conf-motor;
+  }
+  &--tint::before {
+    @extend %_sprite-conf-tint;
+  }
+  &--trim::before {
+    @extend %_sprite-conf-trim;
+  }
+  &--options::before {
+    @extend %_sprite-conf-options;
+  }
+}

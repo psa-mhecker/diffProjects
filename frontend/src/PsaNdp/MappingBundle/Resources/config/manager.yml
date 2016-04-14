@@ -1,0 +1,37 @@
+parameters:
+
+    psa_ndp_mapping.manager.tree_manager.class: PsaNdp\MappingBundle\Manager\TreeManager
+    psa_ndp_mapping.manager.block_manager.class: PsaNdp\MappingBundle\Manager\BlockManager
+    psa_ndp_mapping.manager.price_manager.class: PsaNdp\MappingBundle\Manager\PriceManager
+    psa_ndp_mapping.manager.cacheable_manager.class: PsaNdp\MappingBundle\Manager\PsaCacheableManager
+    open_orchestra_front.redirection.route_loader.class: PsaNdp\MappingBundle\Routing\RedirectionLoader
+
+services:
+
+    psa_ndp_mapping.manager.tree_manager:
+        class: %psa_ndp_mapping.manager.tree_manager.class%
+        arguments: ['@psa_ndp_page_zone_repository']
+
+    psa_ndp_mapping.manager.block_manager:
+        class: %psa_ndp_mapping.manager.block_manager.class%
+        arguments:
+          - '@psa_ndp_page_repository'
+          - '@psa_ndp_page_zone_repository'
+          - '@psa_ndp_language_repository'
+          - '@psa_ndp_page_multi_zone_repository'
+          - '@psa_ndp.services.page_finder'
+
+    psa_ndp_mapping.manager.price_manager:
+        class: %psa_ndp_mapping.manager.price_manager.class%
+        arguments:
+            - @psa_ndp_site_configuration
+            - @financement_simulator
+            - @?request_stack
+            - @psa_ndp_mapping.object.formatter.price
+        calls:
+           - [ setTranslator, ['@translator']]
+    open_orchestra_display.manager.cacheable:
+        class: %psa_ndp_mapping.manager.cacheable_manager.class%
+        arguments:
+            - @fos_http_cache.handler.tag_handler
+            - %block_cache_max_age%

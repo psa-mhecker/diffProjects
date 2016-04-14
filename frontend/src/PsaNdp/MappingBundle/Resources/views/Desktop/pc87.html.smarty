@@ -1,0 +1,178 @@
+<section class="slice-pc87 slice-inside-margin {if isset($slicePC87.anchorId)} {$slicePC87.anchorId} {/if}" {if isset($slicePC87.anchorId)} id="{$slicePC87.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePC87' } ]">
+  <h2 class="title">{$slicePC87.title}</h2>
+  <div class="block-other-casing">
+    {if $slicePC87.mdc.results > 0}
+    <h3 class="cat-title">
+      <span><span class="nbrItems">{$slicePC87.mdc.casing.nbResult} </span>{$slicePC87.mdc.casing.disponibility.other_casing_available}</span>
+    </h3>
+    {/if}
+    {if isset($slicePC87.aide.ctaList) && $slicePC87.aide.active eq true}
+    <div class="custom-button-group clearfix">
+      {foreach $slicePC87.aide.ctaList as $cta}
+      {include file="./cta.html.smarty"}
+      {/foreach}
+    </div>
+    {/if}
+    {foreach $slicePC87.mdc.categories.casing.other as $other_casing_category}
+    <div class="block-casing-category category clearfix">
+      {if isset($other_casing_category.label)}
+      <h4 class="sub-cat-title">{$other_casing_category.label}</h4>
+      {/if}
+      <div class="block-price" data-jsobj="[ { 'obj':'iso-infobulle' } ]">
+        <p class="as_for {if $other_casing_category.sameValue === 'true'}hide{/if}">{$slicePC87.mdc.as_for}</p>
+        <p class="price">
+          <span class="amount" data-price="{$other_casing_category.selected_price}">{$other_casing_category.selected_price}</span>
+          <span{if $slicePC87.mdc.currency.monthly} class="picto_monthly"{/if}>
+          {if $slicePC87.mdc.monthly_price}
+            {$slicePC87.mdc.currency.monthly}
+          {else}
+            {$slicePC87.mdc.currency.normal}
+          {/if}
+          </span>
+        </p>
+        {if $slicePC87.mdc.monthly_price}
+        <div class="slice-infobulle">
+          <span class="info" data-infobulle="{$other_casing_category.infobulleid}"></span>
+          <div class="infobulle scroller" data-infobulleo="{$other_casing_category.infobulleid}"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores eos quos aliquam repudiandae quam alias, eaque repellat tempore, ipsum molestias aut autem doloribus molestiae, pariatur officiis distinctio ratione totam doloremque.</p></div>
+        </div>
+        {/if}
+      </div>
+      <ul class="list-casing{if $slicePC87.vignettes_equipements === true} vignettes-equipements{/if}" data-jsobj="[ { 'obj':'iso-infobulle' } ]">
+        {foreach $other_casing_category.type as $type}
+        <li>
+          <a href="#" class="color" {if isset($type.typeOption)}data-typeOption="{$type.typeOption}"{/if} {if isset($type.valueOption)}data-valueOption="{$type.valueOption}"{/if} data-price="{$type.price}" {if isset($type.target)}target="{$type.target}"{/if} title="{$type.label}">
+            <img src="{$type.src}" />
+          </a>
+          <div class="block-label clearfix">
+            {if isset( $type.infobulle )}
+            <div class="slice-infobulle">
+              <span class="info" data-infobulle="{$type.infobulle.id}"></span>
+              <div class="infobulle scroller" data-infobulleo="{$type.infobulle.id}"><p>{$type.infobulle.content}</p></div>
+            </div>
+            {/if}
+            <span class="label">{$type.label}</span>
+            {if isset($type.lienDetail)}
+            <span class="custom-button-group">
+              <a href="#{$slicePC87.mdc.categories.casing.popin.info_popin_target}" class="cta-link popin cta-inline pull-left" data-close="{$slicePC87.translate.close}" data-title="{$type.label}" data-image="{$type.src_big}" title="{$type.label}">
+                <span>{$type.lienDetail.title}</span>
+              </a>
+            </span>
+            {/if}
+          </div>
+        </li>
+        {/foreach}
+      </ul>
+    </div>
+    {/foreach}
+    <p class="legal-notice">Un crédit vous engage et doit être remboursé. Vérifiez vos capacités de remboursement avant de vous engager.</p>
+  </div>
+
+  {if isset($slicePC87.saveConfiguration.content)}
+    {foreach $slicePC87.saveConfiguration.content as $item}
+      <div class="save-config">
+          <div class="content-info">
+            <div class="etape1">
+            {if isset($item.mdc.saveConfig.info)}
+            {foreach $item.mdc.saveConfig.info as $notification}
+              {include file="../../notification/notification.tpl"}
+            {/foreach}
+            {/if}
+            </div>
+
+            <p class="confirm-save">
+              <label class="label-save" for="{$item.mdc.saveConfig.id}">
+                <input type="checkbox" name="{$item.mdc.saveConfig.name}" id="{$item.mdc.saveConfig.id}"/>
+                {$item.mdc.saveConfig.label}
+              </label>
+            </p>
+            <div class="config-save">
+              <form action="" method="post" class="config-form" novalidate>
+                <div class="config-box-input" data-msg-required="{$item.translate.configuration.email.txterror}">
+                  <div class="input-text">
+                    <label class="control-label" for="configname">{$item.translate.configuration.ConfigName.title}</label>
+                    <div class="form-control">
+                      <input type="text" name="configname" id="configname" data-msg-required="{$item.translate.configuration.ConfigName.txterror}" value="{if isset($item.config_value)}{$item.config_value}{/if}" placeholder="{if isset($item.config_value)}{$item.config_value}{/if}" data-required="true">
+                    </div>
+                  </div>
+                  <div class="input-text last">
+                    <label class="control-label" for="configemail">{$item.translate.configuration.email.title}</label>
+                    <div class="form-control">
+                      <input type="email" name="configemail" id="configemail" data-msg-email="{$item.translate.configuration.email.emailError}" data-required="true">
+                    </div>
+                  </div>
+                  <br class="clr" />
+                </div>
+                {if isset($item.translate.configuration.mentionsLegales)}
+                <p class="mentions-legales">{$item.translate.configuration.mentionsLegales}</p>
+                {/if}
+                {if isset($item.translate.configuration.confirmMentions) && $item.translate.configuration.confirmMentions.active eq true}
+                <p class="confirm-mentions">
+                  <label for="{$item.translate.configuration.confirmMentions.id}">
+                    <input type="checkbox" data-msg-required="{$item.translate.configuration.confirmMentions.txterror}" data-required="true" name="{$item.translate.configuration.confirmMentions.name}" id="{$item.translate.configuration.confirmMentions.id}"/>
+                    <span class="labelMentions">{$item.translate.configuration.confirmMentions.label}</span>
+                  </label>
+                </p>
+                {/if}
+                {if isset($item.translate.configuration.ctaList)}
+                <div class="custom-button-group">
+                  <button class="cta-btn cta-btn-4">{$item.translate.configuration.sendButton}</button>
+                  {foreach $item.translate.configuration.ctaList as $cta}
+                  {include file="./cta.html.smarty"}
+                  {/foreach}
+                </div>
+                {/if}
+              </form>
+            </div>
+            <div class="etape3">
+              {if isset($item.mdc.saveConfig.confirm)}
+              {foreach $item.mdc.saveConfig.confirm as $notification}
+                {include file="../../notification/notification.tpl"}
+              {/foreach}
+              {/if}
+            </div>
+          </div>
+        </div>
+        {if isset($item.return.ctaList)}
+        <div class="control-box custom-button-group clearfix">
+          {foreach $item.return.ctaList as $cta}
+          {include file="./cta.html.smarty"}
+          {/foreach}
+        </div>
+        {/if}
+    {/foreach}
+  {/if}
+
+
+  <section class="slice-pf42_confishow-popin popin" id="popin-2">
+    <h4 class="popin-title">Chaîne &amp; Trap Metax Noir Mistral</h4>
+    <div class="wrapper">
+      <figure>
+        <img class="popin-casing-image" src="../../../img/confishow/garnissage1_big.jpg" alt="">
+      </figure>
+      <div class="slides owl-carousel owl-text-select-on">
+        <figure>
+          <img src="../../../img/confishow/peugeot_inside.jpg" alt="peugeot">
+        </figure>
+        <figure>
+          <img src="../../../img/confishow/peugeot_inside.jpg" alt="peugeot">
+        </figure>
+        <figure>
+          <img src="../../../img/confishow/peugeot_inside.jpg" alt="peugeot">
+        </figure>
+      </div>
+    </div>
+    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas venenatis velit. Nullam semper sapien risus, id tincidunt ex rhoncus sed.</p>
+  </section>
+
+
+  {if $slicePC87.mdc.monthly_price}
+  <!--  POPIN FINANCEMENT -->
+  {if isset($slicePC87.popinFinancement)}
+    <section class="popin_overlay" data-jsobj="[ { 'obj':'iso-popin' } ]">
+      {foreach $slicePC87.popinFinancement.contents as $ticket}
+        {include file="../../popin-financement/popin-financement.tpl"}
+      {/foreach}
+    </section>
+  {/if}
+  {/if}
+</section>

@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions
+  targetNamespace="http://xml.inetpsa.com/Services/bend/BOFormService"
+  xmlns:cxl="http://fault.core.cxl.inetpsa.com"
+  xmlns:soap11="http://schemas.xmlsoap.org/soap/envelope/"
+  xmlns:soap12="http://www.w3.org/2003/05/soap-envelope"
+  xmlns:soapenc11="http://schemas.xmlsoap.org/soap/encoding/"
+  xmlns:soapenc12="http://www.w3.org/2003/05/soap-encoding"
+  xmlns:tn="http://com/inetpsa/dcr/xml/services/bend/boformservice"
+  xmlns:tns="http://xml.inetpsa.com/Services/bend/BOFormService"
+  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+  xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <xsd:schema attributeFormDefault="unqualified"
+      elementFormDefault="qualified"
+      targetNamespace="http://com/inetpsa/dcr/xml/services/bend/boformservice"
+      xmlns:tn="http://com/inetpsa/dcr/xml/services/bend/boformservice" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:simpleType name="UniqueIdentifier">
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[A-Z]{4}[0-9]{12}"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="Culture">
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[a-z]{2}\-[A-Z]{2}"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="Status">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="OK"/>
+          <xs:enumeration value="ERROR"/>
+          <xs:enumeration value="BAD_REQUEST"/>
+          <xs:enumeration value="NO_RESULTS_FOUND"/>
+          <xs:enumeration value="INSTANCE_NOT_FOUND"/>
+          <xs:enumeration value="XSD_VALIDATION_FAILED"/>
+          <xs:enumeration value="UNKNOWN_SITE"/>
+          <xs:enumeration value="UNKNOWN_COUNTRY"/>
+          <xs:enumeration value="UNKNOWN_BRAND"/>
+          <xs:enumeration value="NULL_NOT_PERMITTED"/>
+          <xs:enumeration value="NOT_DATETIME"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:complexType name="Instance">
+        <xs:sequence>
+          <xs:element maxOccurs="1" minOccurs="1" name="instanceId" type="tn:UniqueIdentifier"/>
+          <xs:element maxOccurs="1" minOccurs="1" name="instanceName" type="xs:string"/>
+          <xs:element maxOccurs="1" minOccurs="1" name="formId" type="tn:UniqueIdentifier"/>
+          <xs:element maxOccurs="1" minOccurs="1" name="formName" type="xs:string"/>
+          <xs:element maxOccurs="1" minOccurs="1" name="formType" type="xs:string"/>
+          <xs:element maxOccurs="1" minOccurs="1" name="editable" type="xs:string"/>
+          <xs:element maxOccurs="1" minOccurs="1"
+            name="instanceCommentary" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Section">
+        <xs:sequence>
+          <xs:element maxOccurs="1" minOccurs="1" name="dateStart" type="xs:dateTime"/>
+          <xs:element maxOccurs="1" minOccurs="1" name="dateEnd" type="xs:dateTime"/>
+          <xs:element maxOccurs="1" minOccurs="1" name="leads" type="tn:LeadsArray"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="LeadData">
+        <xs:sequence>
+          <xs:element maxOccurs="1" minOccurs="0" name="formType" type="xs:string"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="countryCode" type="xs:string"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="cible" type="xs:string"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="lastName" type="xs:string"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="firstName" type="xs:string"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="civility" type="xs:string"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="address1" type="xs:string"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="address2" type="xs:string"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="zipCode" type="xs:string"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="country" type="xs:string"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="telephone" type="xs:string"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="mobile" type="xs:string"/>
+          <xs:element maxOccurs="1" minOccurs="0"
+            name="professionalTelephone" type="xs:string"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="email" type="xs:string"/>
+          <xs:element maxOccurs="1" minOccurs="0"
+            name="flagRefusalPromotionalOffers" type="xs:string"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="productOwned" type="xs:string"/>
+          <xs:element maxOccurs="1" minOccurs="0"
+            name="companyFleetSize" type="xs:string"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="formCountry" type="xs:string"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="dealerCode" type="xs:string"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="gitId" type="xs:string"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="channel" type="xs:string"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="source" type="xs:string"/>
+          <xs:element maxOccurs="1" minOccurs="0"
+            name="clientContactDate" type="xs:dateTime"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="nature" type="xs:string"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="marketingCode" type="xs:string"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="preferredDate" type="xs:dateTime"/>
+          <xs:element maxOccurs="1" minOccurs="0"
+            name="purchaseIntentPeriod" type="xs:dateTime"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="DPRCode" type="xs:string"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="InterestProduct" type="xs:string"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="lcdv" type="xs:string"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="verbatim" type="xs:string"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="activityType" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="LeadInfoType">
+        <xs:sequence>
+          <xs:element maxOccurs="1" minOccurs="1" name="type" type="xs:string"/>
+          <xs:element maxOccurs="1" minOccurs="1" name="device" type="xs:string"/>
+          <xs:element maxOccurs="1" minOccurs="1" name="totalType" type="xs:int"/>
+          <xs:element maxOccurs="1" minOccurs="1" name="totalDevice" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ReferentialData">
+        <xs:sequence>
+          <xs:element maxOccurs="1" minOccurs="1" name="type" type="xs:string"/>
+          <xs:element maxOccurs="1" minOccurs="1" name="label" type="xs:string"/>
+          <xs:element maxOccurs="1" minOccurs="1" name="refCode" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="InstancesArray">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0"
+            name="instance" type="tn:Instance"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="RefsArray">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0"
+            name="referential" type="tn:ReferentialData"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="LeadsDataArray">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0"
+            name="leadData" type="tn:LeadData"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="LeadsArray">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0"
+            name="leadInfoType" type="tn:LeadInfoType"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="getInstancesRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="1" minOccurs="1" name="country" type="xs:string"/>
+            <xs:element maxOccurs="1" minOccurs="1" name="brand" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getInstancesResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="1" minOccurs="1"
+              name="statusResponse" type="tn:Status"/>
+            <xs:element maxOccurs="1" minOccurs="1" name="instances" type="tn:InstancesArray"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getInstanceByIdRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="1" minOccurs="1" name="instanceId" type="tn:UniqueIdentifier"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getInstanceByIdResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="1" minOccurs="1"
+              name="statusResponse" type="tn:Status"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="instanceXML" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getReferentialResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="1" minOccurs="1"
+              name="statusResponse" type="tn:Status"/>
+            <xs:element maxOccurs="1" minOccurs="1" name="referentials" type="tn:RefsArray"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getReferentialRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="1" minOccurs="1"
+              name="referentialType" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="updateInstanceRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="1" minOccurs="1" name="instanceId" type="tn:UniqueIdentifier"/>
+            <xs:element maxOccurs="1" minOccurs="1" name="instanceName" type="xs:string"/>
+            <xs:element maxOccurs="1" minOccurs="1" name="formId" type="tn:UniqueIdentifier"/>
+            <xs:element maxOccurs="1" minOccurs="1" name="formName" type="xs:string"/>
+            <xs:element maxOccurs="1" minOccurs="1" name="formType" type="xs:string"/>
+            <xs:element maxOccurs="1" minOccurs="1" name="instanceXML" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="updateInstanceResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="1" minOccurs="1"
+              name="statusResponse" type="tn:Status"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="errorResponse" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getReportingRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="1" minOccurs="1" name="brand" type="xs:string"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="siteCode" type="xs:string"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="country" type="xs:string"/>
+            <xs:element maxOccurs="1" minOccurs="0"
+              name="opportunityType" type="xs:string"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="contexte" type="xs:string"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="culture" type="xs:string"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="customerType" type="xs:string"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="salePoint" type="xs:string"/>
+            <xs:element maxOccurs="1" minOccurs="1" name="dateStart" type="xs:dateTime"/>
+            <xs:element maxOccurs="1" minOccurs="1" name="dateEnd" type="xs:dateTime"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getReportingResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="1" minOccurs="1"
+              name="statusResponse" type="tn:Status"/>
+            <xs:element maxOccurs="1" minOccurs="1" name="leadsData" type="tn:LeadsDataArray"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getLeadsByTypeRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="1" minOccurs="1" name="country" type="xs:string"/>
+            <xs:element maxOccurs="1" minOccurs="1" name="brand" type="xs:string"/>
+            <xs:element maxOccurs="1" minOccurs="1" name="date" type="xs:dateTime"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getLeadsByTypeResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="1" minOccurs="1"
+              name="statusResponse" type="tn:Status"/>
+            <xs:element maxOccurs="1" minOccurs="1" name="sectionM1" type="tn:Section"/>
+            <xs:element maxOccurs="1" minOccurs="1" name="sectionM" type="tn:Section"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xsd:schema>
+    <xsd:schema attributeFormDefault="unqualified"
+      elementFormDefault="qualified" targetNamespace="http://fault.core.cxl.inetpsa.com">
+      <xsd:complexType name="ServiceException"/>
+    </xsd:schema>
+    <xsd:schema attributeFormDefault="unqualified"
+      elementFormDefault="qualified"
+      targetNamespace="http://xml.inetpsa.com/Services/bend/BOFormService" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import namespace="http://fault.core.cxl.inetpsa.com"/>
+      <xsd:import namespace="http://com/inetpsa/dcr/xml/services/bend/boformservice"/>
+      <xsd:element name="getInstances">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="1" ref="tn:getInstancesRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getInstancesResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="1" ref="tn:getInstancesResponse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getInstanceById">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="1" ref="tn:getInstanceByIdRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getInstanceByIdResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="1" ref="tn:getInstanceByIdResponse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="updateInstance">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="1" ref="tn:updateInstanceRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="updateInstanceResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="1" ref="tn:updateInstanceResponse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getReporting">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="1" ref="tn:getReportingRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getReportingResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="1" ref="tn:getReportingResponse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getLeadsByType">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="1" ref="tn:getLeadsByTypeRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getLeadsByTypeResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="1" ref="tn:getLeadsByTypeResponse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getReferential">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="1" ref="tn:getReferentialRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getReferentialResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="1" ref="tn:getReferentialResponse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ServiceException" type="cxl:ServiceException"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="getInstancesRequest">
+    <wsdl:part element="tns:getInstances" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="getInstanceByIdRequest">
+    <wsdl:part element="tns:getInstanceById" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="updateInstanceRequest">
+    <wsdl:part element="tns:updateInstance" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="getReportingRequest">
+    <wsdl:part element="tns:getReporting" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="getLeadsByTypeRequest">
+    <wsdl:part element="tns:getLeadsByType" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="getReferentialRequest">
+    <wsdl:part element="tns:getReferential" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="ServiceException">
+    <wsdl:part element="tns:ServiceException" name="ServiceException"/>
+  </wsdl:message>
+  <wsdl:message name="getInstancesResponse">
+    <wsdl:part element="tns:getInstancesResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="getInstanceByIdResponse">
+    <wsdl:part element="tns:getInstanceByIdResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="updateInstanceResponse">
+    <wsdl:part element="tns:updateInstanceResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="getReportingResponse">
+    <wsdl:part element="tns:getReportingResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="getLeadsByTypeResponse">
+    <wsdl:part element="tns:getLeadsByTypeResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="getReferentialResponse">
+    <wsdl:part element="tns:getReferentialResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:portType name="BOFormServicePortType">
+    <wsdl:operation name="getInstances">
+      <wsdl:input message="tns:getInstancesRequest" name="getInstancesRequest"/>
+      <wsdl:output message="tns:getInstancesResponse" name="getInstancesResponse"/>
+      <wsdl:fault message="tns:ServiceException" name="ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="getInstanceById">
+      <wsdl:input message="tns:getInstanceByIdRequest" name="getInstanceByIdRequest"/>
+      <wsdl:output message="tns:getInstanceByIdResponse" name="getInstanceByIdResponse"/>
+      <wsdl:fault message="tns:ServiceException" name="ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="updateInstance">
+      <wsdl:input message="tns:updateInstanceRequest" name="updateInstanceRequest"/>
+      <wsdl:output message="tns:updateInstanceResponse" name="updateInstanceResponse"/>
+      <wsdl:fault message="tns:ServiceException" name="ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="getReporting">
+      <wsdl:input message="tns:getReportingRequest" name="getReportingRequest"/>
+      <wsdl:output message="tns:getReportingResponse" name="getReportingResponse"/>
+      <wsdl:fault message="tns:ServiceException" name="ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="getLeadsByType">
+      <wsdl:input message="tns:getLeadsByTypeRequest" name="getLeadsByTypeRequest"/>
+      <wsdl:output message="tns:getLeadsByTypeResponse" name="getLeadsByTypeResponse"/>
+      <wsdl:fault message="tns:ServiceException" name="ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="getReferential">
+      <wsdl:input message="tns:getReferentialRequest" name="getReferentialRequest"/>
+      <wsdl:output message="tns:getReferentialResponse" name="getReferentialResponse"/>
+      <wsdl:fault message="tns:ServiceException" name="ServiceException"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BOFormServiceHttpBinding" type="tns:BOFormServicePortType">
+    <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getInstances">
+      <wsdlsoap:operation soapAction="http://xml.inetpsa.com/Services/bend/BOFormService#getInstances"/>
+      <wsdl:input name="getInstancesRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getInstancesResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <wsdlsoap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getInstanceById">
+      <wsdlsoap:operation soapAction="http://xml.inetpsa.com/Services/bend/BOFormService#getInstanceById"/>
+      <wsdl:input name="getInstanceByIdRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getInstanceByIdResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <wsdlsoap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateInstance">
+      <wsdlsoap:operation soapAction="http://xml.inetpsa.com/Services/bend/BOFormService#updateInstance"/>
+      <wsdl:input name="updateInstanceRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updateInstanceResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <wsdlsoap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getReporting">
+      <wsdlsoap:operation soapAction="http://xml.inetpsa.com/Services/bend/BOFormService#getReporting"/>
+      <wsdl:input name="getReportingRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getReportingResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <wsdlsoap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getLeadsByType">
+      <wsdlsoap:operation soapAction="http://xml.inetpsa.com/Services/bend/BOFormService#getLeadsByType"/>
+      <wsdl:input name="getLeadsByTypeRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getLeadsByTypeResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <wsdlsoap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getReferential">
+      <wsdlsoap:operation soapAction="http://xml.inetpsa.com/Services/bend/BOFormService#getReferential"/>
+      <wsdl:input name="getReferentialRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getReferentialResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <wsdlsoap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BOFormService">
+    <wsdl:port binding="tns:BOFormServiceHttpBinding" name="BOFormServiceHttpPort">
+      <wsdlsoap:address location="http://localhost:8080/context-root/services/BOFormService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

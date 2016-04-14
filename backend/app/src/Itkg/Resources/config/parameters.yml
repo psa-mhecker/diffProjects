@@ -1,0 +1,87 @@
+
+parameters:
+
+  # Mapping of gabarit (by PSA_PAGE_TYPE / PAGE_TYPE_CODE) to static block types (String) to a block Zone tempalte Id (PSA_PAGE_ZONE / ZONE_TEMPLATE_ID)
+  database.gabarit.static.blockZoneTemplateId.mapping:
+    # G27 Showroom, static blocks
+    G27:
+      PT21: 6125
+      PN15: 6129
+      PF2: 6126
+      PN14: 6128
+    # G36 Techno, static blocks
+    G36:
+      PT21: 6247
+      PN7: 6248
+      PN14: 6250
+      PN13: 6249
+
+  # Mapping of dynamic block type (String) to a block Template Id (PSA_PAGE_MULTI_ZONE / ZONE_ID)
+  # Note for dynamic block we don't need to map by gabarit since it will be the same dynmaic block id for each gabarit
+  database.dynamic.blockZoneId.mapping:
+    PC12: 760
+    PC16: 768
+    PC18: 753
+    PC19: 754
+    PC2: 750
+    PC23: 802
+    PC33: 769
+    PC36: 770
+    PC37: 901
+    PC39: 756
+    PC40: 771
+    PC41: 772
+    PC42: 773
+    PC43: 774
+    PC43: 904
+    PC47: 775
+    PC5: 776
+    PC58: 757
+    PC59: 777
+    PC60: 818
+    PC62: 779
+    PC63: 780
+    PC68: 766
+    PC69: 767
+    PC7: 781
+    PC73: 829
+    PC77: 758
+    PC78: 819
+    PC79: 816
+    PC8: 751
+    PC83: 820
+    PC84: 821
+    PC85: 834
+    PC9: 752
+    PC95: 835
+    PF11: 812
+    PF14: 759
+    PF14: 905
+    PF16: 762
+    PF16: 906
+    PF17: 837
+    PF2: 830
+    PF23: 828
+    PF23: 902
+    PF25: 813
+    PF27: 782
+    PF27: 903
+    PF30: 827
+    PF33: 3300
+    PF42: 784
+    PF53: 817
+    PF6: 786
+    PF8: 787
+    PN13: 788
+    PN14: 822
+    PN15: 823
+    PN18: 824
+    PN2: 789
+    PN3: 790
+    PT19: 795
+    PT23: 836
+    PN7: 791
+
+
+
+

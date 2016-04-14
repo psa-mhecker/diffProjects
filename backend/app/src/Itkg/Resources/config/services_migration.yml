@@ -1,0 +1,120 @@
+parameters:
+    psa_ndp.migration.showroom.reporting.class: Itkg\Migration\Reporting\DataMigrationReporting
+    psa_ndp.migration.lock.handler.class: Itkg\Migration\Lock\LockHandler
+    psa_ndp.migration.showroom.xml.parser.class: Itkg\Migration\XML\ShowroomXMLParserService
+    psa_ndp.migration.showroom.xml.entity.parser.factory.class: Itkg\Migration\XML\EntityParser\ShowroomXMLEntityParserFactory
+    psa_ndp.migration.showroom.transaction.class: Itkg\Migration\Transaction\ShowroomTransactionManager
+    psa_ndp.migration.showroom.service.class: Itkg\Migration\ShowroomMigrationService
+    psa_ndp.migration.showroom.url.manager.factory.class: Itkg\Migration\UrlManager\ShowroomUrlManagerFactory
+    psa_ndp.migration.showroom.entity.factory.class: Itkg\Migration\Transaction\PsaShowroomEntityFactory
+    psa_ndp.migration.showroom.configurator.class: Itkg\Migration\Configurator\ConfiguratorService
+    psa_ndp.migration.showroom.configurator.slice.factory.class: Itkg\Migration\Configurator\Slice\SliceConfiguratorFactory
+
+
+    psa_ndp.xpath.query.helper.class: Itkg\Migration\XML\XPathQueryHelper
+    psa_ndp.utils.file.manager.class: Itkg\Utils\FileManagerService
+    psa_ndp.utils.imagecompare.class: Itkg\Utils\ImageCompareUtils
+    psa_ndp.utils.sisterfinder.class: Itkg\Utils\SisterFinder
+    psa_ndp.manager.signature.class: Itkg\Manager\SignatureManager
+
+services:
+  psa_ndp.utils.imagecompare:
+    class :  %psa_ndp.utils.imagecompare.class%
+
+  psa_ndp.utils.sisterfinder:
+    class : %psa_ndp.utils.sisterfinder.class%
+    arguments : [@psa_ndp.utils.imagecompare]
+
+  psa_ndp.manager.signature:
+    class : %psa_ndp.manager.signature.class%
+    arguments : [@psa_ndp.utils.imagecompare,  %migration.directory% ]
+
+
+  symfony.filesystem:
+    class: Symfony\Component\Filesystem\Filesystem
+
+  # Data Migration Reporting Factory Service
+  psa_ndp.migration.showroom.reporting:
+    class: '%psa_ndp.migration.showroom.reporting.class%'
+
+  # Lock
+  psa_ndp.migration.lock.handler:
+    class: %psa_ndp.migration.lock.handler.class%
+    arguments:
+      - @symfony.filesystem
+
+  # XML management
+
+  psa_ndp.migration.showroom.xml.parser:
+    class: %psa_ndp.migration.showroom.xml.parser.class%
+    arguments:
+      - @doctrine.orm.entity_manager
+      - @psa_ndp.migration.showroom.entity.factory
+      - @psa_ndp.utils.file.manager
+      - @psa_ndp.xpath.query.helper
+      - @psa_ndp.migration.showroom.xml.entity.parser.factory
+      - @psa_ndp.migration.showroom.configurator
+
+  psa_ndp.migration.showroom.xml.entity.parser.factory:
+    class: %psa_ndp.migration.showroom.xml.entity.parser.factory.class%
+    arguments:
+      - @psa_ndp.migration.showroom.entity.factory
+      - @psa_ndp.xpath.query.helper
+      - @configuration_engine_select
+      - @psa_ndp.database.blockid.mapper
+      - @psa_ndp_site_configuration
+
+  psa_ndp.xpath.query.helper:
+    class: %psa_ndp.xpath.query.helper.class%
+
+  # Transaction serivces
+  psa_ndp.migration.showroom.transaction:
+    class: %psa_ndp.migration.showroom.transaction.class%
+    arguments:
+      - @doctrine.orm.entity_manager
+      - @psa_ndp.migration.showroom.entity.factory
+      - @psa_ndp.utils.file.manager
+      - @psa_ndp.manager.signature
+
+  psa_ndp.migration.showroom.entity.factory:
+    class: %psa_ndp.migration.showroom.entity.factory.class%
+    arguments:
+      - @doctrine.orm.entity_manager
+      - @psa_ndp.database.blockid.mapper
+
+  # Data Migration Service
+  psa_ndp.migration.showroom.service:
+    class: %psa_ndp.migration.showroom.service.class%
+    arguments:
+      - @symfony.filesystem
+      - @psa_ndp.migration.showroom.reporting
+      - @psa_ndp.migration.showroom.url.manager.factory
+      - @psa_ndp.migration.lock.handler
+      - @psa_ndp.migration.showroom.xml.parser
+      - @psa_ndp.migration.showroom.transaction
+      - @event_dispatcher
+      - %migration.showroom.directories.configuration%
+
+  psa_ndp.migration.showroom.url.manager.factory:
+    class: %psa_ndp.migration.showroom.url.manager.factory.class%
+    arguments:
+      - @doctrine.orm.entity_manager
+      - %migration.showroom.multilingual.site%
+
+  # Utils
+  psa_ndp.utils.file.manager:
+    class: %psa_ndp.utils.file.manager.class%
+
+  # Configurator
+  psa_ndp.migration.showroom.configurator:
+    class: %psa_ndp.migration.showroom.configurator.class%
+    arguments:
+      - @psa_ndp.migration.showroom.entity.factory
+      - @psa_ndp.migration.showroom.configurator.slice.factory
+      - %migration.configurator%
+
+  psa_ndp.migration.showroom.configurator.slice.factory:
+    class: %psa_ndp.migration.showroom.configurator.slice.factory.class%
+    arguments:
+      - @psa_ndp.migration.showroom.entity.factory
+

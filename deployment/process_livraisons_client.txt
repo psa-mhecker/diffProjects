@@ -1,0 +1,75 @@
+0/ Vérifier la stabilité de la version en exécutant  :
+ssh vagrant@10.255.252.239
+php app/console cache:clear --env=prod --no-debug
+
+1/ tags de la version stable :
+git tag -a v_1.0.6 4ab8e4fd11e5b0b3479242b9eb809956460f6354 -m "v_1.0.6"
+git push origin v_1.0.6
+
+2/ Executer la creation d'un tag release sur la version stable et la mise à jour de la branche release:
+    - dans le local faire un cd psa-ndp/deployement
+    - git fetch --tags
+	- ./update_release.sh v_1.0.6
+	- prend un argument est la version stable à livrer 
+
+La branche release va être mise à jour par rapport au tag v_1.0.6 et contiendra également les vendor.
+Un nouveau tag release_v_1.0.6 sera créé.
+La livraison est faite dans un dossier du Home : exemple : ~/release201506261109
+
+3/ Créer une archive de diff entre la dernière release et la nouvelle
+	- Se placer à al racine du projet dans le répertoire ~/release201506261109
+	- git fetch --tags
+	- Faire un checkout de la version stable release_v_1.0.6
+	- sudo git diff --name-only release_v_1.0.5 release_v_1.0.6 | xargs zip release.zip
+	- créer le fichier de diff des fichiers supprimés : 
+		git diff --name-only --diff-filter=D release_v_1.0.5 release_v_1.0.6  > deleted_files.txt
+	- Vérifier les dossiers des diff et créer les archives frontend.tgz, backend.tgz, vendor.tgz
+
+4/ Générer le fichier database.sql:
+	- se placer dans la VM (vagrant ou lxc) 
+	- Récupérer les nouveau tags si besoin git fetch --tag 
+	- Checkout la version stable v_1.0.6
+	- Lancé le script : bash export_migration_sql.sh release_v_1.0.5 release_v_1.0.6
+	- un ficher diff est créé databases_201506261929.sql. 
+	- Le rennomer en 'databases.sql'
+
+5/ Vérifier les requêtes sql à ne pas livrer (à compléter) : 
+	- création de sites
+	- modification de conf (par exemple webservices)
+
+6/ Tester le sql  :
+	- Se connecter avec les lel ogin/mdp :
+		https://tools-ndp-dev.peugeot.com/
+	- Récupérer le dump de la base de données client : 
+		https://tools-ndp-dev.peugeot.com/backup/NDP_INT_[LASTDAY].sql.zip
+	- Monter la BDD en local sur un schéma psa-ndp-int:
+		mysql -u root -p psa-ndp-int < NDP_INT_[LASTDAY].sql.zip.tmp
+	- Jouer le sql à livrer : databases.sql :
+		- Si erreurs investiguer
+
+7/ Tester un minimum l'application en LOCAL à partir du tag livré v_1.0.6 sur la base de données client : 
+	- changer la conf local bdd pour backend et frontend pour se placer sur psa-ndp-int
+	
+		# BO : backend/application/configs/local/VM.ini.php
+		Pelican::$config["DATABASE_NAME"] = 'psa-ndp-int';
+		Pelican::$config["DATABASE_USER"] = 'root';
+		Pelican::$config["DATABASE_PASS"] = 'root';
+		
+		# FO : frontend/app/config/parameters_db_dev.yml
+		database_name: psa-ndp-int
+		database_user: root
+		database_password: root
+	
+	- vider le cache BO et FO
+
+8/ Préparer un readmie pour le client qui contiendra des instructions et la liste des jira : 
+	NDP-XXXX
+
+9/ Se connecter au svn et livrer les archives  : 
+	- creer un dossier YYYY-MM-DD-v1.0.6
+	- mettre les fichiers backend.tgz, frontend.tgz, vendor.tgz, databases.sql et readme.txt dans le dossier YYYY-MM-DD-v1.0.5
+	- en dehors du dossier YYYY-MM-DD-v1.0.6, executer : 
+		svn add YYYY-MM-DD-v1.0.6
+		svn commit -m "Delivery v1.0.6"
+
+

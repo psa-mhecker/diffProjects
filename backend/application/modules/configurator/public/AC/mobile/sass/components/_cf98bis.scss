@@ -1,0 +1,283 @@
+@charset "UTF-8";
+.slice-cf98bis {
+    .slice-body {
+        padding: 14px 14px 0;
+        color: $txtsite_color;
+    }
+    h2 {
+        font: 24px/1em $citroenbold;
+        color: $on_color;
+        margin-bottom: 17px;
+        &.heading-yellow {
+            color:$yellow-title;
+        }
+    }
+    h4 {
+        font: 13px $ubuntubold;
+        margin-bottom: 12px;
+    }
+    .frame {
+        box-sizing: border-box;
+        border: 4px solid $grey_15_color;
+        padding: 0 12px 12px;
+        margin-bottom: 30px;
+        &__row {
+            border-bottom: 1px solid $grey_15_color;
+            padding: 11px 0;
+            &:last-of-type {
+                border: 0;
+            }
+            .clearfix {
+                margin-top: 5px;
+                &:first-of-type {
+                    margin-top: 0;
+                }
+            }
+        }
+        .additional{
+            font-size: 10px;
+            line-height: 14px;
+            color: black;
+            text-align:center;
+        }
+        &>*:last-child{
+            padding-bottom:0;
+        }
+    }
+    .accordion {
+        @extend .frame;
+        padding-bottom: 0;
+        h4 {
+            line-height: 20px;
+            position: relative;
+            padding: 20px 67px 20px 0;
+            margin: 0;
+        }
+        .frame__row:first-child {
+            padding-top: 0;
+        }
+        &.mod-toggle-open {
+            .chevron {
+                @extend %_sprites;
+                @extend %_sprite-arrow-top;
+            }
+        }
+    }
+    .chevron {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        margin-top: -3px;
+        @extend %_sprites;
+        @extend %_sprite-arrow-bottom;
+    }
+    .label {
+        display: block;
+        font-size: 10px;
+        text-transform: uppercase;
+        margin-bottom: 3px;
+        span {
+            text-transform: none;
+        }
+        .bigger{
+            font-size: 12px;
+        }
+        &.break{
+            margin-top:16px;
+        }
+    }
+    .title {
+        display: block;
+        font-size: 14px;
+        line-height: 17px;
+        color: $titlesite_color;
+        width: 61%;
+        float: left;
+        small{
+            font:10px/14px $ubunturegular;
+        }
+    }
+    .price {
+        font: 12px $ubuntubold;
+        color: $txtsite_color;
+        float: right;
+        text-align: right;
+    }
+    .summary {
+        display: block;
+        background: #ebeaf0;
+        padding: 0 16px;
+        font-size: 13px;
+        line-height: 58px;
+        height: 58px;
+    }
+
+    .financement-heading{
+        background: #ebeaf0;
+        padding: 20px 16px;
+        font-size:10px;
+        margin-top:15px;
+        strong{
+            display:block;
+            font-size:13px;
+        }
+    }
+    .button {
+        &--blue {
+            border-color: #85cddb;
+            background: transparent;
+            color: #85cddb;
+            line-height: 37px;
+            color: $txtsite_color;
+            text-align: left;
+            font-size: 12px;
+            position: relative;
+            padding: 0 12px;
+            margin: 0 0 10px;
+        }
+        &--fb {
+            border: 1px solid $grey_24_color;
+            background: transparent;
+            color: $grey_24_color;
+        }
+        .arrow {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            &--blue {
+                @extend %_sprites;
+                @extend %_sprite-arrow-right-blue;
+                margin-top: -6px;
+            }
+            &--big-blue {
+                @extend %_sprites;
+                @extend %_sprite-arrow-right-blue-big;
+                margin-top: -9px;
+            }
+        }
+    }
+    .total-price {
+        display: block;
+        border: 4px solid $on_color;
+        padding: 0 12px;
+        color: $titlesite_color;
+        font: 16px/50px $ubuntubold;
+        position:relative;
+        &--info{
+            padding: 13px 12px 10px;
+            line-height:14px;
+        }
+        small{
+            font-size: 10px;
+            display:block;
+            font-family:$ubunturegular;
+        }
+        .info{
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            margin-top: -13px;
+            &:after {
+                content: "";
+                display: inline-block;
+                @extend %_sprites;
+                @extend %_sprite-icopie;
+            }
+        }
+    }
+    .more-info {
+        color: black;
+        font-size: 13px;
+        line-height: 20px;
+        padding: 12px 32px 15px 16px;
+    }
+    .bottom-buttons {
+        list-style: none;
+        margin: 0 0 30px 0;
+        padding: 0;
+        li {
+            margin: 0 0 15px 0;
+            ;
+            padding: 0;
+        }
+        .button {
+            height: 48px;
+            max-height: 51px;
+            font: 16px/42px $citroenbold;
+            padding: 0 16px;
+            margin: 0;
+            text-align: left;
+            &--blue {
+                height: 51px;
+                line-height: 44px;
+            }
+            &--fb {
+                height: 51px;
+                line-height: 49px;
+            }
+        }
+        .ico {
+            &-fb {
+                margin: -7px 10px 0 0;
+            }
+            &-test {
+                margin: -8px 9px 0 0;
+            }
+            &-badge {
+                margin: -6px 11px 0 0;
+            }
+        }
+    }
+    .legacy {
+        font-size: 10px;
+        line-height: 14px;
+        color: black;
+        background: #d6d3cf;
+        padding: 10px 16px;
+        margin: 15px 0;
+    }
+
+    .half-buttons {
+        margin-top: 30px;
+        display:table;
+        width:100%;
+        &>* {
+            width: 50%;
+            display:table-cell;
+            vertical-align: middle;
+            height: 65px;
+            box-sizing: border-box;
+            padding: 10px 16px 10px 56px;
+            font: 13px/16px $citroenbold;
+            text-transform: uppercase;
+            color: $white_color;
+            position: relative;
+            &:first-child {
+                background: #afadc3;
+            }
+            &:last-child {
+                background: $on_color;
+            }
+        }
+        .ico {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            margin-top: -14px;
+        }
+    }
+    .bottom-button {
+        height: 48px;
+        max-height: 48px;
+        text-align: left;
+        padding: 0 16px;
+        line-height: 41px;
+        font-size: 16px;
+        .ico {
+            margin: -5px 11px 0 0;
+        }
+    }
+    .popinMentions, .popinequipement{
+        display:none;
+    }
+}

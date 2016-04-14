@@ -1,0 +1,458 @@
+.lame {
+  .margin {
+    margin-left: -15px;
+  }
+  .input.checkbox,
+  .input.radio {
+    display: none;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .input-radio,
+  .input-checkbox {
+    .label {
+      font-size: 15px;
+    }
+  }
+  .price-from {
+    font-family: $font-family-base-regular;
+    color: $gray-citroen;
+    font-size: 10px;
+    margin-bottom: 12px;
+    display: block;
+  }
+  .toggle,
+  .toggle-container {
+    clear: left;
+    position: relative;
+    .addComparator {
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 3;
+      + .toggle-content {
+        position: absolute;
+        top: 48px;
+        z-index: 2;
+        width: 100%;
+        > div {
+          //height: 100px;
+          margin: 1px;
+        }
+        + .tit-toggle,
+        + .toggle-title {
+          width: 77%;
+          float: left;
+        }
+      }
+    }
+    strong.title {
+      display: block;
+      padding-top: 30px;
+      padding-bottom: 15px;
+      font-family: $font-family-base-bold;
+      color: $brand-plum-grey-puce;
+      font-size: 15px;
+      clear: both;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .colors {
+      margin-left: -4px;
+      li {
+        float: left;
+        margin-left: 4px;
+        margin-top: 5px;
+        width: 13.66%;
+        height: 52px;
+        position: relative;
+      }
+    }
+    .dispo {
+      padding: 0;
+      > div {
+        padding-left: 0;
+        padding-right: 0;
+      }
+      ul {
+        position: relative;
+        &.energyAvailable,
+        &.speedAvailable {
+          padding: 8px 0;
+        }
+        li {
+          font: 14px/1.2 $font-family-base-regular;
+          color: $brand-plum-grey-puce;
+          &.list_dark {
+            margin: 10px 0 0 26px;
+            margin-top: 10px;
+            padding-left: 8px;
+            &:first-child {
+              margin-top: 0;
+            }
+          }
+        }
+      }
+      .ico--motor,
+      .ico--gear {
+        background-color: $gray-lighter;
+        width: 57px;
+        height: 57px;
+        padding: 0;
+        &:before {
+          display: block;
+          margin: 18% auto;
+        }
+      }
+    }
+    .equipments {
+      background-color: $brand-blue-light;
+      .cel-equipment {
+        background-color: $brand-blue-lighter;
+      }
+      .cel-equipment-sup {
+        padding-right: 0;
+      }
+      .cel-equipment-sup,
+      .cel-equipment {
+        .listes .list_dark:first-child {
+          margin-top: 0;
+        }
+      }
+      .title-listing-equipment {
+        text-align: center;
+        font: 20px/1.2 $font-family-base-bold;
+        color: $gray-dark;
+        padding: 19px 0 12px;
+      }
+      .subtitle-listing-equipment {
+        font: 15px/1.2 $font-family-base-bold;
+        text-align: left;
+        color: $gray-dark;
+        padding: 20px 0 17px;
+      }
+      .i-cross {
+        height: 54px;
+        width: 54px;
+        background: $brand-blue-lighter;
+        &:before {
+          content: '+';
+          display: block;
+          margin-left: -8px;
+          margin-top: 2px;
+          width: 40px;
+          height: 40px;
+          text-align: center;
+          color: $brand-blue-lightess;
+          font: 46px/1.2 $font-family-base-bold;
+        }
+      }
+    }
+    .nb {
+      padding: 15px 0 0;
+      font-size: 11px;
+    }
+  }
+  &.finition {
+    border: 4px solid $gray-light;
+    .pictures {
+      margin: 0;
+      text-align: center;
+      overflow: hidden;
+      padding-left: 0;
+      width:426px;
+      /*padding-right:35px;*/
+      ul {
+        font-size: 0;
+      }
+      a.hoverZoom {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        display: none;
+        border: 4px solid $brand-or;
+      }
+      img {
+        display: block;
+        width:100%;
+        &.hoverZoom {
+          width: auto;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin-top: -26px;
+          margin-left: -35.5px;
+        }
+      }
+      .onHover {
+        position: relative;
+        margin-top: 4px;
+        &:hover a.hoverZoom {
+          display: block;
+        }
+      }
+    }
+    .col-text {
+      display: block;
+      width: 96%;
+      height: auto;
+      span{
+        float:left;
+        display:inline-block;
+        font-size: 14px;
+        width: 48%;
+        padding-right: 5px;
+        padding-top: 15px;
+        color:$gray-citroen-bold;
+        font-family:$font-family-base-regular;
+      }
+    }
+    .title-listing {
+      display: block;
+      font-family: $font-family-base-bold;
+      color: $brand-plum-grey-puce;
+      font-size: 15px;
+      clear: both;
+    }
+    > div {
+      padding: 11px 11px 5px;
+      position: relative;
+      > div.row {
+        padding-bottom: 13px;
+        .listes .list_rond:first-child {
+          margin-top: 9px;
+        }
+        &.upsell-case {
+          .pictures {
+            padding-bottom: 15px;
+          } 
+        }
+
+        &.radio-case {
+          padding-bottom: 5%;
+        }
+        &.media {
+          .pictures {
+            padding-right: 0;
+            li {
+              /*padding: 0 5px;*/
+            }
+          }
+        }
+      }
+      aside {
+        position: absolute;
+        top: -28px;
+        right: -30px;
+        background-color: $gray-lighter;
+        border: 4px solid $gray-lighter;
+        width: 257px;
+        padding: 40px 27px 32px;
+        .price-from {
+          font-size: 11px;
+        }
+        .jauges-lvl-container {
+          float: right;
+          width: 30px;
+          .jauges-barre {
+            width: 100%;
+            height: 4px;
+            margin-top: 4px;
+            &:first-child {
+              margin-top: 0;
+            }
+          }
+          &.small {
+            width: 21px;
+            background: white;
+            padding: 3px;
+            .jauges-barre {
+              height: 2px;
+              margin-top: 2px;
+              &:first-child {
+                margin-top: 0;
+              }
+            }
+          }
+        }
+        > strong {
+          display: block;
+          font: 38px/44px $font-family-brand-bold;
+          &.price {
+            font: 17px/1.2 $font-family-base-bold;
+            position: relative;
+            margin-top: 35px;
+            .info--blue {
+              position: absolute;
+              top: -5px;
+              right: 25%;
+            }
+          }
+        }
+       
+        &:hover {
+          background-color: #e7e6ed;
+          border: 4px solid #e7e6ed;
+        }&:focus {
+          background-color: #e7e6ed;
+          border: 4px solid #e7e6ed;
+        }
+        &.checked {
+          background-color: $default-color;
+          border-color: $brand-orange;
+        }
+        .input-radio,
+        .input-checkbox {
+          margin-left: 0;
+          margin-top: 20px;
+        }
+        .input-radio {
+          margin-bottom: 45px;
+        }
+        .input-checkbox {
+          margin-right: 0;
+          .checkbox_btn {
+            margin-right: 9px;
+          }
+        }
+        .info--orange {
+          font-size: 14px;
+          line-height: 20px;
+          position: relative;
+          padding-left: 30px;
+          /*padding-top: 38px;*/
+          width: 100%;
+          &:before {
+            position: absolute;
+            left: 0;
+            bottom: -1px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  &.configLame {
+    &.motor {
+      > div {
+        padding: 0;
+      }
+      .infos {
+        background-color: $gray-lighter;
+        min-height: 257px;
+        .badge.nouveaute {
+          width: 100%;
+        }
+        .infocontent {
+          padding-left: 15px;
+          margin-top: 18px;
+          strong {
+            color: $brand-plum-grey-puce;
+            font: 20px/1.2 $font-family-base-bold;
+            padding-bottom: 25px;
+          }
+          .listes {
+            margin-bottom: 35px;
+            .list_rond {
+              margin: 0;
+              &:first-child {
+                margin-top: 10px;
+              }
+            }
+          }
+        }
+      }
+      .listdata {
+        width: 45.3%;
+        margin: 0 7px 7px;
+        .listdata-item {
+          border-right: 1px solid $gray;
+          border-bottom: 1px solid $gray;
+          border-top: 1px solid $gray;
+          padding: 95px 5px 0;
+          text-align: center;
+          display: table-cell;
+          vertical-align: bottom;
+          color: $brand-plum-grey-puce;
+          min-height: 218px;
+          &:first-child {
+            border-left: 1px solid $gray;
+          }
+          &.classEnergy {
+            .info--blue {
+              cursor: pointer;
+              position: relative;
+              top: -9px;
+            }
+          }
+        }
+        .more-infos {
+          border-left: 1px solid $gray;
+          border-right: 1px solid $gray;
+          border-bottom: 1px solid $gray;
+        }
+      }
+      aside.onConfig {
+        border: 4px solid transparent;
+        background-color: $gray-lighter;
+        min-width: 210px;
+        min-height: 257px;
+        padding-right: 0;
+        &.checked,
+        &:hover {
+          background-color: $default-color;
+          border-color: $brand-orange;
+        }
+        .input-radio {
+          margin-left: 0;
+          margin-bottom: 50px;
+        }
+      }
+      .toggle-container {
+        .toggle-title:not(.addComparator) {
+          width: 71.3%;
+        }
+      }
+      &.table-head {
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 10px;
+        margin-top: 30px;
+        .col-price {
+          min-width: 210px;
+          height: 30px;
+          padding-top: 2%;
+        }
+        .table-contents {
+          width: 45.3%;
+          margin: 0 7px;
+          span {
+            display: table-cell;
+            height: 30px;
+            vertical-align: bottom;
+            padding: 0;
+            margin-right: -1px;
+            span {
+              line-height: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+html.touch{
+  .lame.finition .pictures a.hoverZoom{
+    display: block;
+    opacity: 0;
+  }
+}

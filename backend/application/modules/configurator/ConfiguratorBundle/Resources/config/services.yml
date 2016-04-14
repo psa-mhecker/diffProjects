@@ -1,0 +1,4 @@
+services:
+#    psa_ndp_configurator.example:
+#        class: PsaNdp\ConfiguratorBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

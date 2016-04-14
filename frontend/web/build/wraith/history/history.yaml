@@ -1,0 +1,33 @@
+domains:
+  NDP_Staging: "http://psandp:psandp@recette-fr.staging.psa-ndp.interakting.org"
+
+paths:
+  PC77-Dimensions-vehicules_Showroom :
+    path:  /fr/test-non-regression/wraith/208-5-portes/design.html
+    selector: '.body'
+  Tranche-PC77:
+    path:  /fr/test-non-regression/wraith/pc77-dimensions-vehicules-navigation-full.html
+    selector: '.slice-pc77'
+
+
+
+fuzz: '20%'
+
+threshold: 5
+
+screen_widths:
+  - 320x480
+  - 640x480
+  - 1280x800
+
+resize_or_reload: 'resize'
+
+browser: "casperjs"
+
+history_dir: '/tmp/history_test'
+
+directory: 'history_report'
+
+
+mode: alphanumeric
+

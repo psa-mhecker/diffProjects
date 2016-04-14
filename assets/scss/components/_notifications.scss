@@ -1,0 +1,62 @@
+@charset 'UTF-8';
+
+.notification {
+	clear: both;
+	background-color: $info-color;
+	padding: 10px;
+	text-align: center;
+
+	> * {
+		display: inline-block;
+		margin: 0;
+		padding: 0;
+		vertical-align: middle;
+	}
+
+	.information {
+		display: inline-block;
+		transition: all 300ms ease-in-out;
+		opacity: 0;
+		margin: 0;
+		margin-right: 5px;
+		background-color: $mid-blue-10-color;
+		width: 25px;
+		height: 25px;
+		vertical-align: middle;
+		line-height: 25px;
+		color: $info-color;
+
+		&.fade {
+			opacity: 1;
+		}
+	}
+
+	.check {
+		background-color: $notification-picto-blue;
+		text-align: center;
+
+		&:before {
+			@include sprite($checked-white);
+			display: inline-block;
+			vertical-align: middle;
+			content: '';
+		}
+	}
+
+	p {
+		@include font-family('main');
+		padding-bottom: 0;
+		line-height: 14px;
+		color: $mid-blue-10-color;
+		font-size: rem-calc(14);
+	}
+
+	&.align-left {
+		text-align: left;
+
+		.information {
+			float: left;
+			margin-right: 5px;
+		}
+	}
+}

@@ -1,0 +1,9 @@
+parameters:
+  psa_ndp.database.blockid.mapper.class: Itkg\Utils\PsaDatabaseBlockIdMapper
+
+services:
+  psa_ndp.database.blockid.mapper:
+    class: %psa_ndp.database.blockid.mapper.class%
+    arguments:
+      - %database.gabarit.static.blockZoneTemplateId.mapping%
+      - %database.dynamic.blockZoneId.mapping%

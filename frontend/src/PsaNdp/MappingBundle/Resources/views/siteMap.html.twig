@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    {% for page in siteMapPages %}
+        <url>
+            <loc><![CDATA[ http://{{ siteUrl }}{{ page.currentVersion.pageClearUrl }} ]]></loc>
+            <lastmod>{{ page.currentVersion.pageVersionUpdateDate|date("Y-m-d") }}</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>{{ page.currentVersion.pagePriority }}</priority>
+        </url>
+    {% endfor %}
+</urlset>

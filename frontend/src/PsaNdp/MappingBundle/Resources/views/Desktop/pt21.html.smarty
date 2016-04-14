@@ -1,0 +1,79 @@
+<div class="toplink">
+	<a href="{$slicePT21.translate.backToTop.url}">
+		<span>{$slicePT21.translate.backToTop.label}</span>
+	</a>
+</div>
+<aside class="slice-pt21{if $slicePT21.confishow } nav-light{/if} {if isset($slicePT21.anchorId)}{$slicePT21.anchorId}{/if}" {if isset($slicePT21.anchorId)}id="{$slicePT21.anchorId}"{/if} datalayer="{$slicePT21.datalayer}">
+	<nav id="principal-nav" role="navigation" class="principal">
+		<header>
+			<div class="logo">
+				<a href="{$slicePT21.title.url}" title="{$slicePT21.title.label}" {if isset($slicePT21.title.target)}target="{$slicePT21.title.target}"{/if}>{$slicePT21.title.label}</a>
+			</div>
+			<div class="display-burger" data-label-off="{$slicePT21.translate.nav}" data-label-on="{$slicePT21.translate.nav}">
+				<button class="burger"><i><!-- Fix problème de taille d'éléments de sprite --></i></button>
+			</div>
+			{if !empty($slicePT21.myPeugeot) }
+				<a href="{$slicePT21.myPeugeot.url}" class="cta show-for-small-only btn-cta light-blue arrow chevron-right my-peugeot" data-gtm='{ldelim}"eventType": "click", "dataList": {ldelim} "event": "uaevent","eventCategory": "{$slicePT21.blockName}::position-{$slicePT21.blockOrder}", "eventAction": "Redirection::MyPeugeot", "eventLabel": "{$slicePT21.myPeugeot.label|escape:javascript}"{rdelim}{rdelim}' target="_blank">
+					<span class="content-cta">{$slicePT21.myPeugeot.label}</span>
+				</a>
+			{/if}
+		</header>
+
+		<ul id="menu">
+			{foreach $slicePT21.menu as $menu}
+			<li>
+				<!-- Level 1 -->
+				<a href="{$menu.link.url}" class="js-menuItem menu-item{if isset($menu.subMenu)} icon{/if}"{if isset($menu.link.target)} target="{$menu.link.target}"{/if} data-gtm='{ldelim}"eventType":"click","dataList":{ldelim}"event":"uaevent","eventCategory":"{$slicePT21.blockName}::position-{$slicePT21.blockOrder}","eventAction":"NavigationLevel1::Redirection","eventLabel":"{$menu.libelle|escape:javascript}"{rdelim}{rdelim}'><span>{$menu.libelle}</span></a>
+				{if isset($menu.subMenu)}
+
+				<ul class="js-subMenu sub-menu-container">
+					<li class="sub-menu-content">
+						<button class="close-layer">{$slicePT21.translate.close}</button>
+						<a href="{$menu.link.url}" class="menu-item-title" data-gtm='{ldelim}"eventType":"click","dataList":{ldelim}"event":"uaevent","eventCategory":"{$slicePT21.blockName}::position-{$slicePT21.blockOrder}","eventAction":"NavigationLevel1::Redirection","eventLabel":"{$menu.libelle|escape:javascript}"{rdelim}{rdelim}'>{$menu.libelle}</a>
+						{if isset($menu.subMenu)}
+						<ul class="sub-menu">
+							{foreach $menu.subMenu as $subMenu}
+							<li class="sub-menu-item{if !empty($subMenu.libelle)} icon{/if}">
+								<!-- Level 2 -->
+								<a href="{$subMenu.link.url}" {if isset($subMenu.link.target)} target="{$subMenu.link.target}"{/if} data-gtm='{ldelim}"eventType":"click","dataList":{ldelim}"event":"uaevent","eventCategory":"{$slicePT21.blockName}::position-{$slicePT21.blockOrder}","eventAction":"NavigationLevel2::Redirection","eventLabel":"{$menu.libelle|escape:javascript}::{$subMenu.title|escape:javascript}"{rdelim}{rdelim}'>{$subMenu.title}</a>
+								{if !empty($subMenu.libelle)}
+								<ul class="subsub-menu">
+									{foreach $subMenu.libelle as $libelle}
+									<li>
+										<!-- Level 3 -->
+										<a href="{$libelle.link.url}"{if isset($libelle.link.target)} target="{$libelle.link.target}"{/if} data-gtm='{ldelim}"eventType":"click","dataList":{ldelim}"event":"uaevent","eventCategory":"{$slicePT21.blockName}::position-{$slicePT21.blockOrder}","eventAction":"NavigationLevel3::Redirection","eventLabel":"{$menu.libelle|escape:javascript}::{$subMenu.title|escape:javascript}::{$libelle.title|escape:javascript}"{rdelim}{rdelim}'>{$libelle.title}</a>
+									</li>
+									{/foreach}
+								</ul>
+								{/if}
+								{if isset($subMenu.more)}
+								<p class="view-more">
+									<a href="{$subMenu.more.link.url}"{if isset($subMenu.more.link.target)} target="{$subMenu.more.link.target}"{/if} data-gtm='{ldelim}"eventType":"click","dataList":{ldelim}"event":"uaevent","eventCategory":"{$slicePT21.blockName}::position-{$slicePT21.blockOrder}","eventAction":"QuickAccess::Redirection","eventLabel":"{$subMenu.more.libelle|escape:javascript}"{rdelim}{rdelim}'>{$subMenu.more.libelle}</a>
+								</p>
+								{/if}
+							</li>
+							{/foreach}
+						</ul>
+						{/if}
+					</li>
+				</ul>
+				{/if}
+			</li>
+			{/foreach}
+		</ul>
+
+		{if isset($slicePT21.search) && isset($slicePT21.allPeugeot) }
+		<div id="sticky-search">
+			{if isset($slicePT21.search)}
+			<form action="#" method="post" class="show-for-small-only" data-url-form="{$slicePT21.search.url}" {if isset($slicePT21.search.target)}target="{$slicePT21.search.target}"{/if}>
+				<input type="text" placeholder="{$slicePT21.search.label}" />
+				<button type="submit" class="bt-sticky-search">ok</button>
+			</form>
+			{/if}
+			{if isset($slicePT21.allPeugeot) }
+			<a href="{$slicePT21.translate.allPeugeot.url}" {if isset($slicePT21.translate.allPeugeot.target)} target="{$slicePT21.translate.allPeugeot.target}"{/if}><span>{$slicePT21.translate.allPeugeot.label}</span></a>
+			{/if}
+		</div>
+		{/if}
+	</nav>
+</aside>

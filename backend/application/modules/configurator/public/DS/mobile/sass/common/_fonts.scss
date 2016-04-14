@@ -1,0 +1,114 @@
+/* Fonts */
+
+$main_font_citroen: 'citroen', Arial;
+$light_font_citroen: 'citroen', Arial;
+$bold_font_citroen:  'citroen', Arial;
+$italic_font_didot: 'didotitalic', Times;
+$main_font_didot: 'didot', Times;
+$main_font_roboto: 'roboto', Arial;
+$italic_font_roboto: 'robotoitalic', Arial;
+$light_font_roboto: 'robotolight', Arial;
+$font_citroen-light: 'citroenlight', Arial;
+$font_citroen-regular: 'citroenregular', Arial;
+$font_citroen-bold: 'citroenbold', Arial;
+$font_roboto-light: 'robotolight', Arial;
+$font_roboto-regular: 'robotoregular', Arial;
+$font_roboto-bold: 'robotobold', Arial;
+$font_ubuntu-light: 'robotolight', Arial;
+$font_ubuntu-regular: 'robotoregular', Arial;
+$font_ubuntu-bold: 'ubuntubold', Arial;
+
+/* Main font size */
+$main_fontsize: 14;
+
+html {
+  font: $main_fontsize+px/1.2;
+}
+
+body {
+  background-color: $main_bg;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+// Setup the function in your functions or helpers files, wherever you keep these bits.
+@function headings($from:1, $to:6) {
+    @if $from == $to {
+        @return 'h#{$from}';
+    } @else {
+        @return 'h#{$from},' + headings($from+1, $to);
+    }
+}
+
+#{headings(1,6)} {
+  font-weight: normal;
+}
+
+
+ @font-face {
+    font-family: 'didot';
+    src: url('../fonts/DidotW01Roman.eot');
+    src: url('../fonts/DidotW01Roman.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/DidotW01Roman.woff2') format('woff2'),
+    url('../fonts/DidotW01Roman.woff') format('woff'),
+    url('../fonts/DidotW01Roman.ttf') format('truetype'),
+    url('../fonts/DidotW01Roman.svg#didotregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+$didot: 'didot';
+
+@font-face {
+    font-family: 'didotitalic';
+    src: url('../fonts/DidotW01Italic.eot');
+    src: url('../fonts/DidotW01Italic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/DidotW01Italic.woff2') format('woff2'),
+    url('../fonts/DidotW01Italic.woff') format('woff'),
+    url('../fonts/DidotW01Italic.ttf') format('truetype'),
+    url('../fonts/DidotW01Italic.svg#didotitalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+$didotitalic: 'didotitalic';
+
+@font-face {
+    font-family: 'robotoregular';
+    src: url('../fonts/Roboto-Regular.eot');
+    src: url('../fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Roboto-Regular.woff') format('woff'),
+    url('../fonts/Roboto-Regular.ttf') format('truetype'),
+    url('../fonts/Roboto-Regular.svg#roboto') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+$robotoregular: 'robotoregular';
+
+@font-face {
+    font-family: 'robotomedium';
+    src: url('../fonts/Roboto-Medium.eot');
+    src: url('../fonts/Roboto-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Roboto-Medium.woff') format('woff'),
+    url('../fonts/Roboto-Medium.ttf') format('truetype'),
+    url('../fonts/Roboto-Medium.svg#robotomedium') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+$robotomedium: 'robotomedium';
+
+@font-face {
+    font-family: 'robotolight';
+    src: url('../fonts/Roboto-Light.eot');
+    src: url('../fonts/Roboto-Light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Roboto-Light.woff') format('woff'),
+    url('../fonts/Roboto-Light.ttf') format('truetype'),
+    url('../fonts/Roboto-Light.svg#robotolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+$robotolight: 'robotolight';
+
+$fontsizesite: 11px;

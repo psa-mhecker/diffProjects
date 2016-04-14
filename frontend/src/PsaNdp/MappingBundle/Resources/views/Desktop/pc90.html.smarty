@@ -1,0 +1,245 @@
+<section class="slice-pc90 {if isset($slicePC90.anchorId)} {$slicePC90.anchorId} {/if}" {if isset($slicePC90.anchorId)} id="{$slicePC90.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePC90'} ]">
+  {if isset($slicePC90.notification)}
+    {foreach $slicePC90.notification as $notification}
+      {include file="../../notification/notification.tpl"}
+    {/foreach}
+  {/if}
+  <div class="listEquipement">
+    {foreach $slicePC90.listEquipement as $list}
+
+    <div class="listArticle">
+      <h2 class="listArticle-title"><span>0</span>{$list.title}</h2>
+        {if isset($list.notification)}
+          {foreach $list.notification as $notification}
+            {include file="../../notification/notification.tpl"}
+          {/foreach}
+        {/if}
+        {foreach $list.listLame as $lame}
+        <article {if $lame.blocCheckbox.selected}class="{if !$lame.blocCheckbox.box}pre{/if}selected{if !$lame.blocCheckbox.box} disable{/if}"{/if}>
+
+          <input type="checkbox" name="{$lame.id}" id="{$lame.id}" {if isset($lame.typeOption)}data-typeOption="{$lame.typeOption}"{/if} {if isset($lame.valueOption)}data-valueOption="{$lame.valueOption}"{/if} value="{$lame.id}" {if $lame.blocCheckbox.selected}checked="checked"{/if}{if !$lame.blocCheckbox.box} disabled="disabled"{/if}>
+
+          {if isset($lame.type) && $lame.type == 'lameBig'}
+            <div class="articleBig articleContainer">
+              <div class="articleSelect">
+                <div class="bloc--text">
+                  <h3 class="article-title">{$lame.title}</h3>
+                </div>
+                <div class="bloc--price">
+                  {if isset($lame.blocPrice.text)}
+                    <span class="text">
+                      {$lame.blocPrice.text}
+                    </span>
+                  {elseif isset($lame.blocPrice.price)}
+                    <strong class="price"><!--
+                    -->{if isset($lame.blocPrice.price.before)}{$lame.blocPrice.price.before} {/if}<!--
+                    -->{if isset($lame.blocPrice.price.deviseB)}{$lame.blocPrice.price.deviseB} {/if}<!--
+
+                    -->{if isset($lame.blocPrice.price.sum)}{$lame.blocPrice.price.sum}{/if}<!--
+
+                    -->{if isset($lame.blocPrice.price.deviseA)}{$lame.blocPrice.price.deviseA} {/if}<!--
+                    -->{if isset($lame.blocPrice.price.taxe)}{$lame.blocPrice.price.taxe} {/if}<!--
+                    --></strong>
+                    {if isset($lame.blocPrice.price.monthly)}
+                      <span class="info" data-openpopin="financement42345"></span>
+                    {/if}
+                  {/if}
+                </div>
+                <div class="bloc--checkbox">
+                  {if isset($lame.blocCheckbox.box)}
+                    <span class="label">{$slicePC90.translate.checkbox}</span>
+                  {/if}
+                  {if isset($lame.blocCheckbox.box)}
+                    <span class="checkbox checked"></span>
+                  {elseif isset($lame.blocCheckbox.selected)}
+                    <span class="checked"></span>
+                  {/if}
+                </div>
+                {if isset($lame.listEqui.listText)}
+                  <div class="bloc--fullInfo">
+                    <ul class="list_style">
+                      {foreach $lame.listEqui.listText as $equipment}
+                        <li>{$equipment.label}</li>
+                      {/foreach}
+                    </ul>
+                  </div>
+                {else}
+                  <div class="bloc--img">
+                    {if $lame.listEqui.listImg|@count == 1}
+                      {foreach $lame.listEqui.listImg as $img}
+                        <figure {if isset($img.zoom)}data-openpopin="popin--pc96_01"{/if}>
+                          <img src="{$img.src}" alt="{$img.alt}" class="visu">
+                          {if isset($img.zoom)}
+                            <div class="zoom"></div>
+                          {/if}
+                        </figure>
+                      {/foreach}
+                    {else}
+                      <div class="carousel">
+                        {foreach $lame.listEqui.listImg as $img}
+                          <figure {if isset($img.zoom)}data-openpopin="popin--pc96_01"{/if}>
+                            <img src="{$img.src}" alt="{$img.alt}" class="visu">
+                            {if isset($img.zoom)}
+                              <div class="zoom"></div>
+                            {/if}
+                          </figure>
+                        {/foreach}
+                      </div>
+                    {/if}
+                  </div>
+                  <div class="bloc--info">
+                    <ul class="list_style">
+                      {foreach $lame.listEqui.listImg as $equipment}
+                        <li class="item">{$equipment.label}</li>
+                      {/foreach}
+                    </ul>
+                  </div>
+                {/if}
+              </div>
+            </div>
+          {else}
+            <div {if $lame.id == '007' } {/if} class="articleSmall articleContainer{if isset($lame.desc)}{if !isset($lame.visu)} withdesc{/if}{/if}">
+              <div class="articleSelect">
+                <div class="bloc--text">
+                  <h3 class="article-title">{$lame.title}</h3>
+                  {if isset($lame.desc)}
+                    <p class="article-desc">{$lame.desc}</p>
+                  {/if}
+                </div>
+                <div class="bloc--visu">
+                  {if isset($lame.visu)}
+                    <figure {if isset($lame.visu.zoom)}data-openpopin="popin--pc96_01"{/if}>
+                      <img src="{$lame.visu.src}" alt="{$lame.visu.alt}" class="visu">
+                      {if isset($lame.visu.zoom)}
+                        <div class="zoom"></div>
+                      {/if}
+                    </figure>
+                  {/if}
+                </div>
+                <div class="bloc--price">
+                  {if isset($lame.blocPrice.text)}
+                    <span class="text">
+                      {$lame.blocPrice.text}
+                    </span>
+                  {elseif isset($lame.blocPrice.price)}
+                    <strong class="price"><!--
+                    -->{if isset($lame.blocPrice.price.before)}{$lame.blocPrice.price.before} {/if}<!--
+                    -->{if isset($lame.blocPrice.price.deviseB)}{$lame.blocPrice.price.deviseB} {/if}<!--
+
+                    -->{if isset($lame.blocPrice.price.sum)}{$lame.blocPrice.price.sum}{/if}<!--
+
+                    -->{if isset($lame.blocPrice.price.deviseA)}{$lame.blocPrice.price.deviseA} {/if}<!--
+                    -->{if isset($lame.blocPrice.price.taxe)}{$lame.blocPrice.price.taxe} {/if}<!--
+                    --></strong>
+                    {if isset($lame.blocPrice.price.monthly)}
+                    <span class="info" data-openpopin="financement42345"></span>
+                    {/if}
+                  {/if}
+                </div>
+                <div class="bloc--checkbox">
+                  {if $lame.blocCheckbox.box}
+                    <span class="label">{$slicePC90.translate.checkbox}</span>
+                  {/if}
+                  {if $lame.blocCheckbox.box}
+                    <span class="checkbox checked"></span>
+                  {elseif $lame.blocCheckbox.selected}
+                    <span class="checked"></span>
+                  {/if}
+                </div>
+              </div>
+            </div>
+          {/if}
+          {if isset($lame.content)}
+            <div class="include {if isset($lame.open)}open{/if}">
+              {if isset($lame.content.media)}
+              <div class="media " id="media-a2b250e65b17d6a7">
+                <img src="../../../img/img-pc91.jpg" alt="">
+                <video width="100%"  autobuffer  title="Présentation de la nouvelle peugeot 308" controls>
+                  <source src="http://cdn.streamlike.com//html5/idevicev2/media_id/a2b250e65b17d6a7/width/1024/height/574" type="application/x-mpegURL" /> <!-- H.264 IPAD -->
+                  <source src="http://cdn.streamlike.com//html5/idevicev1/media_id/a2b250e65b17d6a7/width/1024/height/574" type="application/x-mpegURL" /> <!-- H.264 IPHONE -->
+                  <source src="http://cdn.streamlike.com//html5/mp4low/media_id/a2b250e65b17d6a7/width/1024/height/574" type="video/mp4" /> <!-- H.264 BASELINE -->
+                  <source src="http://cdn.streamlike.com//html5/webm/media_id/a2b250e65b17d6a7/width/1024/height/574" type="video/webm" /> <!-- WEBM -->
+                  <div class="no-video">
+                    <div class="jp-video jp-video-360p" role="application" aria-label="media player">
+                      <div class="jp-type-single">
+                        <div class="jp-jplayer"></div>
+                        <div class="jp-gui">
+                          <div class="jp-interface">
+                            <div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </video>
+                <span class="play"></span>
+                <script type="text/javascript">
+                var mid = "a2b250e65b17d6a7";
+                var div897580216=document.getElementById('media-'+mid);
+                var listener=function () {
+                  var xhr=new XMLHttpRequest();
+                  var r897580216=/(.*)\/html5\/(\w+)\/media_id(.*)/g;
+                  src=div897580216.currentSrc;
+                  res=r897580216.exec(src);
+                  xhr.open('GET', 'http://cdn3.streamlike.com/secure/Medias/232/'+mid+'/o.k?t='+Math.floor(Math.random()*99999999999)+'&s='+res[2], true);
+                  xhr.send(null);
+                  div897580216.removeEventListener('playing',listener,false);
+                };
+                div897580216.addEventListener('playing',listener,false);
+                </script>
+              </div>
+              <div class="desc clearfix">
+                <div class="grid-col span_6_of_12">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec finibus velit a tortor volutpat, at ultricies lacus tempor. Nulla facilisi. Cras ante augue, pellentesque vitae ante nec,
+                  </p>
+                </div>
+                <div class="grid-col span_6_of_12">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec finibus velit a tortor volutpat, at ultricies lacus tempor. Nulla facilisi. Cras ante augue, pellentesque vitae ante nec,
+                  </p>
+                </div>
+              </div>
+
+            {elseif $lame.content.include}
+              
+            {/if}
+
+            </div>
+            {foreach $lame.toggle as $toggle}
+              {include file="../../iso-moredetails/iso-moredetails.tpl"}
+            {/foreach}
+          {/if}
+        </article>
+        {/foreach}
+    </div>
+    <div class="block-mentions">
+      <p class="legal-mentions">Un crédit vous engage et doit être remboursé. Vérifiez vos capacités de remboursement avant de vous engager.</p>
+      <p class="mentions">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec rutrum dolor. Maecenas in dolor vestibulum arcu rhoncus tempor vitae et urna. Donec feugiat pellentesque suscipit. Duis laoreet augue nec mi dignissim congue. Nullam justo leo, iaculis at posuere id, ultrices eu libero. Integer vulputate molestie felis eu condimentum. Nunc quis maximus mauris. Nullam vitae risus in tellus congue volutpat vitae eget odio.</p>
+      <p class="mentions">Pellentesque egestas nec nibh a blandit. Sed a ante sit amet nunc imperdiet laoreet. Phasellus quis odio sodales ex tincidunt fringilla non eget ex. Donec sed elit congue, porta nibh vitae, ultrices odio. Aliquam nisl nibh, mollis et eleifend at, auctor nec lacus. Aenean aliquet purus nunc, eget suscipit orci accumsan consequat. Nulla facilisi.</p>
+    </div>
+
+    {/foreach}
+  </div>
+  <div class="popin_overlay" data-jsobj="[ { 'obj':'iso-popin' } ]">
+
+    <div class="popin popin--PC87_1 scroller" data-popin="popin--PC87_1">
+        <span class="clbtn close">FERMER</span>
+        {include file="../../../../../web/src/html/sections/pc87/html_no-nav-defaut.html"}
+    </div>
+
+    {if isset($slicePC90.popinPC96)}
+      {foreach $slicePC90.popinPC96 as $infosTranche }
+        <div class="popin popin--{$infosTranche.popinId} scroller" data-popin="popin--pc96_01">
+          <span class="clbtn close">{$infosTranche.close}</span>
+          {include file="../../pc96/template/pc96.tpl"}
+        </div>
+      {/foreach}
+    {/if}
+    {if isset($slicePC90.popinFinancement)}
+      {foreach $slicePC90.popinFinancement as $ticket}
+        {include file="../../popin-financement/popin-financement.tpl"}
+      {/foreach}
+    {/if}
+  </div>
+</section>

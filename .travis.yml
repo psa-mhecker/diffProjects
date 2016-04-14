@@ -1,0 +1,43 @@
+language: php
+
+services:
+  - redis-server
+  - mysql
+  - mongodb
+
+php:
+  - 5.4
+env:
+  global:
+    - FRONTEND_VAR_PATH=var/frontend
+    - SYMFONY__HTTP__MEDIA=http://media.psa-ndp.com
+    - SYMFONY__REDIS__CONNECTION=tcp://127.0.0.1:6379
+
+sudo: false
+
+cache:
+  directories:
+    - ~/.composer/cache
+    - ~/composer
+
+before_install:
+  - mysql -u root -e 'CREATE DATABASE `psa-ndp`;'
+  - mysql -u root -e "CREATE USER 'psa-ndp'@'localhost' IDENTIFIED BY 'psa-ndp';"
+  - mysql -u root -e 'GRANT ALL PRIVILEGES ON `psa-ndp`.* TO `psa-ndp`@localhost;'
+  - composer config -g github-oauth.github.com 20e58681273029267b7e23e4a7af024c7b1decfc
+  - printf "\n" |pecl install imagick
+  - phpenv config-add .travis.php.ini
+
+install:
+  - composer install --prefer-dist
+
+script:
+  - ./bin/phpunit -c frontend/app/ --coverage-clover=coverage.clover --testsuite unit
+
+after_script:
+  - wget https://scrutinizer-ci.com/ocular.phar
+  - php ocular.phar code-coverage:upload --access-token="fd4eebe318582037f86e516f545824d7914edfc03c7d7e96e529a03df3586d79" --format=php-clover coverage.clover
+
+branches:
+  except:
+    - /^front-.*$/

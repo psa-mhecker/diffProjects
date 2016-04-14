@@ -1,0 +1,50 @@
+# front config 
+front:
+    suites:
+        front:
+           paths:
+                features: features/front
+           contexts:
+                - BoContext
+                - FoContext  
+                - CoreContext              
+    extensions:
+        Behat\MinkExtension:
+            base_url: 'http://psandp:psandp@recette-fr.staging.psa-ndp.interakting.org/'
+            browser_name: phantomjs
+            goutte: ~            
+            selenium2:
+              wd_host: "http://localhost:4443/wd/hub"
+        emuse\BehatHTMLFormatter\BehatHTMLFormatterExtension:
+            name: html
+            renderer: Twig
+            file_name: report
+    formatters:
+        html:
+           output_path: '%paths.base%/frontend/web/build/behat/front'            
+              
+# backend config 
+backend:
+    suites:
+        backend:
+           paths:
+                features: features/backend
+           contexts:
+                - BoContext
+                - FoContext  
+                - CoreContext              
+    extensions:
+        Behat\MinkExtension:
+            base_url: 'http://recette-backend.staging.psa-ndp.interakting.org/'
+            browser_name: phantomjs
+            goutte: ~            
+            selenium2:
+              wd_host: "http://localhost:4443/wd/hub"
+        emuse\BehatHTMLFormatter\BehatHTMLFormatterExtension:
+            name: html
+            renderer: Twig
+            file_name: report
+    formatters:
+        html:
+           output_path: '%paths.base%/frontend/web/build/behat/backend' 
+            

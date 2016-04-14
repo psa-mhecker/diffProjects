@@ -1,0 +1,205 @@
+/* Range colors */
+
+$marron_dark: #1d1717;
+$beige: #ad9d90;
+$beige_1: #ad9d91;
+$beige_2: #655a54;
+$beige_light: #f3efee;
+$beige_light_2: #f1f1f1;
+$beige_light_3: #f1f3f2;
+$beige_light_4: #e6e0db;
+$white: #e6e0db;
+$bordeaux: #ad0040;
+$black: #1d1717;
+$border_recap: #241e1d;
+$border_recap_filter: #302725;
+
+
+
+$white_color: #fff;
+$white_color_light: #d4d5d6;
+
+$dark_blue_1_color: #142032; // R: 20, V: 32, B: 50
+$dark_blue_1_color_transparent : rgba(20, 32, 50, 0.8);
+$dark_blue_1_color_hover: #0c2d47; // R: 12, V: 45, B: 71
+$dark_blue_2_color: #012642; // R: 01, V: 38, B: 66
+$dark_blue_3_color: #152946; // R: 01, V: 38, B: 66
+$dark_blue_4_color: #40617b; // R: 01, V: 38, B: 66
+$dark_blue_5_color: #38576f; // R: 01, V: 38, B: 66
+$dark_blue_6_color: #41637c; // R: 01, V: 38, B: 66
+$dark_blue_7_color: #335873; // R: 20, V: 32, B: 50
+$dark_blue_8_color: #143c5f; // R: 18, V: 61, B: 95
+
+$mid_blue_1_color: #0062c5; // R: 00, V: 98, B: 197
+$mid_blue_2_color: #007edb; // R: 00, V: 126, B: 219
+$mid_blue_2_color_hover: #0062c5; // R: 00, V: 98, B: 197
+$mid_blue_3_color: #068fef; // R: 06, V: 143, B: 239
+$mid_blue_4_color: #0069cb; // R: 00, V: 105, B: 203
+$mid_blue_5_color: #3ba7f2; // R: 59, V: 167, B: 242
+$mid_blue_6_color: #3ba6f2; // R: 59, V: 166, B: 242
+$mid_blue_7_color: #053153; // R: 59, V: 166, B: 242
+$mid_blue_8_color: #007fdb;
+
+$grey_1_color: #3c3947; // R: 60, V: 57, B: 71
+$grey_1_color_light   : #3b3946; // R: 59, V: 57, B: 70
+$grey_1_color_light_2 : #5a5864; // R: 90, V: 88, B: 100
+$grey_2_color_light: #5a5864; // R: 90, V: 88, B: 100
+
+
+$grey_2_color: #4b4b4b; // R: 75, V: 75, B: 75
+$grey_3_color: #666666; // R: 102, V: 102, B: 102
+$grey_4_color: #818181; // R: 129, V: 129, B: 129
+$grey_5_color: #919191; // R: 145, V: 145, B: 145
+$grey_6_color: #b4b4b4; // R: 180, V: 180, B: 180
+$grey_7_color: #b4b2bd; // R: 180, V: 178, B: 189
+$grey_8_color: #cdcdcd; // R: 205, V: 205, B: 205
+$grey_8_color_hover: #b4b4b4; // R: 180, V: 180, B: 180
+$grey_9_color: #ececee; // R: 236, V: 236, B: 238
+$grey_9_color_hover: #cdcdcd; // R: 205, V: 205, B: 205
+$grey_10_color: #f1f3f2; // R: 241, V: 243, B: 242
+$grey_11_color: #7e7d84; // R: 126, V: 125, B: 132
+$grey_12_color: #9694a9; // R: 150, V: 148, B: 169
+$grey_11t_color: #3c3947; // R: 60, V: 57, B: 71
+$grey_11q_color: #5a5864; // R: 90, V: 88, B: 100
+$grey_13_color: #5a5864; // R: 90, V: 88, B: 100
+$grey_14_color: #5a5864; // R: 90, V: 88, B: 100
+$grey_15_color: #dcdcdc;
+$grey_16_color: #6c6b74; // R: 108, V: 107, B: 116
+$grey_17_color: #f1f3f2;
+$grey_18_color: #e7e7ea;
+$grey_19_color: #c7c7ca;
+$grey_20_color: #afb0b4;
+$grey_21_color: #e2e1e5;
+$grey_22_color: #6d6d6d;
+$grey_23_color: #7e7d83;
+
+$news_color: #01b1ce; // R: 1, V: 177, B: 206
+$special_series_color: #c46225; // R: 196, V: 98, B: 37
+$sport_color: #8e000c; // R: 142, V: 0, B: 12
+$responsible_color: #1a1919; // R: 26, V: 25, B: 25
+$promotion_1_color: #fc7bfd; // R: 252, V: 123, B: 253
+$promotion_2_color: #905fde; // R: 144, V: 95, B: 222
+$promotion_3_color: #4e3cb1; // R: 78, V: 60, B: 177
+$promotion_4_color: #9c4276; // R: 156, V: 66, B: 118
+
+
+/* Error color */
+
+$form_errors_color: #ee1c27;
+
+
+/* Wizard steps color */
+$wizard_steps_color: #e6e6e6;
+$wizard_steps_color_active: #557e9c;
+
+/* Radio button color */
+$radio_color_active: #557e9c;
+$radio_border_color: $grey_11_color;
+$radio_2_border_color : #171717;
+
+/* Checkbox button color */
+$checkbox_color_active: #007edb;
+$checkbox_border_color: $grey_7_color;
+
+/* Error msg of form */
+$red_1_color: #cc3535; // R: 204, V: 53, B: 53
+$form_errors_color: #ee1c27;
+
+
+
+/* Added color palette */
+
+$blue_1_color: #3c3a48; // R: 60, V: 58, B: 72;
+
+
+/* Main background & text color */
+
+$main_color: $grey_1_color; // main txt color
+$main_bg: $white_color; // body background
+
+
+/* Call to action buttons */
+
+// Dark-blue 1 button
+$cta_btn_1_bg_color: #0c2d47;
+$cta_btn_1_border_color: #162133;
+$cta_btn_1_txt_color: $white_color;
+
+// Dark-blue 2 button
+$cta_btn_2_bg_color: #133d5f;
+$cta_btn_2_bg_color_hover: $dark_blue_1_color_hover;
+$cta_btn_2_border_color: #162133;
+$cta_btn_2_border_color_hover: #152034;
+$cta_btn_2_txt_color: $white_color;
+
+// Mid-blue 1 button
+$cta_btn_3_bg_color: $mid_blue_1_color;
+$cta_btn_3_border_color: $dark_blue_1_color;
+$cta_btn_3_txt_color: $white_color;
+
+// Mid-blue 2 button
+$cta_btn_4_bg_color: $mid_blue_2_color;
+$cta_btn_4_bg_color_hover: $mid_blue_2_color_hover;
+$cta_btn_4_border_color_hover: #1a4483;
+$cta_btn_4_border_color: $mid_blue_1_color;
+$cta_btn_4_txt_color: $white_color;
+
+// Mid-grey button
+$cta_btn_5_bg_color: $grey_8_color;
+$cta_btn_5_border_color: $grey_6_color;
+$cta_btn_5_txt_color: $grey_1_color;
+
+// Light-grey button
+$cta_btn_6_bg_color: $grey_9_color;
+$cta_btn_6_border_color_hover: $grey_8_color_hover;
+$cta_btn_6_bg_color_hover: $grey_9_color_hover;
+$cta_btn_6_border_color: $grey_8_color;
+$cta_btn_6_txt_color: $grey_1_color;
+
+// Mid-grey small button
+$cta_btn_7_bg_color: $grey_7_color;
+$cta_btn_7_txt_color: $white_color;
+
+// Light-grey small button
+$cta_btn_8_bg_color: $grey_10_color;
+$cta_btn_8_txt_color: #585864;
+
+
+
+
+
+/* Slice background */
+$slice_bg_dark_color: $grey_9_color; // R: 241, V: 243, B: 242
+$slice_bg_light_color: $white_color;
+
+
+//color elements form
+$form_border_color: #dadada;
+$form_bg_button: #22a86c;
+$form_bg_button_hover: #5cb78e;
+$form_text_button: #ffffff;
+$form_bg_select: #2d2f31;
+
+
+
+$border_color : #ff9f72;
+
+
+
+
+// accordion color
+$purple : #981e67;
+
+
+
+/* breadcrumb */
+$breadcrumb_color: #a39f99;
+$breadcrumb_color_on : #ff9f72;
+
+$color-border-nav: #f2f2f2;
+$color-price: #9694a9;
+
+
+//slice 88
+
+$price_bg: #f2efed;

@@ -1,0 +1,40 @@
+{
+  "list-result": [
+    {
+      "dist": "2.2",
+      "unit": "km",
+      "name": "PEUGEOT NEUILLY SUR SEINE",
+      "type":"magasin",
+      "street":"131 AVENUE CHARLES DE GAULLE",
+      "city": "92200 NEUILLY",
+      "tel": "0141430250"
+    },
+    {
+      "dist": "2.2",
+      "unit": "km",
+      "name": "PEUGEOT NEUILLY SUR SEINE",
+      "type":"magasin",
+      "street":"131 AVENUE CHARLES DE GAULLE",
+      "city": "92200 NEUILLY",
+      "tel": "0141430250"
+    },
+    {
+      "dist": "2.2",
+      "unit": "km",
+      "name": "PEUGEOT NEUILLY SUR SEINE",
+      "type":"magasin",
+      "street":"131 AVENUE CHARLES DE GAULLE",
+      "city": "92200 NEUILLY",
+      "tel": "0141430250"
+    },
+    {
+      "dist": "2.2",
+      "unit": "km",
+      "name": "PEUGEOT NEUILLY SUR SEINE",
+      "type":"magasin",
+      "street":"131 AVENUE CHARLES DE GAULLE",
+      "city": "92200 NEUILLY",
+      "tel": "0141430250"
+    }
+  ]
+}

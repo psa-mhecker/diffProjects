@@ -1,0 +1,339 @@
+.save-config{
+  $gutter_px: 11px;
+  border: 1px solid $lame-border-selected;
+  padding : 30px 50px;
+  margin-bottom: 45px;
+  color: $dark-champagne;
+  text-align: center;
+  &.step-save{
+    border-color: $lame-border;
+  }
+  .content-info{
+    padding: 0 55px;
+    .info{
+      color: $checkbox_color_active;
+      &:before {
+        content:'';
+        @extend %_sprites;
+        // @extend %_sprite-info-3;
+        vertical-align: middle;
+        display: inline-block;
+        margin-right: 20px;
+      }
+    }
+    .notification{
+      background-color: transparent;
+      text-align: center;
+      color: $lame-border-selected;
+      margin-top: 0;
+    }
+    .notification-txt{
+      padding-left: 0;
+      p{
+        color: $carmin;
+        &:before{ left: 0; }
+      }
+    }
+
+    .label-save{
+      margin-left: 55px;
+    }
+    .confirmation{
+      display: none;
+      opacity: 1!important;
+      position: relative;
+      &:before{
+        content: "";
+        display: inline-block;
+        vertical-align: top;
+        float: left;
+        margin-right: 15px;
+      }
+    }
+    .confirm-save{
+      text-transform: uppercase;
+      &.checked{
+        font-weight: bold;
+      }
+      label{
+        margin: 0;
+      }
+    }
+    .config-save{
+      display: none;
+
+      .config-box-input{
+        overflow: visible;
+        font-size: 0;
+
+        .input-text{
+          margin: 0;
+          margin-top: 16px;
+          position: relative;
+
+          &.error{
+            input{
+              border-color: $carmin;
+            }
+          }
+
+          span.error-msg {
+            float: right;
+            width: 55%;
+            text-align: left;
+          }
+
+          input{
+            width: 100%;
+            height: 40px;
+            padding-left: 16px;
+            border: 1px solid transparent;
+            background-color: $light-champagne;
+            font: 12px/1.2 $font-family-base-regular;
+            color: $brand-plum-grey-puce;
+            box-shadow: 0 0 0;
+            outline: none;
+          }
+          label,
+          .form-control{
+            display: inline-block;
+            vertical-align: middle;
+            width: 50%;
+          }
+
+
+          .form-control{
+            position: relative;
+          }
+
+          label{
+            text-align: left;
+            width: 40%;
+            margin: 0;
+            padding: 0 12px 0 0;
+            font-size: 16px;
+            vertical-align: top;
+            margin-top: 10px;
+          }
+
+          &:first-child{ padding-top: 0; }
+        }
+      }
+
+      .mentions-legales{
+        font-size: 14px;
+        line-height: 20px;
+        margin: $gutter_px 0;
+      }
+
+      .confirm-mentions{
+        margin: $gutter_px 0;
+
+       .label{
+          text-transform: uppercase;
+
+        }
+
+        .erreurbox{
+          position: relative;
+          .input{
+            border-color: $lame-border-selected;
+          }
+
+        }
+      }
+    }
+    .etape3{
+      display:none;
+      .notification{
+        margin: 0;
+        .notification-txt p{
+          b{
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  .config-form{
+    .cta-group{
+      padding: 0;
+      .cta {
+        padding: 8.5px 0;
+      }
+        #submit {
+          position: relative;
+        }
+    }
+  }
+
+  span.error-msg {
+    display: block;
+    text-align: center;
+    font: 12px/1.2 $font-family-base-regular;
+    color: $lame-border-selected;
+    margin-top: 15px;
+  }
+}
+
+.control-box{
+  padding: 0;
+  a{
+    padding: 8.5px 0;
+
+    &.pull-left {
+      position: relative;
+      .arrow--2-small-left {
+        position: absolute;
+        left: 0;
+        top: 10px;
+      }
+      span {
+        display: block;
+        text-align: left;
+        padding-left: 17px;
+      }
+    }
+  }
+}
+
+    .save-config {
+      margin-bottom:2%;
+      border: 1px solid $dark_champagne;
+      .notification {
+        margin: 28px 0;
+      }
+      .content-info {
+        .config-save{
+          margin-bottom: 5%;
+          .confirm-mentions {
+            margin-top: 7%;
+            margin-bottom: 7%;
+          }
+          .mentions-legales{
+            margin-top: 7%;
+          }
+        }
+      }
+      span.error-msg {
+        font-family:$font-family-base-regular;
+        font-size: 13px;
+      }
+      #submit{
+        font-family:$font-family-base-regular;
+        font-size: 13px;
+      }
+    }
+
+    .save-config.confirmation {
+      border: 1px solid $dark_champagne;
+    }
+    .save-config.etape2 {
+      border: 1px solid $carmin;
+    }
+
+    .save-config .content-info .config-save .config-box-input .input-text span.error-msg {
+      width: 100%;
+    }
+
+    .save-config .content-info .label-save {
+      margin-left: 0px;
+      margin-bottom: 7%;
+    }
+
+    .save-config .content-info .input-radio .radio_btn {
+      margin: 0 10px;
+    }
+
+    .save-config .content-info .config-save .confirm-mentions .erreurbox .input {
+      border-color: $dark-champagne;
+    }
+
+    .save-config .content-info .confirm-save label .control-label {
+      font-family:$font-family-base-regular;
+    }
+
+    .save-config .content-info .config-save .config-box-input .input-text label {
+      font-family:$font-family-base-regular;
+      font-size: 13px;
+      color: $warm-black;
+      width: 30%;
+      vertical-align: top;
+      margin-top: 10px;
+    }
+
+    .confirm-mentions .input-radio.checked input[type="checkbox"]:checked ~ label .radio_btn i {
+      display: block;
+    }
+    .confirm-mentions .input-radio.erreurbox input[type="checkbox"] ~ label .radio_btn i {
+      display: none;
+    }
+
+    .save-config .content-info .notification-txt {
+      margin-top: 5%;
+      margin-bottom: 5%;
+    }
+
+    .config-save .dont-save:hover {
+      text-decoration: underline;
+    }
+
+    .config-box-input .valid .arrow--2-small-right {
+      position: absolute;
+      right: 12px;
+      top: 7px;
+    }
+
+    .save-config .content-info .config-save .config-box-input .ico.ico--valid,
+    .save-config .content-info .config-save .config-box-input .ico.ico--error,
+    .config-save .confirm-mentions .input-radio.checked .ico.ico--error,
+    .config-save .confirm-mentions .input-radio .ico.ico--error {
+      display: none;
+    }
+
+    .save-config .content-info .config-save .config-box-input .error .ico.ico--error,
+    .save-config .content-info .config-save .config-box-input .valid .ico.ico--valid {
+      display: inline-block;
+      position: absolute;
+      right: 6%;
+      top: 9px;
+    }
+
+    .save-config .content-info .config-save .config-box-input .error .ico.ico--error {
+      &::before {
+        @extend %_sprites;
+        @extend %_sprite-error;
+      }
+    }
+    .config-save .confirm-mentions .input-radio.erreurbox .ico.ico--error {
+      display: inline-block;
+      position: absolute;
+      top: -5px;
+      &::before {
+        @extend %_sprites;
+        @extend %_sprite-error;
+      }
+    }
+    .config-save .etape1 .notification .notification-txt p {
+      font-family:$font-family-base-regular;
+    }
+
+    .config-save .etape1 .notification{
+      margin-bottom: 0;
+      .notification-txt p{
+        font-family: $font-family-base-regular;
+        font-size: 13px;
+        b{
+          display: block;
+        }
+      }
+    }
+
+  .config-save   .etape3 .notifications {
+      margin: 5% 0;
+      p {
+        font-family: $font-family-base-regular;
+        font-size: 13px;
+      }
+    }

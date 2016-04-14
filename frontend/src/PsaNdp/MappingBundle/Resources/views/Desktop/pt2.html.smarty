@@ -1,0 +1,196 @@
+{if $isMobile}
+    {if $footer.translations.NDP_BACK_TOP_PAGE}
+        <div class="toplinkMobile text-center">
+            <a href="#body" class="cta btn-cta arrow link chevron-top">
+                <span class="content-cta">{$footer.translations.NDP_BACK_TOP_PAGE}</span>
+            </a>
+        </div>
+    {/if}
+    <section class="slice-pt2 slice-full-size no-margin-top" data-gabarit="{$footer.pageTypeCode}">
+        {if !empty($footer.helpSection) and $footer.displayHelp}
+            <ul class="help row">
+                {foreach $footer.helpLinks as $link}
+                    <li>
+                        <a href="{$link.url}"
+                           {if !empty($link.target)}target="{$link.target}"{/if} data-gtm='{ldelim}"eventType":"click","dataList":{ldelim}"event":"uaevent","eventCategory":"PT2_Footer_cross section::position-last","eventAction":"Redirection::Sitemap","eventLabel":"{$link.title|escape:javascript}"{rdelim}{rdelim}'>{$link.title}</a>
+                    </li>
+                {/foreach}
+            </ul>
+        {/if}
+
+        <div class="row">
+            {if !empty($footer.languages) && $footer.languages|@count >= 2}
+                <ul class="lang">
+                    {foreach $footer.languages as $language}
+                        <li class="col {if $language.current eq 'true'}selected{/if}"
+                            {if !empty($language.target)}target="{$language.target}"{/if}><a
+                                    href="{$language.url}" mobile-data="{$language.mobileTitle}" data-gtm='{ldelim}"eventType":"click","dataList":{ldelim}"event":"uaevent","eventCategory":"PT2_Footer_cross section::position-last","eventAction":"Display::Language","eventLabel":"{$language.title|escape:javascript}"{rdelim}{rdelim}'>{$language.title}</a>
+                        </li>
+                    {/foreach}
+                </ul>
+            {/if}
+        </div>
+        {if !empty($footer.socialSection)}
+            <ul class="social clearfix row">
+                {foreach $footer.socialSection as $social}
+                    <li><a href="{$social.url}" {if !empty($social.target)}target="{$social.target}"{/if}
+                           title="{$social.title}" data-gtm='{ldelim}"eventType":"click","dataList":{ldelim}"event":"uaevent","eventCategory":"PT2_Footer_cross section::position-last","eventAction":"Redirection::{$social.title}","eventLabel":"{$social.title|escape:javascript}"{rdelim}{rdelim}'>
+                                                <img src="{$social.img}" alt="{$social.title}"></a></li>
+                {/foreach}
+            </ul>
+        {/if}
+    </section>
+{else}
+    <section class="slice-pt2 slice-full-size no-margin-top" data-gabarit="{$footer.pageTypeCode}">
+        {if !empty($footerLight)}
+            <div class="footer">
+                <div class="motion-emotion"></div>
+            </div>
+        {else}
+            <div class="content slide-dark-bg">
+                <div class=" row">
+                    <div class=" large-4 medium-4 columns panel-padding">
+                        {if !empty($footer.helpSection) and $footer.displayHelp}
+                            <p class="title">{$footer.helpTitle}</p>
+                            <ul class="links">
+                                {foreach $footer.helpLinks as $link}
+                                    <li>
+                                        <a href="{$link.url}"
+                                           {if !empty($link.target)}target="{$link.target}"{/if} data-gtm='{ldelim}"eventType":"click","dataList":{ldelim}"event":"uaevent","eventCategory":"PT2_Footer_cross section::position-last","eventAction":"Redirection","eventLabel":"{$link.title|escape:javascript}"{rdelim}{rdelim}'>{$link.title}
+                                        </a>
+                                    </li>
+                                {/foreach}
+                            </ul>
+                        {/if}
+                    </div>
+                    <div class=" large-4 medium-4 columns panel-padding">
+                        {if ($footer.displaySecondColumn)}
+                            <p class="title">{$footer.secondColumnTitle}</p>
+                            <ul class="links">
+                                {foreach $footer.secondColumnLinks as $link}
+                                    <li>
+                                        <a href="{$link.url}"
+                                           {if !empty($link.target)}target="{$link.target}"{/if} data-gtm='{ldelim}"eventType":"click","dataList":{ldelim}"event":"uaevent","eventCategory":"PT2_Footer_cross section::position-last","eventAction":"Redirection","eventLabel":"{$link.title|escape:javascript}"{rdelim}{rdelim}'>
+                                            {$link.title}
+                                        </a>
+                                    </li>
+                                {/foreach}
+                            </ul>
+                        {/if}
+                    </div>
+                    <div class=" large-4 medium-4 columns panel-padding">
+                        {if ($footer.displayNewsletter)}
+                            <p class="title">{$footer.newsletterTitle}</p>
+                            <form action="{$footer.newsletterUrl}" class="newsletter-form">
+                                <fieldset>
+                                    <div>
+                                        <input type="email" placeholder="{$footer.translations.NDP_YOUR_EMAIL}"
+                                               required data-msg-required="{$footer.translations.NDP_ERROR_EMAIL_REQUIRED}"
+                                               data-msg-email="{$footer.translations.NDP_ERROR_EMAIL_FORMAT}">
+                                    </div>
+                                    <input type="submit" value="{$footer.translations.NDP_OK}">
+                                </fieldset>
+                            </form>
+                            <div class="small-contact">
+                                {if !empty($footer.contactSection) and $footer.displayContact}
+                                    <p class="title">{$footer.contactTitle}</p>
+                                    <p class="phone-number">{$footer.phoneNumber}</p>
+                                {/if}
+                            </div>
+                        {else}
+                            {if !empty($footer.contactSection) and $footer.displayContact}
+                                <p class="title">{$footer.contactTitle}</p>
+                                <p class="phone-number">{$footer.phoneNumber}</p>
+                            {/if}
+                            {if !empty($footerNewsletterSubscribe)}
+                                <a href="{$footerNewsletterSubscribe.url}"
+                                   {if !empty($footerNewsletterSubscribe.target)}target="{$footerNewsletterSubscribe.target}"{/if}
+                                   class="newsletter-subscribe">{$footerNewsletterSubscribe.title}
+                                </a>
+                            {/if}
+                        {/if}
+                        {if !empty($footer.socialSection)}
+                            <div class="row">
+                                <ul class="social">
+                                    {foreach $footer.socialSection as $social}
+                                        <li><a href="{$social.url}"
+                                               {if !empty($social.target)}target="{$social.target}"{/if}
+                                               title="{$social.title}" data-gtm='{ldelim}"eventType":"click","dataList":{ldelim}"event":"uaevent","eventCategory":"PT2_Footer_cross section::position-last","eventAction":"Redirection::{$social.title|escape:javascript}","eventLabel":"{$social.title}"{rdelim}{rdelim}'>
+                                                <img src="{$social.img}" alt="{$social.title}">
+                                            </a>
+                                        </li>
+                                    {/foreach}
+                                </ul>
+                            </div>
+                        {/if}
+                    </div>
+                </div>
+                <div class=" row cta">
+                    <div class=" large-{if !empty($footer.languages)}4{else}6{/if} medium-{if !empty($footer.languages)}4{else}6{/if} columns">
+                        <a href="{$footer.allModelsLink.url}"
+                           {if !empty($footer.allModelsLink.target)}target="{$footer.allModelsLink.target}"{/if}
+                           class="cta-btn all-models" data-gtm='{ldelim}"eventType":"click","dataList":{ldelim}"event":"uaevent","eventCategory":"PT2_Footer_cross section::position-last","eventAction":"Display::Language","eventLabel":"{$footer.allModelsLink.title|escape:javascript}"{rdelim}{rdelim}'>
+                            {$footer.allModelsLink.title}
+                        </a>
+                    </div>
+                    <div class=" large-{if !empty($footer.languages)}4{else}6{/if} medium-{if !empty($footer.languages)}4{else}6{/if} columns">
+                        <a href="{$footer.allSitesLink.url}"
+                           {if !empty($footer.allSitesLink.target)}target="{$footer.allSitesLink.target}"{/if}
+                           class="cta-btn all-sites" data-gtm='{ldelim}"eventType":"click","dataList":{ldelim}"event":"uaevent","eventCategory":"PT2_Footer_cross section::position-last","eventAction":"Display::Language","eventLabel":"{$footer.allSitesLink.title|escape:javascript}"{rdelim}{rdelim}'>
+                            {$footer.allSitesLink.title}
+                        </a>
+                    </div>
+                    {if !empty($footer.languages) && $footer.languages|@count >= 2 }
+                        <div class=" large-4 medium-4 columns">
+                            <ul class="large-12 medium-12 lang columns">
+                                <div class="row">
+                                    {foreach $footer.languages as $lang}
+                                        <li class="{if $footer.languages|@count == 2}large-6 medium-6{else}large-4 medium-4{/if} columns {if $lang.current eq 'true'}selected{/if}">
+                                            <a href="{$lang.url}" {if !empty($lang.target)}target="{$lang.target}"{/if} data-gtm='{ldelim}"eventType":"click","dataList":{ldelim}"event":"uaevent","eventCategory":"PT2_Footer_cross section::position-last","eventAction":"Display::Language","eventLabel":"{$lang.title|escape:javascript}"{rdelim}{rdelim}'>
+                                                {$lang.title}
+                                            </a>
+                                        </li>
+                                    {/foreach}
+                                </div>
+                            </ul>
+                        </div>
+                    {/if}
+                </div>
+                {if ($footer.displaySiteMap)}
+                    <span class="site-map-expand-btn ">{$footer.siteMapExpandLabel}</span>
+                    <div class="site-map-expand ">
+                        <div class="col-map-container row">
+                            {foreach $footer.siteMapLinks as $section}
+                                <div class=" large-3 columns col-map">
+                                    <p class="title">{$section.title}</p>
+                                    <ul>
+                                        {foreach $section.links as $link}
+                                            <li>
+                                                <a href="{$link.url}"
+                                                   {if !empty($link.target)}target="{$link.target}"{/if} data-gtm='{ldelim}"eventType":"click","dataList":{ldelim}"event":"uaevent","eventCategory":"PT2_Footer_cross section::position-last","eventAction":"Redirection::Sitemap","eventLabel":"{$link.title|escape:javascript}"{rdelim}{rdelim}'>
+                                                    {$link.title}
+                                                </a>
+                                            </li>
+                                        {/foreach}
+                                    </ul>
+                                </div>
+                            {/foreach}
+                        </div>
+                        <div class="row">
+                            <a href="{$footer.fullMapLink}" target="_self" class="site-map-full-btn">
+                                {$footer.fullMapLinkLabel}
+                            </a>
+                        </div>
+                    </div>
+                {/if}
+            </div>
+            <div class="legal-text slice-inside-margin">{$footer.legalText}</div>
+            <ul class="legal-links">
+                {foreach $footer.legalLinks as $link}
+                    <li><a href="{$link.url}" {if !empty($link.target)}target="{$link.target}"{/if} data-gtm='{ldelim}"eventType":"click","dataList":{ldelim}"event":"uaevent","eventCategory":"PT2_Footer_cross section::position-last","eventAction":"Redirection::Sitemap","eventLabel":"{$link.title|escape:javascript}"{rdelim}{rdelim}'>{$link.title}</a>
+                    </li>
+                {/foreach}
+            </ul>
+        {/if}
+    </section>
+{/if}

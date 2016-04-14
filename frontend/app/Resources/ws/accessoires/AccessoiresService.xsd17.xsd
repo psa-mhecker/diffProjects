@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:scv="http://aoa.inetpsa.com/ws/setting/CriteriaValue" xmlns:sc="http://aoa.inetpsa.com/ws/setting/Criteria" targetNamespace="http://aoa.inetpsa.com/ws/setting/CriteriaValue" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	
+<xs:import namespace="http://aoa.inetpsa.com/ws/setting/Criteria" schemaLocation="AccessoiresService.xsd15.xsd"/>
+	
+<xs:complexType name="criteriaType">
+		
+<xs:sequence>
+			
+<xs:element name="criterion" type="xs:string" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+<xs:element name="criteriaValueInput">
+		
+<xs:complexType>
+			
+<xs:sequence>
+				
+<xs:element name="criteria" type="scv:criteriaType"/>
+				
+<xs:element name="settings" type="sc:settingsType"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

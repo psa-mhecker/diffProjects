@@ -1,1 +1,0 @@
-<img src="{$vehiculeImage}" width="201" height="110" alt="" />

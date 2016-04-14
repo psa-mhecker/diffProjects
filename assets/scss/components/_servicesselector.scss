@@ -1,0 +1,9 @@
+.services-selector {
+	position: relative;
+	padding: 10px 0;
+	min-height: 375px;
+
+	.columns + .columns:last-child {
+		float: left;
+	}
+}

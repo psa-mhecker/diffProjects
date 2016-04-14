@@ -1,0 +1,37 @@
+{if isset($slicePC85.note)}
+<section class="slice-pc85 {if isset($slicePC85.anchorId)} {$slicePC85.anchorId} {/if}" {if isset($slicePC85.anchorId)} id="{$slicePC85.anchorId}" {/if} datalayer="{$slicePC85.datalayer}">
+	<div class="slice-pc85-container">
+
+        <h2>{$slicePC85.translate.title}</h2>
+      	<figure class="subtitle"><img src="{$slicePC85.logoreevoo.src}" alt="{$slicePC85.logoreevoo.alt}" /></figure>
+
+        <div class="notedesc">
+            <div class="col col-left">
+            	<p class="note">
+                <a  href="{$slicePC85.link.href}">
+                  {foreach from=$slicePC85.note key=i item=number}
+                    {if $i == 0}
+                      <span>{$number}</span>
+                      <span class="dot">.</span>
+                    {else}
+                      <span>{$number}</span>
+                    {/if}
+                  {/foreach}
+                  {$slicePC85.sub}
+                </a>
+              </p>
+              <a href="{$slicePC85.link.href}" class="read"><span>{$slicePC85.translate.linkread}</span></a>
+              <a href="{$slicePC85.link.href}" class="owner"><span>{$slicePC85.translate.linkowner}</span></a>
+            </div>
+
+            <div class="col col-right">
+            	<div class="citation">
+                	<p>{$slicePC85.translate.description}</p>
+                </div>
+                <p class="signature">{$slicePC85.firstname}, {$slicePC85.translate.job}, {$slicePC85.city}</p>
+                <p class="carmodel">{$slicePC85.carmodel}</p>
+            </div>
+        </div>
+    </div>
+</section>
+{/if}

@@ -1,0 +1,175 @@
+@charset "UTF-8";
+.slicecf41bis{
+	padding: 0 0 25px 0;
+	
+	& > div{
+	  padding-left:14px;
+	  padding-right:14px;
+	}
+	
+	.price,
+	.namecontrast{
+		padding: 0 5px 0 60px;
+		font-family: $ubuntubold;
+		color: $txtsite_color;
+		font-size: 13px;
+		margin-top: 5px;
+	}
+	
+	.price{
+		min-height:18px;
+		
+		span{
+			&.price-prefix,
+			&.include{display:inline-block;}
+		}
+	}
+	
+	.namecontrast{color: $titlesite_color;}
+	
+	.mod-toggle-open{
+		.chevron{
+			@extend %_sprites;
+			@extend %_sprite-arrow-top;
+		}
+	}
+	
+	.chevron{
+		position: absolute;
+		right: 20px;
+		top: 50%;
+		margin-top: -3px;
+		@extend %_sprites;
+		@extend %_sprite-arrow-bottom;
+	}
+	
+	.choice {
+		margin-bottom: 7px;
+		padding: 0 5px 0 60px;
+		font-family: $ubunturegular;
+		color: $titlesite_color;
+		font-size:12px;
+	}	
+	
+	.palette {
+		position: inherit;
+		margin-bottom: 14px;
+		padding: 0 0 0 60px;
+		font-size: 0;
+	
+		li{
+			display: inline-block;
+			width: 32px;
+			font-size: 0;
+			margin: 0 5px 4px 0;
+			height: 32px;
+			
+			figure{
+				figcaption{font-size: 0;}
+			}
+			
+			img{
+				width: 100%;
+				
+				&.on{
+					border: 2px solid $lameborder_color;
+					padding: 2px;
+				}
+			}
+		}
+	}
+	
+	.mentions{
+		font-family: $ubunturegular;
+		margin-top: 15px;
+		font-size: 10px;
+		line-height: 14px;
+		color: $txtsite_color;
+	}
+	
+	.title{
+		font-family: $ubuntubold;
+		margin: 25px 0 10px 0;
+		color: $txtsite_color;
+		font-size: 13px;
+	}
+	
+	ul{
+		list-style:none;
+		padding:0;
+	}
+	
+	.tit-toggle{
+		&:after {margin: -17px 0 0;}
+	}
+	
+	.finInfos{
+		position: relative;
+		padding: 22px 15px 18px 15px;
+		font-size: 0;
+	
+		.infos{
+			width: 70%;
+			display: inline-block;
+			
+			figure{
+				display: inline-block;
+				width: 100%;
+				
+				img{
+					width: 30%;
+					vertical-align: middle;
+				}
+				
+				figcaption{
+					width: 70%;
+					display: inline-block;
+					vertical-align: middle;
+					padding: 0 0 0 15px;
+					
+					.subtitle{
+						color:$titlesite_color;
+						font-family: $ubuntubold;
+						cursor: pointer;
+						margin: 0;
+						font-weight: bold;
+						font-size: 16px;
+					}
+				}
+			}
+		}
+	}
+	
+	.finitions {		
+		.accordion{
+			display: block;
+			color: black;
+			border: 4px solid $lameborder_color;
+			padding-bottom: 15px;
+			
+			&.selected{
+				img{					
+					&.on{border: 2px solid $on_color;}
+				}
+			}
+		}
+		
+		.zoom{			
+			position: absolute;
+			z-index: 1;
+			bottom: 0;
+			right: 0;
+			margin:0 -12px 0 0;
+		}
+		
+		.tit-toggle{cursor: pointer;}
+		
+		.accordion-cont{padding:0 15px;}
+	}
+}
+//slick dots in slicecf41bis
+.slicecf41bis{
+	.slick-dots{
+		height: 0;
+	}
+ }

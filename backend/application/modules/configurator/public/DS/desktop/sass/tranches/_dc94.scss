@@ -1,0 +1,83 @@
+.slice-dc94{
+  padding-bottom: 40px;
+  display: block;
+
+  h3 {
+    color: $champagne;
+    font-size: 20px;
+    font-family: $font-family-base-light;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .table-inclus {
+    table {
+      width: 95%;
+
+      .odd {
+        background-color: $light-grey;
+      }
+
+      .borderBottom {
+        border-bottom: 1px solid $light-grey;
+      }
+
+      thead {
+        tr {
+          th {
+            color: $warm-black;
+            padding: 20px 0 0 20px;
+            text-transform: uppercase;
+            border-right: 1px solid $default-color;
+            font-family: $font-family-base-bold;
+            font-size: 13px;
+            text-align: left;
+            &:last-child {
+              border-right: none;
+            }
+          }
+        }
+      }
+
+      tbody {
+        tr {
+          td {
+            width: 25%;
+            border-right: 1px solid $default-color;
+            vertical-align: top;
+            &:last-child {
+              border-right: none;
+            }
+
+            p {
+              width: 80%;
+              padding: 10px 0 0 20px;
+              margin-top: 0;
+              display: inline-block;
+              font-family: $font-family-base-regular;
+              font-size: 13px;
+
+              &:first-letter {
+                text-transform: capitalize;
+              }
+            }
+
+            span {
+              cursor: pointer;
+              display: inline-block;
+              vertical-align: top;
+              @extend %_sprites;
+              @extend %_sprite-square-plus;
+              position: relative;
+              content: "";
+              top: 11px;
+              left: 5px;
+              width: 19px;
+              height: 21px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

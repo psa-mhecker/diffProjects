@@ -1,0 +1,297 @@
+<div class="popinContainer animLeft">
+    <div class="iscrollScrollbar">
+        <div class="iscrollscroller"></div>
+    </div>
+</div>
+
+<div class="body" data-pricetype="outright"> <section class="slicecf41bis" data-jsobj="[ {literal}{ 'obj':'slice41' }{/literal} ]" data-step="3" data-default="s-001" data-currency="€">
+
+
+        <div class="first_title">
+            <h2 class="title">t('CONFIGURATOR_CF41BIS_PEINTURE_NACREE')</h2>
+        </div>
+
+        {foreach $teintesCompatibles as $id=>$exteriorFeature}
+
+        <div class="finitions slickcontext popincontext inputcontext" data-name="Gris Shark" data-suffix="TTC" data-priceoutright="24000" data-pricemonthly="500" data-pricetype="outright">
+            <div class="accordion mod-toggle selected " data-finitionid="s-{$id}">
+
+                <div class="finInfos mod-toggle-click containsRadioButton">
+                    <label class="radio selected" for="id00">
+                        <input class="radio" type="radio" name="finition" id="id{$id}" value="0">
+                    </label>
+
+                    <div class="infos">
+                        <figure>
+                            <img src="http://visuel3d.citroen.com/V3DCentral/{$idModelPreSelect}/{$idBodystylePreSelect}/Thumbnails/Colors/th_{$exteriorFeature.id}.png" alt="{$exteriorFeature.label}"> />
+                            <figcaption>
+                                <h3 class="subtitle">{$exteriorFeature.label}</h3>
+                            </figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="chevron"></div>
+
+                </div>
+
+                <div class="accordion-cont mod-toggle-content">
+                    <div class="slickslideshow popinzoom" data-jsobj="[ {literal}{ 'obj':'slickslideshow', 'option':{'infinite':true, 'slidetoshow':1, 'slidetoscroll':1, 'dots':true, 'speed':300, 'externalnav':true, 'zoomeffect':true} }{/literal} ]">
+                        <div class="slickslideshow-slide">
+                            <a href="#" class="linkvisu" data-popinName="popinzoom" data-jsobj="[ {literal}{ 'obj':'isoPopinOpenLink' }{/literal} ]"><figure><img src=" ../../../img/vehicule16.png" alt="Airbump 1" data-picturename="Airbump 1" class="slickslideshow-slide-bigvisu" /></figure></a>            </div>
+                        <div class="slickslideshow-slide">
+                            <a href="#" class="linkvisu" data-popinName="popinzoom" data-jsobj="[ {literal}{ 'obj':'isoPopinOpenLink' }{/literal} ]"><figure><img src=" ../../../img/vehicule16.png" alt="Airbump 2" data-picturename="Airbump 2" class="slickslideshow-slide-bigvisu" /></figure></a>            </div>
+                    </div>
+                </div>
+
+
+
+                <p class="choice">t('CONFIGURATOR_CF41BIS_CHOISIR_AIRBUMP')</p>
+
+                <ul class="palette slickexternalnav" data-default="p-{$id}">
+                    <li id="p-000" >
+                        <figure>
+                            <img src=" ../../../img/airbump.jpg " alt=" Airbump 1 " data-picturename="Airbump 1" data-priceoutrightsecond="10" data-pricemonthlysecond="1" />
+                        </figure>
+                    </li>
+                    <li id="p-001" >
+                        <figure>
+                            <img src=" ../../../img/airbump.jpg " alt=" Airbump 2 " data-picturename="Airbump 2" data-priceoutrightsecond="20" data-pricemonthlysecond="2" />
+                        </figure>
+                    </li>
+                </ul>
+
+                <p class="namecontrast">t('CONFIGURATOR_CF41BIS_TEINTE') {$exteriorFeature.label} + <span class="airbump-name">Airbump 1</span></p>
+
+                <p class="price"><span class="price-prefix">&Agrave; partir de</span> <span class="price-outright">24000</span> <span class="price-monthly">500</span><span class="price-currency">€</span> <span class="price-suffix">TTC</span> <span class="per-monthly">/mois</span></p>
+
+            </div>
+        </div>
+
+        {/foreach}
+{*
+        <div class="finitions slickcontext popincontext inputcontext" data-name="Deep Purple" data-suffix="HT" data-priceoutright="24500" data-pricemonthly="1000" data-pricetype="monthly">
+            <div class="accordion mod-toggle bordertopnone" data-finitionid="s-002">
+
+                <div class="finInfos mod-toggle-click containsRadioButton">
+                    <label class="radio" for="id01">
+                        <input class="radio" type="radio" name="finition" id="id01" value="1">
+                    </label>
+
+                    <div class="infos">
+                        <figure>
+                            <img src="../../../img/teinte.jpg" alt="Alt" data-picturename="Alt" />
+                            <figcaption>
+                                <h3 class="subtitle">Deep Purple</h3>
+                            </figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="chevron"></div>
+
+                </div>
+
+                <div class="accordion-cont mod-toggle-content">
+                    <div class="slickslideshow popinzoom" data-jsobj="[ {literal}{ 'obj':'slickslideshow', 'option':{'infinite':true, 'slidetoshow':1, 'slidetoscroll':1, 'dots':true, 'speed':300, 'externalnav':true, 'zoomeffect':true} }{/literal} ]">
+                        <div class="slickslideshow-slide">
+                            <a href="#" class="linkvisu" data-popinName="popinzoom" data-jsobj="[ {literal}{ 'obj':'isoPopinOpenLink' }{/literal} ]"><figure><img src=" ../../../img/vehicule16.png" alt="Airbump 3" data-picturename="Airbump 3" class="slickslideshow-slide-bigvisu" /></figure></a>            </div>
+                    </div>
+                </div>
+
+
+
+                <p class="choice">t('CONFIGURATOR_CF41BIS_CHOISIR_AIRBUMP')</p>
+
+                <ul class="palette slickexternalnav" >
+                    <li >
+                        <figure>
+                            <img src=" ../../../img/airbump.jpg " alt=" Airbump 3 " data-picturename="Airbump 3" data-priceoutrightsecond="10" data-pricemonthlysecond="1" />
+                        </figure>
+                    </li>
+                </ul>
+
+                <p class="namecontrast">Teinte Deep Purple + <span class="airbump-name">Airbump 3</span></p>
+
+                <p class="price"><span class="price-prefix">&Agrave; partir de</span> <span class="price-outright">24500</span> <span class="price-monthly">1000</span><span class="price-currency">€</span> <span class="price-suffix">HT</span> <span class="per-monthly">/mois</span></p>
+
+            </div>
+        </div>
+
+
+        <div class="finitions slickcontext popincontext inputcontext" data-name="Deep Purple" data-suffix="TTC" data-priceoutright="25000" data-pricemonthly="1500" data-pricetype="outright">
+            <div class="accordion mod-toggle bordertopnone" data-finitionid="s-003">
+
+                <div class="finInfos mod-toggle-click containsRadioButton">
+                    <label class="radio" for="id02">
+                        <input class="radio" type="radio" name="finition" id="id02" value="2">
+                    </label>
+
+                    <div class="infos">
+                        <figure>
+                            <img src="../../../img/teinte.jpg" alt="Alt" data-picturename="Alt" />
+                            <figcaption>
+                                <h3 class="subtitle">Deep Purple</h3>
+                            </figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="chevron"></div>
+
+                </div>
+
+                <div class="accordion-cont mod-toggle-content">
+                    <div class="slickslideshow popinzoom" data-jsobj="[ {literal}{ 'obj':'slickslideshow', 'option':{'infinite':true, 'slidetoshow':1, 'slidetoscroll':1, 'dots':true, 'speed':300, 'externalnav':false, 'zoomeffect':true} }{/literal} ]">
+                        <div class="slickslideshow-slide">
+                            <a href="#" class="linkvisu" data-popinName="popinzoom" data-jsobj="[ {literal}{ 'obj':'isoPopinOpenLink' }{/literal} ]"><figure><img src=" ../../../img/vehicule16.png" alt="Airbump 4" data-picturename="Airbump 4" class="slickslideshow-slide-bigvisu" /></figure></a>            </div>
+                    </div>
+                </div>
+
+
+
+
+                <p class="price"><span class="price-prefix">&Agrave; partir de</span> <span class="price-outright">25000</span> <span class="price-monthly">1500</span><span class="price-currency">€</span> <span class="price-suffix">TTC</span> <span class="per-monthly">/mois</span></p>
+
+            </div>
+        </div>
+
+
+        <div class="finitions slickcontext popincontext inputcontext" data-name="Deep Purple" data-suffix="TTC" data-priceoutright="25000" data-pricemonthly="1500" data-pricetype="outright">
+            <div class="accordion mod-toggle bordertopnone" data-finitionid="s-003bis">
+
+                <div class="finInfos mod-toggle-click containsRadioButton">
+                    <label class="radio" for="id02bis">
+                        <input class="radio" type="radio" name="finition" id="id02bis" value="3">
+                    </label>
+
+                    <div class="infos">
+                        <figure>
+                            <img src="../../../img/teinte.jpg" alt="Alt" data-picturename="Alt" />
+                            <figcaption>
+                                <h3 class="subtitle">Deep Purple</h3>
+                            </figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="chevron"></div>
+
+                </div>
+
+                <div class="accordion-cont mod-toggle-content">
+                    <div class="slickslideshow popinzoom" data-jsobj="[ {literal}{ 'obj':'slickslideshow', 'option':{'infinite':true, 'slidetoshow':1, 'slidetoscroll':1, 'dots':true, 'speed':300, 'externalnav':false, 'zoomeffect':true} }{/literal} ]">
+                        <div class="slickslideshow-slide">
+                            <a href="#" class="linkvisu" data-popinName="popinzoom" data-jsobj="[ {literal}{ 'obj':'isoPopinOpenLink' }{/literal} ]"><figure><img src=" ../../../img/vehicule16.png" alt="Airbump 5" data-picturename="Airbump 5" class="slickslideshow-slide-bigvisu" /></figure></a>            </div>
+                        <div class="slickslideshow-slide">
+                            <a href="#" class="linkvisu" data-popinName="popinzoom" data-jsobj="[ {literal}{ 'obj':'isoPopinOpenLink' }{/literal} ]"><figure><img src=" ../../../img/vehicule16.png" alt="Airbump 6" data-picturename="Airbump 6" class="slickslideshow-slide-bigvisu" /></figure></a>            </div>
+                        <div class="slickslideshow-slide">
+                            <a href="#" class="linkvisu" data-popinName="popinzoom" data-jsobj="[ {literal}{ 'obj':'isoPopinOpenLink' }{/literal} ]"><figure><img src=" ../../../img/vehicule16.png" alt="Airbump 7" data-picturename="Airbump 7" class="slickslideshow-slide-bigvisu" /></figure></a>            </div>
+                    </div>
+                </div>
+
+
+
+
+                <p class="price"><span class="include">Inclus</span></p>
+
+            </div>
+        </div>
+
+        <div class="first_title">
+            <h2 class="title">t('CONFIGURATOR_CF41BIS_UNIVERS_CUIR')</h2>
+        </div>
+
+        <div class="finitions slickcontext popincontext inputcontext" data-name="Blanc Perle" data-suffix="HT" data-priceoutright="25500" data-pricemonthly="2000" data-pricetype="monthly">
+            <div class="accordion mod-toggle " data-finitionid="s-004">
+
+                <div class="finInfos mod-toggle-click containsRadioButton">
+                    <label class="radio" for="id03">
+                        <input class="radio" type="radio" name="finition" id="id03" value="4">
+                    </label>
+
+                    <div class="infos">
+                        <figure>
+                            <img src="../../../img/teinte.jpg" alt="Alt" data-picturename="Alt" />
+                            <figcaption>
+                                <h3 class="subtitle">Blanc Perle</h3>
+                            </figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="chevron"></div>
+
+                </div>
+
+                <div class="accordion-cont mod-toggle-content">
+                    <div class="slickslideshow popinzoom" data-jsobj="[ {literal}{ 'obj':'slickslideshow', 'option':{'infinite':true, 'slidetoshow':1, 'slidetoscroll':1, 'dots':true, 'speed':300, 'externalnav':true, 'zoomeffect':true} }{/literal} ]">
+                        <div class="slickslideshow-slide">
+                            <a href="#" class="linkvisu" data-popinName="popinzoom" data-jsobj="[ {literal}{ 'obj':'isoPopinOpenLink' }{/literal} ]"><figure><img src=" ../../../img/vehicule16.png" alt="Airbump 8" data-picturename="Airbump 8" class="slickslideshow-slide-bigvisu" /></figure></a>            </div>
+                        <div class="slickslideshow-slide">
+                            <a href="#" class="linkvisu" data-popinName="popinzoom" data-jsobj="[ {literal}{ 'obj':'isoPopinOpenLink' }{/literal} ]"><figure><img src=" ../../../img/vehicule16.png" alt="Airbump 9" data-picturename="Airbump 9" class="slickslideshow-slide-bigvisu" /></figure></a>            </div>
+                        <div class="slickslideshow-slide">
+                            <a href="#" class="linkvisu" data-popinName="popinzoom" data-jsobj="[ {literal}{ 'obj':'isoPopinOpenLink' }{/literal} ]"><figure><img src=" ../../../img/vehicule16.png" alt="Airbump 10" data-picturename="Airbump 10" class="slickslideshow-slide-bigvisu" /></figure></a>            </div>
+                        <div class="slickslideshow-slide">
+                            <a href="#" class="linkvisu" data-popinName="popinzoom" data-jsobj="[ {literal}{ 'obj':'isoPopinOpenLink' }{/literal} ]"><figure><img src=" ../../../img/vehicule16.png" alt="Airbump 11" data-picturename="Airbump 11" class="slickslideshow-slide-bigvisu" /></figure></a>            </div>
+                        <div class="slickslideshow-slide">
+                            <a href="#" class="linkvisu" data-popinName="popinzoom" data-jsobj="[ {literal}{ 'obj':'isoPopinOpenLink' }{/literal} ]"><figure><img src=" ../../../img/vehicule16.png" alt="Airbump 12" data-picturename="Airbump 12" class="slickslideshow-slide-bigvisu" /></figure></a>            </div>
+                        <div class="slickslideshow-slide">
+                            <a href="#" class="linkvisu" data-popinName="popinzoom" data-jsobj="[ {literal}{ 'obj':'isoPopinOpenLink' }{/literal} ]"><figure><img src=" ../../../img/vehicule16.png" alt="Airbump 13" data-picturename="Airbump 13" class="slickslideshow-slide-bigvisu" /></figure></a>            </div>
+                    </div>
+                </div>
+
+
+
+                <p class="choice">t('CONFIGURATOR_CF41BIS_CHOISIR_AIRBUMP')</p>
+
+                <ul class="palette slickexternalnav" >
+                    <li >
+                        <figure>
+                            <img src=" ../../../img/airbump.jpg " alt=" Airbump 8 " data-picturename="Airbump 8" data-priceoutrightsecond="10" data-pricemonthlysecond="1" />
+                        </figure>
+                    </li>
+                    <li >
+                        <figure>
+                            <img src=" ../../../img/airbump.jpg " alt=" Airbump 9 " data-picturename="Airbump 9" data-priceoutrightsecond="20" data-pricemonthlysecond="2" />
+                        </figure>
+                    </li>
+                    <li >
+                        <figure>
+                            <img src=" ../../../img/airbump.jpg " alt=" Airbump 10 " data-picturename="Airbump 10" data-priceoutrightsecond="30" data-pricemonthlysecond="3" />
+                        </figure>
+                    </li>
+                    <li >
+                        <figure>
+                            <img src=" ../../../img/airbump.jpg " alt=" Airbump 11 " data-picturename="Airbump 11" data-priceoutrightsecond="40" data-pricemonthlysecond="4" />
+                        </figure>
+                    </li>
+                    <li >
+                        <figure>
+                            <img src=" ../../../img/airbump.jpg " alt=" Airbump 12 " data-picturename="Airbump 12" data-priceoutrightsecond="50" data-pricemonthlysecond="5" />
+                        </figure>
+                    </li>
+                    <li >
+                        <figure>
+                            <img src=" ../../../img/airbump.jpg " alt=" Airbump 13 " data-picturename="Airbump 13" data-priceoutrightsecond="60" data-pricemonthlysecond="6" />
+                        </figure>
+                    </li>
+                </ul>
+
+                <p class="namecontrast">Teinte Blanc Perle + <span class="airbump-name">Airbump 8</span></p>
+
+                <p class="price"><span class="include">Inclus</span></p>
+
+            </div>
+        </div>
+*}
+        <div class="mentions">
+            Véhicule présenté à titre indicatif pouvant ne pas correspondre à la version configurée.<br>Tarif VP Citroen conseilolé en vigueur. Bonus écologique selon le décret N° 2014-1672 du 30 décembre
+        </div>
+    </section>
+
+    <div class="md-modal md-effect-5 clearfix" id="modal-5">
+        <div class="md-content">
+            <div>
+                <p>Attention, si vous souhaitez revenir à cette étape, les donnée configurées précédemment peuvent être perdues</p>
+                <button class="button btn-md md-js-close md-close">Annuler</button>
+                <button class="button btn-md md-js-close md-change-step">Continuer</button>
+            </div>
+        </div>
+    </div>
+    <div class="md-overlay"></div></div>

@@ -1,0 +1,61 @@
+{if !empty($slicePN14.menu)}
+	<section
+			class="slice-pn14 slice-full-size no-margin-top {if isset($slicePN14.anchorId)} {$slicePN14.anchorId} {/if}" {if isset($slicePN14.anchorId)} id="{$slicePN14.anchorId}" {/if}
+			datalayer="{$slicePN14.datalayer}">
+		<div class="js-nav-showroom-container">
+			<nav class="nav-showroom js-nav-showroom">
+				<a class="show-for-small-only nav-showroom-head js-nav-showroom-head">
+					<span class="nav-showroom-title">
+						{$slicePN14.titleMobile}
+						<i class='js-toggle-icon toggle-icon toggle-icon-expand'></i>
+					</span>
+				</a>
+				<ul class="nav-showroom-list small-block-grid-1 medium-block-grid-{$slicePN14.menu|@count} js-nav-showroom-list">
+					{*Parcours de la liste des liens de premier niveau *}
+					{foreach $slicePN14.menu as $item}
+						<li {if ($item.isActive)}id='js-nav-showroom-item-active'{/if} class="nav-showroom-item {if ($item.isAncestor)||($item.isActive)}nav-showroom-item-active{/if} js-nav-showroom-item">
+							<a class="nav-showroom-link {if ($item.isActive||!empty($item.childs) && count($item.childs) == 1 && $item.childs[0].isActive)}nav-showroom-link-active{/if} {if ($item.isAncestor)}nav-showroom-link-ancestor{/if}" href="{$item.url}" {if ($item.isAncestor) || ($item.isActive)}style="border-color: {$slicePN14.color}"{/if} data-gtm='{ldelim}"eventType":"click","dataList":{ldelim}"event":"uaevent","eventCategory":"{$slicePN14.blockName}::position-{$slicePN14.blockOrder}","eventAction":"Redirection::NavigationLevel4","eventLabel":"{$item.title|strip|escape:html}"{rdelim}{rdelim}'>
+								<span class="nav-showroom-subtitle" {if ($item.isAncestor) || ($item.isActive)}style="color: {$slicePN14.color}"{/if}>
+									<pre>{$item.title}</pre>
+									{if !empty($item.childs) && count($item.childs) > 1 }
+										<i class="show-for-small-only toggle-icon toggle-icon-expand js-toggle-icon"></i>
+									{/if}
+								</span>
+							</a>
+							{if !empty($item.childs) && count($item.childs) > 1 }
+							<ul class="nav-showroom-sublist small-block-grid-1 medium-block-grid-{$item.childs|@count} js-nav-showroom-sublist">
+								{*Parcours de la liste de liens de second niveau *}
+								{foreach $item.childs as $child}
+								<li {if ($child.isActive)}id='js-nav-showroom-item-active'{/if} class="nav-showroom-item nav-showroom-subitem {if $item.isAncestor}nav-showroom-item-active{/if} js-nav-showroom-item">
+									<a class="nav-showroom-link nav-showroom-sublink {if $child.isActive}nav-showroom-sublink-active{/if}" href="{$child.url}" data-gtm='{ldelim}"eventType":"click","dataList":{ldelim}"event":"uaevent","eventCategory":"{$slicePN14.blockName}::position-{$slicePN14.blockOrder}","eventAction":"Redirection::NavigationLevel5","eventLabel":"{$item.title|strip|escape:html}::{$child.title|strip|escape:html}"{rdelim}{rdelim}'>
+										<span class="nav-showroom-subtitle" {if $child.isActive}style="color: {$slicePN14.color}"{/if}><pre>{$child.title}</pre></span>
+									</a>
+								</li>
+								{/foreach}
+							</ul>
+							{/if}
+						</li>
+					{/foreach}
+				</ul>
+			</nav>
+		</div>
+	</section>
+{else}
+	<section class="slice-pn14-title clearfix"></section>
+{/if}
+
+<!-- SECTION TITRE ET CHAPO -->
+{if !empty($slicePN14.title) || !empty($slicePN14.text) }
+	<section class="slice-pn14-title clearfix">
+		<div class="row">
+			<div class="large-12 columns js-gestion-panier">
+				{if !empty($slicePN14.title)}
+					<h2>{$slicePN14.title}</h2>
+				{/if}
+				{if !empty($slicePN14.text)}
+					<p class="text-center">{$slicePN14.text}</p>
+				{/if}
+			</div>
+		</div>
+	</section>
+{/if}

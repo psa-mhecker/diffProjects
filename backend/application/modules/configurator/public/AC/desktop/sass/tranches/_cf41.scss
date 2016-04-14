@@ -1,0 +1,43 @@
+.slice-cf41 {
+  color: $gray-citroen;
+  margin: 20px 0px;
+  .elemnt_input {
+    label{
+      margin-top: 13px;
+    }
+  }
+  .nb {
+    font-family: "ubuntubold", Arial;
+    font-size: 16px;
+    color: #646464;
+    line-height: 40px;
+    margin-right: 5px;
+    .kit-color {
+      font-size: 40px;
+      font-family: "ubunturegular", Arial;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .txt-teinte {
+      position: relative;
+      top: 8px;
+      display: inline-block;
+    }
+  }
+  .notifications {
+    margin-top: 20px;
+    .not-text-1, .not-text-2 {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .info--orange {
+      top: 33%;
+    }
+  }
+  .mentions-legale {
+    margin-top: 20px;
+  }
+  .input.radio {
+    display: inline;
+  }
+}

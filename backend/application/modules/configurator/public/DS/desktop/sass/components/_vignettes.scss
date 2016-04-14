@@ -1,0 +1,140 @@
+.vignette_bloc {
+  border: 1px solid $champagne;
+  // box-shadow: inset 0 0 0 1px $champagne;
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  font-size: 0;
+  position: relative;
+  .color-list{
+    color: $warm-black;
+    min-height: 103px;
+  }
+  &.selected {
+    border-color: $carmin;
+    // box-shadow: inset 0 0 0 1px $carmin;
+    .title_vignette {
+      .text-vignette-int {
+        color: $carmin;
+      }
+    }
+  }
+  .input-radio {
+    text-align: center;
+  }
+  .img-vignette {
+    width: 100%;
+    display: block;
+    border: none;
+    box-shadow: none;
+    float: left;
+    .img-sprite-vign {
+      background-size: contain;
+      min-height: 100px;
+      display: block;
+      width: 100%;
+      border: none;
+    }
+  }
+  .badges_vi {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    height: 31px;
+    text-align: center;
+    float: left;
+  }
+  .title_vignette {
+    display: block;
+    margin-top: 0;
+    padding: 0 5px;
+    height: 61px;
+    width: 100%;
+    font-weight: normal;
+    font-size: $font-size-base;
+    text-align: center;
+
+    float: left;
+    .text-vignette-int {
+      color: $warm-black;
+      font-family: $font-family-base-regular;
+      letter-spacing: 0;
+      line-height: 21px;
+    }
+  }
+  .bloc-marg {
+    margin-top: 25px;
+    width: 100%;
+    display: block;
+    float: left;
+  }
+  .price_check {
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    min-height: 52px;
+    padding: 0 25px 0 14px;
+    font-weight: 600;
+    font-size: $font-size-small-small;
+    font-family: $font-family-base-regular;
+    color: $warm-black;
+    float: left;
+    position: relative;
+    &.text {
+      padding: 0 10px;
+    }
+  }
+  .color-list {
+    display: inline-block;
+    width: 100%;
+    padding: 0 10px 10px 10px;
+    padding: 0 10px;
+    > p{
+      font-family: $font-family-base-regular;
+      font-size: 11px;
+      min-height: 30px;
+      font-weight: 600;
+    }
+    ul{
+      min-height: 51px;
+      padding: 0;
+      max-width: 113px;
+      margin: 0 auto;
+      font-size: 0;
+      li {
+        display: inline-block;
+        width: 26px;
+        margin: 0;
+        cursor: pointer;
+        img{
+          width: 100%;
+          padding: 3px;
+        }
+      }
+    }
+  }
+  .detail_vignette {
+    display: inline-block;
+    position: relative;
+    padding: 10px;
+    margin-top: 37px;
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid $light-champagne;
+    text-transform: uppercase;
+    .span_detail {
+      display: block;
+      float: left;
+      color: $dark-champagne;
+      font-family: $font-family-base-regular;
+      font-size: $font-size-small-small;
+      margin-bottom: 11px;
+      width: 100%;
+      .marg {
+        margin: 0 auto;
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+<section class="slice-PF42 {if isset($slicePF42.anchorId)} {$slicePF42.anchorId} {/if}" {if isset($slicePF42.anchorId)} id="{$slicePF42.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePF42' } ]" datalayer="{$slicePF42.datalayer}">
+    {if isset($slicePF42.title)}<h2 class="title">{$slicePF42.title}</h2>{/if}
+    {if isset($slicePF42.subTitle)}<h3 class="subTitle">{$slicePF42.subTitle}</h3>{/if}
+    {if isset($slicePF42.mentions)}
+       <p class="legal-notice">{$slicePF42.mentions}</p>
+    {/if}
+</section>

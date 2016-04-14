@@ -1,0 +1,158 @@
+.slice-cc91 {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    float: left;
+    padding-bottom: 40px;
+    div.lames-finition {
+        display: block;
+        float: left;
+        width: 100%;
+        position: relative;
+        .minHeight {
+            width: 461px;
+            display: block;
+            float: left;
+            height: auto;
+        }
+        .lame {
+            margin-top: 40px;
+            height: 467px;
+        }
+        h3 {
+            font: 20px/20px $font-family-base-bold;
+            margin-top: 40px;
+            color: #646464;
+        }
+        .lame.finition > div aside > strong.price .info--blue {
+            position: relative;
+            line-height: 22px;
+            top: 5px;
+            right: auto;
+        }
+        .lame.finition > div aside {
+            top: -20px;
+        }
+        strong.line_title_aside {
+            line-height: 32px !important;
+            display: inline-block;
+            width: 100%;
+            padding-top: 2px;
+        }
+        .input.checkbox {
+            display: none;
+        }
+        .lame.finition > div aside .price-from {
+            margin-bottom: 0;
+            font-size: 14px;
+        }
+        .infos_poin {
+            margin-top: 40px;
+            width: 100%;
+            display: block;
+            position: relative;
+            span.info_help {
+                display: inline-block;
+                float: left;
+                color: $gray-citroen-bold;
+                font-family: $font-family-base-regular;
+                position: absolute;
+                top: -22px;
+                left: 30px;
+            }
+        }
+    }
+    aside {
+        position: absolute;
+        top: -28px;
+        right: -30px;
+        background-color: $gray-lighter;
+        width: 257px;
+        padding: 40px 27px 32px;
+        height: 467px;
+        .price-from {
+            font-size: 11px;
+        }
+        .jauges-lvl-container {
+            float: right;
+            width: 30px;
+            .jauges-barre {
+                width: 100%;
+                height: 4px;
+                margin-top: 4px;
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
+            &.small {
+                width: 21px;
+                background: white;
+                padding: 3px;
+                .jauges-barre {
+                    height: 2px;
+                    margin-top: 2px;
+                    &:first-child {
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+        > strong {
+            display: block;
+            font: 38px/44px $font-family-brand-bold;
+            &.price {
+                font: 17px/1.2 $font-family-base-bold;
+                position: relative;
+                margin-top: 50px !important;
+                .info--blue {
+                    position: absolute;
+                    top: -5px;
+                    right: 25%;
+                }
+            }
+        }
+        &:hover {
+            background-color: #e7e6ed;
+            border: #e7e6ed;
+        }
+        &.checked {
+            background-color: $default-color;
+            border-color: $brand-orange;
+        }
+        .input-radio,
+        .input-checkbox {
+            margin-left: 0;
+            margin-top: 30px;
+        }
+        .input-radio {
+            margin-bottom: 45px;
+        }
+        .input-checkbox {
+            margin-right: 0;
+            .checkbox_btn {
+                margin-right: 9px;
+            }
+        }
+        .info--orange {
+            font-size: 14px;
+            line-height: 20px;
+            position: relative;
+            padding-left: 30px;
+            width: 100%;
+            &:before {
+                position: absolute;
+                left: 0;
+                bottom: -1px;
+                cursor: auto!important;
+            }
+        }
+    }
+    .lame.finition > div aside .input-checkbox {
+        margin-top: 28px;
+    }
+    .lame.finition .col-text span{
+        padding-right:9px;
+        padding-top:10px;
+    }
+
+}

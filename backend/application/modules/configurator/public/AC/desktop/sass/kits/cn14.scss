@@ -1,0 +1,55 @@
+.cn14 {
+    h1 {
+        color: #c2b000;
+    }
+    #nav {
+        border-left: 4px solid #82cddc;
+        border-right: 4px solid #82cddc;
+        border-bottom: 4px solid #82cddc;
+        .backActive {
+            border-top: 4px solid #82cddc;
+        }  
+        #main-menu {
+            .numero {
+                color: rgba(#c2e6ed, 0.45);
+            }
+            background-color: #82cddc;
+            > li {
+                background-color: #82cddc;
+                &.disabled:hover {
+                    background-color: #82cddc;
+                }
+
+                > a:hover {
+                    box-shadow: 0 4px 0 0 #82cddc inset;
+                }
+
+                ul {
+                    li {
+                        &.active,
+                        &:hover {
+                            > a {
+                                background-color: #c2b000;
+                            }
+                        }
+                    }
+                }
+                &.active {
+                    > a {
+                        color: #82cddc;
+                    }
+                }                
+                &:last-child.active {
+                    & > a span {
+                        color: #82cddc;
+                    }
+                }
+                &:last-child {
+                    & > a:hover span {
+                        color: #82cddc;
+                    }
+                }
+            }
+        }
+    }
+}

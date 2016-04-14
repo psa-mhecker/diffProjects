@@ -1,0 +1,51 @@
+<section class="slice-pc78-v2 {if isset($slicePC78.anchorId)} {$slicePC78.anchorId} {/if}" {if isset($slicePC78.anchorId)} id="{$slicePC78.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePC78-v2' } ]" datalayer="{$slicePC78.datalayer}">
+  <h2>{$slicePC78.title}</h2>
+  {foreach $slicePC78.articles as $line}
+    <section class="line">
+        {foreach $line.cols as $col}
+            <div class="col{if isset($line.unique) and $line.unique === true} unique{/if}">
+              {foreach $col as $item}
+                <article data-index="{$item.index}" {if isset($item.small)}class="parDeux" {/if}>
+                  <header>
+                    <i class="icon"></i>
+                  </header>
+                  <figure>
+                    <img src="{$item.img.src}" alt="{$item.img.alt}">
+                  </figure>
+                  <footer>
+                    <p>{$item.text}</p>
+                  </footer>
+                </article>
+              {/foreach}
+            </div>
+        {/foreach}
+    </section>
+  {/foreach}
+
+ {if isset($slicePC78.toolBar)}
+ <!-- ne rien faire -->
+ {else}
+  <section class="tools-bar line">
+      <ul class="clearfix">
+        {if isset($slicePC78.toolBarCta)}
+          <li><a href="#"><i class="icon ico-pdf"></i><span>Caractéristique technique  (pdf)</span></a></li>
+          <li><a href="#"><i class="icon ico-dimentions"></i><span>Dimensions</span></a></li>
+        {else}
+          <li><a href="#"><i class="icon ico-pdf"></i><span>Caractéristique technique  (pdf)</span></a></li>
+          <li><a href="#"><i class="icon ico-dimentions"></i><span>Dimensions</span></a></li>
+          <li><a href="#"><i class="icon ico-stock-vn"></i><span>Stock vn</span></a></li>
+          <li><a href="#"><i class="icon ico-promotions"></i><span>Promotions</span></a></li>
+        {/if}
+      </ul>
+  </section>
+  {/if}
+  <section class="overlay">
+    <div class="overlay-color close"></div>
+    <div class="popin scroller">
+      <div class="close">{$slicePC78.close}</div>
+      <div class="clearfix slice-pad slide owl-carousel">
+        
+      </div>
+    </div>
+  </section>
+</section>

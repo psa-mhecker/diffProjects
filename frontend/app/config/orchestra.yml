@@ -1,0 +1,70 @@
+open_orchestra_theme:
+    themes: 
+        sample:
+            name: "Native example"
+            stylesheets:
+                - OpenOrchestraThemeBundle:sample:css/div.css
+                - OpenOrchestraThemeBundle:sample:css/font.css
+        theme1:
+            name: "Theme \#1"
+            stylesheets :
+                - FakeAppThemeBundle:theme1:css/font.css
+                - FakeAppThemeBundle:theme1:css/color.css
+                - FakeAppThemeBundle:theme1:css/bg.css
+            javascripts :
+                - OpenOrchestraThemeBundle:theme1:js/alert.js
+        theme2:
+            name: "Theme \#2"
+            stylesheets :
+                - FakeAppThemeBundle:theme2:css/another.css
+                - FakeAppThemeBundle:theme2:css/custom.css
+                - FakeAppThemeBundle:theme2:css/master.css
+        fromApp:
+            name: "Theme from app"
+            stylesheets :
+                - FakeAppThemeBundle:fromApp:css/master.css
+            javascripts :
+                - FakeAppThemeBundle:fromApp:js/js.js
+                - FakeAppThemeBundle:fromApp:js/subfolder/sub.js
+        mixed:
+            name: "Theme mixing several other themes"
+            stylesheets :
+                - OpenOrchestraThemeBundle:sample:css/fo.css
+                - FakeAppThemeBundle:theme2:css/main.css
+            javascripts :
+                - OpenOrchestraThemeBundle:theme1:js/empty.js
+                - FakeAppThemeBundle:fromApp:js/subfolder/sub.js
+        themePresentation:
+            name: "Theme use for phpOrchestra s web site presentation"
+            stylesheets :
+                - FakeAppThemeBundle:themePresentation:css/blocks.css
+                - FakeAppThemeBundle:themePresentation:css/carrousel.css
+                - FakeAppThemeBundle:themePresentation:css/menu/menu.css
+                - FakeAppThemeBundle:themePresentation:css/menu/reset.css
+            javascripts :
+                - FakeAppThemeBundle:themePresentation:js/carrousel.js
+                - FakeAppThemeBundle:themePresentation:js/jssor.core.js
+                - FakeAppThemeBundle:themePresentation:js/jssor.slider.js
+                - FakeAppThemeBundle:themePresentation:js/jssor.utils.js
+                - FakeAppThemeBundle:themePresentation:js/jquery-1.9.1.min.js
+                - FakeAppThemeBundle:themePresentation:js/menu/cufon.yui.js
+                - FakeAppThemeBundle:themePresentation:js/menu/jquery.easing.min.js
+                - FakeAppThemeBundle:themePresentation:js/menu/jquery.lavalamp.min.js
+                - FakeAppThemeBundle:themePresentation:js/menu/myriad.js
+        echonext:
+            name: "Theme use for demo bnp echonet"
+            stylesheets :
+                - FakeAppThemeBundle:echonext:css/blocks.css
+                - FakeAppThemeBundle:echonext:css/carrousel.css
+                - FakeAppThemeBundle:echonext:css/echonext.css
+            javascripts :
+                - FakeAppThemeBundle:echonext:js/carrousel.js
+                - FakeAppThemeBundle:echonext:js/jssor.core.js
+                - FakeAppThemeBundle:echonext:js/jssor.slider.js
+                - FakeAppThemeBundle:echonext:js/jssor.utils.js
+                - FakeAppThemeBundle:echonext:js/jquery-1.9.1.min.js
+                - FakeAppThemeBundle:echonext:js/menu/cufon.yui.js
+                - FakeAppThemeBundle:echonext:js/menu/jquery.easing.min.js
+                - FakeAppThemeBundle:echonext:js/menu/jquery.lavalamp.min.js
+                - FakeAppThemeBundle:echonext:js/menu/myriad.js
+                - FakeAppThemeBundle:echonext:js/echonext.js

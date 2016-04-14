@@ -1,0 +1,98 @@
+<section class="slice-pc53 slice-inside-margin {if isset($slicePC53.anchorId)} {$slicePC53.anchorId} {/if}" {if isset($slicePC53.anchorId)} id="{$slicePC53.anchorId}" {/if}>
+  <h1>{$slicePC53.apvTitle}</h1>
+  <img src="{$slicePC53.firstMedia.src}" alt="{$slicePC53.firstMedia.alt}">
+  <h1>{$slicePC53.apvTypeLabelLink}</h1>
+  <h1>{$slicePC53.apvLabelLink}</h1>
+  <h1>{$slicePC53.apvUrl}</h1>
+  <h1>{$slicePC53.apvColumnNumber}</h1>
+  <h1>{$slicePC53.apvPricePosition}</h1>
+  <h1>{$slicePC53.apvTypeLabelPrice}</h1>
+  <h1>{$slicePC53.apvPriceLabel}</h1>
+  <h1>{$slicePC53.apvPrice}</h1>
+  <h1>{$slicePC53.apvDescription}</h1>
+  <h1>{$slicePC53.apvTypeLabelPrice2}</h1>
+  <h1>{$slicePC53.apvPriceLabel2}</h1>
+  <h1>{$slicePC53.apvPrice2}</h1>
+  <h1>{$slicePC53.apvDescription2}</h1>
+
+  {if isset($slicePC53.ctaLevel1)}
+
+      <div class="row">
+          <div class="small-12 columns">
+              <div class="inline-cta text-center">
+                {foreach $slicePC53.ctaLevel1 as $cta}
+
+                  {include file="../Components/cta.html.smarty"}
+
+                {/foreach}
+              </div>
+          </div>
+      </div>
+
+  {/if}
+
+  {if isset($slicePC53.ctaLevel2)}
+
+      <div class="row">
+          <div class="small-12 columns">
+              <div class="inline-cta text-center">
+                {foreach $slicePC53.ctaLevel2 as $cta}
+
+                  {include file="../Components/cta.html.smarty"}
+
+                {/foreach}
+              </div>
+          </div>
+      </div>
+
+  {/if}
+
+  {* {if isset($slicePC53.serviceFiches)}
+  <div class="fiches clearfix">
+    {foreach $slicePC53.serviceFiches as $fiche}
+    {if $slicePC53.serviceFiches|@count === 2 and isset($fiche.price)} <div class="grid-col span_6_of_12"> {/if}
+    {if isset($fiche.price) }
+      <p>
+        {if !isset($fiche.libelle.position)}
+          <span>{$fiche.libelle.text}</span>
+        {/if}
+
+        {if isset($fiche.libelle.position)}
+          <span>{$fiche.libelle.text}</span>
+        {/if}
+        
+        {if isset($fiche.price) }
+          <span class="price"><!--
+            -->{$fiche.price.sum}{$fiche.price.devise}<!--
+            -->{if isset($fiche.price.indice)}<sup>({$fiche.price.indice})</sup>{/if}<!--
+          --></span>
+        {/if}
+        
+      </p>
+      <ul class="descriptions">
+        {foreach $fiche.descriptions as $description}
+          <li>{$description.text}</li>
+        {/foreach}
+      </ul>
+    {/if}
+    {if $slicePC53.serviceFiches|@count === 2 and isset($fiche.price)} </div> {/if}
+    {/foreach}
+  </div>
+  {/if}
+
+  {if isset($slicePC53.serviceCTA)}
+  <div class="custom-button-group">
+  {foreach $slicePC53.serviceCTA as $cta}
+    <a href="{$cta.url}" class="cta-inline cta-btn cta-btn-2"{if isset($cta.target)} target="{$cta.target}"{/if}><span>{$cta.text}</span></a>
+  {/foreach}
+  </div>
+  {/if}
+
+  {if isset($slicePC53.serviceLinks)}
+  <div class="links-group">
+  {foreach $slicePC53.serviceLinks as $link}
+    <a href="{$link.url}"{if isset($link.target)} target="{$link.target}"{/if}>{$link.text}</a>
+  {/foreach}
+  </div>
+  {/if} *}
+</section>

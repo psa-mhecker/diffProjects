@@ -1,0 +1,307 @@
+
+<section class="slice-pf64 {if isset($slicePF64.anchorId)} {$slicePF64.anchorId} {/if}" {if isset($slicePF64.anchorId)} id="{$slicePF64.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePf64' } ]" data-html="{$slicePF64.dataurl}">
+
+  {* title *}
+  <div class="title">
+    <p class="maintitle">{$slicePF64.title}</p>
+    <p class="subtitle">{$slicePF64.subtitle}</p>
+  </div>
+
+
+  {* Téléchargez la brochure *}
+  {if isset($slicePF64.download.ctaList)}
+    <div class="custom-button-group clearfix">
+      {foreach $slicePF64.download.ctaList as $cta}
+        {include file="./cta.html.smarty"}
+      {/foreach}
+    </div>
+  {/if}
+
+
+  {* Visuel voiture - display uniquement sur version sticky *}
+  <div class="slide car-visual">
+    {foreach $slicePF64.slideCar as $car}
+      <div class="car" id="{$car.id}">
+        <figure>
+          <img src="{$car.picture}" alt="{$car.alt}">
+        </figure>
+          <a href="#" class="zoomCar"></a>
+
+        {* Essayez là *}
+        {if isset($car.ctaList)}
+          <div class="custom-button-group clearfix">
+            {foreach $car.ctaList as $cta}
+              {include file="./cta.html.smarty"}
+            {/foreach}
+          </div>
+        {/if}
+      </div>
+    {/foreach}
+  </div>
+
+
+
+  {* bloc tabs  *}
+  <div class="bloc-tabs">
+
+    {* onglets *}
+    <ul class="iso-tabs">
+        <li class="firstSelected">{$slicePF64.tabs.monthly.title}</li>
+        <li>{$slicePF64.tabs.spot.title}</li>
+    </ul>
+
+    {* contenus *}
+    <div class="iso-tabs-content">
+
+      {* Mensualisé *}
+      <div class="iso-tab-cont results monthly">
+
+        <div class="iso-tab-maincontent">
+
+          <p>
+            <span>A partir de <strong><span class="monthlyPrice">267,20</span>€ TTC/mois</strong>*<a  href="#" data-openpopin="financement{$slicePF64.tabs.monthly.popinFinancement.contents.id}" class="info"></a></span>
+            <span>après un premier loyer de <span class="monthlyFirst">4514</span>€ TTC</span>
+          </p>
+
+          {if isset($slicePF64.tabs.monthly.ctaFunding)}
+          <ul>
+            <li>
+
+              {* Personnalisez votre financement *}
+                <div class="custom-button-group clearfix chevronLeft">
+                  {foreach $slicePF64.tabs.monthly.ctaFunding as $cta}
+                    {include file="./cta.html.smarty"}
+                  {/foreach}
+                </div>
+
+
+               <ul class="options">
+                <li>
+                  <p class="optionTitle">{$slicePF64.tabs.monthly.toggle.translate.inclus} </p>
+                  <ul class="typeOption">
+                    <li class="background"></li>
+                    <li class="nbrOpt">{$slicePF64.tabs.monthly.toggle.translate.options} x<span>1</span></li>
+                    <li class="cost"><span>6,55</span>{$slicePF64.tabs.monthly.toggle.translate.currency} TTC/mois</li>
+                  </ul>
+
+                  <ul class="typeAccessoire">
+                    <li class="background"></li>
+                    <li class="nbrOpt">{$slicePF64.tabs.monthly.toggle.translate.accessoires} x<span>1</span></li>
+                    <li class="cost"><span>334,55</span>{$slicePF64.tabs.monthly.toggle.translate.currency} TTC/mois</li>
+                  </ul>
+                </li>
+                <li>
+                  <p class="optionTitle">{$slicePF64.tabs.monthly.toggle.translate.noninclus} </p>
+{*                   <ul class="typeOption">
+                    <li class="background"></li>
+                    <li class="nbrOpt">{$slicePF64.tabs.monthly.toggle.translate.options} x<span>1</span></li>
+                    <li class="cost"><span>6,55</span>{$slicePF64.tabs.monthly.toggle.translate.currency} TTC/mois</li>
+                  </ul> *}
+                  <ul class="typeAccessoire">
+                    <li class="background"></li>
+                    <li class="nbrOpt">{$slicePF64.tabs.monthly.toggle.translate.accessoires} x<span>1</span></li>
+                    <li class="cost"><span>334,55</span>{$slicePF64.tabs.monthly.toggle.translate.currency} TTC/mois</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          {/if}
+            {* Détail de vos choix *}
+            {if isset($slicePF64.tabs.monthly.ctaDetails)}
+              <li  class="custom-button-group clearfix chevronLeft">
+                {foreach $slicePF64.tabs.monthly.ctaDetails as $cta}
+                  {include file="./cta.html.smarty"}
+                {/foreach}
+              </li>
+            {/if}
+
+            {* Sauvegarde *}
+            {if isset($slicePF64.tabs.monthly.ctaSauvegarde)}
+              <li class="custom-button-group clearfix chevronLeft">
+                  {foreach $slicePF64.tabs.monthly.ctaSauvegarde as $cta}
+                      {include file="./cta.html.smarty"}
+                  {/foreach}
+              </li>
+            {/if}
+
+            {* Voir les stocks *}
+            {if isset($slicePF64.tabs.monthly.ctaStocks)}
+              <li class="custom-button-group clearfix chevronLeft">
+                {foreach $slicePF64.tabs.monthly.ctaStocks as $cta}
+                  {include file="./cta.html.smarty"}
+                {/foreach}
+              </li>
+            {/if}
+
+            {* ENREGISTRER et recevoir par mail *}
+            {if isset($slicePF64.tabs.monthly.ctaSave)}
+              <li class="custom-button-group clearfix btn-large">
+                  {foreach $slicePF64.tabs.monthly.ctaSave as $cta}
+                      {include file="./cta.html.smarty"}
+                  {/foreach}
+              </li>
+            {/if}
+
+
+            {* OFFRE COMMERCIALE *}
+            {if isset($slicePF64.tabs.monthly.ctaOffre)}
+              <li class="custom-button-group clearfix btn-large">
+                  {foreach $slicePF64.tabs.monthly.ctaOffre as $cta}
+                      {include file="./cta.html.smarty"}
+                  {/foreach}
+              </li>
+            {/if}
+
+            {* FINANCEMENT & Voir les stocks: version page Recapitulatifs *}
+            {if isset($slicePF64.tabs.monthly.ctaRecap)}
+              <li class="custom-button-group clearfix btn-large ctaDoubleInline">
+                  {foreach $slicePF64.tabs.monthly.ctaRecap as $cta}
+                      {include file="./cta.html.smarty"}
+                  {/foreach}
+              </li>
+            {/if}
+          </ul>
+        </div>
+        {if isset($slicePF64.versionRecap)}
+          <p class="saveAndSend">
+            <a href="#" data-openpopin="popin--sauvegardePopin"><span></span>{$slicePF64.saveAndSend.title}</a>
+
+          </p>
+        {/if}
+        {if isset($slicePF64.tabs.monthly.mentions)}
+          <p class="mentions">
+            {$slicePF64.tabs.monthly.mentions}
+            {* TO REMOVE : pour tests triggers clicks!! *}
+            {*
+            <button id="testNav">test</button>
+            <button id="videNav">vide</button>
+            *}
+          </p>
+        {/if}
+      </div>
+
+      {* Comptant *}
+      <div class="iso-tab-cont results spot">
+        <div class="iso-tab-maincontent">
+
+          <p>
+            <span>A partir de <strong><span class="spotPrice">5 847</span>€ TTC</strong>*</span>
+          </p>
+
+          {if isset($slicePF64.tabs.monthly.ctaFunding)}
+          <ul>
+            <li>
+
+              {* Personnalisez votre financement *}
+                <div class="custom-button-group clearfix chevronLeft">
+                  {foreach $slicePF64.tabs.monthly.ctaFunding as $cta}
+                    {include file="./cta.html.smarty"}
+                  {/foreach}
+                </div>
+              <ul class="options">
+                <li>
+                  <p class="optionTitle">{$slicePF64.tabs.monthly.toggle.translate.inclus} </p>
+                  <ul class="typeOption">
+                    <li class="nbrOpt">{$slicePF64.tabs.monthly.toggle.translate.options} x<span>1</span></li>
+                    <li class="cost"><span>6,55</span>{$slicePF64.tabs.monthly.toggle.translate.currency} TTC</li>
+                  </ul>
+
+                  <ul class="typeAccessoire">
+                    <li class="nbrOpt">{$slicePF64.tabs.monthly.toggle.translate.accessoires} x<span>1</span></li>
+                    <li class="cost"><span>334,55</span>{$slicePF64.tabs.monthly.toggle.translate.currency} TTC</li>
+                  </ul>
+                </li>
+                <li>
+                  <p class="optionTitle">{$slicePF64.tabs.monthly.toggle.translate.noninclus} </p>
+{*                   <ul class="typeOption">
+                    <li class="nbrOpt">{$slicePF64.tabs.monthly.toggle.translate.options} x<span>1</span></li>
+                    <li class="cost"><span>6,55</span>{$slicePF64.tabs.monthly.toggle.translate.currency} TTC/mois</li>
+                  </ul> *}
+                  <ul class="typeAccessoire">
+                    <li class="nbrOpt">{$slicePF64.tabs.monthly.toggle.translate.accessoires} x<span>1</span></li>
+                    <li class="cost"><span>334,55</span>{$slicePF64.tabs.monthly.toggle.translate.currency} TTC</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            {/if}
+
+            {* Détail de vos choix *}
+            {if isset($slicePF64.tabs.monthly.ctaDetails)}
+              <li  class="custom-button-group clearfix chevronLeft">
+                {foreach $slicePF64.tabs.monthly.ctaDetails as $cta}
+                  {include file="./cta.html.smarty"}
+                {/foreach}
+              </li>
+            {/if}
+
+            {* Voir les stocks *}
+            {if isset($slicePF64.tabs.monthly.ctaStocks)}
+              <li class="custom-button-group clearfix chevronLeft">
+                {foreach $slicePF64.tabs.monthly.ctaStocks as $cta}
+                  {include file="./cta.html.smarty"}
+                {/foreach}
+              </li>
+            {/if}
+
+            {* ENREGISTRER et recevoir par mail *}
+            {if isset($slicePF64.tabs.monthly.ctaSave)}
+              <li class="custom-button-group clearfix btn-large">
+                  {foreach $slicePF64.tabs.monthly.ctaSave as $cta}
+                      {include file="./cta.html.smarty"}
+                  {/foreach}
+              </li>
+            {/if}
+
+            {* OFFRE COMMERCIALE *}
+            {if isset($slicePF64.tabs.monthly.ctaOffre)}
+              <li class="custom-button-group clearfix btn-large">
+                  {foreach $slicePF64.tabs.monthly.ctaOffre as $cta}
+                      {include file="./cta.html.smarty"}
+                  {/foreach}
+              </li>
+            {/if}
+
+            {* FINANCEMENT & Voir les stocks: version page Recapitulatifs *}
+            {if isset($slicePF64.tabs.monthly.ctaRecap)}
+              <li class="custom-button-group clearfix btn-large">
+                  {foreach $slicePF64.tabs.monthly.ctaRecap as $cta}
+                      {include file="./cta.html.smarty"}
+                  {/foreach}
+              </li>
+            {/if}
+          </ul>
+        </div>
+        {if isset($slicePF64.versionRecap)}
+          <p class="saveAndSend">
+            <a href="#" data-openpopin="popin--sauvegardePopin"><span></span>{$slicePF64.saveAndSend.title}</a>
+
+          </p>
+        {/if}
+        {if isset($slicePF64.tabs.monthly.mentions2)}
+          <p class="mentions">{$slicePF64.tabs.monthly.mentions2}
+
+          </p>
+        {/if}
+      </div>
+    </div>{*  end of .iso-tabs-content *}
+  </div> {*  end of .bloc-tabs *}
+
+
+  <div class="popin_overlay" data-jsobj="[ { 'obj':'iso-popin' } ]">
+    <div class="color--blue1 close"></div>
+
+    {if isset($slicePF64.tabs.monthly.popinFinancement)}
+      {foreach $slicePF64.tabs.monthly.popinFinancement as $ticket}
+        {include file="../../popin-financement/popin-financement.tpl"}
+      {/foreach}
+    {/if}
+
+    <div class="popin popin--sauvegardePopin scroller" data-popin="popin--sauvegardePopin">
+      <span class="clbtn close">FERMER</span>
+
+    </div>
+
+  </div>
+</section>
+{include file="../../../../../web/src/html/sections/{$slicePF64.save}"} {* popin sauvegarde *}

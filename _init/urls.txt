@@ -1,5 +1,5 @@
-Adminer : http://192.168.10.10/adminer => psa-cppv2/psa-cppv2/psa-cppv2
+Adminer : http://192.168.10.10/adminer => psa-ndp/psa-ndp/psa-ndp
 MailCatcher : http://192.168.10.10:1080
 Xhprof :  http://192.168.10.10/xhprof/xhprof_html
-Mongodb : 192.168.10.10 27017 cppv2/cppv2/cppv2
+Mongodb : 192.168.10.10 27017 ndp/ndp/ndp
 mongo-express : http://192.168.10.10:8081

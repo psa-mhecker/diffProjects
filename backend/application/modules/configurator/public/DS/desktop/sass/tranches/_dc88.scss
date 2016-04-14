@@ -1,0 +1,193 @@
+.slice-dc88 {
+  .nb{
+    color: $warm-black;
+    font-family: $font-family-base-regular;
+    span{
+      color: $champagne;
+      margin-right: 10px;
+    }
+  }
+  .btnRight > div.col-md-9 {
+    padding: 5px 0;
+  }
+  > p{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: $font-size-x-large;
+    margin-bottom: 0 0 10px 0;
+  }
+  .title-type{
+    color: $champagne;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: $font-size-x-large;
+  }
+  .list-vignette{
+    margin: 8px 0 0 0;
+  }
+  .notification{
+    margin: 29px 0 0 0;
+  }
+  .more-choice{
+    margin: 29px 0;
+  }
+  .infoPrice{
+    cursor: pointer;
+    position: absolute;
+    top: 11px;
+    right: 11px;
+  }
+  .lame
+  .input-checkbox input[type="checkbox"] ~ label .input-text--checked,
+  .input-checkbox input[type="radio"] ~ label .input-text--checked,
+  .input-radio input[type="checkbox"] ~ label .input-text--checked,
+  .input-radio input[type="radio"] ~ label .input-text--checked {
+    display: none;
+  }
+  .input-checkbox input[type="checkbox"]:checked ~ label .input-text--checked,
+  .input-checkbox input[type="radio"]:checked ~ label .input-text--checked,
+  .input-radio input[type="checkbox"]:checked ~ label .input-text--checked,
+  .input-radio input[type="radio"]:checked ~ label .input-text--checked {
+    display: inline-block;
+  }
+  .input-checkbox input[type="checkbox"] ~ label .input-text,
+  .input-checkbox input[type="radio"] ~ label .input-text,
+  .input-radio input[type="checkbox"] ~ label .input-text,
+  .input-radio input[type="radio"] ~ label .input-text {
+    display: inline-block;
+  }
+  .input-checkbox input[type="checkbox"]:checked ~ label .input-text,
+  .input-checkbox input[type="radio"]:checked ~ label .input-text,
+  .input-radio input[type="checkbox"]:checked ~ label .input-text,
+  .input-radio input[type="radio"]:checked ~ label .input-text {
+    display: none;
+  }
+
+
+
+
+
+
+
+
+
+
+
+  .categorieTitle {
+    text-align: center;
+    text-transform: uppercase;
+    color: $champagne;
+    font-family: $font-family-base-regular;
+    margin: 20px auto;
+    font-weight: normal;
+    font-size: 20px;
+  }
+  .infoPrice {
+    cursor: pointer;
+    top: 11px;
+    right: 14px;
+  }
+
+  .lame {
+    .cont-toggle.slickVertical{
+      border: none;
+      padding-left: 0px;
+      &:before{
+        display: none;
+      }
+      .infoPrice{
+        margin-left: 0px;
+      }
+    }
+    .price{
+      display: inline-block;
+      font-family: $font-family-base-regular;
+      font-size: 13px;
+      color: $warm-black;
+    }
+    .infoPrice{
+      display: inline-block;
+      margin-left: 15px;
+      position: relative;
+      top: 3px;
+    }
+    .lame-content {
+      .col-left-galerie {
+
+      }
+    }
+    .list-vignette-toggle {
+      .cont-toggle {
+        .with-slide {
+          .price_check {
+            padding-left: 75px;
+          }
+          .infoPrice{
+            display: inline-block;
+            top: 11px;
+            right: 30px;
+          }
+        }
+      }
+    }
+  }
+  .expandsForThumbnailDisplay {
+    .vignettes-toggle {
+      .img-vignette {
+        border-bottom: 1px solid $champagne;
+      }
+      margin-top: 28px;
+      &:first-child {
+        margin-top: 0;
+      }
+
+      .vignette_bloc {
+        .price_check {
+          position: relative;
+          vertical-align: middle;
+          p {
+            display: inline-block;
+            width: 90%;
+            height: 30px;
+          }
+          .infoPrice {
+            position: absolute;
+            top: 12px;
+            right: 10px;
+            display: inline-block;
+          }
+        }
+      }
+
+      .cont-toggle {
+        padding-right: 10px;
+        .row {
+          margin: 0;
+          .pictures {
+            img {
+              width: 70%;
+              margin: 0 auto;
+              display: block;
+            }
+          }
+          .infos {
+            background: rgba(230, 224, 219, 0.25);
+            &.desc {
+              width: calc(100% - 108px);
+              margin: 20px 54px 0 54px;
+              padding: 0 28px;
+              clear: left;
+              > div:first-child {
+                padding-left: 0;
+              }
+            }
+            .infoPrice {
+              top: 15px;
+              right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

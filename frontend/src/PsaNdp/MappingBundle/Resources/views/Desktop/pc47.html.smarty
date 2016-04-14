@@ -1,0 +1,94 @@
+<section class="slice-pc47 {if isset($slicePC47.anchorId)} {$slicePC47.anchorId} {/if}" {if isset($slicePC47.anchorId)} id="{$slicePC47.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePC47' } ]">
+    <h2>{$slicePC47.pdvUniqueTitle}</h2>
+    <div class="pdvUnique-container slice-inside-margin">
+        <ul class="tab list_style clearfix cols cols-3">
+            {foreach $slicePC47.pdvUniqueTabs as $cta}
+                <li class="col {if isset($cta.selected)}selected{/if}">
+                  {include file="./cta.html.smarty"}
+                </li>
+            {/foreach}
+        </ul>
+        <div class="tab-content clearfix">
+            <h3>{$slicePC47.pdvUniqueSubtitle}</h3>
+            <ul class="list-coord">
+                <li class="grid-col span_6_of_12">
+                    {if isset($slicePC47.pdvUniqueAdr)}
+                        {$slicePC47.pdvUniqueAdr}
+                        <br/>
+                    {/if}
+                    {if isset($slicePC47.pdvUniqueTel)}
+                        {$slicePC47.pdvUniqueTel}
+                        <br/>
+                        <br/>
+                    {/if}
+                    {if isset($slicePC47.pdvUniqueTimesheet)}
+                        <ul class="list-timesheet list_style">
+                            {foreach $slicePC47.pdvUniqueTimesheet as $timesheet}
+                                <li><span>{$timesheet.days}</span>{$timesheet.time}</li>
+                            {/foreach}
+                        </ul>
+                    {/if}
+                    {if isset($slicePC47.pdvUniqueLink)}
+                        <br/>
+                        <div class="custom-button-group">
+                          {foreach $slicePC47.pdvUniqueLink as $cta}
+                            {include file="./cta.html.smarty"}
+                          {/foreach}
+                        </div>
+                    {/if}
+                </li>
+                <li class="grid-col span_6_of_12">
+                    {if isset($slicePC47.pdvUniquePromo)}
+                        {$slicePC47.pdvUniquePromo}
+                        <br>
+                    {/if}
+                    {if isset($slicePC47.pdvUniquePromoList)}
+                        <ul class="list-promo list_style">
+                            {foreach $slicePC47.pdvUniquePromoList as $cta}
+                                {if isset($cta)}
+                                    <li>
+                                      {if isset($cta.url)}
+                                        {include file="./cta.html.smarty"}
+                                      {else}
+                                        {$cta.text}
+                                      {/if}
+                                    </li>
+                                {/if}
+                            {/foreach}
+                        </ul>
+                    {/if}
+                    <div class="custom-button-group">
+                      {foreach $slicePC47.pdvUniqueCTA as $cta}
+                        {include file="./cta.html.smarty"}
+                      {/foreach}
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="tab-content clearfix">
+            <ul class="list-serv">
+                {foreach $slicePC47.pdvUniqueServ as $serv}
+                    <li class="grid-col span_6_of_12">
+                        <ul class="list-grid">
+                            <li class="grid-col"><img src="{$serv.file}" alt="{$serv.alt}"></li>
+                            <li class="grid-col">
+                                <ul class="list-serv-coord list_style">
+                                    <li>{$serv.title}</li>
+                                    {if isset($serv.name)}
+                                        <li>{$serv.name}</li>
+                                    {/if}
+                                    {if isset($serv.tel)}
+                                        <li>{$slicePC47.translate.telephone} : {$serv.tel}</li>
+                                    {/if}
+                                    {if isset($serv.email)}
+                                        <li>{$serv.email}</li>
+                                    {/if}
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                {/foreach}
+            </ul>
+        </div>
+    </div>
+</section>

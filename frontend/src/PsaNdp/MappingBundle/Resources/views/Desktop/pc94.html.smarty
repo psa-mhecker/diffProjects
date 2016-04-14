@@ -1,0 +1,58 @@
+<section class="slice-pc94 {if isset($slicePC94.anchorId)} {$slicePC94.anchorId} {/if}" {if isset($slicePC94.anchorId)} id="{$slicePC94.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePC94'} ]">
+  <h2>{$slicePC94.title}</h2>
+  {if isset($slicePC94.equipements)}
+  <div class="clearfix items">
+    <div class="table">
+      {foreach $slicePC94.equipements as $table}
+        <div class="row {cycle values='odd,even'}">
+          {foreach $table.cell as $cell}
+          <span class="cell">
+            {if isset($cell.title)}<strong>{$cell.title}</strong>{/if}
+            {if isset($cell.text)}<p>{if isset($cell.info)}<span class="info" data-openpopin="popin--{$cell.id}"></span>{/if} {$cell.text}</p>{else}&nbsp;{/if}
+          </span>
+          {/foreach}
+        </div>
+      {/foreach}
+    </div>
+  </div>
+  {/if}
+
+     <!-- POPIN EQUIPEMENTS-->
+     <section class="popin_overlay" data-jsobj="[ { 'obj':'iso-popin' } ]">
+      <div class="color--blue1 close"></div>
+
+      {* --------------------------- PC96 : POPIN ------------------------------ *}
+      {if isset($slicePC94.popinPC96)}
+        {foreach  $slicePC94.popinPC96 as $infosTranche }
+        <div class="popin popin--{$infosTranche.popinId} scroller" data-popin="popin--{$infosTranche.popinId}">
+          <span class="clbtn close">{$infosTranche.close}</span>
+          {include file="../../pc96/template/pc96.tpl"}
+        </div>
+        {/foreach}
+      {/if}
+      {* ---------------------------------------------------------------------------- *}
+
+       {if isset($slicePC94.popin.equipments)}
+        {foreach $slicePC94.popin.equipments as $equipment}
+          <div class="popin popin--equipment owl-style-controls-2 scroller" data-popin="equipment{$equipment.id}">
+            <span class="clbtn close">{$slicePC94.translate.close}</span>
+            <div class="popinWrap">
+              <h3 class="title">{$equipment.title}</h3>
+              <div class="owl-carousel">
+                {foreach $equipment.slides as $slide}
+                <div>
+                  <h4 class="subtitle">{$slide.subtitle}</h4>
+                  <figure class="item">
+                    <img data-src="{$slide.src}" class="owl-lazy" alt="{$slide.alt}" width="{$slide.width}" height="{$slide.height}">
+                  </figure>
+                  <p class="text left">{$slide.textLeft}</p>
+                  <p class="text right">{$slide.textRight}</p>
+                </div>
+                {/foreach}
+              </div>
+            </div>
+          </div>
+        {/foreach}
+        {/if}
+    </section>
+</section>

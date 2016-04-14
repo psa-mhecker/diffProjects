@@ -1,0 +1,13 @@
+{if isset($views)}
+	{foreach $views as $view}
+        {if isset($view.templatename)}
+            {include file="{$view.templatename}" slicePF53=$view.slice slicePF58=$view.slice}
+        {/if}
+	{/foreach}
+{/if}
+
+{if isset($comparatorTable)}
+  <!-- TABLEAU COMPARATIF -->
+  {include file="./comparatorTable.html.smarty"}
+  <!-- /TABLEAU COMPARATEUR -->
+{/if}

@@ -1,0 +1,355 @@
+.slice-cf43 {
+  color: $gray-citroen;
+  margin: 20px 0px;
+  .nb {
+    font-family: $font-family-base-bold, Arial;
+    font-size: 16px;
+    color: $gray-citroen;
+    line-height: 40px;
+    margin-right: 5px;
+    .kit-color {
+      font-size: 40px;
+      font-family: $font-family-base-regular, Arial;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .txt-teinte {
+      position: relative;
+      top: 8px;
+      display: inline-block;
+    }
+  }
+  .vignettes-toggle {
+    margin-bottom: 16px;
+    .vignette_bloc {
+      .elemnt_input:hover {
+        cursor: pointer;
+      }
+      .elemnt_input {
+        .label {
+          height: 45px;
+        }
+
+        .blockDiscount {
+          &.haveDiscount, &.haveRecommendation, &.isNew {
+            color: white;
+            font-size: 14px;
+            padding: 8px 0 0 15px;
+            text-align: left;
+            font-weight: bold;
+          }
+          &.haveDiscount {
+            background-color: $badge-promotion;
+          }
+          &.haveRecommendation {
+            background-color: $badge-recommandation;
+          }
+          &.isNew {
+            background-color: $bage-nouveaute;
+          }
+          height: 28px;
+          width: 100%;
+          position:absolute;
+          margin-left: -15px;
+          margin-top: -25px;
+        }
+        .blockAboveDiscount {
+          margin-top: 10px;
+          .input {
+            border: none;
+          }
+        }
+      }
+      .price_check.text{
+        height: 160px;
+        .check--gray {
+          display: inline-block;
+        }
+        span.includePriceText {
+          display: inline;
+          color: $gray-citroen-bold;
+          text-transform: none;
+          font-size: 14px;
+        }
+        p.includePriceTitle {
+          color: $gray-citroen-bold;
+          display: inline-block;
+          margin: 0 0 0 17px;
+        }
+        p.includeInPackContainer {
+          padding-top: 14px;
+          vertical-align: top;
+          font-family: $font-family-base-regular;
+          font-size: 12px;
+          height: auto;
+        }
+        .priceNormal {
+          margin-top: 14px;
+          position: relative;
+          .info--blue {
+            position: absolute;
+            top: 0;
+            right: -10px;
+          }
+          .priceGreyAfter {
+            font-size: 12px;
+            font-family: $font-family-base-regular;
+          }
+          .priceBlack {
+            font-weight: bold;
+            font-family: $font-family-base-bold;
+            font-size: 18px;
+            line-height: 1.2;
+            color: $gray-citroen-bold;
+          }
+        }
+        .descriptionRim {
+          display: table;
+          height: 100%;
+          padding-bottom: 35px;
+          div {
+            display: table-row;
+            span {
+              display: table-cell;
+              vertical-align: middle;
+            }
+          }
+          font-size: 12px;
+          font-family: $font-family-base-regular;
+          font-weight: normal;
+        }
+      }
+      .imgVignetteWithBorder {
+        border-left: 4px solid $gray-light;
+        border-right: 4px solid $gray-light;
+        border-top: none;
+        border-bottom: 2px solid $gray-light;
+      }
+      .cta {
+
+        .span_detail {
+          height: 55px;
+          line-height: 25px;
+          em {
+            display: inline-block;
+            line-height: normal;
+            vertical-align: middle;
+          }
+        }
+        .tit-expand {
+          margin-top: 23px;
+          right: 30px;
+        }
+      }
+    }
+  }
+  .list-vignette-toggle {
+    .cont-toggle {
+      .desc {
+        color: $gray-citroen-bold;
+        line-height: 16px;
+        margin-top: 14px;
+      }
+
+      .x-bloc_carroussel {
+        max-height: none;
+
+        .arrow {
+          margin-top: -37px;
+        }
+
+        .item-slide {
+          height: auto;
+          border: none;
+
+          figure {
+            * {
+              margin: 0;
+              padding: 0;
+              cursor: default;
+            }
+            width: 100%;
+            height: auto;
+            margin: 0 2px;
+            padding: 0;
+            position: relative;
+
+            img {
+              width: 100%;
+              height: 100%;
+              border: 2px solid $gray-light;
+            }
+            .oneEquipment {
+              display: none;
+              position: absolute;
+              right: 2px;
+              top: 2px;
+              width: 25px;
+              height: 20px;
+              background: url("../img/vignette/valid.png") no-repeat;
+              .input {
+                width: 25px;
+                height: 20px;
+                border: none;
+              }
+            }
+          }
+          .slide-text {
+            height: 40%;
+          }
+        }
+        li.on {
+          .oneEquipment {
+            display: block;
+
+          }
+        }
+        li > span {
+          display: block;
+          font-size: 12px;
+          text-align: left;
+          padding: 3px;
+          line-height: 1.5;
+        }
+      }
+      .detailsLeftSide {
+        padding-left: 0;
+      }
+      .detailsRightSideContainer {
+        height: auto !important;
+        .detailsRightSide {
+          position: absolute;
+          right: 15px;
+          top: 0;
+          height: 100%;
+          width: 33%;
+        }
+      }
+      .lastRowInToggle {
+        border-top: 3px solid $badge-promotion;
+        margin-top: 15px;
+        .sideLabel {
+          color: $badge-promotion;
+          font-size: 12px;
+          font-weight: bold;
+        }
+        .supplements {
+          margin-top: -15px;
+          font-size: 12px;
+          .price {
+            font-weight: bold;
+            font-family: $font-family-base-bold;
+            font-size: 18px;
+            line-height: 1.2;
+            color: $gray-citroen-bold;
+          }
+          .btn {
+            padding: 0;
+            width: 100%;
+            span {
+              padding: 10px;
+              width: 100%;
+              height: 100%;
+            }
+          }
+          .ctaRemoved {
+            display: none !important;
+          }
+          .buttonNormalSkinMobile {
+            background-color: $brand-orange;
+            color: white;
+            &:hover {
+              background-color: $brand-orange;
+              color: white;
+            }
+          }
+          .reverseButtonSkinMobile {
+            background-color: white !important;
+            border-color: $brand-orange !important;
+            color: $brand-orange !important;
+          }
+          .reverseButtonSkin {
+            background-color: white;
+            border-color: $brand-orange;
+            color: $brand-orange;
+
+            &:hover {
+              background-color: $brand-orange;
+              color: white;
+            }
+            &:focus, &:active {
+              background-color: white;
+              border-color: $brand-orange;
+              color: $brand-orange;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .more-choice {
+
+    .more-choice-head {
+      padding-left: 0;
+      color: $gray-citroen;
+      font-family: $font-family-base-regular;
+      font-size: 16px;
+
+      &.open {
+        .tit-expand {
+          margin-top: 5px;
+        }
+      }
+
+      .tit-expand {
+        margin-top: 20px;
+        right: 10px;
+      }
+    }
+  }
+
+
+
+  .notifications {
+    margin-top: 20px;
+    .not-text-1, .not-text-2 {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .not-text-bold {
+      font-family: $font-family-base-bold;
+    }
+    .info--orange {
+      top: 33%;
+    }
+  }
+  .mentions {
+    font-weight: normal !important;
+    margin-left: -30px;
+  }
+  .input.radio {
+    display: inline;
+  }
+  .cta, .more-choice-head {
+    .tit-expand {
+      position: absolute;
+      top: 0;
+      &:before {
+        content: '';
+        position: relative;
+        display: inline-block;
+        @extend %_sprites;
+        @extend %_sprite-chevron-toggle-opened;
+      }
+    }
+    &.open {
+      .tit-expand {
+        &:before {
+          @extend %_sprites;
+          @extend %_sprite-chevron-toggle-closed;
+        }
+      }
+    }
+  }
+}

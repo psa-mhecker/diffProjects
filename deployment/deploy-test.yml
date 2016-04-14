@@ -1,0 +1,72 @@
+--- 
+- 
+  hosts: "{{NODE_ENV|default(recette)}}"
+  remote_user: vagrant
+  vars: 
+    backend_app: backend
+    composer_path: /usr/local/bin/composer
+    frontend_app: frontend
+    http_port: 80
+    max_clients: 200
+    ssh_key_file: /home/vagrant/.ssh/id_rsa_itkg_recette
+    symfony2_project_branch: "{{GIT_BRANCH|default(develop)}}"
+    symfony2_project_composer_opts: "--optimize-autoloader --no-interaction"
+    symfony2_project_console_opts: ""
+    symfony2_project_env: "{{NODE_ENV|default(staging)}}"
+    symfony2_project_name: "Psa Peugeot NDP."
+    symfony2_project_release: "{{ansible_date_time.year}}{{ansible_date_time.month}}{{ansible_date_time.day}}{{ansible_date_time.hour}}{{ansible_date_time.minute}}{{ansible_date_time.second}}"
+    symfony2_project_repo: "git@github.com:itkg/psa-ndp.git"
+    symfony2_project_root: /var/www
+    frontend_var_path: /var/www/var/frontend
+    backend_var_path: /var/www/var/backend
+    export_http_media_env_var: "export SYMFONY__HTTP__MEDIA=http://recette-media.psa-ndp.com"
+    export_redis_connection: "export SYMFONY__REDIS__CONNECTION=tcp://127.0.0.1:6379"
+
+  tasks: 
+
+    - 
+      file: "state=directory path={{symfony2_project_root}}/releases/{{symfony2_project_release}}"
+      name: "Create the release {{symfony2_project_release}} directory."
+    - 
+      file: "state=directory path={{symfony2_project_root}}/shared"
+      name: "Create the shared directory."
+    - 
+      file: "state=directory path={{symfony2_project_root}}/shared/app/config"
+      name: "Create the shared/app/config directory."
+    - 
+      file: "state=directory path={{symfony2_project_root}}/shared/web/uploads"
+      name: "Create the shared/web/uploads directory."
+    - 
+      file: "state=directory path={{symfony2_project_root}}/shared/app/logs"
+      name: "Create the shared/app/logs directory."
+    - 
+      git: "repo={{symfony2_project_repo}} dest={{symfony2_project_root}}/releases/{{symfony2_project_release}} version={{symfony2_project_branch}} accept_hostkey=yes key_file={{ssh_key_file}}"
+      name: "Pull sources from the repository."
+    - 
+      file: "state=link src={{symfony2_project_root}}/shared/app/logs path={{symfony2_project_root}}/releases/{{symfony2_project_release}}/{{frontend_app}}/app/logs force=yes"
+      name: "Create app/logs"
+    - 
+      file: "state=link src={{symfony2_project_root}}/shared/backend/public/media/image path={{symfony2_project_root}}/releases/{{symfony2_project_release}}/{{backend_app}}/public/media/image force=yes"
+      name: "Symlink backend image"
+    -
+      file: "state=link src={{symfony2_project_root}}/shared/backend/public/media/video path={{symfony2_project_root}}/releases/{{symfony2_project_release}}/{{backend_app}}/public/media/video force=yes"
+      name: "Symlink backend video"
+    -
+      file: "state=link src={{symfony2_project_root}}/shared/backend/public/media/file path={{symfony2_project_root}}/releases/{{symfony2_project_release}}/{{backend_app}}/public/media/file force=yes"
+      name: "Symlink backend file"
+    -
+      name: "Flush redis cache"
+      redis: "command=flush flush_mode=all"
+    
+    -
+      name: "copy parameters file"
+      shell: "cp {{symfony2_project_root}}/releases/{{symfony2_project_release}}/{{frontend_app}}/app/config/parameters.yml.dist  {{symfony2_project_root}}/releases/{{symfony2_project_release}}/{{frontend_app}}/app/config/parameters.yml" 
+
+    - 
+      name: "Run composer install"
+      shell: "{{export_http_media_env_var}} && {{export_redis_connection}} && cd {{symfony2_project_root}}/releases/{{symfony2_project_release}} && {{composer_path}} install {{symfony2_project_composer_opts}}"
+      register: command_result
+
+    - name: Dump all MySQL databases to a single file
+      shell: "mysqldump -u psa-ndp -ppsa-ndp --routines psa-ndp > {{symfony2_project_root}}/backup-db/db_{{symfony2_project_release}}.sql"
+      sudo: yes       

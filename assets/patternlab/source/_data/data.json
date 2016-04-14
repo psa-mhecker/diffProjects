@@ -1,0 +1,836 @@
+{
+  "title": "Pattern Lab - NDP",
+  "htmlClass": "pl",
+  "bodyClass": "body",
+  "img": {
+    "landscape-4x3": {
+      "src": "../../images/fpo_4x3.png",
+      "alt": "4x3 Image",
+      "caption": "This is an example of an image with a caption. Photo captions, also known as cutlines, are a few lines of text used to explain or elaborate on published photographs."
+    },
+    "landscape-16x9": {
+      "src": "../../images/fpo_16x9.png",
+      "alt": "16x9 Image",
+      "caption": ""
+    },
+    "dragndrop-before-16x9": {
+      "src": "../../images/sample/landscape-16x9-dragndrop.jpg",
+      "alt": "16x9 Image",
+      "caption": ""
+    },
+    "dragndrop-16x9": {
+      "src": "../../images/sample/landscape-16x9-mountains.jpg",
+      "alt": "16x9 Image",
+      "caption": ""
+    },
+    "square": {
+      "src": "../../images/fpo_square.png",
+      "alt": "Square Thumbnail",
+      "caption": ""
+    },
+    "avatar": {
+      "src": "../../images/fpo_avatar.png",
+      "alt": "Person Name",
+      "caption": ""
+    },
+    "rectangle": {
+      "src": "../../images/sample/tech.jgeg",
+      "alt": "Rectangle",
+      "caption": ""
+    },
+    "srcset33pourcent": {
+      "src": "../../images/sample/dummy-427x330-Impala.jpg",
+      "alt": "plop",
+      "source01": {
+        "srcset": "../../images/sample/dummy-427x330-Impala.jpg",
+        "media": "(min-width: 40.001em)",
+        "densite": "1x"
+      },
+      "source02": {
+        "srcset": "../../images/sample/dummy-640x480-KingVulture.jpg",
+        "media": "(max-width: 40em)",
+        "densite": "1x"
+      }
+    },
+    "srcset66pourcent": {
+      "src": "../../images/sample/dummy-854x330-WhiteTiger.jpg",
+      "alt": "plop",
+      "source01": {
+        "srcset": "../../images/sample/dummy-854x330-WhiteTiger.jpg",
+        "media": "(min-width: 40.001em)",
+        "densite": "1x"
+      },
+      "source02": {
+        "srcset": "../../images/sample/dummy-640x480-Glass.jpg",
+        "media": "(max-width: 40em)",
+        "densite": "1x"
+      }
+    },
+    "srcset": {
+      "src": "../../images/sample/dummy-1280x720-Rope.jpg",
+      "alt": "plop",
+      "source01": {
+        "srcset": "../../images/sample/dummy-1280x720-Rope.jpg",
+        "media": "(min-width: 40.001em)",
+        "densite": "1x"
+      },
+      "source02": {
+        "srcset": "../../images/sample/dummy-640x480-Glass.jpg",
+        "media": "(max-width: 40em)",
+        "densite": "1x"
+      }
+    }
+
+  },
+  "headline": {
+    "short": "Lorem ipsum dolor sit (37 characters)",
+    "medium": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. (72 characters)"
+  },
+  "excerpt": {
+    "short": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+    "medium": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "long": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  },
+  "description": "So, setting about it as methodically as men might smoke out a wasps' nest, the Martians spread this strange stifling vapour over the Londonward country. The horns of the crescent slowly moved apart, until at last they formed a line from Hanwell to Coombe and Malden. All night through their destructive tubes advanced.",
+  "url": "#",
+  "name": {
+    "first": "Lacy",
+    "firsti": "L",
+    "middle": "Tommie",
+    "middlei": "T",
+    "last": "Way",
+    "lasti": "W"
+  },
+  "year": {
+    "long": "2013",
+    "short": "13"
+  },
+  "month": {
+    "long": "February",
+    "short": "Feb",
+    "digit": "02"
+  },
+  "dayofweek": {
+    "long": "Monday",
+    "short": "Mon"
+  },
+  "day": {
+    "long": "10",
+    "short": "10",
+    "ordinal": "th"
+  },
+  "hour": {
+    "long": "01",
+    "short": "1",
+    "military": "13",
+    "ampm": "pm"
+  },
+  "minute": {
+    "long": "20",
+    "short": "20"
+  },
+  "seconds": "31",
+  "author": {
+    "first-name": "Author",
+    "last-name": "Name"
+  },
+  "hero": true,
+  "emergency": false,
+  "btn-label": {
+    "contact": "Contactez-nous",
+    "valider": "Valider",
+    "mypeugeot": "MY PEUGEOT"
+  },
+  "twentytwenty-orientation": "",
+  "menu-link": [
+    {
+      "title": "Gamme",
+      "href": "#",
+      "target": "_blank",
+      "sub-menu": [
+        {
+          "close-layer": "Fermer",
+          "title-submenu": "Gamme",
+          "subsub-menu": [
+            {
+              "title": "Véhicules par catégories",
+              "href": "#",
+              "target": "_blank",
+              "subsubsub-menu": [
+                {"title": "Découvrir toute la gamme1","href": "#","target": "_blank"},
+                {"title": "Découvrir toute la gamme2","href": "#","target": "_blank"}
+              ]
+            },
+            {
+              "title": "Véhicules d'occasion",
+              "href": "#",
+              "target": "_blank",
+              "subsubsub-menu": [
+                {"title": "Offres de reprise et occasions","href": "#","target": "_blank"}
+              ],
+              "view-more": [{"title": "En savoir plus >","href": "#","target": "_blank"}]
+            },
+            {
+              "title": "Aide au choix",
+              "href": "#",
+              "target": "_blank",
+              "subsubsub-menu": [
+                {"title": "Trouver le modèle qui vous correspond","href": "#","target": "_blank"}
+              ]
+            },
+            {
+              "title": "Offre professionnels",
+              "href": "#",
+              "target": "_blank",
+              "subsubsub-menu": [
+                {"title": "Offres dédiées pour les professionnels","href": "#","target": "_blank"}
+              ]
+            },
+            {
+              "title": "Séries spéciales",
+              "href": "#",
+              "target": "_blank",
+              "subsubsub-menu": [
+                {"title": "Roand garros","href": "#","target": "_blank"},
+                {"title": "GT line","href": "#","target": "_blank"},
+                {"title": "Like","href": "#","target": "_blank"},
+                {"title": "XY","href": "#","target": "_blank"}
+              ],
+              "view-more": [{"title": "En savoir plus >","href": "#","target": "_blank"}]
+            },
+            {
+              "title": "Que souhaitez-vous faire ?",
+              "href": "#"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Concessions",
+      "href": "http://google.fr",
+      "target": "_blank"
+    },
+    {
+      "title": "Offres et financements",
+      "href": "#",
+      "sub-menu": [
+        {
+          "close-layer": "Fermer",
+          "title-submenu": "Offres et financements",
+          "subsub-menu": [
+            {
+              "title": "Nos offres du moment",
+              "href": "#",
+              "target": "_blank",
+              "subsubsub-menu": [
+                {"title": "Les offres Forfaits Entretien","href": "#","target": "_blank"},
+                {"title": "Les offres Pièces de recharge","href": "#","target": "_blank"},
+                {"title": "Les offres Accessoires","href": "#","target": "_blank"},
+                {"title": "Les offres de financement","href": "#","target": "_blank"},
+                {"title": "Les ffres B2B","href": "#","target": "_blank"}
+              ]
+            },
+            {
+              "title": "Que souhaitez-vous faire ?",
+              "href": "#",
+              "target": "_blank",
+              "subsubsub-menu": [
+                {"title": "Faites une simulation","href": "#","target": "_blank"},
+                {"title": "Découvrez nos offres du moment","href": "#","target": "_blank"},
+                {"title": "Demandez une offre commerciale","href": "#","target": "_blank"}
+              ]
+            },
+            {
+              "title": "Financement",
+              "href": "#",
+              "target": "_blank",
+              "subsubsub-menu": [
+                {"title": "Quelle solution choisir","href": "#","target": "_blank"},
+                {"title": "Découvrez les solutions de financement Peugeot","href": "#","target": "_blank"},
+                {"title": "Simulation de financement","href": "#","target": "_blank"},
+                {"title": "Nos packs tout compris","href": "#","target": "_blank"}
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Services et accessoires",
+      "href": "#",
+      "target": "_blank",
+      "sub-menu": [
+        {
+          "close-layer": "Fermer",
+          "title-submenu": "Services et accessoires",
+          "subsub-menu": [
+            {
+              "title": "LOREM IPSUM lorem ipsum lorem ipsum lorem ipsumlo",
+              "href": "#",
+              "target": "_blank",
+              "subsubsub-menu": [
+                {"title": "La garantie contractuelle Peugeot","href": "#","target": "_blank"},
+                {"title": "Peugeot Assistance","href": "#","target": "_blank"},
+                {"title": "Peugeot Assurance","href": "#","target": "_blank"}
+              ]
+            },
+            {
+              "title": "Se rendre en atelier",
+              "href": "#",
+              "target": "_blank",
+              "subsubsub-menu": [
+                {"title": "Prenez un rendez-vous après-vente","href": "#","target": "_blank"}
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Accessoires",
+          "href": "#",
+          "target": "_blank",
+          "subsubsub-menu": [
+            {"title": "Vidéos et brochures accessoires","href": "#","target": "_blank"}
+          ]
+        },
+        {
+          "title": "Contrats de services",
+          "href": "#",
+          "target": "_blank",
+          "subsubsub-menu": [
+            {"title": "Extension de garantie","href": "#","target": "_blank"},
+            {"title": "Maintenance","href": "#","target": "_blank"}
+          ]
+        },
+        {
+          "title": "Services connectés",
+          "href": "#",
+          "target": "_blank",
+          "subsubsub-menu": [
+            {"title": "Sécurité connectée","href": "#","target": "_blank"},
+            {"title": "Voiture connectée","href": "#","target": "_blank"},
+            {"title": "Divertissement à bord","href": "#","target": "_blank"}
+          ]
+        },
+        {
+          "title": "Conseils d'entretien",
+          "href": "#",
+          "target": "_blank",
+          "subsubsub-menu": [
+            {"title": "Accécer à votre espace personnel","href": "#","target": "_blank"}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Marques et technologie",
+      "href": "#",
+      "target": "_blank"
+    },
+    {
+      "title": "professionnels",
+      "href": "#",
+      "target": "_blank"
+    }
+  ],
+  "showroom-title-mobile" : "Découvrez la nouvelle 308 5 portes",
+  "showroom-menu":[
+    {
+      "title": "La nouvelle 308",
+      "href": "#",
+      "isActive" : true,
+      "isAncestor" : false,
+      "childs": []
+    },
+    {
+      "title": "Prix et finitions",
+      "href": "#",
+      "isActive" : false,
+      "isAncestor" : false,
+      "childs": [
+        {"title" : "Prix","url" : "#", "isActive": false},
+        {"title" : "Modèles","url" : "#", "isActive": false},
+        {"title" : "Finitions","url" : "#", "isActive": false}
+      ]
+    },
+    {
+      "title": "Design",
+      "href": "#",
+      "isActive" : false,
+      "isAncestor" : false,
+      "childs": []
+    },
+    {
+      "title": "Equip. services 308",
+      "href": "#",
+      "isActive" : false,
+      "isAncestor" : false,
+      "childs": []
+    }
+  ],
+  "infosTechnique" : {
+    "title":"NOUVELLE PEUGEOT 308 5 PORTES",
+    "prix":"18 600€",
+    "prixmois":"à partir de 1M€/mois",
+    "carburantG":"",
+    "carburantCo":"114g CO2 / km",
+    "carburantLitre":"12",
+    "carburantKm":"5L / 100 km",
+    "infotxt":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In egestas, orci non fermentum sagittis, nisi odio commodo elit",
+    "titre-accordion" : "En savoir plus sur les mentions légales de financement",
+    "accordion-content" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In egestas, orci non fermentum sagittis, nisi odio commodo elit, bibendum venenatis neque ligula nec arcu. Vestibulum vitae ipsum efficitur quam vestibulum imperdiet. Quisque id imperdiet sapien. Proin ex mauris, molestie ut ex vitae, cursus fermentum arcu. Morbi magna augue, ultrices vitae porta sit amet, malesuada at nulla. Pellentesque est mi, placerat at pretium in, lacinia non diam."
+  },
+  "video" : {
+    "media_id":"270e53b270b168d0",
+    "poster":"http://cdn.streamlike.com/secure/Covers/391/63527.jpg",
+    "width":"5",
+    "height":"8"
+  },
+  "timerSpeed" : "5000",
+    "slideshow" : [
+      {
+      "src" : "http://recette-media.staging.psa-ndp.interakting.org/image/66/4/peugeot-contrats-de-service-lifestyle-2015-01.6664.41.jpg",
+      "alt" : ""
+      },
+      {
+      "src" : "http://recette-media.staging.psa-ndp.interakting.org/image/63/6/peugeot-508-2015-02.6636.41.jpg",
+      "alt" : ""
+      },
+      {
+      "src" : "http://recette-media.staging.psa-ndp.interakting.org/image/63/8/peugeot-3008-2015-01.6638.41.jpg",
+      "alt" : ""
+      },
+      {
+      "src" : "http://recette-media.staging.psa-ndp.interakting.org/image/63/6/peugeot-508-2015-02.6636.41.jpg",
+      "alt" : ""
+      }
+    ],
+  "list-result": [
+    {
+      "dist": "2.2",
+      "unit": "km",
+      "name": "PEUGEOT NEUILLY SUR SEINE",
+      "type":"magasin",
+      "street":"131 AVENUE CHARLES DE GAULLE",
+      "city": "92200 NEUILLY",
+      "tel": "0141430250"
+    },
+    {
+      "dist": "2.2",
+      "unit": "km",
+      "name": "PEUGEOT NEUILLY SUR SEINE",
+      "type":"magasin",
+      "street":"131 AVENUE CHARLES DE GAULLE",
+      "city": "92200 NEUILLY",
+      "tel": "0141430250"
+    },
+    {
+      "dist": "2.2",
+      "unit": "km",
+      "name": "PEUGEOT NEUILLY SUR SEINE",
+      "type":"magasin",
+      "street":"131 AVENUE CHARLES DE GAULLE",
+      "city": "92200 NEUILLY",
+      "tel": "0141430250"
+    },
+    {
+      "dist": "2.2",
+      "unit": "km",
+      "name": "PEUGEOT NEUILLY SUR SEINE",
+      "type":"magasin",
+      "street":"131 AVENUE CHARLES DE GAULLE",
+      "city": "92200 NEUILLY",
+      "tel": "0141430250"
+    }
+  ],
+  "detailed-result" : {
+    "name": "PEUGEOT NEUILLY SUR SEINE",
+    "adress": {
+      "street": "131 avenue Charles de Gaulle",
+      "city": "92200 Neuilly"
+    },
+    "contact": {
+      "website": "http://google.fr",
+      "tel": "0141430250"
+    },
+    "schedules": "Lundi:07:30-19:00<br \/> Mardi:07:30-19:00<br \/> Mercredi:07:30-19:00<br \/> Jeudi:07:30-19:00<br \/> Vendredi:07:30-19:00<br \/> Samedi:09:00-18:30<br \/> Dimanche:Ferm\u00e9<br \/>"
+  },
+  "list-sitemap" : [
+    {
+      "title" : "OFFRES ET FINANCEMENT",
+      "category" : [
+        {
+          "title" : "OFFRES NATIONALES ET LOCALES",
+          "linky" : [
+            {
+              "title" : "Offres véhicules neufs",
+              "link" : "http://www.google.com"
+            },
+            {
+              "title" : "Offres véhicules Occasions",
+              "link" : "http://www.google.com"
+            },
+            {
+              "title" : "Services",
+              "link" : "http://www.google.com"
+            },
+            {
+              "title" : "Accessoires",
+              "link" : "http://www.google.com"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title" : "MARQUE ET TECHNOLOGIE",
+      "category" : [
+        {
+          "title" : "OFFRES NATIONALES ET LOCALES",
+          "linky" : [
+            {
+              "title" : "Offres véhicules neufs",
+              "link" : "http://www.google.com"
+            },
+            {
+              "title" : "Offres véhicules Occasions",
+              "link" : "http://www.google.com"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title" : "SERVICES ET ACCESSOIRES",
+      "category" : [
+        {
+          "title" : "OFFRES NATIONALES ET LOCALES",
+          "linky" : [
+            {
+              "title" : "Offres véhicules neufs",
+              "link" : "http://www.google.com"
+            },
+            {
+              "title" : "Offres véhicules Occasions",
+              "link" : "http://www.google.com"
+            },
+            {
+              "title" : "Services",
+              "link" : "http://www.google.com"
+            },
+            {
+              "title" : "Accessoires",
+              "link" : "http://www.google.com"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title" : "PROFESSIONNELS",
+      "category" : [
+        {
+          "title" : "OFFRES NATIONALES ET LOCALES",
+          "linky" : [
+            {
+              "title" : "Offres véhicules neufs",
+              "link" : "http://www.google.com"
+            },
+            {
+              "title" : "Offres véhicules Occasions",
+              "link" : "http://www.google.com"
+            },
+            {
+              "title" : "Services",
+              "link" : "http://www.google.com"
+            },
+            {
+              "title" : "Accessoires",
+              "link" : "http://www.google.com"
+            },
+            {
+              "title" : "Offres véhicules neufs",
+              "link" : "http://www.google.com"
+            },
+            {
+              "title" : "Offres véhicules Occasions",
+              "link" : "http://www.google.com"
+            },
+            {
+              "title" : "Services",
+              "link" : "http://www.google.com"
+            },
+            {
+              "title" : "Accessoires",
+              "link" : "http://www.google.com"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title" : "MY PEUGEOT",
+      "category" : [
+        {
+          "title" : "OFFRES NATIONALES ET LOCALES",
+          "linky" : [
+            {
+              "title" : "Offres véhicules neufs",
+              "link" : "http://www.google.com"
+            },
+            {
+              "title" : "Offres véhicules Occasions",
+              "link" : "http://www.google.com"
+            },
+            {
+              "title" : "Services",
+              "link" : "http://www.google.com"
+            },
+            {
+              "title" : "Accessoires",
+              "link" : "http://www.google.com"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title" : "LA GAMME",
+      "category" : [
+        {
+          "title" : "OFFRES NATIONALES ET LOCALES",
+          "linky" : [
+            {
+              "title" : "Offres véhicules neufs",
+              "link" : "http://www.google.com"
+            },
+            {
+              "title" : "Offres véhicules Occasions",
+              "link" : "http://www.google.com"
+            },
+            {
+              "title" : "Services",
+              "link" : "http://www.google.com"
+            },
+            {
+              "title" : "Accessoires",
+              "link" : "http://www.google.com"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "car-selector": [
+    {
+      "title": "108 3 PORTES",
+      "subtitle": "BERLINE",
+      "img": "http://placekitten.com/241/113",
+      "price": "10.350,00 €",
+      "type_car": true,
+      "cta-config": true
+    },
+    {
+      "title": "TITRE LONG SUR DEUX LIGNES",
+      "subtitle": "CITADINE",
+      "img": "http://placekitten.com/241/113",
+      "type_car": true,
+      "price": "10.350,00 €"
+    },
+    {
+      "title": "508 RXH",
+      "subtitle": "BERLINE",
+      "img": "http://placekitten.com/241/113",
+      "type_car": true,
+      "cta-config": true
+    },
+    {
+      "title": "108 5 PORTES",
+      "subtitle": "BERLINE",
+      "img": "",
+      "type_car": true,
+      "cta-config": true
+    },
+    {
+      "title": "508",
+      "img": "",
+      "type_car": true,
+      "price": "27.950,00 €"
+    },
+    {
+      "title": "108 5 PORTES",
+      "img": "",
+      "type_car": true,
+      "price": "10.350,00 €"
+    }
+  ],
+  "carousel-vignette": [
+    {
+      "title": "108 3 PORTES",
+      "subtitle": "BERLINE",
+      "price": "10.350,00 €",
+      "img": "http://placekitten.com/241/113",
+      "type_car": true,
+      "cta-config": true
+    },
+    {
+      "title": "TITRE LONG SUR DEUX LIGNES",
+      "subtitle": "CITADINE",
+      "img": "",
+      "type_car": true,
+      "price": "10.350,00 €"
+    },
+    {
+      "title": "508 RXH",
+      "subtitle": "BERLINE",
+      "img": "http://placekitten.com/241/113",
+      "type_car": true,
+      "cta-config": true
+    },
+    {
+      "title": "108 5 PORTES",
+      "subtitle": "BERLINE",
+      "img": "http://placekitten.com/241/113",
+      "type_car": true,
+      "cta-config": true
+    },
+    {
+      "title": "508",
+      "img": "http://placekitten.com/241/113",
+      "type_car": true,
+      "price": "27.950,00 €"
+    },
+    {
+      "title": "108 5 PORTES",
+      "img": "http://placekitten.com/241/113",
+      "type_car": true,
+      "price": "10.350,00 €"
+    },
+    {
+      "title": "108 5 PORTES",
+      "img": "http://placekitten.com/241/113",
+      "type_car": true,
+      "subtitle": "BERLINE"
+    }
+  ],
+  "masterPageBlocks": [
+    {
+      "title": "DÉCOUVREZ TOUS NOS VÉHICULES",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In egestas vehicula ligula. Quisque vel justo id purus pharetra condimentum. Nam et ante ac augue euismod dapibus eget ac risus. Sed cras amet."
+    },
+    {
+      "title": "TROUVEZ LE MODÈLE QUI VOUS CORRESPOND",
+      "description": "Avec le module d'aide au choix filtrez la gamme en fonction de vos critères."
+    },
+    {
+      "title": "TROUVEZ LE MODÈLE QUI VOUS CORRESPOND",
+      "description": "orem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus consequat eu velit fringilla sagittis. Aenean at posuere nulla. Vivamus tincidunt, dui rutrum mollis accumsan"
+    },
+    {
+      "title": "TOUS NOS VÉHICULES D'OCCASION",
+      "description": "Avec le module d'aide au choix filtrez la gamme en fonction de vos critères."
+    },
+    {
+      "title": "DÉCOUVREZ L'OFFRE PROFESSIONNELS",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+      "title": "DÉCOUVREZ L'OFFRE PROFESSIONNELS",
+      "description": "Mauris neque nisl, malesuada et nibh vehicula, posuere luctus mi."
+    }
+  ],
+  "services-filters": [
+    {
+      "title": "Forfait tout compris",
+      "class": "tout-compris"
+    },
+    {
+      "title": "Révisions",
+      "class": "revisions"
+    },
+    {
+      "title": "Contrôle technique",
+      "class": "ct"
+    },
+    {
+      "title": "Carrosserie",
+      "class": "carrosserie"
+    },
+    {
+      "title": "Vitrage",
+      "class": "vitrage"
+    },
+    {
+      "title": "Autres prestations",
+      "class": "autres"
+    }
+  ],
+  "services-selector": [
+    {
+      "title": "FORFAIT SUSPENSION AMORTISSEUR",
+      "img": "http://placekitten.com/241/113",
+      "price": "50€",
+      "type_service": true,
+      "filters": ["ct", "autres"]
+    },
+    {
+      "title": "FORFAIT BATTERIE",
+      "img": "http://placekitten.com/241/113",
+      "price": "50€",
+      "type_service": true,
+      "filters": ["ct", "revisions"]
+    },
+    {
+      "title": "FORFAIT ESSUIE GLACES",
+      "img": "http://placekitten.com/241/113",
+      "price": "50€",
+      "type_service": true,
+      "filters": ["ct", "autres"]
+    },
+    {
+      "title": "FORFAIT VIDANGE",
+      "img": "http://placekitten.com/241/113",
+      "price": "50€",
+      "type_service": true,
+      "filters": ["tout-compris", "revisions"]
+    },
+    {
+      "title": "FORFAIT BOUGIES",
+      "img": "http://placekitten.com/241/113",
+      "price": "50€",
+      "type_service": true,
+      "filters": ["ct", "autres"]
+    },
+    {
+      "title": "FORFAIT PNEUMATIQUES",
+      "img": "http://placekitten.com/241/113",
+      "price": "50€",
+      "type_service": true,
+      "filters": ["autres"]
+    }
+  ],
+  "mosaic-usp": [
+    {
+      "title": "Design sport affirmé",
+      "img": "../../images/sample/landscape-16x9-mountains.jpg",
+      "id": 1
+    },
+    {
+      "title": "Performances dynamiques",
+      "img": "http://placekitten.com/640/355",
+      "block-after": "block-1",
+      "id": 2
+    },
+    {
+      "title": "Expérience de conduite exacerbée",
+      "img": "http://placekitten.com/640/355",
+      "id": 2
+    },
+    {
+      "title": "Qualité",
+      "img": "../../images/sample/landscape-16x9-mountains.jpg",
+      "block-after": "block-2",
+      "id": 1
+    }
+  ]
+}

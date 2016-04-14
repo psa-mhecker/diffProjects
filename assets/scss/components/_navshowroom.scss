@@ -1,0 +1,215 @@
+@charset 'UTF-8';
+
+// scss-lint:disable all
+// A REACTIVER APRES REFACTO DES COULEURS
+$background-nav-showroom: $secondary-color-dark !default;
+$background-nav-showroom-mobile: $secondary-color-dark-ultra !default;
+$border-nav-showroom: $secondary-color-dark-ultra !default;
+$nav-showroom-link-active: $primary-color-dark !default;
+$nav-showroom-link: $dark-blue-7-color !default;
+$border-link-active: $primary-color !default;
+$nav-showroom-link-hover: $primary-color-dark !default;
+// scss-lint:enable all
+
+.nav-showroom {
+
+	.nav-showroom-link {
+		display: inline-block;
+		width: 100%;
+	}
+
+	.nav-showroom-sublist {
+		display: none;
+	}
+
+	//desktop
+	@media #{$medium-up} {
+
+		position: relative;
+		background: $background-nav-showroom;
+
+		.nav-showroom-list {
+			text-align: center;
+			font-size: 0;
+		}
+
+		.nav-showroom-item {
+			display: inline-block;
+			border-left: 1px solid $nav-showroom-link-active;
+			padding: 0;
+			height: 40px;
+			line-height: rem-calc(12);
+
+			&:first-child {
+				border-left: 0;
+			}
+		}
+
+		.nav-showroom-item-ancestor {
+			margin-bottom: 38px;
+		}
+
+		.nav-showroom-link {
+			border-top: 3px solid transparent;
+			padding: 0 10px;
+			line-height: rem-calc(37);
+			color: $white;
+
+			&.nav-showroom-link-ancestor,
+			&.nav-showroom-link-active {
+				@include font-family('bold');
+				border-top: 3px solid $border-link-active;
+				background: $white;
+				color: $nav-showroom-link-active;
+				font-weight: bold;
+			}
+		}
+
+		.nav-showroom-sublist {
+			position: absolute;
+			top: 40px;
+			left: 0;
+			margin: 0;
+			background-color: $white;
+			width: 100%;
+		}
+
+		.nav-showroom-item-active {
+			.nav-showroom-sublist {
+				display: inline-block;
+			}
+
+			.nav-showroom-subtitle {
+				padding-top: 0;
+			}
+		}
+
+		.nav-showroom-subitem {
+			border: 0;
+		}
+
+		.nav-showroom-sublink {
+			color: $font-purple-grey;
+
+			&.nav-showroom-sublink-active {
+				@include font-family('bold');
+				color: $nav-showroom-link-active;
+				font-weight: bold;
+			}
+
+			&:hover {
+				color: $nav-showroom-link-hover;
+			}
+		}
+
+		.nav-showroom-subtitle {
+			display: inline-block;
+			vertical-align: middle;
+			line-height: rem-calc(12);
+			font-size: rem-calc(12);
+
+			> pre {
+				white-space: pre-line;
+				font-family: inherit;
+			}
+
+		}
+
+		[class*="block-grid-"] {
+			margin: 0;
+		}
+
+	}
+
+	//mobile
+	@media #{$small-only} {
+
+		.nav-showroom-head {
+			position: relative;
+			margin-bottom: 0;
+			background-color: $background-nav-showroom;
+			padding: 14px 30px 14px 20px;
+			width: 100%;
+			text-align: left;
+			line-height: rem-calc(32);
+			color: $white;
+		}
+
+		.nav-showroom-title {
+			@include font-family('bold');
+			display: inline-block;
+			vertical-align: middle;
+			line-height: rem-calc(24);
+			font-size: rem-calc(24);
+			font-weight: bold;
+		}
+
+		.toggle-icon {
+			position: absolute;
+			top: 50%;
+			right: 10px;
+			transform: translate(0, -50%);
+		}
+
+		.toggle-icon-expand {
+			@include sprite($accordion-plus-white);
+		}
+
+		.toggle-icon-shrink {
+			@include sprite($accordion-minus-white);
+		}
+
+		.nav-showroom-list {
+			display: none;
+			margin-bottom: 0;
+		}
+
+		.nav-showroom-item {
+			border-top: 1px solid $border-nav-showroom;
+			padding: 0;
+
+			&.nav-showroom-subitem {
+				border-top-color: $background-nav-showroom;
+			}
+		}
+
+		.nav-showroom-link {
+			position: relative;
+			background: $background-nav-showroom;
+			padding: 20px 10px 20px 20px;
+			line-height: rem-calc(16);
+			font-size: rem-calc(16);
+
+			&.nav-showroom-sublink {
+				background: $background-nav-showroom-mobile;
+				padding-left: 40px;
+			}
+
+			&.nav-showroom-link-active,
+			&.nav-showroom-sublink-active {
+				@include font-family('bold');
+				font-weight: bold;
+			}
+
+		}
+
+		.nav-showroom-subtitle {
+			display: inline-block;
+			padding-right: 20px;
+			//NOTE : overriding inline style used in smarty for mobile only
+			color: $white !important;
+
+			> pre {
+				white-space: normal;
+				font-family: inherit;
+			}
+
+		}
+
+		[class*="block-grid-"] {
+			margin: 0;
+		}
+
+	}
+
+}

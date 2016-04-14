@@ -1,0 +1,163 @@
+.slice-cc90 {
+  .expands .vignettes-toggle .vignette_bloc .input-checkbox {
+    background: #ededed;
+    border: 5px solid #ededed;
+    margin: 0;
+    padding: 20px 10px;
+    min-height: 115px;
+  }
+  .expands .vignettes-toggle .vignette_bloc.selected .input-checkbox {
+    background: #fff;
+    border: 5px solid #f27800;
+  }
+  .vignettes-toggle {
+    margin-bottom: 16px;
+    .vignette_bloc {
+      .elemnt_input:hover {
+        cursor: default;
+        background: #e7e6ed;
+        border: 5px solid #e7e6ed;
+      }
+    }
+  }
+  .input-checkbox {
+    background: #fff;
+    border: 5px solid #f27800;
+    .badge {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+    &:hover {
+      cursor: default;
+    }
+  }
+  h2 {
+    font-family: $font_ubuntu-bold;
+    font-size: 20px;
+    color: $grey-6;
+    margin: 20px 0;
+  }
+  .ancre {
+    height: 80px;
+    position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 40px;
+    font-family: $font_ubuntu-bold;
+    ul {
+      padding-left: 0;
+      list-style: none;
+      background-color: #fff;
+      .more.right:before {
+        right: 0;
+        background-image: linear-gradient(to left, white, rgba(255, 255, 255, 0));
+      }
+      .more:before,
+      .ancre ul.more:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 80px;
+        cursor: pointer;
+      }
+    }
+    li {
+      display: inline-block;
+      margin-right: 20px;
+      border-bottom: 3px solid transparent;
+    }
+  }
+  .list-vignette-toggle .cont-toggle {
+    .x-bloc_carroussel .item-slide {
+      height: 170px;
+      border: none;
+      &.on {
+        .oneEquipment {
+          display: none;
+        }
+      }
+      figure {
+        height: auto;
+        .oneEquipment {
+          &.on {
+            display: block;
+          }
+          &.onSelected {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  .btn.btn-continued,
+  .cta.btn-continued {
+    font-size: 12px;
+    width: 100%;
+    padding: 3px 0 3px 16px;
+    .remove {
+      display: none;
+    }
+  }
+  .btn-continued.add {
+    background-color: white;
+    color: $brand-orange;
+    border-color: $brand-orange;
+    span:first-child {
+      display: none;
+    }
+    .remove {
+      display: block;
+    }
+  }
+  .mentions {
+    padding: 20px;
+    margin: 0;
+    background-color: #f0f0f0;
+  }
+  .expands .vignettes-toggle .vignette_bloc .price_check.text {
+    p {
+      height: auto;
+      max-width: 80%;
+      display: inline-block;
+    }
+    span.info.info--blue {
+      position: absolute;
+      right: 10px;
+      top: 15px;
+    }
+  }
+  .detailsLeftSide .price_check.text {
+    margin-top: 10px;
+    p {
+      display: inline-block;
+      width: 80%;
+      margin: 0;
+    }
+    span {
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 10px;
+      @extend %_sprites;
+      @extend %_sprite-check-gray;
+    }
+  }
+  .included {
+    font-size: 14px;
+  }
+  .input-checkbox input[type="checkbox"] ~ label .checkbox_btn {
+    margin-top: -6px;
+  }
+  .input-checkbox label .label,
+  .input-radio label .label {
+    width: 60%;
+    text-align: left;
+    text-transform: none;
+    font-size: 18px;
+    line-height: 16px;
+    font-family: $font-family-brand-bold;
+  }
+}

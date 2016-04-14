@@ -1,0 +1,68 @@
+domains:
+  NDP_Staging: "http://psandp:psandp@recette-fr.staging.psa-ndp.interakting.org"
+  NDP_DEMO:    "http://psandp:psandp@recette-fr.psa-ndp.interakting.org"
+
+paths:
+  home-navigation:
+    path:  /fr/accueil.html
+    selector: '#navigation'
+  home-pc12:
+    path:  /fr/accueil.html
+    selector: '.slice-pc12'
+  home-pt2:
+    path:  /fr/accueil.html
+    selector: '.slice-pt2'
+  concessions-body:
+    path:  /fr/concessions.html
+    selector: '.body'
+  concessions-header:
+    path:  /fr/concessions.html
+    selector: '.header'
+  concessions-nav:
+    path:  /fr/concessions.html
+    selector: '.nav'
+  concessions-navigation:
+    path:  /fr/concessions.html
+    selector: '#navigation'
+  concessions-pn7:
+    path:  /fr/concessions.html
+    selector: '.slice-pn7'
+  concessions-pt2:
+    path:  /fr/concessions.html
+    selector: '.slice-pt2'
+  offres-et-financements-isDesktop:
+    path:  /fr/offres-et-financements.html
+    selector: '.isDesktop'
+  services-sprint-1-isDesktop:
+    path:  /fr/services-sprint-1/services-sprint-1-pc5.html
+    selec tor: '.isDesktop'
+  marque-et-technologie_isDesktop:
+    path:  /fr/marque-et-technologie.html
+    selector: '.isDesktop'
+  professionnels_isDesktop:
+    path:  /fr/professionnels.html
+    selector: '.isDesktop'
+  liens_Utiles_niveau-2.0.:
+    path:  /fr/navigation-niveau-1/niveau-2.0.html
+    selector: '.isDesktop'
+
+fuzz: '20%'
+
+threshold: 5
+
+screen_widths:
+  - 1024
+
+resize_or_reload: 'resize'
+
+
+browser: "casperjs"
+
+
+directory: 'report'
+
+gallery:
+  thumb_width: 200
+  thumb_height: 200
+
+mode: alphanumeric

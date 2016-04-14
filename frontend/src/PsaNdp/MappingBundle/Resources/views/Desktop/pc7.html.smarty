@@ -1,0 +1,32 @@
+<section class="slice-pc7 {if !empty($slicePC7.anchorId)} {$slicePC7.anchorId} {/if}" {if !empty($slicePC7.anchorId)} id="{$slicePC7.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePC7' } ]" datalayer="{$slicePC7.datalayer}">
+    {if !empty($slicePC7.title)}
+        <h2>{$slicePC7.title}</h2>
+    {/if}
+
+    {if !empty($slicePC7.columns)}
+        <div class="row medium-collapse small-uncollapse">
+            {foreach $slicePC7.columns as $item}
+            <article class="medium-6 columns">
+                {if !empty($item.media)}
+                <figure>
+                    {include file='../Components/images.html.smarty' image=$item.media}
+                </figure>
+                {/if}
+                <div class="{if $item@index == 0}panel-no-padding-left{else}panel-no-padding-right{/if} text-container">
+                    {if !empty($slicePC7.title)}
+                        <h3 class="text-left">{$item.title}</h3>
+                    {else}
+                        <h2 class="text-left article-title">{$item.title}</h2>
+                    {/if}
+                    {$item.text}
+                    <div class="inline-cta">
+                        {foreach $item.ctaList as $cta}
+                            {include file="../Components/cta.html.smarty" gtm="{ldelim}\"eventType\":\"click\",\"dataList\":{ldelim}\"event\":\"uaevent\",\"eventCategory\":\"{$slicePC7.blockName}::position-{$slicePC7.blockOrder}\",\"eventAction\":\"Redirection\",\"eventLabel\":\"{$cta.title|escape:html}\"{rdelim}{rdelim}"}
+                        {/foreach}
+                    </div>
+                </div>
+            </article>
+            {/foreach}
+        </div>
+    {/if}
+</section>

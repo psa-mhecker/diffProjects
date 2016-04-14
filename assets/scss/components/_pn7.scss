@@ -1,0 +1,65 @@
+@charset 'UTF-8';
+// pn7.scss
+.slice-pn7 {
+	figure {
+		position: relative;
+
+		.infos {
+			position: absolute;
+			top: 20%;
+			right: rem-calc(40);
+			border: 0;
+			background-color: rgba(20, 32, 50, .5);
+			width: rem-calc(340);
+
+			p {
+				color: $white;
+			}
+
+			&.white {
+				background-color: rgba(255, 255, 255, .5);
+
+				p {
+					color: $font-purple-grey;
+				}
+			}
+
+		}
+	}
+
+	.custom-button-group {
+		.custom-button {
+			border: 0;
+
+			&:first-child {
+				background: $primary-color-dark;
+			}
+		}
+
+		.cta + .cta {
+			margin-top: 10px;
+		}
+	}
+
+	@media (max-width: rem-calc(800)) {
+		// portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android)
+		.media {
+			.infos {
+				p {
+					font-size: .8rem;
+				}
+			}
+		}
+	}
+}
+
+.isMobile {
+	.slice-pn7 {
+		height: auto;
+
+		h1 {
+			margin: 15px 0;
+			text-align: center;
+		}
+	}
+}

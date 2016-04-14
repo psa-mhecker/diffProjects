@@ -1,0 +1,21 @@
+<section class="slice-pc23 slice-full-size {if isset($slicePC23.anchorId)} {$slicePC23.anchorId} {/if}" {if isset($slicePC23.anchorId)} id="{$slicePC23.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePC23' } ]" datalayer="{$slicePC23.datalayer}">
+    {if $slicePC23.title || $slicePC23.subtitle}
+        <div class="row">
+            {if $slicePC23.title}
+                <h2>{$slicePC23.title}</h2>
+            {/if}
+
+            {if $slicePC23.subtitle}
+                <h3 class="text-center">{$slicePC23.subtitle}</h3>
+            {/if}
+
+        </div>
+    {/if}
+
+    <div class="popin-links">
+    {assign var=popinIndex value=0}
+    {foreach from=$slicePC23.structures item=structure}
+        {include file=$structure.file structure=$structure}
+    {/foreach}
+    </div>
+</section>

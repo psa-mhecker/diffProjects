@@ -1,0 +1,34 @@
+<section class="slice-pt15 {if isset($SlicePT15.anchorId)} {$SlicePT15.anchorId} {/if}" {if isset($SlicePT15.anchorId)} id="{$SlicePT15.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePT15' } ]" datalayer="{$SlicePT15.datalayer}">
+    <div class="row">
+        {foreach $SlicePT15.siteMap as $section}
+        <div class="small-12 medium-4 columns">
+            {foreach $section.rub as $rub}
+                <h2 class="title-list"><a href="{$rub.url}" {if isset($rub.target)}target="{$rub.target}"{/if}>{$rub.title}</a></h2>
+                {if $rub.child}
+                    <ul class="bullet-list">
+                        {foreach $rub.child as $child}
+                            <p><a href="{$child.url}"  {if isset($child.target)}target="{$child.target}"{/if}>{$child.title}</a></p>
+                            {if $child.child}
+                                {foreach $child.child as $grandChildren}
+                                    <li>
+                                        <a href="{$grandChildren.url}" {if isset($grandChildren.target)}target="{$grandChildren.target}"{/if}>{$grandChildren.title}</a>
+                                        {if $grandChildren.child}
+                                            <ul class="bullet-list">
+                                                {foreach $grandChildren.child as $grandGrandChild}
+                                                    <li>
+                                                        <a href="{$grandGrandChild.url}" {if isset($grandGrandChild.target)}target="{$grandGrandChild.target}"{/if}>{$grandGrandChild.title}</a>
+                                                    </li>
+                                                {/foreach}
+                                            </ul>
+                                        {/if}
+                                    </li>
+                                {/foreach}
+                            {/if}
+                        {/foreach}
+                    </ul>
+                {/if}
+            {/foreach}
+        </div>
+        {/foreach}
+    </div>
+</section>

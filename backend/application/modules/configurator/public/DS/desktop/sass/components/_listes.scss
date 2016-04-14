@@ -1,0 +1,46 @@
+.listes {
+  color: $warm-black;
+  margin-top: 15px;
+  padding: 0 15px;
+  font-size: $font-size-small;
+  font-family: $font-family-base-regular;
+  list-style: none;
+  .ico--check {
+    position: relative;
+    &:before {
+      top: 6px;
+      left: -14px;
+      position: absolute !important;
+    }
+  }
+}
+.ico--square {
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 7px;
+    list-style-position: outside;
+    letter-spacing: 1px;
+    padding: 0 4px 0 0;
+    width: 4px;
+    left: -14px;
+    height: 4px;
+    @include rotate(-45deg);
+    background: $brand-plum-grey-puce;
+  }
+}
+
+.popin-liste-offset{
+	left: 50%;
+	position: absolute;
+	margin-left:-118px;
+}
+
+.popin-cta-offset{
+	margin-top: 100px;
+}
+
+.popin-not-bold{
+	font-weight:normal;
+}

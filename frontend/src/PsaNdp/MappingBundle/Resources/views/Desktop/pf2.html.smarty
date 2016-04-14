@@ -1,0 +1,103 @@
+{assign var="gtmCategory" value="{$slicePF2.blockName}::position-{$slicePF2.blockOrder}"}
+<section class="slice-pf2 slice-full-size no-margin-top {if isset($slicePF2.anchorId)} {$slicePF2.anchorId}" id="{$slicePF2.anchorId} {/if}"
+         data-jsobj="[ { 'obj':'slicePF2'} ]" datalayer="{$slicePF2.datalayer}">
+
+  <div class="row collapse showroom-presentation row-slideshow">
+    <div class="small-12 large-12 columns">
+      {if !empty($slicePF2.video) }
+        {include file='../Components/videoplayer.html.smarty' gtmCategory="{$slicePF2.blockName}::position-{$slicePF2.blockOrder}" video=$slicePF2.video}
+        {assign var="imageitemprop" value="{$slicePF2.video.poster}"}
+      {else}
+        {if $slicePF2.slideItems|@count == 1}
+          {include file='../Components/images.html.smarty' image=$slicePF2.slideItems[0] lazy=false}
+        {else}
+            <div class="js-slick-carousel-container slick-container" data-options='{ldelim}"dots":"false"{if empty($slicePF2.timerSpeed)}, "autoplay":"false"{/if}{rdelim}'>
+              {include file='../Components/slideshowslick.html.smarty' slideshow=$slicePF2.slideItems timerSpeed=$slicePF2.timerSpeed gtmCategory={$gtmCategory}}
+              <div class="js-slick-carousel-to-sync">
+                <div class="js-block-video-to-hide" data-slick-to-sync="0">
+        {/if}
+        {assign var="imageitemprop" value="{$slicePF2.slideItems[0].size.desktop}"}
+      {/if}
+
+      {*content type lancement commercial*}
+      {if $slicePF2->isFull() }
+
+        {if (!empty($slicePF2.infosTechnique) || isset($slicePF2.infosTechnique.ctaList) ) }
+           <div class=" {if !empty($slicePF2.infosTechnique.ctaList) && count($slicePF2.infosTechnique) ==1 } cta-only {/if}description-panel js-block-video-to-hide {$slicePF2->getPosition()}-position active" itemscope itemtype="http://schema.org/Product">
+
+            {if !empty($imageitemprop)}
+              <meta itemprop="image" content="{$imageitemprop}" />
+            {/if}
+
+            {if !empty($slicePF2.infosTechnique.model) && !empty($slicePF2.infosTechnique.silhouette)}
+              <meta itemprop="name" content="{$slicePF2.infosTechnique.model} {$slicePF2.infosTechnique.silhouette}" />
+            {/if}
+
+            {if !empty($slicePF2.infosTechnique.title)}
+              <h2>{$slicePF2.infosTechnique.title}</h2>
+            {/if}
+
+            <div class="technical-infos">
+
+              {if !empty($slicePF2.infosTechnique.prix)}
+                <p class="price-zone" itemprop="description">
+                  {$slicePF2.infosTechnique.prix}
+                </p>
+              {/if}
+              {if isset($slicePF2.infosTechnique.prixmois)}
+                <p class="price-zone">
+                  <span itemprop="description">{$slicePF2.infosTechnique.prixmois}</span>
+                  <span class="has-tip infobulle vcenter">i</span>
+                </p>
+              {/if}
+              {if isset($slicePF2.infosTechnique.carburantLitre)}
+                <p>
+                  {$slicePF2.infosTechnique.carburantG} {$slicePF2.infosTechnique.carburantCo}<br/>
+                  {$slicePF2.infosTechnique.carburantLitre} / {$slicePF2.infosTechnique.carburantKm}
+                  <span class="has-tip infobulle vcenter">i</span>
+                </p>
+              {/if}
+              {if isset($slicePF2.infosTechnique.ctaList)}
+                <div class="text-center">
+                  {foreach $slicePF2.infosTechnique.ctaList as $cta}
+                      {include file="../Components/cta.html.smarty" gtm="{ldelim}\"eventType\":\"click\",\"dataList\":{ldelim}\"event\":\"uaevent\",\"eventCategory\":\"{$slicePF2.blockName}::position-{$slicePF2.blockOrder}\",\"eventAction\":\"Redirection\",\"eventLabel\":\"{$cta.title|escape:html}\"{rdelim}{rdelim}"}
+                  {/foreach}
+                </div>
+              {/if}
+            </div>
+            {if isset($slicePF2.infosTechnique.infotxt)}
+              <p class="legal-notice">
+                {$slicePF2.infosTechnique.infotxt}
+              </p>
+            {/if}
+          </div>
+        {/if}
+      {else} {* showroom light ou reveal *}
+        {* content type carreaux *}
+        {if !empty($slicePF2.infos)}
+          <div class="description-panel js-block-video-to-hide {$slicePF2->getPosition()}-position active">
+
+            {if !empty($slicePF2.infos.title)}
+              <h2>{$slicePF2.infos.title}</h2>
+            {/if}
+            {if !empty($slicePF2.infos.date)}
+              <p class="reveal-date" id="counter-1">{$slicePF2.infos.date}</p>
+            {/if}
+            {if !empty($slicePF2.infos.subtitle)}
+              <h3>{$slicePF2.infos.subtitle}</h3>
+            {/if}
+          </div>
+          {* fin bloc infostechnique *}
+        {/if}
+      {/if}
+
+      {* in case of slideshow we must close it *}
+      {if $slicePF2.slideItems|@count > 1}
+            </div>
+          </div>
+        </div>
+      {/if}
+
+    </div>
+  </div>
+</section>

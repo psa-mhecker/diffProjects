@@ -1,0 +1,461 @@
+.slice-cc88 {
+  margin: 40px 0 20px 0;
+
+  .ancreTitle {
+    color: $gray-citroen;
+    font-family: $font_ubuntu-bold;
+    margin-top: -6px;
+  }
+  .ancre {
+    color: $gray-citroen;
+    font-family: $font_ubuntu-bold;
+    margin-bottom: 40px;
+  }
+
+  .categorieTitle {
+    color: $gray-citroen;
+    font-size: 20px;
+    font-family: $font-family-base-bold;
+  }
+
+  .lame {
+    margin-left: 0;
+    margin-right: 24px;
+    margin-top: 50px;
+
+    &.selected {
+      .lameContent {
+        .media {
+          .lameContentPlus {
+            li {
+              display: block;
+              position: relative;
+              list-style-type: none;
+              margin-bottom: 13px;
+              padding-left: 17px;
+              &:before {
+                position: absolute;
+                left: 0;
+                top: 0;
+                background-color: white;
+              }
+
+              @extend .check;
+              @extend .check--gray;
+
+            }
+          }
+        }
+      }
+    }
+
+
+    .lameContent {
+      margin-bottom: -14px;
+
+      .media {
+        .lameContentPlus {
+          font-size: 13px;
+          padding-right: 30px;
+
+          li {
+            display: block;
+            position: relative;
+            list-style-type: none;
+            margin-bottom: 13px;
+            padding-left: 17px;
+
+            &:before {
+              content: "";
+              position: absolute;
+              top: 5px;
+              list-style-position: outside;
+              letter-spacing: 1px;
+              padding: 0 4px 0 0;
+              width: 4px;
+              left: 0;
+              height: 4px;
+              border-radius: 100%;
+              background: $brand-lavender-grey;
+            }
+          }
+        }
+        .pictures {
+          width:234px;
+
+          li {
+            padding: 0;
+            img {
+              padding: 4px;
+            }
+          }
+          li:nth-of-type(1) {
+            img {
+              padding-left: 0;
+            }
+          }
+          li:nth-of-type(2) {
+            img {
+              padding-left: 2px;
+              padding-right: 2px;
+            }
+          }
+          li:nth-of-type(3) {
+            img {
+              padding-right: 0;
+            }
+          }
+        }
+      }
+      aside {
+        .selections {
+          .input-text {
+            margin-bottom: 8px;
+          }
+          .input-text--checked {
+            width: 100%;
+            margin-bottom: 8px;
+          }
+        }
+        .price {
+          position: relative;
+          .price-startFrom {
+            font-size: 11px;
+            color: $gray-citroen;
+            width: 100%;
+            display: inline-block;
+          }
+          .price-supplement {
+            font-size: 11px;
+            display: inline-block;
+            width: 100%;
+          }
+          .price-supplement2 {
+            font-size: 11px;
+            display: inline-block;
+          }
+          .price-info {
+            position: absolute !important;
+            right: 14px !important;
+            top: 8px !important;
+          }
+        }
+      }
+      .expands {
+        .lames-toggle {
+          .lame_bloc {
+            position: inherit;
+
+            .cta-details {
+              border: none;
+              margin-bottom: 0;
+              margin-left: 9px;
+              padding-right: 19px;
+              .span_detail {
+                margin-top: 22px;
+                padding: 25px 20px;
+                margin-left: -22px;
+                margin-right: -14px;
+                &:before {
+                  display: none;
+                }
+              }
+              .tit-expand {
+                position: absolute;
+                top: 25px;
+                right: 45px;
+                &:before {
+                  content: '';
+                  position: relative;
+                  display: inline-block;
+                  @extend %_sprites;
+                  @extend %_sprite-chevron-toggle-opened;
+                }
+              }
+              &.open {
+                .tit-expand {
+                  &:before {
+                    @extend %_sprites;
+                    @extend %_sprite-chevron-toggle-closed;
+                  }
+                }
+              }
+            }
+          }
+          .list-vignette-toggle {
+            .container-toggle {
+              padding: 0;
+              .cont-toggle {
+                padding: 0 14px 14px 14px;
+                margin-top: -1px;
+                margin-bottom: -5px;
+                border: none;
+                .detailsLeftSide {
+                  .detailsTitleDesc {
+                    color: $gray-citroen;
+                    line-height: 13px;
+                    vertical-align: middle;
+                    display: table-cell;
+                    padding: 14px 0;
+                  }
+                  .x-bloc_carroussel {
+                    margin: 14px;
+                  }
+                }
+
+                .detailsRightSideContainer {
+                  background: none;
+                  .detailsRightSide {
+                    height: 100%;
+                    background: $gray-lighter;
+                    padding: 3px 15px 0px;
+
+                    .sideTitle {
+                      margin: 20px 0 7px 0;
+                      padding-top: 13px;
+                      font-size: 24px;
+                      color: $gray-citroen-bold;
+                      font-family: $font_citroen-bold;
+                    }
+                    .sidePrice {
+                      margin-top: 28px;
+                      .priceGreyAPartir {
+                        font-size: 11px;
+                        font-family: $font_ubuntu-regular;
+                        margin-bottom: 7px;
+                        color: $gray-citroen;
+                      }
+                      .priceBlack {
+                        font-weight: bold;
+                        font-family: $font_ubuntu-bold;
+                        font-size: 18px;
+                        line-height: 1.2;
+                        color: $gray-citroen-bold;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .expandsForThumbnailDisplay {
+    .vignettes-toggle {
+      .rowVignettesToggle {
+        margin-bottom: 6px;
+      }
+      .vignette_bloc {
+        .elemnt_input {
+          padding: 20px 10px;
+          min-height: 115px;
+          margin: 0;
+
+          .label {
+            padding-left: 3px;
+          }
+          .input.checkbox {
+            display: inline;
+            border: none;
+          }
+          .badge {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+          }
+          .blockDiscount {
+            &.haveDiscount {
+              color: white;
+              font-size: 14px;
+              padding: 8px 0 0 15px;
+              text-align: left;
+              font-weight: bold;
+            }
+            height: 28px;
+            width: 100%;
+            position:absolute;
+            margin-left: -15px;
+            margin-top: -25px;
+          }
+          .blockAboveDiscount {
+            margin-top: 10px;
+            .input {
+              border: none;
+            }
+          }
+        }
+        .price_check {
+          font-family: $font_ubuntu-bold;
+          font-size: 18px;
+          line-height: 1.2;
+          color: $gray-citroen-bold;
+          height: 70px;
+          min-height: 0;
+          padding: 14px;
+
+          p {
+            height: auto !important;
+          }
+          .check--gray {
+            display: inline-block;
+          }
+          .includePriceText {
+            display: inline;
+            color: black;
+            text-transform: none;
+            font-size: 10px;
+            font-weight: bold;
+          }
+          .includePriceTitle {
+            color: black;
+            display: inline-block;
+            margin: 0 0 0 17px;
+          }
+          .includeInPackContainer {
+            vertical-align: top;
+            font-family: $font-family-base-regular;
+            font-size: 12px;
+          }
+          .priceNormal {
+            margin-top: 3px;
+            position: relative;
+            .info--blue {
+              position: absolute;
+              top: -3px;
+              right: 0;
+            }
+            .priceBlack {
+              font-weight: bold;
+              font-family: $font-family-base-bold;
+              font-size: 18px;
+              line-height: 1.2;
+              color: $gray-citroen-bold;
+              margin-top: 5px;
+            }
+          }
+          .descriptionRim {
+            display: table-cell;
+            span {
+              display: block;
+              vertical-align: middle;
+            }
+            font-size: 12px;
+            font-family: $font-family-base-regular;
+            font-weight: normal;
+          }
+        }
+        .imgVignetteWithBorder {
+          border-left: 4px solid $grey_25_color;
+          border-right: 4px solid $grey_25_color;
+          border-top: none;
+          border-bottom: 2px solid $grey_25_color;
+        }
+        .cta-details {
+          .tit-toggle {
+            margin-top: 32px;
+            &:before {
+              margin-top: -8px;
+            }
+          }
+        }
+      }
+    }
+    .cont-toggle {
+      &:before {
+        background-color: white;
+      }
+
+      margin: 4px 0 10px 0;
+
+      .desc {
+        color: $gray-citroen;
+        line-height: 13px;
+        vertical-align: middle;
+        display: table-cell;
+        height: 90px;
+      }
+
+      .detailsLeftSide {
+        padding-left: 0;
+        .detailsTitleDesc {
+          font-size: 15px;
+          color: $gray-citroen-bold;
+        }
+
+        .x-bloc_carroussel {
+          max-height: none;
+          margin-left: 35px;
+          width: 82%;
+
+          .arrow {
+            margin-top: -5px;
+            margin-right: -14px;
+            margin-left: -14px;
+          }
+
+          .item-slide {
+            height: auto;
+            * {
+              margin: 0;
+              padding: 0;
+            }
+            width: 100%;
+            margin: 0 2px;
+            padding: 0;
+            position: relative;
+
+            img {
+              width: 100%;
+              height: 100%;
+              border: 2px solid $grey_25_color;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+      .detailsRightSideContainer {
+        height: auto !important;
+
+        .detailsRightSide {
+          position: absolute;
+          right: 15px;
+          top: 0;
+          height: 100%;
+          width: 33%;
+          background: $gray-lighter;
+          padding: 3px 15px 0px;
+
+          .sideTitle {
+            margin: 20px 0 7px 0;
+            padding-top: 13px;
+            font-size: 24px;
+            color: $gray-citroen-bold;
+            font-family: $font_citroen-bold;
+          }
+          .sidePrice {
+            margin-top: 28px;
+            .priceGreyAPartir {
+              font-size: 11px;
+              font-family: $font_ubuntu-regular;
+              margin-bottom: 7px;
+            }
+            .priceBlack {
+              font-weight: bold;
+              font-family: $font_ubuntu-bold;
+              font-size: 18px;
+              line-height: 1.2;
+              color: $gray-citroen-bold;
+            }
+          }
+        }
+      }
+    }
+  }
+  .mentions {
+    padding-left: 30px;
+    color: $gray-citroen;
+  }
+}

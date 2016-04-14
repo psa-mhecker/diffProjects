@@ -1,0 +1,54 @@
+<div class="row">
+    <div class="type-search small-8 large-8 columns">
+        <fieldset class="grid-group check row">
+            <div class="small-12 large-6 columns">
+                <label class="filters">
+                    <div class="row">
+                        <input type="radio"
+                               id="type_byCode"
+                               name="type_search"
+                               value="city"
+                               data-placeholder="">
+                        <span class="radio small-1 large-1 columns checked"></span>
+                        Par ville ou code postal
+                    </div>
+                </label>
+            </div>
+            <div class="small-12 large-6 columns">
+                <label class="filters">
+                    <div class="row">
+                        <input type="radio"
+                               id="type_byDealer"
+                               name="type_search"
+                               value="dealer"
+                               data-placeholder="placeholder 2">
+                        <span class="radio small-1 large-1 columns"></span>
+                        Par nom de point de vente
+                    </div>
+                </label>
+            </div>
+        </fieldset>
+    </div>
+</div>
+<form action="" id="form_dealers_filters">
+    <div class="filter">
+        <span class="filter-by">Trier par</span>
+        <div class="list-filter">
+            <label for="filter" class="filters filter-check">
+                <input type="checkbox" class="filter" id="filter" name="filters"
+                       value="">
+                <span class="btn-radio"></span>
+                <span class="name"></span>
+            </label>
+            <div class="more-filter">
+                <div class="list-filter-more">
+                    {{> atoms-checkbox-locator-filter }}
+                </div>
+            </div>
+        </div>
+        <span class="btn-more-filter">
+            <span class="open-more-filter">moreFilter</span>
+            <span class="close-more-filter">moreFilterClose</span>
+        </span>
+    </div>
+</form>

@@ -1,0 +1,154 @@
+{
+    "motorOpt" : [
+        {
+            "value":"DDSQD",
+            "label":"PureTech 82"
+        },
+        {
+            "value":"DSQDQ",
+            "label":"PureTech 82 S&S"
+        }
+    ],
+    "pictureUrl" : "../../../img/comparatorTable/exemple_01.jpg",
+    "prices" : {
+        "cash"   : "20 000€ TTC",
+        "monthly": "300 €/mois TTC",
+        "firstMonth" : "300€ TTC",
+        "legals":"Et mors nobilis punico vatis et Perseus memoratur a sospitales et urbs Tarsus quae dolorum varietati mors Anazarbus consumpsit cespite aureo memoratur certe delatumque ad sospitales et Anazarbus eo dolorum."
+    },
+    "urlConfig" : "http://configurer.citroen.fr/DS3/Berline-3-Portes-Decouvrable?_ga=1.96981855.179403614.1437987722",
+    "expands" : {
+        "datas" : [
+        {"url":"../../../img/lames/voiture_modele.png","title":"Feel","value":"1CB1B4"},
+        0,0
+    ]},
+    "comparatorTable":[
+        {
+            "labelToggle" : "sécurité",
+            "list" : [
+                {   
+                    "title" : "Baguettes latérales chromées",
+                    "tab" : ["standard","",""]
+                }
+            ]
+
+        },      
+        {
+            "labelToggle" : "confort",
+            "list" : [
+                {   
+                    "title" : "2e clé plip HF",
+                    "popinLink" : "../../sections/cg96/html_default-default-popin.html",
+                    "tab" : ["Option","",""]
+                },
+                {   
+                    "title" : "Climatisation",
+                    "tab" : ["Option","",""]
+                },
+                {   
+                    "title" : "Lève-vitres avant électriques",
+                    "tab" : ["standard","",""]
+                },
+                {   
+                    "title" : "Ordinateur de bord",
+                    "tab" : ["standard","",""]
+                },
+                {   
+                    "title" : "Rétroviseurs électriques",
+                    "tab" : ["Option","",""]
+                },
+                {   
+                    "title" : "Siège conducteur réglable en hauteur",
+                    "tab" : ["Option","",""]
+                }
+            ]
+        },      
+        {
+            "labelToggle" : "esthétique",
+            "list" : [
+                {   
+                    "title" : "Enjoliveurs 16\" AIRFLOW",
+                    "tab" : ["standard","",""]
+                },
+                {   
+                    "title" : "Jantes alliage 16\" ASHERA diamantées Blanche",
+                    "tab" : ["Option","",""]
+                },
+                {   
+                    "title" : "Lève-vitres avant électriques",
+                    "tab" : ["standard","",""]
+                },
+                {   
+                    "title" : "Ordinateur de bord",
+                    "tab" : ["standard","",""]
+                },
+                {   
+                    "title" : "Rétroviseurs électriques",
+                    "tab" : ["Option","",""]
+                },
+                {   
+                    "title" : "Siège conducteur réglable en hauteur",
+                    "tab" : ["standard","",""]
+                }
+            ]
+        },      
+        {
+            "labelToggle" : "esthétique",
+            "list" : [
+                {   
+                    "title" : "Décor Noir Brillant",
+                    "tab" : ["Option","",""]
+                },
+                {   
+                    "title" : "Décor Vert Emeraude",
+                    "tab" : ["standard","",""]
+                }
+            ]
+        },
+        {
+            "labelToggle" : "jantes et pleumatiques",
+            "list" : [
+                {   
+                    "title" : "Baguettes latérales chromées",
+                    "tab" : ["standard","",""]
+                }
+            ]
+        },  
+        {
+            "labelToggle" : "esthétique",
+            "list" : [
+                {   
+                    "title" : "Baguettes latérales chromées",
+                    "tab" : ["standard","",""]
+                }
+            ]
+        },      
+        {
+            "labelToggle" : "audio et communication",
+            "list" : [
+                {   
+                    "title" : "Baguettes latérales chromées",
+                    "tab" : ["standard","",""]
+                }
+            ]
+        },          
+        {
+            "labelToggle" : "vitres et portes",
+            "list" : [
+                {   
+                    "title" : "Baguettes latérales chromées",
+                    "tab" : ["standard","",""]
+                }
+            ]
+        },              
+        {
+            "labelToggle" : "moteur",
+            "list" : [
+                {   
+                    "title" : "Baguettes latérales chromées",
+                    "tab" : ["standard","",""]
+                }
+            ]
+        }
+    ]
+}

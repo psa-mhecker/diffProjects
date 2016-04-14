@@ -1,0 +1,16 @@
+<section class="slice-pf32 {if isset($slicePF32.anchorId)} {$slicePF32.anchorId} {/if}" {if isset($slicePF32.anchorId)} id="{$slicePF32.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePF32' } ]" data-html="{$slicePF32.urlJson}">
+	<div class="services-selector row">
+		<h2>{$slicePF32.title}</h2>
+		<div class="filters row hide-for-small-only">
+			{foreach $slicePF32.filter as $filter}
+				<div class="medium-4 columns">
+					<input id="filter-{$filter.id}" class="filter-checkbox show-for-sr" type="checkbox" name="{$filter.id}">
+					<label for="filter-{$filter.id}">{$filter.title}</label>
+				</div>
+			{/foreach}
+		</div>
+		{foreach $slicePF32.services as $item}
+			{include file="../Components/vignette.html.smarty"}
+		{/foreach}
+	</div>
+</section>

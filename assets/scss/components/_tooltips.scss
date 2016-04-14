@@ -1,0 +1,48 @@
+@charset 'UTF-8';
+// tooltips.scss
+$has-tip-border-bottom: dotted 0 $iron;
+$has-tip-cursor-type: pointer;
+$has-tip-font-color: $grey-9-color;
+$has-tip-font-color-hover: $primary-color;
+
+$tooltip-bg: $grey-9-color;
+$tooltip-font-color: $grey-1-color;
+$tooltip-font-size: 80%;
+
+.has-tip {
+	display: inline-block;
+	margin: 0 5px;
+	border-bottom: $has-tip-border-bottom;
+	background: $tooltip-bg;
+	cursor: $has-tip-cursor-type;
+	padding: 1px 9px;
+	color: $primary-color;
+
+	&:hover,
+	&:focus {
+		border-bottom: $has-tip-border-bottom;
+		color: $mid-blue-3-color;
+	}
+
+}
+
+.tooltip:not(.wf_tooltip) {
+	background: $tooltip-bg;
+	white-space: pre-wrap;
+	color: $tooltip-font-color;
+
+	> .nub {
+		top: -(($tooltip-pip-size * 3) + 1);
+		border: solid ($tooltip-pip-size + 3);
+		border-color: transparent transparent $tooltip-bg transparent;
+	}
+}
+
+@media #{$small} {
+	.tooltip:not(.wf_tooltip) {
+		> .nub {
+			top: -(($tooltip-pip-size * 3) + 1);
+			border-color: transparent transparent $tooltip-bg transparent;
+		}
+	}
+}

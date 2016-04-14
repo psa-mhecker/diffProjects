@@ -1,0 +1,69 @@
+/**
+ie specific
+*/
+/* line 7, ../../web/src/sass/_sprites.scss */
+.ie8 .checkbox-list span, .ie8 .checkbox span, .ie7 .checkbox-list span, .ie7 .checkbox span {
+  background-image: url("../img/sprites/sprites@1.png?330260");
+  background-repeat: no-repeat;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2) {
+  /* line 7, ../../web/src/sass/_sprites.scss */
+  .ie8 .checkbox-list span, .ie8 .checkbox span, .ie7 .checkbox-list span, .ie7 .checkbox span {
+    background-size: 165px 130px;
+    background-image: url("../img/sprites/sprites@2.png?330260");
+  }
+}
+
+/* line 2, ../../web/src/sass/ie/common/_forms.scss */
+.ie8 .checkbox-list span, .ie8 .checkbox span, .ie7 .checkbox-list span, .ie7 .checkbox span {
+  content: '';
+}
+
+/* line 9, ../../web/src/sass/ie/common/_forms.scss */
+.ie8 .checkbox-list input, .ie8 .checkbox input, .ie7 .checkbox-list input, .ie7 .checkbox input {
+  visibility: visible;
+}
+/* line 12, ../../web/src/sass/ie/common/_forms.scss */
+.ie8 .checkbox-list li, .ie8 .checkbox li, .ie7 .checkbox-list li, .ie7 .checkbox li {
+  position: relative;
+}
+/* line 16, ../../web/src/sass/ie/common/_forms.scss */
+.ie8 .checkbox-list label:before, .ie8 .checkbox label:before, .ie7 .checkbox-list label:before, .ie7 .checkbox label:before {
+  background: none;
+}
+/* line 19, ../../web/src/sass/ie/common/_forms.scss */
+.ie8 .checkbox-list label.checked:before, .ie8 .checkbox label.checked:before, .ie7 .checkbox-list label.checked:before, .ie7 .checkbox label.checked:before {
+  background: none;
+}
+/* line 22, ../../web/src/sass/ie/common/_forms.scss */
+.ie8 .checkbox-list label span, .ie8 .checkbox label span, .ie7 .checkbox-list label span, .ie7 .checkbox label span {
+  position: absolute;
+  z-index: 1;
+  display: block;
+  top: 0;
+  left: 0;
+}
+
+/* line 39, ../../web/src/sass/ie/common/_forms.scss */
+.ie8 .radio-list li, .ie7 .radio-list li {
+  position: relative;
+}
+/* line 43, ../../web/src/sass/ie/common/_forms.scss */
+.ie8 .radio-list label:before, .ie8 .radio-list label:after, .ie8 .radio-list label.checked:before, .ie8 .radio-list label.checked:after, .ie7 .radio-list label:before, .ie7 .radio-list label:after, .ie7 .radio-list label.checked:before, .ie7 .radio-list label.checked:after {
+  display: none;
+}
+/* line 49, ../../web/src/sass/ie/common/_forms.scss */
+.ie8 .radio-list label span, .ie7 .radio-list label span {
+  background: url(/assets/imgs/ie/radio-bg.gif) 0 0 no-repeat;
+  position: absolute;
+  z-index: 1;
+  display: block;
+  top: 5px;
+  left: 0;
+  width: 22px;
+  height: 22px;
+}
+/* line 61, ../../web/src/sass/ie/common/_forms.scss */
+.ie8 .radio-list label.checked span, .ie8 .radio-list label:hover span, .ie7 .radio-list label.checked span, .ie7 .radio-list label:hover span {
+  background-position: 0 -22px;
+}

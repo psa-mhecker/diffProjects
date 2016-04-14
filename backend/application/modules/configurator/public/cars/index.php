@@ -1,0 +1,197 @@
+<?php
+header ("Content-Type:text/xml");
+echo '<?xml version="1.0" encoding="UTF-8"?>
+<CarPicker>
+  <Model>
+    <Type><![CDATA[VP]]></Type>
+    <Bodies>
+      <Body>
+        <LCDV><![CDATA[1CB1A3GRC5B0A020]]></LCDV>
+        <LCDVCustom><![CDATA[1CB1A3]]></LCDVCustom>
+        <isGrouping>true</isGrouping>
+        <ThumbnailURL><![CDATA[http://visuel3d.citroen.com/V3DImage.ashx?client=websimulator&ratio=1&format=png&view=001&version=1CB1A3GRC5B0A020&width=300&height=186]]></ThumbnailURL>
+        <Price>
+          <Display><![CDATA[1379028.8 €]]></Display>
+          <Value>1379028.8</Value>
+        </Price>
+        <GrBodyCode><![CDATA[00000001]]></GrBodyCode>
+        <BodyCode><![CDATA[A3]]></BodyCode>
+        <ModelCode><![CDATA[1CB1]]></ModelCode>
+      </Body>
+      <Body>
+        <LCDV><![CDATA[1CB1A3KKQ5B0A020]]></LCDV>
+        <LCDVCustom><![CDATA[1CB1A3]]></LCDVCustom>
+        <isGrouping>true</isGrouping>
+        <ThumbnailURL><![CDATA[http://visuel3d.citroen.com/V3DImage.ashx?client=websimulator&ratio=1&format=png&view=001&version=1CB1A3KKQ5B0A020&width=300&height=186]]></ThumbnailURL>
+        <Price>
+          <Display><![CDATA[1592169.26 €]]></Display>
+          <Value>1592169.26</Value>
+        </Price>
+        <GrBodyCode><![CDATA[00000001]]></GrBodyCode>
+        <BodyCode><![CDATA[A3]]></BodyCode>
+        <ModelCode><![CDATA[1CB1]]></ModelCode>
+      </Body>
+      <Body>
+        <LCDV><![CDATA[1CB1A5GRC5B0A020]]></LCDV>
+        <LCDVCustom><![CDATA[1CB1A5]]></LCDVCustom>
+        <isGrouping>true</isGrouping>
+        <ThumbnailURL><![CDATA[http://visuel3d.citroen.com/V3DImage.ashx?client=websimulator&ratio=1&format=png&view=001&version=1CB1A5GRC5B0A020&width=300&height=186]]></ThumbnailURL>
+        <Price>
+          <Display><![CDATA[1420282.54 €]]></Display>
+          <Value>1420282.54</Value>
+        </Price>
+        <GrBodyCode><![CDATA[00000002]]></GrBodyCode>
+        <BodyCode><![CDATA[A5]]></BodyCode>
+        <ModelCode><![CDATA[1CB1]]></ModelCode>
+      </Body>
+      <Body>
+        <LCDV><![CDATA[1CB1A5KKQ5B0A020]]></LCDV>
+        <LCDVCustom><![CDATA[1CB1A5]]></LCDVCustom>
+        <isGrouping>true</isGrouping>
+        <ThumbnailURL><![CDATA[http://visuel3d.citroen.com/V3DImage.ashx?client=websimulator&ratio=1&format=png&view=001&version=1CB1A5KKQ5B0A020&width=300&height=186]]></ThumbnailURL>
+        <Price>
+          <Display><![CDATA[1633421.35 €]]></Display>
+          <Value>1633421.35</Value>
+        </Price>
+        <GrBodyCode><![CDATA[00000002]]></GrBodyCode>
+        <BodyCode><![CDATA[A5]]></BodyCode>
+        <ModelCode><![CDATA[1CB1]]></ModelCode>
+      </Body>
+      <Body>
+        <LCDV><![CDATA[1CB1A5KRCPB0A020]]></LCDV>
+        <LCDVCustom><![CDATA[1CB1A5]]></LCDVCustom>
+        <isGrouping>true</isGrouping>
+        <ThumbnailURL><![CDATA[http://visuel3d.citroen.com/V3DImage.ashx?client=websimulator&ratio=1&format=png&view=001&version=1CB1A5KRCPB0A020&width=300&height=186]]></ThumbnailURL>
+        <Price>
+          <Display><![CDATA[1729677.31 €]]></Display>
+          <Value>1729677.31</Value>
+        </Price>
+        <GrBodyCode><![CDATA[00000002]]></GrBodyCode>
+        <BodyCode><![CDATA[A5]]></BodyCode>
+        <ModelCode><![CDATA[1CB1]]></ModelCode>
+      </Body>
+      <Body>
+        <LCDV><![CDATA[1CB1A5NKQ5B0A020]]></LCDV>
+        <LCDVCustom><![CDATA[1CB1A5]]></LCDVCustom>
+        <isGrouping>true</isGrouping>
+        <ThumbnailURL><![CDATA[http://visuel3d.citroen.com/V3DImage.ashx?client=websimulator&ratio=1&format=png&view=001&version=1CB1A5NKQ5B0A020&width=300&height=186]]></ThumbnailURL>
+        <Price>
+          <Display><![CDATA[1777806.12 €]]></Display>
+          <Value>1777806.12</Value>
+        </Price>
+        <GrBodyCode><![CDATA[00000002]]></GrBodyCode>
+        <BodyCode><![CDATA[A5]]></BodyCode>
+        <ModelCode><![CDATA[1CB1]]></ModelCode>
+      </Body>
+      <Body>
+        <LCDV><![CDATA[1CB1B3NKQ5B0A020]]></LCDV>
+        <LCDVCustom><![CDATA[1CB1B3]]></LCDVCustom>
+        <isGrouping>true</isGrouping>
+        <ThumbnailURL><![CDATA[http://visuel3d.citroen.com/V3DImage.ashx?client=websimulator&ratio=1&format=png&view=001&version=1CB1B3NKQ5B0A020&width=300&height=186]]></ThumbnailURL>
+        <Price>
+          <Display><![CDATA[1874062.09 €]]></Display>
+          <Value>1874062.09</Value>
+        </Price>
+        <GrBodyCode><![CDATA[00000019]]></GrBodyCode>
+        <BodyCode><![CDATA[B3]]></BodyCode>
+        <ModelCode><![CDATA[1CB1]]></ModelCode>
+      </Body>
+      <Body>
+        <LCDV><![CDATA[1CB1B5KRCPB0T320]]></LCDV>
+        <LCDVCustom><![CDATA[1CB1B5]]></LCDVCustom>
+        <isGrouping>true</isGrouping>
+        <ThumbnailURL><![CDATA[http://visuel3d.citroen.com/V3DImage.ashx?client=websimulator&ratio=1&format=png&view=001&version=1CB1B5KRCPB0T320&width=300&height=186]]></ThumbnailURL>
+        <Price>
+          <Display><![CDATA[1887813.89 €]]></Display>
+          <Value>1887813.89</Value>
+        </Price>
+        <GrBodyCode><![CDATA[00000020]]></GrBodyCode>
+        <BodyCode><![CDATA[B5]]></BodyCode>
+        <ModelCode><![CDATA[1CB1]]></ModelCode>
+      </Body>
+      <Body>
+        <LCDV><![CDATA[1CB1B5NKQ5B0A020]]></LCDV>
+        <LCDVCustom><![CDATA[1CB1B5]]></LCDVCustom>
+        <isGrouping>true</isGrouping>
+        <ThumbnailURL><![CDATA[http://visuel3d.citroen.com/V3DImage.ashx?client=websimulator&ratio=1&format=png&view=001&version=1CB1B5NKQ5B0A020&width=300&height=186]]></ThumbnailURL>
+        <Price>
+          <Display><![CDATA[1915314.17 €]]></Display>
+          <Value>1915314.17</Value>
+        </Price>
+        <GrBodyCode><![CDATA[00000020]]></GrBodyCode>
+        <BodyCode><![CDATA[B5]]></BodyCode>
+        <ModelCode><![CDATA[1CB1]]></ModelCode>
+      </Body>
+    </Bodies>
+  </Model>
+  <Model>
+    <Type><![CDATA[VP]]></Type>
+    <Bodies>
+      <Body>
+        <LCDV><![CDATA[1CXAA5NKEJ049X60]]></LCDV>
+        <LCDVCustom><![CDATA[1CXAA5]]></LCDVCustom>
+        <isGrouping>true</isGrouping>
+        <ThumbnailURL><![CDATA[http://visuel3d.citroen.com/V3DImage.ashx?client=websimulator&ratio=1&format=png&view=001&version=1CXAA5NKEJ049X60&width=300&height=186]]></ThumbnailURL>
+        <Price>
+          <Display><![CDATA[2528915.79 €]]></Display>
+          <Value>2528915.79</Value>
+        </Price>
+        <GrBodyCode><![CDATA[00000002]]></GrBodyCode>
+        <BodyCode><![CDATA[A5]]></BodyCode>
+        <ModelCode><![CDATA[1CXA]]></ModelCode>
+      </Body>
+      <Body>
+        <LCDV><![CDATA[1CXAA5NCQJ049X60]]></LCDV>
+        <LCDVCustom><![CDATA[1CXAA5]]></LCDVCustom>
+        <isGrouping>true</isGrouping>
+        <ThumbnailURL><![CDATA[http://visuel3d.citroen.com/V3DImage.ashx?client=websimulator&ratio=1&format=png&view=001&version=1CXAA5NCQJ049X60&width=300&height=186]]></ThumbnailURL>
+        <Price>
+          <Display><![CDATA[2480786.97 €]]></Display>
+          <Value>2480786.97</Value>
+        </Price>
+        <GrBodyCode><![CDATA[00000002]]></GrBodyCode>
+        <BodyCode><![CDATA[A5]]></BodyCode>
+        <ModelCode><![CDATA[1CXA]]></ModelCode>
+      </Body>
+      <Body>
+        <LCDV><![CDATA[1CXAA5EKR504UC60]]></LCDV>
+        <LCDVCustom><![CDATA[1CXAA5]]></LCDVCustom>
+        <isGrouping>true</isGrouping>
+        <ThumbnailURL><![CDATA[http://visuel3d.citroen.com/V3DImage.ashx?client=websimulator&ratio=1&format=png&view=001&version=1CXAA5EKR504UC60&width=300&height=186]]></ThumbnailURL>
+        <Price>
+          <Display><![CDATA[1861995.78 €]]></Display>
+          <Value>1861995.78</Value>
+        </Price>
+        <GrBodyCode><![CDATA[00000002]]></GrBodyCode>
+        <BodyCode><![CDATA[A5]]></BodyCode>
+        <ModelCode><![CDATA[1CXA]]></ModelCode>
+      </Body>
+      <Body>
+        <LCDV><![CDATA[1CXAA5HKR504JY60]]></LCDV>
+        <LCDVCustom><![CDATA[1CXAA5]]></LCDVCustom>
+        <isGrouping>true</isGrouping>
+        <ThumbnailURL><![CDATA[http://visuel3d.citroen.com/V3DImage.ashx?client=websimulator&ratio=1&format=png&view=001&version=1CXAA5HKR504JY60&width=300&height=186]]></ThumbnailURL>
+        <Price>
+          <Display><![CDATA[1978878.61 €]]></Display>
+          <Value>1978878.61</Value>
+        </Price>
+        <GrBodyCode><![CDATA[00000002]]></GrBodyCode>
+        <BodyCode><![CDATA[A5]]></BodyCode>
+        <ModelCode><![CDATA[1CXA]]></ModelCode>
+      </Body>
+      <Body>
+        <LCDV><![CDATA[1CXAA5EKM504UC60]]></LCDV>
+        <LCDVCustom><![CDATA[1CXAA5]]></LCDVCustom>
+        <isGrouping>true</isGrouping>
+        <ThumbnailURL><![CDATA[http://visuel3d.citroen.com/V3DImage.ashx?client=websimulator&ratio=1&format=png&view=001&version=1CXAA5EKM504UC60&width=300&height=186]]></ThumbnailURL>
+        <Price>
+          <Display><![CDATA[2143890.27 €]]></Display>
+          <Value>2143890.27</Value>
+        </Price>
+        <GrBodyCode><![CDATA[00000002]]></GrBodyCode>
+        <BodyCode><![CDATA[A5]]></BodyCode>
+        <ModelCode><![CDATA[1CXA]]></ModelCode>
+      </Body>
+    </Bodies>
+  </Model>
+</CarPicker>';

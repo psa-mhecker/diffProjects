@@ -1,0 +1,40 @@
+{assign var="gtmCategory" value="{$slicePC77.blockName}::position-{$slicePC77.blockOrder}"}
+<section class="slice-pc77 {$slicePC77.sectionClass} {if isset($slicePC77.anchorId)} {$slicePC77.anchorId} {/if}" {if isset($slicePC77.anchorId)} id="{$slicePC77.anchorId}" {/if}  datalayer="{$slicePC77.datalayer}">
+    {if !empty($slicePC77.title)}<h2>{$slicePC77.title}</h2>{/if}
+    {if !empty($slicePC77.subtitle)}<h3>{$slicePC77.subtitle}</h3>{/if}
+
+    {assign var="idSlide" value='PC77'}
+    <div class="row collapse  row-slideshow js-custom-thumbnail-container">
+        {if $slicePC77.slideshow|@count > 1}
+        <div class="medium-12 large-10 columns">
+            <div class="js-slick-carousel-container" data-options='{ldelim}"dots":"false", "autoplay":"false", "prevArrow":"", "nextArrow":""{rdelim}' data-custom-thumbnail='true'>
+              {include file='../Components/slideshowslick.html.smarty' slideshow=$slicePC77.slideshow timerSpeed=$slicePC77.timerSpeed gtmCategory={$gtmCategory}}
+                <div class="js-slick-carousel-to-sync">
+                    {foreach $slicePC77.slideshow as $slide}
+                        <div class="size-element" data-slick-to-sync="{$slide@index}"><p>{$slide.subtitle}</p></div>
+                    {/foreach}
+                </div>
+            </div>
+        </div>
+        <div class="hide-for-small-only large-2 medium-12 columns">
+            <ul class="list-thumbnail-slideshow medium-block-grid-{$slicePC77.slideshow|@count} large-block-grid-1">
+                {foreach $slicePC77.slideshow as $slide}
+                    {assign var="thumbnail" value=$slide->getThumbnail('thumbnail')}
+                    <li data-slick-link="{$slide@index}" class="item-thumbnail js-item-thumbnail" data-gtm='{ldelim}"eventType": "click", "dataList": {ldelim} "event": "uaevent","eventCategory": "{$slicePC77.blockName}::position-{$slicePC77.blockOrder}", "eventAction": "Redirection::BannerClick", "eventLabel": "{$thumbnail.title|escape:javascript}"{rdelim}{rdelim}'>
+                        <div class="thumbnail-container">
+                            <div class="thumbnail-border"></div>
+                            <img src="{$thumbnail.size.desktop}" alt="{$thumbnail.alt}">
+                            <p>{$thumbnail.subtitle}</p>
+                        </div>
+                    </li>
+                {/foreach}
+            </ul>
+        </div>
+        {else}
+            <img class="large-12" src="{$slicePC77.slideshow[0].src}" alt="{$slicePC77.slideshow[0].alt}">
+            <div class="size-element active">{$slicePC77.slideshow[0].subtitle}</div>
+        {/if}
+    </div>
+
+    {if !empty($slicePC77.legalNotice)}<p class="legal-notice">{$slicePC77.legalNotice}</p>{/if}
+</section>

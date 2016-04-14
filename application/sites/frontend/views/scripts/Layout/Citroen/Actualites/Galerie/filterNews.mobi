@@ -1,5 +1,0 @@
-{if $aActualites|@sizeof > 0}
-    {include file="{$sIncludeTplPath}/moreNews.mobi"}
-{else}
-	{'PAS_DE_RESULTATS_FILTRE'|t}
-{/if}

@@ -1,0 +1,29 @@
+/*
+ * Represents the main "layout" file
+ */
+
+@import "mixins";
+@import "sprites";
+@import "base";
+
+/* base */
+@import "common/colors";
+@import "common/fonts";
+@import "common/all";
+@import "common/grid";
+@import "common/buttons";
+@import "common/forms";
+@import "common/popin";
+@import "common/icons";
+@import "common/modal";
+
+/* slices */
+@import "components/cf58bis"; // Motorisation
+@import "components/cf53bis"; // Finitions
+@import "components/cc88bis"; // Equipements
+@import "components/cf41bis"; // Teintes
+@import "components/cf42bis"; // Garnissage
+@import "components/cf9bis"; // Silhouette
+@import "components/n14bis"; // Navigation
+@import "components/cf17bis"; // Popup
+@import "components/cf98bis"; // Configuration details

@@ -1,0 +1,124 @@
+.bloc-tabs {
+	.iso-tabs {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		text-align: center;
+		font-family: "peugeot", Arial;
+		font-size: 14px;
+		background-color: #f1f3f2;
+		overflow: hidden;
+		li {
+			float: left;
+			padding: 7px 0 5px;
+			cursor: pointer;
+			width: 50%;
+			background: #ececee;
+			border-top: 5px solid #ececee;
+			color: #007edb;
+			line-height: normal;
+			margin: 0;
+			list-style: none;
+			text-align: center;
+			font-family: "peugeot", Arial;
+			font-size: 14px;
+			&.on {
+				color: #3c3947;
+				background: #fff;
+				border-top-color: #007edb;
+			}
+		}
+	}
+	.iso-tab-cont {
+		display: none;
+		&.on {
+			display: block;
+		}
+		.iso-tab-maincontent {
+			background: #fff;
+			padding: 0 10px;
+			text-align: left;
+			position: relative;
+			overflow: auto;
+			p {
+				margin: 0;
+				padding-top: 20px;
+				line-height: 20px;
+				font-family: "peugeotlight", Arial;
+				> span {
+					display: block;
+				}
+				strong {
+					font-family: "peugeot", Arial;
+					font-weight: normal;
+				}
+			}
+			ul {
+				margin: 0;
+			}
+			.options {
+				clear: both;
+    				overflow: auto;
+				> li {
+					clear: both;
+    					overflow: auto;
+					border-top: 1px solid #f1f3f2;
+					-webkit-transition: all 1s linear;
+					margin-bottom: 5px;
+					padding-top: 5px;
+					&:first-child {
+						border-top: 0;
+						padding-top: 0;
+					}
+				}
+				p {
+					padding: 0;
+				}
+				li {
+					ul {
+						clear: both;
+    						overflow: auto;
+					}
+				}
+				.nbrOpt {
+					float: left;
+					font-size: 13px;
+					color: #3c3947;
+					font-family: "peugeotbold", Arial;
+				}
+				.cost {
+					float: right;
+					font-size: 13px;
+					color: #3c3947;
+					font-family: "peugeotbold", Arial;
+				}
+			}
+		}
+	}
+	.info {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+	}
+	li {
+		list-style-type: none;
+	}
+	.custom-button {
+		margin: 0 auto;
+		span {
+			text-transform: none;
+		}
+		strong {
+			font-weight: normal;
+			text-transform: uppercase;
+			display: block;
+		}
+	}
+	.mentions {
+		margin: 10px 0;
+		text-align: left;
+		font-size: 10px;
+		line-height: 16px;
+		color: #3c3947;
+	}
+}

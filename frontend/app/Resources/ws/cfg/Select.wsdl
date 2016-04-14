@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap11="http://schemas.xmlsoap.org/wsdl/soap/"
+                  xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+                  xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/"
+                  xmlns:wsp="http://www.w3.org/ns/ws-policy"
+                  xmlns:wsp200409="http://schemas.xmlsoap.org/ws/2004/09/policy"
+                  xmlns:wsp200607="http://www.w3.org/2006/07/ws-policy"
+                  xmlns:ns0="http://xml.inetpsa.com/Services/Cfg/Select"
+                  targetNamespace="http://xml.inetpsa.com/Services/Cfg/Select">
+    <wsdl:types xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <xsd:schema>
+            <xsd:import schemaLocation="Select.xsd3.xsd" namespace="http://xml.inetpsa.com/Services/Cfg/Select"/>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="MultiSelectRequest">
+        <wsdl:part name="parameters" element="xsns:MultiSelect"
+                   xmlns:xsns="http://xml.inetpsa.com/Services/Cfg/Select"/>
+    </wsdl:message>
+    <wsdl:message name="MultiSelectResponse">
+        <wsdl:part name="parameters" element="xsns:MultiSelectResponse"
+                   xmlns:xsns="http://xml.inetpsa.com/Services/Cfg/Select"/>
+    </wsdl:message>
+    <wsdl:message name="SelectByTechCharRequest">
+        <wsdl:part name="parameters" element="xsns:SelectByTechChar"
+                   xmlns:xsns="http://xml.inetpsa.com/Services/Cfg/Select"/>
+    </wsdl:message>
+    <wsdl:message name="SelectByTechCharResponse">
+        <wsdl:part name="parameters" element="xsns:SelectByTechCharResponse"
+                   xmlns:xsns="http://xml.inetpsa.com/Services/Cfg/Select"/>
+    </wsdl:message>
+    <wsdl:message name="SelectRequest">
+        <wsdl:part name="parameters" element="xsns:Select" xmlns:xsns="http://xml.inetpsa.com/Services/Cfg/Select"/>
+    </wsdl:message>
+    <wsdl:message name="SelectResponse">
+        <wsdl:part name="parameters" element="xsns:SelectResponse"
+                   xmlns:xsns="http://xml.inetpsa.com/Services/Cfg/Select"/>
+    </wsdl:message>
+    <wsdl:message name="ServiceException">
+        <wsdl:part name="ServiceException" element="xsns:ServiceException"
+                   xmlns:xsns="http://xml.inetpsa.com/Services/Cfg/Select"/>
+    </wsdl:message>
+    <wsdl:portType name="SelectPortType">
+        <wsdl:operation name="MultiSelect">
+            <wsdl:input name="MultiSelectRequest" message="ns0:MultiSelectRequest"/>
+            <wsdl:output name="MultiSelectResponse" message="ns0:MultiSelectResponse"/>
+            <wsdl:fault name="ServiceException" message="ns0:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="Select">
+            <wsdl:input name="SelectRequest" message="ns0:SelectRequest"/>
+            <wsdl:output name="SelectResponse" message="ns0:SelectResponse"/>
+            <wsdl:fault name="ServiceException" message="ns0:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="SelectByTechChar">
+            <wsdl:input name="SelectByTechCharRequest" message="ns0:SelectByTechCharRequest"/>
+            <wsdl:output name="SelectByTechCharResponse" message="ns0:SelectByTechCharResponse"/>
+            <wsdl:fault name="ServiceException" message="ns0:ServiceException"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="SelectHttpBinding" type="ns0:SelectPortType">
+        <soap11:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="MultiSelect">
+            <soap11:operation soapAction="http://xml.inetpsa.com/Services/Cfg/Select#MultiSelect" style="document"/>
+            <wsdl:input name="MultiSelectRequest">
+                <soap11:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="MultiSelectResponse">
+                <soap11:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap11:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="Select">
+            <soap11:operation soapAction="http://xml.inetpsa.com/Services/Cfg/Select#Select" style="document"/>
+            <wsdl:input name="SelectRequest">
+                <soap11:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="SelectResponse">
+                <soap11:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap11:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="SelectByTechChar">
+            <soap11:operation soapAction="http://xml.inetpsa.com/Services/Cfg/Select#SelectByTechChar"
+                              style="document"/>
+            <wsdl:input name="SelectByTechCharRequest">
+                <soap11:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="SelectByTechCharResponse">
+                <soap11:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap11:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="Select">
+        <wsdl:port name="SelectHttpPort.0" binding="ns0:SelectHttpBinding">
+            <soap11:address location="http://10.68.110.80:80/cfg/services/Select"/>
+        </wsdl:port>
+        <wsdl:port name="SelectHttpPort.1" binding="ns0:SelectHttpBinding">
+            <soap11:address location="http://10.68.110.80:80/cfg/pub/services/Select"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

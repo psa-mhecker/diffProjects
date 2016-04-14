@@ -1,0 +1,191 @@
+.cn14 {
+    .titles {
+        h1 {
+            text-transform: uppercase;
+            font-size: 24px;
+            margin: 28px 0 0;
+        }
+        .subtitle {
+            margin-top: 4px;
+            font-size: 14px;
+            line-height: 24px;
+            color: $gray-citroen;
+        }
+    }
+
+    .introduction {
+        font-size: 14px;
+        line-height: 24px;
+        color: $grey_1_color_light;
+    }
+    #nav {
+        position: relative;
+        width: 100%;
+        max-width: 1280px;
+        z-index: 99;
+        float: left;
+        height: 91px;
+        overflow: hidden;
+        a {
+            text-transform: uppercase;
+        }
+        &.sticky {
+            position: fixed;
+            top: 0px;
+        }
+        .btn-next {
+            position: absolute;
+            right: 4px;
+            top: 55px;
+            height: 27px;
+            width: 227px;
+            padding: 2px 15px;
+            margin: 0;
+            display: none;
+            z-index: 10;
+        }
+        .backActive {
+            display: block;
+            height: 50px;
+            background: white;
+            width: 138px;
+            position: absolute;
+            left: 4px;
+            top: 0;
+            z-index: 2;
+            background-color: $default-color;
+        }
+        #main-menu {
+            position: relative;
+            left: 0;
+            width: 100%;
+            height: 91px;
+            font-size: 0;
+            display: table;
+            .numero {
+                position: absolute;
+                top: 17px;
+                left: 16px;
+                font-family: $font_citroen-bold;
+                font-size: 40px;
+                z-index: 2;
+            }
+            > li {
+                height: 50px;
+                width: 212px;
+                margin-left: 0;
+                display: table-cell;
+                text-align: left;
+                a {
+                    display: block;
+                    font-size: 12px;
+                    vertical-align: middle;
+                    padding-left: 41px;
+                    &:hover {
+                        background-color: white;
+                    }
+                }
+                > a {
+                    position: relative;
+                    z-index: 2;
+                    line-height: 52px;
+                    height: 52px;
+                    top: 0px;
+                    outline: none;
+                    & > span {
+                        display: inline-block;
+                        font-size: 12px;
+                        color: $gray-dark;
+                        line-height: 13px;
+                        font-weight: normal;
+                        vertical-align: middle;
+                        font-family: $font_citroen-bold;
+                        width: 90%;
+                    }
+                }
+                > a.disabled {
+                    cursor: default;
+                }
+                ul {
+                    position: absolute;
+                    left: 0;
+                    top: 50px;
+                    padding: 5px;
+                    height: 40px;
+                    width: 100%;
+                    background-color: white;
+                    li {
+                        margin-top: -62px;
+                        position: relative;
+                        display: inline-block;
+                        text-align: center;
+                        vertical-align: middle;
+                        margin-left: 13px;
+                        z-index: -1;
+                        .arrow {
+                            position: absolute;
+                            top: 9px;
+                            right: -11px;
+                        }
+                        &:first-child {
+                            margin-left: 0;
+                            a:after {
+                                display: none;
+                            }
+                        }
+                        a {
+                            position: relative;
+                            font-family: $font-family-brand-bold;
+                            font-size: 13px;
+                            color: $gray-dark;
+                            line-height: 27px;
+                            height: 27px;
+                            padding: 0 13px;
+                        }
+                        &.active,
+                        &:hover {
+                            > .numero {
+                                color: black;
+                            }
+                        }
+                    }
+                }
+                &.active {
+                    ul {
+                        display: block;
+                        overflow: hidden;
+                    }
+                    &:hover {
+                        border-top: 0;
+                    }
+                }
+                &.disabled {
+                    a:hover {
+                        background-color: transparent;
+                    }
+                }
+                &:first-child {
+                    > a {
+                        padding-left: 30px;
+                        span {
+                            font-family: $font-family-brand-bold;
+                            color: $gray-dark;
+                        }
+                    }
+                }
+                &:last-child {
+                    & > a span {
+                        color: $default-color;
+                    }
+                    .icon-Voiture {
+                        display: block;
+                        position: absolute;
+                        left: 12px;
+                        top: 13px;
+                        font-size: 24px;
+                    }
+                }
+            }
+        }
+    }
+}

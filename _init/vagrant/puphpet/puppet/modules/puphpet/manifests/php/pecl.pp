@@ -28,10 +28,8 @@ define puphpet::php::pecl (
 
   $pecl_beta = $::osfamily ? {
     'Debian' => {
-      'augeas'        => 'augeas',
-      'mcrypt_filter' => 'mcrypt_filter',
-      'pdo_user'      => 'pdo_user',
-      'zendopcache'   => $::operatingsystem ? {
+      'augeas'      => 'augeas',
+      'zendopcache' => $::operatingsystem ? {
         'debian' => false,
         'ubuntu' => 'ZendOpcache',
       },

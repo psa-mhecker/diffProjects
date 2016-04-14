@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap11="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp200409="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsp200607="http://www.w3.org/2006/07/ws-policy" xmlns:ns0="http://xml.inetpsa.com/Services/AccessoiresApplication/AccessoiresService" targetNamespace="http://xml.inetpsa.com/Services/AccessoiresApplication/AccessoiresService">
+<wsdl:types xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:schema>
+<xsd:import schemaLocation="AccessoiresService.xsd12.xsd" namespace="http://xml.inetpsa.com/Services/AccessoiresApplication/AccessoiresService"/></xsd:schema></wsdl:types>
+<wsdl:message name="getAccessoriesByPromotionRequest">
+<wsdl:part name="parameters" element="xsns:getAccessoriesByPromotion" xmlns:xsns="http://xml.inetpsa.com/Services/AccessoiresApplication/AccessoiresService"/></wsdl:message>
+<wsdl:message name="getAccessoriesByPromotionResponse">
+<wsdl:part name="parameters" element="xsns:getAccessoriesByPromotionResponse" xmlns:xsns="http://xml.inetpsa.com/Services/AccessoiresApplication/AccessoiresService"/></wsdl:message>
+<wsdl:message name="getAccessoriesByVehicleRequest">
+<wsdl:part name="parameters" element="xsns:getAccessoriesByVehicle" xmlns:xsns="http://xml.inetpsa.com/Services/AccessoiresApplication/AccessoiresService"/></wsdl:message>
+<wsdl:message name="getAccessoriesByVehicleResponse">
+<wsdl:part name="parameters" element="xsns:getAccessoriesByVehicleResponse" xmlns:xsns="http://xml.inetpsa.com/Services/AccessoiresApplication/AccessoiresService"/></wsdl:message>
+<wsdl:message name="getAccessoriesRequest">
+<wsdl:part name="parameters" element="xsns:getAccessories" xmlns:xsns="http://xml.inetpsa.com/Services/AccessoiresApplication/AccessoiresService"/></wsdl:message>
+<wsdl:message name="getAccessoriesResponse">
+<wsdl:part name="parameters" element="xsns:getAccessoriesResponse" xmlns:xsns="http://xml.inetpsa.com/Services/AccessoiresApplication/AccessoiresService"/></wsdl:message>
+<wsdl:message name="getCriteriaRequest">
+<wsdl:part name="parameters" element="xsns:getCriteria" xmlns:xsns="http://xml.inetpsa.com/Services/AccessoiresApplication/AccessoiresService"/></wsdl:message>
+<wsdl:message name="getCriteriaResponse">
+<wsdl:part name="parameters" element="xsns:getCriteriaResponse" xmlns:xsns="http://xml.inetpsa.com/Services/AccessoiresApplication/AccessoiresService"/></wsdl:message>
+<wsdl:message name="getCriteriaValuesRequest">
+<wsdl:part name="parameters" element="xsns:getCriteriaValues" xmlns:xsns="http://xml.inetpsa.com/Services/AccessoiresApplication/AccessoiresService"/></wsdl:message>
+<wsdl:message name="getCriteriaValuesResponse">
+<wsdl:part name="parameters" element="xsns:getCriteriaValuesResponse" xmlns:xsns="http://xml.inetpsa.com/Services/AccessoiresApplication/AccessoiresService"/></wsdl:message>
+<wsdl:message name="ServiceException">
+<wsdl:part name="ServiceException" element="xsns:ServiceException" xmlns:xsns="http://xml.inetpsa.com/Services/AccessoiresApplication/AccessoiresService"/></wsdl:message>
+<wsdl:portType name="AccessoiresServicePortType">
+<wsdl:operation name="getAccessories">
+<wsdl:input name="getAccessoriesRequest" message="ns0:getAccessoriesRequest"/>
+<wsdl:output name="getAccessoriesResponse" message="ns0:getAccessoriesResponse"/>
+<wsdl:fault name="ServiceException" message="ns0:ServiceException"/></wsdl:operation>
+<wsdl:operation name="getAccessoriesByPromotion">
+<wsdl:input name="getAccessoriesByPromotionRequest" message="ns0:getAccessoriesByPromotionRequest"/>
+<wsdl:output name="getAccessoriesByPromotionResponse" message="ns0:getAccessoriesByPromotionResponse"/>
+<wsdl:fault name="ServiceException" message="ns0:ServiceException"/></wsdl:operation>
+<wsdl:operation name="getAccessoriesByVehicle">
+<wsdl:input name="getAccessoriesByVehicleRequest" message="ns0:getAccessoriesByVehicleRequest"/>
+<wsdl:output name="getAccessoriesByVehicleResponse" message="ns0:getAccessoriesByVehicleResponse"/>
+<wsdl:fault name="ServiceException" message="ns0:ServiceException"/></wsdl:operation>
+<wsdl:operation name="getCriteria">
+<wsdl:input name="getCriteriaRequest" message="ns0:getCriteriaRequest"/>
+<wsdl:output name="getCriteriaResponse" message="ns0:getCriteriaResponse"/>
+<wsdl:fault name="ServiceException" message="ns0:ServiceException"/></wsdl:operation>
+<wsdl:operation name="getCriteriaValues">
+<wsdl:input name="getCriteriaValuesRequest" message="ns0:getCriteriaValuesRequest"/>
+<wsdl:output name="getCriteriaValuesResponse" message="ns0:getCriteriaValuesResponse"/>
+<wsdl:fault name="ServiceException" message="ns0:ServiceException"/></wsdl:operation></wsdl:portType>
+<wsdl:binding name="AccessoiresServiceHttpBinding" type="ns0:AccessoiresServicePortType">
+<soap11:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+<wsdl:operation name="getAccessories">
+<soap11:operation soapAction="http://xml.inetpsa.com/Services/AccessoiresApplication/AccessoiresService#getAccessories" style="document"/>
+<wsdl:input name="getAccessoriesRequest">
+<soap11:body use="literal"/></wsdl:input>
+<wsdl:output name="getAccessoriesResponse">
+<soap11:body use="literal"/></wsdl:output>
+<wsdl:fault name="ServiceException">
+<soap11:fault name="ServiceException" use="literal"/></wsdl:fault></wsdl:operation>
+<wsdl:operation name="getAccessoriesByPromotion">
+<soap11:operation soapAction="http://xml.inetpsa.com/Services/AccessoiresApplication/AccessoiresService#getAccessoriesByPromotion" style="document"/>
+<wsdl:input name="getAccessoriesByPromotionRequest">
+<soap11:body use="literal"/></wsdl:input>
+<wsdl:output name="getAccessoriesByPromotionResponse">
+<soap11:body use="literal"/></wsdl:output>
+<wsdl:fault name="ServiceException">
+<soap11:fault name="ServiceException" use="literal"/></wsdl:fault></wsdl:operation>
+<wsdl:operation name="getAccessoriesByVehicle">
+<soap11:operation soapAction="http://xml.inetpsa.com/Services/AccessoiresApplication/AccessoiresService#getAccessoriesByVehicle" style="document"/>
+<wsdl:input name="getAccessoriesByVehicleRequest">
+<soap11:body use="literal"/></wsdl:input>
+<wsdl:output name="getAccessoriesByVehicleResponse">
+<soap11:body use="literal"/></wsdl:output>
+<wsdl:fault name="ServiceException">
+<soap11:fault name="ServiceException" use="literal"/></wsdl:fault></wsdl:operation>
+<wsdl:operation name="getCriteria">
+<soap11:operation soapAction="http://xml.inetpsa.com/Services/AccessoiresApplication/AccessoiresService#getCriteria" style="document"/>
+<wsdl:input name="getCriteriaRequest">
+<soap11:body use="literal"/></wsdl:input>
+<wsdl:output name="getCriteriaResponse">
+<soap11:body use="literal"/></wsdl:output>
+<wsdl:fault name="ServiceException">
+<soap11:fault name="ServiceException" use="literal"/></wsdl:fault></wsdl:operation>
+<wsdl:operation name="getCriteriaValues">
+<soap11:operation soapAction="http://xml.inetpsa.com/Services/AccessoiresApplication/AccessoiresService#getCriteriaValues" style="document"/>
+<wsdl:input name="getCriteriaValuesRequest">
+<soap11:body use="literal"/></wsdl:input>
+<wsdl:output name="getCriteriaValuesResponse">
+<soap11:body use="literal"/></wsdl:output>
+<wsdl:fault name="ServiceException">
+<soap11:fault name="ServiceException" use="literal"/></wsdl:fault></wsdl:operation></wsdl:binding>
+<wsdl:service name="AccessoiresService">
+<wsdl:port name="AccessoiresServiceHttpPort" binding="ns0:AccessoiresServiceHttpBinding">
+<soap11:address location="http://wssoap.inetpsa.com:80/aoa/services/AccessoiresService"/></wsdl:port>
+<wsdl:port name="AccessoiresServiceHttpPort.0" binding="ns0:AccessoiresServiceHttpBinding">
+<soap11:address location="http://wssoap.inetpsa.com:80/aoa/services/AccessoiresService"/></wsdl:port></wsdl:service></wsdl:definitions>

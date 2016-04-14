@@ -1,0 +1,21 @@
+<?php
+
+namespace PsaNdp\MappingBundle\DisplayBlock\Strategies;
+
+/**
+ * Class {{strategyName}}
+ * @package PsaNdp\MappingBundle\DisplayBlock\Strategies
+ */
+class {{strategyName}} extends AbstractPsaStrategy
+{
+    /**
+     *
+     * @return string
+     */
+    protected function getTemplateName()
+    {
+        $templateName = 'PsaNdpMappingBundle:Desktop:{{code}}.html.smarty';
+
+        return $templateName;
+    }
+}

@@ -1,111 +1,108 @@
-.httpd*
-.htpasswd
-media_old
-update_library.sh
-_install
-###################
-syntax: glob
-*.com
-*.class
-*.dll
-*.exe
-*.o
-*.so
-*.log
-phpunit
-/logs
-/var
-/public/media/file
-/public/media/image
-/public/media/video
-/public/media/mobile
-/public/media/design_pack
-/public/media/flash
-/public/media/design/skins
-/public/media/design/plugins
-/nbproject
-/application/library/Selfcare/Tests/report
-/vendor
-/batch/*.sh
-/batch/preprod
-/batch/recette
-composer.phar
-/public/backend/adminer.php
-# Packages #
-############
-# it's better to unpack these files and commit the raw source
-# git has its own built in compression methods
-*.7z
-*.dmg
-*.gz
-*.iso
-*.jar
-*.rar
-*.tar
-*.zip
-*.tgz
-*.svn
 
-# Logs and databases #
-######################
-*.log
-*.sql
-*.sqlite
+#=====================================#
+#             Frontend                #
+#=====================================#
 
-# OS generated files #
-######################
-.DS_Store*
-ehthumbs.db
-Icon?
-Thumbs.db 
-=======
-@@dans le clone du repo
-# Compiled source #
-###################
-syntax: glob
-*.com
-*.class
-*.dll
-*.exe
-*.o
-*.so
-*.log
-/public/media/image
-/var
-/library/wurfl
-/public/media/design_pack
-/public/media/mobile
-._.*
-# Packages #
-############
-# it's better to unpack these files and commit the raw source
-# git has its own built in compression methods
-*.7z
-*.dmg
-*.gz
-*.iso
-*.jar
-*.rar
-*.tar
-*.zip
-*.tgz
-*.svn
+#==[Symfony]==========================#
+/frontend/web/bundles/
+/frontend/app/bootstrap.php.cache
+/frontend/app/cache/*
+/frontend/app/logs/*
+/frontend/app/config/parameters.yml
+/frontend/app/config/parameters_db_dev.yml
+/frontend/app/config/parameters_app_dev.yml
+/frontend/app/Resources/translations/*
+!/frontend/app/cache/.gitkeep
+!/frontend/app/logs/.gitkeep
+!/frontend/app/Resources/translations/.gitkeep
+/frontend/app/SymfonyRequirements.php
+/frontend/app/check.php
 
-# Logs and databases #
-######################
-*.log
-*.sql
-*.sqlite
+#==[Vendor]=========================#
+/vendor/*
+/bin/*
+/frontend/bin/
+/frontend/node_modules/*
+/frontend/bower_components/*
+/frontend/web/built/*
+frontend/web/desktop/js/*
+frontend/web/desktop/css/*
+frontend/web/mobile/css/*
+frontend/web/mobile/js/*
 
-# OS generated files #
-######################
-.DS_Store*
-ehthumbs.db
-Icon?
-Thumbs.db
-localmediadev.ini.php
-composer.lock
+
+frontend/node_modules/*
+frontend/npm-debug.log
+
+#==[Composer]=========================#
+
+/frontend/composer.phar
+#==[IDE]==============================#
+.buildpath
+.settings/
+.project
+.nbproject/
+.idea/
+
+#==[CI generated artifacts]===========#
+/build/api
+/build/code-browser
+/build/coverage
+/build/logs
+/build/pdepend
+/cov
 
 .vagrant
+/_init/vagrant/puphpet/files/dot/ssh/*
+/default/
+
+*.orig
+
+/html
+
+#==[assets]=========================#
+/assets/vendor/*
+/assets/report
+/assets/.sass-cache
+/assets/node_modules
+/assets/**/*.map
+backend/public/media/design/frontend/desktop
+/assets/**/node_modules
+/assets/**/.sass-cache
+/assets/patternlab/patternlab.json
+/assets/patternlab/public/index.html
+/assets/patternlab/public/*
+/assets/patternlab/public/**
+/assets/test/compiled
+/assets/test/report
+!/assets/patternlab/public/styleguide/*
+.DS_Store
+#=====================================#
+#             Backend                 #
+#=====================================#
+/var/logs/*
+/var/cache/*
 id_rsa*
 root_id_rsa*
+*.bak
+
+
+
+#=====================================#
+#             VAGRANT                 #
+#=====================================#
+
+html/
+
+#==[Behat]=========================#
+behat.yml
+/frontend/web/build/behat/backend/assets/*
+/frontend/web/build/behat/backend/*.html
+/frontend/web/build/behat/front/assets/*
+/frontend/web/build/behat/front/*.html
+
+#==[wraith]=========================#
+/frontend/web/build/wraith/history_report/*
+/frontend/web/build/wraith/report/*
+/frontend/web/build/wraith/history_test/*
+

@@ -1,0 +1,14 @@
+<div  class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+    <ul>
+        {% for translations in languages %}
+            <li>
+                {{ translations.language.langueTranslate }}
+                <ul>
+                    {% for page in translations.pages %}
+                        <li><a href="{{ page.url }}">{{ page.name }}</a></li>
+                    {% endfor %}
+                </ul>
+            </li>
+        {% endfor %}
+    </ul>
+</div>

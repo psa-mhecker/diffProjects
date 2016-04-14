@@ -1,0 +1,50 @@
+{assign var="gtmCategory" value="{$slicePC19.blockName}::position-{$slicePC19.blockOrder}"}
+<section class="slice-pc19 slice-full-size no-margin-top {if isset($slicePC19.anchorId)} {$slicePC19.anchorId} {/if}" {if isset($slicePC19.anchorId)} id="{$slicePC19.anchorId}" {/if}  data-jsobj="[ { 'obj':'slicePC19' } ]" datalayer="{$slicePC19.datalayer}" data-gtm-category={$gtmCategory}>
+	<div class="row collapse">
+		<div class="small-12 columns">
+			{if !empty($slicePC19.myPeugeot) }
+				<a href="{$slicePC19.myPeugeot.url}" class="cta btn-cta light-blue arrow chevron-right my-peugeot" data-gtm='{ldelim}"eventType": "click", "dataList": {ldelim} "event": "uaevent","eventCategory": "{$slicePC19.blockName}::position-{$slicePC19.blockOrder}", "eventAction": "Redirection::MyPeugeot", "eventLabel": "{$slicePC19.myPeugeot.label|escape:javascript}"{rdelim}{rdelim}' target="_blank">
+					<span class="content-cta">{$slicePC19.myPeugeot.label}</span>
+				</a>
+			{/if}
+			{if $slicePC19.type == "VISUEL"}
+				{if $slicePC19.slides|@count == 1}
+					{include file='../Components/images.html.smarty' image=$slicePC19.slides[0].media lazy=false}
+				{else}
+					<div class="js-slick-carousel-container" data-options='{ldelim}"dots":"false"{rdelim}'>
+						{include file='../Components/slideshowslick.html.smarty' slideshow=$slicePC19.slides timerSpeed=$slicePC19.speedTimer gtmCategory={$gtmCategory}}
+						<div class="js-slick-carousel-to-sync">
+				{/if}
+			{else}
+				{include file='../Components/videoplayer.html.smarty' video=$slicePC19.slides[0].media gtmCategory="{$slicePC19.blockName}::position-{$slicePC19.blockOrder}" autoplay=true muted=true}
+			{/if}
+			{foreach $slicePC19.slides as $slide }
+				{if !empty($slide.title) || !empty($slide.subTitle) || (!empty($slide.ctaList) && !($slide.ctaList[0].type eq 'TYPE_HIDDEN'))}
+					{assign var="position" value=$slide.position|default:"left"}
+					<div class="homepage-panel js-block-video-to-hide {$position}-position" data-slick-to-sync="{$slide@index}">
+						<section>
+							{if !empty($slide.title)}
+								<h1 class="homepage-panel-title {$slide.color}">{$slide.title}</h1>
+							{/if}
+							{if !empty($slide.subTitle)}
+								<h2 class="homepage-panel-title hide-for-small-only {$slide.color}">{$slide.subTitle}</h2>
+							{/if}
+							{if !empty($slide.ctaList) && !($slide.ctaList[0].type eq 'TYPE_HIDDEN')}
+								<div>
+									{foreach $slide.ctaList as $cta}
+										{include file="../Components/cta.html.smarty" gtm="{ldelim}\"eventType\":\"click\",\"dataList\":{ldelim}\"event\":\"uaevent\",\"eventCategory\":\"{$slicePC19.blockName}::position-{$slicePC19.blockOrder}\",\"eventAction\":\"Redirection\",\"eventLabel\":\"{$cta.title|escape:html}\"{rdelim}{rdelim}"}
+									{/foreach}
+								</div>
+							{/if}
+						</section>
+					</div>
+				{/if}
+			{/foreach}
+			{if $slicePC19.type == "VISUEL" && $slicePC19.slides|@count > 1}
+				{* close carousel container *}
+					</div>
+				</div>
+			{/if}
+		</div>
+	</div>
+</section>

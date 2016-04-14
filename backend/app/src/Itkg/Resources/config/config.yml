@@ -1,0 +1,5 @@
+imports:
+    - { resource: parameters.yml }
+    - { resource: services.yml }
+    - { resource: parameters_migration.yml }
+    - { resource: services_migration.yml }

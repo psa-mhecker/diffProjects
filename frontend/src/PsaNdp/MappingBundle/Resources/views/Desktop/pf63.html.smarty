@@ -1,0 +1,47 @@
+<section class="slice-pf63 {if isset($slicePF63.anchorId)} {$slicePF63.anchorId} {/if}" {if isset($slicePF63.anchorId)} id="{$slicePF63.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePf63' } ]">
+  <h3>{$slicePF63.title}</h3>
+  <div class="grid-group">
+    <div class="span_6_of_12 cols">
+      <figure>
+        <img src="../../../img/600x277.jpg" alt="le financement de votre nouvelle Peugeot 308" />
+      </figure>
+    </div>
+    <div class="span_6_of_12 cols financement_details cols" itemtype="http://schema.org/Product">
+      <p class="content">
+        <span class="title" itemprop="name">Votre Nouvelle Peugeot 308</span>
+        <span class="monthly" itemprop="price">à partir de <strong class="price">384€ TTC* /mois</strong>
+          {if isset($slicePF63.popinFinancement)}
+            {foreach $slicePF63.popinFinancement.contents as $infosTranche }
+              <a href="#" data-openpopin="financement{$infosTranche.id}"><span class="info" data-openpopin=""></span></a>
+            {/foreach}
+          {/if}
+
+        </span>
+        <span class="begin">après un premier loyer de 3000€ TTC*</span>
+      </p>
+      {* <a href="#">Commencez votre simulation</a> *}
+      {if isset($slicePF63.ctaList)}
+         <div class="custom-button-group clearfix">
+           {foreach $slicePF63.ctaList as $cta}
+           {include file="./cta.html.smarty"}
+           {/foreach}
+         </div>
+      {/if}
+    </div>
+  </div>
+  <div class="grid-group mentions">
+    <p>Ut eum existimans vinctum latus genere percitus ferro et suum adoritur aliis proprium artifex ferro ferro imperatoris aliis in sortem ausus proprium quibus conplicandis urgente instabat iam hoc Catenae cum tribunis comitatum ferire inditum eum sortem praeerat eos in quia cognomentum excessit et miserabiles hocque ille tribunis iam communium et.</p>
+  </div>
+
+  <div class="popin_overlay" data-jsobj="[ { 'obj':'iso-popin' } ]">
+    <div class="color--blue1 close"></div>  {* utilité de cette div à définir  *}
+    {* --------------- FINANCEMENT : POPIN ------------------ *}
+    {if isset($slicePF63.popinFinancement)}
+      {foreach $slicePF63.popinFinancement.contents as $ticket}
+        {include file="../../popin-financement/popin-financement.tpl"}
+      {/foreach}
+    {/if}
+
+  </div>
+</section>
+

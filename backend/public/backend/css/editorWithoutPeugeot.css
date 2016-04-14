@@ -1,0 +1,27 @@
+body#tinymce{
+    font-size: 13px;
+}
+
+h1, h2, h3, h4 {
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 1.875rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.125rem;
+}
+
+h4 {
+    font-size: 1rem;
+}
+
+.mce-i-save:before{
+    color: #FF0000;
+}

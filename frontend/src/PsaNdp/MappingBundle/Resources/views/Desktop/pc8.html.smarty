@@ -1,0 +1,53 @@
+<section class="slice-pc8 clearfix {if !empty($slicePC8.anchorId)} {$slicePC8.anchorId} {/if}" {if !empty($slicePC8.anchorId)} id="{$slicePC8.anchorId}" {/if}>
+
+  <div class="row show-for-medium-up">
+    <h2>{$slicePC8.title}</h2>
+    {foreach $slicePC8.columns as $column}
+      <article class="medium-6 columns">
+        <div class="row">
+          {if !empty($column.media.src)}
+            <figure class="medium-3 columns">
+              <img src="{$column.media.src}" alt="{$column.media.alt}">
+            </figure>
+          {/if}
+
+          <h2 class="medium-9 columns text-left pc8m">{$column.title}</h2>
+        </div>
+        <div class="row">
+          <div class="medium-9 medium-offset-3 columns">
+            <div>
+              {$column.text}
+            </div>
+            {if !empty($column.ctaList)}
+                {foreach $column.ctaList as $cta}
+                  {include file="../Components/cta.html.smarty"}
+                {/foreach}
+            {/if}
+
+          </div>
+        </div>
+      </article>
+    {/foreach}
+  </div>
+
+  <div class="row show-for-small-only">
+    <ul class="accordion" data-accordion>
+      <li class="accordion-navigation">
+        <a href="#panel1" id="js-accordion-navigation">{$slicePC8.titleMobile}</a>
+        <div id="panel1" class="content {if $slicePC8.openAccordion == 'true'}active{/if}">
+          {foreach $slicePC8.columns as $column}
+            <h2 class="text-left">{$column.title}</h2>
+            {$column.text}
+              {if !empty($column.ctaList)}
+                  {foreach $column.ctaList as $cta}
+                      {include file="../Components/cta.html.smarty" widthClass="short-width"}
+                  {/foreach}
+              {/if}
+
+          {/foreach}
+        </div>
+      </li>
+    </ul>
+  </div>
+
+</section>

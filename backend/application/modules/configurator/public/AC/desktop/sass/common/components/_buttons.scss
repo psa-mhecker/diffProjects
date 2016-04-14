@@ -1,0 +1,267 @@
+@charset "UTF-8";
+/* buttons */
+.btn,
+.cta {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-family: $font-family-brand-bold;
+  span {
+    display: block;
+  }
+
+  /* Couleurs des buttons */
+  &.btn-default {
+    background-color: $default-color;
+  }
+  &.btn-primary,
+  &.valid,
+  &.cta-default {
+    background-color: $brand-orange;
+    color: $default-color;
+    border: 4px solid transparent;
+  }
+  &.btn-secondary {
+    background-color: $brand-lavender-grey;
+    color: $default-color;
+  }
+
+  /* Etats des buttons default - hover - desactivÃ©*/
+  &.btn-help,
+  &.validate,
+  &.valid,
+  &#submit,
+  &.save,
+  &.save-2,
+  &.disabled {
+    font-size: 16px;
+    width: 224px;
+  }
+  &.validate,
+  &.save,
+  &.valid,
+  &#submit {
+    padding: 17px 0;
+  }
+  &.disabled,
+  &.diselected {
+    background-color: $gray-light;
+    color: $default-color;
+    padding: 21px 0;
+    cursor: default;
+  }
+  &.btn-help {
+    font-size: 12px;
+    border: 1px solid $gray-citroen;
+    padding: 10px 0;
+    width: 140px;
+  }
+  &.next-step,
+  &.btn-continued {
+    text-align: left;
+    .arrow--white-right,
+    .arrow--orange-right {
+      position: absolute;
+      right: 15px;
+    }
+  }
+  &.next-step {
+    font-size: 14px;
+    width: 100%;
+    padding-left: 15px;
+    .arrow--white-right {
+      bottom: 1px;
+    }
+  }
+  &.btn-continued {
+    font-size: 12px;
+    width: 142px;
+    padding: 3px 0 3px 16px;
+    .arrow--white-right {
+      top: 25%;
+    }
+    .arrow--orange-right {
+      display: none;
+    }
+    &:hover {
+      background-color: $default-color;
+      border-color: $brand-orange;
+      color: $brand-orange;
+      .arrow--orange-right {
+        display: block;
+        top: 25%;
+      }
+      .arrow--white-right {
+        display: none;
+      }
+    }
+  }
+  &.return,
+  &.cta-return {
+    width: 224px;
+    -moz-box-shadow: inset 0 0 0 2px $brand-lavender-grey;
+    -webkit-box-shadow: inset 0 0 0 2px $brand-lavender-grey;
+    box-shadow: inset 0 0 0 2px $brand-lavender-grey;
+    color: $gray-citroen;
+    font-size: 14px;
+    line-height: normal;
+    padding: 8.5px 0;
+    .arrow--gray-left {
+      position: absolute;
+      left: 15px;
+      top: 35%;
+    }
+    span {
+      text-align: left;
+      padding-left: 35%;
+    }
+  }
+  &.save-2 {
+    border: 4px solid transparent;
+    .text2 {
+      text-transform: lowercase;
+      font-family: $font-family-brand-light;
+    }
+  }
+  &.goToComparator {
+    font-size: 13px;
+    padding: 10px;
+  }
+  &.addComparator,
+  &.retirerComparator {
+    border: 1px solid $gray;
+    color: $gray-citroen;
+    width: 210px;
+    font-size: 11px;
+    padding: 9px 0 9px 15px;
+    span {
+      text-align: left;
+    }
+    .plus--gray,
+    .cross--gray,
+    .plus--dark-gray,
+    .cross--dark-gray {
+      position: absolute;
+      right: 15px;
+      top: 38%;
+    }
+    .plus--dark-gray,
+    .cross--dark-gray {
+      display: none;
+    }
+  }
+  &.icoComparator {
+    font-size: 11px;
+    width: 105px;
+    opacity: 0.85;
+    .car--black {
+      float: left;
+    }
+    span {
+      text-align: left;
+      clear: both;
+    }
+  }
+  &.icoModify {
+    font-size: 11px;
+    width: 45px;
+  }
+  &.showAllFiltre {
+    font-size: 13px;
+    color: $gray-citroen;
+    width: 120px;
+    padding: 9px 0;
+  }
+}
+.disableAddComparatorExpands .addComparator {
+  opacity: 0.5;
+  cursor: default;
+}
+.no-touch {
+  .btn,
+  .cta {
+    &.validate,
+    &.save,
+    &.valid,
+    &#submit {
+      &:not(.diselected):hover {
+        background-color: $default-color;
+        border-color: $brand-orange;
+        color: $brand-orange;
+      }
+    }
+
+    &.btn-help {
+      border: 1px solid $gray-citroen;
+      &:hover {
+        border: 4px solid $gray-citroen;
+        padding: 8px 0;
+      }
+    }
+    &.btn-continued {
+      &:hover {
+        background-color: $default-color;
+        border-color: $brand-orange;
+        color: $brand-orange;
+        .arrow--orange-right {
+          display: block;
+          top: 25%;
+        }
+        .arrow--white-right {
+          display: none;
+        }
+      }
+    }
+    &.return,
+    &.cta-return {
+      &:hover {
+        -moz-box-shadow: inset 0 0 0 6px $brand-lavender-grey;
+        -webkit-box-shadow: inset 0 0 0 6px $brand-lavender-grey;
+        box-shadow: inset 0 0 0 6px $brand-lavender-grey;
+        color: $brand-lavender-grey;
+      }
+    }
+    &.save-2 {
+      &:hover {
+        background-color: $default-color;
+        border-color: $brand-lavender-grey;
+        color: $brand-lavender-grey;
+      }
+    }
+    &.goToComparator {
+      &:hover {
+        background-color: rgba($brand-lavender-grey, 0.8);
+      }
+    }
+    &.addComparator,
+    &.retirerComparator {
+      &:hover {
+        border-color: $gray-citroen;
+        -moz-box-shadow: inset 0 0 0 5px $gray-citroen;
+        -webkit-box-shadow: inset 0 0 0 5px $gray-citroen;
+        box-shadow: inset 0 0 0 5px $gray-citroen;
+        .plus--gray,
+        .cross--gray {
+          display: none;
+        }
+        .plus--dark-gray,
+        .cross--dark-gray {
+          display: inline-block;
+        }
+      }
+    }
+    &.icoComparator {
+      &:hover {
+        opacity: 1;
+      }
+    }
+    &.showAllFiltre {
+      &:hover {
+        background-color: rgba( $brand-lavender-grey, .2);
+      }
+    }
+  }
+}

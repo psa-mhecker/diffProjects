@@ -27,9 +27,6 @@ mod 'puppetlabs/firewall',
 mod 'puppetlabs/java',
     :git => 'https://github.com/puppetlabs/puppetlabs-java.git',
     :ref => '1.2.0'
-mod 'attachmentgenie/locales',
-    :git => 'https://github.com/attachmentgenie/attachmentgenie-locales.git',
-    :ref => '1.1.1'
 mod 'actionjack/mailcatcher',
     :git => 'https://github.com/puphpet/puppet-mailcatcher.git',
     :ref => 'dcc8c3d357'
@@ -40,20 +37,20 @@ mod 'puppetlabs/mysql',
     :git => 'https://github.com/puppetlabs/puppetlabs-mysql.git',
     :ref => '2.3.1'
 mod 'jfryman/nginx',
-    :git => 'https://github.com/puphpet/puppet-nginx.git',
-    :ref => 'd3ea0ee'
+    :git => 'https://github.com/jfryman/puppet-nginx.git',
+    :ref => 'v0.0.10'
 mod 'puppetlabs/ntp',
     :git => 'https://github.com/puppetlabs/puppetlabs-ntp.git',
     :ref => '3.0.4'
 mod 'puphpet/php',
     :git => 'https://github.com/puphpet/puppet-php.git',
-    :ref => 'eb14528'
+    :ref => 'a1dad7828d'
 mod 'puppetlabs/postgresql',
     :git => 'https://github.com/puppetlabs/puppetlabs-postgresql.git',
-    :ref => '4.2.0'
+    :ref => '3.3.3'
 mod 'puphpet/puphpet',
     :git => 'https://github.com/puphpet/puppet-puphpet.git',
-    :ref => '722e1e8'
+    :ref => '3ec11fd'
 mod 'example42/puppi',
     :git => 'https://github.com/example42/puppi.git',
     :ref => 'v2.1.9'
@@ -82,9 +79,7 @@ mod 'nanliu/staging',
 mod 'ajcrowe/supervisord',
     :git => 'https://github.com/puphpet/puppet-supervisord.git',
     :ref => '17643f1'
-mod 'puppetlabs/stdlib',
-    :git => 'https://github.com/puppetlabs/puppetlabs-stdlib.git',
-    :ref => '4dab70b305'
+mod 'puppetlabs/stdlib'
 mod 'puppetlabs/vcsrepo',
     :git => 'https://github.com/puppetlabs/puppetlabs-vcsrepo.git',
     :ref => '0.2.0'

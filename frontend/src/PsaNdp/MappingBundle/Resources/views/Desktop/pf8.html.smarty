@@ -1,0 +1,235 @@
+<section class="slice-pf8 {if isset($slicePf8.anchorId)} {$slicePf8.anchorId} {/if}" {if isset($slicePf8.anchorId)} id="{$slicePf8.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePF8' } ]" data-html="{$slicePf8.urlJson}" {if isset($slicePf8.versionTest)} data-versionTest="{$slicePf8.versionTest}" {/if} data-noresult="{$slicePf8.noresult}" datalayer="{$slicePf8.datalayer}">
+  {if isset($slicePf8.title)}<h2 class="title">{$slicePf8.title}</h2>{/if}
+  {if isset($slicePf8.hasNav)}
+  <div class="wrapperNav">
+    <section class="nav">
+      <div class="fields clearfix span_7_of_12">
+        <form action="" class="span_7_of_12">
+          <input type="text" id="search-loc-input" autofocus placeholder="{$slicePf8.cas1.searchType.placeholder1}"/>
+          <input type="submit" class="search-loc-submit" value="{$slicePf8.searchTxt}" />
+        </form>
+        {if isset($slicePf8.pdv)}
+        <div class="pdv">
+          <span class="input-separ"></span>
+          <p class="search-pdv">{$slicePf8.hasNav.pdvInput.label}</p>
+          <div class="type-search span_8_of_12">
+            <ul>
+            {literal}
+              {{#listDealer}}
+              <li class="pac-item" data-dealerid="{{ id }}"><a href="#" title="{{ name }}">{{ name }}</a></li>
+              {{/listDealer}}
+            {/literal}
+            </ul>
+          </div>
+          <a href="#" class="sub-pdv"></a>
+        </div>
+        {/if}
+      </div>
+      <span class="or span_1_of_12">{$slicePf8.hasNav.or_txt}</span>
+      <a href="#" class="geoloc span_3_of_12">{$slicePf8.hasNav.btnAroundMe}</a>
+      <!-- <span class="postalCode span_1_of_12"></span> -->
+    </section>
+    <p class="errorOnLoad hide">{$slicePf8.errorload}</p>
+    <section class="nav pdv">
+      <div id="map-canvas" class="map-display"></div>
+      <div class="list-result">
+        <div class="list-dealer">
+          <div>
+          {literal}
+          {{#listDealer}}
+          {{#if @first}}
+            <article class="clearfix span_12_of_12">
+              <div class="km span_2_of_12">
+                <span class="dist">{{ distanceKm }}</span>
+                <span class="dist-type">{/literal}{$slicePf8.translate.distType}{literal}</span>
+              </div>
+              <div class="name span_4_of_12">
+                <span class="dealer-name">{{ name }}</span>
+                <span class="dealer-city">- {{ address.city }}</span>
+                <span class="dealer-cp"> ({{ address.postal_code }})</span>
+              </div>
+              <div class="address span_4_of_12">
+                <span class="dealer-street">{{ address.street }}</span>
+              </div>
+              <div class="phone span_2_of_12">
+                <p class="dealer-tel">{/literal}{$slicePf8.translate.phone}{literal} {{ contact.tel }}</p>
+              </div>
+            </article>
+          {{/if}}
+          {{/listDealer}}
+          {/literal}
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  {/if}
+  {if isset($slicePf8.isRegional) }
+  <section class="list-car
+    {if isset($slicePf8.noNav)}product{/if}
+    {if isset($slicePf8.isRegional)}regional{/if}">
+    <div>
+      {literal}
+      {{#listCars}}
+      <article class="span_12_of_12 clearfix">
+        <div class="car grid-col span_4_of_12">
+          <img src="{{ this.imageSrc }}" alt="{{ this.imageAlt }}" />
+        </div>
+        <div class="model grid-col span_4_of_12">
+          {{#if news}}<span>{/literal}{$slicePf8.translate.news}{literal}</span>{{/if}}
+          <h3>{{ title }}</h3>
+          <p>{{ engine }} </p>
+          <p>{{ painting }} </p>
+          <p><span>{/literal}{$slicePf8.translate.trimming}{literal}</span> : {{ trimming }} </p>
+          <p><span>{/literal}{$slicePf8.translate.consumption}{literal}</span> : {{ consumption }} </p>
+          <p><span>{/literal}{$slicePf8.translate.emission}{literal}</span> : {{ emission }} - g/{/literal}{$slicePf8.translate.distType}{literal}</p>
+        </div>
+        <div class="offer grid-col span_4_of_12">
+          <div class="prices">
+            <p>{{ prices.price }} {/literal}{$slicePf8.translate.currency}{literal}</p>
+            <p>{/literal}{$slicePf8.translate.price_advice}{literal} {{ prices.advice }} {/literal}{$slicePf8.translate.currency}{literal}</p>
+            {{#if prices.saving }}<p>{/literal}{if isset($slicePf8.translate._or)}{$slicePf8.translate._or}{/if}{literal} {{ prices.saving }} {/literal}{$slicePf8.translate.currency} {if isset($slicePf8.translate.save)}{$slicePf8.translate.save}{/if}{literal}</p>{{/if}}
+          </div>
+          <p class="disponibility">
+            {{ prices.disponibility.text }}{{ prices.disponibility.nbDays }}
+            {{#ifCond prices.disponibility.nbDays 1}}
+                {{ prices.disponibility.days.[0] }}
+            {{else}}
+                {{ prices.disponibility.days.[1] }}
+            {{/ifCond}}
+          </p>
+          <div class="custom-button-group">
+            <a href="{{ this.urlCtaOffre }}" class="cta-btn cta-btn-4" title="{/literal}{$slicePf8.translate.profit}{literal}" target="{{#if this.target}}{{this.target}}{{else}}_self{{/if}}">{/literal}{$slicePf8.translate.profit}{literal}</a>
+          </div>
+        </div>
+        <div class="line"></div>
+      </article>
+      {/literal}
+      {if isset($slicePf8.isRegional)}
+      <section class="nav pdv">
+        <div id="map-canvas" class="map-display"></div>
+        <div class="list-result">
+          <div class="list-dealer">
+            <div>
+              {literal}
+              <article class="clearfix span_12_of_12">
+                <div class="km span_2_of_12">
+                  <span class="dist">{{ dealer.distanceKm }}</span>
+                  <span class="dist-type">{/literal}{$slicePf8.translate.distType}{literal}</span>
+                </div>
+                <div class="name span_4_of_12">
+                  <span class="dealer-name">{{ dealer.name }}</span>
+                  <span class="dealer-city">- {{ dealer.address.city }}</span>
+                  <span class="dealer-cp"> ({{ dealer.address.postal_code }})</span>
+                </div>
+                <div class="address span_4_of_12">
+                  <span class="dealer-street">{{ dealer.address.street }}</span>
+                </div>
+                <div class="phone span_2_of_12">
+                  <p class="dealer-tel">{/literal}{$slicePf8.translate.phone}{literal} {{ dealer.contact.tel }}</p>
+                </div>
+              </article>
+              {/literal}
+            </div>
+          </div>
+        </div>
+      </section>
+      {/if}
+      {literal}
+      {{/listCars}}
+      {/literal}
+    </div>
+  </section>
+  {else}
+  <section class="list-car
+  {if isset($slicePf8.noNav)}product{/if}
+  {if isset($slicePf8.isRegional)}regional{/if}">
+    <div>
+      {literal}
+      {{#listDealer}}
+      {{#if @first}}
+      {{#listCars}}
+      <article class="span_12_of_12 clearfix">
+        <div class="car grid-col span_4_of_12">
+          <img src="{{ this.imageSrc }}" alt="{{ this.imageAlt }}" />
+        </div>
+        <div class="model grid-col span_4_of_12">
+          {{#if news}}<span>{/literal}{$slicePf8.translate.news}{literal}</span>{{/if}}
+          <h3>{{ title }}</h3>
+          <p>{{ engine }} </p>
+          <p>{{ painting }} </p>
+          <p><span>{/literal}{$slicePf8.translate.trimming}{literal}</span> : {{ trimming }} </p>
+          <p><span>{/literal}{$slicePf8.translate.consumption}{literal}</span> : {{ consumption }} </p>
+          <p><span>{/literal}{$slicePf8.translate.emission}{literal}</span> : {{ emission }} - g/{/literal}{$slicePf8.translate.distType}{literal}</p>
+        </div>
+        <div class="offer grid-col span_4_of_12">
+          <div class="prices">
+            <p>{{ prices.price }} {/literal}{$slicePf8.translate.currency}{literal}</p>
+            <p>{/literal}{$slicePf8.translate.price_advice}{literal} {{ prices.advice }} {/literal}{$slicePf8.translate.currency}{literal}</p>
+            {{#if prices.saving }}<p>{/literal}{if isset($slicePf8.translate._or)}{$slicePf8.translate._or}{/if}{literal} {{ prices.saving }} {/literal}{$slicePf8.translate.currency} {if isset($slicePf8.translate.save)}{$slicePf8.translate.save}{/if}{literal}</p>{{/if}}
+          </div>
+          <p class="disponibility">
+            {{ prices.disponibility.text }}{{ prices.disponibility.nbDays }}
+            {{#ifCond prices.disponibility.nbDays 1}}
+                {{ prices.disponibility.days.[0] }}
+            {{else}}
+                {{ prices.disponibility.days.[1] }}
+            {{/ifCond}}
+          </p>
+          <div class="custom-button-group">
+            <a href="{{ this.urlCtaOffre }}" class="cta-btn cta-btn-4" title="{/literal}{$slicePf8.translate.profit}{literal}" target="{{#if this.target}}{{this.target}}{{else}}_self{{/if}}">{/literal}{$slicePf8.translate.profit}{literal}</a>
+          </div>
+        </div>
+        <div class="line"></div>
+      </article>
+      {/literal}
+      {if isset($slicePf8.isRegional)}
+      <section class="nav pdv">
+        <div id="map-canvas" class="map-display"></div>
+        <div class="list-result">
+          <div class="list-dealer">
+            <div>
+              {literal}
+              {{#listDealer}}
+              {{#if @first}}
+              <article class="clearfix span_12_of_12">
+                <div class="km span_2_of_12">
+                  <span class="dist">{{ distanceKm }}</span>
+                  <span class="dist-type">{/literal}{$slicePf8.translate.distType}{literal}</span>
+                </div>
+                <div class="name span_4_of_12">
+                  <span class="dealer-name">{{ name }}</span>
+                  <span class="dealer-city">- {{ adress.city }}</span>
+                </div>
+                <div class="address span_4_of_12">
+                  <span class="dealer-street">{{ adress.street }}</span>
+                </div>
+                <div class="phone span_2_of_12">
+                  <p class="dealer-tel">{/literal}{$slicePf8.translate.phone}{literal} {{ contact.tel }}</p>
+                </div>
+              </article>
+              {{/if}}
+              {{/listDealer}}
+              {/literal}
+            </div>
+          </div>
+        </div>
+      </section>
+      {/if}
+      {literal}
+      {{/listCars}}
+      {{/if}}
+      {{/listDealer}}
+      {/literal}
+    </div>
+  </section>
+  {/if}
+  <section class="slice-inside-margin bottom">
+    <div class="custom-button-group clearfix">
+      {foreach $slicePf8.translate.ctaList as $cta}
+        {include file="./cta.html.smarty"}
+      {/foreach}
+    </div>
+    <p class="mentions">{$slicePf8.translate.legal_notices}</p>
+  </section>
+</section>

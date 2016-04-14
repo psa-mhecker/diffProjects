@@ -1,0 +1,585 @@
+.viewManager{
+	position:relative;
+	display:block;
+	width:1024px;
+	height:372px;
+	overflow:hidden;
+
+	.control-btns{
+		position:absolute;
+		z-index:1000;
+		left:28px;
+		top:100%;
+		display:block;
+		padding:0;
+		width:43px;
+		height:43px;
+		line-height:0;
+		font-size:0;
+		@include css3(transition, .5s ease-in-out);
+
+		.btn,
+		.sbtn,
+		.switch{
+			padding:3px;
+			border:1px solid $champagne_trans50;
+			background-color:$dark_brown_1_trans50;
+			@include transition(all, .25s ease-in-out);
+			cursor:pointer;
+
+			&:before{
+
+			}
+
+			&.menu-tog{
+				padding:15px;
+				margin-bottom:22px;
+				white-space:nowrap;
+
+				&:before{
+					display:inline-block;
+					content:'';
+					@extend %_sprites;
+					@extend %_sprite-vm-tog-menu-champagne-off;
+					margin-right:5px;
+					vertical-align:middle;
+				}
+
+				span{
+					display:inline-block;
+					@extend .fs-small-xx;
+					color:$champagne;
+					text-transform:uppercase;
+					line-height:15px;
+					text-align:left;
+					vertical-align:middle;
+
+				}
+
+				&.on,
+				&:hover{
+
+					&:before{
+						@extend %_sprite-vm-tog-menu-champagne-on;
+					}
+
+				}
+			}
+			
+			&.fullscreen-tog{
+				position:relative;
+				margin-bottom:7px;
+
+				&:before{
+					position:absolute;
+					left:3px;
+					top:3px;
+					z-index:1;
+					display:block;
+					content:'';
+					@extend %_sprites;
+					@extend %_sprite-vm-tog-fs-chocolate-off;
+				}
+
+				span{
+					display:block;
+					width:35px;
+					height:35px;
+					text-indent:-10000px;
+					overflow:hidden;
+					background-color:$champagne_trans0;
+					@include transition(background, .25s ease-in-out);
+				}
+
+				&:hover{
+
+					span{
+						background-color:$champagne_trans100;
+					}
+
+					&:before{
+						@extend %_sprite-vm-tog-fs-chocolate-on;
+					}
+
+				}
+
+				&.on{
+					position:absolute;
+					right:-931px;
+					top:-49px;
+					width:14px;
+					height:14px;
+					background:none;
+					border:none;
+
+					span{
+						display:none;
+					}
+
+					&:before{
+						@extend %_sprite-close;
+					}
+
+					&:hover{
+
+						&:before{
+							@extend %_sprite-close;
+						}
+					}
+				}
+			}
+			
+			&.outside-tog{
+				position:relative;
+				border-bottom:0;
+				padding-bottom:0;
+
+				&:before{
+					position:absolute;
+					left:3px;
+					top:3px;
+					z-index:1;
+					display:block;
+					content:'';
+					@extend %_sprites;
+					@extend %_sprite-vm-tog-outside-chocolate-off;
+				}
+
+				span{
+					display:block;
+					width:35px;
+					height:35px;
+					text-indent:-10000px;
+					overflow:hidden;
+					background-color:$champagne_trans0;
+					@include transition(background, .25s ease-in-out);
+				}
+
+				&:hover{
+
+					span{
+						background-color:$champagne_trans100;
+					}
+
+					&:before{
+						@extend %_sprite-vm-tog-outside-chocolate-on;
+					}
+
+				}
+			}
+			
+			&.inside-tog{
+				position:relative;
+				border-top:0;
+				padding-top:0;
+
+				&:before{
+					position:absolute;
+					left:3px;
+					top:0;
+					z-index:1;
+					display:block;
+					content:'';
+					@extend %_sprites;
+					@extend %_sprite-vm-tog-inside-chocolate-off;
+				}
+
+				span{
+					display:block;
+					width:35px;
+					height:35px;
+					text-indent:-10000px;
+					overflow:hidden;
+					background-color:$champagne_trans0;
+					@include transition(background, .25s ease-in-out);
+				}
+
+				&.on,
+				&:hover{
+					span{
+						background-color:$champagne_trans100;
+					}
+					&:before{
+						@extend %_sprite-vm-tog-inside-chocolate-on;
+					}
+				}
+
+			}
+			
+			&.simulation-tog{
+				position:relative;
+				margin-top:7px;
+				padding:0;
+
+				&:before{
+					position:absolute;
+					left:3px;
+					top:3px;
+					z-index:1;
+					display:block;
+					content:'';
+					@extend %_sprites;
+					@extend %_sprite-vm-tog-simulation-champagne-off;
+				}
+
+				span{
+					display:block;
+					width:41px;
+					height:41px;
+					text-indent:-10000px;
+					overflow:hidden;
+					background-color:$champagne_trans0;
+					@include transition(background, .25s ease-in-out);
+				}
+
+				&.on,
+				&:hover{
+					span{
+						background-color:$champagne_trans100;
+					}
+					&:before{
+						@extend %_sprite-vm-tog-simulation-chocolate-on;
+					}
+				}
+
+			}
+		}
+		.inside-tog + .simulation-tog{
+			opacity:0;
+		}
+		.inside-tog.on + .simulation-tog{
+			opacity:1;
+		}
+	}
+
+	.views{
+		display:block;
+		width:1024px;
+		height:372px;
+		overflow:hidden;
+		font-size:0;
+		white-space:nowrap;
+	}
+
+	&.loading{
+		.control-btns{
+			top:100%;
+		}
+		.views{
+			position:relative;
+			&:before{
+				content:'';
+				position:absolute;
+				z-index:2;
+				left:0;
+				top:0;
+				width:100%;
+				height:100%;
+				background-color:$dark_brown_1_color;
+				background-image:url(../img/loader_black.gif);
+				background-position:center center;
+				background-repeat:no-repeat;
+				opacity:0.9;
+			}
+		}
+	}
+	&.loaded{
+		.control-btns{
+			top:31px;
+		}
+	}
+	.view{
+		display:inline-block;
+		width:1024px;
+		height:372px;
+		white-space:normal;
+
+		.subview{
+			display:block;
+			width:100%;
+			height:100%;
+		
+			&.simulation{
+
+				&:before{
+					position:absolute;
+					left:50%;
+					top:50%;
+					z-index:1;
+					display:block;
+					content:'';
+					margin:-11px 0 0 -10px;
+					width:20px;
+					height:23px;
+					@extend %_sprites;
+					@extend %_sprite-vm-simulation-cursor;
+					opacity:1;
+					@include transition(opacity, .50s ease-in-out);
+				}
+
+				&.touched{
+
+					&:before{
+						opacity:0;
+					}
+
+				}
+
+			}
+		}
+
+		.slick{
+
+		}
+
+		.item{
+
+			figure{
+				margin:0;
+
+				img{
+					
+				}
+
+			}
+
+		}
+
+		&.outside{
+
+		}
+		
+		&.inside{
+
+		}
+
+	}
+
+	.slick-slider{
+		margin-bottom:0;
+	}
+
+	.slick-dots{
+		bottom:15px;
+		z-index:1000;
+
+		li{
+			margin:0;
+			width:27px;
+			height:27px;
+			button{
+				padding:0;
+				width:27px;
+				height:27px;
+				@include transition(rotate, .50s ease-in-out);
+				&:before{
+					content:'';
+					@extend %_sprites;
+					@extend %_sprite-slick-pager-champagne-off;
+					opacity:1;
+
+				}
+
+				&:hover{
+					@include rotate(90deg);
+				}
+			}
+			&.slick-active{	
+				button{
+					@include rotate(180deg);
+					&:before{
+						@extend %_sprite-slick-pager-champagne-on;
+					}
+				}
+			}
+
+		}
+	}
+	&.outside{
+
+		.control-btns{
+
+			.btn,
+			.sbtn,
+			.switch{
+				background-color:$white_trans50;
+
+				&.menu-tog{
+
+					&:before{
+					}
+
+					&.on{
+
+					}
+				}
+
+				&.fullscreen-tog{
+
+					&:hover{
+
+						&:before{
+							@extend %_sprite-vm-tog-fs-champagne-on;
+						}
+
+					}
+
+				}
+
+				&.outside-tog{
+
+					&.on{
+
+						span{
+							background-color:$champagne_trans100;
+						}
+						
+						&:before{
+							@extend %_sprite-vm-tog-outside-champagne-on;
+						}
+					}
+				}
+				
+				&.inside-tog{
+
+					&:before{
+						@extend %_sprite-vm-tog-inside-champagne-off;
+					}
+
+					&:hover{
+
+						&:before{
+							@extend %_sprite-vm-tog-inside-champagne-on;
+						}
+
+					}
+
+				}
+			}
+		}
+
+		.slick-dots{
+			
+			li{
+
+				button{
+
+					&:before{
+						@extend %_sprite-slick-pager-chocolate-off;
+
+					}
+
+				}
+
+				&.slick-active{	
+					button{
+						&:before{
+							@extend %_sprite-slick-pager-chocolate-on;
+						}
+					}
+				}
+
+			}
+
+		}
+
+	}
+}
+
+.f02{
+	display:block;
+	margin:0 auto;
+	width:1024px;
+	height:372px;
+
+	.viewManager{
+
+		.control-btns{
+
+			&.fullscreen-tog{
+
+				&:hover{
+
+					&:before{
+						@extend %_sprite-vm-tog-fs-champagne-on;
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+.fs-f02-modal{
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:100000;
+	display:block;
+	width:100%;
+	height:100%;
+	background-color:$white;
+	text-align:center;
+	font-size:0;
+	white-space:nowrap;
+
+	&:before{
+		content:'';
+		display:inline-block;
+		margin-left:-1px;
+		width:1px;
+		height:100%;
+		vertical-align:middle;
+	}
+
+	.viewManager{
+		display:inline-block;
+		vertical-align:middle;
+		margin:0 auto;
+		height:auto;
+		overflow:visible;
+		white-space:normal;
+
+		.control-btns{
+			top:14px;
+
+			.menu-tog{
+				display:none;
+			}
+		}
+
+		.views,
+		.view{
+			height:auto;
+			overflow:visible;
+		}
+		.slick-dots{
+			bottom:-27px;
+
+			li{
+
+				button{
+
+					&:before{
+						@extend %_sprite-slick-pager-chocolate-off;
+
+					}
+
+				}
+
+				&.slick-active{	
+					button{
+						&:before{
+							@extend %_sprite-slick-pager-chocolate-on;
+						}
+					}
+				}
+
+			}
+		}
+	}
+}

@@ -1,0 +1,20 @@
+<section class="slice-pc39 {if isset($slicePC39.anchorId)} {$slicePC39.anchorId} {/if}" {if isset($slicePC39.anchorId)} id="{$slicePC39.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePC39' } ]" datalayer="{$slicePC39.datalayer}">
+  <div class="slides {if isset($slicePC39.slides3)}three-items{/if}">
+    {foreach $slicePC39.slides as $slide}
+    <div class="item">
+      {if isset($slide.ctaList)}
+        {foreach $slide.ctaList as $cta}
+          {include file="./cta.html.smarty"}
+        {/foreach}
+      {/if}
+
+      {if isset($slide.src) }
+      <figure>
+        <img {if $slide@first || (isset($slicePC39.slides3) && ($slide@index < '3') )}src{else}class="owl-lazy" data-src{/if}="{$slide.src}" alt="{$slide.alt}">
+      </figure>
+      {/if}
+    </div>
+    {/foreach}
+  </div>
+       
+</section>

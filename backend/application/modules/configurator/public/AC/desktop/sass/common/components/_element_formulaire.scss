@@ -1,0 +1,129 @@
+@charset "UTF-8";
+input{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+ .input{
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 10px;
+        width: 40px; height: 40px;
+        border: 1px solid #b8b8bb;
+        position: relative;
+    }
+.input-text {
+  margin: 0;
+  padding-top: 5px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  input{
+    border: 1px solid $input-default-border;
+  }
+  .check, .cross{
+    position: relative;
+    left: 25px;
+  }
+
+  .form-control {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 50%;
+    padding: 11px 16px;
+    border-radius: 0px;
+    box-shadow: none;
+    &.input {
+      border: 1px solid $input-default-border;
+      font-family: $font-family-base-regular;
+      color: $gray-dark;
+      box-shadow: none;
+      position: relative;
+      &.placeholder-text {
+        color: $gray-dark;
+      }
+    }
+
+    &.error {
+      border: 1px solid $error-color;
+      box-shadow: none;
+      position: relative;
+      &.error {
+        border-color: $error-color;
+      }
+    }
+  }
+
+
+  .error-msg {
+    color: $error-color;
+    font-size: $font-size-large;
+    font-weight: bold;
+    font-weight: bold;
+    display: inline-block;
+    width: auto;
+    margin: 5px 92px;
+    text-align: left;
+  }
+  .check_btn {
+    display: inline-block;
+    position: absolute;
+    content: "*";
+    top: 50%;
+
+    // @extend %_sprites;
+    // @extend %_sprite-checkbox-checked;
+    margin: 0 28px;
+  }
+  .check_btn-error {
+    display: inline-block;
+    position: absolute;
+    content: "*";
+    top: 35%;
+
+    // @extend %_sprites;
+    // @extend %_sprite-error-cross;
+    margin: 0 28px;
+    border: none;
+  }
+  label {
+    text-align: right;
+    width: 13%;
+    line-height: 3;
+    margin: 0;
+    padding: 0 12px 0 0;
+    font-size: 16px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+// conditions particulières
+.filtres-content {
+  margin-left: 0;
+  cursor: pointer;
+  p {
+    margin: 10px 0;
+    label {
+      margin-right: 10px;
+      input[type="checkbox"],
+      input[type="radio"] {
+        box-sizing: border-box;
+        padding: 0;
+      }
+      .input {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 10px;
+        width: 40px;
+        height: 40px;
+        border: 1px solid #b8b8bb;
+        position: relative;
+      }
+    }
+  }
+}

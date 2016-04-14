@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:cxl="http://fault.core.cxl.inetpsa.com" xmlns:soap11="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope" xmlns:soapenc11="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soapenc12="http://www.w3.org/2003/05/soap-encoding" xmlns:tn="http://com/inetpsa/dcr/xml/services/bend/boformservice" xmlns:tns="http://xml.inetpsa.com/Services/bend/BOFormService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://xml.inetpsa.com/Services/bend/BOFormService">
+      
+<xsd:import schemaLocation="BOFormService.xsd2.xsd" namespace="http://fault.core.cxl.inetpsa.com"/>
+      
+<xsd:import schemaLocation="BOFormService.xsd1.xsd" namespace="http://com/inetpsa/dcr/xml/services/bend/boformservice"/>
+      
+<xsd:element name="getInstances">
+        
+<xsd:complexType>
+          
+<xsd:sequence>
+            
+<xsd:element maxOccurs="1" minOccurs="1" ref="tn:getInstancesRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      
+<xsd:element name="getInstancesResponse">
+        
+<xsd:complexType>
+          
+<xsd:sequence>
+            
+<xsd:element maxOccurs="1" minOccurs="1" ref="tn:getInstancesResponse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      
+<xsd:element name="getInstanceById">
+        
+<xsd:complexType>
+          
+<xsd:sequence>
+            
+<xsd:element maxOccurs="1" minOccurs="1" ref="tn:getInstanceByIdRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      
+<xsd:element name="getInstanceByIdResponse">
+        
+<xsd:complexType>
+          
+<xsd:sequence>
+            
+<xsd:element maxOccurs="1" minOccurs="1" ref="tn:getInstanceByIdResponse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      
+<xsd:element name="updateInstance">
+        
+<xsd:complexType>
+          
+<xsd:sequence>
+            
+<xsd:element maxOccurs="1" minOccurs="1" ref="tn:updateInstanceRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      
+<xsd:element name="updateInstanceResponse">
+        
+<xsd:complexType>
+          
+<xsd:sequence>
+            
+<xsd:element maxOccurs="1" minOccurs="1" ref="tn:updateInstanceResponse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      
+<xsd:element name="getReporting">
+        
+<xsd:complexType>
+          
+<xsd:sequence>
+            
+<xsd:element maxOccurs="1" minOccurs="1" ref="tn:getReportingRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      
+<xsd:element name="getReportingResponse">
+        
+<xsd:complexType>
+          
+<xsd:sequence>
+            
+<xsd:element maxOccurs="1" minOccurs="1" ref="tn:getReportingResponse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      
+<xsd:element name="getLeadsByType">
+        
+<xsd:complexType>
+          
+<xsd:sequence>
+            
+<xsd:element maxOccurs="1" minOccurs="1" ref="tn:getLeadsByTypeRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      
+<xsd:element name="getLeadsByTypeResponse">
+        
+<xsd:complexType>
+          
+<xsd:sequence>
+            
+<xsd:element maxOccurs="1" minOccurs="1" ref="tn:getLeadsByTypeResponse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      
+<xsd:element name="getReferential">
+        
+<xsd:complexType>
+          
+<xsd:sequence>
+            
+<xsd:element maxOccurs="1" minOccurs="1" ref="tn:getReferentialRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      
+<xsd:element name="getReferentialResponse">
+        
+<xsd:complexType>
+          
+<xsd:sequence>
+            
+<xsd:element maxOccurs="1" minOccurs="1" ref="tn:getReferentialResponse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      
+<xsd:element name="getParameters">
+        
+<xsd:complexType>
+          
+<xsd:sequence>
+            
+<xsd:element maxOccurs="1" minOccurs="1" ref="tn:getParametersRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      
+<xsd:element name="getParametersResponse">
+        
+<xsd:complexType>
+          
+<xsd:sequence>
+            
+<xsd:element maxOccurs="1" minOccurs="1" ref="tn:getParametersResponse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      
+<xsd:element name="updateParameters">
+        
+<xsd:complexType>
+          
+<xsd:sequence>
+            
+<xsd:element maxOccurs="1" minOccurs="1" ref="tn:updateParametersRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      
+<xsd:element name="updateParametersResponse">
+        
+<xsd:complexType>
+          
+<xsd:sequence>
+            
+<xsd:element maxOccurs="1" minOccurs="1" ref="tn:updateParametersResponse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      
+<xsd:element name="duplicateInstance">
+        
+<xsd:complexType>
+          
+<xsd:sequence>
+            
+<xsd:element maxOccurs="1" minOccurs="1" ref="tn:duplicateInstanceRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      
+<xsd:element name="duplicateInstanceResponse">
+        
+<xsd:complexType>
+          
+<xsd:sequence>
+            
+<xsd:element maxOccurs="1" minOccurs="1" ref="tn:duplicateInstanceResponse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      
+<xsd:element name="ServiceException" type="cxl:ServiceException"/>
+    </xsd:schema>

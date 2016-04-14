@@ -1,0 +1,89 @@
+.slice-df42{
+  .nb{
+    color: $warm-black;
+    font-family: $font-family-base-regular;
+    span{
+      color: $champagne;
+      margin-right: 10px;
+    }
+  }
+  .btnRight > div.col-md-9 {
+    padding: 5px 0;
+  }
+  > p{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: $font-size-x-large;
+    margin-bottom: 0 0 10px 0;
+  }
+  .title-type{
+    color: $champagne;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: $font-size-x-large;
+  }
+  .list-vignette{
+    margin: 8px 0 0 0;
+  }
+  .notification{
+    margin: 29px 0 0 0;
+  }
+  .more-choice{
+    margin: 29px 0;
+  }
+  .infoPrice{
+    cursor: pointer;
+    position: absolute;
+    top: 11px;
+    right: 11px;
+  }
+  .lame
+  .input-checkbox input[type="checkbox"] ~ label .input-text--checked,
+  .input-checkbox input[type="radio"] ~ label .input-text--checked,
+  .input-radio input[type="checkbox"] ~ label .input-text--checked,
+  .input-radio input[type="radio"] ~ label .input-text--checked {
+    display: none;
+  }
+  .input-checkbox input[type="checkbox"]:checked ~ label .input-text--checked,
+  .input-checkbox input[type="radio"]:checked ~ label .input-text--checked,
+  .input-radio input[type="checkbox"]:checked ~ label .input-text--checked,
+  .input-radio input[type="radio"]:checked ~ label .input-text--checked {
+    display: inline-block;
+  }
+  .input-checkbox input[type="checkbox"] ~ label .input-text,
+  .input-checkbox input[type="radio"] ~ label .input-text,
+  .input-radio input[type="checkbox"] ~ label .input-text,
+  .input-radio input[type="radio"] ~ label .input-text {
+    display: inline-block;
+  }
+  .input-checkbox input[type="checkbox"]:checked ~ label .input-text,
+  .input-checkbox input[type="radio"]:checked ~ label .input-text,
+  .input-radio input[type="checkbox"]:checked ~ label .input-text,
+  .input-radio input[type="radio"]:checked ~ label .input-text {
+    display: none;
+  }
+  .lame{
+    .cont-toggle.slickVertical{
+      border: none;
+      padding-left: 0px;
+      &:before{
+        display: none;
+      }
+      .infoPrice{
+        margin-left: 0px;
+      }
+    }
+    .price{
+      display: inline-block;
+      font-family: $font-family-base-regular;
+      font-size: 13px;
+      color: #000;
+    }
+    .infoPrice{
+      display: inline-block;
+      margin-left: 15px;
+      position: relative;
+      top: 3px;
+    }
+  }
+}

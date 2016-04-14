@@ -1,0 +1,20 @@
+<section class="slice-pn10 {if isset($slicePN10.anchorId)} {$slicePN10.anchorId} {/if}" {if isset($slicePN10.anchorId)} id="{$slicePN10.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePN10' } ]" datalayer="{$slicePN10.datalayer}">
+    <nav>
+      {if isset($slicePN10.PRM)}
+        <a href="{$slicePN10.PRM.url}" {if isset($slicePN10.PRM.target)}target="{$slicePN10.PRM.target}"{/if}>
+          {$slicePN10.PRM.txt}
+        </a>
+      {/if}
+      {if isset($slicePN10.headerLightItems)}
+      <ul>
+          {foreach $slicePN10.headerLightItems as $item}
+              <li>
+                  <a href="{$item.url}" {if isset($item.class)}class="icon {$item.class}"{/if} {if isset($item.target)}target="{$item.target}"{/if}>
+                      {$item.txt}
+                  </a>
+              </li>
+          {/foreach}
+      </ul>
+      {/if}
+    </nav>
+</section>

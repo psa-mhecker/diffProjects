@@ -1,0 +1,14 @@
+<section class="slice-pc75 {if isset($slicePC75.anchorId)} {$slicePC75.anchorId} {/if}" {if isset($slicePC75.anchorId)} id="{$slicePC75.anchorId}" {/if}>
+    <h2>{$slicePC75.megaBannerTitle}</h2>
+    {if isset($slicePC75.megaBannerSubTitle)}
+        <p>{$slicePC75.megaBannerSubTitle}</p>
+    {/if}
+    <figure>
+        <a href="{$slicePC75.megaBannerLink.href}"{if isset($slicePC75.megaBannerLink.target)} target="{$slicePC75.megaBannerLink.target}"{/if}>
+            <img src="{$slicePC75.megaBannerImage.src}" alt="{$slicePC75.megaBannerImage.alt}">
+        </a>
+    </figure>
+    <a href="{$slicePC75.megaBannerLink.href}"{if isset($slicePC75.megaBannerLink.target)} target="{$slicePC75.megaBannerLink.target}"{/if}>
+        {$slicePC75.megaBannerLink.title}
+    </a>
+</section>

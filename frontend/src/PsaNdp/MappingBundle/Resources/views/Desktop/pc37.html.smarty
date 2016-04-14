@@ -1,0 +1,29 @@
+<section class="slice-pc37 {if isset($slicePC37.anchorId)} {$slicePC37.anchorId} {/if}" {if isset($slicePC37.anchorId)} id="{$slicePC37.anchorId}" {/if}>
+  {if isset($slicePC37.benefitsTitle)}
+    <h1>{$slicePC37.benefitsTitle}</h1>
+  {/if}
+  <section class="benefits clearfix">
+    {foreach $slicePC37.benefitsList as $item}
+    <article class="benefit-item span_4_of_12 clearfix">
+      <figure>
+        <img src="{$item.img.src}" alt="{$item.img.alt}">
+      </figure>
+      <div class="benefit-detail">
+        {if isset($item.title)}
+          <h2>{$item.title}</h2>
+        {/if}
+        {if isset($item.desc)}
+          <p>{$item.desc}</p>
+        {/if}
+        {if isset($item.ctaList)}
+        <p class="custom-button-group clearfix">
+          {foreach $item.ctaList as $cta}
+          {include file="./cta.html.smarty"}
+          {/foreach}
+        </p>
+        {/if}
+      </div>
+    </article>
+    {/foreach}
+  </section>
+</section>

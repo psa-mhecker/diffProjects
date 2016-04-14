@@ -1,0 +1,51 @@
+.toggle, .configLame .toggle-container{
+  // padding-top: 16px;
+  display: block;
+  @include clearfix;
+
+  .tit-toggle:not(.addComparator), .toggle-title:not(.addComparator){
+    display: block;
+    padding: 20px 24px 16px;
+    font: 400 14px/14px $font-family-brand-bold;
+    text-transform: uppercase;
+    position: relative;
+    background: #e7e6ed;
+    cursor: pointer;
+
+    b{
+      font-weight: 400;
+    }
+
+    &:after{
+      content: "";
+      position: absolute;
+      right: 24px; top: 50%;
+      margin: -4px 0 0;
+      /* @extend %_sprites;
+      @extend %_sprite-expand-arrow-1-bottom; */
+
+    }
+    &.close{
+      &:after{
+        // @extend %_sprite-expand-arrow-1-top;
+      }
+    }
+  }
+
+
+  .cont-toggle, .toggle-content{
+    height: 0;
+    overflow: hidden;
+    clear: left;
+    > div{
+      overflow: hidden;
+    }
+    > .row {
+      position: relative;
+    }
+
+    .cont-toggle, .toggle-content{
+      margin-top: 11px;
+    }
+  }
+}

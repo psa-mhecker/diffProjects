@@ -1,0 +1,84 @@
+.slice-cf65{
+    p{
+        margin-top: 30px;
+    }
+
+    .form-heading{
+        font-family: $font-family-base-bold;
+        font-weight: bold;
+        color: $gray-citroen;
+    }
+
+    .input-text{
+        margin-top:3px;
+        padding-top:15px;
+        label{
+            width:30%;
+            line-height:2;
+        }
+        input{
+            font-size:14px;
+            width:39.65%;
+            color:$gray-citroen;
+        }
+    }
+
+    h1{
+        font-size:24px;
+        color:$gray-citroen;
+    }
+
+    .elemnt_input{
+        .error-msg{
+            margin: 12px 92px 0 30.5%;
+        }
+    }
+
+    .legal-info{
+        padding:0 56px;
+        margin-bottom:40px;
+        &__text{
+            font-size:14px;
+            line-height:20px;
+            margin:33px 0 40px;
+        }
+
+        .cross{
+            padding-left:20px;
+        }
+        .error-msg{
+            display: block;
+            color: $magenta;
+            text-align: center;
+            font: 14px/1.2 $font-family-base-bold;
+            margin: 12px 0 0 0;
+        }
+    }
+
+    .input-checkbox{
+        margin-left:0;
+        input[type="checkbox"]:checked ~ label .checkbox_btn {
+            border-color: $brand-lavender-grey;
+            i{
+                width: 35px;
+            }
+        }
+        label {
+            color: $gray-citroen;
+            text-transform: inherit;
+            font-family: $font-family-base-regular;
+            .label{
+                width: auto;
+            }
+        }
+    }
+    .text-link{ 
+        text-decoration: underline;
+        display: block;
+        margin-top:20px;
+        text-align:center;
+    }
+    .button-link{
+        text-align: center;
+    }
+}

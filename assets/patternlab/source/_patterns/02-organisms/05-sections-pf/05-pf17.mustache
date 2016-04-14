@@ -1,0 +1,34 @@
+<section class="slice-pf17">
+    <div class="row">
+        <section class="form-wrapper small-12 columns">
+            <div class="error notification hide">
+                <p>
+                    <span class="information">i</span>
+                    Nous ne pouvons pas afficher forms merci de revenir plus tards !
+                </p>
+            </div>
+            <div id="wf_form_content" class="wf_form_content"></div>
+            <div class="confirm-forms hide">
+                <div class="small-12 confirm-message">
+                    <p class="name"></p>
+                    Texte de la demande
+
+                    <script class="replace-values" type="text/template">
+                        template de confirmation de mail
+                    </script>
+                    texte en plus
+                </div>
+                <div class="small-12 medium-6 columns">
+                    <div class="cta-container">
+                        {{> atoms-cta-full-width }}
+                    </div>
+                </div>
+                <div class="small-12 medium-6 columns text-center my-peugeot">
+                    {{> atoms-images-srcset}}
+                    <p>My Peugeot Description</p>
+                    {{> atoms-cta-full-width }}
+                </div>
+            </div>
+        </section>
+    </div>
+</section>

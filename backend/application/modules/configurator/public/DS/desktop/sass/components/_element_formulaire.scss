@@ -1,0 +1,194 @@
+
+	.border-pj-error{
+		border:1px solid $carmin;
+	}
+
+	.input_bloc{
+		display:inline-block;
+		color:$warm-chocolate;
+		overflow:hidden;
+		text-align:left;
+		padding:11px 16px;
+		span.error-requis{
+			color:$carmin;
+			display:block;
+			text-align:left;
+			font-size:small;
+			display: block;
+			width: auto;
+			margin-left: 113px;
+		}
+		.select {
+			display: inline-block;
+			width: 335px;
+			height: auto;
+			font-family:$font-family-base-regular;
+			font-size:$font-size-base;
+			text-transform:uppercase;
+			span.arrow-select-form {
+				display:block;
+				width: 30px;
+				height: 30px;
+				position: absolute;
+				z-index: 9;
+				right: 0;
+				color:$warm-chocolate;
+				cursor:pointer;
+			}
+		}
+		.dropdown_select{
+			display: inline-block;
+			width: 335px;
+			height: auto;
+			margin: 0 114px;
+			.list_togle {
+			display: inline-block;
+			color:$warm-chocolate;
+			width: 100%;
+			overflow: hidden;
+			margin-top: 5px;
+			}
+		}
+	.label_pj {
+		width: auto;
+		text-align: right;
+		display: inline-block;
+		vertical-align: top;
+		padding: 10px;
+		float: left;
+		}
+
+	.border-pj-default{
+		border:1px solid $light-champagne;
+		}
+	.color-text{
+		color:$warm-chocolate;
+		}
+	.color-label-error{
+		color:$carmin;
+		}
+
+	.label{
+		width: 111px;
+		text-align:right;
+		display:inline-block;
+		vertical-align:middle;
+		padding:10px;
+		sub.expo {
+			display: inline;
+		    position: relative;
+		    z-index: 9;
+		    width: 7px;
+		    height: 7px;
+		    float: right;
+		    top: 5px;
+		    bottom: 0;
+			}
+		}
+		
+	.fileUpload {
+		overflow: hidden;
+		margin: 0 10px;
+		width: 139px;
+		border-radius: 0;
+		cursor: pointer;
+		height: 37px;
+		float: left;
+		span{
+			color: red;
+			padding: 10px;
+			display: inline;
+			text-align: center;
+		}
+	 input.upload{
+			position: absolute;
+			margin: 0;
+			padding: 0;
+			font-size: 20px;
+			cursor: pointer;
+			opacity: 0;
+			filter: alpha(opacity=0);
+
+		}
+
+	}
+		
+	.input_select{
+		font-family:$font-family-base-regular;
+		box-shadow:none;
+		position:relative;
+		padding:10px;
+		width:355px;
+		border:none;
+		background:$light-champagne;
+		 -webkit-appearance: none !important;  // remove shadow in iOS
+  		 border-radius:0;  // remove border-radius in iOS
+		&.placeholder-text{
+		color:$warm-chocolate;
+		text-transform:uppercase;
+		font-size:$font-size-base;
+		text-align:left;
+		}
+		&.border-input-error{
+			border:1px solid $carmin;
+		}
+
+	}
+	.dropdown-select{
+		top:0;
+		top: 17px;
+		text-align: right;
+		float: right;
+		position: relative;
+		left: -28px;
+		display: block;
+		z-index: 999;
+	}
+	.btn-validad{
+		top:0;
+		top: 7px;
+		float: right;
+		position: relative;
+		display: inline-block;
+		z-index: 999;
+		left: -39px;
+	}
+
+	.error-text{
+		font-size:$font-size-base;
+		float: right;
+		text-align: left;
+		vertical-align: middle;
+		position: relative;
+		display: inline-block;
+		font-size: 11px;
+		margin: 0 25px;
+		width: 41%;
+		font-family:$font-family-base-regular;
+	}
+	.error-label{
+		width:auto;
+		float:left;
+	}
+
+	.input-error-type{
+		border:2px solid $carmin;
+		-webkit-appearance: none !important;  // remove shadow in iOS
+		border-radius:0;  // remove border-radius in iOS
+		font-family:$font-family-base-regular;
+		box-shadow:none;
+		position:relative;
+		color:$carmin;
+		background:$champagne;
+		&.input-error-type:before{
+			text-align:right;
+			float:right;
+		}
+		&.error-color{
+			color:$carmin;
+			font-family:$font-family-base-regular;
+		}
+	}
+	
+
+	}

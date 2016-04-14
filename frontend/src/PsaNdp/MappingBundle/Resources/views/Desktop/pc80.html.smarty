@@ -1,0 +1,98 @@
+<section class="slice-pc80 {if isset($slicePC80.anchorId)} {$slicePC80.anchorId} {/if}" {if isset($slicePC80.anchorId)} id="{$slicePC80.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePC80' } ]">
+  <section class="zone1">
+    {if isset($slicePC80.visu)}
+      <img src="{$slicePC80.visu.urlImg}" alt="{$slicePC80.visu.altImg}" class="big-visu">
+    {/if}
+    <h2 class="title">{$slicePC80.title}</h2>
+    {if isset($slicePC80.subtitle)}
+      <p class="subtitle">{$slicePC80.subtitle}</p>
+    {/if}
+  </section>
+  {if isset($slicePC80.carrousel)}
+    <section class="zone2">
+      <div class="owl-carousel">
+        {foreach $slicePC80.carrousel as $visu}
+          <div class="visu" data-item="{$visu@index}">
+            <img src="{$visu.imgUrl}" alt="{$visu.imgAlt}" title="{$visu.imgAlt}">
+            {if isset($visu.text)}
+              <p class="linkText {if $visu.light eq 'true'}light{/if}">{$visu.text}</p>
+            {/if}
+          </div>
+        {/foreach}
+      </div>
+      <div class="line"><div class="arrow"></div></div>
+    </section>
+  {/if}
+  {if isset($slicePC76)}
+    <section class="zone3">
+      <a href="#" class="close">{$slicePC76.close}</a>
+      {foreach $slicePC76.descList as $item}
+        <div class="desc descItem{$item@index}">
+          <h1>{$item.title}</h1>
+          <h2>{$item.subTitle}</h2>
+          {if isset($item.promoFiches)}
+          <div class="fiches clearfix">
+            {foreach $item.promoFiches as $fiche}
+            <div {if $item.promoFiches|@count === 2}class="grid-col span_6_of_12"{/if}>
+              {if isset($fiche.gift)}<p class="gift">{$fiche.gift}</p>{/if}
+              <p>
+                {if !isset($fiche.libelle.position)}
+                <span>{$fiche.libelle.text}</span>
+                {/if}
+                <span class="price"><!--
+                  -->{$fiche.price.sum}{$fiche.price.devise}<!--
+                  -->{if isset($fiche.price.indice)}<sup>({$fiche.price.indice})</sup>{/if}<!--
+                --></span>
+                {if isset($fiche.libelle.position)}
+                <span>{$fiche.libelle.text}</span>
+                {/if}
+              </p>
+
+              <div class="list-box">
+
+                <ul class="descriptions">
+                {foreach $fiche.descriptions as $description}
+                  <li>{$description.text}</li>
+                {/foreach}
+                </ul>
+                {if isset($item.promoCTA)}
+                <div class="custom-button-group">
+                {foreach $item.promoCTA as $cta}
+                  <a href="{$cta.url}" class="cta-block cta-btn cta-btn-4"><span>{$cta.text}</span></a>
+                {/foreach}
+                </div>
+                {/if}
+
+              </div>
+
+            </div>
+            {/foreach}
+
+          </div>
+          {/if}
+
+
+
+          {if isset($item.promoLinks)}
+          <div class="links-group">
+          {foreach $item.promoLinks as $link}
+            <a href="{$link.url}">{$link.text}</a>
+          {/foreach}
+          </div>
+          {/if}
+
+          {if isset($item.promoText)}
+          <div class="text-rich">
+            {$item.promoText}
+          </div>
+          {/if}
+          {if isset($item.mention)}
+          <div class="text-mention">
+            {$item.mention}
+          </div>
+          {/if}
+        </div>
+      {/foreach}
+    </section>
+  {/if}
+</section>

@@ -1,0 +1,11 @@
+parameters:
+    proxy:
+        isActive: true
+        protocole : http
+        host : http.internetpsa.inetpsa.com
+        port : 80
+        login : mdendp00
+        password : rcpel8z6
+        CURLOPT_PROXY: 'http://http.internetpsa.inetpsa.com'
+        CURLOPT_PROXYPORT: 80
+        CURLOPT_PROXYUSERPWD: 'mdendp00:rcpel8z6'

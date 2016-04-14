@@ -1,0 +1,53 @@
+<section class="slice-pt22 {if isset($slicePT22.anchorId)} {$slicePT22.anchorId} {/if}" {if isset($slicePT22.anchorId)} id="{$slicePT22.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePT22' } ]" datalayer="{$slicePT22.datalayer}">
+    <ul class="tool show">
+        <li><a href="{$slicePT22.mainLinkUser.url}" id="my-peugeot">{$slicePT22.mainLinkUser.title}</a>
+            <ul>
+                <li>
+                    <div class="main-content">
+                        <div class="pad-slice">
+                            <div class="header">
+                                <h1>{$slicePT22.title}</h1>
+                            </div>
+                            <div class="content">
+                                <div class="grid-col span_7_of_12">
+                                    <div class="block-content left wysiwyg-content">
+                                        {$slicePT22.description}
+                                    </div>
+                                </div>
+                                <div class="grid-col span_5_of_12">
+                                    <div class="block-content right">
+                                        <h2>{$slicePT22.signIn.label}</h2>
+                                        <p>
+                                            <a href="{$slicePT22.signIn.ctaList.url}" title="{$slicePT22.signIn.ctaList.title}" {if isset({$slicePT22.signIn.ctaList.target})}target="{$slicePT22.signIn.ctaList.target}"{/if} class="sign-in">{$slicePT22.signIn.ctaList.title}</a>
+                                        </p>
+                                        {if isset($slicePT22.signUp)}
+                                            <p>
+                                                <span>{$slicePT22.signUp.label}</span>
+                                                <a href="{$slicePT22.signUp.ctaList.url}" title="{$slicePT22.signUp.ctaList.title}" {if isset({$slicePT22.signUp.ctaList.target})}target="{$slicePT22.signUp.ctaList.target}"{/if} class="sign-up">{$slicePT22.signUp.ctaList.title}</a>
+                                            </p>
+                                        {/if}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {if isset($slicePT22.descriptionStoreApp)}
+                            <div class="footer">
+                                <div class="content-footer" style="background:url('{$slicePT22.contentFooter.background}') no-repeat 90px 0">
+                                    <h3>{$slicePT22.descriptionStoreApp}</h3>
+                                    <ul>
+                                        {foreach $slicePT22.appstores as $app}
+                                            <li>
+                                                <a href="{$app.href}" {if isset($app.target)}target="{$app.target}"{/if} title="{$app.title}"><img src="{$app.src}" alt="{$app.title}"></a>
+                                            </li>
+                                        {/foreach}
+                                    </ul>
+                                </div>
+                            </div>
+                        {/if}
+                    </div>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <div class="overlay"></div>
+</section>

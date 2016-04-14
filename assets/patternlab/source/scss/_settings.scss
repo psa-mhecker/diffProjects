@@ -1,0 +1,14 @@
+@charset "UTF-8";
+@import "../../../scss/settings";
+
+// b. Grid
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+$column-gutter: rem-calc(1);
+$custom-column-gutter: rem-calc(50);
+$custom-column-mobile-gutter: rem-calc(35);
+
+$slice-bottom : rem-calc(80);
+$slice-mobile-bottom : rem-calc(110);
+
+$slice-top : rem-calc(80);
+$slice-mobile-top : rem-calc(110);

@@ -1,0 +1,15 @@
+{
+  "twentytwenty-orientation": "vertical",
+  "img": {
+    "dragndrop-before-16x9": {
+      "src": "../../img/sample/landscape-16x9-mountains.jpg",
+      "alt": "16x9 Image",
+      "caption": ""
+    },
+    "dragndrop-16x9": {
+      "src": "../../img/sample/landscape-16x9-dragndrop.jpg",
+      "alt": "16x9 Image",
+      "caption": ""
+    }
+  }
+}

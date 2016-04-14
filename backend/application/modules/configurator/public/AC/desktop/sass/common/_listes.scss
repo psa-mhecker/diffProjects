@@ -1,0 +1,55 @@
+.listes {
+
+  .mix{margin-left: 10px!important;}
+
+  color: $gray-citroen;
+  margin: 0;
+  padding: 0;
+  font-size: $font-size-small;
+  font-family: $font-family-base-regular;
+  .checked {
+    display: block !important;
+    position: relative;
+    list-style-type: none;
+    margin: 24px 0;
+    padding-left: 17px;
+    @extend .check;
+    @extend .check--gray;
+    &:before {
+      position: absolute !important;
+      left: 0;
+      top: 3px;
+    }
+  }
+
+  // liste circle puces
+  .list_rond, .list_dark  {
+    position: relative;
+    list-style-type: none;
+    margin: 13px 0;
+    padding-left: 9px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 8px;
+      list-style-position: outside;
+      letter-spacing: 1px;
+      padding: 0 4px 0 0;
+      width: 4px;
+      left: 0;
+      height: 4px;
+      border-radius: 100%;
+      background: $brand-lavender-grey;
+    }
+  }
+ .list_dark {
+   padding-left: 15px;
+   &:before {
+     left: 0;
+     background-color: $gray-dark;
+   }
+ }
+
+  ///////////////////////////END LISTE PUCE ROND////////////////////////////////////////////////////////////////
+}

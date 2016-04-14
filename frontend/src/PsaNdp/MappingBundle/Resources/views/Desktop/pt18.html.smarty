@@ -1,0 +1,42 @@
+<section class="slice-pt18 {if isset($pt18.anchorId)} {$pt18.anchorId} {/if}" {if isset($pt18.anchorId)} id="{$pt18.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePT18' } ]">
+  <div class="header">
+    <div class="logo"></div>
+    <h1 class="title"><span>{$pt18.headerSection.title}</span></h1>
+  </div>
+  <section class="content clearfix">
+    <section class="welcome-section">
+      <p class="title">{$pt18.welcomeSection.title} <span>{$pt18.welcomeSection.city}</span></p>
+      <p class="subtitle">{$pt18.welcomeSection.subtitle}</p>
+    </section>
+    <section class="import-section slice-inside-margin">
+      <div class="import-box grid-col span_6_of_12">
+        <div class="block-top">
+          <h2 class="importer-name">{$pt18.importLeftSection.title}</h2>
+          <p class="subtitle">{$pt18.importLeftSection.subtitle}</p>
+          <a href="{$pt18.importRightSection.ctaImport.urlLink}" class="cta-btn cta-btn-4 cta-choice" {if isset($pt18.importLeftSection.ctaImport.target)}target="{$pt18.importLeftSection.ctaImport.target}"{/if}>{$pt18.importLeftSection.ctaImport.title}</a>
+        </div>
+        <img src="{$pt18.importLeftSection.visuMap.url}" {if isset($pt18.importLeftSection.visuMap.alt)}alt="{$pt18.importLeftSection.visuMap.alt}"{/if} class="visuel-map">
+        <div class="visuel-thumb">
+          <a href="{$pt18.importLeftSection.promoSection.urlLink}" class="link-promo" {if isset($pt18.importLeftSection.promoSection.target)}target="{$pt18.importLeftSection.promoSection.target}"{/if}><img src="{$pt18.importLeftSection.promoSection.visu.url}"  {if isset($pt18.importLeftSection.promoSection.visu.alt)}alt="{$pt18.importLeftSection.promoSection.visu.alt}"{/if} class="link-promo-visuel"></a>
+        </div>
+        <p class="subtitle">{$pt18.importLeftSection.subtitleBottom}</p>
+      </div>
+      <div class="import-box grid-col span_6_of_12">
+        <div class="block-top">
+          <h2 class="importer-name">{$pt18.importRightSection.title}</h2>
+          <p class="subtitle">{$pt18.importRightSection.subtitle}</p>
+          <a href="{$pt18.importRightSection.ctaImport.urlLink}" class="cta-btn cta-btn-4 cta-choice" {if isset($pt18.importRightSection.ctaImport.target)}target="{$pt18.importRightSection.ctaImport.target}"{/if}>{$pt18.importRightSection.ctaImport.title}</a>
+        </div>
+        <img src="{$pt18.importRightSection.visuMap.url}" {if isset($pt18.importRightSection.visuMap.alt)}alt="{$pt18.importRightSection.visuMap.alt}"{/if} class="visuel-map">
+        <div class="visuel-thumb">
+          <a href="{$pt18.importRightSection.promoSection.urlLink}" class="link-promo" {if isset($pt18.importRightSection.promoSection.target)}target="{$pt18.importRightSection.promoSection.target}"{/if}>
+            <img src="{$pt18.importRightSection.promoSection.visu.url}" {if isset($pt18.importLeftSection.promoSection.visu.alt)}alt="{$pt18.importLeftSection.promoSection.visu.alt}"{/if} class="link-promo-visuel">
+          </a>
+        </div>
+      </div>
+    </section>
+  </section>
+  <div class="footer">
+    <div class="motion-emotion"></div>
+  </div>
+</section>

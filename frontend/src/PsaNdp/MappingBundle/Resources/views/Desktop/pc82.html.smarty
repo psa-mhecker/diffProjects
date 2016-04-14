@@ -1,0 +1,48 @@
+<section class="slice-pc82 {if isset($slicePC82.anchorId)} {$slicePC82.anchorId} {/if}" {if isset($slicePC82.anchorId)} id="{$slicePC82.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePC82' } ]">
+  <div class="wrap">
+    <h1>{$slicePC82.title}</h1>
+    <div class="list-finitions">
+      <ul>
+        {foreach $slicePC82.listItems as $v}
+          <li>
+          <a href="{$v.ctaList.url}" title="{$v.ctaList.title}">
+            <div class="car-type">
+              <div class="badge" style="background-color: {$v.color}">
+                <p>
+                  <span class="category" >
+                    <span>{$v.ctaList.title}</span>
+                  </span>
+                </p>
+              </div>
+            </div>
+            <div class="car-details">
+              <figure>
+                <img src="{$v.image.src}" alt="{$v.image.title}">
+              </figure>
+              <div class="info">
+                <div class="content-info">
+                  <p>{$v.labelPrice} <strong>{$v.vehiculePrice}</strong>{if isset($v.info) and ($v.info == true) }<i></i>{/if}</p>
+                  <p>{$v.vehiculeInfomation}</p>
+                </div>
+              </div>
+            </div>
+            </a>
+          </li>
+        {/foreach}
+      </ul>
+    </div>
+    <div class="clearfix"></div>
+    <ul class="cta">
+      {foreach $slicePC82.ctaList as $cta}
+        <li>{include file="./cta.html.smarty"}</li>
+      {/foreach}
+    </ul>
+    {if isset($slicePC82.information)}
+      <div class="information">
+        {foreach $slicePC82.information as $txt}
+            <div>{$txt}</div>
+        {/foreach}
+      </div>
+    {/if}
+  </div>
+</section>

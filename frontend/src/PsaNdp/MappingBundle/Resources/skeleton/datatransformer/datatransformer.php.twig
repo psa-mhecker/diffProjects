@@ -1,0 +1,44 @@
+<?php
+namespace PsaNdp\MappingBundle\Transformers;
+
+use PsaNdp\MappingBundle\Object\Block\{{camelCodeName}};
+
+/**
+ * Class {{transformerName}}
+ * Data transformer for {{camelCodeName}} block
+ * @package PsaNdp\MappingBundle\Transformers
+ */
+class {{transformerName}} extends AbstractDataTransformer implements DataTransformerInterface
+{
+
+    /**
+     * @var {{camelCodeName}}
+     */
+    protected ${{lowerCamelCodeName}};
+
+    /**
+     * @param {{camelCodeName}} ${{lowerCamelCodeName}}
+     */
+    public function __construct({{camelCodeName}} ${{lowerCamelCodeName}})
+    {
+        $this->{{lowerCamelCodeName}} = ${{lowerCamelCodeName}};
+    }
+
+    /**
+     *  Fetching data slice {{name}} ({{code}})
+     *
+     * @param array $dataSource data source fetch from its associated DataSourceInterface fetch() call
+     * @param bool  $isMobile   Indicate if is a mobile display
+     *
+     * @return array
+     */
+    public function fetch(array $dataSource, $isMobile)
+    {
+
+        ${{code}} = $this->{{lowerCamelCodeName}}->setDataFromArray($dataSource);
+
+        return array(
+           '{{sliceName}}' =>  ${{code}}
+        );
+    }
+}

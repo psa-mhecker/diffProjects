@@ -1,0 +1,73 @@
+@charset "UTF-8";
+@import "../../../../scss/common/grid";
+
+.body,
+.body-light {
+	section[class*=slice-] {
+		@include columns-gutter(); //Add foundation margin
+		@include slice-margin-top(); //Add default margin bottom
+		@include slice-margin-bottom(0,0); //Add default margin bottom
+	}
+
+	//Slice never having margin bottom
+	section.no-margin-top {
+		@include slice-margin-top(0, 0); //Add default margin bottom
+	}
+
+	section.slice-full-size {
+		@include anti-columns-gutter();
+
+		@media #{$small-only} {
+			.slice-padding-small {
+				@include columns-gutter(); //Add foundation margin
+			}
+		}
+	}
+
+	section[class*=slice-]:nth-last-child(2){
+		@include slice-margin-bottom(0, 0); //Add default margin bottom
+	}
+
+	.footer,
+	footer {
+		margin-top: rem-calc(50);
+	}
+}
+
+.row > .columns.panel-no-padding-left,
+.panel-no-padding-left {
+	@include panel-text($custom-column-gutter/2, 0);
+}
+
+.row > .columns.panel-no-padding-right,
+.panel-no-padding-right {
+	@include panel-text(0);
+}
+
+.row > .columns.panel-padding,
+.panel-padding {
+	@include panel-text();
+}
+
+.row > .columns.panel-no-padding,
+.panel-no-padding {
+	@include panel-text(0, 0);
+}
+
+.panel-no-padding-left,
+.panel-no-padding-right,
+.panel-no-padding,
+.panel-padding {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p,
+	li,
+	dl {
+		color: $font-purple-grey;
+		text-align: justify;
+	}
+}

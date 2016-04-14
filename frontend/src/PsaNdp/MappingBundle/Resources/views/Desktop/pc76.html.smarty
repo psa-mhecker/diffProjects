@@ -1,0 +1,65 @@
+<section class="slice-pc76 slice-inside-margin {if isset($slicePC76.anchorId)} {$slicePC76.anchorId} {/if}" {if isset($slicePC76.anchorId)} id="{$slicePC76.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePC76' } ]">
+  <h1>{$slicePC76.title}</h1>
+  <h2>{$slicePC76.subTitle}</h2>
+
+  {if isset($slicePC76.promoFiches)}
+  <div class="fiches clearfix">
+    {foreach $slicePC76.promoFiches as $fiche}
+    <div {if $slicePC76.promoFiches|@count === 2}class="grid-col span_6_of_12"{/if}>
+      {if isset($fiche.gift)}<p class="gift">{$fiche.gift}</p>{/if}
+      <p>
+        {if !isset($fiche.libelle.position)}
+        <span>{$fiche.libelle.text}</span>
+        {/if}
+        <span class="price"><!--
+          -->{$fiche.price.sum}{$fiche.price.devise}<!--
+          -->{if isset($fiche.price.indice)}<sup>({$fiche.price.indice})</sup>{/if}<!--
+        --></span>
+        {if isset($fiche.libelle.text2)}
+         <span class="price2">
+              <span>{$fiche.libelle.text2}</span><!--
+          -->{$fiche.price2.sum}{$fiche.price2.devise}<!--
+        --></span>
+        {/if}
+      </p>
+      <ul class="descriptions">
+      {foreach $fiche.descriptions as $description}
+        <li>{$description.text}</li>
+      {/foreach}
+      </ul>
+      {if isset($slicePC76.picto)}
+      <div class="picto"></div>
+      {/if}
+      {if isset($slicePC76.promoCTA)}
+        <div class="custom-button-group">
+          {foreach $slicePC76.promoCTA as $cta}
+            <a href="{$cta.url}" class="cta-block cta-btn cta-btn-2">{$cta.text}</a>
+          {/foreach}
+        </div>
+      {/if}
+    </div>
+    {/foreach}
+  </div>
+  {/if}
+
+  {if isset($slicePC76.promoLinks)}
+  <div class="links-group">
+  {foreach $slicePC76.promoLinks as $link}
+    <a href="{$link.url}">{$link.text}</a>
+  {/foreach}
+  </div>
+  {/if}
+
+  {if isset($slicePC76.autopromo)}
+  <div class="ads">
+    <img src="{$slicePC76.autopromo.src}" alt="{$slicePC76.autopromo.alt}">
+  </div>
+  {/if}
+
+  {if isset($slicePC76.promoText)}
+  <div class="text-rich">
+    {$slicePC76.promoText}
+  </div>
+  {/if}
+
+</section>

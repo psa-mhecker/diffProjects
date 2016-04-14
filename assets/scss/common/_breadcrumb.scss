@@ -1,0 +1,48 @@
+@charset 'UTF-8';
+// breadcrumb.scss
+.breadcrumb {
+
+	span,
+	a {
+		position: relative;
+		float: left;
+		overflow: visible;
+		text-transform: uppercase;
+		text-decoration: none;
+		font-size: rem-calc(10);
+
+		.slice-pn7 & {
+			color: $breadcrumb-color-pn7;
+		}
+
+		&::after {
+			text-decoration: none;
+		}
+	}
+
+	> span {
+		&:last-child {
+			@include font-family('bold');
+			color: $white-color;
+
+			.slice-pn7 & {
+				color: $breadcrumb-color-pn7;
+			}
+		}
+	}
+
+	a {
+		color: $white-color;
+
+		> span {
+			&::hover {
+				text-decoration: underline;
+			}
+		}
+
+		&::after {
+			padding: 0 rem-calc(5);
+			content: '>';
+		}
+	}
+}

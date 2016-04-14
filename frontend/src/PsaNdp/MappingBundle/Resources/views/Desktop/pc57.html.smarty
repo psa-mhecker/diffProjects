@@ -1,0 +1,42 @@
+<section class="slice-pc57 slice-inside-margin {if isset($slicePC22222.anchorId)} {$slicePC22222.anchorId} {/if}" {if isset($slicePC22222.anchorId)} id="{$slicePC22222.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePC57' } ]">
+  <header>
+    <h1>{$slicePC57.title}</h1>
+    <h2>{$slicePC57.subtitle}</h2>
+  </header>
+  <div class="content">
+    <div class="slides {if $slicePC57.applications|@count <= 5}without-control{/if}">
+      {if $slicePC57.applications|@count >= 1}
+        {foreach from=$slicePC57.applications key=ID item=app}
+          <div class="slide {if $ID == 2 and $slicePC57.applications|@count >= 5 || $slicePC57.applications|@count < 5 and $ID == $slicePC57.applications|@count - 1}active{/if}">
+            <a href="{$app.link.url}" title="{$app.link.title}" data-id="{$ID}">{$app.link.title}</a>
+            <h2>{$app.title}</h2>
+            <img src="{$app.img.src}" alt="{$app.img.alt}" title="{$app.img.alt}">
+          </div>
+        {/foreach}
+      {/if}
+    </div><!-- .slides -->
+  </div><!-- .content -->
+  <footer>
+    {foreach $slicePC57.applications as $app}
+    <div class="app_desc">
+      <div class="details">
+        <h3>{$app.model}</h3>
+        <p>{$app.content.subtitle}</p>
+      </div>
+      <div class="description">{$app.content.description}</div>
+      <div class="caracteristique">
+        <ul>
+        {for $iteration=0 to ((($app.content.caracteristique|@count)/2)|round:0)-1 }
+          <li>{$app.content.caracteristique[$iteration].paragraph}</li>
+        {/for}
+        </ul>
+        <ul>
+        {for $iteration=(($app.content.caracteristique|@count)/2)|round:0 to ($app.content.caracteristique|@count)-1 }
+          <li>{$app.content.caracteristique[$iteration].paragraph}</li>
+        {/for}
+        </ul>
+      </div>
+    </div>
+    {/foreach}
+  </footer>
+</section>

@@ -1,0 +1,50 @@
+
+parameters:
+  # Identified 'Délia' countries or NDP siteCode to migrate and having multilingual showrooms
+  migration.showroom.multilingual.site:
+    - 'be'
+    - 'ch'
+  # Main migration folder path for writing migration files
+  migration.directory: '/migration'
+  # Showroom folder paths for writing showroom migration files
+  migration.showroom.directories.configuration:
+    root: %migration.directory%/showroom
+    reporting: reporting
+    lock: lock
+    xml: tmp/xml
+    media: tmp/media
+
+
+  migration.configurator:
+    # Create default sub pages for a showroom
+    # Expected:
+    # defaultPages:               // Root
+    #   [PageId]:               // Unique Page Id for page to create
+    #     title: 'string'         // Title for the page
+    #     gabarit: 'string'       // Gabarit to use for the page
+    #     slices: []              // List of block configurators classes to apply for the page
+    #     subPages: []            // List of subpages to create (each subpage wil have the same structures as the [PageId]
+    defaultPages: []
+
+    # Configure welcome page slices
+    welcomePage:
+      slices:
+        - Itkg\Migration\Configurator\Slice\Pc40CTASliceConfigurator
+        - Itkg\Migration\Configurator\Slice\Pc79MurMediaManuelSliceConfigurator
+        - Itkg\Migration\Configurator\Slice\Pf11RecherchePointDeVenteSliceConfigurator
+        - Itkg\Migration\Configurator\Slice\Pf27CarPickerConfigurator
+
+    # Configure specific gabarit slices
+    showroomPage:
+      slices:
+        - Itkg\Migration\Configurator\Slice\Pn15EnTeteConfiShowManuelSliceConfigurator
+        - Itkg\Migration\Configurator\Slice\Pf2PresentationSliceConfigurator
+        - Itkg\Migration\Configurator\Slice\Pn14NavigationManuelSliceConfigurator
+
+    showroomPagePC60:
+      slices:
+        - Itkg\Migration\Configurator\Slice\Pc60RecapitulatifEtCtaConfigurator
+
+    masterPage:
+      slices:
+        - Itkg\Migration\Configurator\Slice\Pn7EnTeteSliceConfigurator

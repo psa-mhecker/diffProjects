@@ -1,0 +1,51 @@
+.notification {
+  background-color: rgba(230,224,219,0.50);
+  padding: 21px 15px;
+  line-height: 1.2;
+  position: relative;
+  font-size: 13px;
+  .notification-txt {
+    display: block;
+    text-align: center;
+    color: $dark-champagne;
+    &.textMarge {
+      width: 70%;
+      margin: 0 auto;
+    }
+    &.titBold {
+      font-family: $font-family-base-bold;
+    }
+  }
+  .cta {
+    padding: 4px;
+    min-width: 87px;
+  }
+  .notBtnright {
+    position: absolute;
+    right: 0;
+    top: 38%;
+  }
+  .btn-not {
+    padding-left: 10%;
+    padding-top: 5px;
+  }
+  &.btnRight {
+    .row {
+      font-size: 0;
+      .col-md-9 {
+        font-size: 13px;
+      }
+      .col-md-9,
+      .col-md-3 {
+        float: inherit;
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+    .notBtnright {
+      top: 50%;
+      position: absolute;
+      margin-top: -12px;
+    }
+  }
+}

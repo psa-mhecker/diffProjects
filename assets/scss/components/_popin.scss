@@ -1,0 +1,53 @@
+@charset 'UTF-8';
+
+$color-firefly-90-approx: rgba(12, 45, 71, .95);
+$color-transparent: rgba(0, 0, 0, 0);
+
+@mixin popinbtn() {
+	border-radius: 0;
+	border: 0;
+	opacity: .8;
+	background: $color-transparent;
+	font-weight: lighter;
+}
+
+.blueimp-gallery {
+	background: $color-firefly-90-approx;
+
+	> {
+		.close {
+			display: block;
+			font-size: 53px;
+		}
+
+		.prev {
+			@include popinbtn();
+		}
+
+		.next {
+			@include popinbtn();
+		}
+
+		// scss-lint:disable SelectorDepth => need to overwrite the style given by the plug in blueimp gallery for video
+		.slides > .slide > .video-content > video {
+			display: block;
+		}
+
+	}
+}
+
+@media #{$large-up} {
+	.popin-links a:not([data-poster]) {
+
+		&:hover::after {
+			@include sprite($loupe);
+			position: absolute;
+			top: 4px;
+			right: 4px;
+			outline: 4px solid rgba(0, 0, 0, .2);
+			background-color: rgba(0, 0, 0, .2);
+			content: '';
+		}
+	}
+}
+

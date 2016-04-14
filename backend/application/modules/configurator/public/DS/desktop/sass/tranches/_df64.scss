@@ -1,0 +1,340 @@
+.df64 {
+  color: $taupe_1_color;
+  margin: 0 28px 0 0;
+  h3 {
+    position: relative;
+    text-align: center;
+    font-size: 20px;
+    color: $taupe_1_color;
+    font-weight: normal;
+    text-transform: uppercase;
+    padding: 14px 60px;
+    margin: 0;
+    line-height: 20px;
+    //citroen light
+    .back-to-top {
+      position: absolute;
+      cursor: pointer;
+      right: -17px;
+      top: 50%;
+      margin-top: -17px;
+      @extend %_sprites;
+      @extend %_sprite-back-to-top;
+    }
+  }
+  .header {
+    figure {
+      margin: 0;
+      text-align: center;
+    }
+  }
+  > a.booking {
+    position: relative;
+    display: block;
+    text-align: center;
+    font-size: 11px;
+    color: $bordeau_color;
+    font-family: $medium_font_roboto;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    z-index: 9;
+    &:after {
+      content: "";
+      display: inline-block;
+      margin-left: 12px;
+      @extend %_sprites;
+      @extend %_sprite-btn-red-1;
+    }
+  }
+  .content-panel {
+  	position: relative;
+  	z-index: 9;
+  	padding: 8px 20px;
+  	background-color: $brown_1_color;
+  }
+  .pricetype-onglet {
+  	position: relative;
+  	padding: 0;
+  	margin: 0;
+  	li {
+  		display: inline-block;
+  		width: 48%;
+  		padding:0 1%;
+  		text-align: center;
+  		> div {
+        cursor: pointer;
+  			font-size: 11px;
+  			text-transform: uppercase;
+		    text-decoration: underline;
+  			color: $dark_taupe_1_color;
+  		}
+  	}
+  	&:before {
+	    content: "";
+	    position: absolute;
+	    top: 7px;
+	    left: 48%;
+	    width: 7px;
+	    height: 7px;
+	    background: $dark_taupe_1_color;
+	    -ms-transform: rotate(45deg); 
+	    -webkit-transform: rotate(45deg);
+	    transform: rotate(45deg);
+	    margin-left: -3px;
+  	}
+	}
+	.pricetype-content-onglet {
+		min-height: 82px;
+		p {
+      padding: 0;
+      margin: 0;
+    }
+  	.price {
+  		color: $light_taupe_1_color;
+  		font-size: 11px;
+  		padding: 5px 0;
+      display: inline-block;
+  		.price-outright,
+  		.price-monthly {
+  			font-size: 13px;
+  		} 
+      &.second-price {
+        padding-top: 0;
+        line-height: 11px;
+      }
+  	}
+    .infoPrice  {
+      vertical-align: bottom;
+      padding-left: 10px;
+    }
+  	.pre-monthly-loyer {
+  		font-size: 10px;
+  		line-height: 13px;
+  		color: $taupe_1_color;
+  	}
+  	.pre-monthly-loyer-txt {
+  		font-size: 9px;
+  		line-height: 13px;
+  		color: $taupe_1_color;
+  	}
+  	.btn-panier-style-1 {
+      display: block;
+  		font-size: 9px;
+  		line-height: 22px;
+  		text-transform: uppercase;
+  		text-decoration: underline;
+  		color: $light_taupe_1_color;
+  	}
+  }
+  .btn-panier-style-2 {
+    position: relative;
+    display: block;
+    font-size: 11px;
+    color: $taupe_1_color;
+    font-family: $light_font_roboto;
+    text-transform: uppercase;
+    margin: 14px 0;
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 3px;
+      @extend %_sprites;
+      @extend %_sprite-btn-next-2;
+    }
+  }
+  .btn-panier-style-3 {
+    display: block;
+    font-family: $light_font_roboto;
+    text-transform: uppercase;
+    font-size: 11px;
+    color: $brown_1_color;
+    background-color: $taupe_1_color;
+    text-align: center;
+    padding: 9px;
+    margin: 5px 0;
+  }
+  .detail-panier-toggle {
+    width: 100%;
+    border: solid 1px $taupe_1_color;
+    .detail-panier {
+      position: relative;
+      display: block;
+      font-family: $light_font_roboto;
+      text-transform: uppercase;
+      font-size: 11px;
+      color: $taupe_1_color;
+      text-align: center;
+      padding: 9px;
+      cursor: pointer;
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        @extend %_sprites;
+        @extend %_sprite-arrow-toggle-2;
+      }
+      .openit {display: inline-block;}
+      .closeit {display: none;}
+    }
+    &.open {
+      .openit {display: none;}
+      .closeit {display: inline-block;}
+      .detail-panier:after {
+        margin-top: -2px;
+        @extend %_sprite-close-panel;
+      }
+    }
+    .detail-panier-content {
+      display: none;
+      padding: 8px 7px;
+      min-height: 50px;
+      background-color: $white;
+      .item-slide {
+        .item-slide-header {
+          position: relative;
+          border-bottom: solid 1px $light_taupe_1_color;
+          padding: 0 0 8px 50px;
+          &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 5px;
+            @extend %_sprites;
+            @extend %_sprite-pen;
+          }
+          .number {
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-family: $italic_font_didot;
+            border-right: solid 1px $taupe_1_color;
+            color: $taupe_1_color;
+            font-size: 36px;
+            line-height: 28px;
+            padding: 0 9px;
+          }
+          .title {
+            color: $taupe_1_color;
+            font-size: 12px;
+            font-family: $medium_font_roboto;
+            text-transform: uppercase; 
+            line-height: 14px;
+          }
+          .price {
+            color:$dark_brown_1_color;
+            font-size: 12px;
+            font-family: $medium_font_roboto;
+            line-height: 14px;
+          }
+        }
+        .item-slide-content {
+          padding-top: 8px;
+          .once-item {
+            padding-bottom: 6px;
+            line-height: 14px;
+            .title {
+              color: $taupe_1_color;
+              font-size: 10px;
+              font-family: $main_font_roboto;
+              text-transform: uppercase;
+              line-height: 14px; 
+            }
+            .subtitle {
+              text-transform: normal;
+              color: $dark_brown_1_color;
+              font-size: 11px;
+              font-family: $light_font_roboto;
+              line-height: 14px;
+            }
+            &.same-line {
+              .title, .subtitle {display: inline;}
+            }
+            &.add-border {
+              border-bottom: solid 1px $light_taupe_1_color;
+              margin-bottom: 8px;
+            }
+          }
+        }
+      }
+      .separator {height: 20px;}
+    }
+  }
+  .block-legal-mention {
+    min-height: 26px;
+    margin-top: 10px;
+    .legal-mention {
+      font-size: 10px;
+      line-height: 13px;
+      color: $taupe_1_color;
+      margin: 0;
+    }
+  }
+
+  //Slick slider panier
+  .multiple-items.slick-slider {
+    padding: 0 7px;
+    margin: 0;
+  }
+  .slick-dots {
+      bottom: -15px;
+     li {
+      margin: 0 2px;
+      button:before {
+        transform: rotate(45deg);
+        border: solid 1px $taupe_1_color;
+        content: "";
+        width: 10px;
+        height: 10px;
+        opacity: 1;
+        opacity: 1;
+        margin: 5px;
+      }
+      &.slick-active button:before {
+        background: $taupe_1_color;
+      }
+    }
+  }
+
+  [data-pricetype="outright"] {
+  	.pricetype-onglet .outright-onglet {color: $taupe_1_color;}
+  	.price .per-monthly,
+  	.price .price-monthly,
+  	.simuler-financement,
+  	.pre-monthly-loyer,
+  	.pre-monthly-loyer-txt,
+    .price.second-price,
+    .block-legal-mention .legal-mention,
+    .infoPrice
+  	{
+  		display: none;
+  	}
+  }
+  [data-pricetype="monthly"] {
+    .pricetype-onglet .monthly-onglet {color: $taupe_1_color;}
+    .price .price-outright {display: none;}
+    .price.second-price {display: none;}
+  }
+  [data-pricetype="monthly->outright"] {
+  	.pricetype-onglet {display: none;}
+  	.price .price-outright {display: none;}
+  	.price.second-price .price-monthly {display: none;}
+  	.price.second-price .per-monthly {display: none;}
+  	.price.second-price .price-outright {display: inline-block;}
+  }
+  [data-pricetype="outright->monthly"] {
+  	.pricetype-onglet {display: none;}
+  	.price .price-monthly {display: none;}
+  	.price .per-monthly {display: none;}
+  	.price.second-price .per-monthly {display: inline-block;}
+  	.price.second-price .price-outright {display: none;}
+  	.price.second-price .price-monthly {display: inline-block;}
+  }
+  [data-switch="false"] {
+  	.pricetype-onglet {display: none;}
+  }
+}

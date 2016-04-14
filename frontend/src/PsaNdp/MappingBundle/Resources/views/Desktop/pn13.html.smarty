@@ -1,0 +1,15 @@
+<section
+  class="slice-pn13 {if isset($slicePN13.anchorId)} {$slicePN13.anchorId} {/if}" {if isset($slicePN13.anchorId)} id="{$slicePN13.anchorId}" {/if}
+  data-jsobj="[ { 'obj':'slicePN13' } ]" datalayer="{$slicePN13.datalayer}">
+  <h2>{$slicePN13.title}</h2>
+  <ul class="usp-links">
+    {foreach $slicePN13.anchors as $anchor}
+      <li>
+        <a href="#{$anchor.id}" class="usp-anchor" data-anchor data-gtm='{ldelim}"eventType":"click","dataList":{ldelim}"event":"uaevent","eventCategory":"{$slicePN13.blockName}::position-{$slicePN13.blockOrder}","eventAction":"Redirection","eventLabel":"{$anchor.text|escape:javascript}"{rdelim}{rdelim}'>
+          {$anchor.text}
+        </a>
+      </li>
+    {/foreach}
+  </ul>
+</section>
+

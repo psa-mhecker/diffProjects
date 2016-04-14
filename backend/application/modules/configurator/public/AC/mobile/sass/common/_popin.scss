@@ -1,0 +1,261 @@
+html.popin-active{
+	height:100%;
+
+	body{
+		overflow: hidden;
+		position: fixed;
+	}
+}
+
+html.popopen{
+	.animLeft{margin-left:0;}
+	
+	.bodyAnimLeft{margin:0 -100% 0 0;}
+}
+
+.bodyAnimLeft{
+	overflow: auto;
+	overflow-x: hidden;
+	@include css3(overflow-scrolling, touch);
+	@include css3(transition, all 400ms cubic-bezier(0.4, 0, 0.2, 1));
+}
+
+.animLeft{
+	z-index: 4;
+	left: 0;
+	@include css3(backface-visibility, hidden);
+	@include css3(perspective, 1000);
+	@include css3(transform, translateZ(0px));	
+	margin:0 0 0 -100%;
+	width: 100%;
+	@include css3(transition, all 200ms cubic-bezier(0.4, 0, 0.2, 1));
+	background: #FFF;
+	top: 0;
+	bottom: 0;
+}
+.popinContainer{
+	top: 0;
+	z-index: 1000;
+	width: 100%;
+	position: fixed;
+	overflow-x: hidden;
+	@include css3(overflow-scrolling, touch);
+	padding:0;
+	height:100%;
+	font-size:0;
+
+	&:before,
+	.iscrollScrollbar{
+		display:inline-block;
+		vertical-align:middle;
+	}
+
+	&:before{
+		width:1px;
+		margin-left:-1px;
+		height:100%;
+		content:'';
+	}
+
+	.iscrollScrollbar{
+		width:100%;
+		position: relative;
+		overflow: hidden;
+	}
+
+  .popin{
+    width: 100%;
+    padding: 30px 20px;
+    
+    &.popin--mentions{
+      h3{
+        font-size: 25px;
+        margin-top: 20px;
+        text-transform: uppercase;
+        font: 23px/23px "citroenbold", Arial;
+        color: #c2b000;
+      }
+
+      p{
+        font: 14px/20px 'ubunturegular';
+        padding: 10px 0;
+        text-transform: capitalize;
+		
+        &.bottom-text {
+          margin: 10px 20px;
+          color: #323232;
+        }
+		
+        &.facultatif {font: 14px/20px 'ubuntubold';}
+      }
+
+      .box{
+        border: 6px solid #dcdcdc;
+        padding: 20px;
+
+        h4{
+          font: 16px/20px 'ubuntubold';
+          color: #323232;
+        }
+
+        ul li{
+          font: 13px/13px 'ubunturegular';
+          color: #646464;
+          padding: 15px 30% 15px 0;
+          text-transform: capitalize;
+          position: relative;
+
+          span{
+            position: absolute;
+            right: 0;
+            top: 14px;
+          }
+
+          &.totaux{
+            font: 14px/16px 'ubuntubold';
+            border-top: 2px solid #dcdcdc;
+            border-bottom: 2px solid #dcdcdc;
+
+            i{
+              font-style: normal;
+              display: block;
+              font-family: 'ubunturegular';
+              font-size: 12px;
+            }
+          }
+        }
+      }
+
+      .infos{
+        font: 17px/26px 'ubuntubold';
+        color: #646464;
+      }
+    }
+  }
+}
+
+.close{
+  border: 3px solid #B1AFC5;
+  z-index: 1000;
+  display: block;
+  margin: 0;
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  top: 14px;
+  right: 14px;
+	@include css3(transform, translateZ(0px));
+	@include css3(transform, translate3d(0,0,0));
+
+  &:before, &:after{
+    content: "";
+    position: absolute;
+    background: #B1AFC5;
+    width: 20px;
+    height: 3px;
+    right: 9px;
+    top: 18px;
+  }
+  
+  &:before {@include css3(transform, rotate(45deg));}
+  
+  &:after {@include css3(transform, rotate(-45deg));}
+}
+
+.popinContainer{
+	.iscrollScrollbar{
+		max-width:768px;
+		margin:auto;
+	}
+
+	&.popinzoom{
+		text-align:center;
+
+		.slickslideshow{
+			margin:0 33px;
+
+			.slickslideshow-slide{
+				.libelle_contrast{display:none;}
+			}
+		}
+		
+		.visual.popinzoom{margin:0 14px;}
+	}
+
+  &.popinmotorisations{
+    .popinmotor{
+      margin: 0 5%;
+
+      h2{
+        color: #000000;
+        font-size: 18px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+
+        span{text-transform: lowercase;}
+      }
+
+      img{width: 288px;}
+    }
+  }
+
+  &.popinequipement {
+    .iscrollScrollbar {height: 100%;}
+	
+    .popincontent {
+      color: $titlesite_color;
+      font-size: 12px;
+      padding: 50px 20px 20px 20px;
+	  
+      h3 {
+        color: $yellow-title;
+        font: 16px $citroenbold;
+        text-transform: uppercase;
+        padding: 0 70px 15px 0;
+      }
+	  
+      h4 {
+        font-family: $ubuntubold;
+        padding: 20px 0 10px 10px;
+      }
+	  
+      > div {
+        background: $bg-popin-blue-light;
+        position: relative;
+        padding: 30px 10px;
+      }
+	  
+      ul {
+        li {
+          padding: 5px 0;
+          margin-left: 26px;
+          position: relative;
+          list-style-type: disc;
+        }
+		
+        &.complement {
+          position: relative;
+          padding: 60px 10px 30px 10px;
+          background-color: $bg-popin-blue-dark;
+		  
+          &:before {
+            content: "+";
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 36px;
+            line-height: 40px;
+            text-align: center;
+            background: $bg-popin-blue-light;
+            color: $plus-icone-color;
+            font-family: $citroenbold;
+          }
+        }
+      }
+	  
+      .mention-legale {margin: 15px 0 0 17px;}
+    }
+  }
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin>
+	<title>Configurator</title>
+	<description>Configurator for PSA</description>
+	<version>0.0.1</version>
+	<date>16/12/2015</date>
+	<author>Interakting</author>
+	<category>Widget</category>
+</plugin>

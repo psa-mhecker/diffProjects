@@ -1,0 +1,114 @@
+<section class="slice-pf37 {if isset($slicePF37.anchorId)} {$slicePF37.anchorId} {/if}" {if isset($slicePF37.anchorId)} id="{$slicePF37.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePF37'} ]" data-html="{$slicePF37.urlJson}">
+  {if isset($slicePF37.contitle) }
+    <h3 class="title-rubrique">{$slicePF37.contitle}</h3>
+  {/if}
+  {if isset($slicePF37.firstCont)}
+  <div class="firstCont">
+    <p class="subtitle">{$slicePF37.firstCont.text}</p>
+      {if isset($slicePF37.firstCont.link) }
+      <a href="{$slicePF37.firstCont.link.href}" class="hide">{$slicePF37.firstCont.link.text}</a>
+      {/if}
+  </div>
+  {/if}
+
+  {if isset($slicePF37.menu) }
+  <div class="menu">
+    <ul class="iso-tabs">
+      {foreach $slicePF37.menu.items as $item}
+        <li data-id="{$item.id}" >{$item.title}</li>
+      {/foreach}
+    </ul>
+    <div class="iso-tabs-content">
+      <div class="iso-tab-cont results">
+
+        <div class="listCars">
+          <div class="carousel clearfix">
+            <div class="carousel-frame">
+              <ul class="carousel-slider list_style">
+                {foreach $slicePF37.listCars as $thumbnail}
+                  <li class="carousel-slide thumb">
+                    <a href="{$thumbnail.url}" class="link" {if isset($thumbnail.target)}target="{$thumbnail.target}"{/if} data-id="{$thumbnail.id}">
+                      <h3 class="title">{$thumbnail.title}</h3>
+                      <figure>
+                        <img src="{$thumbnail.img}" alt="{$thumbnail.alt}" />
+                      </figure>
+                    </a>
+                  </li>
+                {/foreach}
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="iso-tab-cont results">
+        <ul class="contlist clearfix">
+          {if isset($slicePF37.topcontent.parag)}
+          <li class="grid-col span_5_of_12">
+            <p>{$slicePF37.topcontent.parag}</p>
+          </li>
+          {/if}
+          <li class="grid-col span_7_of_12">
+            {foreach $slicePF37.topcontent.btn  as $cta}
+              {include file="./cta.html.smarty"}
+            {/foreach}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  {else}
+    {if isset($slicePF37.listCars)}
+    <section class="listCars">
+      <div class="carousel-frame clearfix">
+        <ul class="carousel-slider list_style">
+          {foreach $slicePF37.listCars as $thumbnail}
+            <li class="carousel-slide thumb">
+              <a href="#" class="link" {if isset($thumbnail.target)}target="{$thumbnail.target}"{/if} data-id="{$thumbnail.id}">
+                <h3 class="title">{$thumbnail.title}</h3>
+                <figure>
+                  <img src="{$thumbnail.img}" alt="{$thumbnail.alt}" />
+                </figure>
+              </a>
+            </li>
+          {/foreach}
+        </ul>
+      </div>
+    </section>
+    {/if}
+  {/if}
+
+  {assign var="count" value=$slicePF37.contartcItems|count}
+  <section class="content-services clearfix">
+
+    <div class="loader">
+        <img src="../../../img/ajaxLoader.gif" alt="loader" />
+    </div>
+    <p class="errorOnLoad hide">{$slicePF37.errorload}</p>
+
+    {foreach $slicePF37.contartcItems as $item}
+      <ul class="list-services list_style clearfix">
+        {foreach $slicePF37.aticle as $art}
+          <li class="grid-col span_4_of_12">
+            <h3>{$art.subtitle}</h3>
+            {if $art.aticleImg}
+              <figure class="clearfix">
+                <a href="{$art.aticleImg.link}"><img src="{$art.aticleImg.src}" alt="{$art.aticleImg.alt}"></a>
+              </figure>
+            {/if}
+            <div class="context">
+              <p>{$art.text}{if isset($art.note)}<sup>{$art.note}</sup>{/if}</p>
+              {if isset($art.btnart)}
+                <div class="custom-button-group clearfix">
+                  {foreach $art.btnart as $cta}
+                      {include file="./cta.html.smarty"}
+                  {/foreach}
+                </div>
+              {/if}
+            </div>
+           </li>
+        {/foreach}
+      </ul>
+    {/foreach}
+  </section>
+</section>

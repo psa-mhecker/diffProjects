@@ -1,0 +1,94 @@
+<section class="slice-pf35 {if isset($slicePF35.anchorId)} {$slicePF35.anchorId} {/if}" {if isset($slicePF35.anchorId)} id="{$slicePF35.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePF35' } ]">
+
+    {if isset($slicePF35.intro)}
+      <div class="intro">
+          <h2>{$slicePF35.intro.title}</h2>
+          <h3>{$slicePF35.intro.text}</h3>
+      </div>
+    {/if}
+
+    {if isset($slicePF35.basePack)}
+      <div class="base-pack">
+          <h3>{$slicePF35.basePack.title1}</h3>
+          <h4>{$slicePF35.basePack.subTitle}</h4>
+          <p class="price">{$slicePF35.basePack.price}</p>
+          <p class="description">{$slicePF35.basePack.description}</p>
+          <a href="{$slicePF35.basePack.seeMore.href}" title="{$slicePF35.basePack.seeMore.title}">{$slicePF35.basePack.seeMore.text}</a>
+      </div>
+     {/if}
+
+    <div class="packs-box">
+
+        {if isset($slicePF35.packs.intro)}
+          <p>{$slicePF35.packs.intro}</p>
+        {/if}
+
+        <div class="packs">
+            <ul class="{$slicePF35.packs.alignType}">
+                {foreach $slicePF35.packs.list as $item}
+                    <li class="{$item.colHeight}">
+                        {if isset($item.type)}
+                        <div class="type">
+                            <div class="type-inner">
+                                {$item.type}
+                            </div>
+                        </div>
+                        {/if}
+                        {if isset($item.price)}
+                            {foreach $item.price as $price}
+                            <div class="price">
+                                <div class="price-inner">
+                                    {$price}
+                                </div>
+                            </div>
+                         {/foreach}
+                        {/if}
+
+                        {if isset($item.inferiorLabel)}
+                            {foreach $item.inferiorLabel as $label}
+
+                            <div class="inferior-label">
+                                <div class="label {$label.bgColor}">
+                                    <p>{$label.text}</p>
+                                </div>
+                            </div>
+
+                            {/foreach}
+                        {/if}
+
+                        {if isset($item.content)}
+                        <div class="pack-content">
+                            <ul>
+                                {foreach $item.content as $text}
+                                    <li>
+                                        <p>{$text}</p>
+                                    </li>
+                                {/foreach}
+                            </ul>
+                              {if isset($item.cta)}
+                          <div class="custom-button-group clearfix">
+                               {foreach $item.cta as $cta}
+                                {include file="./cta.html.smarty"}
+                                {/foreach}
+                          </div>
+                        {/if}
+                        </div>
+                        {/if}
+                       
+                    </li>
+                {/foreach}
+
+            </ul>
+
+            {if isset($slicePF35.packs.ctaAll)}
+              <div class="custom-button-group clearfix">
+              {foreach $slicePF35.packs.ctaAll as $cta}
+                {include file="./cta.html.smarty"}
+              {/foreach}
+              </div>
+            {/if}
+        </div>
+
+    </div>
+
+</section>

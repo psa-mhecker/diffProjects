@@ -1,0 +1,20 @@
+parameters:
+  psa_ndp_site_configuration.class: PsaNdp\MappingBundle\Utils\SiteConfiguration
+  psa_ndp_national_parameter_repository.class: PsaNdp\MappingBundle\Repository\NationalParameterRepository
+services:
+
+  psa_ndp_national_parameter_repository:
+    class: %psa_ndp_national_parameter_repository.class%
+    factory_service: doctrine.orm.entity_manager
+    factory_method:  getRepository
+    arguments: ['PsaNdpMappingBundle:NationalParameter']
+
+  psa_ndp_site_configuration:
+    class: %psa_ndp_site_configuration.class%
+    arguments:
+      - @psa_ndp_site_repository
+      - @psa_ndp_national_parameter_repository
+      - @serializer
+
+  site_configuration:
+    alias: psa_ndp_site_configuration

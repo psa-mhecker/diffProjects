@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap11="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp200409="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsp200607="http://www.w3.org/2006/07/ws-policy" xmlns:ns0="http://xml.inetpsa.com/Services/bend/BOFormService" targetNamespace="http://xml.inetpsa.com/Services/bend/BOFormService">
+<wsdl:types xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:schema>
+<xsd:import schemaLocation="BOFormService.xsd3.xsd" namespace="http://xml.inetpsa.com/Services/bend/BOFormService"/></xsd:schema></wsdl:types>
+<wsdl:message name="duplicateInstanceRequest">
+<wsdl:part name="parameters" element="xsns:duplicateInstance" xmlns:xsns="http://xml.inetpsa.com/Services/bend/BOFormService"/></wsdl:message>
+<wsdl:message name="duplicateInstanceResponse">
+<wsdl:part name="parameters" element="xsns:duplicateInstanceResponse" xmlns:xsns="http://xml.inetpsa.com/Services/bend/BOFormService"/></wsdl:message>
+<wsdl:message name="getInstanceByIdRequest">
+<wsdl:part name="parameters" element="xsns:getInstanceById" xmlns:xsns="http://xml.inetpsa.com/Services/bend/BOFormService"/></wsdl:message>
+<wsdl:message name="getInstanceByIdResponse">
+<wsdl:part name="parameters" element="xsns:getInstanceByIdResponse" xmlns:xsns="http://xml.inetpsa.com/Services/bend/BOFormService"/></wsdl:message>
+<wsdl:message name="getInstancesRequest">
+<wsdl:part name="parameters" element="xsns:getInstances" xmlns:xsns="http://xml.inetpsa.com/Services/bend/BOFormService"/></wsdl:message>
+<wsdl:message name="getInstancesResponse">
+<wsdl:part name="parameters" element="xsns:getInstancesResponse" xmlns:xsns="http://xml.inetpsa.com/Services/bend/BOFormService"/></wsdl:message>
+<wsdl:message name="getLeadsByTypeRequest">
+<wsdl:part name="parameters" element="xsns:getLeadsByType" xmlns:xsns="http://xml.inetpsa.com/Services/bend/BOFormService"/></wsdl:message>
+<wsdl:message name="getLeadsByTypeResponse">
+<wsdl:part name="parameters" element="xsns:getLeadsByTypeResponse" xmlns:xsns="http://xml.inetpsa.com/Services/bend/BOFormService"/></wsdl:message>
+<wsdl:message name="getParametersRequest">
+<wsdl:part name="parameters" element="xsns:getParameters" xmlns:xsns="http://xml.inetpsa.com/Services/bend/BOFormService"/></wsdl:message>
+<wsdl:message name="getParametersResponse">
+<wsdl:part name="parameters" element="xsns:getParametersResponse" xmlns:xsns="http://xml.inetpsa.com/Services/bend/BOFormService"/></wsdl:message>
+<wsdl:message name="getReferentialRequest">
+<wsdl:part name="parameters" element="xsns:getReferential" xmlns:xsns="http://xml.inetpsa.com/Services/bend/BOFormService"/></wsdl:message>
+<wsdl:message name="getReferentialResponse">
+<wsdl:part name="parameters" element="xsns:getReferentialResponse" xmlns:xsns="http://xml.inetpsa.com/Services/bend/BOFormService"/></wsdl:message>
+<wsdl:message name="getReportingRequest">
+<wsdl:part name="parameters" element="xsns:getReporting" xmlns:xsns="http://xml.inetpsa.com/Services/bend/BOFormService"/></wsdl:message>
+<wsdl:message name="getReportingResponse">
+<wsdl:part name="parameters" element="xsns:getReportingResponse" xmlns:xsns="http://xml.inetpsa.com/Services/bend/BOFormService"/></wsdl:message>
+<wsdl:message name="ServiceException">
+<wsdl:part name="ServiceException" element="xsns:ServiceException" xmlns:xsns="http://xml.inetpsa.com/Services/bend/BOFormService"/></wsdl:message>
+<wsdl:message name="updateInstanceRequest">
+<wsdl:part name="parameters" element="xsns:updateInstance" xmlns:xsns="http://xml.inetpsa.com/Services/bend/BOFormService"/></wsdl:message>
+<wsdl:message name="updateInstanceResponse">
+<wsdl:part name="parameters" element="xsns:updateInstanceResponse" xmlns:xsns="http://xml.inetpsa.com/Services/bend/BOFormService"/></wsdl:message>
+<wsdl:message name="updateParametersRequest">
+<wsdl:part name="parameters" element="xsns:updateParameters" xmlns:xsns="http://xml.inetpsa.com/Services/bend/BOFormService"/></wsdl:message>
+<wsdl:message name="updateParametersResponse">
+<wsdl:part name="parameters" element="xsns:updateParametersResponse" xmlns:xsns="http://xml.inetpsa.com/Services/bend/BOFormService"/></wsdl:message>
+<wsdl:portType name="BOFormServicePortType">
+<wsdl:operation name="duplicateInstance">
+<wsdl:input name="duplicateInstanceRequest" message="ns0:duplicateInstanceRequest"/>
+<wsdl:output name="duplicateInstanceResponse" message="ns0:duplicateInstanceResponse"/>
+<wsdl:fault name="ServiceException" message="ns0:ServiceException"/></wsdl:operation>
+<wsdl:operation name="getInstanceById">
+<wsdl:input name="getInstanceByIdRequest" message="ns0:getInstanceByIdRequest"/>
+<wsdl:output name="getInstanceByIdResponse" message="ns0:getInstanceByIdResponse"/>
+<wsdl:fault name="ServiceException" message="ns0:ServiceException"/></wsdl:operation>
+<wsdl:operation name="getInstances">
+<wsdl:input name="getInstancesRequest" message="ns0:getInstancesRequest"/>
+<wsdl:output name="getInstancesResponse" message="ns0:getInstancesResponse"/>
+<wsdl:fault name="ServiceException" message="ns0:ServiceException"/></wsdl:operation>
+<wsdl:operation name="getLeadsByType">
+<wsdl:input name="getLeadsByTypeRequest" message="ns0:getLeadsByTypeRequest"/>
+<wsdl:output name="getLeadsByTypeResponse" message="ns0:getLeadsByTypeResponse"/>
+<wsdl:fault name="ServiceException" message="ns0:ServiceException"/></wsdl:operation>
+<wsdl:operation name="getParameters">
+<wsdl:input name="getParametersRequest" message="ns0:getParametersRequest"/>
+<wsdl:output name="getParametersResponse" message="ns0:getParametersResponse"/>
+<wsdl:fault name="ServiceException" message="ns0:ServiceException"/></wsdl:operation>
+<wsdl:operation name="getReferential">
+<wsdl:input name="getReferentialRequest" message="ns0:getReferentialRequest"/>
+<wsdl:output name="getReferentialResponse" message="ns0:getReferentialResponse"/>
+<wsdl:fault name="ServiceException" message="ns0:ServiceException"/></wsdl:operation>
+<wsdl:operation name="getReporting">
+<wsdl:input name="getReportingRequest" message="ns0:getReportingRequest"/>
+<wsdl:output name="getReportingResponse" message="ns0:getReportingResponse"/>
+<wsdl:fault name="ServiceException" message="ns0:ServiceException"/></wsdl:operation>
+<wsdl:operation name="updateInstance">
+<wsdl:input name="updateInstanceRequest" message="ns0:updateInstanceRequest"/>
+<wsdl:output name="updateInstanceResponse" message="ns0:updateInstanceResponse"/>
+<wsdl:fault name="ServiceException" message="ns0:ServiceException"/></wsdl:operation>
+<wsdl:operation name="updateParameters">
+<wsdl:input name="updateParametersRequest" message="ns0:updateParametersRequest"/>
+<wsdl:output name="updateParametersResponse" message="ns0:updateParametersResponse"/>
+<wsdl:fault name="ServiceException" message="ns0:ServiceException"/></wsdl:operation></wsdl:portType>
+<wsdl:binding name="BOFormServiceHttpBinding" type="ns0:BOFormServicePortType">
+<soap11:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+<wsdl:operation name="duplicateInstance">
+<soap11:operation soapAction="http://xml.inetpsa.com/Services/bend/BOFormService#duplicateInstance" style="document"/>
+<wsdl:input name="duplicateInstanceRequest">
+<soap11:body use="literal"/></wsdl:input>
+<wsdl:output name="duplicateInstanceResponse">
+<soap11:body use="literal"/></wsdl:output>
+<wsdl:fault name="ServiceException">
+<soap11:fault name="ServiceException" use="literal"/></wsdl:fault></wsdl:operation>
+<wsdl:operation name="getInstanceById">
+<soap11:operation soapAction="http://xml.inetpsa.com/Services/bend/BOFormService#getInstanceById" style="document"/>
+<wsdl:input name="getInstanceByIdRequest">
+<soap11:body use="literal"/></wsdl:input>
+<wsdl:output name="getInstanceByIdResponse">
+<soap11:body use="literal"/></wsdl:output>
+<wsdl:fault name="ServiceException">
+<soap11:fault name="ServiceException" use="literal"/></wsdl:fault></wsdl:operation>
+<wsdl:operation name="getInstances">
+<soap11:operation soapAction="http://xml.inetpsa.com/Services/bend/BOFormService#getInstances" style="document"/>
+<wsdl:input name="getInstancesRequest">
+<soap11:body use="literal"/></wsdl:input>
+<wsdl:output name="getInstancesResponse">
+<soap11:body use="literal"/></wsdl:output>
+<wsdl:fault name="ServiceException">
+<soap11:fault name="ServiceException" use="literal"/></wsdl:fault></wsdl:operation>
+<wsdl:operation name="getLeadsByType">
+<soap11:operation soapAction="http://xml.inetpsa.com/Services/bend/BOFormService#getLeadsByType" style="document"/>
+<wsdl:input name="getLeadsByTypeRequest">
+<soap11:body use="literal"/></wsdl:input>
+<wsdl:output name="getLeadsByTypeResponse">
+<soap11:body use="literal"/></wsdl:output>
+<wsdl:fault name="ServiceException">
+<soap11:fault name="ServiceException" use="literal"/></wsdl:fault></wsdl:operation>
+<wsdl:operation name="getParameters">
+<soap11:operation soapAction="http://xml.inetpsa.com/Services/bend/BOFormService#getParameters" style="document"/>
+<wsdl:input name="getParametersRequest">
+<soap11:body use="literal"/></wsdl:input>
+<wsdl:output name="getParametersResponse">
+<soap11:body use="literal"/></wsdl:output>
+<wsdl:fault name="ServiceException">
+<soap11:fault name="ServiceException" use="literal"/></wsdl:fault></wsdl:operation>
+<wsdl:operation name="getReferential">
+<soap11:operation soapAction="http://xml.inetpsa.com/Services/bend/BOFormService#getReferential" style="document"/>
+<wsdl:input name="getReferentialRequest">
+<soap11:body use="literal"/></wsdl:input>
+<wsdl:output name="getReferentialResponse">
+<soap11:body use="literal"/></wsdl:output>
+<wsdl:fault name="ServiceException">
+<soap11:fault name="ServiceException" use="literal"/></wsdl:fault></wsdl:operation>
+<wsdl:operation name="getReporting">
+<soap11:operation soapAction="http://xml.inetpsa.com/Services/bend/BOFormService#getReporting" style="document"/>
+<wsdl:input name="getReportingRequest">
+<soap11:body use="literal"/></wsdl:input>
+<wsdl:output name="getReportingResponse">
+<soap11:body use="literal"/></wsdl:output>
+<wsdl:fault name="ServiceException">
+<soap11:fault name="ServiceException" use="literal"/></wsdl:fault></wsdl:operation>
+<wsdl:operation name="updateInstance">
+<soap11:operation soapAction="http://xml.inetpsa.com/Services/bend/BOFormService#updateInstance" style="document"/>
+<wsdl:input name="updateInstanceRequest">
+<soap11:body use="literal"/></wsdl:input>
+<wsdl:output name="updateInstanceResponse">
+<soap11:body use="literal"/></wsdl:output>
+<wsdl:fault name="ServiceException">
+<soap11:fault name="ServiceException" use="literal"/></wsdl:fault></wsdl:operation>
+<wsdl:operation name="updateParameters">
+<soap11:operation soapAction="http://xml.inetpsa.com/Services/bend/BOFormService#updateParameters" style="document"/>
+<wsdl:input name="updateParametersRequest">
+<soap11:body use="literal"/></wsdl:input>
+<wsdl:output name="updateParametersResponse">
+<soap11:body use="literal"/></wsdl:output>
+<wsdl:fault name="ServiceException">
+<soap11:fault name="ServiceException" use="literal"/></wsdl:fault></wsdl:operation></wsdl:binding>
+<wsdl:service name="BOFormService">
+<wsdl:port name="BOFormServiceHttpPort.0" binding="ns0:BOFormServiceHttpBinding">
+<soap11:address location="http://10.68.110.93:80/dcr/ac/services/BOFormService"/></wsdl:port>
+<wsdl:port name="BOFormServiceHttpPort.1" binding="ns0:BOFormServiceHttpBinding">
+<soap11:address location="http://10.68.110.93:80/dcr/ap/services/BOFormService"/></wsdl:port>
+<wsdl:port name="BOFormServiceHttpPort.2" binding="ns0:BOFormServiceHttpBinding">
+<soap11:address location="http://10.68.110.93:80/dcr/r7/ac/services/BOFormService"/></wsdl:port>
+<wsdl:port name="BOFormServiceHttpPort.3" binding="ns0:BOFormServiceHttpBinding">
+<soap11:address location="http://10.68.110.93:80/dcr/r7/ap/services/BOFormService"/></wsdl:port>
+<wsdl:port name="BOFormServiceHttpPort.4" binding="ns0:BOFormServiceHttpBinding">
+<soap11:address location="http://10.68.110.93:80/dcr/integ/ac/services/BOFormService"/></wsdl:port>
+<wsdl:port name="BOFormServiceHttpPort.5" binding="ns0:BOFormServiceHttpBinding">
+<soap11:address location="http://10.68.110.93:80/dcr/integ/ap/services/BOFormService"/></wsdl:port></wsdl:service></wsdl:definitions>

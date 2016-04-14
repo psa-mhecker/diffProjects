@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions
+        targetNamespace="http://xml.inetpsa.com/Services/Cfg/Config"
+        xmlns:cxl="http://fault.core.cxl.inetpsa.com"
+        xmlns:soap11="http://schemas.xmlsoap.org/soap/envelope/"
+        xmlns:soap12="http://www.w3.org/2003/05/soap-envelope"
+        xmlns:soapenc11="http://schemas.xmlsoap.org/soap/encoding/"
+        xmlns:soapenc12="http://www.w3.org/2003/05/soap-encoding"
+        xmlns:tn="http://inetpsa.com/cfg"
+        xmlns:tns="http://xml.inetpsa.com/Services/Cfg/Config"
+        xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+        xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <wsdl:types>
+        <xsd:schema attributeFormDefault="unqualified"
+                    elementFormDefault="qualified"
+                    targetNamespace="http://inetpsa.com/cfg"
+                    xmlns:tn="http://inetpsa.com/cfg" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <xs:element name="Config" type="tn:ConfigType"/>
+            <xs:element name="ConfigFeature" type="tn:ConfigFeatureType"/>
+            <xs:element name="ConfigResponse" type="tn:ConfigResponseType"/>
+            <xs:element name="ConfigResponseV2" type="tn:ConfigResponseTypeV2"/>
+            <xs:element name="ConfigFeatureResponse" type="tn:ConfigFeatureResponseType"/>
+            <xs:complexType name="ConfigType">
+                <xs:sequence>
+                    <xs:element minOccurs="1" name="ContextRequest" type="tn:ContextRequest"/>
+                    <xs:element minOccurs="1" name="ConfigCriteria" type="tn:ConfigCriteria"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ConfigFeatureType">
+                <xs:sequence>
+                    <xs:element minOccurs="1" name="ContextRequest" type="tn:ContextRequest"/>
+                    <xs:element minOccurs="1" name="ConfigCriteria" type="tn:ConfigCriteriaFeature"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ContextRequest">
+                <xs:sequence>
+                    <xs:element minOccurs="1" name="Client" type="xs:string"/>
+                    <xs:element minOccurs="1" name="Brand">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:length value="1"/>
+                                <xs:enumeration value="P"/>
+                                <xs:enumeration value="C"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element minOccurs="1" name="Country" type="xs:string"/>
+                    <xs:choice minOccurs="1">
+                        <xs:element name="Date" type="xs:date"/>
+                        <xs:element name="TariffCode" type="xs:string"/>
+                    </xs:choice>
+                    <xs:element maxOccurs="1" minOccurs="0" name="LanguageID" type="xs:string"/>
+                    <!-- minOccurs = "0", Network = false  {false = client final (config internet) -->
+                    <!-- maxOccurs = "1", Network = {false,true} -->
+                    <xs:element default="false" maxOccurs="1" minOccurs="0"
+                                name="Network" type="xs:boolean"/>
+                    <xs:choice maxOccurs="1" minOccurs="0">
+                        <!-- minOccurs = "0", TaxIncluded = true -->
+                        <!-- maxOccurs = "1", TaxIncluded = {false,true} -->
+                        <xs:element default="true" name="TaxIncluded" type="xs:boolean"/>
+                        <!-- minOccurs = "0", ProfessionalUse = false -->
+                        <!-- maxOccurs = "1", ProfessionalUse = {false,true} -->
+                        <xs:element default="false" name="ProfessionalUse" type="xs:boolean"/>
+                    </xs:choice>
+                    <!-- minOccurs = "0",  Default tariff zone-->
+                    <!-- maxOccurs = "1",  TariffZone -->
+                    <xs:element maxOccurs="1" minOccurs="0" name="TariffZone" type="xs:string"/>
+                    <!-- minOccurs = "0", LocalCurrency = false -->
+                    <!-- maxOccurs = "1", LocalCurrency = true -->
+                    <xs:element default="false" maxOccurs="1" minOccurs="0"
+                                name="LocalCurrency" type="xs:boolean"/>
+                    <!-- minOccurs = "0", ShowUnavailableLooks = false  -->
+                    <!-- maxOccurs = "1", ShowUnavailableLooks = {false, true} -->
+                    <xs:element default="true" maxOccurs="1" minOccurs="0"
+                                name="ShowUnavailableLooks" type="xs:boolean"/>
+                    <!-- minOccurs = "0", ShowUnavailableOptionalFeatures = true  -->
+                    <!-- maxOccurs = "1", ShowUnavailableOptionalFeatures = {false, true} -->
+                    <xs:element default="false" maxOccurs="1" minOccurs="0"
+                                name="ShowUnavailableOptionalFeatures" type="xs:boolean"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ConfigCriteria">
+                <xs:sequence>
+                    <xs:element maxOccurs="1" name="Version" type="xs:string"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="Feature" type="tn:Feature"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Feature">
+                <xs:sequence>
+                    <xs:element minOccurs="1" name="id" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ConfigCriteriaFeature">
+                <xs:sequence>
+                    <xs:element maxOccurs="1" minOccurs="0" name="VehicleUse" type="xs:string"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="1" name="Model" type="xs:string"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0"
+                                name="BodyStyle" type="xs:string"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0"
+                                name="GrBodyStyle" type="xs:string"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="Grade" type="xs:string"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0"
+                                name="GrCommercialName" type="xs:string"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0"
+                                name="TransmissionType" type="xs:string"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0"
+                                name="GrTransmissionType" type="xs:string"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0"
+                                name="GrTypeBoiteVitesse" type="xs:string"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="Engine" type="xs:string"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0"
+                                name="GrEngine" type="xs:string"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="Energy" type="xs:string"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0"
+                                name="EcoLabel" type="xs:boolean"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0"
+                                name="EcoLabelText" type="xs:string"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="1" name="Feature" type="tn:Feature"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ConfigResponseType">
+                <xs:sequence>
+                    <xs:element minOccurs="1" name="Version" type="tn:Version"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ConfigResponseTypeV2">
+                <xs:sequence>
+                    <xs:element minOccurs="1" name="Version" type="tn:VersionV2"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ConfigFeatureResponseType">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0"
+                                name="Versions" type="tn:VersionV2"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Version">
+                <xs:sequence>
+                    <xs:element minOccurs="1" name="IdVersion" type="tn:Identification"/>
+                    <xs:element minOccurs="0" name="Tariff" type="tn:Tariff"/>
+                    <xs:element minOccurs="0" name="VehicleUse" type="tn:Identification"/>
+                    <xs:element minOccurs="1" name="Model" type="tn:Identification"/>
+                    <xs:element minOccurs="1" name="VehiclePrice" type="tn:Price"/>
+                    <xs:element minOccurs="1" name="Price" type="tn:Price"/>
+                    <xs:element minOccurs="1" name="FeaturesPrice" type="tn:Price"/>
+                    <xs:element minOccurs="1" name="OptionalFeaturesPrice" type="tn:Price"/>
+                    <xs:element minOccurs="1" name="LookFeaturesPrice" type="tn:Price"/>
+                    <xs:element maxOccurs="1" minOccurs="0"
+                                name="CommercialOffers" type="tn:CommercialOffers"/>
+                    <xs:element minOccurs="0" name="Grade" type="tn:Identification"/>
+                    <xs:element minOccurs="0" name="BodyStyle" type="tn:Identification"/>
+                    <xs:element minOccurs="0" name="GrbodyStyle" type="tn:Identification"/>
+                    <xs:element minOccurs="1" name="DesignClass" type="tn:Identification"/>
+                    <xs:element minOccurs="1" name="CustomerType" type="tn:Identification"/>
+                    <xs:element minOccurs="1" name="ModelYear" type="tn:Identification"/>
+                    <xs:element minOccurs="1" name="ModelYearModification" type="tn:Identification"/>
+                    <xs:element minOccurs="0" name="CommercialName" type="tn:Identification"/>
+                    <xs:element minOccurs="0" name="GrCommercialName" type="tn:Identification"/>
+                    <xs:element minOccurs="0" name="Engine" type="tn:Identification"/>
+                    <xs:element minOccurs="0" name="GrEngine" type="tn:Identification"/>
+                    <xs:element minOccurs="0" name="TransmissionType" type="tn:Identification"/>
+                    <xs:element minOccurs="0" name="GrTransmissionType" type="tn:Identification"/>
+                    <xs:element minOccurs="0" name="Energy" type="tn:Identification"/>
+                    <xs:element maxOccurs="1" minOccurs="0" name="Co2Rate" type="xs:float"/>
+                    <xs:element maxOccurs="1" minOccurs="0" name="Co2RateComplex" type="tn:TechCharComplex"/>
+                    <xs:element maxOccurs="1" minOccurs="0" name="Co2Class" type="xs:string"/>
+                    <xs:element maxOccurs="1" minOccurs="0" name="EcoLabel" type="xs:boolean"/>
+                    <xs:element maxOccurs="1" minOccurs="0"
+                                name="MixedConsumption" type="xs:float"/>
+                    <xs:element maxOccurs="1" minOccurs="0"
+                                name="MixedConsumptionComplex" type="tn:TechCharComplex"/>
+                    <xs:element maxOccurs="1" minOccurs="0" name="UsefulIntLength" type="xs:float"/>
+                    <xs:element maxOccurs="1" minOccurs="0"
+                                name="UsefulIntLengthComplex" type="tn:TechCharComplex"/>
+                    <xs:element maxOccurs="1" minOccurs="0" name="UsefulIntHeight" type="xs:float"/>
+                    <xs:element maxOccurs="1" minOccurs="0"
+                                name="UsefulIntHeightComplex" type="tn:TechCharComplex"/>
+                    <xs:element maxOccurs="1" minOccurs="0" name="ExteriorLength" type="xs:float"/>
+                    <xs:element maxOccurs="1" minOccurs="0"
+                                name="ExteriorLengthComplex" type="tn:TechCharComplex"/>
+                    <xs:element maxOccurs="1" minOccurs="0" name="ExteriorHeight" type="xs:float"/>
+                    <xs:element maxOccurs="1" minOccurs="0"
+                                name="ExteriorHeightComplex" type="tn:TechCharComplex"/>
+                    <xs:element maxOccurs="1" minOccurs="0" name="TrunkVolume" type="xs:float"/>
+                    <xs:element maxOccurs="1" minOccurs="0"
+                                name="TrunkVolumeComplex" type="tn:TechCharComplex"/>
+                    <xs:element maxOccurs="1" minOccurs="0" name="PayloadVolume" type="xs:float"/>
+                    <xs:element maxOccurs="1" minOccurs="0"
+                                name="PayloadVolumeComplex" type="tn:TechCharComplex"/>
+                    <xs:element maxOccurs="1" minOccurs="0"
+                                name="UsefulTrayLength" type="xs:float"/>
+                    <xs:element maxOccurs="1" minOccurs="0"
+                                name="UsefulTrayLengthComplex" type="tn:TechCharComplex"/>
+                    <xs:element maxOccurs="1" minOccurs="0" name="NumSittedPlaces" type="xs:int"/>
+                    <xs:element maxOccurs="1" minOccurs="0"
+                                name="NumSittedPlacesComplex" type="tn:TechCharComplex"/>
+                    <xs:element maxOccurs="1" minOccurs="0" name="PayloadWeight" type="xs:float"/>
+                    <xs:element maxOccurs="1" minOccurs="0"
+                                name="PayloadWeightComplex" type="tn:TechCharComplex"/>
+                    <xs:element maxOccurs="1" minOccurs="0" name="BodyLength" type="xs:float"/>
+                    <xs:element maxOccurs="1" minOccurs="0"
+                                name="BodyLengthComplex" type="tn:TechCharComplex"/>
+                    <xs:element maxOccurs="1" minOccurs="0" name="Characteristic1" type="xs:string"/>
+                    <xs:element maxOccurs="1" minOccurs="0" name="Characteristic2" type="xs:string"/>
+                    <xs:element maxOccurs="1" minOccurs="0" name="Characteristic3" type="xs:string"/>
+                    <xs:element maxOccurs="1" minOccurs="0" name="Characteristic4" type="xs:string"/>
+                    <xs:element maxOccurs="1" minOccurs="0" name="ExtendedCode" type="xs:string"/>
+                    <xs:element maxOccurs="1" minOccurs="0" name="VisualCode" type="xs:string"/>
+                    <xs:element minOccurs="1" name="StandardFeatures" type="tn:StandardCategories"/>
+                    <xs:element minOccurs="1" name="TechnicalCharacteristics" type="tn:TechnicalCharacteristicsCategories"/>
+                    <xs:element minOccurs="1" name="OptionalFeatures" type="tn:OptionalFeaturesCategories"/>
+                    <xs:element minOccurs="1" name="LookFeatures" type="tn:LookFeatures"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="VersionV2">
+                <xs:complexContent>
+                    <xs:extension base="tn:Version">
+                        <xs:sequence>
+                            <xs:element minOccurs="0" name="GrTypeBoiteVitesse" type="tn:Identification"/>
+                            <xs:element maxOccurs="1" minOccurs="0"
+                                        name="EcoLabelText" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:extension>
+                </xs:complexContent>
+            </xs:complexType>
+            <xs:complexType name="TechCharComplex">
+                <xs:sequence>
+                    <xs:element maxOccurs="1" minOccurs="0" name="decimalValue" type="xs:float"/>
+                    <xs:element maxOccurs="1" minOccurs="0" name="stringValue" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="LookFeatures">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0"
+                                name="InteriorFeatures" type="tn:OptionalFeature"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0"
+                                name="ExteriorFeatures" type="tn:OptionalFeature"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="OptionalFeaturesCategories">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0"
+                                name="Category" type="tn:OptionalFeatureCategory"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="OptionalFeatureCategory">
+                <xs:sequence>
+                    <xs:element minOccurs="1" name="id" type="xs:string"/>
+                    <xs:element minOccurs="1" name="label" type="xs:string"/>
+                    <xs:element minOccurs="1" name="rank" type="xs:int"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0"
+                                name="OptionalFeatures" type="tn:OptionalFeature"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0"
+                                name="OptionalPacks" type="tn:OptionalPack"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="OptionalFeature">
+                <xs:sequence>
+                    <xs:element minOccurs="1" name="id" type="xs:string"/>
+                    <xs:element minOccurs="1" name="code" type="xs:string"/>
+                    <xs:element minOccurs="1" name="rank" type="xs:int"/>
+                    <xs:element minOccurs="1" name="classe" type="xs:string"/>
+                    <xs:element minOccurs="1" name="label" type="xs:string"/>
+                    <xs:element minOccurs="0" name="description" type="xs:string"/>
+                    <xs:element minOccurs="1" name="Price" type="tn:Price"/>
+                    <xs:element maxOccurs="1" minOccurs="0"
+                                name="CommercialOffers" type="tn:CommercialOffers"/>
+                    <xs:element minOccurs="1" name="assembly" type="xs:int"/>
+                    <!-- selection = 'user' => Sélectionné par le user -->
+                    <!-- selection = 'auto' => Sélectionné automatiquement -->
+                    <!-- selection = 'no'   => non sélectionnable -->
+                    <xs:element minOccurs="0" name="selection" type="xs:string"/>
+                    <!-- pack = 'OnlyIndvidual' 		=> Option qui ne fait pas partie d'un pack -->
+                    <!-- pack = 'OnlyInPack' 		    => Option qui fait partie d'un pack -->
+                    <!-- pack = 'InPackAndIndividual' => Option individuelle et qui fait partie d'un pack-->
+                    <!--          <xs:element minOccurs="1" name="pack" type="xs:string"/>-->
+                    <!--
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="PackComponents" type="tn:CodePack"/>
+                     -->
+                    <xs:element maxOccurs="1" minOccurs="0" name="specific" type="xs:string"/>
+                    <xs:element maxOccurs="1" minOccurs="0" name="Co2Variation" type="xs:float"/>
+                    <xs:element maxOccurs="1" minOccurs="0" name="Co2Global" type="xs:float"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="OptionalPack">
+                <xs:sequence>
+                    <xs:element minOccurs="1" name="id" type="xs:string"/>
+                    <xs:element minOccurs="1" name="code" type="xs:string"/>
+                    <xs:element minOccurs="1" name="rank" type="xs:int"/>
+                    <xs:element minOccurs="1" name="classe" type="xs:string"/>
+                    <xs:element minOccurs="1" name="label" type="xs:string"/>
+                    <xs:element minOccurs="0" name="description" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Price" type="tn:Price"/>
+                    <xs:element maxOccurs="1" minOccurs="0"
+                                name="CommercialOffers" type="tn:CommercialOffers"/>
+                    <xs:element minOccurs="1" name="assembly" type="xs:int"/>
+                    <!-- selection = 'user' => Sélectionné par le user -->
+                    <!-- selection = 'auto' => Sélectionné automatiquement -->
+                    <!-- selection = 'no'   => sélectionnable et non sélectionné -->
+                    <xs:element minOccurs="0" name="selection" type="xs:string"/>
+                    <!-- forced = 'true' 	 => Pack forcé -->
+                    <!-- forced = 'false'  => Pack non forcé -->
+                    <xs:element minOccurs="1" name="forced" type="xs:boolean"/>
+                    <xs:element maxOccurs="1" minOccurs="0" name="Co2Variation" type="xs:float"/>
+                    <xs:element maxOccurs="1" minOccurs="0" name="Co2Global" type="xs:float"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="2"
+                                name="PackFeatures" type="tn:PackFeature"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Pack100">
+                <xs:sequence>
+                    <xs:element minOccurs="1" name="id" type="xs:string"/>
+                    <xs:element minOccurs="1" name="code" type="xs:string"/>
+                    <xs:element minOccurs="1" name="rank" type="xs:int"/>
+                    <xs:element minOccurs="1" name="classe" type="xs:string"/>
+                    <xs:element minOccurs="1" name="label" type="xs:string"/>
+                    <xs:element minOccurs="0" name="description" type="xs:string"/>
+                    <xs:element minOccurs="1" name="assembly" type="xs:int"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="2"
+                                name="PackFeatures" type="tn:PackFeature"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="PackFeature">
+                <xs:sequence>
+                    <xs:element minOccurs="1" name="id" type="xs:string"/>
+                    <xs:element minOccurs="1" name="label" type="xs:string"/>
+                    <xs:element minOccurs="0" name="description" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="TechnicalCharacteristicsCategories">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0"
+                                name="Category" type="tn:TechnicalCharacteristicCategory"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="TechnicalCharacteristicCategory">
+                <xs:sequence>
+                    <xs:element minOccurs="1" name="id" type="xs:string"/>
+                    <xs:element minOccurs="1" name="label" type="xs:string"/>
+                    <xs:element minOccurs="1" name="rank" type="xs:int"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0"
+                                name="TechnicalCharacteristics" type="tn:TechnicalCharacteristic"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="TechnicalCharacteristic">
+                <xs:sequence>
+                    <xs:element minOccurs="1" name="id" type="xs:string"/>
+                    <xs:element minOccurs="1" name="label" type="xs:string"/>
+                    <xs:element minOccurs="1" name="rank" type="xs:int"/>
+                    <xs:element minOccurs="1" name="value" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="StandardCategories">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0"
+                                name="Category" type="tn:StandardCategory"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="StandardCategory">
+                <xs:sequence>
+                    <xs:element minOccurs="1" name="id" type="xs:string"/>
+                    <xs:element minOccurs="1" name="label" type="xs:string"/>
+                    <xs:element minOccurs="1" name="rank" type="xs:int"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0"
+                                name="StandardFeatures" type="tn:StandardFeature"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0"
+                                name="Packs100" type="tn:Pack100"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="StandardFeature">
+                <xs:sequence>
+                    <xs:element minOccurs="1" name="id" type="xs:string"/>
+                    <xs:element minOccurs="1" name="code" type="xs:string"/>
+                    <xs:element minOccurs="1" name="label" type="xs:string"/>
+                    <xs:element minOccurs="1" name="rank" type="xs:int"/>
+                    <xs:element minOccurs="1" name="classe" type="xs:string"/>
+                    <xs:element maxOccurs="1" minOccurs="0" name="description" type="xs:string"/>
+                    <xs:element minOccurs="1" name="assembly" type="xs:int"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Tariff">
+                <xs:sequence>
+                    <xs:element minOccurs="1" name="tariffCode" type="xs:string"/>
+                    <xs:element minOccurs="1" name="tariffStartDate" type="xs:date"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Identification">
+                <xs:sequence>
+                    <xs:element minOccurs="1" name="id" type="xs:string"/>
+                    <xs:element minOccurs="1" name="label" type="xs:string"/>
+                    <xs:element maxOccurs="1" minOccurs="0" name="description" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="CodePack">
+                <xs:sequence>
+                    <xs:element minOccurs="1" name="code" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Price">
+                <xs:sequence>
+                    <xs:element minOccurs="1" name="basePrice" type="xs:decimal"/>
+                    <xs:element minOccurs="1" name="netPrice" type="xs:decimal"/>
+                    <xs:element minOccurs="1" name="discount" type="xs:decimal"/>
+                    <xs:element minOccurs="0" name="priceStartDate" type="xs:date"/>
+                    <xs:element minOccurs="0" name="priceEndDate" type="xs:date"/>
+                    <xs:element minOccurs="0" name="bonus" type="xs:decimal"/>
+                    <xs:element minOccurs="0" name="malus" type="xs:decimal"/>
+                    <xs:element minOccurs="0" name="novaRate" type="xs:decimal"/>
+                    <xs:element minOccurs="0" name="novaValue" type="xs:decimal"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="CommercialOffers">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="commercialOffer" type="tn:CommercialOffer"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="CommercialOffer">
+                <xs:sequence>
+                    <xs:element minOccurs="1" name="idOc" type="xs:int"/>
+                    <xs:element minOccurs="1" name="idRemise" type="xs:int"/>
+                    <xs:element minOccurs="1" name="label" type="xs:string"/>
+                    <xs:element minOccurs="1" name="description" type="xs:string"/>
+                    <xs:element minOccurs="1" name="applied" type="xs:boolean"/>
+                    <xs:element minOccurs="1" name="discount" type="xs:decimal"/>
+                    <xs:element minOccurs="0" name="onBasePrice" type="xs:boolean"/>
+                    <xs:element minOccurs="1" name="amount" type="xs:boolean"/>
+                    <xs:element minOccurs="1" name="offer" type="xs:decimal"/>
+                    <xs:element minOccurs="1" name="offerStartDate" type="xs:date"/>
+                    <xs:element minOccurs="1" name="offerEndDate" type="xs:date"/>
+                    <xs:element minOccurs="1" name="offerPartMar" type="xs:decimal"/>
+                    <xs:element minOccurs="1" name="offerPartCre" type="xs:decimal"/>
+                    <!-- Décomposition des promos
+                            order = 1 => Promo principal.
+                            order = 2 => Promo secondaire.
+                     -->
+                    <xs:element maxOccurs="1" minOccurs="0" name="order" type="xs:string"/>
+                    <!-- minOccurs = "0", avantageClient = false -->
+                    <!-- maxOccurs = "1", avantageClient = {false,true}  -->
+                    <xs:element maxOccurs="1" minOccurs="0" name="avantageClient" type="xs:boolean"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xsd:schema>
+        <xsd:schema attributeFormDefault="unqualified"
+                    elementFormDefault="qualified" targetNamespace="http://fault.core.cxl.inetpsa.com">
+            <xsd:complexType name="ServiceException"/>
+        </xsd:schema>
+        <xsd:schema attributeFormDefault="unqualified"
+                    elementFormDefault="qualified"
+                    targetNamespace="http://xml.inetpsa.com/Services/Cfg/Config" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <xsd:import namespace="http://fault.core.cxl.inetpsa.com"/>
+            <xsd:import namespace="http://inetpsa.com/cfg"/>
+            <xsd:element name="Config">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="tn:Config"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="ConfigResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="tn:ConfigResponse"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="ConfigFeature">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="tn:ConfigFeature"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="ConfigFeatureResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="tn:ConfigFeatureResponse"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="ConfigV2">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="tn:Config"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="ConfigV2Response">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="tn:ConfigResponseV2"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="ServiceException" type="cxl:ServiceException"/>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="ConfigRequest">
+        <wsdl:part element="tns:Config" name="parameters"/>
+    </wsdl:message>
+    <wsdl:message name="ConfigFeatureRequest">
+        <wsdl:part element="tns:ConfigFeature" name="parameters"/>
+    </wsdl:message>
+    <wsdl:message name="ConfigV2Request">
+        <wsdl:part element="tns:ConfigV2" name="parameters"/>
+    </wsdl:message>
+    <wsdl:message name="ServiceException">
+        <wsdl:part element="tns:ServiceException" name="ServiceException"/>
+    </wsdl:message>
+    <wsdl:message name="ConfigResponse">
+        <wsdl:part element="tns:ConfigResponse" name="parameters"/>
+    </wsdl:message>
+    <wsdl:message name="ConfigFeatureResponse">
+        <wsdl:part element="tns:ConfigFeatureResponse" name="parameters"/>
+    </wsdl:message>
+    <wsdl:message name="ConfigV2Response">
+        <wsdl:part element="tns:ConfigV2Response" name="parameters"/>
+    </wsdl:message>
+    <wsdl:portType name="ConfigPortType">
+        <wsdl:operation name="Config">
+            <wsdl:input message="tns:ConfigRequest" name="ConfigRequest"/>
+            <wsdl:output message="tns:ConfigResponse" name="ConfigResponse"/>
+            <wsdl:fault message="tns:ServiceException" name="ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="ConfigFeature">
+            <wsdl:input message="tns:ConfigFeatureRequest" name="ConfigFeatureRequest"/>
+            <wsdl:output message="tns:ConfigFeatureResponse" name="ConfigFeatureResponse"/>
+            <wsdl:fault message="tns:ServiceException" name="ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="ConfigV2">
+            <wsdl:input message="tns:ConfigV2Request" name="ConfigV2Request"/>
+            <wsdl:output message="tns:ConfigV2Response" name="ConfigV2Response"/>
+            <wsdl:fault message="tns:ServiceException" name="ServiceException"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="ConfigHttpBinding" type="tns:ConfigPortType">
+        <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="Config">
+            <wsdlsoap:operation soapAction="http://xml.inetpsa.com/Services/Cfg/Config#Config"/>
+            <wsdl:input name="ConfigRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="ConfigResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <wsdlsoap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="ConfigFeature">
+            <wsdlsoap:operation soapAction="http://xml.inetpsa.com/Services/Cfg/Config#ConfigFeature"/>
+            <wsdl:input name="ConfigFeatureRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="ConfigFeatureResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <wsdlsoap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="ConfigV2">
+            <wsdlsoap:operation soapAction="http://xml.inetpsa.com/Services/Cfg/Config#ConfigV2"/>
+            <wsdl:input name="ConfigV2Request">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="ConfigV2Response">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <wsdlsoap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="Config">
+        <wsdl:port binding="tns:ConfigHttpBinding" name="ConfigHttpPort">
+            <wsdlsoap:address location="http://localhost:8080/cfg00Web/services/Config"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

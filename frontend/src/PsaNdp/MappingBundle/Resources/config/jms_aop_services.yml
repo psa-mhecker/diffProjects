@@ -1,0 +1,10 @@
+parameters:
+  load_node_pointcut.class: PsaNdp\MappingBundle\Interceptor\LoadNodePointCut
+  load_node_interceptor.class: PsaNdp\MappingBundle\Interceptor\LoadNodeInterceptor
+services:
+#    load_node_pointcut:
+#        class: %load_node_pointcut.class%
+#        tags:
+#            - { name: jms_aop.pointcut, interceptor: load_node_interceptor }
+#    load_node_interceptor:
+#        class: %load_node_interceptor.class%

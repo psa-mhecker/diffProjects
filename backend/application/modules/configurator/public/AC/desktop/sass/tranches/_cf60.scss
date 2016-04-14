@@ -1,0 +1,59 @@
+.slice-cf60 {
+  .btn-help {
+    margin: 16px 0;
+  }
+  label,
+  .input-checkbox label .label,
+  .input-radio label .label {
+    width: auto;
+    display: inline-block;
+  }
+  .save-config .content-info .config-save .confirm-mentions .error-msg {
+    padding-left: 0;
+    text-align: center;
+  }
+  .content-info .config-save {
+    /* .config-box-input .input-text.error input {border-color:#b8b8bb;}*/
+    .confirm-mentions .erreurbox .input {
+      border-color: $input-default-border;
+    }
+  }
+  .btn-small {
+    margin-bottom: 20px;
+  }
+  .title-txt {
+    font: 24px/1.2 $font-family-brand-bold;
+    display: block;
+    margin-right: 70px;
+    margin-bottom: 3%;
+  }
+  .modified-elements {
+    border: 4px solid $gray-light;
+    padding: 20px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-size: 13px;
+    & > .title {
+      text-transform: uppercase;
+      color: $gray-citroen-bold;
+    }
+    ul {
+      color: $gray-citroen;
+      padding-left: 0;
+      list-style-position: inside;
+      line-height: 2em;
+    }
+  }
+  .control-box {
+    padding-left: 0;
+    padding-right: 0;
+    .pull-right {
+      margin-top: 0;
+      margin-left: 0;
+    }
+  }
+  figure {
+    text-align: center;
+    margin: 18px 0;
+  }
+}

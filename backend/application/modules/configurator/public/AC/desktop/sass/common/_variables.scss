@@ -1,0 +1,143 @@
+@charset "UTF-8";
+//== Media queries breakpoints
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+
+// Medium screen / desktop
+$screen-md:                  1280px !default;
+$screen-md-min:              $screen-md !default;
+$screen-desktop:             $screen-md-min !default;
+
+
+//== Grid system
+//
+//## Define your custom responsive grid.
+
+//** Number of columns in the grid.
+$grid-columns:              12 !default;
+//** Padding between columns. Gets divided in half for the left and right.
+$grid-gutter-width:         30px !default;
+
+
+//== Container sizes
+//
+//## Define the maximum width of `.container` for different screen sizes.
+
+
+// Medium screen / desktop
+$container-desktop:            (1280px + $grid-gutter-width) !default;
+//** For `$screen-md-min` and up.
+$container-md:                 $container-desktop !default;
+
+
+//== Colors
+//
+//## Gray and brand colors for use across project.
+$default-color:           #fff !default;
+$gray-dark:              #333 !default;
+$gray-citroen:           #646464 !default;
+$gray-citroen-bold:      #333333 !default;
+$gray:                   #9f9f9f !default;
+$gray-light:             #dcdcdc !default;
+$gray-lighter:           #ededed !default;
+
+$brand-orange:                  #f27800 !default;
+$brand-rose:                    #d71f85 !default;
+$brand-blue:                    #007f99 !default;
+$brand-blue-light:              #b6e1e9 !default;
+$brand-blue-lighter:            #e7f5f8 !default;
+$brand-blue-lightess:           #85cddb !default;
+$brand-plum-grey:               #b29fa4 !default;
+$brand-plum-grey-puce:          #333333 !default;
+$brand-or:           			#c2b000 !default;
+$brand-lavender-grey:           #afadc3 !default;
+$brand-lavender-grey-opac:      rgba( $brand-lavender-grey, .7 ) !default;
+
+$disable-btn-color: #d0d0d0;
+
+$more-finitions-border: #aeadb3;
+
+$comparator-empty-border: #ececec;
+$comparator-btn-color: #afadc5;
+
+$show-all-color-default : #e7e7ed;
+$show-all-color-hover : #efeff3;
+
+$list-dark : #f3efcc;
+$list-light : #f9f7e5;
+
+$toggle-gray : #e7e6ed;
+
+//== Scaffolding
+//
+//## Settings for some of the most global styles.
+
+//** Background color for `<body>`.
+$body-bg:               #fff !default;
+//** Global text color on `<body>`.
+$text-color:            $gray-citroen !default;
+//** Global textual link color.
+$link-color:            $brand-orange !default;
+
+
+//## Font, line-height, and color for body text, headings, and more.
+//##    La police CITROËN a été spécialement dessinée pour la marque. Elle est
+//##    principalement utilisée pour les titres de page, de grandes sections, la navigation
+//##    et call to action. En ce qui concerne les titres de page (H1), on privilégiera l’usage
+//##    des capitales et la version Light, puis la version Bold, toujours en capitales.
+$font-family-brand-light: "citroenlight";
+$font-family-brand-regular: "citroenregular";
+$font-family-brand-bold: "citroenbold";
+
+
+//##    La police Ubuntu est utilisée en Regular pour le texte courant et pour
+//##    certains titres (H2) et certains liens en bas de casse version Bold.
+$font-family-base-light: "ubuntulight";
+$font-family-base-regular: "ubunturegular";
+$font-family-base-bold: "ubuntubold";
+
+
+//##    En ce qui concerne les alphabets non couverts par la police UBUNTU, ainsi que
+//##    pour les e-mails, nous utilisons l’ARIAL.
+
+$font-family-sans-serif:  Arial, sans-serif !default;
+
+$font-size-base:          14px !default;
+$font-size-large:         ceil(($font-size-base * 1.05)) !default; // ~18px
+$font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-x-large:       ceil(($font-size-base * 1.40)) !default; // ~20px
+$font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
+$font-size-md:			  18px;
+
+$line-height-base:        1.2 !default; // 20/14
+
+$headings-font-family:    $font-family-brand-bold !default;
+$headings-color:          $brand-orange !default;
+
+// bagdes  implémentation des badges  de différentes tailles small medium and lg
+
+//2 badges colors
+$bage-nouveaute:		#007f99;
+$badge-promotion: 		#fa0082;
+$badge-recommandation:	#b29fa4;
+//elemts formulaire color
+$input-default-border:#b8b8bb;
+$error-color: #d71f85;
+//color gallery
+$color-gallery: #c2b101;
+//font navigation
+/* Fonts */
+$font_citroen-light: 'citroenlight', Arial;
+$font_citroen-regular: 'citroenregular', Arial;
+$font_citroen-bold: 'citroenbold', Arial;
+$font_ubuntu-light: 'ubuntulight', Arial;
+$font_ubuntu-regular: 'ubunturegular', Arial;
+$font_ubuntu-bold: 'ubuntubold', Arial;
+
+/* Main font size */
+$main_fontsize: 14;
+
+html {
+	font: $main_fontsize+px/1.2 $font_citroen-regular;
+}

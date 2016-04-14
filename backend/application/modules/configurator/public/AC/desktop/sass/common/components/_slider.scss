@@ -1,0 +1,65 @@
+.miniature, .x-bloc_carroussel{
+    display:block;
+    width: 95%;
+    position: relative;
+    margin: auto;
+    //max-height: 118px;
+    .marg-picto-left {
+        position: absolute;
+        left: -20px;
+        top: 34%;
+        padding: 6px 5px 3px 5px;
+        cursor: pointer;
+    }
+    .marg-picto-right{
+        position: absolute;
+        right: -20px;
+        top: 34%;
+        padding: 6px 5px 3px 5px;
+        cursor: pointer;
+    }
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+    img.swiper-slide, img.miniature-item {
+        width: auto;
+        height: auto;
+        border: 1px solid transparent;
+        padding: 4px;
+        cursor: pointer;
+        outline: none;
+        &.active {
+            border: 4px solid $brand-orange;
+        }
+    }
+}
+
+.h-bloc_carroussel{
+    display:block;
+    height: 248px;
+    width: 109px;
+    position: relative;
+    .marg-picto-bottom {
+        position: absolute;
+        right: 45px;
+        bottom: -28px;
+        padding: 6px 5px 3px 5px;
+        cursor: pointer;
+    }
+    .marg-picto-top{
+        position: absolute;
+        right: 45px;
+        top: -28px;
+        padding: 6px 5px 3px 5px;
+        cursor: pointer;
+    }
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+    img.swiper-slide {
+        width: auto;
+        height: auto;
+    }
+}

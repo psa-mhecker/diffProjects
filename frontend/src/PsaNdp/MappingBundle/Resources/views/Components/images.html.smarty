@@ -1,0 +1,25 @@
+{* Set if LazyLoad is active (default:true) *}
+{assign var='lazyload' value=$lazy|default:true}
+{assign var='lazyloadslick' value=$lazyslick|default:false}
+
+
+<picture {if !empty($currentIndex)}data-index="{$currentIndex}"{/if}  class="{if ($lazyload && !$lazyloadslick) }lazy-load{/if} {if !empty($class)} {$class} {else} small-12 {/if}">
+    <source
+            media="(min-width: 40.001em)"
+            {if $lazyload}data-srcset{else}srcset{/if}="{$image.size.desktop} 1x{*,
+                                {$image.size.desktop} 2x*}">
+    <source
+            media="(max-width: 40em)"
+            {if $lazyload}data-srcset{else}srcset{/if}="{$image.size.mobile} 1x{*,
+                                {$image.size.mobile} 2x*}">
+    {if !$lazyloadslick}
+        <img
+                {if $lazyload}src="{$image.blank}" data-src="{$image.size.desktop}"{else}src="{$image.size.desktop}"{/if}
+                alt="{$image.alt}">
+    {else}
+        <img data-lazy="{$image.size.desktop}" alt="{$image.alt}">
+    {/if}
+    <noscript><img src="{$image.size.desktop}" alt="{$image.alt}"></noscript>
+
+</picture>
+

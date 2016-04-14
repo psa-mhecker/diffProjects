@@ -1,0 +1,15 @@
+<section class="slice-pn3-v2 slice-inside-margin {if isset($slicePN3.anchorId)} {$slicePN3.anchorId} {/if}" {if isset($slicePN3.anchorId)} id="{$slicePN3.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePN3' } ]" datalayer="{$datalayer}">
+  {foreach $slicePN3 as $accordion}
+    <div class="toggle{if isset($accordion.open)} open-default{/if}" data-count="{$accordion.count}">{$accordion.title}</div>
+    <div class="toggle-content"></div>
+  {/foreach}
+  {if isset($ctaList)}
+    <div class="custom-button-group clearfix">
+      {foreach $ctaList as $cta}
+        {include file="./cta.html.smarty"}
+      {/foreach}
+    </div>
+  {/if}
+</section>
+
+

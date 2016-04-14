@@ -1,0 +1,72 @@
+<div class="slice-pf59 {if isset($infosTranche.anchorId)} {$infosTranche.anchorId} {/if}" {if isset($infosTranche.anchorId)} id="{$infosTranche.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePf59' } ]" data-typeOption="typeOption" data-valueOption="valeur de l'option" data-source="trancheDepuisLaquelleEstAeppelee">
+<h2>{$infosTranche.title_with} {$infosTranche.title_accord} {$infosTranche.title_word},<span>{$infosTranche.title_part_2}</span></h2>
+  {if isset($infosTranche.aide.ctaList) && $infosTranche.aide.active eq true}
+  <div class="custom-button-group lien-aide clearfix">
+    {foreach $infosTranche.aide.ctaList as $cta}
+    {include file="./cta.html.smarty"}
+    {/foreach}
+  </div>
+  {/if}
+  <div class="save-config">
+    <div class="content-info">
+      <div class="etape1">
+        {if isset($infosTranche.mdc.saveConfig.info)}
+          {foreach $infosTranche.mdc.saveConfig.info as $notification}
+            {include file="../../notification/notification.tpl"}
+            {/foreach}
+        {/if}
+      </div>
+
+      <p class="confirm-save"><label class="label-save" for="{$infosTranche.mdc.saveConfig.id}"><input type="checkbox" name="{$infosTranche.mdc.saveConfig.name}" id="{$infosTranche.mdc.saveConfig.id}"/>{$infosTranche.mdc.saveConfig.label}</label></p>
+      <div class="config-save">
+       <form action="url/denvoiAjax" method="post" class="config-form">
+         <div class="config-box-input">
+           <div class="input-text">
+             <label class="control-label" for="configname">{$infosTranche.translate.configuration.ConfigName.title}</label>
+             <div class="form-control">
+               <input type="text" name="configname" id="configname" required="" data-msg-required="{$infosTranche.translate.configuration.ConfigName.txterror}" value="{$infosTranche.config_value}" placeholder="{$infosTranche.config_value}" aria-required="true">
+             </div>
+           </div>
+           <div class="input-text last">
+             <label class="control-label" for="configemail">{$infosTranche.translate.configuration.email.title}</label>
+             <div class="form-control">
+               <input type="email" name="configemail" data-rule-email="true" id="configemail" data-msg-email="{$infosTranche.translate.configuration.email.emailError}" required="" data-msg-required="{$infosTranche.translate.configuration.email.txterror}" aria-required="true">
+             </div>
+           </div>
+           <br class="clr" />
+         </div>
+         {if isset($infosTranche.translate.configuration.mentionsLegales)}<p class="mentions-legales">{$infosTranche.translate.configuration.mentionsLegales}</p>{/if}
+         {if isset($infosTranche.translate.configuration.confirmMentions) && $infosTranche.translate.configuration.confirmMentions.active eq true}
+         <p class="confirm-mentions">
+           <label for="{$infosTranche.translate.configuration.confirmMentions.id}"><input type="checkbox" required="" data-msg-required="{$infosTranche.translate.configuration.confirmMentions.txterror}" aria-required="true" name="{$infosTranche.translate.configuration.confirmMentions.name}" id="{$infosTranche.translate.configuration.confirmMentions.id}"/>{$infosTranche.translate.configuration.confirmMentions.label}</label>
+
+         </p>
+         {/if}
+         {if isset($infosTranche.translate.configuration.ctaList)}
+         <div class="custom-button-group clearfix submitButton">
+           <button class="cta-btn cta-btn-4">{$infosTranche.translate.configuration.sendButton}</button>
+           {foreach $infosTranche.translate.configuration.ctaList as $cta}
+           {include file="./cta.html.smarty"}
+           {/foreach}
+         </div>
+         {/if}
+         <form>
+         </div>
+        <div class="etape3">
+          {if isset($infosTranche.mdc.saveConfig.confirm)}
+            {foreach $infosTranche.mdc.saveConfig.confirm as $notification}
+              {include file="../../notification/notification.tpl"}
+              {/foreach}
+          {/if}
+        </div>
+       </div>
+     </div>
+     {if isset($infosTranche.return.ctaList)}
+     <div class="control-box custom-button-group clearfix">
+      {foreach $infosTranche.return.ctaList as $cta}
+      {include file="./cta.html.smarty"}
+      {/foreach}
+    </div>
+    {/if}
+  </div>
+

@@ -1,0 +1,146 @@
+.slice-cc95 {
+  .title-txt{
+    font: 24px/1.2 $font-family-brand-bold;
+    display: block;
+    margin-right: 70px;
+    margin-bottom: 3%;
+  }
+  .btn-help {
+    //margin-top: 16px;
+    outline: none;
+    -moz-box-shadow: inset 0 0 0 1px $gray-citroen;
+    -webkit-box-shadow: inset 0 0 0 1px $gray-citroen;
+    box-shadow: inset 0 0 0 1px $gray-citroen;
+    border: none;
+    &:hover {
+      border-color: $gray-citroen;
+      -moz-box-shadow: inset 0 0 0 4px $gray-citroen;
+      -webkit-box-shadow: inset 0 0 0 4px $gray-citroen;
+      box-shadow: inset 0 0 0 4px $gray-citroen;
+      border: none;
+    }
+  }
+  .modified-elements {
+    border: 4px solid $gray-light;
+    padding: 20px;
+    margin-top: 2.5%;
+    margin-bottom: 30px;
+    font-size: 13px;
+    & > .title-txt {
+      text-transform: uppercase;
+      color: $brand-plum-grey-puce;
+      font: 13px/1.2 $font-family-base-bold;
+    }
+    .list_rond{
+    //  font-family: $font-family-brand-regular;
+      font-size: 14px;
+    }
+    .list_dark{
+      list-style-type: disc;
+      list-style-position: inside;
+      padding-left: 0;
+      &:before{
+        display: none;
+      }
+    }
+  }
+  .control-box{
+    padding-left: 0;
+    padding-right: 0;
+    .pull-right{
+      margin-top: 0;
+      position: relative;
+      &.diselected{
+        background-color: $disable-btn-color;
+        cursor: default;
+        &:hover{
+          border-color: $disable-btn-color;
+          background-color: $disable-btn-color;
+          color: $default-color;
+        }
+      }
+    }
+  }
+
+  figure{
+    text-align: center;
+    margin: 18px 0;
+  }
+  .cta-group{
+    text-align: center;
+    .cta-link {
+      display: block;
+      padding-top: 20px;
+       color: $gray-dark;
+      span {
+        padding: 0;
+        font-size: 14px;
+        text-decoration: underline;
+      }
+    }
+    &.v2{
+      .min{
+        display: none;
+      }
+      .link{
+        text-align: center;
+        display: inherit;
+      }
+      .text{
+        text-align: center;
+        font-size: 16px;
+      }
+    }
+  }
+  .label-save{
+    &.input-checkbox{
+      margin-left: 0;
+    }
+    label{
+      span.checkbox_btn{
+        border-color: $gray-citroen-bold;
+      }
+      span.label{
+        color: $gray-citroen-bold;
+      }
+    }
+    &.checked{
+      span.label{
+        color: $brand-orange;
+      }
+    }
+  }
+  .config-form {
+    .cta-group{
+      .cta-link {
+        &.dont-save{
+          width: 224px;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+  .save-config{
+    .content-info{
+      .config-save{
+        .confirm-mentions .error-msg{
+          padding-left: 0;
+          text-align: center;
+        }
+        .mentions-legales{
+          margin-bottom: 0;
+        }
+      }
+    }
+    .info.info--orange{
+      left: 16px;
+      padding-top: 1px;
+      padding-right: 1px;
+      padding-left: 1px;
+    }
+  }
+  div.save-config.confirmation{
+    padding: 0;
+    margin-top: -15px;
+  }
+}

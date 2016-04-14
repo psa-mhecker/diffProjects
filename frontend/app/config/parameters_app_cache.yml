@@ -1,0 +1,9 @@
+parameters:
+    # config for cache TTLs (cache times are in seconds)
+    node_cache_max_age: -1
+    block_cache_max_age: -1
+    # config for redis cache service (cache times are in secondsà)
+    webservice_default_cache_time: 43200
+
+
+

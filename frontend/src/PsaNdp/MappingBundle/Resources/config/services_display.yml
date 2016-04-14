@@ -1,0 +1,598 @@
+parameters:
+    psa_ndp_mapping.display.pc5_1_colonne.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pc51ColonneStrategy
+    psa_ndp_mapping.display.pc7_2_colonnes.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pc72ColonnesStrategy
+    psa_ndp_mapping.display.pc8_contenu_2_colonnes_texte.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pc8Contenu2ColonnesTexteStrategy
+    psa_ndp_mapping.display.pc9_contenu_1_article_1_visuel.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pc9Contenu1Article1VisuelStrategy
+    psa_ndp_mapping.display.pc12_3_colonnes_texte.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pc123ColonnesTexteStrategy
+    psa_ndp_mapping.display.pc16_verbatim.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pc16VerbatimStrategy
+    psa_ndp_mapping.display.pc19_slideshow.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pc19SlideshowStrategy
+    psa_ndp_mapping.display.pc23_mur_media.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pc23MurMediaStrategy
+    psa_ndp_mapping.display.pc36_faq.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pc36FAQStrategy
+    psa_ndp_mapping.display.pc39_slideshow_offre.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pc39SlideshowOffreStrategy
+    psa_ndp_mapping.display.pc40_cta.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pc40CTAStrategy
+    psa_ndp_mapping.display.pc41_mentions_juridiques.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pc41MentionsJuridiquesStrategy
+    psa_ndp_mapping.display.pc42_actualites.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pc42ActualitesStrategy
+    psa_ndp_mapping.display.pc43_applications_mobiles.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pc43ApplicationsMobilesStrategy
+    psa_ndp_mapping.display.pc47_point_de_vente_unique.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pc47PointDeVenteUniqueStrategy
+    psa_ndp_mapping.display.pc52_apv.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pc52ApvStrategy
+    psa_ndp_mapping.display.pc53_apv.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pc53ApvStrategy
+    psa_ndp_mapping.display.pc59_tools.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pc59ToolsStrategy
+    psa_ndp_mapping.display.pc61_visuel_boussole.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pc61VisuelBoussoleStrategy
+    psa_ndp_mapping.display.pc62_application_boussole.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pc62ApplicationBoussoleStrategy
+    psa_ndp_mapping.display.pc63_lien_boussole.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pc63LienBoussoleStrategy
+    psa_ndp_mapping.display.pc68_contenu_1_article_2_ou_3_visuels.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pc68Contenu1Article2Ou3VisuelsStrategy
+    psa_ndp_mapping.display.pc69_contenu_2_colonnes.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pc69Contenu2ColonnesStrategy
+    psa_ndp_mapping.display.pc73_mega_banniere_dynamique.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pc73MegaBanniereDynamiqueStrategy
+    psa_ndp_mapping.display.pc77_dimension_vehicule.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pc77DimensionVehiculeStrategy
+    psa_ndp_mapping.display.pc79_mur_media_manuel.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pc79MurMediaManuelStrategy
+    psa_ndp_mapping.display.pc85_reevo.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\PC85ReevoStrategy
+    psa_ndp_mapping.display.pc95_interested_by.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\PC95InterestedByStrategy
+    psa_ndp_mapping.display.pc99_global_header.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pc99GlobalHeaderStrategy
+    psa_ndp_mapping.display.pf6_drag_and_drop.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pf6DragAndDropStrategy
+    psa_ndp_mapping.display.pf8_webstore_vehicle_neuf.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pf8WebstoreVehiculeNeufStrategy
+    psa_ndp_mapping.display.pf11_recherche_point_de_vente.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pf11RecherchePointDeVenteStrategy
+    psa_ndp_mapping.display.pf14_reseaux_sociaux.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pf14ReseauxSociauxStrategy
+    psa_ndp_mapping.display.pf16_autres_reseaux_sociaux.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pf16AutresReseauxSociauxStrategy
+    psa_ndp_mapping.display.pf23_range_bar.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pf23RangeBarStrategy
+    psa_ndp_mapping.display.pf27_car_picker.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pf27CarPickerStrategy
+    psa_ndp_mapping.display.pf30_popin_code_postal.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pf30PopinCodePostalStrategy
+    psa_ndp_mapping.display.pf32_filtre_apv.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pf32FiltreAPVStrategy
+    psa_ndp_mapping.display.pf33_car_compatibility.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pf33CarCompatibilityStrategy
+    psa_ndp_mapping.display.pf42_selectionneur_de_teinte_360.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pf42SelectionneurDeTeinte360Strategy
+    psa_ndp_mapping.display.pf44_devenir_agent.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pf44DevenirAgentStrategy
+    psa_ndp_mapping.display.pf53_finitions_motorisations.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pf53FinitionsMotorisationsStrategy
+    psa_ndp_mapping.display.pn2_onglet.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pn2OngletStrategy
+    psa_ndp_mapping.display.pn3_toggle_accordeon.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pn3ToggleAccordeonStrategy
+    psa_ndp_mapping.display.pn7_en_tete.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pn7EnTeteStrategy
+    psa_ndp_mapping.display.pn13_ancres.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pn13AncresStrategy
+    psa_ndp_mapping.display.pn18_iframe.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pn18IFrameStrategy
+    psa_ndp_mapping.display.pf2_presentation_showroom.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pf2PresentationShowroomStrategy
+    psa_ndp_mapping.display.pt2_footer.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pt2FooterStrategy
+    psa_ndp_mapping.display.pt3_je_veux.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pt3JeVeuxStrategy
+    psa_ndp_mapping.display.pt15_plan_du_site.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pt15PlanDuSiteStrategy
+    psa_ndp_mapping.display.pt17_choix_de_la_langue.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pt17ChoixDeLaLangueStrategy
+    psa_ndp_mapping.display.pt18_pre_home_importateur.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pt18PreHomeImportateurStrategy
+    psa_ndp_mapping.display.pt19_engagements.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pt19EngagementsStrategy
+    psa_ndp_mapping.display.pt20_master_page.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pt20MasterPageStrategy
+    psa_ndp_mapping.display.pt21_navigation.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pt21NavigationStrategy
+    psa_ndp_mapping.display.pt22_my_peugeot.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pt22MyPeugeotStrategy
+    psa_ndp_mapping.display.pt23_module_qualification.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\PT23ModuleQualificationStrategy
+    psa_ndp_mapping.display.pc60_recapitulatif_et_cta_showroom.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pc60RecapitulatifEtCtaShowroomStrategy
+    psa_ndp_mapping.display.pf17_formulaires.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pf17FormulairesStrategy
+    psa_ndp_mapping.display.pc78_usp_mosaique.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pc78UspMosaiqueStrategy
+    psa_ndp_mapping.display.pc84_catalogue_applications.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pc84CatalogueApplicationsStrategy
+    psa_ndp_mapping.display.pc83_contenu_accessoires.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pc83ContenuAccessoiresStrategy
+    psa_ndp_mapping.display.pf25_filtres_resultats_car_selector.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pf25FilterCarSelectorStrategy
+    psa_ndp_mapping.display.pn15_entete_confishow.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pn15EnteteConfishowStrategy
+    psa_ndp_mapping.display.pn14_navigation_confishow.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Pn14NavigationConfishowStrategy
+    psa_ndp_mapping.display.cs99_configshow_test.class: PsaNdp\MappingBundle\DisplayBlock\Strategies\Cs99ConfigshowTestStrategy
+services:
+    psa_ndp_mapping.display.pc5_1_colonne:
+        class: '%psa_ndp_mapping.display.pc5_1_colonne.class%'
+        arguments:
+            - '@psa_ndp_mapping.pc5_1_colonne_data_source'
+            - '@psa_ndp_mapping.pc5_1_colonne_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pc7_2_colonnes:
+        class: '%psa_ndp_mapping.display.pc7_2_colonnes.class%'
+        arguments:
+            - '@psa_ndp_mapping.pc7_2_colonnes_data_source'
+            - '@psa_ndp_mapping.pc7_2_colonnes_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pc8_contenu_2_colonnes_texte:
+        class: '%psa_ndp_mapping.display.pc8_contenu_2_colonnes_texte.class%'
+        arguments:
+            - '@psa_ndp_mapping.pc8_contenu_2_colonnes_texte_data_source'
+            - '@psa_ndp_mapping.pc8_contenu_2_colonnes_texte_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pc9_contenu_1_article_1_visuel:
+        class: '%psa_ndp_mapping.display.pc9_contenu_1_article_1_visuel.class%'
+        arguments:
+            - '@psa_ndp_mapping.pc9_contenu_1_article_1_visuel_data_source'
+            - '@psa_ndp_mapping.pc9_contenu_1_article_1_visuel_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pc12_3_colonnes_texte:
+        class: '%psa_ndp_mapping.display.pc12_3_colonnes_texte.class%'
+        arguments:
+            - '@psa_ndp_mapping.pc12_3_colonnes_texte_data_source'
+            - '@psa_ndp_mapping.pc12_3_colonnes_texte_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pc16_verbatim:
+        class: '%psa_ndp_mapping.display.pc16_verbatim.class%'
+        arguments:
+            - '@psa_ndp_mapping.pc16_verbatim_data_source'
+            - '@psa_ndp_mapping.pc16_verbatim_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pc19_slideshow:
+        class: '%psa_ndp_mapping.display.pc19_slideshow.class%'
+        arguments:
+            - '@psa_ndp_mapping.pc19_slideshow_data_source'
+            - '@psa_ndp_mapping.pc19_slideshow_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pc23_mur_media:
+        class: '%psa_ndp_mapping.display.pc23_mur_media.class%'
+        arguments:
+            - '@psa_ndp_mapping.pc23_mur_media_data_source'
+            - '@psa_ndp_mapping.pc23_mur_media_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pc39_slideshow_offre:
+        class: '%psa_ndp_mapping.display.pc39_slideshow_offre.class%'
+        arguments:
+            - '@psa_ndp_mapping.pc39_slideshow_offre_data_source'
+            - '@psa_ndp_mapping.pc39_slideshow_offre_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pc40_cta:
+        class: '%psa_ndp_mapping.display.pc40_cta.class%'
+        arguments:
+            - '@psa_ndp_mapping.pc40_cta_data_source'
+            - '@psa_ndp_mapping.pc40_cta_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pc41_mentions_juridiques:
+        class: '%psa_ndp_mapping.display.pc41_mentions_juridiques.class%'
+        arguments:
+            - '@psa_ndp_mapping.pc41_mentions_juridiques_data_source'
+            - '@psa_ndp_mapping.pc41_mentions_juridiques_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pc42_actualites:
+        class: '%psa_ndp_mapping.display.pc42_actualites.class%'
+        arguments:
+            - '@psa_ndp_mapping.pc42_actualites_data_source'
+            - '@psa_ndp_mapping.pc42_actualites_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pc43_applications_mobiles:
+        class: '%psa_ndp_mapping.display.pc43_applications_mobiles.class%'
+        arguments:
+            - '@psa_ndp_mapping.pc43_applications_mobiles_data_source'
+            - '@psa_ndp_mapping.pc43_applications_mobiles_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pc47_point_de_vente_unique:
+        class: '%psa_ndp_mapping.display.pc47_point_de_vente_unique.class%'
+        arguments:
+            - '@psa_ndp_mapping.pc47_point_de_vente_unique_data_source'
+            - '@psa_ndp_mapping.pc47_point_de_vente_unique_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pc52_apv:
+        class: '%psa_ndp_mapping.display.pc52_apv.class%'
+        arguments:
+            - '@psa_ndp_mapping.pc52_apv_data_source'
+            - '@psa_ndp_mapping.pc52_apv_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+
+    psa_ndp_mapping.display.pc53_apv:
+        class: '%psa_ndp_mapping.display.pc53_apv.class%'
+        arguments:
+            - '@psa_ndp_mapping.pc53_apv_data_source'
+            - '@psa_ndp_mapping.pc53_apv_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pc59_tools:
+        class: '%psa_ndp_mapping.display.pc59_tools.class%'
+        arguments:
+            - '@psa_ndp_mapping.pc59_tools_data_source'
+            - '@psa_ndp_mapping.pc59_tools_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pc61_visuel_boussole:
+        class: '%psa_ndp_mapping.display.pc61_visuel_boussole.class%'
+        arguments:
+            - '@psa_ndp_mapping.pc61_visuel_boussole_data_source'
+            - '@psa_ndp_mapping.pc61_visuel_boussole_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pc63_lien_boussole:
+        class: '%psa_ndp_mapping.display.pc63_lien_boussole.class%'
+        arguments:
+            - '@psa_ndp_mapping.pc63_lien_boussole_data_source'
+            - '@psa_ndp_mapping.pc63_lien_boussole_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pc68_contenu_1_article_2_ou_3_visuels:
+        class: '%psa_ndp_mapping.display.pc68_contenu_1_article_2_ou_3_visuels.class%'
+        arguments:
+            - '@psa_ndp_mapping.pc68_contenu_1_article_2_ou_3_visuels_data_source'
+            - '@psa_ndp_mapping.pc68_contenu_1_article_2_ou_3_visuels_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pc69_contenu_2_colonnes:
+        class: '%psa_ndp_mapping.display.pc69_contenu_2_colonnes.class%'
+        arguments:
+            - '@psa_ndp_mapping.pc69_contenu_2_colonnes_data_source'
+            - '@psa_ndp_mapping.pc69_contenu_2_colonnes_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pc77_dimension_vehicule:
+        class: '%psa_ndp_mapping.display.pc77_dimension_vehicule.class%'
+        arguments:
+            - '@psa_ndp_mapping.pc77_dimension_vehicule_data_source'
+            - '@psa_ndp_mapping.pc77_dimension_vehicule_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pc99_global_header:
+        class: '%psa_ndp_mapping.display.pc99_global_header.class%'
+        arguments:
+            - '@psa_ndp_mapping.pc99_global_header_data_source'
+            - '@psa_ndp_mapping.pc99_global_header_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pf6_drag_and_drop:
+        class: '%psa_ndp_mapping.display.pf6_drag_and_drop.class%'
+        arguments:
+            - '@psa_ndp_mapping.pf6_drag_and_drop_data_source'
+            - '@psa_ndp_mapping.pf6_drag_and_drop_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pf8_webstore_vehicle_neuf:
+        class: '%psa_ndp_mapping.display.pf8_webstore_vehicle_neuf.class%'
+        arguments:
+            - '@psa_ndp_mapping.pf8_webstore_vehicle_neuf_data_source'
+            - '@psa_ndp_mapping.pf8_webstore_vehicle_neuf_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pf14_reseaux_sociaux:
+        class: '%psa_ndp_mapping.display.pf14_reseaux_sociaux.class%'
+        arguments:
+            - '@psa_ndp_mapping.pf14_reseaux_sociaux_data_source'
+            - '@psa_ndp_mapping.pf14_reseaux_sociaux_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pf16_autres_reseaux_sociaux:
+        class: '%psa_ndp_mapping.display.pf16_autres_reseaux_sociaux.class%'
+        arguments:
+            - '@psa_ndp_mapping.pf16_autres_reseaux_sociaux_data_source'
+            - '@psa_ndp_mapping.pf16_autres_reseaux_sociaux_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pf27_car_picker:
+        class: '%psa_ndp_mapping.display.pf27_car_picker.class%'
+        arguments:
+            - '@psa_ndp_mapping.pf27_car_picker_data_source'
+            - '@psa_ndp_mapping.pf27_car_picker_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pf32_filtre_apv:
+        class: '%psa_ndp_mapping.display.pf32_filtre_apv.class%'
+        arguments:
+            - '@psa_ndp_mapping.pf32_filtre_apv_data_source'
+            - '@psa_ndp_mapping.pf32_filtre_apv_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pf33_car_compatibility:
+        class: '%psa_ndp_mapping.display.pf33_car_compatibility.class%'
+        arguments:
+            - '@psa_ndp_mapping.pf33_car_compatibility_data_source'
+            - '@psa_ndp_mapping.pf33_car_compatibility_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pf42_selectionneur_de_teinte_360:
+        class: '%psa_ndp_mapping.display.pf42_selectionneur_de_teinte_360.class%'
+        arguments:
+            - '@psa_ndp_mapping.pf42_selectionneur_de_teinte_360_data_source'
+            - '@psa_ndp_mapping.pf42_selectionneur_de_teinte_360_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pf44_devenir_agent:
+        class: '%psa_ndp_mapping.display.pf44_devenir_agent.class%'
+        arguments:
+            - '@psa_ndp_mapping.pf44_devenir_agent_data_source'
+            - '@psa_ndp_mapping.pf44_devenir_agent_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pn2_onglet:
+        class: '%psa_ndp_mapping.display.pn2_onglet.class%'
+        arguments:
+            - '@psa_ndp_mapping.pn2_onglet_data_source'
+            - '@psa_ndp_mapping.pn2_onglet_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pn3_toggle_accordeon:
+        class: '%psa_ndp_mapping.display.pn3_toggle_accordeon.class%'
+        arguments:
+            - '@psa_ndp_mapping.pn3_toggle_accordeon_data_source'
+            - '@psa_ndp_mapping.pn3_toggle_accordeon_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pn7_en_tete:
+        class: '%psa_ndp_mapping.display.pn7_en_tete.class%'
+        arguments:
+            - '@psa_ndp_mapping.pn7_en_tete_data_source'
+            - '@psa_ndp_mapping.pn7_en_tete_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pn13_ancres:
+        class: '%psa_ndp_mapping.display.pn13_ancres.class%'
+        arguments:
+            - '@psa_ndp_mapping.pn13_ancres_data_source'
+            - '@psa_ndp_mapping.pn13_ancres_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pn18_iframe:
+        class: '%psa_ndp_mapping.display.pn18_iframe.class%'
+        arguments:
+            - '@psa_ndp_mapping.pn18_iframe_data_source'
+            - '@psa_ndp_mapping.pn18_iframe_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pf2_presentation_showroom:
+        class: '%psa_ndp_mapping.display.pf2_presentation_showroom.class%'
+        arguments:
+            - '@psa_ndp_mapping.pf2_presentation_showroom_data_source'
+            - '@psa_ndp_mapping.pf2_presentation_showroom_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pt2_footer:
+        class: '%psa_ndp_mapping.display.pt2_footer.class%'
+        arguments:
+            - '@psa_ndp_mapping.pt2_footer_data_source'
+            - '@psa_ndp_mapping.pt2_footer_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pt3_je_veux:
+        class: '%psa_ndp_mapping.display.pt3_je_veux.class%'
+        arguments:
+            - '@psa_ndp_mapping.pt3_je_veux_data_source'
+            - '@psa_ndp_mapping.pt3_je_veux_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pt15_plan_du_site:
+        class: '%psa_ndp_mapping.display.pt15_plan_du_site.class%'
+        arguments:
+            - '@psa_ndp_mapping.pt15_plan_du_site_data_source'
+            - '@psa_ndp_mapping.pt15_plan_du_site_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pt17_choix_de_la_langue:
+        class: '%psa_ndp_mapping.display.pt17_choix_de_la_langue.class%'
+        arguments:
+            - '@psa_ndp_mapping.pt17_choix_de_la_langue_data_source'
+            - '@psa_ndp_mapping.pt17_choix_de_la_langue_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pt18_pre_home_importateur:
+        class: '%psa_ndp_mapping.display.pt18_pre_home_importateur.class%'
+        arguments:
+            - '@psa_ndp_mapping.pt18_pre_home_importateur_data_source'
+            - '@psa_ndp_mapping.pt18_pre_home_importateur_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pt19_engagements:
+        class: '%psa_ndp_mapping.display.pt19_engagements.class%'
+        arguments:
+            - '@psa_ndp_mapping.pt19_engagements_data_source'
+            - '@psa_ndp_mapping.pt19_engagements_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pt20_master_page:
+        class: '%psa_ndp_mapping.display.pt20_master_page.class%'
+        arguments:
+            - '@psa_ndp_mapping.pt20_master_page_data_source'
+            - '@psa_ndp_mapping.pt20_master_page_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pt21_navigation:
+        class: '%psa_ndp_mapping.display.pt21_navigation.class%'
+        arguments:
+            - '@psa_ndp_mapping.pt21_navigation_data_source'
+            - '@psa_ndp_mapping.pt21_navigation_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pc36_faq:
+        class: '%psa_ndp_mapping.display.pc36_faq.class%'
+        arguments:
+            - '@psa_ndp_mapping.pc36_faq_data_source'
+            - '@psa_ndp_mapping.pc36_faq_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pf30_popin_code_postal:
+        class: '%psa_ndp_mapping.display.pf30_popin_code_postal.class%'
+        arguments:
+            - '@psa_ndp_mapping.pf30_popin_code_postal_data_source'
+            - '@psa_ndp_mapping.pf30_popin_code_postal_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pt22_my_peugeot:
+        class: '%psa_ndp_mapping.display.pt22_my_peugeot.class%'
+        arguments:
+            - '@psa_ndp_mapping.pt22_my_peugeot_data_source'
+            - '@psa_ndp_mapping.pt22_my_peugeot_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pf23_range_bar:
+        class: '%psa_ndp_mapping.display.pf23_range_bar.class%'
+        arguments:
+            - '@psa_ndp_mapping.pf23_range_bar_data_source'
+            - '@psa_ndp_mapping.pf23_range_bar_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pc73_mega_banniere_dynamique:
+        class: '%psa_ndp_mapping.display.pc73_mega_banniere_dynamique.class%'
+        arguments:
+            - '@psa_ndp_mapping.pc73_mega_banniere_dynamique_data_source'
+            - '@psa_ndp_mapping.pc73_mega_banniere_dynamique_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pf11_recherche_point_de_vente:
+        class: '%psa_ndp_mapping.display.pf11_recherche_point_de_vente.class%'
+        arguments:
+            - '@psa_ndp_mapping.pf11_recherche_point_de_vente_data_source'
+            - '@psa_ndp_mapping.pf11_recherche_point_de_vente_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pc79_mur_media_manuel:
+        class: '%psa_ndp_mapping.display.pc79_mur_media_manuel.class%'
+        arguments:
+            - '@psa_ndp_mapping.pc79_mur_media_manuel_data_source'
+            - '@psa_ndp_mapping.pc79_mur_media_manuel_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pc85_reevo:
+        class: '%psa_ndp_mapping.display.pc85_reevo.class%'
+        arguments:
+            - '@psa_ndp_mapping.pc85_reevo_data_source'
+            - '@psa_ndp_mapping.pc85_reevo_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pc95_interested_by:
+        class: '%psa_ndp_mapping.display.pc95_interested_by.class%'
+        arguments:
+            - '@psa_ndp_mapping.pc95_interested_by_data_source'
+            - '@psa_ndp_mapping.pc95_interested_by_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pt23_module_qualification:
+        class: '%psa_ndp_mapping.display.pt23_module_qualification.class%'
+        arguments:
+            - '@psa_ndp_mapping.pt23_module_qualification_data_source'
+            - '@psa_ndp_mapping.pt23_module_qualification_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pc60_recapitulatif_et_cta_showroom:
+        class: '%psa_ndp_mapping.display.pc60_recapitulatif_et_cta_showroom.class%'
+        arguments:
+            - '@psa_ndp_mapping.pc60_recapitulatif_et_cta_showroom_data_source'
+            - '@psa_ndp_mapping.pc60_recapitulatif_et_cta_showroom_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pf53_finitions_motorisations:
+        class: '%psa_ndp_mapping.display.pf53_finitions_motorisations.class%'
+        arguments:
+            - '@psa_ndp_mapping.pf53_finitions_motorisations_data_source'
+            - '@psa_ndp_mapping.pf53_finitions_motorisations_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pf17_formulaires:
+        class: '%psa_ndp_mapping.display.pf17_formulaires.class%'
+        arguments:
+            - '@psa_ndp_mapping.pf17_formulaires_data_source'
+            - '@psa_ndp_mapping.pf17_formulaires_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pc78_usp_mosaique:
+        class: '%psa_ndp_mapping.display.pc78_usp_mosaique.class%'
+        arguments:
+            - '@psa_ndp_mapping.pc78_usp_mosaique_data_source'
+            - '@psa_ndp_mapping.pc78_usp_mosaique_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pc84_catalogue_applications:
+        class: '%psa_ndp_mapping.display.pc84_catalogue_applications.class%'
+        arguments:
+            - '@psa_ndp_mapping.pc84_catalogue_applications_data_source'
+            - '@psa_ndp_mapping.pc84_catalogue_applications_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pc83_contenu_accessoires:
+        class: '%psa_ndp_mapping.display.pc83_contenu_accessoires.class%'
+        arguments:
+            - '@psa_ndp_mapping.pc83_contenu_accessoires_data_source'
+            - '@psa_ndp_mapping.pc83_contenu_accessoires_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pn15_entete_confishow:
+        class: '%psa_ndp_mapping.display.pn15_entete_confishow.class%'
+        arguments:
+            - '@psa_ndp_mapping.pn15_entete_confishow_data_source'
+            - '@psa_ndp_mapping.pn15_entete_confishow_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pf25_filtres_resultats_car_selector:
+        class: '%psa_ndp_mapping.display.pf25_filtres_resultats_car_selector.class%'
+        arguments:
+            - '@psa_ndp_mapping.pf25_filtres_resultats_car_selector_data_source'
+            - '@psa_ndp_mapping.pf25_filtres_resultats_car_selector_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.pn14_navigation_confishow:
+        class: '%psa_ndp_mapping.display.pn14_navigation_confishow.class%'
+        arguments:
+            - '@psa_ndp_mapping.pn14_navigation_confishow_data_source'
+            - '@psa_ndp_mapping.pn14_navigation_confishow_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }
+    psa_ndp_mapping.display.cs99_configshow_test:
+        class: '%psa_ndp_mapping.display.cs99_configshow_test.class%'
+        arguments:
+            - '@psa_ndp_mapping.cs99_configshow_test_data_source'
+            - '@psa_ndp_mapping.cs99_configshow_test_data_transformer'
+            - '@request_stack'
+        tags:
+            - { name: open_orchestra_display.display_block.strategy }

@@ -1,0 +1,90 @@
+{if $cta.type eq 'TYPE_BUTTON'}
+  {if !empty($cta.image) }
+      {if $cta.isMedia }
+          <div class="medium-4 columns">
+              <a href="{$cta.url}" target="{$cta.target}"{if !empty($gtm)} data-gtm='{$gtm}'{/if}>
+                  <figure>
+                    <img class="medium-12" src="{$cta.image}" alt="{$cta.alt}">
+                  </figure>
+                  <button class="cta btn-cta {if $cta.color === 'grey'}arrow{/if} {$cta.color}">
+                    <span class="content-cta">{$cta.title}</span>
+                  </button>
+              </a>
+          </div>
+      {/if}
+
+      {if $cta.isIcon }
+          <a href="{$cta.url}" target="{$cta.target}"{if !empty($gtm)} data-gtm='{$gtm}'{/if}>
+              <img class="medium-12" src="{$cta.image}" alt="{$cta.alt}">
+              <button class="cta btn-cta {if $cta.color === 'grey'}arrow{/if} {$cta.color}">
+                  <span class="content-cta">{$cta.title}</span>
+              </button>
+          </a>
+      {/if}
+
+  {else}
+      <a href="{$cta.url}" target="{$cta.target}" class="cta btn-cta {if $cta.color === 'grey'}arrow{/if} {$cta.color} {if !empty($extraclass)}{$extraclass}{/if}"{if !empty($gtm)} data-gtm='{$gtm}'{/if}>
+          <span class="content-cta">{$cta.title}</span>
+      </a>
+  {/if}
+
+{/if}
+
+{if $cta.type eq 'TYPE_DROPDOWNLIST'}
+  <div class="dropdown-wrapper">
+    <button href="#" data-dropdown="drop{$cta.dropDownId}" aria-controls="drop{$cta.dropDownId}" aria-expanded="false" class="custom-dropdown-button">
+      <div class="content-cta">{$cta.title}</div>
+      <span class="dropdown-arrow sprite-down"></span>
+    </button>
+    <ul id="drop{$cta.dropDownId}" data-dropdown-content class="f-dropdown" aria-hidden="true">
+      {foreach $cta.options as $option}
+        <li role="menuitem">
+          <div class="menuitem-content">
+            <a href="{$option.url}">{$option.title}</a>
+          </div>
+        </li>
+      {/foreach}
+    </ul>
+  </div>
+{/if}
+
+{if $cta.type eq 'TYPE_SIMPLELINK'}
+  <a href="{$cta.url}" target="{$cta.target}"{if !empty($gtm)} data-gtm='{$gtm}'{/if} class="cta {if !empty($cssClass)}{$cssClass}{else}link-cta{/if} arrow chevron-right">
+    <span class="cta-content">{$cta.title}</span><span class="arrow"></span>
+  </a>
+{/if}
+
+{if $cta.type eq 'CLICK_TO_CALL'}
+    {if !empty($cta.image) }
+        {if $cta.isIcon }
+            <a href="tel:{$cta.url}" target="{$cta.target}"{if !empty($gtm)} data-gtm='{$gtm}'{/if}>
+                <img class="medium-12" src="{$cta.image}" alt="{$cta.alt}">
+                <button class="cta btn-cta {$cta.color}">
+                    <span class="content-cta">{$cta.title}</span>
+                </button>
+            </a>
+        {/if}
+
+    {else}
+        <a href="tel:{$cta.url}" target="{$cta.target}"{if !empty($gtm)} data-gtm='{$gtm}'{/if} class="cta btn-cta {$cta.color}">
+            <span class="content-cta">{$cta.title}</span>
+        </a>
+    {/if}
+
+{/if}
+
+{if $cta.type eq 'TYPE_IMG'}
+  <a class="vignette-cta" href="{$cta.url}"{if !empty($gtm)} data-gtm='{$gtm}'{/if} target="{$cta.target}">
+    <img src="{$cta.image}" alt="{$cta.alt}">
+    <button class="cta btn-cta light-blue">
+      <span class="content-cta">{$cta.title}</span>
+    </button>
+  </a>
+{/if}
+
+{if $cta.type eq 'SQUARE_MOBILE'}
+  <a href="{$cta.url}"{if !empty($gtm)} data-gtm='{$gtm}'{/if} class="cta square-cta $cta.version">
+    <img src="{$cta.image}" alt="{$cta.alt}">
+    <span>{$cta.title}</span>
+  </a>
+{/if}

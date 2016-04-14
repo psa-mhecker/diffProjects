@@ -1,0 +1,1398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://xml.inetpsa.com/Services/SFG/Service_Dealer" xmlns:s1="http://xml.inetpsa.com/Services/SFG/Service_dealer" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" targetNamespace="http://xml.inetpsa.com/Services/SFG/Service_Dealer" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://xml.inetpsa.com/Services/SFG/Service_Dealer">
+      <s:import namespace="http://xml.inetpsa.com/Services/SFG/Service_dealer" />
+      <s:element name="UpdateClient">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:SaveClient" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateClientResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:ResponseSave" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateVehicle">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:SaveVehicle" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateVehicleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:ResponseSave" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateDealer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:SaveDealer" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateDealerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:ResponseSave" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetClient">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:RequestLoad" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetClientResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:LoadClient" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDealer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:RequestLoad" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDealerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:LoadDealer" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Calcul">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:Calculation" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalculResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:ResponseSave" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Display">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:RequestDisplay" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DisplayResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:ResponseDisplay" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServicesAndPacks">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:RequestServicesAndPacks" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServicesAndPacksResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:ResponseServicesAndPacks" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AllScalesInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:RequestAllScalesInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AllScalesInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:ResponseAllScalesInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalculationDisplay">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:RequestCalculationDisplay" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalculationDisplayResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:ResponseDisplay" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalculationScale">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:RequestCalculationScale" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalculationScaleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:ResponseDisplay" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveCalculationDisplay">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:RequestCalculationDisplay" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveCalculationDisplayResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:ResponseDisplay" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveCalculationScale">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:RequestCalculationScale" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveCalculationScaleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:ResponseDisplay" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OpenSession">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:RequestLoad" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OpenSessionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:ResponseSave" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ScaleInfoAB">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:RequestAllScalesInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ScaleInfoABResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:ResponseAllScalesInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveCalculationDisplayAB">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:RequestSaveCalculationDisplayAB" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveCalculationDisplayABResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:ResponseDisplay" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://xml.inetpsa.com/Services/SFG/Service_dealer">
+      <s:element name="SaveClient" type="s1:SaveClientType" />
+      <s:complexType name="SaveClientType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="IdSession" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Site" type="s1:SiteType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Context" type="s1:ContextType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Client" type="s1:ClientType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SiteType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Login" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ContextType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Language" type="s:language" />
+          <s:element minOccurs="0" maxOccurs="1" name="FinancingMake" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Currency" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FlowDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Services" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Information" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ClientType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ClientAuthorizations" type="s1:ClientAuthorizationsType" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClientPersonalData" type="s1:ClientPersonalDataType" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClientPersonalAdress" type="s1:ClientPersonalAdressType" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClientProfessionalAdress" type="s1:ClientProfessionalAdressType" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClientPersonalContact" type="s1:ClientPersonalContactType" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClientProfessionalContact" type="s1:ClientProfessionalContactType" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClientIDNational" type="s1:ClientIDNationalType" />
+          <s:element minOccurs="0" maxOccurs="1" name="MoreInformation">
+            <s:complexType>
+              <s:sequence>
+                <s:any />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ClientAuthorizationsType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ClientAcceptsStorage" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClientAcceptsCommercialMessages" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClientDateExpiration" type="s:date" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ClientPersonalDataType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ClientType" type="s1:ClientTypeEnum" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClientName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClientFirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClientSex" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClientLanguage" type="s:language" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClientCategory" type="s1:ClientCategoryEnum" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClientTitle" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClientAcademicDegree" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClientMaidenName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClientBirthDate" type="s:date" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClientBirthPlace" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClientNationality" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="ClientTypeEnum">
+        <s:restriction base="s:string">
+          <s:enumeration value="PART" />
+          <s:enumeration value="SOC" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="ClientCategoryEnum">
+        <s:restriction base="s:string">
+          <s:enumeration value="CarRental" />
+          <s:enumeration value="DrivingSchool" />
+          <s:enumeration value="Colaborator" />
+          <s:enumeration value="Normal" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ClientPersonalAdressType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ClientValidatedAdressPer" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClientLine1Per" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClientLine2Per" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClientLine3Per" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClientAdditionalPer" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClientCityPer" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClientPostCodePer" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClientProvincePer" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClientCountryCodePer" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ClientProfessionalAdressType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ClientValidatedAdressProf" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClientLine1Prof" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClientLine2Prof" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClientLine3Prof" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClientAdditionalProf" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClientCityProf" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClientPostCodeProf" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClientProvinceProf" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClientCountryCodeProf" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ClientPersonalContactType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ClientTelephonePer" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClientFaxPer" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClientEMailPer" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClientMobilePer" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClientRangeOfTimePer" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ClientProfessionalContactType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ClientTelephoneProf" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClientFaxProf" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClientEMailProf" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClientMobileProf" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClientRangeOfTimeProf" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ClientIDNationalType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ClientIdentification1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClientIdentification2" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ResponseSave" type="s1:ResponseSaveType" />
+      <s:complexType name="ResponseSaveType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="IdSession" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Site" type="s1:SiteType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Context" type="s1:ContextType" />
+          <s:element minOccurs="1" maxOccurs="1" name="FlagError" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Error" type="s1:ErrorType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ErrorType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorDescription" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SaveVehicle" type="s1:SaveVehicleType" />
+      <s:complexType name="SaveVehicleType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="IdSession" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Site" type="s1:SiteType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Context" type="s1:ContextType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Vehicle" type="s1:VehicleType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="VehicleType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleGeneral" type="s1:VehicleGeneralType" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehiclePrices" type="s1:VehiclePricesType" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleOptionalEquipmentList" type="s1:ArrayOfVehicleOptionalEquipmentType" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleAccessoriesList" type="s1:ArrayOfVehicleAccessoriesType" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehiclePicture" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="MoreInformation">
+            <s:complexType>
+              <s:sequence>
+                <s:any />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="VehicleGeneralType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="VehicleBrandCode" type="s1:VehicleBrandCodeEnum" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleBrandLabel" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="VehicleType" type="s1:VehicleTypeEnum" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleIdentification" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleModel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleCategory" type="s1:VehicleCategoryEnum" />
+          <s:element minOccurs="1" maxOccurs="1" name="VehicleSegment" nillable="true" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="VehicleEngine" nillable="true" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="VehiclePower" nillable="true" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleRegistrationDate" type="s:gYearMonth" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleAge" type="s:integer" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleKilometers" type="s:integer" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleCO2Emission" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="VehicleOdlEuroccasion" nillable="true" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleFlagEcoLabel" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="VehicleTVARecuperable" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="VehicleBrandCodeEnum">
+        <s:restriction base="s:string">
+          <s:enumeration value="PEUGEOT" />
+          <s:enumeration value="CITROEN" />
+          <s:enumeration value="OTHER" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="VehicleTypeEnum">
+        <s:restriction base="s:string">
+          <s:enumeration value="VN" />
+          <s:enumeration value="VO" />
+          <s:enumeration value="VD" />
+          <s:enumeration value="VI" />
+          <s:enumeration value="AU" />
+          <s:enumeration value="VZ" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="VehicleCategoryEnum">
+        <s:restriction base="s:string">
+          <s:enumeration value="VP" />
+          <s:enumeration value="VU" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="VehiclePricesType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleCatalogPriceHT" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleCatalogPriceTTC" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="VehiclePriceHT" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="VehiclePriceTTC" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleOTRHT" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleOTRTTC" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleOptionPriceTotalTTC" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleOptionPriceTotalHT" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleAccessoriesPriceTotalTTC" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleAccessoriesPriceTotalHT" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleDealerRebateHT" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleDealerRebateTTC" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleDealerRebatePercentage" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleBrandRebateHT" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleBrandRebateTTC" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleBrandRebatePercentage" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleOtherRebateHT" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleOtherRebateTTC" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleOtherRebatePercentage" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleBonusMalusHT" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleBonusMalusTTC" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="AddedOptionPrice" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="IncludedOptionPrice" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfVehicleOptionalEquipmentType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="VehicleOptionalEquipment" type="s1:VehicleOptionalEquipmentType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="VehicleOptionalEquipmentType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleEquipmentCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleEquipmentName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleEquipmentPriceTTC" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleEquipmentPriceHT" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfVehicleAccessoriesType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="VehicleAccessories" type="s1:VehicleAccessoriesType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="VehicleAccessoriesType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleAccessoryCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleAccessoryName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleAccessoryPriceHT" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="VehicleAccessoryPriceTTC" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SaveDealer" type="s1:SaveDealerType" />
+      <s:complexType name="SaveDealerType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="IdSession" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Site" type="s1:SiteType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Context" type="s1:ContextType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Dealer" type="s1:DealerType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DealerType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Dealer_Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Dealer_Code" type="s1:Dealer_CodeType" />
+          <s:element minOccurs="0" maxOccurs="1" name="List_Address" type="s1:ArrayOfAddressType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Distance_To_Dealership" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="List_Telephon_Number" type="s1:ArrayOfTelephon_NumberType" />
+          <s:element minOccurs="0" maxOccurs="1" name="List_URL_Link" type="s1:ArrayOfURL_LinkType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Contact_EMail" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Dealer_CodeType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Current_Internal_Code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RRDI_Code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GDO_Flag" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfAddressType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Address" type="s1:AddressType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AddressType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Type" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Number" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Road" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Postcode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Complementary_Information" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfTelephon_NumberType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Telephon_Number" type="s1:Telephon_NumberType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Telephon_NumberType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Number" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfURL_LinkType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="URL_Link" type="s1:URL_LinkType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="URL_LinkType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="URL_Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="URL_Adress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="URL_Comment" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RequestLoad" type="s1:RequestLoadType" />
+      <s:complexType name="RequestLoadType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="IdSession" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Site" type="s1:SiteType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Context" type="s1:ContextType" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LoadClient" type="s1:LoadClientType" />
+      <s:complexType name="LoadClientType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="IdSession" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Site" type="s1:SiteType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Context" type="s1:ContextType" />
+          <s:element minOccurs="1" maxOccurs="1" name="FlagError" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Client" type="s1:ClientType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Error" type="s1:ErrorType" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LoadDealer" type="s1:LoadDealerType" />
+      <s:complexType name="LoadDealerType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="IdSession" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Site" type="s1:SiteType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Context" type="s1:ContextType" />
+          <s:element minOccurs="1" maxOccurs="1" name="FlagError" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Dealer" type="s1:DealerType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Error" type="s1:ErrorType" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Calculation" type="s1:CalculationType" />
+      <s:complexType name="CalculationType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IdSession" nillable="true" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Site" type="s1:SiteType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Context" type="s1:ContextType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Vehicle" type="s1:VehicleType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Client" type="s1:ClientType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Dealer" type="s1:DealerType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Financing" type="s1:FinancingType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="FinancingType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="FinancingRate" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="FinancingSpecialFlag" type="s:integer" />
+          <s:element minOccurs="0" maxOccurs="1" name="MonthlyBudget" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="MaximumVehiclePriceAB" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="MinimumVehiclePriceAB" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="MoreInformation">
+            <s:complexType>
+              <s:sequence>
+                <s:any />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RequestDisplay" type="s1:RequestDisplayType" />
+      <s:complexType name="RequestDisplayType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="IdSession" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Site" type="s1:SiteType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Context" type="s1:ContextType" />
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayNameList" type="s1:ArrayOfString" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DisplayName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ResponseDisplay" type="s1:ResponseDisplayType" />
+      <s:complexType name="ResponseDisplayType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="IdSession" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Site" type="s1:SiteType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Context" type="s1:ContextType" />
+          <s:element minOccurs="1" maxOccurs="1" name="FlagError" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayList" type="s1:ArrayOfDisplayType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Error" type="s1:ErrorType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfDisplayType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Display" type="s1:DisplayType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DisplayType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DisplayContent" type="s1:DisplayContentType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DisplayContentType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ContentName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Format" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Content" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CssStyle" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RequestServicesAndPacks" type="s1:RequestServicesAndPacksType" />
+      <s:complexType name="RequestServicesAndPacksType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="IdSession" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Site" type="s1:SiteType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Context" type="s1:ContextType" />
+          <s:element minOccurs="0" maxOccurs="1" name="RequestScale" type="s1:RequestScaleType" />
+          <s:element minOccurs="0" maxOccurs="1" name="ListServices" type="s1:ArrayOfServiceType" />
+          <s:element minOccurs="0" maxOccurs="1" name="ListPacks" type="s1:ArrayOfPackType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RequestScaleType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ScaleCode" type="s:integer" />
+          <s:element minOccurs="0" maxOccurs="1" name="ListRequestVarsEntry" type="s1:ArrayOfRequestVarEntryType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfRequestVarEntryType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RequestVarEntry" type="s1:RequestVarEntryType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RequestVarEntryType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ShortDescriptionVar" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Value" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfServiceType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Service" type="s1:ServiceType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ServiceType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CodeService" type="s:integer" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShortDescriptionService" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DescriptionService" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CodeProduct" type="s:integer" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShortDescriptionProduct" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShortDescriptionFamily" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="RelationService" type="s1:RelationTypeEnum" />
+          <s:element minOccurs="1" maxOccurs="1" name="Selected" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="LegalTextService" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ComercialTextService" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="URLService" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastSelected" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="RelationTypeEnum">
+        <s:restriction base="s:string">
+          <s:enumeration value="Mandatory" />
+          <s:enumeration value="Optional" />
+          <s:enumeration value="Recomended" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfPackType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Pack" type="s1:PackType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PackType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CodePack" type="s:integer" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShortDescriptionPack" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="RelationPack" type="s1:RelationTypeEnum" />
+          <s:element minOccurs="1" maxOccurs="1" name="Selected" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ListServices" type="s1:ArrayOfServiceType" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastSelected" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayServices" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="LegalTextPack" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ComercialTextPack" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="URLPack" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ResponseServicesAndPacks" type="s1:ResponseServicesAndPacksType" />
+      <s:complexType name="ResponseServicesAndPacksType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="IdSession" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Site" type="s1:SiteType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Context" type="s1:ContextType" />
+          <s:element minOccurs="1" maxOccurs="1" name="FlagError" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServicesAndPacks" type="s1:ServicesAndPacksType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Error" type="s1:ErrorType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ServicesAndPacksType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CodScale" type="s:integer" />
+          <s:element minOccurs="0" maxOccurs="1" name="ListServices" type="s1:ArrayOfServiceType" />
+          <s:element minOccurs="0" maxOccurs="1" name="ListPacks" type="s1:ArrayOfPackType" />
+          <s:element minOccurs="0" maxOccurs="1" name="ListEntryVars" type="s1:ArrayOfEntryVarType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfEntryVarType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="EntryVar" type="s1:EntryVarType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EntryVarType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CodeVar" type="s:integer" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShortDescriptionVar" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DescriptionVar" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DataType" type="s1:DataTypeEnum" />
+          <s:element minOccurs="1" maxOccurs="1" name="LimitType" type="s1:LimitTypeEnum" />
+          <s:element minOccurs="0" maxOccurs="1" name="DefaultValue" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Value" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MinValue" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="MaxValue" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Mandatory" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ListEntryVarValues" type="s1:ArrayOfString1" />
+          <s:element minOccurs="0" maxOccurs="1" name="Units" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsDouble" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Owner" type="s1:OwnerType" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="DataTypeEnum">
+        <s:restriction base="s:string">
+          <s:enumeration value="Boolean" />
+          <s:enumeration value="Decimal" />
+          <s:enumeration value="Integer" />
+          <s:enumeration value="String" />
+          <s:enumeration value="Date" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="LimitTypeEnum">
+        <s:restriction base="s:string">
+          <s:enumeration value="Free" />
+          <s:enumeration value="List" />
+          <s:enumeration value="Range" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfString1">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="EntryVarValue" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="OwnerType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Type" type="s1:OwnerTypeEnum" />
+          <s:element minOccurs="0" maxOccurs="1" name="CodeOwner" type="s:integer" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShortDescription" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="OwnerTypeEnum">
+        <s:restriction base="s:string">
+          <s:enumeration value="Association" />
+          <s:enumeration value="Scale" />
+          <s:enumeration value="Service" />
+          <s:enumeration value="Tax" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="RequestAllScalesInfo" type="s1:RequestAllScalesInfoType" />
+      <s:complexType name="RequestAllScalesInfoType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="IdSession" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Site" type="s1:SiteType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Context" type="s1:ContextType" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ResponseAllScalesInfo" type="s1:ResponseAllScalesInfoType" />
+      <s:complexType name="ResponseAllScalesInfoType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="IdSession" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Site" type="s1:SiteType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Context" type="s1:ContextType" />
+          <s:element minOccurs="1" maxOccurs="1" name="FlagError" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ListScalesInfo" type="s1:ArrayOfScaleInfoType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Error" type="s1:ErrorType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfScaleInfoType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ScaleInfo" type="s1:ScaleInfoType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ScaleInfoType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CodeScale" type="s:integer" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShortDescriptionScale" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DescriptionScale" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FinancingSpecialFlag" type="s:integer" />
+          <s:element minOccurs="0" maxOccurs="1" name="CodeProduct" type="s:integer" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShortDescriptionProduct" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShortDescriptionFamily" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Selected" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ListEntryVars" type="s1:ArrayOfEntryVarType" />
+          <s:element minOccurs="0" maxOccurs="1" name="ListServices" type="s1:ArrayOfServiceType" />
+          <s:element minOccurs="0" maxOccurs="1" name="ListPacks" type="s1:ArrayOfPackType" />
+          <s:element minOccurs="0" maxOccurs="1" name="LegalTextScale" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ComercialTextScale" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="URLScale" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RequestCalculationDisplay" type="s1:RequestCalculationDisplayType" />
+      <s:complexType name="RequestCalculationDisplayType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="IdSession" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Site" type="s1:SiteType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Context" type="s1:ContextType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Vehicle" type="s1:VehicleType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Client" type="s1:ClientType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Dealer" type="s1:DealerType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Financing" type="s1:FinancingType" />
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayNameList" type="s1:ArrayOfString" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RequestCalculationScale" type="s1:RequestCalculationScaleType" />
+      <s:complexType name="RequestCalculationScaleType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="IdSession" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Site" type="s1:SiteType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Context" type="s1:ContextType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Vehicle" type="s1:VehicleType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Client" type="s1:ClientType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Dealer" type="s1:DealerType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Scale" type="s1:ScaleType" />
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayNameList" type="s1:ArrayOfString" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ScaleType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CodScale" type="s:integer" />
+          <s:element minOccurs="0" maxOccurs="1" name="MonthlyBudget" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="MaximumVehiclePriceAB" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="MinimumVehiclePriceAB" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="ListRequestVarsEntry" type="s1:ArrayOfRequestVarEntryType" />
+          <s:element minOccurs="0" maxOccurs="1" name="ListRequestServices" type="s1:ArrayOfRequestServiceType" />
+          <s:element minOccurs="0" maxOccurs="1" name="ListRequestPacks" type="s1:ArrayOfRequestPackType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfRequestServiceType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RequestService" type="s1:RequestServiceType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RequestServiceType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CodeService" type="s:integer" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfRequestPackType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RequestPack" type="s1:RequestPackType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RequestPackType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CodePack" type="s:integer" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RequestSaveCalculationDisplayAB" type="s1:RequestSaveCalculationDisplayABType" />
+      <s:complexType name="RequestSaveCalculationDisplayABType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="IdSession" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Site" type="s1:SiteType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Context" type="s1:ContextType" />
+          <s:element minOccurs="0" maxOccurs="1" name="ListVarsEntry" type="s1:ArrayOfRequestVarEntryType" />
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayNameList" type="s1:ArrayOfString" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="UpdateClientSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateClient" />
+  </wsdl:message>
+  <wsdl:message name="UpdateClientSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateVehicleSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateVehicle" />
+  </wsdl:message>
+  <wsdl:message name="UpdateVehicleSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateVehicleResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDealerSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateDealer" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDealerSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateDealerResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetClientSoapIn">
+    <wsdl:part name="parameters" element="tns:GetClient" />
+  </wsdl:message>
+  <wsdl:message name="GetClientSoapOut">
+    <wsdl:part name="parameters" element="tns:GetClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDealerSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDealer" />
+  </wsdl:message>
+  <wsdl:message name="GetDealerSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDealerResponse" />
+  </wsdl:message>
+  <wsdl:message name="CalculSoapIn">
+    <wsdl:part name="parameters" element="tns:Calcul" />
+  </wsdl:message>
+  <wsdl:message name="CalculSoapOut">
+    <wsdl:part name="parameters" element="tns:CalculResponse" />
+  </wsdl:message>
+  <wsdl:message name="DisplaySoapIn">
+    <wsdl:part name="parameters" element="tns:Display" />
+  </wsdl:message>
+  <wsdl:message name="DisplaySoapOut">
+    <wsdl:part name="parameters" element="tns:DisplayResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServicesAndPacksSoapIn">
+    <wsdl:part name="parameters" element="tns:ServicesAndPacks" />
+  </wsdl:message>
+  <wsdl:message name="ServicesAndPacksSoapOut">
+    <wsdl:part name="parameters" element="tns:ServicesAndPacksResponse" />
+  </wsdl:message>
+  <wsdl:message name="AllScalesInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:AllScalesInfo" />
+  </wsdl:message>
+  <wsdl:message name="AllScalesInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:AllScalesInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CalculationDisplaySoapIn">
+    <wsdl:part name="parameters" element="tns:CalculationDisplay" />
+  </wsdl:message>
+  <wsdl:message name="CalculationDisplaySoapOut">
+    <wsdl:part name="parameters" element="tns:CalculationDisplayResponse" />
+  </wsdl:message>
+  <wsdl:message name="CalculationScaleSoapIn">
+    <wsdl:part name="parameters" element="tns:CalculationScale" />
+  </wsdl:message>
+  <wsdl:message name="CalculationScaleSoapOut">
+    <wsdl:part name="parameters" element="tns:CalculationScaleResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveCalculationDisplaySoapIn">
+    <wsdl:part name="parameters" element="tns:SaveCalculationDisplay" />
+  </wsdl:message>
+  <wsdl:message name="SaveCalculationDisplaySoapOut">
+    <wsdl:part name="parameters" element="tns:SaveCalculationDisplayResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveCalculationScaleSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveCalculationScale" />
+  </wsdl:message>
+  <wsdl:message name="SaveCalculationScaleSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveCalculationScaleResponse" />
+  </wsdl:message>
+  <wsdl:message name="OpenSessionSoapIn">
+    <wsdl:part name="parameters" element="tns:OpenSession" />
+  </wsdl:message>
+  <wsdl:message name="OpenSessionSoapOut">
+    <wsdl:part name="parameters" element="tns:OpenSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ScaleInfoABSoapIn">
+    <wsdl:part name="parameters" element="tns:ScaleInfoAB" />
+  </wsdl:message>
+  <wsdl:message name="ScaleInfoABSoapOut">
+    <wsdl:part name="parameters" element="tns:ScaleInfoABResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveCalculationDisplayABSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveCalculationDisplayAB" />
+  </wsdl:message>
+  <wsdl:message name="SaveCalculationDisplayABSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveCalculationDisplayABResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServicePSAGF_DealerSoap">
+    <wsdl:operation name="UpdateClient">
+      <wsdl:input message="tns:UpdateClientSoapIn" />
+      <wsdl:output message="tns:UpdateClientSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVehicle">
+      <wsdl:input message="tns:UpdateVehicleSoapIn" />
+      <wsdl:output message="tns:UpdateVehicleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDealer">
+      <wsdl:input message="tns:UpdateDealerSoapIn" />
+      <wsdl:output message="tns:UpdateDealerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClient">
+      <wsdl:input message="tns:GetClientSoapIn" />
+      <wsdl:output message="tns:GetClientSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDealer">
+      <wsdl:input message="tns:GetDealerSoapIn" />
+      <wsdl:output message="tns:GetDealerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Calcul">
+      <wsdl:input message="tns:CalculSoapIn" />
+      <wsdl:output message="tns:CalculSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Display">
+      <wsdl:input message="tns:DisplaySoapIn" />
+      <wsdl:output message="tns:DisplaySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServicesAndPacks">
+      <wsdl:input message="tns:ServicesAndPacksSoapIn" />
+      <wsdl:output message="tns:ServicesAndPacksSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AllScalesInfo">
+      <wsdl:input message="tns:AllScalesInfoSoapIn" />
+      <wsdl:output message="tns:AllScalesInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CalculationDisplay">
+      <wsdl:input message="tns:CalculationDisplaySoapIn" />
+      <wsdl:output message="tns:CalculationDisplaySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CalculationScale">
+      <wsdl:input message="tns:CalculationScaleSoapIn" />
+      <wsdl:output message="tns:CalculationScaleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveCalculationDisplay">
+      <wsdl:input message="tns:SaveCalculationDisplaySoapIn" />
+      <wsdl:output message="tns:SaveCalculationDisplaySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveCalculationScale">
+      <wsdl:input message="tns:SaveCalculationScaleSoapIn" />
+      <wsdl:output message="tns:SaveCalculationScaleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OpenSession">
+      <wsdl:input message="tns:OpenSessionSoapIn" />
+      <wsdl:output message="tns:OpenSessionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ScaleInfoAB">
+      <wsdl:input message="tns:ScaleInfoABSoapIn" />
+      <wsdl:output message="tns:ScaleInfoABSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveCalculationDisplayAB">
+      <wsdl:input message="tns:SaveCalculationDisplayABSoapIn" />
+      <wsdl:output message="tns:SaveCalculationDisplayABSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServicePSAGF_DealerSoap" type="tns:ServicePSAGF_DealerSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UpdateClient">
+      <soap:operation soapAction="http://xml.inetpsa.com/Services/SFG/Service_Dealer#UpdateClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVehicle">
+      <soap:operation soapAction="http://xml.inetpsa.com/Services/SFG/Service_Dealer#UpdateVehicle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDealer">
+      <soap:operation soapAction="http://xml.inetpsa.com/Services/SFG/Service_Dealer#UpdateDealer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClient">
+      <soap:operation soapAction="http://xml.inetpsa.com/Services/SFG/Service_Dealer#GetClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDealer">
+      <soap:operation soapAction="http://xml.inetpsa.com/Services/SFG/Service_Dealer#GetDealer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Calcul">
+      <soap:operation soapAction="http://xml.inetpsa.com/Services/SFG/Service_Dealer#Calcul" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Display">
+      <soap:operation soapAction="http://xml.inetpsa.com/Services/SFG/Service_Dealer#Display" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServicesAndPacks">
+      <soap:operation soapAction="http://xml.inetpsa.com/Services/SFG/Service_Dealer#ServicesAndPacks" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AllScalesInfo">
+      <soap:operation soapAction="http://xml.inetpsa.com/Services/SFG/Service_Dealer#AllScalesInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalculationDisplay">
+      <soap:operation soapAction="http://xml.inetpsa.com/Services/SFG/Service_Dealer#CalculationDisplay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalculationScale">
+      <soap:operation soapAction="http://xml.inetpsa.com/Services/SFG/Service_Dealer#CalculationScale" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveCalculationDisplay">
+      <soap:operation soapAction="http://xml.inetpsa.com/Services/SFG/Service_Dealer#SaveCalculationDisplay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveCalculationScale">
+      <soap:operation soapAction="http://xml.inetpsa.com/Services/SFG/Service_Dealer#SaveCalculationScale" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OpenSession">
+      <soap:operation soapAction="http://xml.inetpsa.com/Services/SFG/Service_Dealer#OpenSession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ScaleInfoAB">
+      <soap:operation soapAction="http://xml.inetpsa.com/Services/SFG/Service_Dealer#ScaleInfoAB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveCalculationDisplayAB">
+      <soap:operation soapAction="http://xml.inetpsa.com/Services/SFG/Service_Dealer#SaveCalculationDisplayAB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServicePSAGF_DealerSoap12" type="tns:ServicePSAGF_DealerSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UpdateClient">
+      <soap12:operation soapAction="http://xml.inetpsa.com/Services/SFG/Service_Dealer#UpdateClient" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVehicle">
+      <soap12:operation soapAction="http://xml.inetpsa.com/Services/SFG/Service_Dealer#UpdateVehicle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDealer">
+      <soap12:operation soapAction="http://xml.inetpsa.com/Services/SFG/Service_Dealer#UpdateDealer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClient">
+      <soap12:operation soapAction="http://xml.inetpsa.com/Services/SFG/Service_Dealer#GetClient" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDealer">
+      <soap12:operation soapAction="http://xml.inetpsa.com/Services/SFG/Service_Dealer#GetDealer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Calcul">
+      <soap12:operation soapAction="http://xml.inetpsa.com/Services/SFG/Service_Dealer#Calcul" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Display">
+      <soap12:operation soapAction="http://xml.inetpsa.com/Services/SFG/Service_Dealer#Display" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServicesAndPacks">
+      <soap12:operation soapAction="http://xml.inetpsa.com/Services/SFG/Service_Dealer#ServicesAndPacks" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AllScalesInfo">
+      <soap12:operation soapAction="http://xml.inetpsa.com/Services/SFG/Service_Dealer#AllScalesInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalculationDisplay">
+      <soap12:operation soapAction="http://xml.inetpsa.com/Services/SFG/Service_Dealer#CalculationDisplay" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalculationScale">
+      <soap12:operation soapAction="http://xml.inetpsa.com/Services/SFG/Service_Dealer#CalculationScale" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveCalculationDisplay">
+      <soap12:operation soapAction="http://xml.inetpsa.com/Services/SFG/Service_Dealer#SaveCalculationDisplay" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveCalculationScale">
+      <soap12:operation soapAction="http://xml.inetpsa.com/Services/SFG/Service_Dealer#SaveCalculationScale" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OpenSession">
+      <soap12:operation soapAction="http://xml.inetpsa.com/Services/SFG/Service_Dealer#OpenSession" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ScaleInfoAB">
+      <soap12:operation soapAction="http://xml.inetpsa.com/Services/SFG/Service_Dealer#ScaleInfoAB" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveCalculationDisplayAB">
+      <soap12:operation soapAction="http://xml.inetpsa.com/Services/SFG/Service_Dealer#SaveCalculationDisplayAB" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServicePSAGF_Dealer">
+    <wsdl:port name="ServicePSAGF_DealerSoap" binding="tns:ServicePSAGF_DealerSoap">
+      <soap:address location="http://sfg-bpf-servicesgp.inetpsa.com/fr/services/ServicePSAGF_Dealer.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServicePSAGF_DealerSoap12" binding="tns:ServicePSAGF_DealerSoap12">
+      <soap12:address location="http://sfg-bpf-servicesgp.inetpsa.com/fr/services/ServicePSAGF_Dealer.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

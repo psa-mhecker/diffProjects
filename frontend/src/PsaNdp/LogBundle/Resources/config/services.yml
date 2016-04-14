@@ -1,0 +1,25 @@
+parameters:
+    psa_ndp.log.migration_logger.class: PsaNdp\LogBundle\Log\MigrationLogger
+    psa_ndp.log.consumer_logger.class: PsaNdp\LogBundle\Log\ConsumerLogger
+    psa_ndp.log.exception_logger.class: PsaNdp\LogBundle\Log\ExceptionLogger
+    psa_ndp.log.command_logger.class: PsaNdp\LogBundle\Log\CommandLogger
+
+services:
+    psa_ndp.log.migration_logger:
+        class: %psa_ndp.log.migration_logger.class%
+        arguments:
+            - %log.directory%
+    psa_ndp.log.consumer_logger:
+        class: %psa_ndp.log.consumer_logger.class%
+        arguments:
+            - %log.directory%
+            - @request_stack
+    psa_ndp.log.exception_logger:
+        class: %psa_ndp.log.exception_logger.class%
+        arguments:
+            - %log.directory%
+            - @request_stack
+    psa_ndp.log.command_logger:
+        class: %psa_ndp.log.command_logger.class%
+        arguments:
+            - %log.directory%

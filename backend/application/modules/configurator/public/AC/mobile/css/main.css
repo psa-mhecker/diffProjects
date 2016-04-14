@@ -1,0 +1,4271 @@
+/*
+ * Represents the main "layout" file
+ */
+/* line 7, ../../web/src/sass/_sprites.scss */
+button.fixe.next:before, .slickslideshow .slick-prev:before,
+.slickslideshow .slick-next:before, .visual .slick-prev:before,
+.visual .slick-next:before, .slickslideshow .play span, .visual .play span, .checkbox-list label:before,
+.checkbox label:before,
+.radio-list label:before,
+.selectBox-dropdown .selectBox-arrow, label .input.checked.checkbox:before, label.checked .input.checkbox:before, .custom-dropdown:after, .form-group em.invalid:before, .form-group input.success + em.invalid:before, .ico, .md-content button.md-close:before, .slicecf58bis .mod-toggle-open .chevron, .slicecf58bis .chevron, .slicecf58bis .lame .finitions .accordion .carre .popinlink a, .slicecf53bis .mod-toggle-open .chevron, .slicecf53bis .chevron, .slice-cc88 label.selected:after, .slice-cc88 .accordion-fam .plus-perso .chevron, .slice-cc88 .accordion-fam .plus-perso.opened .chevron, .slice-cc88 .categories .category .family.align-horizontal .option .infos .inclus .inclus-checked:before, .slice-cc88 .categories .category .family.align-vertical .inclus .inclus-checked:before, .slice-cc88 .categories .category .family.align-vertical .finitions .chevron, .slice-cc88 .categories .category .family.align-vertical .finitions .mod-toggle-open .chevron, .slicecf41bis .mod-toggle-open .chevron, .slicecf41bis .chevron, .slicecf9bis .mod-toggle-open .chevron, .slicecf9bis .finInfos .chevron, .slice-n14bis .box-conf:before, .slice-n14bis .price > a:after, .slice-cf17bis a span:before, .slice-cf98bis .accordion.mod-toggle-open .chevron, .slice-cf98bis .chevron, .slice-cf98bis .button .arrow--blue, .slice-cf98bis .button .arrow--big-blue, .slice-cf98bis .total-price .info:after {
+  background-image: url("../img/sprites/sprites@1.png?360322");
+  background-repeat: no-repeat;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2) {
+  /* line 7, ../../web/src/sass/_sprites.scss */
+  button.fixe.next:before, .slickslideshow .slick-prev:before,
+  .slickslideshow .slick-next:before, .visual .slick-prev:before,
+  .visual .slick-next:before, .slickslideshow .play span, .visual .play span, .checkbox-list label:before,
+  .checkbox label:before,
+  .radio-list label:before,
+  .selectBox-dropdown .selectBox-arrow, label .input.checked.checkbox:before, label.checked .input.checkbox:before, .custom-dropdown:after, .form-group em.invalid:before, .form-group input.success + em.invalid:before, .ico, .md-content button.md-close:before, .slicecf58bis .mod-toggle-open .chevron, .slicecf58bis .chevron, .slicecf58bis .lame .finitions .accordion .carre .popinlink a, .slicecf53bis .mod-toggle-open .chevron, .slicecf53bis .chevron, .slice-cc88 label.selected:after, .slice-cc88 .accordion-fam .plus-perso .chevron, .slice-cc88 .accordion-fam .plus-perso.opened .chevron, .slice-cc88 .categories .category .family.align-horizontal .option .infos .inclus .inclus-checked:before, .slice-cc88 .categories .category .family.align-vertical .inclus .inclus-checked:before, .slice-cc88 .categories .category .family.align-vertical .finitions .chevron, .slice-cc88 .categories .category .family.align-vertical .finitions .mod-toggle-open .chevron, .slicecf41bis .mod-toggle-open .chevron, .slicecf41bis .chevron, .slicecf9bis .mod-toggle-open .chevron, .slicecf9bis .finInfos .chevron, .slice-n14bis .box-conf:before, .slice-n14bis .price > a:after, .slice-cf17bis a span:before, .slice-cf98bis .accordion.mod-toggle-open .chevron, .slice-cf98bis .chevron, .slice-cf98bis .button .arrow--blue, .slice-cf98bis .button .arrow--big-blue, .slice-cf98bis .total-price .info:after {
+    background-size: 180px 161px;
+    background-image: url("../img/sprites/sprites@2.png?360322");
+  }
+}
+
+/* line 21, ../../web/src/sass/_sprites.scss */
+.slickslideshow .play span, .visual .play span {
+  background-position: -2px -2px;
+  width: 50px;
+  height: 47px;
+}
+
+/* line 33, ../../web/src/sass/_sprites.scss */
+.ico.ico-popin-vision-prev {
+  background-position: -2px -53px;
+  width: 40px;
+  height: 40px;
+}
+
+/* line 39, ../../web/src/sass/_sprites.scss */
+.ico.ico-popin-vision-next {
+  background-position: -46px -53px;
+  width: 40px;
+  height: 40px;
+}
+
+/* line 45, ../../web/src/sass/_sprites.scss */
+.ico.ico-euro {
+  background-position: -104px -2px;
+  width: 28px;
+  height: 29px;
+}
+
+/* line 51, ../../web/src/sass/_sprites.scss */
+.ico.ico-inbox {
+  background-position: -104px -35px;
+  width: 28px;
+  height: 23px;
+}
+
+/* line 57, ../../web/src/sass/_sprites.scss */
+.ico.ico-test {
+  background-position: -104px -62px;
+  width: 26px;
+  height: 26px;
+}
+
+/* line 69, ../../web/src/sass/_sprites.scss */
+.slicecf58bis .lame .finitions .accordion .carre .popinlink a, .slice-n14bis .price > a:after, .slice-cf98bis .total-price .info:after {
+  background-position: -31px -97px;
+  width: 24px;
+  height: 24px;
+}
+
+/* line 75, ../../web/src/sass/_sprites.scss */
+.ico.ico-badge {
+  background-position: -59px -97px;
+  width: 21px;
+  height: 23px;
+}
+
+/* line 81, ../../web/src/sass/_sprites.scss */
+.slice-n14bis .box-conf:before {
+  background-position: -84px -97px;
+  width: 23px;
+  height: 20px;
+}
+
+/* line 93, ../../web/src/sass/_sprites.scss */
+.ico.ico-fb {
+  background-position: -136px -23px;
+  width: 9px;
+  height: 21px;
+}
+
+/* line 99, ../../web/src/sass/_sprites.scss */
+.slice-cf98bis .button .arrow--big-blue {
+  background-position: -136px -48px;
+  width: 10px;
+  height: 17px;
+}
+
+/* line 111, ../../web/src/sass/_sprites.scss */
+.slickslideshow .slick-next:before, .visual .slick-next:before, .ico.ico-next {
+  background-position: -136px -90px;
+  width: 10px;
+  height: 16px;
+}
+
+/* line 117, ../../web/src/sass/_sprites.scss */
+button.fixe.next:before {
+  background-position: -90px -53px;
+  width: 10px;
+  height: 16px;
+}
+
+/* line 129, ../../web/src/sass/_sprites.scss */
+.slicecf58bis .chevron, .slicecf53bis .chevron, .slice-cc88 .accordion-fam .plus-perso .chevron, .slice-cc88 .categories .category .family.align-vertical .finitions .chevron, .slicecf41bis .chevron, .slicecf9bis .finInfos .chevron, .slice-cf98bis .chevron {
+  background-position: -136px -110px;
+  width: 16px;
+  height: 10px;
+}
+
+/* line 135, ../../web/src/sass/_sprites.scss */
+.ico.ico-next2 {
+  background-position: -111px -97px;
+  width: 10px;
+  height: 16px;
+}
+
+/* line 159, ../../web/src/sass/_sprites.scss */
+.slicecf58bis .mod-toggle-open .chevron, .slicecf53bis .mod-toggle-open .chevron, .slice-cc88 .accordion-fam .plus-perso.opened .chevron, .slice-cc88 .categories .category .family.align-vertical .finitions .mod-toggle-open .chevron, .slicecf41bis .mod-toggle-open .chevron, .slicecf9bis .mod-toggle-open .chevron, .slice-cf98bis .accordion.mod-toggle-open .chevron {
+  background-position: -162px -22px;
+  width: 16px;
+  height: 10px;
+}
+
+/* line 165, ../../web/src/sass/_sprites.scss */
+.slickslideshow .slick-prev:before, .visual .slick-prev:before, .ico.ico-prev {
+  background-position: -162px -36px;
+  width: 10px;
+  height: 16px;
+}
+
+/* line 177, ../../web/src/sass/_sprites.scss */
+.ico.ico-prev2, .md-content button.md-close:before {
+  background-position: -162px -76px;
+  width: 10px;
+  height: 16px;
+}
+
+/* line 189, ../../web/src/sass/_sprites.scss */
+label .input.checked.checkbox:before, label.checked .input.checkbox:before, .slice-cc88 .categories .category .family.align-horizontal .option .infos .inclus .inclus-checked:before, .slice-cc88 .categories .category .family.align-vertical .inclus .inclus-checked:before {
+  background-position: -162px -112px;
+  width: 14px;
+  height: 12px;
+}
+
+/* line 195, ../../web/src/sass/_sprites.scss */
+.slice-cc88 label.selected:after {
+  background-position: -162px -128px;
+  width: 14px;
+  height: 12px;
+}
+
+/* line 201, ../../web/src/sass/_sprites.scss */
+.recap .recap-content > ul li .ico-modif {
+  background-position: -2px -146px;
+  width: 13px;
+  height: 13px;
+}
+
+/* line 207, ../../web/src/sass/_sprites.scss */
+.slice-cf98bis .button .arrow--blue {
+  background-position: -149px -23px;
+  width: 7px;
+  height: 12px;
+}
+
+/* line 213, ../../web/src/sass/_sprites.scss */
+.slice-cf17bis a span:before {
+  background-position: -150px -48px;
+  width: 7px;
+  height: 12px;
+}
+
+/*
+ * The base Sass file - include this at the top of each main sass file
+ *
+ * This is used to setup variables, import mixins, etc
+ */
+/* base */
+/* line 3, ../../web/src/sass/common/_fonts.scss */
+html {
+  font: 14px/1.2;
+}
+
+/* line 7, ../../web/src/sass/common/_fonts.scss */
+body {
+  background-color: #fff;
+}
+
+/* line 11, ../../web/src/sass/common/_fonts.scss */
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+/* line 25, ../../web/src/sass/common/_fonts.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'citroenbold';
+  src: url("../fonts/citroen-bold-webfont.eot");
+  src: url("../fonts/citroen-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/citroen-bold-webfont.woff2") format("woff2"), url("../fonts/citroen-bold-webfont.woff") format("woff"), url("../fonts/citroen-bold-webfont.ttf") format("truetype"), url("../fonts/citroen-bold-webfont.svg#citroenbold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ubuntubold';
+  src: url("../fonts/ubuntu-bold-webfont.eot");
+  src: url("../fonts/ubuntu-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/ubuntu-bold-webfont.woff2") format("woff2"), url("../fonts/ubuntu-bold-webfont.woff") format("woff"), url("../fonts/ubuntu-bold-webfont.ttf") format("truetype"), url("../fonts/ubuntu-bold-webfont.svg#ubuntubold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ubunturegular';
+  src: url("../fonts/ubuntu-regular-webfont.eot");
+  src: url("../fonts/ubuntu-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/ubuntu-regular-webfont.woff2") format("woff2"), url("../fonts/ubuntu-regular-webfont.woff") format("woff"), url("../fonts/ubuntu-regular-webfont.ttf") format("truetype"), url("../fonts/ubuntu-regular-webfont.svg#ubunturegular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ubuntulight';
+  src: url("../fonts/ubuntu-l-webfont.eot");
+  src: url("../fonts/ubuntu-l-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/ubuntu-l-webfont.woff2") format("woff2"), url("../fonts/ubuntu-l-webfont.woff") format("woff"), url("../fonts/ubuntu-l-webfont.ttf") format("truetype"), url("../fonts/ubuntu-l-webfont.svg#ubuntulight") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 1, ../../web/src/sass/common/_all.scss */
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 13, ../../web/src/sass/common/_all.scss */
+body,
+html {
+  /*overflow: auto;*/
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* line 19, ../../web/src/sass/common/_all.scss */
+.body {
+  margin-right: 0;
+  display: inline-block;
+}
+
+/* line 23, ../../web/src/sass/common/_all.scss */
+ul,
+li {
+  list-style: none;
+}
+
+/* line 27, ../../web/src/sass/common/_all.scss */
+.fixed,
+.fixe {
+  position: fixed !important;
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+  background-color: #fff;
+}
+
+/* line 37, ../../web/src/sass/common/_all.scss */
+button.fixe {
+  top: auto;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+/* line 44, ../../web/src/sass/common/_all.scss */
+button.fixe.next:before {
+  content: '';
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  margin-top: -8px;
+}
+
+/* dot ex popin finitions */
+/* line 55, ../../web/src/sass/common/_all.scss */
+.dot:before {
+  content: '';
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background-color: #686a69;
+  vertical-align: middle;
+  margin: 0 8px 0 0;
+  border-radius: 50px;
+}
+
+/* line 65, ../../web/src/sass/common/_all.scss */
+.mod-toggle {
+  outline: 0;
+}
+/* line 67, ../../web/src/sass/common/_all.scss */
+.mod-toggle .mod-toggle-content {
+  height: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+/*reset UL LI*/
+/* line 74, ../../web/src/sass/common/_all.scss */
+.list_style {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 79, ../../web/src/sass/common/_all.scss */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+/* line 84, ../../web/src/sass/common/_all.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 87, ../../web/src/sass/common/_all.scss */
+.errorOnLoad {
+  text-align: center;
+  color: #cc3535 !important;
+  font-size: 10px;
+  line-height: 16px;
+}
+/* line 92, ../../web/src/sass/common/_all.scss */
+.errorOnLoad.hide {
+  display: none;
+}
+
+/* line 96, ../../web/src/sass/common/_all.scss */
+.bordertopnone {
+  border-top: none !important;
+}
+
+/* line 99, ../../web/src/sass/common/_all.scss */
+.slickslideshow, .visual {
+  clear: both;
+}
+/* line 101, ../../web/src/sass/common/_all.scss */
+.slickslideshow .slickslideshow-slide-bigvisu, .visual .slickslideshow-slide-bigvisu {
+  width: 100%;
+  margin: auto;
+}
+/* line 105, ../../web/src/sass/common/_all.scss */
+.slickslideshow .slick-prev,
+.slickslideshow .slick-next, .visual .slick-prev,
+.visual .slick-next {
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  margin-top: -30px;
+  z-index: 1;
+}
+/* line 113, ../../web/src/sass/common/_all.scss */
+.slickslideshow .slick-prev:before,
+.slickslideshow .slick-next:before, .visual .slick-prev:before,
+.visual .slick-next:before {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  opacity: 1;
+  color: inherit;
+  -webkit-font-smoothing: inherit;
+  content: '';
+  display: block;
+}
+/* line 125, ../../web/src/sass/common/_all.scss */
+.slickslideshow .slick-prev, .visual .slick-prev {
+  left: 0;
+}
+/* line 131, ../../web/src/sass/common/_all.scss */
+.slickslideshow .slick-next, .visual .slick-next {
+  right: 0;
+}
+/* line 133, ../../web/src/sass/common/_all.scss */
+.slickslideshow .slick-next:before, .visual .slick-next:before {
+  float: right;
+}
+/* line 138, ../../web/src/sass/common/_all.scss */
+.slickslideshow .video, .visual .video {
+  width: 100%;
+  display: none;
+}
+/* line 142, ../../web/src/sass/common/_all.scss */
+.slickslideshow .play, .visual .play {
+  position: relative;
+}
+/* line 144, ../../web/src/sass/common/_all.scss */
+.slickslideshow .play span, .visual .play span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -25px;
+  margin-top: -24px;
+}
+
+/* line 155, ../../web/src/sass/common/_all.scss */
+.containsRadioButton > label {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  width: 28px;
+}
+/* line 160, ../../web/src/sass/common/_all.scss */
+.containsRadioButton > label.radio input.radio {
+  display: none;
+}
+/* line 163, ../../web/src/sass/common/_all.scss */
+.containsRadioButton > label:before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 6px;
+  width: 28px;
+  height: 28px;
+  border: 1px solid #333333;
+  position: relative;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+/* line 175, ../../web/src/sass/common/_all.scss */
+.containsRadioButton > label.selected:before {
+  border-width: 4px;
+  border-color: #f0780a;
+}
+/* line 179, ../../web/src/sass/common/_all.scss */
+.containsRadioButton > label.selected:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  margin-left: -5px;
+  margin-top: -5px;
+  background-color: #f0780a;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+
+/* line 193, ../../web/src/sass/common/_all.scss */
+.container {
+  padding-bottom: 45px;
+}
+/* line 195, ../../web/src/sass/common/_all.scss */
+.container section {
+  margin-top: 25px;
+  padding-bottom: 25px;
+}
+
+@media only screen and (orientation: landscape) {
+  /* line 202, ../../web/src/sass/common/_all.scss */
+  .popinContainer .slickslideshow-slide-bigvisu {
+    width: 77%;
+    margin: auto;
+  }
+}
+/*
+	Variable Grid System.
+	Learn more ~ http://www.spry-soft.com/grids/
+	Based on 960 Grid System - http://960.gs/
+
+	Licensed under GPL and MIT.
+*/
+/*
+  Forces backgrounds to span full width,
+  even if there is horizontal scrolling.
+  Increase this if your layout is wider.
+
+  Note: IE6 works fine without this fix.
+*/
+/* line 17, ../../web/src/sass/common/_grid.scss */
+* {
+  -webkit-tap-highlight-color: transparent;
+  outline: 0;
+}
+
+/* line 22, ../../web/src/sass/common/_grid.scss */
+body {
+  font-family: "ubunturegular";
+  font-size: 11px;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  -o-text-size-adjust: none;
+  text-size-adjust: none;
+}
+/* line 27, ../../web/src/sass/common/_grid.scss */
+body .hidden {
+  overflow: hidden;
+  position: fixed;
+}
+
+/* line 33, ../../web/src/sass/common/_grid.scss */
+.body {
+  overflow: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  min-width: 320px;
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+/*  SECTIONS  */
+/* line 44, ../../web/src/sass/common/_grid.scss */
+.section {
+  clear: both;
+  padding: 0px;
+  margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+/* line 51, ../../web/src/sass/common/_grid.scss */
+.col {
+  display: block;
+  float: left;
+  margin: 8px 0 8px 1.6%;
+}
+
+/* line 56, ../../web/src/sass/common/_grid.scss */
+.col:first-child {
+  margin-left: 0;
+}
+
+/*  GROUPING  */
+/* line 59, ../../web/src/sass/common/_grid.scss */
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+
+/* line 61, ../../web/src/sass/common/_grid.scss */
+.group:after {
+  clear: both;
+}
+
+/* line 62, ../../web/src/sass/common/_grid.scss */
+.group {
+  zoom: 1;
+  /* For IE 6/7 */
+}
+
+/*  GRID OF FOUR  */
+/* line 65, ../../web/src/sass/common/_grid.scss */
+.span_4_of_4 {
+  width: 100%;
+}
+
+/* line 68, ../../web/src/sass/common/_grid.scss */
+.span_3_of_4 {
+  width: 74.6%;
+}
+
+/* line 71, ../../web/src/sass/common/_grid.scss */
+.span_2_of_4 {
+  width: 49.2%;
+}
+
+/* line 74, ../../web/src/sass/common/_grid.scss */
+.span_1_of_4 {
+  width: 23.8%;
+}
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+  /* line 80, ../../web/src/sass/common/_grid.scss */
+  .col {
+    margin: 1% 0 1% 0%;
+  }
+
+  /* line 81, ../../web/src/sass/common/_grid.scss */
+  .span_1_of_4, .span_2_of_4, .span_3_of_4, .span_4_of_4 {
+    width: 100%;
+  }
+}
+/* line 1, ../../web/src/sass/common/_buttons.scss */
+button, .button {
+  display: inline-block;
+  width: 100%;
+  height: 45px;
+  max-height: 45px;
+  padding: 0 20px;
+  font: 14px/20px 'citroenbold';
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  border: 0;
+  margin-top: 16px;
+  background-color: #f0780a;
+  border: 4px solid transparent;
+  cursor: pointer;
+}
+/* line 18, ../../web/src/sass/common/_buttons.scss */
+button:first-child, .button:first-child {
+  margin-top: 0;
+}
+/* line 20, ../../web/src/sass/common/_buttons.scss */
+button span, .button span {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}
+/* line 26, ../../web/src/sass/common/_buttons.scss */
+button[disabled], .button[disabled] {
+  background: #d0d0d0;
+  cursor: inherit;
+}
+/* line 31, ../../web/src/sass/common/_buttons.scss */
+button.btn-2, .button.btn-2 {
+  color: #fff;
+  background-color: #afadc3;
+  padding: 10px;
+}
+/* line 36, ../../web/src/sass/common/_buttons.scss */
+button.btn-2 span, .button.btn-2 span {
+  display: block;
+}
+/* line 39, ../../web/src/sass/common/_buttons.scss */
+button.btn-3, .button.btn-3 {
+  color: #fff;
+  background-color: #afadc3;
+  padding: 1px;
+}
+/* line 44, ../../web/src/sass/common/_buttons.scss */
+button.btn-3 span, .button.btn-3 span {
+  display: block;
+  text-transform: none;
+}
+/* line 48, ../../web/src/sass/common/_buttons.scss */
+button.btn-3 span:first-child, .button.btn-3 span:first-child {
+  text-transform: uppercase;
+}
+
+/* forms */
+/* line 2, ../../web/src/sass/common/_forms.scss */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+/* line 6, ../../web/src/sass/common/_forms.scss */
+fieldset .legend {
+  font: 12px/12px "ubuntubold";
+  padding-bottom: 4px;
+  text-transform: uppercase;
+  border-bottom: 4px solid #e8e8e8;
+  color: #646464;
+  margin: 10px 0;
+}
+
+/* line 15, ../../web/src/sass/common/_forms.scss */
+.checkbox-list label:before,
+.checkbox label:before,
+.radio-list label:before,
+.selectBox-dropdown .selectBox-arrow {
+  content: '';
+}
+
+/* Checkboxes */
+/* line 23, ../../web/src/sass/common/_forms.scss */
+label {
+  margin-right: 10px;
+}
+/* line 25, ../../web/src/sass/common/_forms.scss */
+label span {
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 29, ../../web/src/sass/common/_forms.scss */
+label .input {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 6px;
+  width: 28px;
+  height: 28px;
+  border: 1px solid #333333;
+  position: relative;
+}
+/* line 37, ../../web/src/sass/common/_forms.scss */
+label .input.checked {
+  border-width: 4px;
+}
+/* line 39, ../../web/src/sass/common/_forms.scss */
+label .input.checked.checkbox:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -6px 0 0 -7px;
+}
+/* line 49, ../../web/src/sass/common/_forms.scss */
+label .input.radio {
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+/* line 54, ../../web/src/sass/common/_forms.scss */
+label.checked .input {
+  border-width: 4px;
+}
+/* line 56, ../../web/src/sass/common/_forms.scss */
+label.checked .input.checkbox:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -6px 0 0 -7px;
+}
+/* line 65, ../../web/src/sass/common/_forms.scss */
+label.checked .input.radio {
+  border-color: #f27800;
+}
+/* line 67, ../../web/src/sass/common/_forms.scss */
+label.checked .input.radio:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  margin-left: -5px;
+  margin-top: -5px;
+  background-color: #f27800;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+/* line 81, ../../web/src/sass/common/_forms.scss */
+label.checked span.checked,
+label.checked span.selected {
+  display: inline-block;
+}
+
+/* line 91, ../../web/src/sass/common/_forms.scss */
+.control-form .input-text input:invalid,
+.control-form select:invalid,
+.control-form textarea:invalid {
+  border: 1px solid #ff9f72 !important;
+}
+/* line 94, ../../web/src/sass/common/_forms.scss */
+.control-form .input-text input:invalid,
+.control-form select:invalid,
+.control-form textarea:invalid {
+  box-shadow: none;
+}
+/* line 97, ../../web/src/sass/common/_forms.scss */
+.control-form .input-text input:-moz-submit-invalid,
+.control-form select:-moz-submit-invalid,
+.control-form textarea:-moz-submit-invalid {
+  box-shadow: none;
+}
+/* line 100, ../../web/src/sass/common/_forms.scss */
+.control-form .input-text input:-moz-ui-invalid,
+.control-form select:-moz-ui-invalid,
+.control-form textarea:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/* line 105, ../../web/src/sass/common/_forms.scss */
+.input-text input,
+select,
+.selectbox .display,
+textarea {
+  border: 1px solid #dadada;
+}
+
+/* line 111, ../../web/src/sass/common/_forms.scss */
+.input-text input,
+select,
+option,
+.input-text label,
+.selectbox .display,
+.textarea label,
+.select label {
+  height: 38px;
+  line-height: 38px;
+  padding: 0 12px;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  color: #3c3947;
+}
+
+/* line 124, ../../web/src/sass/common/_forms.scss */
+select {
+  padding: 0 0 0 12px;
+  vertical-align: middle;
+}
+
+/* line 128, ../../web/src/sass/common/_forms.scss */
+textarea {
+  color: #3c3947;
+  padding: 12px;
+}
+
+/* line 132, ../../web/src/sass/common/_forms.scss */
+option:after {
+  content: attr(data-text);
+  display: inline-block;
+}
+  /* line 142, ../../web/src/sass/common/_forms.scss */
+  .custom-dropdown select {
+    position: relative;
+    z-index: 1;
+    padding-right: 45px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+  }
+
+  /* line 148, ../../web/src/sass/common/_forms.scss */
+  .custom-dropdown {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+  }
+  /* line 153, ../../web/src/sass/common/_forms.scss */
+  .custom-dropdown:after {
+    content: '';
+    position: absolute;
+    z-index: 3;
+    right: 0;
+    top: 0;
+    pointer-events: none;
+  }
+
+  /* line 162, ../../web/src/sass/common/_forms.scss */
+  .custom-dropdown select[disabled] {
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  /* FF only temp fix */
+  @-moz-document url-prefix() {
+    /* line 167, ../../web/src/sass/common/_forms.scss */
+    .custom-dropdown {
+      overflow: hidden;
+      padding-right: 10px;
+    }
+    /* line 170, ../../web/src/sass/common/_forms.scss */
+    .custom-dropdown select {
+      position: relative;
+      background-color: #2d2f31;
+      padding-right: 0;
+      border: none;
+      height: 30px;
+      padding-top: 8px;
+      color: #ffffff;
+    }
+    /* line 179, ../../web/src/sass/common/_forms.scss */
+    .custom-dropdown option {
+      padding-top: 7px;
+      height: 30px;
+      border-bottom: 1px solid #dadada;
+    }
+    /* line 184, ../../web/src/sass/common/_forms.scss */
+    .custom-dropdown:after {
+      right: 0;
+      top: 0;
+    }
+    /* line 190, ../../web/src/sass/common/_forms.scss */
+    .custom-dropdown.error:after {
+      top: 1px;
+      right: 1px;
+    }
+  }
+}
+/* line 197, ../../web/src/sass/common/_forms.scss */
+.touch .custom-dropdown {
+  background-size: contain;
+}
+
+/* line 213, ../../web/src/sass/common/_forms.scss */
+.input-text input {
+  width: auto;
+}
+
+/* line 217, ../../web/src/sass/common/_forms.scss */
+.line-group {
+  overflow: hidden;
+}
+/* line 219, ../../web/src/sass/common/_forms.scss */
+.line-group > div {
+  clear: none;
+}
+/* line 222, ../../web/src/sass/common/_forms.scss */
+.line-group .input-text {
+  float: left;
+  margin: 0;
+}
+/* line 225, ../../web/src/sass/common/_forms.scss */
+.line-group .input-text:first-child {
+  margin-right: 18px;
+}
+/* line 229, ../../web/src/sass/common/_forms.scss */
+.line-group input {
+  width: 185px;
+}
+/* line 232, ../../web/src/sass/common/_forms.scss */
+.line-group + .input-text {
+  clear: left;
+}
+
+/* line 237, ../../web/src/sass/common/_forms.scss */
+form .actions {
+  text-align: right;
+  padding: 30px 3px 30px 0;
+}
+/* line 240, ../../web/src/sass/common/_forms.scss */
+form .actions button {
+  text-transform: uppercase;
+  position: relative;
+  background-color: #22a86c;
+  font-size: 16px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  padding: 12px 18px;
+  color: #ffffff;
+}
+
+/* line 251, ../../web/src/sass/common/_forms.scss */
+.form-asterisk {
+  font-size: 10px;
+  text-align: center;
+}
+
+/* Dropdown control */
+/* line 256, ../../web/src/sass/common/_forms.scss */
+.selectBox-dropdown {
+  min-width: 150px;
+  height: 38px;
+  border: 1px solid #dadada;
+  position: relative;
+  line-height: 34px;
+  text-decoration: none;
+  text-align: left;
+  color: #000;
+  outline: none;
+  vertical-align: middle;
+  display: inline-block;
+  cursor: default;
+  font-style: normal;
+  color: #3c3947;
+}
+
+/* line 272, ../../web/src/sass/common/_forms.scss */
+.satelittes section a.selectBox-dropdown {
+  font-style: normal;
+  color: #3c3947;
+}
+
+/* line 276, ../../web/src/sass/common/_forms.scss */
+.selectBox-dropdown:focus,
+.selectBox-dropdown:focus .selectBox-arrow {
+  border-color: #666;
+}
+
+/* line 280, ../../web/src/sass/common/_forms.scss */
+.selectBox-dropdown.selectBox-menuShowing {
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-bottomright: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* line 288, ../../web/src/sass/common/_forms.scss */
+.selectBox-dropdown .selectBox-label {
+  padding: 2px 8px;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  height: 34px;
+}
+
+/* line 295, ../../web/src/sass/common/_forms.scss */
+.selectBox-dropdown .selectBox-arrow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 38px;
+  height: 100%;
+}
+
+/* Dropdown menu */
+/* line 303, ../../web/src/sass/common/_forms.scss */
+.selectBox-dropdown-menu {
+  position: absolute;
+  z-index: 99999;
+  max-height: 200px;
+  min-height: 1em;
+  border: solid 1px #BBB;
+  /* should be the same border width as .selectBox-dropdown */
+  background: #FFF;
+  -moz-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Inline control */
+/* line 316, ../../web/src/sass/common/_forms.scss */
+.selectBox-inline {
+  min-width: 150px;
+  outline: none;
+  border: solid 1px #BBB;
+  background: #FFF;
+  display: inline-block;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  overflow: auto;
+}
+
+/* line 325, ../../web/src/sass/common/_forms.scss */
+.selectBox-inline:focus {
+  border-color: #666;
+}
+
+/* Options */
+/* line 329, ../../web/src/sass/common/_forms.scss */
+.selectBox-options,
+.selectBox-options li,
+.selectBox-options li a {
+  list-style: none;
+  display: block;
+  cursor: default;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 338, ../../web/src/sass/common/_forms.scss */
+.selectBox-options li {
+  border-bottom: 1px solid #dadada;
+}
+
+/* line 341, ../../web/src/sass/common/_forms.scss */
+.selectBox-options li a {
+  /*line-height: 1.5;*/
+  padding: 10px;
+  /*white-space: nowrap;*/
+  overflow: hidden;
+  background: 6px center no-repeat;
+  font-size: 12px;
+}
+
+/* line 349, ../../web/src/sass/common/_forms.scss */
+.selectBox-options li.selectBox-hover a {
+  background-color: #EEE;
+}
+
+/* line 352, ../../web/src/sass/common/_forms.scss */
+.selectBox-options li.selectBox-disabled a {
+  color: #888;
+  background-color: transparent;
+}
+
+/* line 356, ../../web/src/sass/common/_forms.scss */
+.selectBox-options li.selectBox-selected a {
+  background-color: #eee;
+}
+
+/* line 359, ../../web/src/sass/common/_forms.scss */
+.selectBox-options .selectBox-optgroup {
+  color: #666;
+  background: #EEE;
+  font-weight: bold;
+  line-height: 1.5;
+  padding: 0 0.3em;
+  white-space: nowrap;
+}
+
+/* Disabled state */
+/* line 368, ../../web/src/sass/common/_forms.scss */
+.selectBox.selectBox-disabled {
+  color: #888 !important;
+}
+
+/* line 371, ../../web/src/sass/common/_forms.scss */
+.selectBox-dropdown.selectBox-disabled .selectBox-arrow {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  border-color: #666;
+}
+
+/* line 376, ../../web/src/sass/common/_forms.scss */
+.selectBox-inline.selectBox-disabled {
+  color: #888 !important;
+}
+
+/* line 379, ../../web/src/sass/common/_forms.scss */
+.selectBox-inline.selectBox-disabled .selectBox-options A {
+  background-color: transparent !important;
+}
+
+/* Errors message textarea */
+/* line 383, ../../web/src/sass/common/_forms.scss */
+.ws-po-box {
+  border: 0.07692em solid #b2b2b2;
+  padding: 15px;
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iNDclIiBzdG9wLWNvbG9yPSIjZjZmNmY2Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZWRlZGVkIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(47%, #f6f6f6), color-stop(100%, #ededed));
+  background-image: -moz-linear-gradient(top, #ffffff 0%, #f6f6f6 47%, #ededed 100%);
+  background-image: -webkit-linear-gradient(top, #ffffff 0%, #f6f6f6 47%, #ededed 100%);
+  background-image: linear-gradient(to bottom, #ffffff 0%, #f6f6f6 47%, #ededed 100%);
+}
+
+/* line 391, ../../web/src/sass/common/_forms.scss */
+.ie .ws-po-box {
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 );
+}
+
+/* line 394, ../../web/src/sass/common/_forms.scss */
+.ws-po-arrow {
+  border-width: 0 1em 0.9em;
+  top: 0.2em;
+}
+
+/* line 398, ../../web/src/sass/common/_forms.scss */
+.ie9 .ws-po-arrow {
+  border-width: 0 1em 0.8em;
+}
+
+/* line 401, ../../web/src/sass/common/_forms.scss */
+[data-horizontal="center"] .ws-po-arrow {
+  left: 1em;
+  margin-left: -0.35em;
+}
+
+/* line 405, ../../web/src/sass/common/_forms.scss */
+.ws-po-arrow .ws-po-arrowbox {
+  border-width: 0 0.85em 0.8em;
+  left: -0.85em;
+}
+
+/* line 409, ../../web/src/sass/common/_forms.scss */
+.ie9 .ws-po-arrow .ws-po-arrowbox {
+  border-width: 0 0.85em 1em;
+}
+
+/* line 412, ../../web/src/sass/common/_forms.scss */
+.ws-po-outerbox {
+  padding: 1em 0 0.69231em;
+}
+
+/* line 415, ../../web/src/sass/common/_forms.scss */
+.ws-popover {
+  overflow: inherit;
+}
+
+/* line 418, ../../web/src/sass/common/_forms.scss */
+.js .select label {
+  z-index: 0;
+}
+
+/* line 421, ../../web/src/sass/common/_forms.scss */
+.ie.js .select label {
+  z-index: 4;
+  display: none;
+}
+
+/* line 425, ../../web/src/sass/common/_forms.scss */
+select,
+.custom-dropdown {
+  background: transparent;
+}
+
+/*------------------------------------*\
+    File input
+\*------------------------------------*/
+/* line 432, ../../web/src/sass/common/_forms.scss */
+.fake-input {
+  position: relative;
+}
+/* line 434, ../../web/src/sass/common/_forms.scss */
+.js .fake-input > input[type="file"] {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  position: relative;
+  z-index: 2;
+}
+/* line 441, ../../web/src/sass/common/_forms.scss */
+.fake-input > input:disabled + span,
+.fake-input > input[disabled="disabled"] + span {
+  background-color: #f1f3f2;
+}
+/* line 445, ../../web/src/sass/common/_forms.scss */
+.fake-input > span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  color: #3c3947;
+  font-size: 18px;
+  border-bottom: 1px solid #f1f3f2;
+  overflow: hidden;
+  padding: 0 10px;
+}
+/* line 460, ../../web/src/sass/common/_forms.scss */
+.fake-input.error > span {
+  border-color: #ee1c27 !important;
+}
+
+/* Forms */
+/* line 466, ../../web/src/sass/common/_forms.scss */
+.form-group {
+  position: relative;
+}
+/* line 468, ../../web/src/sass/common/_forms.scss */
+.form-group em.invalid {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  z-index: 2;
+  display: block;
+  width: 34px;
+  height: 100%;
+  line-height: 100%;
+  text-align: center;
+  pointer-events: none;
+  font-size: 0;
+  color: transparent;
+  text-indent: -999em;
+}
+/* line 482, ../../web/src/sass/common/_forms.scss */
+.form-group em.invalid:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  margin-top: -8px;
+}
+/* line 491, ../../web/src/sass/common/_forms.scss */
+.form-group input.success + em.invalid {
+  display: block !important;
+}
+/* line 493, ../../web/src/sass/common/_forms.scss */
+.form-group input.success + em.invalid:before {
+  content: "";
+  margin-top: -6px;
+}
+
+/* line 1, ../../web/src/sass/common/_popin.scss */
+html.popin-active {
+  height: 100%;
+}
+/* line 4, ../../web/src/sass/common/_popin.scss */
+html.popin-active body {
+  overflow: hidden;
+  position: fixed;
+}
+
+/* line 11, ../../web/src/sass/common/_popin.scss */
+html.popopen .animLeft {
+  margin-left: 0;
+}
+/* line 13, ../../web/src/sass/common/_popin.scss */
+html.popopen .bodyAnimLeft {
+  margin: 0 -100% 0 0;
+}
+
+/* line 16, ../../web/src/sass/common/_popin.scss */
+.bodyAnimLeft {
+  overflow: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  -moz-overflow-scrolling: touch;
+  -ms-overflow-scrolling: touch;
+  -o-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+  -webkit-transition: all 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  -moz-transition: all 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  -ms-transition: all 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: all 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 400ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* line 23, ../../web/src/sass/common/_popin.scss */
+.animLeft {
+  z-index: 4;
+  left: 0;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -ms-perspective: 1000;
+  -o-perspective: 1000;
+  perspective: 1000;
+  -webkit-transform: translateZ(0px);
+  -moz-transform: translateZ(0px);
+  -ms-transform: translateZ(0px);
+  -o-transform: translateZ(0px);
+  transform: translateZ(0px);
+  margin: 0 0 0 -100%;
+  width: 100%;
+  -webkit-transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  -moz-transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  -ms-transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  background: #FFF;
+  top: 0;
+  bottom: 0;
+}
+
+/* line 36, ../../web/src/sass/common/_popin.scss */
+.popinContainer {
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  position: fixed;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  -moz-overflow-scrolling: touch;
+  -ms-overflow-scrolling: touch;
+  -o-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+  padding: 0;
+  height: 100%;
+  font-size: 0;
+}
+/* line 47, ../../web/src/sass/common/_popin.scss */
+.popinContainer:before,
+.popinContainer .iscrollScrollbar {
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 53, ../../web/src/sass/common/_popin.scss */
+.popinContainer:before {
+  width: 1px;
+  margin-left: -1px;
+  height: 100%;
+  content: '';
+}
+/* line 60, ../../web/src/sass/common/_popin.scss */
+.popinContainer .iscrollScrollbar {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+/* line 66, ../../web/src/sass/common/_popin.scss */
+.popinContainer .popin {
+  width: 100%;
+  padding: 30px 20px;
+}
+/* line 71, ../../web/src/sass/common/_popin.scss */
+.popinContainer .popin.popin--mentions h3 {
+  font-size: 25px;
+  margin-top: 20px;
+  text-transform: uppercase;
+  font: 23px/23px "citroenbold", Arial;
+  color: #c2b000;
+}
+/* line 79, ../../web/src/sass/common/_popin.scss */
+.popinContainer .popin.popin--mentions p {
+  font: 14px/20px 'ubunturegular';
+  padding: 10px 0;
+  text-transform: capitalize;
+}
+/* line 84, ../../web/src/sass/common/_popin.scss */
+.popinContainer .popin.popin--mentions p.bottom-text {
+  margin: 10px 20px;
+  color: #323232;
+}
+/* line 89, ../../web/src/sass/common/_popin.scss */
+.popinContainer .popin.popin--mentions p.facultatif {
+  font: 14px/20px 'ubuntubold';
+}
+/* line 92, ../../web/src/sass/common/_popin.scss */
+.popinContainer .popin.popin--mentions .box {
+  border: 6px solid #dcdcdc;
+  padding: 20px;
+}
+/* line 96, ../../web/src/sass/common/_popin.scss */
+.popinContainer .popin.popin--mentions .box h4 {
+  font: 16px/20px 'ubuntubold';
+  color: #323232;
+}
+/* line 101, ../../web/src/sass/common/_popin.scss */
+.popinContainer .popin.popin--mentions .box ul li {
+  font: 13px/13px 'ubunturegular';
+  color: #646464;
+  padding: 15px 30% 15px 0;
+  text-transform: capitalize;
+  position: relative;
+}
+/* line 108, ../../web/src/sass/common/_popin.scss */
+.popinContainer .popin.popin--mentions .box ul li span {
+  position: absolute;
+  right: 0;
+  top: 14px;
+}
+/* line 114, ../../web/src/sass/common/_popin.scss */
+.popinContainer .popin.popin--mentions .box ul li.totaux {
+  font: 14px/16px 'ubuntubold';
+  border-top: 2px solid #dcdcdc;
+  border-bottom: 2px solid #dcdcdc;
+}
+/* line 119, ../../web/src/sass/common/_popin.scss */
+.popinContainer .popin.popin--mentions .box ul li.totaux i {
+  font-style: normal;
+  display: block;
+  font-family: 'ubunturegular';
+  font-size: 12px;
+}
+/* line 129, ../../web/src/sass/common/_popin.scss */
+.popinContainer .popin.popin--mentions .infos {
+  font: 17px/26px 'ubuntubold';
+  color: #646464;
+}
+
+/* line 137, ../../web/src/sass/common/_popin.scss */
+.close {
+  border: 3px solid #B1AFC5;
+  z-index: 1000;
+  display: block;
+  margin: 0;
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  top: 14px;
+  right: 14px;
+  -webkit-transform: translateZ(0px);
+  -moz-transform: translateZ(0px);
+  -ms-transform: translateZ(0px);
+  -o-transform: translateZ(0px);
+  transform: translateZ(0px);
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+/* line 150, ../../web/src/sass/common/_popin.scss */
+.close:before, .close:after {
+  content: "";
+  position: absolute;
+  background: #B1AFC5;
+  width: 20px;
+  height: 3px;
+  right: 9px;
+  top: 18px;
+}
+/* line 160, ../../web/src/sass/common/_popin.scss */
+.close:before {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+/* line 162, ../../web/src/sass/common/_popin.scss */
+.close:after {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+/* line 166, ../../web/src/sass/common/_popin.scss */
+.popinContainer .iscrollScrollbar {
+  max-width: 768px;
+  margin: auto;
+}
+/* line 171, ../../web/src/sass/common/_popin.scss */
+.popinContainer.popinzoom {
+  text-align: center;
+}
+/* line 174, ../../web/src/sass/common/_popin.scss */
+.popinContainer.popinzoom .slickslideshow {
+  margin: 0 33px;
+}
+/* line 178, ../../web/src/sass/common/_popin.scss */
+.popinContainer.popinzoom .slickslideshow .slickslideshow-slide .libelle_contrast {
+  display: none;
+}
+/* line 182, ../../web/src/sass/common/_popin.scss */
+.popinContainer.popinzoom .visual.popinzoom {
+  margin: 0 14px;
+}
+/* line 186, ../../web/src/sass/common/_popin.scss */
+.popinContainer.popinmotorisations .popinmotor {
+  margin: 0 5%;
+}
+/* line 189, ../../web/src/sass/common/_popin.scss */
+.popinContainer.popinmotorisations .popinmotor h2 {
+  color: #000000;
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+/* line 195, ../../web/src/sass/common/_popin.scss */
+.popinContainer.popinmotorisations .popinmotor h2 span {
+  text-transform: lowercase;
+}
+/* line 198, ../../web/src/sass/common/_popin.scss */
+.popinContainer.popinmotorisations .popinmotor img {
+  width: 288px;
+}
+/* line 203, ../../web/src/sass/common/_popin.scss */
+.popinContainer.popinequipement .iscrollScrollbar {
+  height: 100%;
+}
+/* line 205, ../../web/src/sass/common/_popin.scss */
+.popinContainer.popinequipement .popincontent {
+  color: #333333;
+  font-size: 12px;
+  padding: 50px 20px 20px 20px;
+}
+/* line 210, ../../web/src/sass/common/_popin.scss */
+.popinContainer.popinequipement .popincontent h3 {
+  color: #c2b000;
+  font: 16px "citroenbold";
+  text-transform: uppercase;
+  padding: 0 70px 15px 0;
+}
+/* line 217, ../../web/src/sass/common/_popin.scss */
+.popinContainer.popinequipement .popincontent h4 {
+  font-family: "ubuntubold";
+  padding: 20px 0 10px 10px;
+}
+/* line 222, ../../web/src/sass/common/_popin.scss */
+.popinContainer.popinequipement .popincontent > div {
+  background: #e7f4fa;
+  position: relative;
+  padding: 30px 10px;
+}
+/* line 229, ../../web/src/sass/common/_popin.scss */
+.popinContainer.popinequipement .popincontent ul li {
+  padding: 5px 0;
+  margin-left: 26px;
+  position: relative;
+  list-style-type: disc;
+}
+/* line 236, ../../web/src/sass/common/_popin.scss */
+.popinContainer.popinequipement .popincontent ul.complement {
+  position: relative;
+  padding: 60px 10px 30px 10px;
+  background-color: #b6e1e8;
+}
+/* line 241, ../../web/src/sass/common/_popin.scss */
+.popinContainer.popinequipement .popincontent ul.complement:before {
+  content: "+";
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 36px;
+  line-height: 40px;
+  text-align: center;
+  background: #e7f4fa;
+  color: #8bd6e9;
+  font-family: "citroenbold";
+}
+/* line 258, ../../web/src/sass/common/_popin.scss */
+.popinContainer.popinequipement .popincontent .mention-legale {
+  margin: 15px 0 0 17px;
+}
+
+/* line 1, ../../web/src/sass/common/_icons.scss */
+.ico {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* General styles for the modal */
+/*
+Styles for the html/body for special modal where we want 3d effects
+Note that we need a container wrapping all content on the page for the
+perspective effects (not including the modals and the overlay).
+*/
+/* line 9, ../../web/src/sass/common/_modal.scss */
+.md-perspective {
+  height: 100%;
+  overflow: hidden;
+}
+/* line 12, ../../web/src/sass/common/_modal.scss */
+.md-perspective body {
+  height: 100%;
+  overflow: hidden;
+  background: #222;
+  -webkit-perspective: 600px;
+  -moz-perspective: 600px;
+  perspective: 600px;
+}
+
+/* line 22, ../../web/src/sass/common/_modal.scss */
+.container {
+  min-height: 100%;
+}
+
+/* line 26, ../../web/src/sass/common/_modal.scss */
+.md-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  max-width: 630px;
+  min-width: 300px;
+  height: auto;
+  z-index: 2000;
+  visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+/* line 45, ../../web/src/sass/common/_modal.scss */
+.md-show {
+  visibility: visible;
+}
+
+/* line 49, ../../web/src/sass/common/_modal.scss */
+.md-overlay {
+  position: fixed;
+  width: 100%;
+  height: 300%;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+/* line 64, ../../web/src/sass/common/_modal.scss */
+.md-show ~ .md-overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Content styles */
+/* line 71, ../../web/src/sass/common/_modal.scss */
+.md-content {
+  color: #000;
+  background: #fff;
+  position: relative;
+  margin: 0 auto;
+  overflow: auto;
+}
+/* line 77, ../../web/src/sass/common/_modal.scss */
+.md-content > div {
+  padding: 15px 15px 30px;
+  margin: 0;
+  overflow: auto;
+}
+/* line 81, ../../web/src/sass/common/_modal.scss */
+.md-content > div p {
+  margin: 0 0 20px;
+  padding: 15px 55px;
+  background: #eee;
+  font: 14px/18px "ubuntubold";
+  color: #646464;
+}
+/* line 88, ../../web/src/sass/common/_modal.scss */
+.md-content > div p:before {
+  content: "i";
+  font-size: 19px;
+  display: inline-block;
+  color: #f0780a;
+  width: 23px;
+  height: 23px;
+  line-height: 23px;
+  text-align: center;
+  border: 2px solid #f0780a;
+  border-radius: 50%;
+  position: absolute;
+  left: 30px;
+}
+/* line 101, ../../web/src/sass/common/_modal.scss */
+.md-content button {
+  width: 40%;
+  float: right;
+  font-size: 14px;
+  padding: 14px;
+  border: none;
+}
+/* line 109, ../../web/src/sass/common/_modal.scss */
+.md-content button.md-close {
+  float: left;
+  background: #fff;
+  color: #646464;
+  border: 2px solid #ccc;
+  padding: 10px;
+}
+/* line 116, ../../web/src/sass/common/_modal.scss */
+.md-content button.md-close:before {
+  content: "";
+  display: block;
+  position: absolute;
+  margin-top: 3px;
+}
+
+/* Individual modal styles with animations/transitions */
+/* Effect 1: Fade in and scale up */
+/* line 131, ../../web/src/sass/common/_modal.scss */
+.md-effect-1 .md-content {
+  -webkit-transform: scale(0.7);
+  -moz-transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  transform: scale(0.7);
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+/* line 142, ../../web/src/sass/common/_modal.scss */
+.md-show.md-effect-1 .md-content {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Effect 2: Slide from the right */
+/* line 152, ../../web/src/sass/common/_modal.scss */
+.md-effect-2 .md-content {
+  -webkit-transform: translateX(20%);
+  -moz-transform: translateX(20%);
+  -ms-transform: translateX(20%);
+  transform: translateX(20%);
+  opacity: 0;
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+  -moz-transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+  transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+}
+
+/* line 163, ../../web/src/sass/common/_modal.scss */
+.md-show.md-effect-2 .md-content {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Effect 3: Slide from the bottom */
+/* line 173, ../../web/src/sass/common/_modal.scss */
+.md-effect-3 .md-content {
+  -webkit-transform: translateY(20%);
+  -moz-transform: translateY(20%);
+  -ms-transform: translateY(20%);
+  transform: translateY(20%);
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+/* line 184, ../../web/src/sass/common/_modal.scss */
+.md-show.md-effect-3 .md-content {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Effect 4: Newspaper */
+/* line 194, ../../web/src/sass/common/_modal.scss */
+.md-effect-4 .md-content {
+  -webkit-transform: scale(0) rotate(720deg);
+  -moz-transform: scale(0) rotate(720deg);
+  -ms-transform: scale(0) rotate(720deg);
+  transform: scale(0) rotate(720deg);
+  opacity: 0;
+}
+
+/* line 202, ../../web/src/sass/common/_modal.scss */
+.md-show.md-effect-4 ~ .md-overlay, .md-effect-4 .md-content {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+/* line 208, ../../web/src/sass/common/_modal.scss */
+.md-show.md-effect-4 .md-content {
+  -webkit-transform: scale(1) rotate(0deg);
+  -moz-transform: scale(1) rotate(0deg);
+  -ms-transform: scale(1) rotate(0deg);
+  transform: scale(1) rotate(0deg);
+  opacity: 1;
+}
+
+/* Effect 5: fall */
+/* line 219, ../../web/src/sass/common/_modal.scss */
+.md-effect-5.md-modal {
+  -webkit-perspective: 1300px;
+  -moz-perspective: 1300px;
+  perspective: 1300px;
+}
+/* line 224, ../../web/src/sass/common/_modal.scss */
+.md-effect-5 .md-content {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: translateZ(600px) rotateX(20deg);
+  -moz-transform: translateZ(600px) rotateX(20deg);
+  -ms-transform: translateZ(600px) rotateX(20deg);
+  transform: translateZ(600px) rotateX(20deg);
+  opacity: 0;
+}
+
+/* line 236, ../../web/src/sass/common/_modal.scss */
+.md-show.md-effect-5 .md-content {
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  -webkit-transform: translateZ(0px) rotateX(0deg);
+  -moz-transform: translateZ(0px) rotateX(0deg);
+  -ms-transform: translateZ(0px) rotateX(0deg);
+  transform: translateZ(0px) rotateX(0deg);
+  opacity: 1;
+}
+
+/* Effect 6: side fall */
+/* line 250, ../../web/src/sass/common/_modal.scss */
+.md-effect-6.md-modal {
+  -webkit-perspective: 1300px;
+  -moz-perspective: 1300px;
+  perspective: 1300px;
+}
+/* line 255, ../../web/src/sass/common/_modal.scss */
+.md-effect-6 .md-content {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: translate(30%) translateZ(600px) rotate(10deg);
+  -moz-transform: translate(30%) translateZ(600px) rotate(10deg);
+  -ms-transform: translate(30%) translateZ(600px) rotate(10deg);
+  transform: translate(30%) translateZ(600px) rotate(10deg);
+  opacity: 0;
+}
+
+/* line 267, ../../web/src/sass/common/_modal.scss */
+.md-show.md-effect-6 .md-content {
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  -webkit-transform: translate(0%) translateZ(0) rotate(0deg);
+  -moz-transform: translate(0%) translateZ(0) rotate(0deg);
+  -ms-transform: translate(0%) translateZ(0) rotate(0deg);
+  transform: translate(0%) translateZ(0) rotate(0deg);
+  opacity: 1;
+}
+
+/* Effect 7:  slide and stick to top */
+/* line 280, ../../web/src/sass/common/_modal.scss */
+.md-effect-7 {
+  top: 0;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+/* line 286, ../../web/src/sass/common/_modal.scss */
+.md-effect-7 .md-content {
+  -webkit-transform: translateY(-200%);
+  -moz-transform: translateY(-200%);
+  -ms-transform: translateY(-200%);
+  transform: translateY(-200%);
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  transition: all .3s;
+  opacity: 0;
+}
+
+/* line 298, ../../web/src/sass/common/_modal.scss */
+.md-show.md-effect-7 .md-content {
+  -webkit-transform: translateY(0%);
+  -moz-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  transform: translateY(0%);
+  border-radius: 0 0 3px 3px;
+  opacity: 1;
+}
+
+/* Effect 8: 3D flip horizontal */
+/* line 310, ../../web/src/sass/common/_modal.scss */
+.md-effect-8.md-modal {
+  -webkit-perspective: 1300px;
+  -moz-perspective: 1300px;
+  perspective: 1300px;
+}
+/* line 315, ../../web/src/sass/common/_modal.scss */
+.md-effect-8 .md-content {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: rotateY(-70deg);
+  -moz-transform: rotateY(-70deg);
+  -ms-transform: rotateY(-70deg);
+  transform: rotateY(-70deg);
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  opacity: 0;
+}
+
+/* line 330, ../../web/src/sass/common/_modal.scss */
+.md-show.md-effect-8 .md-content {
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  opacity: 1;
+}
+
+/* Effect 9: 3D flip vertical */
+/* line 341, ../../web/src/sass/common/_modal.scss */
+.md-effect-9.md-modal {
+  -webkit-perspective: 1300px;
+  -moz-perspective: 1300px;
+  perspective: 1300px;
+}
+/* line 346, ../../web/src/sass/common/_modal.scss */
+.md-effect-9 .md-content {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: rotateX(-70deg);
+  -moz-transform: rotateX(-70deg);
+  -ms-transform: rotateX(-70deg);
+  transform: rotateX(-70deg);
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  opacity: 0;
+}
+
+/* line 361, ../../web/src/sass/common/_modal.scss */
+.md-show.md-effect-9 .md-content {
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  -ms-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  opacity: 1;
+}
+
+/* Effect 10: 3D sign */
+/* line 372, ../../web/src/sass/common/_modal.scss */
+.md-effect-10.md-modal {
+  -webkit-perspective: 1300px;
+  -moz-perspective: 1300px;
+  perspective: 1300px;
+}
+/* line 377, ../../web/src/sass/common/_modal.scss */
+.md-effect-10 .md-content {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: rotateX(-60deg);
+  -moz-transform: rotateX(-60deg);
+  -ms-transform: rotateX(-60deg);
+  transform: rotateX(-60deg);
+  -webkit-transform-origin: 50% 0;
+  -moz-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+/* line 395, ../../web/src/sass/common/_modal.scss */
+.md-show.md-effect-10 .md-content {
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  -ms-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  opacity: 1;
+}
+
+/* Effect 11: Super scaled */
+/* line 405, ../../web/src/sass/common/_modal.scss */
+.md-effect-11 .md-content {
+  -webkit-transform: scale(2);
+  -moz-transform: scale(2);
+  -ms-transform: scale(2);
+  transform: scale(2);
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+/* line 416, ../../web/src/sass/common/_modal.scss */
+.md-show.md-effect-11 .md-content {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Effect 12:  Just me */
+/* line 426, ../../web/src/sass/common/_modal.scss */
+.md-effect-12 .md-content {
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+/* line 437, ../../web/src/sass/common/_modal.scss */
+.md-show.md-effect-12 ~ .md-overlay {
+  background: #e74c3c;
+}
+
+/* line 441, ../../web/src/sass/common/_modal.scss */
+.md-effect-12 .md-content {
+  background: transparent;
+}
+/* line 442, ../../web/src/sass/common/_modal.scss */
+.md-effect-12 .md-content h3 {
+  background: transparent;
+}
+
+/* line 448, ../../web/src/sass/common/_modal.scss */
+.md-show.md-effect-12 .md-content {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Effect 13: 3D slit */
+/* line 459, ../../web/src/sass/common/_modal.scss */
+.md-effect-13.md-modal {
+  -webkit-perspective: 1300px;
+  -moz-perspective: 1300px;
+  perspective: 1300px;
+}
+/* line 464, ../../web/src/sass/common/_modal.scss */
+.md-effect-13 .md-content {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: translateZ(-3000px) rotateY(90deg);
+  -moz-transform: translateZ(-3000px) rotateY(90deg);
+  -ms-transform: translateZ(-3000px) rotateY(90deg);
+  transform: translateZ(-3000px) rotateY(90deg);
+  opacity: 0;
+}
+
+/* line 476, ../../web/src/sass/common/_modal.scss */
+.md-show.md-effect-13 .md-content {
+  -webkit-animation: slit .7s forwards ease-out;
+  -moz-animation: slit .7s forwards ease-out;
+  animation: slit .7s forwards ease-out;
+}
+
+@-webkit-keyframes slit {
+  50% {
+    -webkit-transform: translateZ(-250px) rotateY(89deg);
+    opacity: .5;
+    -webkit-animation-timing-function: ease-out;
+  }
+  100% {
+    -webkit-transform: translateZ(0) rotateY(0deg);
+    opacity: 1;
+  }
+}
+@-moz-keyframes slit {
+  50% {
+    -moz-transform: translateZ(-250px) rotateY(89deg);
+    opacity: .5;
+    -moz-animation-timing-function: ease-out;
+  }
+  100% {
+    -moz-transform: translateZ(0) rotateY(0deg);
+    opacity: 1;
+  }
+}
+@keyframes slit {
+  50% {
+    transform: translateZ(-250px) rotateY(89deg);
+    opacity: 1;
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: translateZ(0) rotateY(0deg);
+    opacity: 1;
+  }
+}
+/* Effect 14:  3D Rotate from bottom */
+/* line 527, ../../web/src/sass/common/_modal.scss */
+.md-effect-14.md-modal {
+  -webkit-perspective: 1300px;
+  -moz-perspective: 1300px;
+  perspective: 1300px;
+}
+/* line 532, ../../web/src/sass/common/_modal.scss */
+.md-effect-14 .md-content {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: translateY(100%) rotateX(90deg);
+  -moz-transform: translateY(100%) rotateX(90deg);
+  -ms-transform: translateY(100%) rotateX(90deg);
+  transform: translateY(100%) rotateX(90deg);
+  -webkit-transform-origin: 0 100%;
+  -moz-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+/* line 550, ../../web/src/sass/common/_modal.scss */
+.md-show.md-effect-14 .md-content {
+  -webkit-transform: translateY(0%) rotateX(0deg);
+  -moz-transform: translateY(0%) rotateX(0deg);
+  -ms-transform: translateY(0%) rotateX(0deg);
+  transform: translateY(0%) rotateX(0deg);
+  opacity: 1;
+}
+
+/* Effect 15:  3D Rotate in from left */
+/* line 561, ../../web/src/sass/common/_modal.scss */
+.md-effect-15.md-modal {
+  -webkit-perspective: 1300px;
+  -moz-perspective: 1300px;
+  perspective: 1300px;
+}
+/* line 566, ../../web/src/sass/common/_modal.scss */
+.md-effect-15 .md-content {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: translateZ(100px) translateX(-30%) rotateY(90deg);
+  -moz-transform: translateZ(100px) translateX(-30%) rotateY(90deg);
+  -ms-transform: translateZ(100px) translateX(-30%) rotateY(90deg);
+  transform: translateZ(100px) translateX(-30%) rotateY(90deg);
+  -webkit-transform-origin: 0 100%;
+  -moz-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+/* line 585, ../../web/src/sass/common/_modal.scss */
+.md-show.md-effect-15 .md-content {
+  -webkit-transform: translateZ(0px) translateX(0%) rotateY(0deg);
+  -moz-transform: translateZ(0px) translateX(0%) rotateY(0deg);
+  -ms-transform: translateZ(0px) translateX(0%) rotateY(0deg);
+  transform: translateZ(0px) translateX(0%) rotateY(0deg);
+  opacity: 1;
+}
+/* line 593, ../../web/src/sass/common/_modal.scss */
+.md-show.md-effect-16 ~ .md-overlay {
+  background: rgba(180, 46, 32, 0.5);
+}
+/* line 596, ../../web/src/sass/common/_modal.scss */
+.md-show.md-effect-16 ~ .container {
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  filter: blur(3px);
+}
+
+/* Effect 16:  Blur */
+/* line 606, ../../web/src/sass/common/_modal.scss */
+.md-effect-16 .md-content {
+  -webkit-transform: translateY(-5%);
+  -moz-transform: translateY(-5%);
+  -ms-transform: translateY(-5%);
+  transform: translateY(-5%);
+  opacity: 0;
+}
+
+/* line 614, ../../web/src/sass/common/_modal.scss */
+.md-show.md-effect-16 ~ .container, .md-effect-16 .md-content {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+/* line 621, ../../web/src/sass/common/_modal.scss */
+.md-show.md-effect-16 .md-content {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1;
+}
+/* line 629, ../../web/src/sass/common/_modal.scss */
+.md-show.md-effect-17 ~ .container {
+  height: 100%;
+  overflow: hidden;
+  -webkit-transition: -webkit-transform 0.3s;
+  -moz-transition: -moz-transform 0.3s;
+  transition: transform 0.3s;
+  -webkit-transform: rotateX(-2deg);
+  -moz-transform: rotateX(-2deg);
+  -ms-transform: rotateX(-2deg);
+  transform: rotateX(-2deg);
+  -webkit-transform-origin: 50% 0%;
+  -moz-transform-origin: 50% 0%;
+  transform-origin: 50% 0%;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+/* line 646, ../../web/src/sass/common/_modal.scss */
+.md-show.md-effect-17 ~ .md-overlay {
+  -webkit-transform: rotateX(-2deg);
+  -moz-transform: rotateX(-2deg);
+  -ms-transform: rotateX(-2deg);
+  transform: rotateX(-2deg);
+  -webkit-transform-origin: 50% 0%;
+  -moz-transform-origin: 50% 0%;
+  transform-origin: 50% 0%;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+/* Effect 17:  Slide in from bottom with perspective on container */
+/* line 663, ../../web/src/sass/common/_modal.scss */
+.md-effect-17 .md-content {
+  opacity: 0;
+  -webkit-transform: translateY(200%);
+  -moz-transform: translateY(200%);
+  -ms-transform: translateY(200%);
+  transform: translateY(200%);
+}
+
+/* line 672, ../../web/src/sass/common/_modal.scss */
+.md-show.md-effect-17 .md-content {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1;
+  -webkit-transition: all 0.3s 0.2s;
+  -moz-transition: all 0.3s 0.2s;
+  transition: all 0.3s 0.2s;
+}
+/* line 683, ../../web/src/sass/common/_modal.scss */
+.md-show.md-effect-18 ~ .container {
+  height: 100%;
+  overflow: hidden;
+}
+/* line 687, ../../web/src/sass/common/_modal.scss */
+.md-show.md-effect-18 ~ .md-overlay {
+  background: rgba(143, 27, 15, 0.8);
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+/* line 693, ../../web/src/sass/common/_modal.scss */
+.md-show.md-effect-18 ~ .container, .md-show.md-effect-18 ~ .md-overlay {
+  -webkit-transform-style: preserve-3d;
+  -webkit-transform-origin: 0% 50%;
+  -webkit-animation: rotateRightSideFirst 0.5s forwards ease-in;
+  -moz-transform-style: preserve-3d;
+  -moz-transform-origin: 0% 50%;
+  -moz-animation: rotateRightSideFirst 0.5s forwards ease-in;
+  transform-style: preserve-3d;
+  transform-origin: 0% 50%;
+  animation: rotateRightSideFirst 0.5s forwards ease-in;
+}
+
+/* Effect 18:  Slide from right with perspective on container */
+@-webkit-keyframes rotateRightSideFirst {
+  50% {
+    -webkit-transform: translateZ(-50px) rotateY(5deg);
+    -webkit-animation-timing-function: ease-out;
+  }
+  100% {
+    -webkit-transform: translateZ(-200px);
+  }
+}
+@-moz-keyframes rotateRightSideFirst {
+  50% {
+    -moz-transform: translateZ(-50px) rotateY(5deg);
+    -moz-animation-timing-function: ease-out;
+  }
+  100% {
+    -moz-transform: translateZ(-200px);
+  }
+}
+@keyframes rotateRightSideFirst {
+  50% {
+    transform: translateZ(-50px) rotateY(5deg);
+    animation-timing-function: ease-out;
+  }
+  100% {
+    transform: translateZ(-200px);
+  }
+}
+/* line 745, ../../web/src/sass/common/_modal.scss */
+.md-effect-18 .md-content {
+  -webkit-transform: translateX(200%);
+  -moz-transform: translateX(200%);
+  -ms-transform: translateX(200%);
+  transform: translateX(200%);
+  opacity: 0;
+}
+
+/* line 754, ../../web/src/sass/common/_modal.scss */
+.md-show.md-effect-18 .md-content {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+  opacity: 1;
+  -webkit-transition: all 0.5s 0.1s;
+  -moz-transition: all 0.5s 0.1s;
+  transition: all 0.5s 0.1s;
+}
+/* line 765, ../../web/src/sass/common/_modal.scss */
+.md-show.md-effect-19 ~ .container {
+  height: 100%;
+  overflow: hidden;
+}
+/* line 769, ../../web/src/sass/common/_modal.scss */
+.md-show.md-effect-19 ~ .md-overlay {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+/* line 774, ../../web/src/sass/common/_modal.scss */
+.md-show.md-effect-19 ~ .container, .md-show.md-effect-19 ~ .md-overlay {
+  -webkit-transform-style: preserve-3d;
+  -webkit-transform-origin: 50% 100%;
+  -webkit-animation: OpenTop 0.5s forwards ease-in;
+  -moz-transform-style: preserve-3d;
+  -moz-transform-origin: 50% 100%;
+  -moz-animation: OpenTop 0.5s forwards ease-in;
+  transform-style: preserve-3d;
+  transform-origin: 50% 100%;
+  animation: OpenTop 0.5s forwards ease-in;
+}
+
+/* Effect 19:  Slip in from the top with perspective on container */
+@-webkit-keyframes OpenTop {
+  50% {
+    -webkit-transform: rotateX(10deg);
+    -webkit-animation-timing-function: ease-out;
+  }
+}
+@-moz-keyframes OpenTop {
+  50% {
+    -moz-transform: rotateX(10deg);
+    -moz-animation-timing-function: ease-out;
+  }
+}
+@keyframes OpenTop {
+  50% {
+    transform: rotateX(10deg);
+    animation-timing-function: ease-out;
+  }
+}
+/* line 814, ../../web/src/sass/common/_modal.scss */
+.md-effect-19 .md-content {
+  -webkit-transform: translateY(-200%);
+  -moz-transform: translateY(-200%);
+  -ms-transform: translateY(-200%);
+  transform: translateY(-200%);
+  opacity: 0;
+}
+
+/* line 822, ../../web/src/sass/common/_modal.scss */
+.md-show.md-effect-19 .md-content {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1;
+  -webkit-transition: all 0.5s 0.1s;
+  -moz-transition: all 0.5s 0.1s;
+  transition: all 0.5s 0.1s;
+}
+
+@media screen and (max-width: 32em) {
+  /* line 834, ../../web/src/sass/common/_modal.scss */
+  body {
+    /*font-size: 75%;*/
+  }
+}
+/* slices */
+/* line 2, ../../web/src/sass/components/_cf58bis.scss */
+.slicecf58bis {
+  padding: 0 0 25px 0;
+}
+/* line 5, ../../web/src/sass/components/_cf58bis.scss */
+.slicecf58bis > div {
+  padding-left: 14px;
+  padding-right: 14px;
+}
+/* line 10, ../../web/src/sass/components/_cf58bis.scss */
+.slicecf58bis .price, .slicecf58bis .namecontrast {
+  padding: 0 5px 0 0;
+  font-family: "ubuntubold";
+  color: #646464;
+  font-size: 13px;
+  margin-top: 5px;
+}
+/* line 18, ../../web/src/sass/components/_cf58bis.scss */
+.slicecf58bis .price {
+  min-height: 18px;
+}
+/* line 23, ../../web/src/sass/components/_cf58bis.scss */
+.slicecf58bis .price span.price-prefix {
+  display: inline-block;
+  font-family: "ubunturegular";
+  text-transform: uppercase;
+  font-size: 11px;
+}
+/* line 32, ../../web/src/sass/components/_cf58bis.scss */
+.slicecf58bis .namecontrast {
+  color: #333333;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+/* line 46, ../../web/src/sass/components/_cf58bis.scss */
+.slicecf58bis .chevron {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  margin-top: -3px;
+}
+/* line 55, ../../web/src/sass/components/_cf58bis.scss */
+.slicecf58bis .choice {
+  margin-bottom: 7px;
+  padding: 0 5px 0 60px;
+  font-family: "ubunturegular";
+  color: #333333;
+  font-size: 12px;
+}
+/* line 63, ../../web/src/sass/components/_cf58bis.scss */
+.slicecf58bis .mentions {
+  font-family: "ubunturegular";
+  margin-top: 15px;
+  font-size: 10px;
+  line-height: 14px;
+  color: #646464;
+}
+/* line 71, ../../web/src/sass/components/_cf58bis.scss */
+.slicecf58bis .title {
+  font-family: "ubuntubold";
+  margin: 25px 0 10px 0;
+  color: #646464;
+  font-size: 13px;
+}
+/* line 78, ../../web/src/sass/components/_cf58bis.scss */
+.slicecf58bis ul {
+  list-style: none;
+  padding: 0;
+}
+/* line 84, ../../web/src/sass/components/_cf58bis.scss */
+.slicecf58bis .tit-toggle:after {
+  margin: -17px 0 0;
+}
+/* line 87, ../../web/src/sass/components/_cf58bis.scss */
+.slicecf58bis .popinmotorisations {
+  display: none;
+}
+/* line 89, ../../web/src/sass/components/_cf58bis.scss */
+.slicecf58bis .finInfos {
+  position: relative;
+  padding: 22px 15px 7px;
+  font-size: 0;
+}
+/* line 94, ../../web/src/sass/components/_cf58bis.scss */
+.slicecf58bis .finInfos > label {
+  vertical-align: top;
+  top: 30px;
+}
+/* line 99, ../../web/src/sass/components/_cf58bis.scss */
+.slicecf58bis .finInfos .infos {
+  width: 70%;
+  display: inline-block;
+}
+/* line 103, ../../web/src/sass/components/_cf58bis.scss */
+.slicecf58bis .finInfos .infos .subtitle {
+  color: #333333;
+  font-family: "ubuntubold";
+  cursor: pointer;
+  margin: 0;
+  font-weight: bold;
+  font-size: 16px;
+}
+/* line 112, ../../web/src/sass/components/_cf58bis.scss */
+.slicecf58bis .finInfos .infos .transmission {
+  color: #333333;
+  font-family: "ubuntubold";
+  cursor: pointer;
+  margin: 0;
+  font-weight: bold;
+  font-size: 14px;
+}
+/* line 125, ../../web/src/sass/components/_cf58bis.scss */
+.slicecf58bis .lame .finitions:last-child {
+  border-bottom: 4px solid #dcdcdc;
+}
+/* line 128, ../../web/src/sass/components/_cf58bis.scss */
+.slicecf58bis .lame .finitions .accordion {
+  display: block;
+  color: black;
+  border-top: 4px solid #dcdcdc;
+  border-left: 4px solid #dcdcdc;
+  border-right: 4px solid #dcdcdc;
+  padding-bottom: 15px;
+}
+/* line 138, ../../web/src/sass/components/_cf58bis.scss */
+.slicecf58bis .lame .finitions .accordion.selected img.on {
+  border: 2px solid #f0780a;
+}
+/* line 142, ../../web/src/sass/components/_cf58bis.scss */
+.slicecf58bis .lame .finitions .accordion .carre {
+  text-align: left;
+  width: 50%;
+  display: inline-block;
+  padding: 5px;
+  vertical-align: top;
+}
+/* line 149, ../../web/src/sass/components/_cf58bis.scss */
+.slicecf58bis .lame .finitions .accordion .carre .title-item {
+  color: #3b3946;
+  font-family: "ubuntulight";
+  font-size: 14px;
+  text-transform: uppercase;
+  margin: 16px 0;
+}
+/* line 157, ../../web/src/sass/components/_cf58bis.scss */
+.slicecf58bis .lame .finitions .accordion .carre .oddbox {
+  background: #e5f2f4;
+  padding: 5px 10px;
+  min-height: 126px;
+}
+/* line 161, ../../web/src/sass/components/_cf58bis.scss */
+.slicecf58bis .lame .finitions .accordion .carre .oddbox p {
+  font-weight: bold;
+  font-family: "ubunturegular";
+  font-size: 14px;
+}
+/* line 166, ../../web/src/sass/components/_cf58bis.scss */
+.slicecf58bis .lame .finitions .accordion .carre .oddbox img {
+  width: 40%;
+  display: inline-block;
+}
+/* line 172, ../../web/src/sass/components/_cf58bis.scss */
+.slicecf58bis .lame .finitions .accordion .carre .evenbox {
+  background: #ece7e8;
+  padding: 5px 10px;
+  min-height: 126px;
+}
+/* line 176, ../../web/src/sass/components/_cf58bis.scss */
+.slicecf58bis .lame .finitions .accordion .carre .evenbox p {
+  font-weight: bold;
+  font-family: "ubunturegular";
+  font-size: 14px;
+}
+/* line 181, ../../web/src/sass/components/_cf58bis.scss */
+.slicecf58bis .lame .finitions .accordion .carre .evenbox img {
+  width: 40%;
+  display: inline-block;
+}
+/* line 187, ../../web/src/sass/components/_cf58bis.scss */
+.slicecf58bis .lame .finitions .accordion .carre .popinlink {
+  display: block;
+}
+/* line 189, ../../web/src/sass/components/_cf58bis.scss */
+.slicecf58bis .lame .finitions .accordion .carre .popinlink a {
+  display: inline-block;
+  float: right;
+  margin-top: 5px;
+}
+/* line 196, ../../web/src/sass/components/_cf58bis.scss */
+.slicecf58bis .lame .finitions .accordion .carre .popinlink img {
+  width: 50px;
+}
+/* line 203, ../../web/src/sass/components/_cf58bis.scss */
+.slicecf58bis .lame .finitions .tit-toggle {
+  cursor: pointer;
+}
+/* line 205, ../../web/src/sass/components/_cf58bis.scss */
+.slicecf58bis .lame .finitions .accordion-cont {
+  padding: 0 15px;
+  font-size: 0;
+}
+
+@media screen and (max-width: 360px) {
+  /* line 219, ../../web/src/sass/components/_cf58bis.scss */
+  .slicecf58bis .lame .finitions .accordion .carre .title-item {
+    font-size: 12px;
+  }
+  /* line 223, ../../web/src/sass/components/_cf58bis.scss */
+  .slicecf58bis .lame .finitions .accordion .carre .oddbox p {
+    font-size: 12px;
+  }
+  /* line 228, ../../web/src/sass/components/_cf58bis.scss */
+  .slicecf58bis .lame .finitions .accordion .carre .evenbox p {
+    font-size: 12px;
+  }
+}
+/* line 2, ../../web/src/sass/components/_cf53bis.scss */
+.slicecf53bis {
+  padding: 0 0 25px 0;
+}
+/* line 5, ../../web/src/sass/components/_cf53bis.scss */
+.slicecf53bis > div {
+  padding-left: 14px;
+  padding-right: 14px;
+}
+/* line 10, ../../web/src/sass/components/_cf53bis.scss */
+.slicecf53bis .price {
+  font-family: "ubuntubold";
+  color: #646464;
+  font-size: 13px;
+}
+/* line 15, ../../web/src/sass/components/_cf53bis.scss */
+.slicecf53bis .price span.price-prefix {
+  display: inline-block;
+}
+/* line 26, ../../web/src/sass/components/_cf53bis.scss */
+.slicecf53bis .chevron {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  margin-top: -3px;
+}
+/* line 35, ../../web/src/sass/components/_cf53bis.scss */
+.slicecf53bis .mentions {
+  font-family: "ubunturegular";
+  margin-top: 15px;
+  font-size: 10px;
+  line-height: 14px;
+  color: #646464;
+}
+/* line 43, ../../web/src/sass/components/_cf53bis.scss */
+.slicecf53bis .title {
+  font-family: "ubuntubold";
+  margin: 25px 0 10px 0;
+  color: #646464;
+  font-size: 13px;
+}
+/* line 50, ../../web/src/sass/components/_cf53bis.scss */
+.slicecf53bis .finInfos {
+  position: relative;
+  padding: 24px 15px;
+  font-size: 0;
+}
+/* line 55, ../../web/src/sass/components/_cf53bis.scss */
+.slicecf53bis .finInfos .infos {
+  width: 70%;
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 59, ../../web/src/sass/components/_cf53bis.scss */
+.slicecf53bis .finInfos .infos .subtitle {
+  color: #333333;
+  font-family: "ubuntubold";
+  cursor: pointer;
+  margin: 0;
+  font-weight: bold;
+  font-size: 16px;
+}
+/* line 71, ../../web/src/sass/components/_cf53bis.scss */
+.slicecf53bis .finitions .accordion {
+  display: block;
+  color: black;
+  border: 4px solid #dcdcdc;
+}
+/* line 78, ../../web/src/sass/components/_cf53bis.scss */
+.slicecf53bis .finitions .accordion.selected img.on {
+  border: 2px solid #f0780a;
+}
+/* line 81, ../../web/src/sass/components/_cf53bis.scss */
+.slicecf53bis .finitions .accordion .accordion-cont .finiplus {
+  padding-top: 15px;
+  text-align: center;
+  font: 14px "ubuntubold";
+  text-transform: uppercase;
+}
+/* line 89, ../../web/src/sass/components/_cf53bis.scss */
+.slicecf53bis .finitions .zoom {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  right: 0;
+  margin: 0 -12px 0 0;
+}
+/* line 96, ../../web/src/sass/components/_cf53bis.scss */
+.slicecf53bis .finitions .accordion-cont {
+  padding: 0 15px;
+}
+/* line 101, ../../web/src/sass/components/_cf53bis.scss */
+.slicecf53bis .popinlink {
+  text-align: center;
+  margin: 0;
+  position: relative;
+  height: 44px;
+  width: 100%;
+  padding: 0;
+  bottom: 20px;
+}
+/* line 109, ../../web/src/sass/components/_cf53bis.scss */
+.slicecf53bis .popinlink a {
+  font: bold 12px "ubuntubold";
+  text-transform: uppercase;
+  border: 3px solid #afadc3;
+  padding: 10px;
+  margin: 0 30px;
+  display: block;
+}
+/* line 119, ../../web/src/sass/components/_cf53bis.scss */
+.slicecf53bis .slick-slider {
+  padding-bottom: 60px;
+  margin: 0;
+}
+/* line 124, ../../web/src/sass/components/_cf53bis.scss */
+.slicecf53bis .title-item {
+  text-align: center;
+}
+/* line 128, ../../web/src/sass/components/_cf53bis.scss */
+.slicecf53bis .slick-dots {
+  bottom: 34px;
+}
+
+/* line 2, ../../web/src/sass/components/_cc88bis.scss */
+.slice-cc88 {
+  padding: 16px;
+}
+/* line 6, ../../web/src/sass/components/_cc88bis.scss */
+.slice-cc88 .mentions {
+  font-family: "ubunturegular";
+  margin-top: 15px;
+  font-size: 10px;
+  line-height: 14px;
+  color: #646464;
+}
+/* line 14, ../../web/src/sass/components/_cc88bis.scss */
+.slice-cc88 label {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  width: 28px;
+  height: 28px;
+}
+/* line 21, ../../web/src/sass/components/_cc88bis.scss */
+.slice-cc88 label.radio input.radio, .slice-cc88 label input.checkbox {
+  display: none;
+}
+/* line 23, ../../web/src/sass/components/_cc88bis.scss */
+.slice-cc88 label:before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 6px;
+  width: 28px;
+  height: 28px;
+  border: 1px solid #333333;
+  position: relative;
+}
+/* line 35, ../../web/src/sass/components/_cc88bis.scss */
+.slice-cc88 label.selected:before {
+  border-width: 4px;
+  border-color: #f0780a;
+}
+/* line 40, ../../web/src/sass/components/_cc88bis.scss */
+.slice-cc88 label.selected:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 13px;
+  margin-left: -7px;
+  margin-top: -6px;
+}
+/* line 56, ../../web/src/sass/components/_cc88bis.scss */
+.slice-cc88 .accordion-fam {
+  position: relative;
+  padding-bottom: 50px;
+  margin-bottom: 15px;
+}
+/* line 60, ../../web/src/sass/components/_cc88bis.scss */
+.slice-cc88 .accordion-fam .plus-perso {
+  padding: 20px 15px;
+  background: #ebe9e9;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+/* line 68, ../../web/src/sass/components/_cc88bis.scss */
+.slice-cc88 .accordion-fam .plus-perso > span {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-family: "ubuntubold";
+  color: #2b2b2b;
+}
+/* line 75, ../../web/src/sass/components/_cc88bis.scss */
+.slice-cc88 .accordion-fam .plus-perso .chevron {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  margin-top: -6px;
+}
+/* line 98, ../../web/src/sass/components/_cc88bis.scss */
+.slice-cc88 .categories .category h2.title {
+  color: #c2b000;
+  font-family: "citroenbold";
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+/* line 106, ../../web/src/sass/components/_cc88bis.scss */
+.slice-cc88 .categories .category h3.subtitle {
+  color: #646464;
+  font-family: "ubuntubold";
+  font-size: 13px;
+  text-transform: capitalize;
+  margin-bottom: 15px;
+}
+/* line 113, ../../web/src/sass/components/_cc88bis.scss */
+.slice-cc88 .categories .category .family {
+  padding-bottom: 20px;
+}
+/* line 115, ../../web/src/sass/components/_cc88bis.scss */
+.slice-cc88 .categories .category .family .option.no-border-top {
+  border-top-width: 0;
+}
+/* line 118, ../../web/src/sass/components/_cc88bis.scss */
+.slice-cc88 .categories .category .family.align-horizontal {
+  display: table;
+  width: 100%;
+}
+/* line 123, ../../web/src/sass/components/_cc88bis.scss */
+.slice-cc88 .categories .category .family.align-horizontal .radio-group {
+  margin-bottom: 12px;
+}
+/* line 127, ../../web/src/sass/components/_cc88bis.scss */
+.slice-cc88 .categories .category .family.align-horizontal .options-row {
+  display: table-row;
+}
+/* line 130, ../../web/src/sass/components/_cc88bis.scss */
+.slice-cc88 .categories .category .family.align-horizontal .option {
+  display: table-cell;
+  width: 50%;
+  padding: 16px 14px;
+}
+/* line 134, ../../web/src/sass/components/_cc88bis.scss */
+.slice-cc88 .categories .category .family.align-horizontal .option:nth-of-type(2) {
+  border-left-width: 0;
+}
+/* line 136, ../../web/src/sass/components/_cc88bis.scss */
+.slice-cc88 .categories .category .family.align-horizontal .option:nth-of-type(2) .medias {
+  margin-left: 4px;
+}
+/* line 149, ../../web/src/sass/components/_cc88bis.scss */
+.slice-cc88 .categories .category .family.align-horizontal .option .infos .medias {
+  width: 100%;
+  left: 0;
+  right: 0;
+  padding: 0;
+}
+/* line 155, ../../web/src/sass/components/_cc88bis.scss */
+.slice-cc88 .categories .category .family.align-horizontal .option .infos .medias .media-image img {
+  width: 100%;
+}
+/* line 161, ../../web/src/sass/components/_cc88bis.scss */
+.slice-cc88 .categories .category .family.align-horizontal .option .infos .inclus {
+  color: #646464;
+  margin-bottom: 20px;
+}
+/* line 164, ../../web/src/sass/components/_cc88bis.scss */
+.slice-cc88 .categories .category .family.align-horizontal .option .infos .inclus .inclus-checked {
+  font-family: "ubuntubold";
+  font-size: 10px;
+  width: 100%;
+  display: inline-block;
+  padding-left: 21px;
+  position: relative;
+}
+/* line 172, ../../web/src/sass/components/_cc88bis.scss */
+.slice-cc88 .categories .category .family.align-horizontal .option .infos .inclus .inclus-checked:before {
+  content: '';
+  position: absolute;
+  margin-left: -18px;
+}
+/* line 180, ../../web/src/sass/components/_cc88bis.scss */
+.slice-cc88 .categories .category .family.align-horizontal .option .infos .inclus .inclus-pack {
+  font-family: "citroenbold";
+  font-size: 14px;
+  width: 100%;
+  display: inline-block;
+  padding-left: 21px;
+}
+/* line 188, ../../web/src/sass/components/_cc88bis.scss */
+.slice-cc88 .categories .category .family.align-horizontal .option .infos .inclus .include {
+  font-family: "citroenbold";
+  font-size: 14px;
+  width: 100%;
+  display: inline-block;
+}
+/* line 203, ../../web/src/sass/components/_cc88bis.scss */
+.slice-cc88 .categories .category .family.align-vertical .option {
+  padding-bottom: 0;
+}
+/* line 207, ../../web/src/sass/components/_cc88bis.scss */
+.slice-cc88 .categories .category .family.align-vertical .inclus {
+  color: #646464;
+  font-family: "ubuntubold";
+  color: #646464;
+  font-size: 13px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  padding: 0 5px 0 38px;
+}
+/* line 216, ../../web/src/sass/components/_cc88bis.scss */
+.slice-cc88 .categories .category .family.align-vertical .inclus .inclus-checked {
+  font-family: "ubuntubold";
+  font-size: 10px;
+  width: 100%;
+  display: inline-block;
+  padding-left: 21px;
+  position: relative;
+}
+/* line 224, ../../web/src/sass/components/_cc88bis.scss */
+.slice-cc88 .categories .category .family.align-vertical .inclus .inclus-checked:before {
+  content: '';
+  position: absolute;
+  margin-left: -18px;
+}
+/* line 232, ../../web/src/sass/components/_cc88bis.scss */
+.slice-cc88 .categories .category .family.align-vertical .inclus .inclus-pack {
+  font-family: "citroenbold";
+  font-size: 14px;
+  width: 100%;
+  display: inline-block;
+  padding-left: 21px;
+}
+/* line 240, ../../web/src/sass/components/_cc88bis.scss */
+.slice-cc88 .categories .category .family.align-vertical .inclus .include {
+  font-family: "ubuntubold";
+  font-size: 14px;
+  width: 100%;
+  display: inline-block;
+}
+/* line 249, ../../web/src/sass/components/_cc88bis.scss */
+.slice-cc88 .categories .category .family.align-vertical .finitions .accordion {
+  display: block;
+  color: black;
+}
+/* line 256, ../../web/src/sass/components/_cc88bis.scss */
+.slice-cc88 .categories .category .family.align-vertical .finitions .zoom {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  right: 0;
+  margin: 0 -12px 0 0;
+}
+/* line 264, ../../web/src/sass/components/_cc88bis.scss */
+.slice-cc88 .categories .category .family.align-vertical .finitions .slickslideshow {
+  padding-bottom: 30px;
+}
+/* line 268, ../../web/src/sass/components/_cc88bis.scss */
+.slice-cc88 .categories .category .family.align-vertical .finitions .tit-toggle {
+  cursor: pointer;
+}
+/* line 269, ../../web/src/sass/components/_cc88bis.scss */
+.slice-cc88 .categories .category .family.align-vertical .finitions .chevron {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  margin-top: -3px;
+}
+/* line 283, ../../web/src/sass/components/_cc88bis.scss */
+.slice-cc88 .categories .category .family.align-vertical .finitions .accordion-cont {
+  padding: 0 15px;
+}
+/* line 285, ../../web/src/sass/components/_cc88bis.scss */
+.slice-cc88 .categories .category .family.align-vertical .finitions .accordion-cont .slide-caption {
+  font-family: "ubuntubold";
+  font-size: 12px;
+  margin-top: 15px;
+  text-align: center;
+  color: #646464;
+}
+/* line 292, ../../web/src/sass/components/_cc88bis.scss */
+.slice-cc88 .categories .category .family.align-vertical .finitions .accordion-cont .slick-dots {
+  margin-top: 10px;
+  bottom: 15px;
+}
+/* line 296, ../../web/src/sass/components/_cc88bis.scss */
+.slice-cc88 .categories .category .family.align-vertical .finitions .accordion-cont .slick-prev, .slice-cc88 .categories .category .family.align-vertical .finitions .accordion-cont .slick-next {
+  margin-top: -50px;
+  width: 25px;
+}
+/* line 306, ../../web/src/sass/components/_cc88bis.scss */
+.slice-cc88 .categories .category .family.align-vertical .tit-toggle:after {
+  margin: -17px 0 0;
+}
+/* line 310, ../../web/src/sass/components/_cc88bis.scss */
+.slice-cc88 .categories .category .family.align-vertical .finInfos {
+  position: relative;
+  padding: 22px 15px 0 15px;
+  font-size: 0;
+}
+/* line 317, ../../web/src/sass/components/_cc88bis.scss */
+.slice-cc88 .categories .category .family.align-vertical .finInfos .infos {
+  width: 70%;
+  display: inline-block;
+}
+/* line 321, ../../web/src/sass/components/_cc88bis.scss */
+.slice-cc88 .categories .category .family.align-vertical .finInfos .infos figure {
+  display: inline-block;
+  width: 100%;
+}
+/* line 325, ../../web/src/sass/components/_cc88bis.scss */
+.slice-cc88 .categories .category .family.align-vertical .finInfos .infos figure img {
+  width: 30%;
+  vertical-align: middle;
+}
+/* line 330, ../../web/src/sass/components/_cc88bis.scss */
+.slice-cc88 .categories .category .family.align-vertical .finInfos .infos figure figcaption {
+  width: 70%;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 0 0 15px;
+}
+/* line 335, ../../web/src/sass/components/_cc88bis.scss */
+.slice-cc88 .categories .category .family.align-vertical .finInfos .infos figure figcaption.no-vignette {
+  padding: 0;
+}
+/* line 338, ../../web/src/sass/components/_cc88bis.scss */
+.slice-cc88 .categories .category .family.align-vertical .finInfos .infos figure figcaption .subtitle {
+  color: #333333;
+  font-family: "ubuntubold";
+  cursor: pointer;
+  margin: 0;
+  font-size: 16px;
+}
+/* line 357, ../../web/src/sass/components/_cc88bis.scss */
+.slice-cc88 .categories .category .family .option {
+  border: 4px solid #dcdcdc;
+  min-width: 44px;
+  position: relative;
+}
+/* line 367, ../../web/src/sass/components/_cc88bis.scss */
+.slice-cc88 .categories .category .family .option .infos h4.option-title {
+  font-size: 16.5px;
+  font-family: "citroenbold";
+  margin-bottom: 16px;
+}
+
+/* line 2, ../../web/src/sass/components/_cf41bis.scss */
+.slicecf41bis {
+  padding: 0 0 25px 0;
+}
+/* line 5, ../../web/src/sass/components/_cf41bis.scss */
+.slicecf41bis > div {
+  padding-left: 14px;
+  padding-right: 14px;
+}
+/* line 10, ../../web/src/sass/components/_cf41bis.scss */
+.slicecf41bis .price,
+.slicecf41bis .namecontrast {
+  padding: 0 5px 0 60px;
+  font-family: "ubuntubold";
+  color: #646464;
+  font-size: 13px;
+  margin-top: 5px;
+}
+/* line 19, ../../web/src/sass/components/_cf41bis.scss */
+.slicecf41bis .price {
+  min-height: 18px;
+}
+/* line 23, ../../web/src/sass/components/_cf41bis.scss */
+.slicecf41bis .price span.price-prefix, .slicecf41bis .price span.include {
+  display: inline-block;
+}
+/* line 28, ../../web/src/sass/components/_cf41bis.scss */
+.slicecf41bis .namecontrast {
+  color: #333333;
+}
+/* line 37, ../../web/src/sass/components/_cf41bis.scss */
+.slicecf41bis .chevron {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  margin-top: -3px;
+}
+/* line 46, ../../web/src/sass/components/_cf41bis.scss */
+.slicecf41bis .choice {
+  margin-bottom: 7px;
+  padding: 0 5px 0 60px;
+  font-family: "ubunturegular";
+  color: #333333;
+  font-size: 12px;
+}
+/* line 54, ../../web/src/sass/components/_cf41bis.scss */
+.slicecf41bis .palette {
+  position: inherit;
+  margin-bottom: 14px;
+  padding: 0 0 0 60px;
+  font-size: 0;
+}
+/* line 60, ../../web/src/sass/components/_cf41bis.scss */
+.slicecf41bis .palette li {
+  display: inline-block;
+  width: 32px;
+  font-size: 0;
+  margin: 0 5px 4px 0;
+  height: 32px;
+}
+/* line 68, ../../web/src/sass/components/_cf41bis.scss */
+.slicecf41bis .palette li figure figcaption {
+  font-size: 0;
+}
+/* line 71, ../../web/src/sass/components/_cf41bis.scss */
+.slicecf41bis .palette li img {
+  width: 100%;
+}
+/* line 74, ../../web/src/sass/components/_cf41bis.scss */
+.slicecf41bis .palette li img.on {
+  border: 2px solid #dcdcdc;
+  padding: 2px;
+}
+/* line 82, ../../web/src/sass/components/_cf41bis.scss */
+.slicecf41bis .mentions {
+  font-family: "ubunturegular";
+  margin-top: 15px;
+  font-size: 10px;
+  line-height: 14px;
+  color: #646464;
+}
+/* line 90, ../../web/src/sass/components/_cf41bis.scss */
+.slicecf41bis .title {
+  font-family: "ubuntubold";
+  margin: 25px 0 10px 0;
+  color: #646464;
+  font-size: 13px;
+}
+/* line 97, ../../web/src/sass/components/_cf41bis.scss */
+.slicecf41bis ul {
+  list-style: none;
+  padding: 0;
+}
+/* line 103, ../../web/src/sass/components/_cf41bis.scss */
+.slicecf41bis .tit-toggle:after {
+  margin: -17px 0 0;
+}
+/* line 106, ../../web/src/sass/components/_cf41bis.scss */
+.slicecf41bis .finInfos {
+  position: relative;
+  padding: 22px 15px 18px 15px;
+  font-size: 0;
+}
+/* line 111, ../../web/src/sass/components/_cf41bis.scss */
+.slicecf41bis .finInfos .infos {
+  width: 70%;
+  display: inline-block;
+}
+/* line 115, ../../web/src/sass/components/_cf41bis.scss */
+.slicecf41bis .finInfos .infos figure {
+  display: inline-block;
+  width: 100%;
+}
+/* line 119, ../../web/src/sass/components/_cf41bis.scss */
+.slicecf41bis .finInfos .infos figure img {
+  width: 30%;
+  vertical-align: middle;
+}
+/* line 124, ../../web/src/sass/components/_cf41bis.scss */
+.slicecf41bis .finInfos .infos figure figcaption {
+  width: 70%;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 0 0 15px;
+}
+/* line 130, ../../web/src/sass/components/_cf41bis.scss */
+.slicecf41bis .finInfos .infos figure figcaption .subtitle {
+  color: #333333;
+  font-family: "ubuntubold";
+  cursor: pointer;
+  margin: 0;
+  font-weight: bold;
+  font-size: 16px;
+}
+/* line 144, ../../web/src/sass/components/_cf41bis.scss */
+.slicecf41bis .finitions .accordion {
+  display: block;
+  color: black;
+  border: 4px solid #dcdcdc;
+  padding-bottom: 15px;
+}
+/* line 152, ../../web/src/sass/components/_cf41bis.scss */
+.slicecf41bis .finitions .accordion.selected img.on {
+  border: 2px solid #f0780a;
+}
+/* line 157, ../../web/src/sass/components/_cf41bis.scss */
+.slicecf41bis .finitions .zoom {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  right: 0;
+  margin: 0 -12px 0 0;
+}
+/* line 165, ../../web/src/sass/components/_cf41bis.scss */
+.slicecf41bis .finitions .tit-toggle {
+  cursor: pointer;
+}
+/* line 167, ../../web/src/sass/components/_cf41bis.scss */
+.slicecf41bis .finitions .accordion-cont {
+  padding: 0 15px;
+}
+
+/* line 172, ../../web/src/sass/components/_cf41bis.scss */
+.slicecf41bis .slick-dots {
+  height: 0;
+}
+
+/* line 3, ../../web/src/sass/components/_cf42bis.scss */
+.slicecf42bis .price {
+  padding: 0 5px 0 40px;
+}
+/* line 7, ../../web/src/sass/components/_cf42bis.scss */
+.slicecf42bis .finitions .accordion {
+  padding-bottom: 7px;
+}
+/* line 11, ../../web/src/sass/components/_cf42bis.scss */
+.slicecf42bis .finInfos {
+  padding: 22px 15px 15px;
+}
+/* line 14, ../../web/src/sass/components/_cf42bis.scss */
+.slicecf42bis .accordion-cont {
+  padding: 0 15px;
+}
+/* line 16, ../../web/src/sass/components/_cf42bis.scss */
+.slicecf42bis .accordion-cont .slick-next, .slicecf42bis .accordion-cont .slick-prev {
+  margin-top: -50px;
+}
+/* line 19, ../../web/src/sass/components/_cf42bis.scss */
+.slicecf42bis .accordion-cont .title {
+  font-family: "ubunturegular";
+  color: #646464;
+  font-size: 12px;
+  text-align: center;
+  margin: 10px 0;
+}
+/* line 27, ../../web/src/sass/components/_cf42bis.scss */
+.slicecf42bis .slick-dots {
+  height: inherit;
+}
+
+/* line 2, ../../web/src/sass/components/_cf9bis.scss */
+.slicecf9bis {
+  padding: 0 0 25px 0;
+}
+/* line 5, ../../web/src/sass/components/_cf9bis.scss */
+.slicecf9bis > div {
+  padding-left: 14px;
+  padding-right: 14px;
+}
+/* line 10, ../../web/src/sass/components/_cf9bis.scss */
+.slicecf9bis .price {
+  padding: 10px 5px 0 40px;
+  font-family: "ubuntubold";
+  color: #646464;
+  font-size: 13px;
+}
+/* line 17, ../../web/src/sass/components/_cf9bis.scss */
+.slicecf9bis .price span.price-prefix {
+  display: inline-block !important;
+  font-weight: normal !important;
+  font-size: 10px;
+}
+/* line 34, ../../web/src/sass/components/_cf9bis.scss */
+.slicecf9bis .mentions {
+  font-family: "ubunturegular";
+  margin-top: 15px;
+  font-size: 10px;
+  line-height: 14px;
+  color: #646464;
+}
+/* line 42, ../../web/src/sass/components/_cf9bis.scss */
+.slicecf9bis .finInfos {
+  position: relative;
+  padding: 15px 0 0 15px;
+  font-size: 0;
+  vertical-align: middle;
+}
+/* line 48, ../../web/src/sass/components/_cf9bis.scss */
+.slicecf9bis .finInfos .infos {
+  width: 80%;
+  display: inline-block;
+  position: relative;
+}
+/* line 52, ../../web/src/sass/components/_cf9bis.scss */
+.slicecf9bis .finInfos .infos figure {
+  display: inline-block;
+  width: 70%;
+}
+/* line 56, ../../web/src/sass/components/_cf9bis.scss */
+.slicecf9bis .finInfos .infos figure img {
+  width: 30%;
+  vertical-align: middle;
+}
+/* line 61, ../../web/src/sass/components/_cf9bis.scss */
+.slicecf9bis .finInfos .infos figure figcaption {
+  width: 70%;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 0 0 15px;
+}
+/* line 67, ../../web/src/sass/components/_cf9bis.scss */
+.slicecf9bis .finInfos .infos figure figcaption .subtitle {
+  color: #333333;
+  font-family: "ubuntubold";
+  cursor: pointer;
+  margin: 0;
+  font-weight: bold;
+  font-size: 16px;
+}
+/* line 78, ../../web/src/sass/components/_cf9bis.scss */
+.slicecf9bis .finInfos .chevron {
+  position: absolute;
+  display: inline-block;
+  right: 25px;
+  top: 50%;
+  margin-top: 4px;
+}
+/* line 90, ../../web/src/sass/components/_cf9bis.scss */
+.slicecf9bis .finitions .accordion {
+  display: block;
+  color: black;
+  border: 4px solid #dcdcdc;
+  padding-bottom: 15px;
+}
+/* line 98, ../../web/src/sass/components/_cf9bis.scss */
+.slicecf9bis .finitions .accordion.selected img.on {
+  border: 2px solid #f0780a;
+}
+/* line 103, ../../web/src/sass/components/_cf9bis.scss */
+.slicecf9bis .finitions .zoom {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  right: 0;
+  margin: 0 -12px 0 0;
+}
+/* line 111, ../../web/src/sass/components/_cf9bis.scss */
+.slicecf9bis .finitions .accordion-cont {
+  padding: 0 15px;
+}
+
+/* line 2, ../../web/src/sass/components/_n14bis.scss */
+.slice-n14bis > div {
+  margin-left: 14px;
+  margin-right: 14px;
+}
+/* line 6, ../../web/src/sass/components/_n14bis.scss */
+.slice-n14bis .button {
+  visibility: hidden;
+}
+/* line 8, ../../web/src/sass/components/_n14bis.scss */
+.slice-n14bis .button.visible {
+  visibility: inherit;
+  -webkit-transition: all 400ms cubic-bezier(0.26, 1.06, 0.89, 0.9);
+  transition: all 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin-left: 0;
+}
+/* line 14, ../../web/src/sass/components/_n14bis.scss */
+.slice-n14bis .button.visible span:last-child {
+  display: none;
+}
+/* line 21, ../../web/src/sass/components/_n14bis.scss */
+.slice-n14bis .button.end span:first-child {
+  display: none;
+}
+/* line 24, ../../web/src/sass/components/_n14bis.scss */
+.slice-n14bis .button.end span:last-child {
+  display: block;
+}
+/* line 30, ../../web/src/sass/components/_n14bis.scss */
+.slice-n14bis .box-conf {
+  background-color: #85cddb;
+  color: #fff;
+  padding: 13px 50px;
+  font: 16px/22px "citroenbold";
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 10px;
+  position: relative;
+}
+/* line 39, ../../web/src/sass/components/_n14bis.scss */
+.slice-n14bis .box-conf.fixed {
+  top: 10px;
+}
+/* line 42, ../../web/src/sass/components/_n14bis.scss */
+.slice-n14bis .box-conf:before {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 15px;
+  margin-top: -10px;
+}
+/* line 52, ../../web/src/sass/components/_n14bis.scss */
+.slice-n14bis > nav {
+  font: 20px "ubuntubold";
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+  background-color: white;
+  margin: 0;
+  padding: 15px 0 10px;
+  z-index: 2;
+}
+/* line 61, ../../web/src/sass/components/_n14bis.scss */
+.slice-n14bis > nav b {
+  color: #85cddb;
+}
+/* line 63, ../../web/src/sass/components/_n14bis.scss */
+.slice-n14bis > nav b i {
+  font-style: normal;
+}
+/* line 67, ../../web/src/sass/components/_n14bis.scss */
+.slice-n14bis > nav .title {
+  display: inline-block;
+}
+/* line 70, ../../web/src/sass/components/_n14bis.scss */
+.slice-n14bis > nav span {
+  display: block;
+  position: relative;
+  margin: 10px 0 0;
+  width: 100%;
+  height: 4px;
+  background-color: #daf0f4;
+}
+/* line 77, ../../web/src/sass/components/_n14bis.scss */
+.slice-n14bis > nav span:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  -webkit-transition: all 400ms cubic-bezier(0.26, 1.06, 0.89, 0.9);
+  transition: all 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: #85cddb;
+}
+/* line 89, ../../web/src/sass/components/_n14bis.scss */
+.slice-n14bis .model-title h3 {
+  font: 26px "citroenbold";
+  display: block;
+  text-align: center;
+  margin: 15px 0;
+  padding: 0;
+  color: #333333;
+}
+/* line 97, ../../web/src/sass/components/_n14bis.scss */
+.slice-n14bis .price {
+  color: #646464;
+  padding: 20px;
+  font: 100 12px/12px arial;
+  text-transform: uppercase;
+  border: 2px solid #f0780a;
+  position: relative;
+}
+/* line 104, ../../web/src/sass/components/_n14bis.scss */
+.slice-n14bis .price.fixed {
+  top: 65px;
+  margin: 0 auto;
+  width: calc(100% - 28px);
+}
+/* line 109, ../../web/src/sass/components/_n14bis.scss */
+.slice-n14bis .price .price-monthly,
+.slice-n14bis .price .price-currency,
+.slice-n14bis .price .price-outright,
+.slice-n14bis .price .price-suffix,
+.slice-n14bis .price .per-monthly {
+  font-family: "citroenbold";
+  font-size: 19px;
+}
+/* line 117, ../../web/src/sass/components/_n14bis.scss */
+.slice-n14bis .price .per-monthly {
+  text-transform: capitalize;
+}
+/* line 120, ../../web/src/sass/components/_n14bis.scss */
+.slice-n14bis .price .popinMentions {
+  display: none;
+}
+/* line 123, ../../web/src/sass/components/_n14bis.scss */
+.slice-n14bis .price > a {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  margin-top: -13px;
+}
+/* line 128, ../../web/src/sass/components/_n14bis.scss */
+.slice-n14bis .price > a:after {
+  content: "";
+  display: inline-block;
+}
+/* line 134, ../../web/src/sass/components/_n14bis.scss */
+.slice-n14bis .price > a .popin--mentions {
+  display: none;
+}
+/* line 138, ../../web/src/sass/components/_n14bis.scss */
+.slice-n14bis .price b {
+  font-size: 20px;
+  font-weight: 600;
+}
+/* line 142, ../../web/src/sass/components/_n14bis.scss */
+.slice-n14bis .price .mentionsMonthly {
+  text-transform: capitalize;
+  margin: 10px 0 0;
+  width: 90%;
+}
+/* line 148, ../../web/src/sass/components/_n14bis.scss */
+.slice-n14bis .slick-slider {
+  margin-bottom: 35px;
+}
+/* line 153, ../../web/src/sass/components/_n14bis.scss */
+.slice-n14bis .visual .slick-slide img {
+  width: 100%;
+}
+/* line 158, ../../web/src/sass/components/_n14bis.scss */
+.slice-n14bis .choice-title h3 {
+  font: 23px/23px "citroenbold";
+  color: #c2b000;
+  padding: 30px 0 0;
+}
+
+/* line 164, ../../web/src/sass/components/_n14bis.scss */
+.body {
+  overflow: hidden;
+}
+
+/* line 168, ../../web/src/sass/components/_n14bis.scss */
+.body.recapopen .mainContainer {
+  margin-left: 85%;
+}
+/* line 171, ../../web/src/sass/components/_n14bis.scss */
+.body.recapopen .recap {
+  margin: 0;
+}
+
+/* line 175, ../../web/src/sass/components/_n14bis.scss */
+.mainContainer {
+  padding-right: 70%;
+  width: 170%;
+  -webkit-transition: all 400ms cubic-bezier(0.26, 1.06, 0.89, 0.9);
+  transition: all 400ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* line 181, ../../web/src/sass/components/_n14bis.scss */
+.recapopen .mainContainer > .closeRecap {
+  width: 15%;
+  height: 100%;
+  position: absolute;
+  left: 85%;
+  top: 0;
+  -webkit-overflow-scrolling: none;
+  z-index: 100000;
+}
+
+/* line 190, ../../web/src/sass/components/_n14bis.scss */
+.recap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  overflow-x: hidden;
+  display: inline-block;
+  margin: 0 0 0 -85%;
+  padding: 0;
+  width: 85%;
+  height: 100%;
+  background: #f4f4f3;
+  -webkit-transition: all 400ms cubic-bezier(0.26, 1.06, 0.89, 0.9);
+  transition: all 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-overflow-scrolling: touch;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -ms-perspective: 1000;
+  -o-perspective: 1000;
+  perspective: 1000;
+  font-size: 0;
+}
+/* line 208, ../../web/src/sass/components/_n14bis.scss */
+.recap .iscrollScrollbar {
+  height: 100%;
+}
+/* line 211, ../../web/src/sass/components/_n14bis.scss */
+.recap .recap-content {
+  padding: 30px 0 0;
+  position: relative;
+  width: 100%;
+}
+/* line 215, ../../web/src/sass/components/_n14bis.scss */
+.recap .recap-content h3 {
+  font: 18px 'ubuntubold';
+  text-transform: uppercase;
+  margin: 15px 0;
+  padding: 0 32px;
+  color: #000;
+}
+/* line 222, ../../web/src/sass/components/_n14bis.scss */
+.recap .recap-content > ul {
+  padding: 0 32px;
+}
+/* line 224, ../../web/src/sass/components/_n14bis.scss */
+.recap .recap-content > ul li {
+  padding: 10px 0 6px;
+  border-bottom: 2px solid #aea79f;
+  font: 12px 'ubunturegular';
+  text-transform: uppercase;
+  position: relative;
+}
+/* line 230, ../../web/src/sass/components/_n14bis.scss */
+.recap .recap-content > ul li:last-child {
+  border-bottom: 5px solid #aea79f;
+}
+/* line 233, ../../web/src/sass/components/_n14bis.scss */
+.recap .recap-content > ul li > span {
+  margin-bottom: 5px;
+  display: inline-block;
+}
+/* line 237, ../../web/src/sass/components/_n14bis.scss */
+.recap .recap-content > ul li.active {
+  padding: 10px 0 8px;
+}
+/* line 240, ../../web/src/sass/components/_n14bis.scss */
+.recap .recap-content > ul li strong {
+  display: block;
+  font: 14px 'ubuntubold';
+  text-transform: none;
+  max-width: 80%;
+}
+/* line 246, ../../web/src/sass/components/_n14bis.scss */
+.recap .recap-content > ul li:first-child {
+  border-top: 2px solid #aea79f;
+}
+/* line 250, ../../web/src/sass/components/_n14bis.scss */
+.recap .recap-content > ul li.active .md-trigger {
+  display: block;
+}
+/* line 254, ../../web/src/sass/components/_n14bis.scss */
+.recap .recap-content > ul li .md-trigger {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  margin-top: -25px;
+  text-align: center;
+}
+/* line 264, ../../web/src/sass/components/_n14bis.scss */
+.recap .recap-content > ul li .ico-modif {
+  font-size: 9px;
+  text-indent: -12px;
+  line-height: 49px;
+  text-decoration: underline;
+  margin-top: 8px;
+  text-transform: capitalize;
+}
+/* line 275, ../../web/src/sass/components/_n14bis.scss */
+.recap .recap-content .cta-list {
+  padding: 0 22px 22px;
+}
+/* line 278, ../../web/src/sass/components/_n14bis.scss */
+.recap .recap-content .filter {
+  padding: 40px 32px 34px;
+  overflow: hidden;
+}
+/* line 281, ../../web/src/sass/components/_n14bis.scss */
+.recap .recap-content .filter > p {
+  font: 10px 'ubunturegular';
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+/* line 286, ../../web/src/sass/components/_n14bis.scss */
+.recap .recap-content .filter label {
+  margin-right: 7px;
+}
+/* line 289, ../../web/src/sass/components/_n14bis.scss */
+.recap .recap-content .filter .containsRadioButton {
+  display: inline-block;
+  width: calc(50% - 2px);
+}
+/* line 292, ../../web/src/sass/components/_n14bis.scss */
+.recap .recap-content .filter .containsRadioButton span {
+  font-size: 14px;
+  font: 14px 'ubuntubold';
+  margin: 0;
+  vertical-align: middle;
+}
+/* line 301, ../../web/src/sass/components/_n14bis.scss */
+.recap button.next {
+  width: calc(100% - 44px);
+  margin: 0 auto;
+  display: block;
+}
+
+/* line 307, ../../web/src/sass/components/_n14bis.scss */
+.popinMentions .iscrollScrollbar {
+  height: 100%;
+}
+
+/* line 310, ../../web/src/sass/components/_n14bis.scss */
+.disableMainContainer {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: red;
+  top: 0;
+}
+
+/* line 318, ../../web/src/sass/components/_n14bis.scss */
+[data-pricetype='outright'] .price-monthly,
+[data-pricetype='outright'] .per-monthly,
+[data-pricetype='outright'] .mentionsMonthly {
+  display: none;
+}
+/* line 323, ../../web/src/sass/components/_n14bis.scss */
+[data-pricetype='outright'] .price-outright {
+  display: inline-block;
+}
+
+/* line 328, ../../web/src/sass/components/_n14bis.scss */
+[data-pricetype='monthly'] .price-outright {
+  display: none;
+}
+/* line 331, ../../web/src/sass/components/_n14bis.scss */
+[data-pricetype='monthly'] .price-monthly,
+[data-pricetype='monthly'] .per-monthly {
+  display: inline-block;
+}
+
+/* line 340, ../../web/src/sass/components/_n14bis.scss */
+[data-step='0'] .recap button.next,
+[data-step='1'] .recap button.next,
+[data-step='2'] .recap button.next {
+  display: none;
+}
+
+/* line 350, ../../web/src/sass/components/_n14bis.scss */
+[data-step='0'] .slice-n14bis nav span:before {
+  width: 16.66667%;
+}
+
+/* line 350, ../../web/src/sass/components/_n14bis.scss */
+[data-step='1'] .slice-n14bis nav span:before {
+  width: 33.33333%;
+}
+
+/* line 350, ../../web/src/sass/components/_n14bis.scss */
+[data-step='2'] .slice-n14bis nav span:before {
+  width: 50%;
+}
+
+/* line 350, ../../web/src/sass/components/_n14bis.scss */
+[data-step='3'] .slice-n14bis nav span:before {
+  width: 66.66667%;
+}
+
+/* line 350, ../../web/src/sass/components/_n14bis.scss */
+[data-step='4'] .slice-n14bis nav span:before {
+  width: 83.33333%;
+}
+
+/* line 350, ../../web/src/sass/components/_n14bis.scss */
+[data-step='5'] .slice-n14bis nav span:before {
+  width: 100%;
+}
+
+/* line 350, ../../web/src/sass/components/_n14bis.scss */
+[data-step='6'] .slice-n14bis nav span:before {
+  width: 116.66667%;
+}
+
+/* line 361, ../../web/src/sass/components/_n14bis.scss */
+.body.recapopen .slice-n14bis .button.visible {
+  margin-left: 85%;
+}
+
+/* line 3, ../../web/src/sass/components/_cf17bis.scss */
+.slice-cf17bis {
+  padding: 0 14px 25px;
+}
+/* line 5, ../../web/src/sass/components/_cf17bis.scss */
+.slice-cf17bis h3 {
+  color: #f0780a;
+  font: 20px/28px "citroenbold", Arial;
+  text-transform: uppercase;
+  margin-top: 51px;
+}
+/* line 11, ../../web/src/sass/components/_cf17bis.scss */
+.slice-cf17bis p {
+  color: #646464;
+  font-family: "ubunturegular";
+  font-size: 14px;
+  line-height: 20px;
+  padding: 0;
+  text-transform: none;
+}
+/* line 18, ../../web/src/sass/components/_cf17bis.scss */
+.slice-cf17bis p span {
+  display: inline-block;
+  margin-bottom: 26px;
+}
+/* line 22, ../../web/src/sass/components/_cf17bis.scss */
+.slice-cf17bis p strong {
+  display: block;
+  margin: 14px 0 10px;
+  font-family: "ubuntubold";
+}
+/* line 27, ../../web/src/sass/components/_cf17bis.scss */
+.slice-cf17bis p.infos {
+  font: 14px/17px "citroenbold";
+  text-transform: uppercase;
+}
+/* line 30, ../../web/src/sass/components/_cf17bis.scss */
+.slice-cf17bis p.infos strong {
+  margin: 0 0 11px;
+}
+/* line 35, ../../web/src/sass/components/_cf17bis.scss */
+.slice-cf17bis a {
+  display: block;
+  text-transform: uppercase;
+  font: 14px/14px "citroenbold", Arial;
+  color: #646464;
+  padding: 20px;
+  border: 4px solid #8bd6e9;
+  margin-top: 22px;
+}
+/* line 43, ../../web/src/sass/components/_cf17bis.scss */
+.slice-cf17bis a span {
+  width: 100%;
+  display: block;
+  text-align: center;
+  position: relative;
+}
+/* line 48, ../../web/src/sass/components/_cf17bis.scss */
+.slice-cf17bis a span:before {
+  content: '';
+  left: -9px;
+  top: 2px;
+  display: inline-block;
+  position: absolute;
+}
+/* line 60, ../../web/src/sass/components/_cf17bis.scss */
+.slice-cf17bis .box {
+  border: 4px solid #dcdcdc;
+  text-align: center;
+  margin-bottom: 6px;
+}
+/* line 64, ../../web/src/sass/components/_cf17bis.scss */
+.slice-cf17bis .box img {
+  max-width: 100%;
+}
+/* line 69, ../../web/src/sass/components/_cf17bis.scss */
+.slice-cf17bis .iframe {
+  height: 335px;
+  width: 100%;
+  background-color: #dcdcdc;
+}
+/* line 75, ../../web/src/sass/components/_cf17bis.scss */
+.slice-cf17bis .finInfos {
+  margin-bottom: 16px;
+}
+/* line 77, ../../web/src/sass/components/_cf17bis.scss */
+.slice-cf17bis .finInfos label {
+  margin-right: 8px;
+}
+/* line 80, ../../web/src/sass/components/_cf17bis.scss */
+.slice-cf17bis .finInfos .infos {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* line 3, ../../web/src/sass/components/_cf98bis.scss */
+.slice-cf98bis .slice-body {
+  padding: 14px 14px 0;
+  color: #646464;
+}
+/* line 7, ../../web/src/sass/components/_cf98bis.scss */
+.slice-cf98bis h2 {
+  font: 24px/1em "citroenbold";
+  color: #f0780a;
+  margin-bottom: 17px;
+}
+/* line 11, ../../web/src/sass/components/_cf98bis.scss */
+.slice-cf98bis h2.heading-yellow {
+  color: #c2b000;
+}
+/* line 15, ../../web/src/sass/components/_cf98bis.scss */
+.slice-cf98bis h4 {
+  font: 13px "ubuntubold";
+  margin-bottom: 12px;
+}
+/* line 19, ../../web/src/sass/components/_cf98bis.scss */
+.slice-cf98bis .frame, .slice-cf98bis .accordion {
+  box-sizing: border-box;
+  border: 4px solid #dcdcdc;
+  padding: 0 12px 12px;
+  margin-bottom: 30px;
+}
+/* line 24, ../../web/src/sass/components/_cf98bis.scss */
+.slice-cf98bis .frame__row {
+  border-bottom: 1px solid #dcdcdc;
+  padding: 11px 0;
+}
+/* line 27, ../../web/src/sass/components/_cf98bis.scss */
+.slice-cf98bis .frame__row:last-of-type {
+  border: 0;
+}
+/* line 30, ../../web/src/sass/components/_cf98bis.scss */
+.slice-cf98bis .frame__row .clearfix {
+  margin-top: 5px;
+}
+/* line 32, ../../web/src/sass/components/_cf98bis.scss */
+.slice-cf98bis .frame__row .clearfix:first-of-type {
+  margin-top: 0;
+}
+/* line 37, ../../web/src/sass/components/_cf98bis.scss */
+.slice-cf98bis .frame .additional, .slice-cf98bis .accordion .additional {
+  font-size: 10px;
+  line-height: 14px;
+  color: black;
+  text-align: center;
+}
+/* line 43, ../../web/src/sass/components/_cf98bis.scss */
+.slice-cf98bis .frame > *:last-child, .slice-cf98bis .accordion > *:last-child {
+  padding-bottom: 0;
+}
+/* line 47, ../../web/src/sass/components/_cf98bis.scss */
+.slice-cf98bis .accordion {
+  padding-bottom: 0;
+}
+/* line 50, ../../web/src/sass/components/_cf98bis.scss */
+.slice-cf98bis .accordion h4 {
+  line-height: 20px;
+  position: relative;
+  padding: 20px 67px 20px 0;
+  margin: 0;
+}
+/* line 56, ../../web/src/sass/components/_cf98bis.scss */
+.slice-cf98bis .accordion .frame__row:first-child {
+  padding-top: 0;
+}
+/* line 66, ../../web/src/sass/components/_cf98bis.scss */
+.slice-cf98bis .chevron {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  margin-top: -3px;
+}
+/* line 74, ../../web/src/sass/components/_cf98bis.scss */
+.slice-cf98bis .label {
+  display: block;
+  font-size: 10px;
+  text-transform: uppercase;
+  margin-bottom: 3px;
+}
+/* line 79, ../../web/src/sass/components/_cf98bis.scss */
+.slice-cf98bis .label span {
+  text-transform: none;
+}
+/* line 82, ../../web/src/sass/components/_cf98bis.scss */
+.slice-cf98bis .label .bigger {
+  font-size: 12px;
+}
+/* line 85, ../../web/src/sass/components/_cf98bis.scss */
+.slice-cf98bis .label.break {
+  margin-top: 16px;
+}
+/* line 89, ../../web/src/sass/components/_cf98bis.scss */
+.slice-cf98bis .title {
+  display: block;
+  font-size: 14px;
+  line-height: 17px;
+  color: #333333;
+  width: 61%;
+  float: left;
+}
+/* line 96, ../../web/src/sass/components/_cf98bis.scss */
+.slice-cf98bis .title small {
+  font: 10px/14px "ubunturegular";
+}
+/* line 100, ../../web/src/sass/components/_cf98bis.scss */
+.slice-cf98bis .price {
+  font: 12px "ubuntubold";
+  color: #646464;
+  float: right;
+  text-align: right;
+}
+/* line 106, ../../web/src/sass/components/_cf98bis.scss */
+.slice-cf98bis .summary {
+  display: block;
+  background: #ebeaf0;
+  padding: 0 16px;
+  font-size: 13px;
+  line-height: 58px;
+  height: 58px;
+}
+/* line 115, ../../web/src/sass/components/_cf98bis.scss */
+.slice-cf98bis .financement-heading {
+  background: #ebeaf0;
+  padding: 20px 16px;
+  font-size: 10px;
+  margin-top: 15px;
+}
+/* line 120, ../../web/src/sass/components/_cf98bis.scss */
+.slice-cf98bis .financement-heading strong {
+  display: block;
+  font-size: 13px;
+}
+/* line 126, ../../web/src/sass/components/_cf98bis.scss */
+.slice-cf98bis .button--blue {
+  border-color: #85cddb;
+  background: transparent;
+  color: #85cddb;
+  line-height: 37px;
+  color: #646464;
+  text-align: left;
+  font-size: 12px;
+  position: relative;
+  padding: 0 12px;
+  margin: 0 0 10px;
+}
+/* line 138, ../../web/src/sass/components/_cf98bis.scss */
+.slice-cf98bis .button--fb {
+  border: 1px solid #646464;
+  background: transparent;
+  color: #646464;
+}
+/* line 143, ../../web/src/sass/components/_cf98bis.scss */
+.slice-cf98bis .button .arrow {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+}
+/* line 147, ../../web/src/sass/components/_cf98bis.scss */
+.slice-cf98bis .button .arrow--blue {
+  margin-top: -6px;
+}
+/* line 152, ../../web/src/sass/components/_cf98bis.scss */
+.slice-cf98bis .button .arrow--big-blue {
+  margin-top: -9px;
+}
+/* line 159, ../../web/src/sass/components/_cf98bis.scss */
+.slice-cf98bis .total-price {
+  display: block;
+  border: 4px solid #f0780a;
+  padding: 0 12px;
+  color: #333333;
+  font: 16px/50px "ubuntubold";
+  position: relative;
+}
+/* line 166, ../../web/src/sass/components/_cf98bis.scss */
+.slice-cf98bis .total-price--info {
+  padding: 13px 12px 10px;
+  line-height: 14px;
+}
+/* line 170, ../../web/src/sass/components/_cf98bis.scss */
+.slice-cf98bis .total-price small {
+  font-size: 10px;
+  display: block;
+  font-family: "ubunturegular";
+}
+/* line 175, ../../web/src/sass/components/_cf98bis.scss */
+.slice-cf98bis .total-price .info {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  margin-top: -13px;
+}
+/* line 180, ../../web/src/sass/components/_cf98bis.scss */
+.slice-cf98bis .total-price .info:after {
+  content: "";
+  display: inline-block;
+}
+/* line 188, ../../web/src/sass/components/_cf98bis.scss */
+.slice-cf98bis .more-info {
+  color: black;
+  font-size: 13px;
+  line-height: 20px;
+  padding: 12px 32px 15px 16px;
+}
+/* line 194, ../../web/src/sass/components/_cf98bis.scss */
+.slice-cf98bis .bottom-buttons {
+  list-style: none;
+  margin: 0 0 30px 0;
+  padding: 0;
+}
+/* line 198, ../../web/src/sass/components/_cf98bis.scss */
+.slice-cf98bis .bottom-buttons li {
+  margin: 0 0 15px 0;
+  padding: 0;
+}
+/* line 203, ../../web/src/sass/components/_cf98bis.scss */
+.slice-cf98bis .bottom-buttons .button {
+  height: 48px;
+  max-height: 51px;
+  font: 16px/42px "citroenbold";
+  padding: 0 16px;
+  margin: 0;
+  text-align: left;
+}
+/* line 210, ../../web/src/sass/components/_cf98bis.scss */
+.slice-cf98bis .bottom-buttons .button--blue {
+  height: 51px;
+  line-height: 44px;
+}
+/* line 214, ../../web/src/sass/components/_cf98bis.scss */
+.slice-cf98bis .bottom-buttons .button--fb {
+  height: 51px;
+  line-height: 49px;
+}
+/* line 220, ../../web/src/sass/components/_cf98bis.scss */
+.slice-cf98bis .bottom-buttons .ico-fb {
+  margin: -7px 10px 0 0;
+}
+/* line 223, ../../web/src/sass/components/_cf98bis.scss */
+.slice-cf98bis .bottom-buttons .ico-test {
+  margin: -8px 9px 0 0;
+}
+/* line 226, ../../web/src/sass/components/_cf98bis.scss */
+.slice-cf98bis .bottom-buttons .ico-badge {
+  margin: -6px 11px 0 0;
+}
+/* line 231, ../../web/src/sass/components/_cf98bis.scss */
+.slice-cf98bis .legacy {
+  font-size: 10px;
+  line-height: 14px;
+  color: black;
+  background: #d6d3cf;
+  padding: 10px 16px;
+  margin: 15px 0;
+}
+/* line 240, ../../web/src/sass/components/_cf98bis.scss */
+.slice-cf98bis .half-buttons {
+  margin-top: 30px;
+  display: table;
+  width: 100%;
+}
+/* line 244, ../../web/src/sass/components/_cf98bis.scss */
+.slice-cf98bis .half-buttons > * {
+  width: 50%;
+  display: table-cell;
+  vertical-align: middle;
+  height: 65px;
+  box-sizing: border-box;
+  padding: 10px 16px 10px 56px;
+  font: 13px/16px "citroenbold";
+  text-transform: uppercase;
+  color: #fff;
+  position: relative;
+}
+/* line 255, ../../web/src/sass/components/_cf98bis.scss */
+.slice-cf98bis .half-buttons > *:first-child {
+  background: #afadc3;
+}
+/* line 258, ../../web/src/sass/components/_cf98bis.scss */
+.slice-cf98bis .half-buttons > *:last-child {
+  background: #f0780a;
+}
+/* line 262, ../../web/src/sass/components/_cf98bis.scss */
+.slice-cf98bis .half-buttons .ico {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  margin-top: -14px;
+}
+/* line 269, ../../web/src/sass/components/_cf98bis.scss */
+.slice-cf98bis .bottom-button {
+  height: 48px;
+  max-height: 48px;
+  text-align: left;
+  padding: 0 16px;
+  line-height: 41px;
+  font-size: 16px;
+}
+/* line 276, ../../web/src/sass/components/_cf98bis.scss */
+.slice-cf98bis .bottom-button .ico {
+  margin: -5px 11px 0 0;
+}
+/* line 280, ../../web/src/sass/components/_cf98bis.scss */
+.slice-cf98bis .popinMentions, .slice-cf98bis .popinequipement {
+  display: none;
+}

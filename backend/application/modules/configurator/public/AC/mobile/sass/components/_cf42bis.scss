@@ -1,0 +1,30 @@
+@charset "UTF-8";
+.slicecf42bis {
+  .price{
+    padding: 0 5px 0 40px;
+  }
+  .finitions {
+    .accordion {
+      padding-bottom: 7px;
+    }
+  }
+  .finInfos {
+    padding: 22px 15px 15px;
+  }
+  .accordion-cont{
+   padding: 0 15px;
+   .slick-next,.slick-prev {
+     margin-top: -50px;
+   }
+    .title {
+     font-family: $ubunturegular;
+     color: $txtsite_color;
+     font-size: 12px;
+     text-align: center;
+     margin: 10px 0;
+   }
+ }
+ .slick-dots{
+   height: inherit;
+ }
+}

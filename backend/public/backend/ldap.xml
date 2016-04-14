@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users>
+    <user login="adminndp" password="adminndp">
+        <firstname>Admin</firstname>
+        <lastname>Test</lastname>
+        <title>Mr</title>
+        <country>FR</country>
+        <email>admin.test@admin.test.fr</email>
+        <locale>FR</locale>
+        <groups>
+            <group>
+                <name>NDP.ADMINISTRATEUR.ALL</name>
+            </group>
+        </groups>
+    </user>
+    <user login="adminfr" password="adminfr">
+        <firstname>adminfr</firstname>
+        <lastname>adminfr</lastname>
+        <title>Mr</title>
+        <country>FR</country>
+        <email>admin.test@adminfr.test.fr</email>
+        <locale>FR</locale>
+        <groups>
+            <group>
+                <name>NDP.ADMINISTRATEUR.APFR</name>
+            </group>
+        </groups>
+    </user>
+    <user login="admintn" password="admintn">
+        <firstname>admintn</firstname>
+        <lastname>admintn</lastname>
+        <title>Mr</title>
+        <country>TN</country>
+        <email>admin.test@admintn.test.fr</email>
+        <locale>FR</locale>
+        <groups>
+            <group>
+                <name>NDP.ADMINISTRATEUR.APTN</name>
+            </group>
+        </groups>
+    </user>
+    <user login="webmaster" password="webmaster">
+        <firstname>webmaster</firstname>
+        <lastname>webmaster</lastname>
+        <title>Mr</title>
+        <country></country>
+        <email>webmaster.test@webmaster.test.fr</email>
+        <locale></locale>
+        <groups>
+            <group>
+                <name>NDP.WEBMASTER.ALL</name>
+            </group>
+        </groups>
+    </user>
+    <user login="webmasterfr" password="webmasterfr">
+        <firstname>webmasterfr</firstname>
+        <lastname>webmasterfr</lastname>
+        <title>Mr</title>
+        <country></country>
+        <email>webmaster.test@webmasterfr.test.fr</email>
+        <locale></locale>
+        <groups>
+            <group>
+                <name>NDP.WEBMASTER.APFR</name>
+            </group>
+        </groups>
+    </user>
+    <user login="contributeur" password="contributeur">
+        <firstname>contributeur</firstname>
+        <lastname>contributeur</lastname>
+        <title>Mr</title>
+        <country>FR</country>
+        <email>admin.test@contributeur.test.fr</email>
+        <locale>FR</locale>
+        <groups>
+            <group>
+                <name>NDP.CONTRIBUTEUR.ALL</name>
+            </group>
+        </groups>
+    </user>
+    <user login="contributeurfr" password="contributeurfr">
+        <firstname>contributeurfr</firstname>
+        <lastname>contributeurfr</lastname>
+        <title>Mr</title>
+        <country>FR</country>
+        <email>admin.test@contributeurfr.test.fr</email>
+        <locale>FR</locale>
+        <groups>
+            <group>
+                <name>NDP.CONTRIBUTEUR.APFR</name>
+            </group>
+        </groups>
+    </user>
+    <user login="contentmaster" password="contentmaster">
+        <firstname>contentmaster</firstname>
+        <lastname>contentmaster</lastname>
+        <title>Mr</title>
+        <country>FR</country>
+        <email>admin.test@contentmaster.test.fr</email>
+        <locale>FR</locale>
+        <groups>
+            <group>
+                <name>NDP.CONTENTMASTER.APFR</name>
+            </group>
+        </groups>
+    </user>
+    <user login="traducteurfr" password="traducteurfr">
+        <firstname>traducteurfr</firstname>
+        <lastname>traducteurfr</lastname>
+        <title>Mr</title>
+        <country>FR</country>
+        <email>admin.test@traducteurfr.test.fr</email>
+        <locale>FR</locale>
+        <groups>
+            <group>
+                <name>NDP.TRADUCTEUR.APFR</name>
+            </group>
+        </groups>
+    </user>
+    <user login="traducteur" password="traducteur">
+        <firstname>traducteur</firstname>
+        <lastname>traducteur</lastname>
+        <title>Mr</title>
+        <country>FR</country>
+        <email>admin.test@traducteur.test.fr</email>
+        <locale>FR</locale>
+        <groups>
+            <group>
+                <name>NDP.TRADUCTEUR.ALL</name>
+            </group>
+        </groups>
+    </user>
+    <user login="multi" password="multi">
+        <firstname>multi</firstname>
+        <lastname>multi</lastname>
+        <title>Mr</title>
+        <country>FR</country>
+        <email>admin.test@multi.test.fr</email>
+        <locale>FR</locale>
+        <groups>
+            <group>
+                <name>NDP.ADMINISTRATEUR.APFR</name>
+                <name>NDP.CONTENTMASTER.APFR</name>
+                <name>NDP.TRADUCTEUR.ALL</name>
+            </group>
+        </groups>
+    </user>
+    <user login="webmaster01" password="webmaster01">
+        <firstname>webmaster01</firstname>
+        <lastname>webmaster01</lastname>
+        <title>Mr</title>
+        <country></country>
+        <email>webmaster.test@webmaster01.test.fr</email>
+        <locale></locale>
+        <groups>
+            <group>
+                <name>NDP.WEBMASTER.APSA01</name>
+            </group>
+        </groups>
+    </user>
+</users>
+

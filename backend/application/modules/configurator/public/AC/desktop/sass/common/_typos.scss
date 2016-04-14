@@ -1,0 +1,51 @@
+/* Fonts */
+$font_citroen-light: 'citroenlight', Arial;
+$font_citroen-regular: 'citroenregular', Arial;
+$font_citroen-bold: 'citroenbold', Arial;
+$font_ubuntu-light: 'ubuntulight', Arial;
+$font_ubuntu-regular: 'ubunturegular', Arial;
+$font_ubuntu-bold: 'ubuntubold', Arial;
+
+/* Main font size */
+$main_fontsize: 14;
+
+html {
+	font: $main_fontsize+px/1.2 $font_citroen-regular;
+}
+
+body {
+	background-color: $main_bg;
+	color: $main_color;
+}
+
+a {
+	color: $main_color;
+	text-decoration: none;
+}
+
+
+/*----- FONT SIZE-----*/
+.fs-small-xx{
+  font-size: 11px;
+}
+.fs-small-x{
+  font-size: 12px;
+}
+.fs-small{
+  font-size: 14px;
+}
+.fs-medium{
+  font-size: 16px;
+}
+.fs-big{
+  font-size: 18px;
+}
+.fs-big-x{
+  font-size: 20px;
+}
+.fs-big-xx{
+  font-size: 22px;
+}
+.fs-big-xxx{
+  font-size: 24px;
+}

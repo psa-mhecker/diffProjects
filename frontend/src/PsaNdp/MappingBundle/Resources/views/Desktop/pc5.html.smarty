@@ -1,0 +1,55 @@
+{assign var="gtmCategory" value="{$slicePC5.blockName}::position-{$slicePC5.blockOrder}"}
+<section class="slice-pc5 {if !empty($slicePC5.anchorId)} {$slicePC5.anchorId} {/if}" {if !empty($slicePC5.anchorId)} id="{$slicePC5.anchorId}" {/if} {if !empty($slicePC5.popintrancheid)} data-popintrancheid = "{$slicePC5.popintrancheid}" {/if} data-jsobj="[ { 'obj':'slicePC5' } ]" datalayer="{$slicePC5.datalayer}">
+
+    {if $slicePC5.title || $slicePC5.subtitle}
+        {if $slicePC5.title}
+            <h2>{$slicePC5.title}</h2>
+        {/if}
+        {if $slicePC5.subtitle}
+            <h3 class="text-center">{$slicePC5.subtitle}</h3>
+        {/if}
+    {/if}
+
+    {if $slicePC5.slideshow}
+        {if $slicePC5.type == "VISUEL"}
+            {if $slicePC5.slideshow|@count == 1}
+                {include file='../Components/images.html.smarty' image=$slicePC5.slideshow[0]}
+            {else}
+                <div class="slick-container js-slick-carousel-container" {if empty($slicePC5.timerSpeed)} data-options='{ldelim}"autoplay":"false"{rdelim}' {/if}>
+                    {include file='../Components/slideshowslick.html.smarty' slideshow=$slicePC5.slideshow timerSpeed=$slicePC5.timerSpeed gtmCategory={$gtmCategory}}
+                </div>
+            {/if}
+        {else}
+            {include file='../Components/videoplayer.html.smarty' gtmCategory="{$slicePC5.blockName}::position-{$slicePC5.blockOrder}" video=$slicePC5.slideshow}
+        {/if}
+    {/if}
+
+    <div class="row collapse text-container">
+        {if $slicePC5.articleTitle}
+            {if empty($slicePC5.title)}
+                <h2 class="columns">{$slicePC5.articleTitle}</h2>
+            {else}
+                <h3 class="columns">{$slicePC5.articleTitle}</h3>
+            {/if}
+        {/if}
+        {if !empty($slicePC5.firstColumn)}
+            {if $slicePC5.numberOfColumns == 1}
+                <div class="small-12 columns">
+                    {$slicePC5.firstColumn}
+                </div>
+            {else}
+                <div class="small-12 medium-6 columns">
+                   {$slicePC5.firstColumn}
+                </div>
+                <div class="small-12 medium-6 columns">
+                    {$slicePC5.secondColumn}
+                </div>
+            {/if}
+        {/if}
+    </div>
+    <div class="inline-cta">
+        {foreach $slicePC5.ctas as $cta}
+            {include file="../Components/cta.html.smarty" widthClass="short-width" gtm="{ldelim}\"eventType\":\"click\",\"dataList\":{ldelim}\"event\":\"uaevent\",\"eventCategory\":\"{$slicePC5.blockName}::position-{$slicePC5.blockOrder}\",\"eventAction\":\"Redirection\",\"eventLabel\":\"{$cta.title|escape:html}\"{rdelim}{rdelim}"}
+        {/foreach}
+    </div>
+</section>

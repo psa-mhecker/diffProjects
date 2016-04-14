@@ -1,0 +1,35 @@
+@charset "UTF-8";
+/* pc9.scss */
+//Margin text if Nav is full
+.body {
+  .slice-pc9 {
+    .marginLeft {
+      margin-left: rem-calc(10);
+    }
+  }
+}
+
+.body-light {
+  .slice-pc9 {
+    .marginLeft {
+      margin-left: 0;
+    }
+  }
+}
+
+.slice-pc9 {
+  h3 {
+    text-align: center;
+  }
+
+ //PLacement de l'image par rapport au texte 
+  .slideright { //Placement à droite
+    margin : 0 0 rem-calc(10) rem-calc(10);
+		float: right;
+	}
+
+  .slideleft { //Placement à gauche
+    margin : rem-calc(5) rem-calc(10) 0 0;
+		float: left;
+	}  
+}

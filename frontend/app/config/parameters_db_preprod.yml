@@ -1,0 +1,8 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_driver: pdo_mysql
+    database_host: yval1ch0 
+    database_port: 3306
+    database_name: NDP_00
+    database_user: mwpndpdb
+    database_password: xxxxxxxx

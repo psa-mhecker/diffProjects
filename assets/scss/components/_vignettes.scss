@@ -1,0 +1,159 @@
+.vignette {
+	position: relative;
+	border: 1px solid $background-light-grey;
+	background: $white-color;
+	padding: 0;
+	height: 395px;
+	text-align: center;
+
+	.content {
+		display: block;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+	}
+
+	.heading {
+		margin-bottom: 20px;
+	}
+
+	.title {
+		position: absolute;
+		top: 40px;
+		width: 100%;
+	}
+
+	h3 {
+		@include font-family('bold');
+		margin-bottom: 0;
+	}
+
+	.offer-wrapper {
+		position: absolute;
+		top: 10px;
+		width: 100%;
+	}
+
+	.ndp-new.label {
+		background: $label-new;
+	}
+
+	.ndp-limited-serie.label {
+		background: $label-limited-serie;
+	}
+
+	.ndp-special-offer.label {
+		background: $label-special-offer;
+	}
+
+	.ndp-special-serie.label {
+		background: $label-special-serie;
+	}
+
+	.img-wrapper {
+		position: absolute;
+		top: 110px;
+		margin-bottom: 15px;
+		width: 100%;
+		height: 113px;
+
+		img,
+		.no-img {
+			width: 100%;
+			max-width: 241px;
+		}
+
+		.no-img {
+			margin: auto;
+			background: url('../img/vignette_default.png') no-repeat center 12px;
+			background-size: 60% auto;
+			height: 100%;
+		}
+	}
+
+	.cta-wrapper {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translate(-50%, 0);
+		margin: auto;
+		width: 90%;
+		height: 93px;
+
+		.cta {
+			margin: 0 0 10px;
+		}
+
+		.link-cta {
+			display: block;
+			padding: 4px 0;
+			text-align: center;
+		}
+	}
+
+	.price {
+		position: absolute;
+		top: 250px;
+		width: 100%;
+		line-height: 1.1;
+		color: $monsoon;
+		font-size: rem-calc(16);
+
+		small {
+			font-size: rem-calc(14);
+		}
+	}
+}
+
+@media only screen and (max-width: 40em) {
+	.vignette {
+		border: 0;
+		height: 225px;
+
+		&.touched .cta-wrapper {
+			display: block;
+			width: 100%;
+			height: 100%;
+			background: $grey-26-color;
+			top: 0;
+
+			.cta:first-child {
+				margin-top: 107px;
+				width: 80%;
+			}
+
+			.cta.chevron-right {
+				font-size: 1em;
+			}
+		}
+
+		.offer-wrapper {
+			display: none;
+		}
+
+		.heading {
+			margin: 0;
+		}
+
+		.img-wrapper {
+			top: 27px;
+			text-align: center;
+		}
+
+		img {
+			padding: 0 5px;
+		}
+
+		.title {
+			top: 148px;
+		}
+
+		.price {
+			top: 192px;
+		}
+	}
+
+	.cta-wrapper {
+		display: none;
+	}
+}

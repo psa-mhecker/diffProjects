@@ -1,0 +1,15 @@
+# Turn on URL rewriting engine
+<FilesMatch "\.(ttf|otf|eot|woff)$">
+  <IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+  </IfModule>
+</FilesMatch>
+
+RewriteEngine On
+#RewriteRule /mobile$ /library/Pelican/Http/UserAgent/public/ [L]
+#RewriteRule /identify$ /library/Pelican/Http/UserAgent/public/identify.php [L]
+RewriteCond %{REQUEST_FILENAME} !-s
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule !\.(js|ico|gif|jpg|png|css)$ /index.php
+RewriteRule ^.*$ /index.php [NC,L]

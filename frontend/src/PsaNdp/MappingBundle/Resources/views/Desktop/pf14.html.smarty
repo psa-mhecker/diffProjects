@@ -1,0 +1,39 @@
+<section class="slice-pf14 {if isset($slicePF14.anchorId)} {$slicePF14.anchorId} {/if}" {if isset($slicePF14.anchorId)} id="{$slicePF14.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePF14' } ]" datalayer="{$slicePF14.datalayer}">
+    <h2>{$slicePF14.title}</h2>
+    <ul class="list-soc-net clearfix">
+        {foreach $slicePF14.socNetwork as $key=>$value}
+            <li class="grid-col span_4_of_12">
+                <div class="{$key} soc-net">
+                    {foreach $value as $ctn}
+                        <div class="item">
+                            <figure>
+                                <a href="{$ctn.img.url}"><img src="{$ctn.img.src}" alt="{$ctn.img.alt}" /></a>
+                            </figure>
+                            <p>{$ctn.text}</p>
+                        </div>
+                    {/foreach}
+                </div>
+            </li>
+        {/foreach}
+    </ul>
+    <ul class="list-link clearfix">
+        {foreach $slicePF14.links as $cta}
+            <li class="grid-col span_4_of_12">
+              {include file="./cta.html.smarty"}
+            </li>
+        {/foreach}
+    </ul>
+    <ul class="list-soc-net-stat clearfix">
+        {foreach $slicePF14.boxSocNet as $boxSN}
+            <li class="grid-col span_3_of_12">
+                {$boxSN.script}
+            </li>
+            <li class="grid-col span_1_of_12">
+                <a href="{$boxSN.url}" target="{$boxSN.target}">
+                    <img src="{$boxSN.ico}" data-ico="{$boxSN.icoActive}" alt="{$boxSN.alt}" class="ico">
+                </a>
+            </li>
+        {/foreach}
+    </ul>
+
+</section>

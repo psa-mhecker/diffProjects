@@ -1,0 +1,17 @@
+<div class="dealer-form-container">
+    <div class="wrapper row">
+        <div class="search_dealer row">
+            <form action=""
+                  class="small-8 large-8 columns"
+                  id="form_search_dealer"
+                  data-distance="">
+                <div class="sub-city"></div>
+                {{> atoms-text-fields-locator }}
+                {{> atoms-button-submit-search }}
+            </form>
+            <span class="or small-1 large-1 columns show-for-medium-up">ou</span>
+            {{> atoms-cta-geoloc }}
+        </div>
+        {{> molecules-dealers-filters }}
+    </div>
+</div>

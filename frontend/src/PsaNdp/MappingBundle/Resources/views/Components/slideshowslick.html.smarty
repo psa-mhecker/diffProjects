@@ -1,0 +1,12 @@
+<div class="js-slick-carousel" {if !empty($timerSpeed)}data-timer={$timerSpeed} {/if}data-gtm-category={$gtmCategory}>
+	{foreach $slideshow as $slide}
+
+		{if !empty($slide.media)}
+			{assign var="slide" value=$slide.media}
+		{/if}
+
+		<div>
+			{include file='../Components/images.html.smarty' image=$slide lazy=false lazyslick=true}
+		</div>
+	{/foreach}
+</div>

@@ -1,0 +1,27 @@
+<section class="slice-pc16 {if isset($slicePC16.anchorId)} {$slicePC16.anchorId} {/if}" {if isset($slicePC16.anchorId)} id="{$slicePC16.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePC16' } ]" datalayer="{$slicePC16.datalayer}">
+  <section class="slides">
+    {foreach $slicePC16.verbatimListItem as $item}
+      <article class="clearfix">
+        <figure>
+          <div>
+            <img src="{$item.img.src}" alt="{$item.img.alt}">
+          </div>
+          <figcaption>{$item.infoPerson}</figcaption>
+        </figure>
+        <div class="detail">
+        
+          <div class="citation">{$item.text}</div>
+          
+          {if isset($item.via.ctaList)}
+            <div class="clearfix cta-align-right">
+            {foreach $item.via.ctaList as $cta}
+              {include file="./cta.html.smarty"}
+            {/foreach}
+            </div>
+          {/if}
+        </div>
+      </article>
+    {/foreach}
+  </section>
+       
+</section>

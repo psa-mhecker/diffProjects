@@ -1,0 +1,113 @@
+@charset "UTF-8";
+.slicecf9bis {
+  padding: 0 0 25px 0;
+
+  & > div{
+    padding-left:14px;
+    padding-right:14px;
+  }
+
+  .price {
+    padding: 10px 5px 0 40px;
+    font-family: $ubuntubold;
+    color: $txtsite_color;
+    font-size: 13px;
+    span{
+      // display:none;
+      &.price-prefix {
+        display:inline-block !important;
+        font-weight: normal !important;
+        font-size: 10px;
+      }
+    }
+  }
+
+  .mod-toggle-open{
+    .chevron{
+      @extend %_sprites;
+      @extend %_sprite-arrow-top;
+    }
+  }
+
+
+
+  .mentions{
+    font-family: $ubunturegular;
+    margin-top: 15px;
+    font-size: 10px;
+    line-height: 14px;
+    color: $txtsite_color;
+  }
+
+  .finInfos{
+    position: relative;
+    padding: 15px 0 0 15px;
+    font-size: 0;
+    vertical-align: middle;
+
+    .infos{
+      width: 80%;
+      display: inline-block;
+      position: relative;
+      figure{
+        display: inline-block;
+        width: 70%;
+
+        img{
+          width: 30%;
+          vertical-align: middle;
+        }
+
+        figcaption{
+          width: 70%;
+          display: inline-block;
+          vertical-align: middle;
+          padding: 0 0 0 15px;
+
+          .subtitle{
+            color:$titlesite_color;
+            font-family: $ubuntubold;
+            cursor: pointer;
+            margin: 0;
+            font-weight: bold;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+    .chevron{
+      position: absolute;
+      display: inline-block;
+      right: 25px;
+      top: 50%;
+      margin-top: 4px;
+      @extend %_sprites;
+      @extend %_sprite-arrow-bottom;
+    }
+  }
+
+  .finitions {
+    .accordion{
+      display: block;
+      color: black;
+      border: 4px solid $lameborder_color;
+      padding-bottom: 15px;
+
+      &.selected{
+        img{
+          &.on{border: 2px solid $on_color;}
+        }
+      }
+    }
+
+    .zoom{
+      position: absolute;
+      z-index: 1;
+      bottom: 0;
+      right: 0;
+      margin:0 -12px 0 0;
+    }
+
+    .accordion-cont{padding:0 15px;}
+  }
+}

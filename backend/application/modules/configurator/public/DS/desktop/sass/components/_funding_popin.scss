@@ -1,0 +1,59 @@
+.popinFunding {
+  font-family: $font-family-base-regular;
+
+  .title {
+    text-align: center;
+    margin: 30px 0;
+  }
+  .elementsContainer {
+    border: 1px solid $taupe_1_color;
+    padding: 14px;
+
+    .editedElements {
+      float: left;
+      width: 50%;
+      padding-right: 28px;
+      border-right: 1px solid $light_champagne;
+    }
+    .optionalElements {
+      float: right;
+      width: 50%;
+      padding-left: 14px;
+    }
+    .totalElements {
+      clear: both;
+      border-top: 1px solid $light_champagne;
+      ul {
+        margin: 28px 0 14px 0;
+      }
+    }
+
+
+    .editedElements, .optionalElements {
+      margin-bottom: 14px;
+      ul {
+        margin: 28px 0;
+        li {
+          margin-bottom: 14px;
+        }
+      }
+    }
+    .elementsTitle {
+      text-align: center;
+      color: $champagne;
+      margin-top: 14px;
+    }
+    .price {
+      color: $champagne;
+      float: right;
+    }
+    .priceTitle {
+      font-family: $font-family-base-bold;
+    }
+  }
+  .legal {
+    font-size: 11px;
+    margin-top: 14px;
+    color: $dark_brown_1_color;
+  }
+}

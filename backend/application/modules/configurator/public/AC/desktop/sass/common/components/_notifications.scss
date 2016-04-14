@@ -1,0 +1,30 @@
+.notifications{
+  padding: 21px 0;
+  font-size: 16px;
+  font-family: $font-family-base-bold;
+  line-height: 21px;
+  position: relative;
+  background-color: $gray-lighter;
+
+  .preselection:before {
+    margin-top: -1px;
+  }
+  .not-text-1, .not-text-2 {
+    display: block;
+    padding-left: 60px;
+    padding-right: 2%;
+  }
+  a {
+    color: $brand-orange;
+    text-decoration: underline;
+  }
+  .not-text-2 {
+    font-family: $font-family-base-regular;
+    font-size: 14px;
+  }
+  .info--orange, .check--gray {
+    position: absolute;
+    left: 20px;
+    top: 34%;
+  }
+}

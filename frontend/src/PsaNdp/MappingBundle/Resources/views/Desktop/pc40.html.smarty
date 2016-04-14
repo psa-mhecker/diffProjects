@@ -1,0 +1,47 @@
+<section class="slice-pc40 {if !empty($slicePC40.anchorId)} {$slicePC40.anchorId} {/if}" {if !empty($slicePC40.anchorId)} id="{$slicePC40.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePC40' } ]" datalayer="{$slicePC40.datalayer}">
+
+  <div class="row">
+    <div class="small-12">
+
+      {if $slicePC40.title}
+        <h2>{$slicePC40.title}</h2>
+      {/if}
+      
+      <!-- visuels CTA -->
+      {if $slicePC40.displayMode eq '1'}
+        <div class="small-12 columns">
+          {foreach $slicePC40.ctaList as $cta}
+            {include file="../Components/cta.html.smarty" widthClass="{if empty($cta.image)}short-width{/if}" gtm="{ldelim}\"eventType\":\"click\",\"dataList\":{ldelim}\"event\":\"uaevent\",\"eventCategory\":\"{$slicePC40.blockName}::position-{$slicePC40.blockOrder}\",\"eventAction\":\"Redirection\",\"eventLabel\":\"{$cta.title|escape:html}\"{rdelim}{rdelim}"}
+          {/foreach}
+        </div>
+      {/if}
+      
+      <!-- Grand visuel -->
+      {if $slicePC40.displayMode eq '2'}
+        <figure>
+          {include file='../Components/images.html.smarty' image=$slicePC40.desktopVisual class="pc40-visuel"}
+        </figure>
+         {if !empty($slicePC40.ctaList)}
+            <div class="inline-cta">
+              {foreach $slicePC40.ctaList as $cta}
+                {include file="../Components/cta.html.smarty" widthClass="short-width" gtm="{ldelim}\"eventType\":\"click\",\"dataList\":{ldelim}\"event\":\"uaevent\",\"eventCategory\":\"{$slicePC40.blockName}::position-{$slicePC40.blockOrder}\",\"eventAction\":\"Redirection\",\"eventLabel\":\"{$cta.title|escape:html}\"{rdelim}{rdelim}"}
+              {/foreach}
+            </div>
+          {/if}
+      {/if}
+      
+      <!-- Sans visuel -->
+      {if $slicePC40.displayMode eq '3'}              
+        {if !empty($slicePC40.ctaList)}
+          <div class="inline-cta">
+            {foreach $slicePC40.ctaList as $cta}
+              {include file="../Components/cta.html.smarty" widthClass="short-width" gtm="{ldelim}\"eventType\":\"click\",\"dataList\":{ldelim}\"event\":\"uaevent\",\"eventCategory\":\"{$slicePC40.blockName}::position-{$slicePC40.blockOrder}\",\"eventAction\":\"Redirection\",\"eventLabel\":\"{$cta.title|escape:html}\"{rdelim}{rdelim}"}
+            {/foreach}
+          </div>
+        {/if}
+      {/if}
+
+    </div>
+  </div>
+
+</section>

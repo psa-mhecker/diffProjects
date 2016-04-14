@@ -1,0 +1,50 @@
+<!-- pt21 -->
+<aside class="slice-pt21 nav-light">
+	<nav id="principal-nav" class="principal" role="navigation">
+		<header>
+			{{> atoms-logo }}
+			<div class="display-burger" data-label-off="MENU" data-label-on="FERMER">
+				<button class="burger"><i><!-- Fix problème de taille d'éléments de sprite --></i></button>
+			</div>
+		</header>
+
+		<ul id="menu">
+			{{#menu-link}}
+				<li>
+					<!-- Level 1 -->
+					<a href="{{href}}" class="js-menuItem menu-item{{#sub-menu}} icon{{/sub-menu}}" target="{{target}}"><span>{{title}}</span></a>
+					{{#sub-menu}}
+						<ul class="js-subMenu sub-menu-container">
+							<li class="sub-menu-content">
+								<button class="close-layer">{{close-layer}}</button>
+								<a href="#" class="menu-item-title">{{title-submenu}}</a>
+								<ul class="sub-menu">
+									{{#subsub-menu}}
+										<li class="sub-menu-item{{#subsubsub-menu}} icon{{/subsubsub-menu}}">
+											<!-- Level 2 -->
+											<a href="{{href}}" target="{{target}}">{{title}}</a>
+											<ul class="subsub-menu">
+												{{#subsubsub-menu}}
+													<li>
+														<a href="{{href}}" target="{{target}}">{{title}}</a>
+													</li>
+												{{/subsubsub-menu}}
+											</ul>
+											{{#view-more}}
+												<p class="view-more">
+													<a href="{{href}}" target="{{target}}">{{title}}</a>
+												</p>
+											{{/view-more}}
+										</li><!-- //.item-submenu -->
+									{{/subsub-menu}}
+								</ul>
+							</li><!-- //.sub-menu-content -->
+						</ul><!-- //.sub-menu -->
+					{{/sub-menu}}
+				</li>
+			{{/menu-link}}
+		</ul><!-- //#menu -->
+
+	</nav>
+</aside>
+<!-- //pt21 -->

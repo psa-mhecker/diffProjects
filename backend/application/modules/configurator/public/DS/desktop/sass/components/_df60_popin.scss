@@ -1,0 +1,175 @@
+.global {
+    display: block;
+    width: 100%;
+    height: auto;
+    .head_text {
+      display: block;
+      width: 100%;
+      text-align: center;
+      font-size: 12px;
+      font-family:$font-family-base-regular;
+      padding: 10px;
+      text-transform: uppercase;
+      color: #000;
+      span.close_btn_popin {
+        display: inline-block;
+        float: right;
+        vertical-align: middle;
+        top: 27px;
+        background: url("../../../../web/src/spritesrc/close-popin.png") no-repeat;
+        cursor: pointer;
+        z-index: 99;
+        width: 11px;
+        height: 11px;
+      }
+    }
+    .vu_help_aide {
+      display: block;
+      height: auto;
+      width:100%;
+    }
+    span.mention-text.voir_df60 {
+      border: 1px solid #ccc;
+      width: 9%;
+      margin: 0 auto;
+      cursor:pointer;
+    }
+    .bloc_popin_global {
+      width: 100%;
+      font-family:$font-family-base-regular;
+      height: auto;
+      display: block;
+      position:relative;
+      .bloc_form {
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+        border: 1px solid #AD0040;
+        float: left;
+        display: block;
+        span.bloc_top {
+          height: 50px;
+          display: block;
+          width: 100%;
+        }
+        .show_toggle_form {
+          display: block;
+          margin-top: 45px;
+        }
+        .bloc02{display:none;}
+        .infos_bienvenu{
+          display:inline-block;
+          width:100%;
+          font-family:$font-family-base-regular;
+          padding-left:80px;
+          padding-right:80px;
+          text-align:center;
+          font-size:13px;
+          .conditions {
+            float: left;
+            margin-left: 45px;
+            margin-top: 17px;
+          }
+          span.confirmation {
+          position: relative;
+          top: -64px;
+          }
+          span.valider_form {
+              width: auto;
+              height: auto;
+              border: 1px solid $dark-champagne;
+              padding: 10px;
+              margin-top: 46px;
+              text-transform: uppercase;
+              float: left;
+          }
+          span.non_sauvegarder {
+                display: inline-block;
+                text-transform: uppercase;
+                margin: 4px;
+                padding: 56px;
+                float: left;
+          }
+          
+        }
+        .btn-config {
+          display: block;
+          margin: 0 auto;
+          width: 100%;
+          float: left;
+
+        }
+        .color-font{
+          color:$dark-champagne ;
+          padding-top: 31px;
+          width: auto;
+          text-align: justify;
+        }.color-font_top{
+          color:$carmin;
+        }
+      }
+    }
+    .bloc_foot_global_popin{
+      width:100%;
+      display:block;
+      height:auto;
+      margin-top:20px;
+      font-family:$font-family-base-regular;
+      .marg-df60{
+        width: 48%;
+        float: left;
+        margin-top: 32px;
+        margin-left: 5px;
+        border: none;
+        background:transparent;
+        color:#ccc;
+        span.left_text {
+          text-align: left;
+          display: inline;
+          margin-left: 28px;
+          color:$dark-champagne ;
+          text-transform: uppercase;
+          cursor: pointer;
+          font-family:$font-family-base-regular;
+
+        }
+        .right_arrow {
+          text-align: left;
+          display: block;
+          width: 11px;
+          height: 11px;
+          position: relative;
+          top: -15px;
+        }
+        
+      }
+      .marg-df60_btn_valide{
+          width: 163px;
+          float: right;
+          margin-top: 20px;
+          margin-left: 5px;
+          background: transparent;
+          color: #ccc;
+          height: 39px;
+          border: 1px solid $dark-champagne;
+          vertical-align: middle;
+          cursor:pointer;
+        .left_arrow {
+          float: right;
+          display:inline-block;
+          padding: 8px;
+        }
+        span.right_text {
+          text-align: center;
+          width: auto;
+          color:$dark-champagne ;
+          font-family:$font-family-base-regular;
+          text-transform: uppercase;
+          vertical-align: middle;
+          padding: 10px;
+          display: inherit;
+        }
+      }
+
+    }
+}

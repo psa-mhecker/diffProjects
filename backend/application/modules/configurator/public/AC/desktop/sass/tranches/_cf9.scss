@@ -1,0 +1,159 @@
+.slice-cf9 {
+  color: $grey-6;
+  float: left;
+  margin-bottom: 40px;
+  .lame {
+    margin: 30px 15px 40px -15px;
+    .onHover {
+      position: relative;
+      margin-top: 4px;
+      padding: 0 2px;
+      li{
+        position: relative;
+        padding: 0 1px 0 2px;
+        margin: 5px 0px;
+        float: left;
+      }
+    }
+
+    &.finition > div aside{
+      top: -33px;
+      height: inherit;
+      min-height: 335px;
+      &:focus {
+        background-color: #e7e6ed;
+        border-color: #e7e6ed;
+      }
+
+      .badge-lg{
+        position: absolute;
+        top: -4px;
+        left: -4px;
+        width: calc(100% + 8px);
+        height: 28px;
+        padding: 3px 15px;
+        text-transform: uppercase;
+        font: 13px "citroenbold";
+        color: #fff;
+        border: 4px solid #007f99;
+        margin: 0 auto;
+      }
+    }
+
+    &:nth-of-type(1) {
+      margin-top: 30px;
+    }
+
+    &:last-child {
+      margin-bottom: 10px;
+    }
+
+    &::after {
+      margin-bottom: 2px;
+    }
+
+    .media{
+      max-width: 100%;
+      min-height: 300px;
+    }
+
+    dl dt {
+        font: 13px/22px $font-family-base-bold;
+        color: #333;
+        text-transform: uppercase;
+    }
+    dl dd {
+        font: 13px/16px $font-family-base-regular;
+        color: $grey-6;
+        margin-top: 15px;
+    }
+
+    @media all and (max-width: 1280px) {
+      dl dd {
+        padding-right: 30px;
+      }
+    }
+
+  }
+
+  .lame.finition > div aside:hover .badge-lg,
+  .lame.finition > div aside.checked .badge-lg {
+    /*border: 4px solid #f27800;*/
+    border-bottom-width: 0px;
+  }
+
+  .lame.finition > div aside > strong {
+    color: $grey-5;
+  }
+	.lame.finition > div aside .price-from{
+		margin-bottom: 5px;
+    width: 70%;
+    line-height: 12px;
+	}
+  .lame.finition > div aside > strong.price {
+    color: $grey-5;
+  }
+	.lame.finition > div aside > strong.price .price-from{
+    text-transform: uppercase;
+    line-height: 12px;
+	}
+
+  .info--blue {
+    display: inline-block;
+    position: absolute;
+    top: 12px !important;
+    right: 0px !important;
+    &:before {
+      height: 26px;
+      width: 26px;
+    }
+  }
+  .lame.finition > div > div.row.radio-case {
+    padding-bottom: 0px;
+  }
+  .lame.finition .pictures {
+    width: 53.66667%;
+  }
+  .lame.finition .description {
+    width: 46.33333%;
+  }
+  .input.radio{
+    display: none;
+  }
+  .notifications,
+  .mentions-legale{
+    margin-top: 20px;
+  }
+  .notifications .not-text-1, .notifications .not-text-2 {
+    display: block;
+    padding-left: 9%;
+    padding-right: 2%;
+  }
+  .length {
+      font: 17px $font-family-base-bold;
+      padding-top: 1.4em;
+      clear: both;
+      color: $gray-citroen;
+      span {
+        font-size: 36px;
+        font-family: $font-family-base-regular;
+        margin-right: 5px;
+        color: #c2b000;
+        display: inline-block;
+        vertical-align: middle;
+        margin-top: -6px;
+    }
+  }
+  .input-radio label .label {
+    width: 68%;
+  }
+  div.pannier_silhouette {
+    display: block;
+    background: #e7e6ed;
+    margin-top: -33px;
+    width: 224px;
+    right: -725px;
+    height: 355px;
+    text-align: center;
+  }
+}

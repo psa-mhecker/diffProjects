@@ -1,0 +1,237 @@
+@charset "UTF-8";
+.slicecf58bis {
+  padding: 0 0 25px 0;
+  
+  & > div{
+    padding-left:14px;
+    padding-right:14px;
+  }
+  
+  .price, .namecontrast{
+    padding: 0 5px 0 0;
+    font-family: $ubuntubold;
+    color: $txtsite_color;
+    font-size: 13px;
+    margin-top: 5px;
+  }
+  
+  .price{
+    min-height:18px;
+    
+    span{
+      
+      &.price-prefix{
+        display:inline-block;
+        font-family: $ubunturegular;
+        text-transform: uppercase;
+        font-size: 11px;
+      }
+    }
+  }
+  
+  .namecontrast{
+    color: $titlesite_color;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  .mod-toggle-open{
+    .chevron{
+      @extend %_sprites;
+      @extend %_sprite-arrow-top;
+    }
+  }
+  
+  .chevron{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    margin-top: -3px;
+    @extend %_sprites;
+    @extend %_sprite-arrow-bottom;
+  }
+  
+  .choice {
+    margin-bottom: 7px;
+    padding: 0 5px 0 60px;
+    font-family: $ubunturegular;
+    color: $titlesite_color;
+    font-size:12px;
+  }
+  
+  .mentions{
+    font-family: $ubunturegular;
+    margin-top: 15px;
+    font-size: 10px;
+    line-height: 14px;
+    color: $txtsite_color;
+  }
+  
+  .title{
+    font-family: $ubuntubold;
+    margin: 25px 0 10px 0;
+    color: $txtsite_color;
+    font-size: 13px;
+  }
+  
+  ul{
+    list-style:none;
+    padding:0;
+  }
+  
+  .tit-toggle{
+    &:after {margin: -17px 0 0;}
+  }
+
+  .popinmotorisations {display:none;}
+  
+  .finInfos{
+    position: relative;
+    padding: 22px 15px 7px;
+    font-size: 0;
+
+    > label {
+      vertical-align: top;
+      top: 30px;
+    }
+  
+    .infos{
+      width: 70%;
+      display: inline-block;
+          
+      .subtitle{
+        color:$titlesite_color;
+        font-family: $ubuntubold;
+        cursor: pointer;
+        margin: 0;
+        font-weight: bold;
+        font-size: 16px;
+      }
+
+      .transmission{
+        color:$titlesite_color;
+        font-family: $ubuntubold;
+        cursor: pointer;
+        margin: 0;
+        font-weight: bold;
+        font-size: 14px;
+      }
+    }
+  }
+  
+  .lame{
+    .finitions {
+      &:last-child{
+        border-bottom: 4px solid $lameborder_color;
+      }
+      .accordion{
+        display: block;
+        color: black;
+        border-top: 4px solid $lameborder_color;
+        border-left: 4px solid $lameborder_color;
+        border-right: 4px solid $lameborder_color;
+        padding-bottom: 15px;
+        
+        &.selected{
+          img{          
+            &.on{border: 2px solid $on_color;}
+          }
+        }
+
+        .carre{
+          text-align: left;
+          width: 50%;
+          display: inline-block;
+          padding: 5px;
+          vertical-align: top;
+
+          .title-item{
+            color: $grey_1_color_light;
+            font-family: $ubuntulight;
+            font-size: 14px;
+            text-transform: uppercase;
+            margin:16px 0;
+          }
+
+          .oddbox{
+            background:#e5f2f4;
+            padding: 5px 10px;
+            min-height: 126px;
+            p{
+              font-weight:bold;
+              font-family: $ubunturegular;
+              font-size: 14px;
+            }
+            img {
+              width: 40%;
+              display: inline-block;
+            }
+          }
+
+          .evenbox{
+            background: #ece7e8;
+            padding: 5px 10px;
+            min-height: 126px;
+            p{
+              font-weight:bold;
+              font-family: $ubunturegular;
+              font-size: 14px;
+            }
+            img {
+              width: 40%;
+              display: inline-block;
+            }
+          }
+
+          .popinlink{
+            display: block;
+            a{
+              display: inline-block;
+              float: right;
+              margin-top: 5px;
+              @extend %_sprites;
+              @extend %_sprite-icopie;
+            }
+            img{
+              width:50px;
+            }
+          }
+        }
+      }
+      
+      .tit-toggle{cursor: pointer;}
+      
+      .accordion-cont{
+        padding:0 15px;
+        font-size: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 360px){
+  .slicecf58bis{
+    .lame{
+      .finitions{
+        .accordion{
+          .carre{
+            .title-item{
+              font-size: 12px;
+            }
+            .oddbox{
+              p{
+                font-size: 12px;
+              }
+            }
+            .evenbox{
+              p{
+                font-size: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

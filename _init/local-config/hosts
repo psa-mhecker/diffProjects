@@ -1,7 +1,7 @@
-192.168.10.10 backend.psa-cppv2.com
-192.168.10.10 fr.psa-cppv2.com
-192.168.10.10 be.psa-cppv2.com
-192.168.10.10 cz.psa-cppv2.com
-192.168.10.10 de.psa-cppv2.com
-192.168.10.10 master.psa-cppv2.com
-192.168.10.10 media.psa-cppv2.com
+192.168.10.10 backend.psa-ndp.com
+192.168.10.10 fr.psa-ndp.com
+192.168.10.10 be.psa-ndp.com
+192.168.10.10 cz.psa-ndp.com
+192.168.10.10 de.psa-ndp.com
+192.168.10.10 master.psa-ndp.com
+192.168.10.10 media.psa-ndp.com

@@ -1,0 +1,347 @@
+.cf64 {
+  h3 {
+    position: relative;
+    font-size: 13px;
+    color: $turquoise;
+    font-weight: normal;
+    min-height: 32px;
+    text-transform: uppercase;
+    padding: 10px 0;
+    margin: 0;
+    line-height: 16px;
+    font-family: $font_ubuntu-bold;
+    .back-to-top {
+      position: absolute;
+      cursor: pointer;
+      right: 0;
+      top: 100%;
+      margin-top: -10px;
+      z-index: 10;
+      @extend %_sprites;
+      @extend %_sprite-back-to-top;
+    }
+  }
+  .header {
+    figure {
+      margin: 0;
+      text-align: center;
+    }
+  }
+  > a.booking {
+    position: relative;
+    display: block;
+    font-size: 12px;
+    color: $orange;
+    font-family: $font_ubuntu-bold;
+    text-transform: uppercase;
+    padding: 20px 0 10px 0;
+    z-index: 9;
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      margin-top: -6px;
+      @extend %_sprites;
+      @extend %_sprite-arrow-orange-left;
+    }
+  }
+  .content-panel {
+  	position: relative;
+  	z-index: 9;
+  }
+  .pricetype-onglet {
+  	position: relative;
+  	padding: 0;
+  	margin: 0;
+  	li {
+  		display: inline-block;
+  		width: 50%;
+      float: left;
+  		> div {
+        cursor: pointer;
+  			font-size: 9px;
+  			text-transform: uppercase;
+        color: $black_color;
+        padding: 5px 0;
+        font-family: $font_ubuntu-regular;
+        border-top: solid 4px $grey-4;
+  		}
+      &:first-child > div {margin-right: 3px}
+      &:last-child > div {margin-left: 3px}
+  	}
+	}
+	.pricetype-content-onglet {
+		min-height: 55px;
+		p {
+      padding: 0;
+      margin: 0;
+    }
+  	.price {
+  		color: $grey-5;
+  		font-size: 15px;
+  		padding-top: 5px;
+      display: inline-block;
+      font-family: $font_ubuntu-bold;
+      .price-prefix {
+        font-family: $font_ubuntu-regular;
+        display: block;
+        font-size: 10px;
+        text-transform: uppercase;
+      }
+      &.second-price {
+        padding-top: 0;
+        line-height: 16px;
+        font-family: $font_ubuntu-bold;
+        font-size: 12px;
+        .price-prefix {
+          font-size: 11px;
+          text-transform: none;
+        }
+      }
+  	}
+    .price-info  {
+      vertical-align: bottom;
+      padding-left: 10px;
+      float: right;
+      margin-top: 8px;
+    }
+  	.pre-monthly-loyer {
+  		font-size: 10px;
+  		line-height: 13px;
+  	}
+  	.pre-monthly-loyer-txt {
+  		font-size: 10px;
+  		line-height: 13px;
+  		//color: $taupe_1_color;
+  	}
+  	.btn-panier-style-1 {
+      display: block;
+  		font-size: 9px;
+  		line-height: 22px;
+  		text-transform: uppercase;
+  		text-decoration: underline;
+  		//color: $light_taupe_1_color;
+  	}
+  }
+  .btn-panier-style-2 {
+    position: relative;
+    display: block;
+    font-size: 13px;
+    color: $grey-5;
+    font-family: $font_ubuntu-regular;
+    margin: 12px 0;
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      margin-top: -5px;
+      @extend %_sprites;
+      @extend %_sprite-arrow-gray-right;
+    }
+  }
+  .btn-panier-style-3 {
+    display: block;
+    font-family: $font_ubuntu-regular;
+    font-size: 11px;
+    color: $white_color;
+    background-color: $grey-2;
+    text-align: center;
+    padding: 10px;
+    margin: 5px 0;
+    span {
+      font-family: $font_ubuntu-bold;
+      display: block;
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+  }
+  .detail-panier-toggle {
+    width: 100%;
+   
+    .detail-panier {
+      border: solid 1px $grey-2;
+      position: relative;
+      display: block;
+      //font-family: $light_font_roboto;
+      text-transform: uppercase;
+      font-size: 11px;
+      color: $grey-5;
+      padding: 9px;
+      cursor: pointer;
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        right: 13px;
+        top: 50%;
+        margin-top: -5px;
+        @extend %_sprites;
+        @extend %_sprite-arrow-toggle;
+      }
+      .openit {display: inline-block;}
+      .closeit {display: none;}
+    }
+    &.open {
+      .openit {display: none;}
+      .closeit {display: inline-block;}
+      .detail-panier:after {
+        margin-top: -6px;
+        @extend %_sprite-cross-gray;
+      }
+    }
+    .detail-panier-content {
+      display: none;
+      padding: 8px 7px;
+      min-height: 50px;
+      border: solid 4px $grey-4;
+      border-top: 0;
+      .item-slide {
+        .item-slide-header {
+          position: relative;
+          //border-bottom: solid 1px $light_taupe_1_color;
+          padding: 0 0 8px 50px;
+          &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 5px;
+            //@extend %_sprites;
+            //@extend %_sprite-pen;
+          }
+          .number {
+            position: absolute;
+            top: 0;
+            left: 0;
+            //font-family: $italic_font_didot;
+            //border-right: solid 1px $taupe_1_color;
+            //color: $taupe_1_color;
+            font-size: 36px;
+            line-height: 28px;
+            padding: 0 9px;
+          }
+          .title {
+            //color: $taupe_1_color;
+            font-size: 12px;
+            //font-family: $medium_font_roboto;
+            text-transform: uppercase; 
+            line-height: 14px;
+          }
+          .price {
+            //color:$dark_brown_1_color;
+            font-size: 12px;
+            //font-family: $medium_font_roboto;
+            line-height: 14px;
+          }
+        }
+        .item-slide-content {
+          padding-top: 8px;
+          .once-item {
+            padding-bottom: 6px;
+            line-height: 14px;
+            .title {
+              //color: $taupe_1_color;
+              font-size: 10px;
+              //font-family: $main_font_roboto;
+              text-transform: uppercase;
+              line-height: 14px; 
+            }
+            .subtitle {
+              text-transform: normal;
+              //color: $dark_brown_1_color;
+              font-size: 11px;
+              //font-family: $light_font_roboto;
+              line-height: 14px;
+            }
+            &.same-line {
+              .title, .subtitle {display: inline;}
+            }
+            &.add-border {
+              //border-bottom: solid 1px $light_taupe_1_color;
+              margin-bottom: 8px;
+            }
+          }
+        }
+      }
+      .separator {height: 20px;}
+    }
+  }
+  .block-legal-mention {
+    min-height: 26px;
+    margin-top: 10px;
+    .legal-mention {
+      font-size: 10px;
+      line-height: 13px;
+      //color: $taupe_1_color;
+      margin: 0;
+    }
+  }
+
+  //Slick slider panier
+  .multiple-items.slick-slider {
+    padding: 0 7px;
+    margin: 0;
+  }
+  .slick-dots {
+      bottom: -15px;
+     li {
+      margin: 0 2px;
+      button:before {
+        transform: rotate(45deg);
+        //border: solid 1px $taupe_1_color;
+        content: "";
+        width: 10px;
+        height: 10px;
+        opacity: 1;
+        opacity: 1;
+        margin: 5px;
+      }
+      &.slick-active button:before {
+        //background: $taupe_1_color;
+      }
+    }
+  }
+
+  [data-pricetype="outright"] {
+  	.pricetype-onglet .outright-onglet {border-top: solid 4px $grey-8;}
+  	.price .per-monthly,
+  	.price .price-monthly,
+  	.simuler-financement,
+  	.pre-monthly-loyer,
+  	.pre-monthly-loyer-txt,
+    .price.second-price,
+    .block-legal-mention .legal-mention,
+    .price-info
+  	{
+  		display: none;
+  	}
+  }
+  [data-pricetype="monthly"] {
+    .pricetype-onglet .monthly-onglet {border-top: solid 4px $grey-8;}
+    .price .price-outright {display: none;}
+    .price.second-price {display: none;}
+  }
+  [data-pricetype="monthly->outright"] {
+  	.pricetype-onglet {display: none;}
+  	.price .price-outright {display: none;}
+  	.price.second-price .price-monthly {display: none;}
+  	.price.second-price .per-monthly {display: none;}
+  	.price.second-price .price-outright {display: inline-block;}
+  }
+  [data-pricetype="outright->monthly"] {
+  	.pricetype-onglet {display: none;}
+  	.price .price-monthly {display: none;}
+  	.price .per-monthly {display: none;}
+  	.price.second-price .per-monthly {display: inline-block;}
+  	.price.second-price .price-outright {display: none;}
+  	.price.second-price .price-monthly {display: inline-block;}
+  }
+  [data-switch="false"] {
+  	.pricetype-onglet {display: none;}
+    .pricetype-content-onglet {border-top: solid 4px $grey-4;}
+  }
+}

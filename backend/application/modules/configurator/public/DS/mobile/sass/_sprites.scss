@@ -1,0 +1,281 @@
+$spriteWidth: 302;
+$spriteHeight: 254;
+$spriteWidthPx: 302px;
+$spriteHeightPx: 254px;
+
+
+%_sprites {
+  background-image: url('../img/sprites/sprites@1.png?#{$spriteWidth}#{$spriteHeight}');
+  background-repeat: no-repeat;
+  @media only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (-moz-min-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (min-device-pixel-ratio: 2) {
+      background-size: round($spriteWidthPx/2) round($spriteHeightPx/2);
+      background-image: url('../img/sprites/sprites@2.png?#{$spriteWidth}#{$spriteHeight}');
+  }
+}
+
+
+%_sprite-slideVision-arrow-prev{
+  background-position: (-4px/2) (-4px/2);
+  width: (80px/2);
+  height: (80px/2);
+}
+
+%_sprite-slideVision-arrow-next{
+  background-position: (-92px/2) (-4px/2);
+  width: (80px/2);
+  height: (80px/2);
+}
+
+%_sprite-close-popin-2{
+  background-position: (-4px/2) (-92px/2);
+  width: (78px/2);
+  height: (78px/2);
+}
+
+%_sprite-ico-share{
+  background-position: (-90px/2) (-92px/2);
+  width: (50px/2);
+  height: (50px/2);
+}
+
+%_sprite-ma-config{
+  background-position: (-180px/2) (-4px/2);
+  width: (46px/2);
+  height: (40px/2);
+}
+
+%_sprite-car{
+  background-position: (-180px/2) (-52px/2);
+  width: (44px/2);
+  height: (34px/2);
+}
+
+%_sprite-check{
+  background-position: (-180px/2) (-94px/2);
+  width: (42px/2);
+  height: (42px/2);
+}
+
+%_sprite-ico-modif{
+  background-position: (-4px/2) (-178px/2);
+  width: (38px/2);
+  height: (38px/2);
+}
+
+%_sprite-status-error{
+  background-position: (-50px/2) (-178px/2);
+  width: (34px/2);
+  height: (34px/2);
+}
+
+%_sprite-icon-info{
+  background-position: (-92px/2) (-178px/2);
+  width: (32px/2);
+  height: (32px/2);
+}
+
+%_sprite-btn-prev-black{
+  background-position: (-148px/2) (-92px/2);
+  width: (20px/2);
+  height: (32px/2);
+}
+
+%_sprite-slide-arrow-prev-grey{
+  background-position: (-132px/2) (-178px/2);
+  width: (20px/2);
+  height: (32px/2);
+}
+
+%_sprite-btn-prev-white{
+  background-position: (-160px/2) (-178px/2);
+  width: (20px/2);
+  height: (32px/2);
+}
+
+%_sprite-slide-arrow-next-grey{
+  background-position: (-188px/2) (-178px/2);
+  width: (20px/2);
+  height: (32px/2);
+}
+
+%_sprite-status-ok{
+  background-position: (-180px/2) (-144px/2);
+  width: (32px/2);
+  height: (24px/2);
+}
+
+%_sprite-icon-enlarge{
+  background-position: (-234px/2) (-4px/2);
+  width: (32px/2);
+  height: (32px/2);
+}
+
+%_sprite-btn-next-black{
+  background-position: (-234px/2) (-44px/2);
+  width: (20px/2);
+  height: (32px/2);
+}
+
+%_sprite-btn-next-white{
+  background-position: (-234px/2) (-84px/2);
+  width: (20px/2);
+  height: (32px/2);
+}
+
+%_sprite-icopie{
+  background-position: (-234px/2) (-124px/2);
+  width: (30px/2);
+  height: (30px/2);
+}
+
+%_sprite-checkbox-checked{
+  background-position: (-234px/2) (-162px/2);
+  width: (28px/2);
+  height: (24px/2);
+}
+
+%_sprite-dotempty{
+  background-position: (-4px/2) (-224px/2);
+  width: (26px/2);
+  height: (26px/2);
+}
+
+%_sprite-arrow-light{
+  background-position: (-38px/2) (-224px/2);
+  width: (14px/2);
+  height: (26px/2);
+}
+
+%_sprite-arrow-bottom{
+  background-position: (-234px/2) (-194px/2);
+  width: (26px/2);
+  height: (14px/2);
+}
+
+%_sprite-arrow-top{
+  background-position: (-90px/2) (-150px/2);
+  width: (26px/2);
+  height: (14px/2);
+}
+
+%_sprite-slide-prev{
+  background-position: (-60px/2) (-224px/2);
+  width: (18px/2);
+  height: (26px/2);
+}
+
+%_sprite-slide-next{
+  background-position: (-86px/2) (-224px/2);
+  width: (18px/2);
+  height: (26px/2);
+}
+
+%_sprite-slide-arrow-prev{
+  background-position: (-112px/2) (-224px/2);
+  width: (14px/2);
+  height: (26px/2);
+}
+
+%_sprite-slide-arrow-prev-white{
+  background-position: (-134px/2) (-224px/2);
+  width: (14px/2);
+  height: (26px/2);
+}
+
+%_sprite-slide-arrow-next{
+  background-position: (-156px/2) (-224px/2);
+  width: (14px/2);
+  height: (26px/2);
+}
+
+%_sprite-slide-arrow-next-white{
+  background-position: (-178px/2) (-224px/2);
+  width: (14px/2);
+  height: (26px/2);
+}
+
+%_sprite-dotcomp{
+  background-position: (-200px/2) (-224px/2);
+  width: (26px/2);
+  height: (26px/2);
+}
+
+%_sprite-indicateurempty{
+  background-position: (-234px/2) (-224px/2);
+  width: (24px/2);
+  height: (24px/2);
+}
+
+%_sprite-indicateur{
+  background-position: (-274px/2) (-4px/2);
+  width: (24px/2);
+  height: (24px/2);
+}
+
+%_sprite-close-popin{
+  background-position: (-274px/2) (-36px/2);
+  width: (20px/2);
+  height: (20px/2);
+}
+
+%_sprite-close-recap{
+  background-position: (-274px/2) (-64px/2);
+  width: (18px/2);
+  height: (18px/2);
+}
+
+%_sprite-recap-item-active{
+  background-position: (-274px/2) (-90px/2);
+  width: (18px/2);
+  height: (18px/2);
+}
+
+%_sprite-recap-item{
+  background-position: (-274px/2) (-116px/2);
+  width: (18px/2);
+  height: (18px/2);
+}
+
+%_sprite-plus{
+  background-position: (-274px/2) (-142px/2);
+  width: (16px/2);
+  height: (16px/2);
+}
+
+%_sprite-icon-nav{
+  background-position: (-274px/2) (-166px/2);
+  width: (16px/2);
+  height: (16px/2);
+}
+
+%_sprite-chevronmixteright{
+  background-position: (-274px/2) (-190px/2);
+  width: (8px/2);
+  height: (14px/2);
+}
+
+%_sprite-chevronmixteleft{
+  background-position: (-290px/2) (-190px/2);
+  width: (8px/2);
+  height: (14px/2);
+}
+
+%_sprite-cross{
+  background-position: (-274px/2) (-212px/2);
+  width: (14px/2);
+  height: (14px/2);
+}
+
+%_sprite-picto-list-left{
+  background-position: (-274px/2) (-234px/2);
+  width: (10px/2);
+  height: (10px/2);
+}
+
+
+
+
+

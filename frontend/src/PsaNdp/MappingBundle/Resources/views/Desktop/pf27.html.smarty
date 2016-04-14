@@ -1,0 +1,23 @@
+<section class="slice-pf27 {if isset($slicePF27.anchorId)} {$slicePF27.anchorId} {/if}" {if isset($slicePF27.anchorId)} id="{$slicePF27.anchorId}" {/if} datalayer="{$slicePF27.datalayer}">
+	<h2 class="title">{$slicePF27.title}</h2>
+	<div class="slick-container carousel-vignette js-slick-carousel-container js-no-slick-mobile clearfix" data-options='{ldelim}"slidesToShow": 3, "slidesToScroll": 3{rdelim}'>
+		<div class="js-slick-carousel">
+			{foreach $slicePF27.models as $item}
+				<div class="small-6 vignette-wrapper">
+					{include file="../Components/vignette.html.smarty" blockOrder=$slicePF27.blockOrder blockName=$slicePF27.blockName imgSrc=$item.thumbnail  imgAlt=$item.title}
+				</div>
+			{/foreach}
+		</div>
+	</div>
+
+	{if !empty($slicePF27.ctas)}
+		<div class="text-center">
+			{foreach $slicePF27.ctas as $cta}
+				{include file="../Components/cta.html.smarty" gtm="{ldelim}\"eventType\":\"click\",\"dataList\":{ldelim}\"event\":\"uaevent\",\"eventCategory\":\"{$slicePF27.blockName}::position-{$slicePF27.blockOrder}\",\"eventAction\":\"Redirection\",\"eventLabel\":\"{$cta.title|escape:html}\"{rdelim}{rdelim}"}
+			{/foreach}
+		</div>
+	{/if}
+
+	<p class="legal-notice">{$slicePF27.mentionsLegales}</p>
+
+</section>

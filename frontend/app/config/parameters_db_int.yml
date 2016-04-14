@@ -1,0 +1,7 @@
+parameters:
+    database_driver: pdo_mysql
+    database_host: localhost
+    database_port: 3306
+    database_name: NDP_INT
+    database_user: mdendp00
+    database_password: sqlndp00

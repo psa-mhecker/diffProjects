@@ -1,0 +1,304 @@
+.lame.finition {
+  > div > div.row.radio-case{
+    padding-bottom: 30px;
+  }
+
+  .finition-description{
+    .plus-list{
+      padding-right: 40px;
+      li {
+        padding-left: 17px;
+      }
+    }
+  }
+
+  .listing.equipments.unique{
+    padding: 0;
+    ul.listes{
+      padding-top: 10px;
+    }
+    .nb.col-md-12{
+      margin-top: 5px;
+      padding: 0;
+      margin-bottom: 10px;
+    }
+    .list_dark{
+      margin: 5px 0;
+      padding-right: 15px;
+      &:first-child{
+        margin: 5px 0;
+      }
+    }
+    .cont-toggle {
+      //overflow: auto;
+    }
+    .behindEquipmentList {
+      margin-top: 20px;
+    }
+  }
+
+
+  margin-top: 64px;
+  margin-right: 15px;
+  figure{
+    margin: 0;
+    li.onHover{
+      padding-left: 0;
+      padding-right: 5px;
+      &:nth-of-type(2){
+        padding-left: 2.5px;
+        padding-right: 2.5px;
+      }
+      &:nth-of-type(3){
+        padding-left: 5px;
+        padding-right: 0px;
+        a.hoverZoom{
+          right: 0;
+          left: inherit;
+        }
+      }
+    }
+  }
+
+  &.finition > div aside {
+    .badge-lg{
+      position: absolute;
+      top: -4px;
+      left: -4px;
+      width: calc(100% + 8px);
+      height: 28px;
+      padding: 3px 15px;
+      text-transform: uppercase;
+      font: 13px $font-family-brand-bold;
+      color: $default-color;
+      border: 4px solid $bage-nouveaute;
+      margin: 0 auto;
+    }
+    .mensuel-element{
+      &.price{
+        font-size: 15px;
+      }
+      .price-from.price-monthly{
+        text-transform: lowercase;
+        width: 60%;
+      }
+    }
+    .price-from{
+      margin-bottom: 5px;
+      font: 14px/1.2 $font-family-brand-regular;
+    }
+    > strong.price {
+      font: 18px/18px $font-family-base-bold;
+      .price-from{
+        text-transform: uppercase;
+      }
+    }
+
+    > strong {
+      font: 38px/36px "citroenbold";
+      .price-from{
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  aside{
+    .jauges-lvl-container{ float: right; }
+    label.checked{
+      .input{
+        display: none;
+      }
+      span.selected{
+        &, span{ width: 85%; }
+      }
+    }
+    .label.input-text{
+      width: 100%;
+    }
+    &.fin-radio{
+    }
+    .radio_btn{
+      margin-bottom: 1px;
+    }
+  }
+
+  > div aside > strong.price .info--blue{
+        position: relative;
+        top: 5px;
+        right: auto;
+    }
+
+  .price{
+    margin: 5px 0;
+    position: relative;
+  }
+
+  .label{
+    b{
+      display: inline-block;
+      vertical-align: middle;
+      width: calc(100% - 57px);
+    }
+  }
+
+
+  .info--orange{
+    top:50%;
+    margin-top:-13px;
+  }
+
+
+  .span-button-fix{
+    width: 100px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+
+  .not-bold{
+     font-weight: normal;
+  }
+  .addComparator-toggle{
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 17px;
+    width: 215px;
+    margin-top: 16px;
+    position: relative;
+    .addComparator{
+      font-size: 11px;
+      padding: 18px 15px;
+      background-color: $default-color;
+      z-index: 2;
+      .added {
+        display: none;
+      }
+      &.disabled{
+        opacity: 0.5;
+        &:hover{
+          box-shadow: none;
+          border-color: $gray;
+          .plus--dark-gray{
+            display: none;
+          }
+          .plus--gray{
+            display: inline-block;
+          }
+        }
+      }
+      &:hover{
+        box-shadow: inset 0 0 0 4px $gray-citroen;
+      }
+    }
+    .comparator-views{
+      background-color: $default-color;
+      position: absolute;
+      top: 63px;
+      right: 5px;
+      z-index: 1;
+      border: 1px solid $gray;
+      display: none;
+      >div{
+        padding: 15px;
+        ul{
+          width: calc( 100% - 190px);
+          display: inline-block;
+          li{
+            padding: 0;
+            padding-right: 15px;
+            display: inline-block;
+            img{
+              width: 100%;
+            }
+            div.close{
+              position: absolute;
+              top: 0;
+              right: 15px;
+              cursor: pointer;
+              @extend %_sprites;
+              @extend %_sprite-bouton-suppression-comparateur;
+            }
+            .empty{
+              border: 4px dashed $comparator-empty-border;
+            }
+          }
+        }
+        .infosComparator{
+          display: inline-block;
+          width: 179px;
+          float: right;
+          font-size: 12px;
+          .cta-goToComparator{
+            padding: 15px 20px;
+            background-color: $comparator-btn-color;
+            color: $default-color;
+            font-size: 11px;
+          }
+          .close-comparator-view{
+            font-size: 13px;
+            position: absolute;
+            bottom: 20px;
+            right: 15px;
+            color: $comparator-btn-color;
+            padding-right: 20px;
+            &:after{
+              content: '';
+              position: absolute;
+              right: 0;
+              top: 1px;
+              @extend %_sprites;
+              @extend %_sprite-cross-gray;
+            }
+          }
+        }
+      }
+    }
+
+    &.close{
+      .addComparator{
+        border-bottom-color: $default-color;
+      }
+      .comparator-views{
+      }
+    }
+  }
+
+  .toggle-finition{
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    &.has-comparator{
+      width: calc( 100% - 236px);
+    }
+    strong.title{
+      padding-bottom: 10px;
+    }
+    .title.not-bold.colors-title{
+      padding-bottom: 5px;
+    }
+  }
+  .listes{
+    .list_rond{
+      &:before{
+        top: 5px;
+      }
+    }
+  }
+
+  .dispo{
+    .col-md-2.ico{
+      height: 57px;
+      width: 16.66667%;
+      max-width: 57px;
+    }
+  }
+}
+
+//fix add comparator btn hover on touch devices
+html.touch{
+  .lame.finition .addComparator-toggle .addComparator{
+    box-shadow: none;
+    &:hover{
+      box-shadow: none;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+<?php
+
+namespace PsaNdp\MappingBundle\Sources;
+
+use OpenOrchestra\ModelInterface\Model\ReadBlockInterface;
+use PSA\MigrationBundle\Entity\Page\PsaPageZone;
+use Symfony\Component\HttpFoundation\Request;
+{% for use in uses %}use {{use}};{% endfor %}
+
+/**
+ * Class {{sourceName}}
+ * @package PsaNdp\MappingBundle\Sources
+ */
+class {{sourceName}} extends AbstractDataSource
+{
+{%  if parameters  %}
+{% for parameter in parameters %}
+    /**
+     * @var {{parameter.type}}
+     */
+    private ${{parameter.name}};
+
+{% endfor %}
+    /**
+{% for parameter in parameters %}
+     * @param {{argTypeFormat|format(parameter.type)}} ${{parameter.name}}
+{% endfor %}
+     */
+    public function __construct({% for parameter in parameters %}{{parameter.prefix}}${{parameter.name}}{%if not loop.last %}, {% endif %}{% endfor %})
+    {
+{% for parameter in parameters %}
+        $this->{{parameter.name}} = ${{parameter.name}};
+{% endfor %}
+    }
+{%  endif %}
+}

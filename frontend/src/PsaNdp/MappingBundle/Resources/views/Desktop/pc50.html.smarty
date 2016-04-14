@@ -1,0 +1,66 @@
+<section class="slice-pc50 {if isset($slicePC50.anchorId)} {$slicePC50.anchorId} {/if}" {if isset($slicePC50.anchorId)} id="{$slicePC50.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePC50' } ]">
+    <div class="intro">
+        <h2 class="title-level1">{$slicePC50.subTitle}</h2>
+        <p>
+            {$slicePC50.intro}
+        </p>
+    </div>
+    {if isset($slicePC50.type1)}
+        <article class="std-article">
+            {if isset($slicePC50.type1.articles.img)}
+                <figure class="span_12_of_12">
+                    <img src="{$slicePC50.type1.articles.img.src}" alt="{$slicePC50.type1.articles.img.title}"/>
+                </figure>
+            {/if}
+            <div class="clearfix">
+                {foreach $slicePC50.type1.articles.description as $description}
+                    <div class="span_6_of_12 grid-col">
+                        <p>
+                            {$description.paragraphe}
+                        </p>
+                    </div>
+                {/foreach}
+            </div>
+        </article>
+        <div class="rdv-form form-center">
+            <h3 class="title-legend"> {$slicePC50.type1.title_rdv}</h3>
+            <div class="span_2_of_12 grid-col"></div>
+            <form action="" class="span_7_of_12 grid-col">
+                <input type="text" id="search-loc-input" autofocus>
+                <input type="submit" class="search-loc-submit" value="OK">
+
+                <p>
+                    <small>{$slicePC50.type1.notation}</small>
+                </p>
+            </form>
+            <div class="span_2_of_12 grid-col"></div>
+        </div>
+    {else if isset($slicePC50.type2)}
+        <article class="std-article clearfix">
+            <div class="span_6_of_12 grid-col">
+                <figure>
+                    <img src="{$slicePC50.type2.articles.img.src}" alt="{$slicePC50.type2.articles.img.title}"/>
+                </figure>
+            </div>
+            <div class="span_6_of_12 grid-col">
+                {foreach $slicePC50.type2.articles.description.text as $text}
+                    <p>
+                        {$text}
+                    </p>
+                {/foreach}
+                <div class="rdv-form">
+                    <h2 class="title-legend">{$slicePC50.type2.title_rdv}</h2>
+
+                    <form action="" class="span_12_of_12 grid-col">
+                        <input type="text" id="search-loc-input" autofocus>
+                        <input type="submit" class="search-loc-submit" value="OK">
+                    </form>
+                    <p>
+                        <small>{$slicePC50.type2.notation}</small>
+                    </p>
+                </div>
+            </div>
+        </article>
+    {/if}
+    <div id="map-canvas"></div>
+</section>

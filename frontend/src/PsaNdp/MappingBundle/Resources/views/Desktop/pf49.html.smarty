@@ -1,0 +1,98 @@
+<section class="slice-pf49 {if isset($slicePF49.anchorId)} {$slicePF49.anchorId} {/if}" {if isset($slicePF49.anchorId)} id="{$slicePF49.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePF49' } ]">
+    {assign  var="count" value=$slicePF49.wizardSteps|count}
+    <ul class="wizard-steps {if $count eq 2 }only-two{/if} ">
+        {foreach $slicePF49.wizardSteps as $step}
+            <li class="{if isset($step.isActive) and $step.isActive eq true}active{/if}">
+                <div><span>{$step.name}</span></div>
+            </li>
+        {/foreach}
+    </ul>
+    <form action="" method="post" class="form-horizontal">
+        <div class="errorbox"></div>
+        {if isset($slicePF49.myInfosForm.concessionnaire)}
+            <div class="radio-group contact-dealer">
+                <p>{$slicePF49.myInfosForm.concessionnaire.txt}{if isset($slicePF49.myInfosForm.concessionnaire.required) and $slicePF49.myInfosForm.concessionnaire.required eq true}*{/if}</p>
+                <div class="form-control">
+                    <ul>
+                        {foreach $slicePF49.myInfosForm.concessionnaire.choises as $type}
+                            <li class="radio">
+                                <input type="radio" name="concessionnaire" value="" id="{$type.name}"
+                                       {if isset($slicePF49.myInfosForm.concessionnaire.required) and $slicePF49.myInfosForm.concessionnaire.required eq true}required
+                                       data-msg-required="{$slicePF49.myInfosForm.contactBy.errorMsg}"{/if} {if isset($slicePF49.myInfosForm.concessionnaire.disabled) and $slicePF49.myInfosForm.concessionnaire.disabled eq true}disabled{/if} {if isset($type.checked) and $type.checked eq true}checked{/if}>
+                                <label for="{$type.name}">{$type.txt}</label>
+                            </li>
+                        {/foreach}
+                    </ul>
+                </div>
+            </div>
+        {/if}
+        <div class="peugeot-id">
+            <p>{$slicePF49.myInfosForm.infosWithID.txt}</p>
+            <a href="{$slicePF49.myInfosForm.infosWithID.cta.url}" class="cta-btn" {if isset($slicePF49.myInfosForm.infosWithID.cta.target)}target="{$slicePF49.myInfosForm.infosWithID.cta.target}"{/if}>
+                {$slicePF49.myInfosForm.infosWithID.cta.title}
+            </a>
+        </div>
+        <div class="select">
+            <label class="control-label">{$slicePF49.myInfosForm.civility.txt}{if isset($slicePF49.myInfosForm.civility.required) and $slicePF49.myInfosForm.civility.required eq true}*{/if}</label>
+            <div class="form-control">
+                <select name="civilité" class="select-js"
+                        {if isset($slicePF49.myInfosForm.civility.required) and $slicePF49.myInfosForm.civility.required eq true}required
+                        data-msg-required="{$slicePF49.myInfosForm.civility.errorMsg}"{/if}  {if isset($slicePF49.myInfosForm.civility.disabled) and $slicePF49.myInfosForm.civility.disabled eq true}disabled{/if}>
+                    <option value=""{if isset($type.target)} data-target="{$type.target}"{/if}>{$slicePF49.myInfosForm.civility.txt}</option>
+                    {foreach $slicePF49.myInfosForm.civility.choises as $type}
+                        <option value="1"{if isset($type.target)} data-target="{$type.target}"{/if}>{$type.txt}</option>
+                    {/foreach}
+                </select>
+                <a href="#" class="help" {if isset($links.target)}target="{$links.target}"{/if}><!-- help --></a>
+            </div>
+        </div>
+        {foreach $slicePF49.myInfosForm.fieldsText as $field}
+            <div class="input-text">
+                <label class="control-label" for="{$field.name}">{$field.txt}{if isset($field.required) and $field.required eq true}*{/if}</label>
+                <div class="form-control">
+                    <input type="{if $field.name == 'telephone'}tel{elseif $field.name == 'email'}email{else}text{/if}"
+                           name="{$field.name}" id="{$field.name}" {if $field.name == 'email'}data-rule-email="true"
+                           data-msg-email="{$field.errorMsgEmail}"{/if} {if $field.name == 'telephone'} data-rule-number="true" data-msg-number="{$field.errorMsgTel}"{/if}  {if isset($field.disabled) and $field.disabled eq true}disabled{/if}  {if isset($field.required) and $field.required eq true}required data-msg-required="{$field.errorMsg}"{/if}>
+                </div>
+            </div>
+        {/foreach}
+        <div class="radio-group contact-by">
+            <p class="control-label">{$slicePF49.myInfosForm.contactBy.txt}{if isset($slicePF49.myInfosForm.contactBy.required) and $slicePF49.myInfosForm.contactBy.required eq true}*{/if}</p>
+            <div class="form-control">
+                <ul>
+                    {foreach $slicePF49.myInfosForm.contactBy.choises as $type}
+                        <li class="radio">
+                            <input type="radio" name="contact_by" value="" id="{$type.name}"
+                                   {if isset($type.disabled) and $type.disabled eq true}disabled{/if}  {if isset($slicePF49.myInfosForm.contactBy.required) and $slicePF49.myInfosForm.contactBy.required eq true}required data-msg-required="{$slicePF49.myInfosForm.contactBy.errorMsg}"{/if}  {if isset($type.checked) and $type.checked eq true}checked{/if}>
+                            <label for="{$type.name}">{$type.txt}</label>
+                        </li>
+                    {/foreach}
+                </ul>
+            </div>
+        </div>
+        <div class="textarea-box">
+            <label class="control-label" for="{$slicePF49.myInfosForm.comment.name}">{$slicePF49.myInfosForm.comment.txt}{if isset($slicePF49.myInfosForm.comment.required) and $slicePF49.myInfosForm.comment.required eq true}*{/if}</label>
+            <textarea name="{$slicePF49.myInfosForm.comment.name}" {if isset($slicePF49.myInfosForm.comment.required) and $slicePF49.myInfosForm.comment.required eq true}required{/if}></textarea>
+        </div>
+        <div class="checkbox-group">
+            <p>{$slicePF49.myInfosForm.agrees.txt}{if isset($type.required) and $type.required eq true}*{/if}</p>
+            {foreach $slicePF49.myInfosForm.agrees.choises as $type}
+                <div class="checkbox">
+                    <input type="checkbox" name="{$type.name}" id="{$type.name}" value=""
+                           {if isset($type.checked) and $type.checked eq true}checked{/if} {if isset($type.required) and $type.required eq true}required data-msg-required="{$type.errorMsg}"{/if}  >
+                    <label for="{$type.name}">{$type.txt}</label>
+                </div>
+            {/foreach}
+        </div>
+        <p class="notice">{$slicePF49.myInfosForm.noticeRequire}</p>
+        <div class="form-action">
+            <a href="{$slicePF49.myInfosForm.actionFrom.goBack.url}" class="go-back">{$slicePF49.myInfosForm.actionFrom.goBack.title}</a>
+            <div class="custom-button-group">
+	            <button class="cta-block cta-btn cta-btn-4">{$slicePF49.myInfosForm.actionFrom.sendButton}</button>
+            </div>
+        </div>
+        {foreach $slicePF49.myInfosForm.textInfo as $text}
+            <p>{$text.txt}</p>
+        {/foreach}
+    </form>
+</section>

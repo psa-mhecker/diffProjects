@@ -1,1 +1,1 @@
-. /var/www/cppv2/_init/addons/install.sh
+. /var/www/_init/addons/install.sh

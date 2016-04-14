@@ -1,0 +1,15 @@
+{
+  "curly": true,
+  "eqnull": true,
+  "eqeqeq": true,
+  "undef": true,
+  "browser": true,
+  "esnext": true,
+  "globals": {
+    "jQuery": true,
+    "$": true,
+    "google": true,
+    "MarkerClusterer": true,
+    "_": true
+  }
+}

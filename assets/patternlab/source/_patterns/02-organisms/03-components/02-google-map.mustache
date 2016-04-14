@@ -1,0 +1,40 @@
+<div class="js-map-container map-container"
+     data-pictoMap="http://www.hostingpics.net/thumbs/12/51/96/mini_125196pin.png"
+     data-pictoMapOn="http://www.hostingpics.net/thumbs/58/37/85/mini_583785pinon.png"
+     data-pictoMapOff="http://www.hostingpics.net/thumbs/72/43/39/mini_724339pinoff.png">
+    <p class="errorOnLoad hide">Message d'erreur</p>
+    <span id="textLinkInfoWindow" class="hide">vieux info window</span>
+
+    <div id="map-canvas" class="map-display"></div>
+
+    {{> organisms-locator-list-result }}
+
+    <script id="tpl-dealer-item" type="text/template">
+        <div id="dealer-<%- id %>" class="dealer-item row">
+            <% if (adress.dist !== '0') { %>
+            <div class="dist small-2 large-3 column">
+                <div class="picto"></div>
+                <div class="km">
+                    <span class="nb-km"><%- adress.dist%></span><span class="unit">km</span>
+                </div>
+            </div>
+            <% } %>
+            <div class="coord <% if(adress.dist !== '0'){ %>small-10 large-9<% } %> column">
+                <div class="dealer-name font-bold"><%- name %></div>
+                <div class="dealer-type"><%- type %></div>
+                <div class="dealer-street"><%- adress.street %></div>
+                <div class="dealer-city"><%- adress.city %></div>
+                <div class="dealer-phone"><span>Tel: </span><span class="phoneNumber"><%- contact.tel %></span>
+                </div>
+            </div>
+        </div>
+    </script>
+    <script id="tpl-infowindow" type="text/template">
+        <div class="infowindow">
+            <h3 class="dealer-name"><%- dealerName %></h3>
+            <% if(btnDetailedSheet !== undefined) { %>
+            <a id="dealer-details" class="cta-link" href="#"><%- btnDetailedSheet %></a>
+            <% } %>
+        </div>
+    </script>
+</div>

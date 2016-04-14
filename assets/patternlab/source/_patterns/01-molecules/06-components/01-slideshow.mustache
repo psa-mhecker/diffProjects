@@ -1,0 +1,10 @@
+<ul class="exemple-orbit" data-orbit {{#timerSpeed}}data-options="timer_speed:{{timerSpeed}};timer:true;"{{/timerSpeed}}>
+{{#slideshow}}
+    <li {{#data-slide}}data-orbit-slide="{{data-slide}}"{{/data-slide}}>
+        <img class="small-12" src="{{src}}" alt="{{alt}}" >
+    </li>
+{{/slideshow}}
+
+</ul>
+<div class='show-for-small-only slideshow-click-zone left'></div>
+<div class='show-for-small-only slideshow-click-zone right'></div>

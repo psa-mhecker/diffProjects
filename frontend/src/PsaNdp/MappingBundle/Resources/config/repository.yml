@@ -1,0 +1,367 @@
+parameters:
+    psa_ndp_appli_mobile_repository.class: PsaNdp\MappingBundle\Repository\PsaAppliMobileRepository
+    psa_ndp_content_repository.class: PSA\MigrationBundle\Repository\PsaContentRepository
+    psa_ndp_content_category_repository.class: PSA\MigrationBundle\Repository\PsaContentCategoryRepository
+    psa_ndp_cta_repository.class: PSA\MigrationBundle\Repository\PsaCtaRepository
+    psa_ndp_content_type_repository.class: PSA\MigrationBundle\Repository\PsaContentTypeRepository
+    psa_ndp_content_zone_repository.class: PSA\MigrationBundle\Repository\PsaContentZoneRepository
+    psa_ndp_page_zone_repository.class: PSA\MigrationBundle\Repository\PsaPageZoneRepository
+    psa_ndp_page_multi_zone_repository.class: PSA\MigrationBundle\Repository\PsaPageMultiZoneRepository
+    psa_ndp_social_network_repository.class: PSA\MigrationBundle\Repository\PsaReseauSocialRepository
+    psa_ndp_groupe_reseaux_sociaux_repository.class: PsaNdp\MappingBundle\Repository\PsaGroupeReseauxSociauxRepository
+    psa_ndp_page_repository.class: PSA\MigrationBundle\Repository\PsaPageRepository
+    psa_ndp_page_version_repository.class: PSA\MigrationBundle\Repository\PsaPageVersionRepository
+    psa_ndp_template_page_repository.class: PSA\MigrationBundle\Repository\PsaTemplatePageRepository
+    psa_ndp_language_repository.class: PSA\MigrationBundle\Repository\PsaLanguageRepository
+    psa_ndp_label_langue_site_repository.class: PSA\MigrationBundle\Repository\PsaLabelLangueSiteRepository
+    psa_ndp_label_repository.class: PSA\MigrationBundle\Repository\PsaLabelRepository
+    psa_ndp_media_repository.class: PSA\MigrationBundle\Repository\PsaMediaRepository
+    psa_ndp_media_format_repository.class: PSA\MigrationBundle\Repository\PsaMediaFormatRepository
+    psa_ndp_content_version_repository.class: PSA\MigrationBundle\Repository\PsaContentVersionRepository
+    psa_ndp_site_service_repository.class: PSA\MigrationBundle\Repository\PsaSiteServiceRepository
+    psa_ndp_sites_et_webservices_psa_repository.class: PsaNdp\MappingBundle\Repository\PsaSitesEtWebservicesPsaRepository
+    psa_ndp_site_code_repository.class: PSA\MigrationBundle\Repository\PsaSiteCodeRepository
+    psa_ndp_app_mobile_repository.class: PSA\MigrationBundle\Repository\PsaAppMobileRepository
+    psa_ndp_zone_template_repository.class: PSA\MigrationBundle\Repository\PsaZoneTemplateRepository
+    psa_ndp_page_area_block_reference_repository.class: PSA\MigrationBundle\Repository\PsaPageAreaBlockReferenceRepository
+    psa_ndp_become_agent_repository.class: PsaNdp\MappingBundle\Repository\PsaBecomeAgentRepository
+    psa_ndp_dealer_service_repository.class: PsaNdp\MappingBundle\Repository\PsaDealerServiceRepository
+    psa_ndp_model_repository.class: PsaNdp\MappingBundle\Repository\PsaModelRepository
+    psa_ndp_model_site_repository.class: PsaNdp\MappingBundle\Repository\PsaModelSiteRepository
+    psa_ndp_model_view_angle_repository.class: PsaNdp\MappingBundle\Repository\PsaModelViewAngleRepository
+    psa_ndp_model_silhouette_angle_repository.class: PsaNdp\MappingBundle\Repository\Vehicle\PsaModelSilhouetteAngleRepository
+    psa_ndp_connect_services_repository.class: PsaNdp\MappingBundle\Repository\PsaConnectServicesRepository
+    psa_ndp_service_connect_finition_grouping_repository.class: PsaNdp\MappingBundle\Repository\PsaServiceConnectFinitionGroupingRepository
+    psa_ndp_model_silhouette_upselling_repository.class: PsaNdp\MappingBundle\Repository\PsaModelSilhouetteUpsellingRepository
+    psa_ndp_groupe_reseaux_sociaux_rs_repository.class: PSA\MigrationBundle\Repository\PsaGroupeReseauxSociauxRsRepository
+    psa_ndp_groupe_reseaux_sociaux_repository.class: PSA\MigrationBundle\Repository\PsaGroupeReseauxSociauxRepository
+    psa_ndp.repository.rewrite.class: PSA\MigrationBundle\Repository\PsaRewriteRepository
+    psa_ndp.repository.media_alt_translation.class: PSA\MigrationBundle\Repository\PsaMediaAltTranslationRepository
+    psa_ndp.repository.site_webservice.class: PsaNdp\MappingBundle\Repository\PsaSiteWebserviceRepository
+
+    ## repo to use through dispatcher for strategy data source
+    psa_ndp_page_zone_configurable_repository_dispatcher.class: PSA\MigrationBundle\RepositoryDispatcher\PsaPageZoneConfigurableRepositoryDispatcher
+    psa_ndp_page_zone_multi_repository.class: PSA\MigrationBundle\Repository\PsaPageZoneMultiRepository
+    psa_ndp_page_multi_zone_multi_repository.class: PSA\MigrationBundle\Repository\PsaPageMultiZoneMultiRepository
+    psa_ndp_page_zone_content_repository.class: PSA\MigrationBundle\Repository\PsaPageZoneContentRepository
+    psa_ndp_page_multi_zone_content_repository.class: PSA\MigrationBundle\Repository\PsaPageMultiZoneContentRepository
+
+    psa_ndp.repository.vehicle.model_config.class: PsaNdp\MappingBundle\Repository\Vehicle\PsaModelConfigRepository
+    psa_ndp.repository.vehicle.vehicle_category_site.class: PsaNdp\MappingBundle\Repository\Vehicle\PsaVehicleCategorySiteRepository
+    psa_ndp.repository.vehicle.model_silhouette_site.class: PsaNdp\MappingBundle\Repository\Vehicle\PsaModelSilhouetteSiteRepository
+    psa_ndp.repository.vehicle.model_site.class: PsaNdp\MappingBundle\Repository\Vehicle\PsaModelSiteRepository
+    psa_ndp.repository.vehicle.color_type_site.class: PsaNdp\MappingBundle\Repository\Vehicle\PsaColorTypeSiteRepository
+    psa_ndp.repository.finishing_site.class: PsaNdp\MappingBundle\Repository\Vehicle\PsaFinishingSiteRepository
+    psa_ndp.repository.segmentation_finishing_site.class: PsaNdp\MappingBundle\Repository\PsaSegmentationFinishesSiteRepository
+    psa_ndp.repository.accessories.accessories.class: PsaNdp\MappingBundle\Repository\Accessories\PsaAccessoriesRepository
+    psa_ndp.repository.accessories.accessories_site.class: PsaNdp\MappingBundle\Repository\Accessories\PsaAccessoriesSiteRepository
+    psa_ndp.repository.redirection.class: PsaNdp\MappingBundle\Repository\RedirectionRepository
+    psa_ndp.repository.car_selector_settings.class: PsaNdp\MappingBundle\Repository\PsaCarSelectorFilterRepository
+    psa_ndp.repository.finishin_color.class: PsaNdp\MappingBundle\Repository\PsaFinishingColorRepository
+    psa_ndp.repository.filter_after_sale_services.class: PsaNdp\MappingBundle\Repository\PsaFilterAfterSaleServicesRepository
+    psa_ndp.repository.after_sale_services.class: PsaNdp\MappingBundle\Repository\PsaAfterSaleServicesRepository
+
+services:
+ # Repositories Services
+    psa_ndp_site_repository:
+      alias: open_orchestra_model.repository.site
+    psa_ndp_appli_mobile_repository:
+        class:           %psa_ndp_appli_mobile_repository.class%
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: ['PsaNdpMappingBundle:PsaAppliMobile']
+
+    psa_ndp_content_repository:
+        class:           %psa_ndp_content_repository.class%
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: ['PSAMigrationBundle:Content\PsaContent']
+    psa_ndp_content_category_repository:
+        class:           %psa_ndp_content_category_repository.class%
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: ['PSAMigrationBundle:Content\PsaContentCategory']
+    psa_ndp_content_type_repository:
+        class:           %psa_ndp_content_type_repository.class%
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: ['PSAMigrationBundle:Content\PsaContentType']
+    psa_ndp_content_zone_repository:
+        class:           %psa_ndp_content_zone_repository.class%
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: ['PSAMigrationBundle:Content\PsaContentZone']
+    psa_ndp_page_zone_repository:
+        class:           %psa_ndp_page_zone_repository.class%
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: ['PSAMigrationBundle:Page\PsaPageZone']
+    psa_ndp_page_multi_zone_repository:
+        class:           %psa_ndp_page_multi_zone_repository.class%
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: ['PSAMigrationBundle:Page\PsaPageMultiZone']
+    psa_ndp_social_network_repository:
+        class:           %psa_ndp_social_network_repository.class%
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: ['PSAMigrationBundle:PsaReseauSocial']
+    psa_ndp_groupe_reseaux_sociaux_repository:
+        class:           %psa_ndp_groupe_reseaux_sociaux_repository.class%
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: ['PSAMigrationBundle:PsaGroupeReseauxSociaux']
+    psa_ndp.repository.rewrite:
+        class: PSA\MigrationBundle\Repository\PsaRewriteRepository
+        factory_service: doctrine.orm.default_entity_manager
+        factory_method: getRepository
+        arguments: ['PSAMigrationBundle:PsaRewrite']
+    psa_ndp_page_repository:
+        class:           %psa_ndp_page_repository.class%
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: ['PSAMigrationBundle:Page\PsaPage']
+    psa_ndp_page_version_repository:
+        class:           %psa_ndp_page_version_repository.class%
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: ['PSAMigrationBundle:Page\PsaPageVersion']
+    psa_ndp_template_page_repository:
+        class:           %psa_ndp_template_page_repository.class%
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: ['PSAMigrationBundle:Template\PsaTemplatePage']
+    psa_ndp_language_repository:
+        class:           %psa_ndp_language_repository.class%
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: ['PSAMigrationBundle:Language\PsaLanguage']
+    psa_ndp_label_repository:
+        class:           %psa_ndp_label_repository.class%
+        factory_service: doctrine.orm.entity_manager
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: ['PSAMigrationBundle:Language\PsaLabel']
+    psa_ndp_label_langue_site_repository:
+        class:           %psa_ndp_label_langue_site_repository.class%
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: ['PSAMigrationBundle:Language\PsaLabelLangueSite']
+    psa_ndp_media_repository:
+        class:           %psa_ndp_media_repository.class%
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: ['PSAMigrationBundle:Media\PsaMedia']
+    psa_ndp_media_format_repository:
+        class:           %psa_ndp_media_format_repository.class%
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: ['PSAMigrationBundle:Media\PsaMediaFormat']
+    psa_ndp_content_version_repository:
+        class:           %psa_ndp_content_version_repository.class%
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: ['PSAMigrationBundle:Content\PsaContentVersion']
+    psa_ndp_site_service_repository:
+        class:           %psa_ndp_site_service_repository.class%
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: ['PSAMigrationBundle:Site\PsaSiteService']
+    psa_ndp_sites_et_webservices_psa_repository:
+        class:           %psa_ndp_sites_et_webservices_psa_repository.class%
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: ['PsaNdpMappingBundle:PsaSitesEtWebservicesPsa']
+    psa_ndp_app_mobile_repository:
+        class:           %psa_ndp_app_mobile_repository.class%
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: ['PSAMigrationBundle:PsaAppMobile']
+    psa_ndp_site_code_repository:
+        class:           %psa_ndp_site_code_repository.class%
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: ['PSAMigrationBundle:Site\PsaSiteCode']
+    psa_ndp_zone_template_repository:
+        class:           %psa_ndp_zone_template_repository.class%
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: ['PSAMigrationBundle:Zone\PsaZoneTemplate']
+    psa_ndp_page_area_block_reference_repository:
+        class:           %psa_ndp_page_area_block_reference_repository.class%
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: ['PSAMigrationBundle:Page\PsaPageAreaBlockReference']
+    psa_ndp_become_agent_repository:
+        class:           %psa_ndp_become_agent_repository.class%
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: ['PsaNdpMappingBundle:PsaBecomeAgent']
+    psa_ndp_dealer_service_repository:
+        class:           %psa_ndp_dealer_service_repository.class%
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: ['PsaNdpMappingBundle:PsaDealerService']
+    psa_ndp_cta_repository:
+        class:           %psa_ndp_cta_repository.class%
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: ['PSAMigrationBundle:Cta\PsaCta']
+    psa_ndp_model_repository:
+        class:           %psa_ndp_model_repository.class%
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: ['PsaNdpMappingBundle:PsaModel']
+    psa_ndp_model_site_repository:
+        class:           %psa_ndp_model_site_repository.class%
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: ['PsaNdpMappingBundle:PsaModelSite']
+    psa_ndp_model_silhouette_angle_repository:
+        class:           %psa_ndp_model_silhouette_angle_repository.class%
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: ['PsaNdpMappingBundle:Vehicle\PsaModelSilhouetteAngle']
+    psa_ndp_model_silhouette_upselling_repository:
+        class:           %psa_ndp_model_silhouette_upselling_repository.class%
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: ['PsaNdpMappingBundle:Vehicle\PsaModelSilhouetteUpselling']
+    psa_ndp_model_view_angle_repository:
+        class:           %psa_ndp_model_view_angle_repository.class%
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: ['PsaNdpMappingBundle:PsaModelViewAngle']
+    psa_ndp_connect_services_repository:
+        class:           %psa_ndp_connect_services_repository.class%
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: ['PsaNdpMappingBundle:PsaConnectServices']
+    psa_ndp_service_connect_finition_grouping_repository:
+        class:           %psa_ndp_service_connect_finition_grouping_repository.class%
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: ['PsaNdpMappingBundle:PsaServiceConnectFinitionGrouping']
+    psa_ndp_groupe_reseaux_sociaux_repository:
+        class:           %psa_ndp_groupe_reseaux_sociaux_repository.class%
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: ['PSAMigrationBundle:PsaGroupeReseauxSociaux']
+    psa_ndp_groupe_reseaux_sociaux_rs_repository:
+        class:           %psa_ndp_groupe_reseaux_sociaux_rs_repository.class%
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: ['PSAMigrationBundle:PsaGroupeReseauxSociauxRs']
+
+    ## Repository dispatcher for configurable zones (PsaPageZone and PsaPageMultiZone)
+    psa_ndp_page_zone_configurable_repository_dispatcher:
+        class: %psa_ndp_page_zone_configurable_repository_dispatcher.class%
+        arguments: ['@service_container']
+    psa_ndp_page_zone_multi_repository:
+        class:           %psa_ndp_page_zone_multi_repository.class%
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: ['PSAMigrationBundle:Page\PsaPageZoneMulti']
+    psa_ndp_page_multi_zone_multi_repository:
+        class:           %psa_ndp_page_multi_zone_multi_repository.class%
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: ['PSAMigrationBundle:Page\PsaPageMultiZoneMulti']
+    psa_ndp_page_zone_content_repository:
+        class:           %psa_ndp_page_zone_content_repository.class%
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: ['PSAMigrationBundle:Page\PsaPageZoneContent']
+    psa_ndp_page_multi_zone_content_repository:
+        class:           %psa_ndp_page_multi_zone_content_repository.class%
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: ['PSAMigrationBundle:Page\PsaPageMultiZoneContent']
+
+    psa_ndp.repository.vehicle.model_config:
+        class: %psa_ndp.repository.vehicle.model_config.class%
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: ['PsaNdpMappingBundle:Vehicle\PsaModelConfig']
+    psa_ndp.repository.vehicle.vehicle_category_site:
+        class: %psa_ndp.repository.vehicle.vehicle_category_site.class%
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments:
+          - 'PsaNdpMappingBundle:Vehicle\PsaVehicleCategorySite'
+    psa_ndp.repository.vehicle.model_silhouette_site:
+        class: %psa_ndp.repository.vehicle.model_silhouette_site.class%
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: ['PsaNdpMappingBundle:Vehicle\PsaModelSilhouetteSite']
+    psa_ndp.repository.vehicle.model_site:
+        class: %psa_ndp.repository.vehicle.model_site.class%
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: ['PsaNdpMappingBundle:PsaModelSite']
+    psa_ndp.repository.vehicle.color_type_site:
+        class: %psa_ndp.repository.vehicle.color_type_site.class%
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: ['PsaNdpMappingBundle:Vehicle\PsaColorTypeSite']
+    psa_ndp.repository.accessories.accessories:
+        class: %psa_ndp.repository.accessories.accessories.class%
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: ['PsaNdpMappingBundle:Accessories\PsaAccessories']
+    psa_ndp.repository.accessories.accessories_site:
+        class: %psa_ndp.repository.accessories.accessories_site.class%
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: ['PsaNdpMappingBundle:Accessories\PsaAccessoriesSite']
+    open_orchestra_model.repository.redirection:
+        class: %psa_ndp.repository.redirection.class%
+        arguments: [@psa_ndp_page_repository, @psa_ndp.repository.rewrite]
+    psa_ndp.repository.finishing_site:
+        class: %psa_ndp.repository.finishing_site.class%
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: ['PsaNdpMappingBundle:PsaFinishingSite']
+
+    psa_ndp.repository.segmentation_finishing_site:
+        class: %psa_ndp.repository.segmentation_finishing_site.class%
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: ['PsaNdpMappingBundle:Vehicle\PsaSegmentationFinishesSite']
+    psa_ndp.repository.media_alt_translation:
+        class: %psa_ndp.repository.media_alt_translation.class%
+        factory_service: doctrine.orm.default_entity_manager
+        factory_method: getRepository
+        arguments: ['PSAMigrationBundle:Media\PsaMediaAltTranslation']
+    psa_ndp.repository.finishin_color:
+        class: %psa_ndp.repository.finishin_color.class%
+        factory_service: doctrine.orm.default_entity_manager
+        factory_method: getRepository
+        arguments: ['PsaNdpMappingBundle:PsaFinishingColor']
+
+    psa_ndp.repository.car_selector_settings:
+          class: %psa_ndp.repository.car_selector_settings.class%
+          factory_service: doctrine.orm.entity_manager
+          factory_method:  getRepository
+          arguments: ['PsaNdpMappingBundle:PsaCarSelectorFilter']
+
+    open_orchestra_api.repository.access_token:
+        class: PSA\MigrationBundle\Listener\Repository\AccessTokenRepository
+    open_orchestra_api.repository.api_client:
+        class: PsaNdp\MappingBundle\Repository\ApiClientRepository
+
+    psa_ndp.repository.site_webservice:
+        class: %psa_ndp.repository.site_webservice.class%
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: ['PsaNdpMappingBundle:PsaSiteWebservice']
+    psa_ndp.repository.filter_after_sale_services:
+        class: %psa_ndp.repository.filter_after_sale_services.class%
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: ['PsaNdpMappingBundle:PsaFilterAfterSaleServices']
+    psa_ndp.repository.after_sale_services:
+        class: %psa_ndp.repository.after_sale_services.class%
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: ['PsaNdpMappingBundle:PsaAfterSaleServices']

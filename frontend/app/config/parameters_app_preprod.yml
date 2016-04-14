@@ -1,0 +1,19 @@
+parameters:
+    redis_connection: "%redis.connection%"
+    streamlike_server: 'cdn.streamlike.com/'
+    twitter_consumer_key: gCHCGe8kTkazRMx7eqCCig
+    twitter_consumer_secret: 0sQet9E9c0uxLuwtOFi5dbjvdEAT6l1flTy6NykO0
+    twitter_oauth_token: 82178459-7k73wL6KwV7NbJshm2U2vwkx2ISDPkZAnOqk1tdwN
+    twitter_oauth_tokensecret: ZTAEQ1UWaesmXAQSRCAehdq5uDRdleev2KRZyHaAmcXC4
+    sitemap.default.path: '%backend.var.path%/sitemap/'
+    facebook:
+        appid: '226662007494188'
+        secret: 82fd18d4a5654c8efd25d7bc7a5ff3a7
+    compress: 
+        action: false
+        compress_method: gzcompress
+        uncompress_method: gzuncompress
+    user_agent:
+        config_file: "%kernel.root_dir%/../../backend/application/configs/Wurfl/1.5/wurfl-config.php"
+        database_hash: '51eeefadd7b165f709f675131e719fb2'
+    psa_consumer.subscriber.config.options : []

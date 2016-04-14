@@ -1,0 +1,124 @@
+<section class="slice-pf48 {if isset($slicePF48.anchorId)} {$slicePF48.anchorId} {/if}" {if isset($slicePF48.anchorId)} id="{$slicePF48.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePF48' } ]">
+    {assign  var="count" value=$slicePF48.wizardSteps|count}
+    <ul class="wizard-steps {if $count eq 2 }only-two{/if}">
+        {foreach $slicePF48.wizardSteps as $step}
+            <li class="{if isset($step.isActive) and $step.isActive eq true}active{/if}">
+                <div><span>{$step.name}</span></div>
+            </li>
+        {/foreach}
+    </ul>
+    <h1>{$slicePF48.title}</h1>
+    <section class="nav">
+        <div class="wrapper">
+            <form action="" class="span_8_of_12">
+                <input type="text" id="search-loc-input" autofocus>
+                <input type="submit" class="search-loc-submit" value="OK">
+            </form>
+            <span class="or span_1_of_12">{$slicePF48._or}</span>
+            <a href="#" class="geoloc span_3_of_12">{$slicePF48.btnAroundMe}</a>
+        </div>
+    </section>
+    <section class="map-container">
+        <div id="map-canvas" class="map-display"></div>
+        <div class="list-result scroller">
+            <div class="wrapper">
+                <div class="list-dealer">
+                    <h2 class="result"><span class="result-nbr"></span>{$slicePF48.resultFound}</h2>
+                    <div>
+                        {literal}
+                            {{#listDealer}}
+                            <article>
+                                <div class="left">
+                                    <span class="dist">15</span>
+                                    <span class="dist-type">km</span>
+                                </div>
+                                <div class="right">
+                                    <h2 class="dealer-name">{{ name }}</h2>
+                                    <h3 class="dealer-type">{{ type }}</h3>
+                                    <p class="dealer-adresse">{{ adress.street }}</p>
+                                    <p class="dealer-city">{{ adress.city }}</p>
+                                    <p class="dealer-phone">{{ contact.tel }}</p>
+                                    <p class="dealer-mail">{{ contact.mail }}</p>
+                                    <a href="#" class="btn-details" data-dealerId="{{ id }}">{/literal}{$slicePF48.translate.sheet}{literal}</a>
+                                </div>
+                                <div class="line"></div>
+                            </article>
+                            {{/listDealer}}
+                        {/literal}
+                    </div>
+                </div>
+                <div class="info-dealer">
+                    <div>
+                        {literal}
+                            {{#listDealer}}
+                            <div class="header">
+                                <a href="#" class="return-list">{/literal}{$slicePF48.translate.back_dealer}{literal}</a>
+                                <h2 class="dealer-name">{{ name }}</h2>
+                                <a href="#" class="btn-contact cat active">contact</a>
+                                <a href="#" class="btn-service cat">service</a>
+                            </div>
+                            <div class="contact">
+                                <p class="dealer-adresse">1, avenue Albert 1er</p>
+                                <p class="dealer-city">97200</p>
+                                <p class="dealer-phone">01 01 01 01 01</p>
+                                <p class="dealer-mail">alain.duhamel@peugeot.com</p>
+                                <div class="custom-button-group">
+	                                <a href="#" class="cta-block cta-btn cta-btn-4">Visitez le site</a>
+                                </div>
+                                <a href="#" class="vcf">fiche contact (vcf)</a>
+                                <ul class="list-shedule list_style">
+                                    <li>
+                                        <p class="day">lundi</p>
+                                        <p class="time">8h - 12h 13h - 18h30</p>
+                                    </li>
+                                    <li>
+                                        <p class="day">mardi</p>
+                                        <p class="time">8h - 12h 13h - 18h30</p>
+                                    </li>
+                                    <li>
+                                        <p class="day">mercredi</p>
+                                        <p class="time">8h - 12h 13h - 18h30</p>
+                                    </li>
+                                    <li>
+                                        <p class="day">jeudi</p>
+                                        <p class="time">8h - 12h 13h - 18h30</p>
+                                    </li>
+                                    <li>
+                                        <p class="day">vendredi</p>
+                                        <p class="time">8h - 12h 13h - 18h30</p>
+                                    </li>
+                                    <li>
+                                        <p class="day">samedi</p>
+                                        <p class="time">8h - 12h 13h - 18h30</p>
+                                    </li>
+                                    <li>
+                                        <p class="day">dimanche</p>
+                                        <p class="time">8h - 12h 13h - 18h30</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="service">
+                                <div class="left"></div>
+                                <div class="right">
+                                    <p class="dealer-type">Agent</p>
+                                    <p class="dirigent">M. Duhamel Alain</p>
+                                    <p class="dealer-adresse">1, avenue Albert 1er</p>
+                                    <p class="dealer-city">97200</p>
+                                    <p class="dealer-phone">01 01 01 01 01</p>
+                                    <p class="dealer-mail">alain.duhamel@peugeot.com</p>
+                                </div>
+                                <div class="line"></div>
+                            </div>
+                            {{/listDealer}}
+                        {/literal}
+                    </div>
+                </div>
+            </div>
+    </section>
+    <div class="form-action">
+        <a href="{$slicePF48.myInfosForm.actionFrom.goBack.url}" class="go-back">{$slicePF48.myInfosForm.actionFrom.goBack.title}</a>
+        <div class="custom-button-group">
+        	<button class="cta-inline cta-btn cta-btn-4"><span>{$slicePF48.myInfosForm.actionFrom.sendButton}</span></button>
+        </div>
+    </div>
+</section>

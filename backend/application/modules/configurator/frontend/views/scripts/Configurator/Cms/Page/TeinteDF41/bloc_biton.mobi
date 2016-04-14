@@ -1,0 +1,68 @@
+<p class="namecontrast"><span class="airbump-name">picture vehicle 10</span></p>
+<div class="slickslideshow popinzoom" data-jsobj="{literal}[ { 'obj':'slickslideshow', 'option':{'infinite':true, 'slidetoshow':1, 'slidetoscroll':1, 'dots':true, 'speed':300, 'externalnav':true, 'zoomeffect':true} } ]{/literal}">
+   <div class="slickslideshow-slide">
+      <a href="#" class="linkvisu" data-popinName="popinzoom" data-jsobj="{literal}[ { 'obj':'isoPopinOpenLink' } ]{/literal}">
+         <figure>
+            <img src="{$base_url_v3d_image}&color={$lookFeature[$var].id}&view=001" alt="picture vehicle 10" class="slickslideshow-slide-bigvisu" />
+         </figure>
+      </a>
+   </div>
+   <div class="slickslideshow-slide">
+      <a href="#" class="linkvisu" data-popinName="popinzoom" data-jsobj="{literal}[ { 'obj':'isoPopinOpenLink' } ]{/literal}">
+         <figure>
+            <img src="{$base_url_v3d_image}&color={$lookFeature[$var].id}&view=002" alt="picture vehicle 11" class="slickslideshow-slide-bigvisu" />
+         </figure>
+      </a>
+   </div>
+   <div class="slickslideshow-slide">
+      <a href="#" class="linkvisu" data-popinName="popinzoom" data-jsobj="{literal}[ { 'obj':'isoPopinOpenLink' } ]{/literal}">
+         <figure><img src="{$base_url_v3d_image}&color={$lookFeature[$var].id}&view=003" alt="picture vehicle 12" class="slickslideshow-slide-bigvisu" /></figure>
+      </a>
+   </div>
+</div>
+<span class="zoom"></span>
+</div>
+<p class="choice"> {'CONFIGURATOR_DF41_ROOF_AVALAIBLE'|t} : </p>
+<ul class="palette slickexternalnav" data-default="p-009">
+   <li id="p-009" >
+      <figure>
+         <img src=" http://dummyimage.com/13x13/0d5364/0d5364.png " alt=" picture vehicle 10 " data-picturename="picture vehicle 10" data-priceoutrightsecond="10" data-pricemonthlysecond="1" />
+      </figure>
+   </li>
+   <li id="p-010" >
+      <figure>
+         <img src=" http://dummyimage.com/13x13/817f7c/817f7c.png " alt=" picture vehicle 11 " data-picturename="picture vehicle 11" data-priceoutrightsecond="20" data-pricemonthlysecond="2" />
+      </figure>
+   </li>
+   <li id="p-011" >
+      <figure>
+         <img src=" http://dummyimage.com/13x13/f38330/f38330.png " alt=" picture vehicle 12 " data-picturename="picture vehicle 12" data-priceoutrightsecond="30" data-pricemonthlysecond="3" />
+      </figure>
+   </li>
+   <li id="p-012" >
+      <figure>
+         <img src=" http://dummyimage.com/13x13/dcdcdc/dcdcdc.png " alt=" picture vehicle 13 " data-picturename="picture vehicle 13" data-priceoutrightsecond="40" data-pricemonthlysecond="4" />
+      </figure>
+   </li>
+   <li id="p-013" >
+      <figure>
+         <img src=" http://dummyimage.com/13x13/0d5364/0d5364.png " alt=" picture vehicle 14 " data-picturename="picture vehicle 14" data-priceoutrightsecond="50" data-pricemonthlysecond="5" />
+      </figure>
+   </li>
+   <li id="p-014" >
+      <figure>
+         <img src=" http://dummyimage.com/13x13/817f7c/817f7c.png " alt=" picture vehicle 15 " data-picturename="picture vehicle 15" data-priceoutrightsecond="60" data-pricemonthlysecond="6" />
+      </figure>
+   </li>
+   <li id="p-015" >
+      <figure>
+         <img src=" http://dummyimage.com/13x13/f38330/f38330.png " alt=" picture vehicle 16 " data-picturename="picture vehicle 16" data-priceoutrightsecond="70" data-pricemonthlysecond="7" />
+      </figure>
+   </li>
+   <li id="p-016" >
+      <figure>
+         <img src=" http://dummyimage.com/13x13/dcdcdc/dcdcdc.png " alt=" picture vehicle 17 " data-picturename="picture vehicle 17" data-priceoutrightsecond="80" data-pricemonthlysecond="8" />
+      </figure>
+   </li>
+</ul>
+

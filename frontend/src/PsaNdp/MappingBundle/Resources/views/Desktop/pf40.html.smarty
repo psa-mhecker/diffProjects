@@ -1,0 +1,112 @@
+<section class="slice-pf40 {if isset($slicePF40.anchorId)} {$slicePF40.anchorId} {/if}" {if isset($slicePF40.anchorId)} id="{$slicePF40.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePF40' } ]">
+
+    <form action="../../../js/lib/iso/components/results.json" method="POST" class="form-horizontal filtre">
+        <div class="errorbox"></div>
+        {if isset($slicePF40.step1) and $slicePF40.step1 eq true}
+            {if isset($slicePF40.title)}<h1>{$slicePF40.title}</h1>{/if}
+            <div class="box-presentation">
+                <div class="box-desc {if isset($slicePF40.modalites)}span_8_of_12{else}span_12_of_12{/if}">
+                {if isset($slicePF40.txt)}<p>{$slicePF40.txt}</p>{/if}
+                {if isset($slicePF40.ctaList)}
+                    <div class="custom-button-group clearfix">
+                        {foreach $slicePF40.ctaList as $cta}
+                          {include file="./cta.html.smarty"}
+                        {/foreach}
+                    </div>
+                {/if}
+                </div>
+                {if isset($slicePF40.modalites)}
+                    <div class="box-modalites span_4_of_12">
+                        <h2>{$slicePF40.modalites.title}</h2>
+                        <div class="modalites">
+                            {foreach $slicePF40.modalites.modalite as $modalite}
+                            <div class="modalite">
+                                <span>{$modalite.durees.value}</span>
+                                <span class="month-libelle">{$modalite.durees.libelle}</span>
+                                <span>{$modalite.kilometrage.value}</span>
+                                <span>{$modalite.kilometrage.libelle}</span>
+                            </div>
+                            {/foreach}
+                        </div>
+                        <p>{$slicePF40.modalites.description}</p>
+                    </div>
+                {/if}
+            </div>
+        {/if}
+        {if isset($slicePF40.step2) and $slicePF40.step2 eq true}
+            {if isset($slicePF40.title)}<h1>{$slicePF40.title}</h1>{/if}
+            <div class="box-questions">
+                {if isset($slicePF40.questions)}
+                    {foreach $slicePF40.questions as $question}
+                        <div class="step-question{if $question@first} active{/if}">
+                            <div class="background-number">{$question.step}</div>
+                            <div class="overlay"></div>
+                            <h2>{$question.title}</h2>
+                            {if isset($question.choises)}
+                            <div class="radio-group">
+                                <ul>
+                                    {foreach $question.choises as $type}
+                                        <li class="radio">
+                                            <input type="radio" name="{$question.name}" value="" id="{$type.name}"
+                                                   {if isset($question.required) and $question.required eq true}required
+                                                   data-msg-required="{$question.errorMsg}"{/if} {if isset($question.disabled) and $question.disabled eq true}disabled{/if} {if isset($type.checked) and $type.checked eq true}checked{/if}>
+                                            <label for="{$type.name}">{$type.txt}</label>
+                                        </li>
+                                    {/foreach}
+                                </ul>
+                            </div>
+                            {/if}
+                            {if isset($question.reglette)}
+                                <div class="range">
+                                    {assign  var="count" value=$question.reglette|count}
+                                    <div>
+                                    {foreach $question.reglette as $reglette}
+                                        <label>{$reglette.txt}</label>
+                                    {/foreach}
+                                    </div>
+                                    <div class="content-slider-range">
+                                        <div class="slider-range-min large" data-min="1" data-max="{$count}"></div>
+                                        <input type="hidden" class="amount" id="amount_large" name="amount_large" readonly>
+                                    </div>
+                                </div>
+                            {/if}
+                            {if isset($question.txt)}<p class="description">{$question.txt}</p>{/if}
+                        </div>
+                    {/foreach}
+                {/if}
+            </div>
+
+
+            {if isset($slicePF40.ctaList)}
+                <div class="custom-button-group clearfix">
+                    {foreach $slicePF40.ctaList as $cta}
+                      {include file="./cta.html.smarty"}
+                    {/foreach}
+                </div>
+            {/if}
+        {/if}
+        {if isset($slicePF40.step3) and $slicePF40.step3 eq true}
+            {if isset($slicePF40.title)}<h1>{$slicePF40.title}</h1>{/if}
+            <div class="box-presentation box-avantage">
+
+                {if isset($slicePF40.sousTitre)}<h2>{$slicePF40.sousTitre}</h2>{/if}
+                {if isset($slicePF40.avantages)}
+                    {if isset($slicePF40.avantages.title)}<h3>{$slicePF40.avantages.title}</h3>{/if}
+                    <ul>
+                        {foreach $slicePF40.avantages.items as $avantage}
+                            <li>{$avantage.txt}</li>
+                        {/foreach}
+                    </ul>
+                {/if}
+                {if isset($slicePF40.ctaList)}
+                    <div class="custom-button-group clearfix">
+                        {foreach $slicePF40.ctaList as $cta}
+                          {include file="./cta.html.smarty"}
+                        {/foreach}
+                    </div>
+                {/if}
+
+            </div>
+        {/if}
+    </form>
+</section>

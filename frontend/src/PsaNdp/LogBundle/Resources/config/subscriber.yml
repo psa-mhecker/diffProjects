@@ -1,0 +1,38 @@
+parameters:
+    psa_ndp.log.subscriber.log_migration.class: PsaNdp\LogBundle\EventSubscriber\LogMigrationSubscriber
+    psa_ndp.log.subscriber.kernel_exception.class: PsaNdp\LogBundle\EventSubscriber\KernelExceptionSubscriber
+    psa_ndp.log.subscriber.log_consumer.class: PsaNdp\LogBundle\EventSubscriber\LogConsumerSubscriber
+    psa_ndp.log.subscriber.log_exception.class: PsaNdp\LogBundle\EventSubscriber\LogExceptionSubscriber
+    psa_ndp.log.subscriber.log_command.class: PsaNdp\LogBundle\EventSubscriber\LogCommandSubscriber
+
+services:
+    psa_ndp.log.subscriber.log_migration:
+        class: %psa_ndp.log.subscriber.log_migration.class%
+        arguments:
+            - @psa_ndp.log.migration_logger
+        tags:
+            - { name: kernel.event_subscriber}
+    psa_ndp.log.subscriber.kernel_exception:
+        class: %psa_ndp.log.subscriber.kernel_exception.class%
+        arguments:
+            - @event_dispatcher
+        tags:
+            - { name: kernel.event_subscriber}
+    itkg_consumer.subscriber.logger:
+        class: %psa_ndp.log.subscriber.log_consumer.class%
+        arguments:
+            - @psa_ndp.log.consumer_logger
+        tags:
+            - { name: kernel.event_subscriber }
+    psa_ndp.log.subscriber.log_exception:
+        class: %psa_ndp.log.subscriber.log_exception.class%
+        arguments:
+            - @psa_ndp.log.exception_logger
+        tags:
+            - { name: kernel.event_subscriber }
+    psa_ndp.log.subscriber.log_command:
+        class: %psa_ndp.log.subscriber.log_command.class%
+        arguments:
+            - @psa_ndp.log.command_logger
+        tags:
+            - { name: kernel.event_subscriber }

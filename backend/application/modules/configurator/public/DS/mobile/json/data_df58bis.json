@@ -1,0 +1,89 @@
+{
+   "motorisation": [
+      {
+         "id":"001",
+         "GrEngine":"PureTech 82",
+         "GrTransmissionType":"Manuelle 5 rapports",
+         "Energy":"Essence",
+         "GrTypeBoite":"Boîte pilotée",
+         "price":"15 950,00 €",
+         "co2value":"114",
+         "consovalue":"5",
+         "consoMixtevalue":"5",
+         "consoUrbainevalue":"5.8",
+         "consoExtraUrbainevalue":"4.3",
+         "maxpowvalue":"191",
+         "energy":
+            {
+               "name":"A",
+               "img":"../../../img/energyB.png",
+               "picto":"../../../img/energyClass/classB.png",
+               "alt":"Alt Categorie A"
+            }
+
+      }, {
+         "id":"002",
+         "GrEngine":"PureTech 82",
+         "GrTransmissionType":"Manuelle 5 rapports",
+         "Energy":"Essence",
+         "GrTypeBoite":"Boîte pilotée",
+         "price":"16 650,00 €",
+         "co2value":"114",
+         "consovalue":"5",
+         "consoMixtevalue":"5",
+         "consoUrbainevalue":"5.8",
+         "consoExtraUrbainevalue":"4.3",
+         "maxpowvalue":"191",
+         "energy":
+            {
+               "name":"A",
+               "img":"../../../img/energyB.png",
+               "picto":"../../../img/energyClass/classB.png",
+               "alt":"Alt Categorie A"
+            }
+
+      }, {
+         "id":"003",
+         "GrEngine":"PureTech 82",
+         "GrTransmissionType":"Manuelle 5 rapports",
+         "Energy":"Essence",
+         "GrTypeBoite":"Boîte pilotée",
+         "price":"16 650,00 €",
+         "co2value":"114",
+         "consovalue":"5",
+         "consoMixtevalue":"5",
+         "consoUrbainevalue":"5.8",
+         "consoExtraUrbainevalue":"4.3",
+         "maxpowvalue":"191",
+         "energy":
+            {
+               "name":"A",
+               "img":"../../../img/energyB.png",
+               "picto":"../../../img/energyClass/classB.png",
+               "alt":"Alt Categorie A"
+            }
+
+      }, {
+         "id":"004",
+         "GrEngine":"PureTech 82",
+         "GrTransmissionType":"Manuelle 5 rapports",
+         "Energy":"Essence",
+         "GrTypeBoite":"Boîte pilotée",
+         "price":"16 650,00 €",
+         "co2value":"114",
+         "consovalue":"5",
+         "consoMixtevalue":"5",
+         "consoUrbainevalue":"5.8",
+         "consoExtraUrbainevalue":"4.3",
+         "maxpowvalue":"191",
+         "energy":
+            {
+               "name":"A",
+               "img":"../../../img/energyB.png",
+               "picto":"../../../img/energyClass/classB.png",
+               "alt":"Alt Categorie A"
+            }
+
+      }
+   ]
+}

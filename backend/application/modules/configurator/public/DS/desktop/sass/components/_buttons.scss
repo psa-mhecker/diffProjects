@@ -1,0 +1,219 @@
+/* buttons */
+.cta, .btn {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-family: $font-family-base-regular;
+  font-size: 13px;
+  color: $dark-champagne;
+
+  &.btn {
+    border: 1px solid $dark-champagne;
+    color: $dark-champagne;
+  }
+  &.cta-primary, &.btn-primary  {
+    background-color: $dark-champagne;
+    border: 1px solid $dark-champagne;
+    color: $light-champagne;
+  }
+
+  .arrow--2-small-right{
+    font-size: 0;
+    position: absolute;
+    top: 50%;
+    margin-top: -7.5px;
+    right: 10px;
+  }
+
+  &.cta-lg {
+    width: 205px;
+    padding: 8.5px 0;
+  }
+
+  &.cta-md {
+    width: 172px;
+    padding: 8.5px 0;
+  }
+
+  &.cta-sm {
+    width: 138px;
+    padding: 8.5px 0;
+  }
+
+  &.cta-xs {
+    width: 86px;
+  }
+
+  &.cta-disabled {
+    background-color: $light-champagne;
+    border: 1px solid $light-champagne;
+    color: $champagne;
+    cursor: default;
+  }
+
+  &.diselected {
+    /* border-color: $light-champagne;
+    color: $light-champagne; */
+    -moz-opacity: 0.4;
+    -khtml-opacity: 0.4;
+    opacity: 0.4;
+    cursor: default;
+  }
+  &.cta-voir {
+    padding: 3px 0;
+  }
+  &.cta-continued {
+    span {
+      display: block;
+      text-align: left;
+      padding-left: 8px;
+    }
+    i{
+      position: absolute;
+      top: 50%;
+      margin-top: -11px;
+      right: 10px;
+    }
+  }
+
+  &.save-email {
+    color: $champagne;
+    border: 1px solid $champagne;
+    span {
+      display: block;
+      width: 94%;
+      margin: 0 auto;
+    }
+  }
+
+  &.cta-next-step, &.next-step {
+    width: 161px;
+    padding: 9.5px 0;
+    background-color: $champagne;
+    color: $dark-champagne;
+    border: none;
+    i{
+      position: absolute;
+      top: 54%;
+      margin-top: -12px;
+      right: 10px;
+    }
+    .arrow--4-small-right {
+      visibility: hidden;
+    }
+  }
+
+  &.cta-expand-1{
+    &.open{
+      &:after{
+        content: '';
+        display: block;
+        width: 100%;
+        height: 3px;
+        position: absolute;
+        left: 0;
+        background: white;
+        bottom: 0px;
+        z-index: 0;
+      }
+    }
+  }
+
+  &.cta-expand-1, &.cta-expand-2{
+    display: inline-block;
+    position: relative;
+    padding: 10px 10px 10px 10px;
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid $light-champagne;
+    text-transform: uppercase;
+    font-size: $font-size-small-small;
+    // &.open{
+    //   border-bottom: 1px solid #FFFFFF;
+    //   margin-bottom: -1px;
+    // }
+  }
+  &.cta-readmore {
+    margin-bottom: -3px;
+    &:after {
+      content: '';
+      display: block;
+      /*border: 1px solid transparent;*/
+      width: 75%;
+      margin: 3px auto;
+    }
+  }
+  &.cta-Upsell, &.cta-retirerUpsell {
+    padding: 9.5px 20px;
+  }
+
+  &.cta-retirerUpsell {
+    background-color:$champagne;
+    border: 0;
+  }
+
+  &.Quantity {
+    .Qtysubtract, .nbrQty, .Qtyadd {
+      display: inline-block;
+    }
+  }
+}
+
+.no-touch{
+  .cta, .btn{
+    &.cta-primary {
+      &:hover:not(.cta-add) {
+        background-color: $champagne;
+        border: 1px solid $champagne;
+      }
+    }
+    &.cta-default {
+      &:hover{
+        border-color: $champagne;
+        color: $champagne;
+      }
+    }
+    &.cta-selected {
+      &:hover{
+        border: 0;
+        background-color: $champagne;
+        border: 1px solid $champagne;
+      }
+    }
+    &.cta-add {
+      &:hover{
+          background-color: $dark-champagne;
+      }
+    }
+    &.cta-readmore {
+      &:hover {
+        &:after {
+          border-color: $champagne;
+        }
+      }
+    }
+    &.cta-readmore,
+    &.cta-details,
+    &.cta-explore,
+    &.cta-addComparator,
+    &.cta-return {
+      &:hover {
+          color: $champagne;
+      }
+    }
+    &.cta-next-step:hover, &.next-step:hover {
+      background-color: $light-champagne;
+    }
+  }
+  &.save-email {
+    &:hover {
+      color: $light-champagne;
+      border: 1px solid $light-champagne;
+    }
+  }
+
+
+}

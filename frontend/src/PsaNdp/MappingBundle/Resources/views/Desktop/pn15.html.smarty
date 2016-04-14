@@ -1,0 +1,21 @@
+<section class="slice-pn15 slice-full-size no-margin-top {if isset($slicePN15.anchorId)} {$slicePN15.anchorId} {/if}" {if isset($slicePN15.anchorId)} id="{$slicePN15.anchorId}" {/if} datalayer="{$slicePN15.datalayer}">
+<div class="header hide-for-small-only">
+  <header>
+    <h1>{if $slicePN15.isNew} {$slicePN15.translate.new} {/if} {$slicePN15.translate.peugeot} {$slicePN15.model}<small>{$slicePN15.silhouette} - {$slicePN15.title}</small></h1>
+    <nav class="breadcrumb clearfix">
+      {foreach $slicePN15.breadcrumb as $link}
+        {if $link@last}
+          <span {if isset($link.current)}class="current"{/if}>{$link.text}</span>
+        {else}
+          <a href="{$link.url}"{if isset($link.target)} target="{$link.target}"{/if}{if $link@first} data-gtm='{ldelim}"eventType": "click", "dataList": {ldelim} "event": "uaevent","eventCategory": "{$slicePN15.blockName}::position-{$slicePN15.blockOrder}", "eventAction": "Redirection::Homepage", "eventLabel": "{$link.text|escape:javascript}"{rdelim}{rdelim}'{/if}><span>{$link.text}</span></a>
+        {/if}
+      {/foreach}
+    </nav>
+    {if !empty($slicePN15.myPeugeot) }
+      <a href="{$slicePN15.myPeugeot.url}" class="cta btn-cta light-blue arrow chevron-right my-peugeot" data-gtm='{ldelim}"eventType": "click", "dataList": {ldelim} "event": "uaevent","eventCategory": "{$slicePN15.blockName}::position-{$slicePN15.blockOrder}", "eventAction": "Redirection::MyPeugeot", "eventLabel": "{$slicePN15.myPeugeot.label|escape:javascript}"{rdelim}{rdelim}' target="_blank">
+        <span class="content-cta">{$slicePN15.myPeugeot.label}</span>
+      </a>
+    {/if}
+  </header>
+</div>
+</section>

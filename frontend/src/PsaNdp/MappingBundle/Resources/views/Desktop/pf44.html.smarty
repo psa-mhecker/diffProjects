@@ -1,0 +1,74 @@
+<section class="slice-pf44 {if isset($slicePf44.anchorId)} {$slicePf44.anchorId} {/if}" {if isset($slicePf44.anchorId)} id="{$slicePf44.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePF44' } ]" data-html="{$slicePf44.urlJson}" datalayer="{$slicePf44.datalayer}" data-autocompletion="{$slicePf44.autocompletion}" data-regroupement="{$slicePf44.regroupement}">
+<script type="text/javascript">var loaderdatatxt = '{$slicePf44.translate.loaderdatatxt}';</script>
+    <section class="nav cas2">
+        <div class="wrapper">
+            <form action="{$slicePf44.formAction}" class="span_8_of_12" id="form_search_locate" data-results="{$slicePf44.length}">
+                <input type="text" id="search-loc-input" placeholder="{$slicePf44.placeholderInput}">
+                <input type="submit" class="search-loc-submit" value="{$slicePf44.searchSubmit}">
+            </form>
+            <span class="or span_1_of_12">{$slicePf44.or}</span>
+            <a href="#" class="geoloc span_3_of_12">{$slicePf44.btnAroundMe}</a>
+            <section class="filter">
+                {if isset($slicePf44.listFilter)}
+                <form id="form_dealers_filters">
+                    <span class="filter-by">{$slicePf44.filterBy}</span>
+                    <section class="list-filter">
+                        {foreach $slicePf44.listFilter as $i}
+                        <label for="filter{$i@index}" class="filters filter-check">
+                            <input type="checkbox" class="filter{$i@index}" name="filters" id="filter{$i@index}" value="{$i.value}">
+                            <span class="checkbox"></span>
+                            {$i.label}
+                        </label>
+                        {/foreach}
+                    </section>
+                </form>
+                {/if}
+            </section>
+        </div>
+    </section>
+    <section class="map-container" data-pictoMap="{$slicePf44.mapParam.picto}" data-pictoMapOn="{$slicePf44.mapParam.pictoOn}" data-pictoMapOff="{$slicePf44.mapParam.pictoOff}">
+        <p class="errorOnLoad hide">{$slicePf44.errorload}</p>
+        <span id="textLinkInfoWindow" class="hidden">{$slicePf44.mapParam.textLinkInfoWindow}</span>
+        <div id="map-canvas" class="map-display"></div>
+        <div class="list-result scroller">
+            <div class="msg-info hide">{$slicePf44.resultNotFound}</div>
+            <div class="wrapper">
+                <div class="list-dealer">
+                    <h2 class="result"><span class="result-nbr"></span>{$slicePf44.resultFound}</h2>
+                    <div>
+                        {literal}
+                        {{#listDealer}}
+                        <article class="dealer dealer-info" data-dealerId="{{ id }}" id="dealer_{{ id }}" data-lat="{{ adress.lat }}" data-long="{{ adress.lng }}">
+                            <div class="left">
+                                <span class="dist" data-dist="{{ adress.dist }}">{{ adress.dist }}</span>
+                            </div>
+                            <div class="right">
+                                <h2 class="dealer-name">{{ name }}</h2>
+                                <h3 class="dealer-contactName">{{ contactName }}</h3>
+                                <p class="dealer-adresse">{{ adress.street }}</p>
+                                <p class="dealer-city">{{ adress.city }}</p>
+                                <p class="dealer-phone">{{ contact.tel }}</p>
+                                <p class="dealer-mail">{{ contact.mail }}</p>
+                            </div>
+                            <div class="line"></div>
+                        </article>
+                        {{/listDealer}}
+                        {/literal}
+                    </div>
+                </div>
+                <div class="info-text">
+                    <div>
+                      <h3 class="title">{$slicePf44.info.title}</h3>
+                      <div>{$slicePf44.info.text}</div>
+                      {if isset($slicePf44.ctaList)}
+                        {foreach $slicePf44.ctaList as $cta}
+                          {include file="./cta.html.smarty"}
+                        {/foreach}
+                      {/if}
+                    </div>
+                </div>
+            </div>
+          </div>
+        </section>
+
+    </section>

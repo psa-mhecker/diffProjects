@@ -1,0 +1,34 @@
+<section class="slice-pc42 {if isset($slicePC42.anchorId)} {$slicePC42.anchorId} {/if}" {if isset($slicePC42.anchorId)} id="{$slicePC42.anchorId}" {/if}>
+    {assign  var="count" value=$slicePC42.newsItems|count}
+    {if isset($slicePC42.newsTitle)}
+        <h3>{$slicePC42.newsTitle}</h3>
+    {/if}
+    <section class="news {if $count eq 1 }single-news{/if} clearfix">
+        {foreach $slicePC42.newsItems as $item}
+            <article class="news-item">
+                <figure>
+                    <a href="#" {if isset($item.link.target)}target="{$item.link.target}"{/if}>
+                        <img src="{$item.link.img.src}" alt="{$item.link.img.title}">
+                    </a>
+                </figure>
+                <div class="desc-news">
+                    <h4>{$item.description.title}</h4>
+                    {if isset($item.description.texts)}
+                        <div class="content clearfix">
+                            {foreach $item.description.texts as $text}
+                                <p>{$text.parag}</p>
+                            {/foreach}
+                        </div>
+                    {/if}
+                    {if isset($item.readMore)}
+                        <p class="read-more {if $item|@count > 1}left-align{/if}">
+                            <a href="#" class="cta-inline cta-btn read-more" {if isset($item.target)}target="{$item.target}"{/if}>
+                                <span>{$item.readMore}</span>
+                            </a>
+                        </p>
+                    {/if}
+                </div>
+            </article>
+        {/foreach}
+    </section>
+</section>

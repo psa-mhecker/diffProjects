@@ -1,0 +1,130 @@
+@charset "UTF-8";
+/* pt3.scss */
+.slice-pt3 {
+	margin: 0 !important;
+	.nav-shopping-tools {
+		display: none;
+		position: fixed;
+		right: 0;
+		top: 40px;
+		width: 150px;
+		height: 40px;
+		z-index: 950;
+		a {
+
+			text-transform: uppercase;
+			display: block;
+			position: relative;
+			background: $secondary-color;
+			color: $white-color;
+			text-align: center;
+			height: 100%;
+			> span {
+				display: inline-block;
+				vertical-align: middle;
+			}
+			&:before {
+				content: "";
+				display: inline-block;
+				height: 100%;
+				vertical-align: middle;
+			}
+			&:after {
+				content: '';
+				display: inline-block;
+				position: absolute;
+				top: 50%;
+				right: 10px;
+				margin-top: -3px;
+				@include sprite($mid-white-arrow-bottom);
+			}
+		}
+	}
+	.menu-links-content {
+		background-color: $grey-9-color;
+		display: none;
+		padding: 1.5625rem 2.5rem;
+		position: inherit;
+		top: 40px;
+		left: 0;
+		.row {
+			font-size: 0;
+			text-align: center;
+			> .columns {
+				display: inline-block;
+				float: none;
+				img {
+					max-height: 127px;
+				}
+				h3 {
+					margin: 12px 0 16px 0;
+					min-height: 30px;
+					font-size: 1rem;
+				}
+			}
+			ul {
+				li {
+					margin-bottom: 1px;
+					padding: 0 4px;
+					a {
+						color: $grey-1-color;
+						display: block;
+						background: $white-color;
+						text-align: center;
+						height: 52px;
+						white-space: nowrap;
+						position: relative;
+						span {
+							display: inline-block;
+							vertical-align: middle;
+							white-space: normal;
+							padding: 0 35px 0 10px;
+						}
+						&:before {
+							content: '';
+							display: inline-block;
+							height: 100%;
+							width: 1px;
+							vertical-align: middle;
+						}
+						&:after {
+							content: '';
+							display: inline-block;
+							position: absolute;
+							top: 50%;
+							right: 10px;
+							margin-top: -4.5px;
+							@include sprite($mid-blue-arrow-right);
+						}
+					}
+				}
+			}
+		}
+	}
+	&.open-links {
+		top: 0;
+		left: 0;
+		position: absolute;
+		z-index: 999;
+		.nav-shopping-tools {
+			a {
+				background-color: $grey-9-color;
+				color: $grey-1-color;
+				&:after {
+					@include sprite($expand-arrow-1-top);
+				}
+			}
+		}
+	}
+	.overlay {
+		position: fixed;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		background-color: $secondary-color-dark-ultra;
+		filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+		opacity: 0.8;
+		display: none;
+	}
+}

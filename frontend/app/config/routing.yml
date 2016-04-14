@@ -1,0 +1,29 @@
+psa_ndp_robots:
+    resource: "@PsaNdpMappingBundle/Controller/RobotsController.php"
+    type: annotation
+
+psa_ndp_site_map:
+    resource: "@PsaNdpMappingBundle/Controller/SiteMapController.php"
+    type: annotation
+
+open_orchestra_front:
+    resource: "@OpenOrchestraFrontBundle/Controller"
+    type: annotation
+
+sonata_cache_cache:
+    resource: '@SonataCacheBundle/Resources/config/routing/cache.xml'
+    prefix: /
+
+psa_ndp_api:
+    resource: "@PsaNdpApiBundle/Controller/"
+    type:     annotation
+    prefix:   /api
+
+open_orchestra_database:
+    resource: '.'
+    type: database
+
+open_orchestra_redirection:
+    resource: '.'
+    type: orchestra_redirection
+

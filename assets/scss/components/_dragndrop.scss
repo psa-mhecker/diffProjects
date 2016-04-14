@@ -1,0 +1,47 @@
+@charset 'UTF-8';
+
+.twentytwenty-horizontal .twentytwenty-handle:before,
+.twentytwenty-horizontal .twentytwenty-handle:after,
+.twentytwenty-vertical .twentytwenty-handle:before,
+.twentytwenty-vertical .twentytwenty-handle:after {
+	box-shadow: 0 0 0 0;
+}
+
+.twentytwenty-horizontal .twentytwenty-handle:before,
+.twentytwenty-horizontal .twentytwenty-handle:after {
+	margin-left: -1px;
+	width: 2px;
+}
+
+.twentytwenty-vertical .twentytwenty-handle:before,
+.twentytwenty-vertical .twentytwenty-handle:after {
+	margin-top: -1px;
+	height: 2px;
+}
+
+.twentytwenty-overlay {
+	display: none;
+}
+
+.twentytwenty-container {
+	margin-bottom: 30px;
+	min-height: 50px;
+
+	@media #{$medium-up} {
+		min-height: 150px;
+	}
+
+}
+
+.twentytwenty-handle {
+	@include sprite($arrowsh);
+	margin-top: -35px;
+	margin-left: -35px;
+	background-color: $white;
+	width: 65px;
+	height: 65px;
+}
+
+.twentytwenty-vertical .twentytwenty-handle {
+	@include sprite($arrowsv);
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin>
+	<title>BoForms</title>
+	<description>Visual form builder for PSA</description>
+	<version>1.2.6</version>
+	<date>25/03/2016</date>
+	<author>Interakting</author>
+	<category>Widget</category>
+</plugin>

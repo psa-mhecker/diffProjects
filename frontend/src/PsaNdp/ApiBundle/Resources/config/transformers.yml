@@ -1,0 +1,198 @@
+parameters:
+    psa_ndp_api.transformer.become_agent_collection.class: PsaNdp\ApiBundle\Transformers\BecomeAgentCollectionTransformer
+    psa_ndp_api.transformer.become_agent.class: PsaNdp\ApiBundle\Transformers\BecomeAgentTransformer
+    psa_ndp_api.transformer.ranges.class: PsaNdp\ApiBundle\Transformers\RangesTransformer
+    psa_ndp_api.transformer.range.class: PsaNdp\ApiBundle\Transformers\RangeTransformer
+    psa_ndp_api.transformer.media_collection.class: PsaNdp\ApiBundle\Transformers\MediaCollectionTransformer
+    psa_ndp_api.transformer.media.class: PsaNdp\ApiBundle\Transformers\MediaTransformer
+    psa_ndp_api.transformer.color_picker.class: PsaNdp\ApiBundle\Transformers\ColorPickerTransformer
+    psa_ndp_api.transformer.faq_desktop.class: PsaNdp\ApiBundle\Transformers\FAQDesktopTransformer
+    psa_ndp_api.transformer.result_rubric.class: PsaNdp\ApiBundle\Transformers\ResultRubricTransformer
+    psa_ndp_api.transformer.question.class: PsaNdp\ApiBundle\Transformers\QuestionTransformer
+    psa_ndp_api.transformer.answer.class: PsaNdp\ApiBundle\Transformers\AnswerTransformer
+    psa_ndp_api.transformer.link.class: PsaNdp\ApiBundle\Transformers\LinkTransformer
+    psa_ndp_api.transformer.translate.class: PsaNdp\ApiBundle\Transformers\TranslateTransformer
+    psa_ndp_api.transformer.information.class: PsaNdp\ApiBundle\Transformers\InformationTransformer
+    psa_ndp_api.transformer.pf25_result_collection.class: PsaNdp\ApiBundle\Transformers\Pf25\ResultCollectionTransformer
+    psa_ndp_api.transformer.pf25_result_item.class: PsaNdp\ApiBundle\Transformers\Pf25\ResultItemTransformer
+    psa_ndp_api.transformer.pf25_filter_group.class: PsaNdp\ApiBundle\Transformers\Pf25\FilterGroupTransformer
+    psa_ndp_api.transformer.pf25_filter_settings.class: PsaNdp\ApiBundle\Transformers\Pf25\FilterSettingsTransformer
+    psa_ndp_api.transformer.pf25_vehicle_criteria.class: PsaNdp\ApiBundle\Transformers\Pf25\VehicleCriteriaTransformer
+    psa_ndp_api.transformer.pf25_vehicle_category.class: PsaNdp\ApiBundle\Transformers\Pf25\VehicleCategoryTransformer
+    psa_ndp_api.transformer.pf25_vehicle_category_collection.class: PsaNdp\ApiBundle\Transformers\Pf25\VehicleCategoryCollectionTransformer
+
+
+    psa_ndp_api.transformer.pf25_financement.class: PsaNdp\ApiBundle\Transformers\Pf25\FinancementTransformer
+    psa_ndp_api.transformer.color.class: PsaNdp\ApiBundle\Transformers\ColorTransformer
+    psa_ndp_api.transformer.pf8_search_result_collection.class: PsaNdp\ApiBundle\Transformers\Pf8SearchResultCollectionTransformer
+    psa_ndp_api.transformer.pf8_search_result_item.class: PsaNdp\ApiBundle\Transformers\Pf8SearchResultItemTransformer
+    psa_ndp_api.transformer.pf8_search_result_vehicles.class: PsaNdp\ApiBundle\Transformers\Pf8SearchResultRegionalTransformer
+    psa_ndp_api.transformer.dealer_collection.class: PsaNdp\ApiBundle\Transformers\Pf11DealerLocator\DealerCollectionTransformer
+    psa_ndp_api.transformer.dealer.class: PsaNdp\ApiBundle\Transformers\Pf11DealerLocator\DealerTransformer
+    psa_ndp_api.transformer.pf17_forms.class: PsaNdp\ApiBundle\Transformers\Pf17FormTransformer
+    psa_ndp_api.transformer.pf33_car_compatibility.class: PsaNdp\ApiBundle\Transformers\Pf33CarCompatibilityResultsTransformer
+
+services:
+    psa_ndp_api.transformer.become_agent_collection:
+        class: %psa_ndp_api.transformer.become_agent_collection.class%
+        tags:
+            - { name: open_orchestra_api.transformer.strategy}
+    psa_ndp_api.transformer.become_agent:
+        class: %psa_ndp_api.transformer.become_agent.class%
+        tags:
+            - { name: open_orchestra_api.transformer.strategy}
+    psa_ndp_api.transformer.ranges:
+        class: %psa_ndp_api.transformer.ranges.class%
+        tags:
+            - { name: open_orchestra_api.transformer.strategy}
+    psa_ndp_api.transformer.range:
+        class: %psa_ndp_api.transformer.range.class%
+        tags:
+            - { name: open_orchestra_api.transformer.strategy}
+    psa_ndp_api.transformer.media_collection:
+        class: %psa_ndp_api.transformer.media_collection.class%
+        tags:
+            - { name: open_orchestra_api.transformer.strategy}
+    psa_ndp_api.transformer.media:
+        class: %psa_ndp_api.transformer.media.class%
+        tags:
+            - { name: open_orchestra_api.transformer.strategy}
+    psa_ndp_api.transformer.color_picker:
+        class: %psa_ndp_api.transformer.color_picker.class%
+        arguments: [@psa_ndp.repository.vehicle.color_type_site, @configuration_engine_config]
+        tags:
+            - { name: open_orchestra_api.transformer.strategy}
+
+    psa_ndp_api.transformer.faq_desktop:
+        class: %psa_ndp_api.transformer.faq_desktop.class%
+        tags:
+            - { name: open_orchestra_api.transformer.strategy}
+
+    psa_ndp_api.transformer.pf25_result_collection:
+        class: %psa_ndp_api.transformer.pf25_result_collection.class%
+        arguments:
+          - @financement_simulator
+        tags:
+            - { name: open_orchestra_api.transformer.strategy}
+
+    psa_ndp_api.transformer.pf25_result_item:
+        class: %psa_ndp_api.transformer.pf25_result_item.class%
+        arguments:
+          - @translator
+          - @psa_ndp_mapping.manager.price_manager
+        tags:
+            - { name: open_orchestra_api.transformer.strategy}
+
+    psa_ndp_api.transformer.pf25_filter_group:
+        class: %psa_ndp_api.transformer.pf25_filter_group.class%
+        arguments:
+          - @translator
+        tags:
+            - { name: open_orchestra_api.transformer.strategy}
+
+    psa_ndp_api.transformer.pf25_filter_settings:
+        class: %psa_ndp_api.transformer.pf25_filter_settings.class%
+        tags:
+            - { name: open_orchestra_api.transformer.strategy}
+
+    psa_ndp_api.transformer.pf25_financement:
+        class: %psa_ndp_api.transformer.pf25_financement.class%
+        tags:
+            - { name: open_orchestra_api.transformer.strategy}
+
+
+    psa_ndp_api.transformer.result_rubric:
+        class: %psa_ndp_api.transformer.result_rubric.class%
+        tags:
+            - { name: open_orchestra_api.transformer.strategy}
+
+    psa_ndp_api.transformer.question:
+        class: %psa_ndp_api.transformer.question.class%
+        arguments: ['@psa_ndp_content_repository', '@psa_ndp_content_type_repository']
+        tags:
+            - { name: open_orchestra_api.transformer.strategy}
+
+    psa_ndp_api.transformer.answer:
+        class: %psa_ndp_api.transformer.answer.class%
+        calls:
+            - ['setTranslator',[@translator]]
+        tags:
+            - { name: open_orchestra_api.transformer.strategy}
+
+    psa_ndp_api.transformer.link:
+        class: %psa_ndp_api.transformer.link.class%
+        tags:
+            - { name: open_orchestra_api.transformer.strategy}
+
+    psa_ndp_api.transformer.translate:
+        class: %psa_ndp_api.transformer.translate.class%
+        tags:
+            - { name: open_orchestra_api.transformer.strategy}
+
+
+    psa_ndp_api.transformer.information:
+        class: %psa_ndp_api.transformer.information.class%
+        tags:
+            - { name: open_orchestra_api.transformer.strategy}
+    psa_ndp_api.transformer.color:
+        class: %psa_ndp_api.transformer.color.class%
+        arguments: ['@psa_ndp_model_silhouette_angle_repository']
+        tags:
+            - { name: open_orchestra_api.transformer.strategy}
+
+    psa_ndp_api.transformer.pf8_search_result_collection:
+        class: %psa_ndp_api.transformer.pf8_search_result_collection.class%
+        tags:
+            - { name: open_orchestra_api.transformer.strategy}
+    psa_ndp_api.transformer.pf8_search_result_item:
+        class: %psa_ndp_api.transformer.pf8_search_result_item.class%
+        calls:
+            - ['setTranslator',[@translator]]
+        tags:
+            - { name: open_orchestra_api.transformer.strategy}
+    psa_ndp_api.transformer.pf8_search_result_vehicles:
+        class: %psa_ndp_api.transformer.pf8_search_result_vehicles.class%
+        calls:
+            - ['setTranslator',[@translator]]
+        tags:
+            - { name: open_orchestra_api.transformer.strategy}
+
+    psa_ndp_api.transformer.dealer_collection:
+        class: %psa_ndp_api.transformer.dealer_collection.class%
+        arguments:
+          - @psa_ndp_mapping.object.factory.media
+        calls:
+            - ['setTranslator',[@translator]]
+        tags:
+            - { name: open_orchestra_api.transformer.strategy}
+
+    psa_ndp_api.transformer.dealer:
+        class: %psa_ndp_api.transformer.dealer.class%
+        arguments:
+          - @router
+        calls:
+          - ['setTranslator',[@translator]]
+        tags:
+            - { name: open_orchestra_api.transformer.strategy}
+
+    psa_ndp_api.transformer.pf17_forms:
+        class: %psa_ndp_api.transformer.pf17_forms.class%
+        tags:
+            - { name: open_orchestra_api.transformer.strategy}
+    psa_ndp_api.transformer.pf25_vehicle_criteria:
+        class: %psa_ndp_api.transformer.pf25_vehicle_criteria.class%
+        tags:
+            - { name: open_orchestra_api.transformer.strategy}
+    psa_ndp_api.transformer.pf25_vehicle_category:
+        class: %psa_ndp_api.transformer.pf25_vehicle_category.class%
+        tags:
+            - { name: open_orchestra_api.transformer.strategy}
+
+    psa_ndp_api.transformer.pf25_vehicle_category_collection:
+        class: %psa_ndp_api.transformer.pf25_vehicle_category_collection.class%
+        tags:
+            - { name: open_orchestra_api.transformer.strategy}
+    psa_ndp_api.transformer.pf33_car_compatibility:
+        class: %psa_ndp_api.transformer.pf33_car_compatibility.class%
+        tags:
+            - { name: open_orchestra_api.transformer.strategy}

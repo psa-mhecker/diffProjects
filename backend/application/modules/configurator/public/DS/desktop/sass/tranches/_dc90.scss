@@ -1,0 +1,27 @@
+.slice-dc90 {
+  .title {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+    margin-top: 1.5em;
+    font-size: 20px;
+    color: $champagne;
+    font-family: $main_font_roboto;
+    font-weight: normal;
+  }
+  .list-vignette-toggle {
+    .cont-toggle {
+      .input-radio.oneEquipment.on {
+        .input--check {
+          display: block;
+        }
+      }
+      &.checked {
+        &:before {
+          border-bottom-color: #ad0040;
+        }
+        border: 1px solid #ad0040;
+      }
+    }
+  }
+}

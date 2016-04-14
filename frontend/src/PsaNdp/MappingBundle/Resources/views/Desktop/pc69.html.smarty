@@ -1,0 +1,129 @@
+<section class="slice-pc69 {if !empty($slicePC69.anchorId)} {$slicePC69.anchorId} {/if}" {if !empty($slicePC69.anchorId)} id="{$slicePC69.anchorId}" {/if} {if !empty($slicePC69.popintrancheid)} data-popintrancheid = "{$slicePC69.popintrancheid}" {/if} data-jsobj="[ { 'obj':'slicePC69' } ]" datalayer="{$slicePC69.datalayer}">
+
+    {if $slicePC69.title }
+        <h2>{$slicePC69.title}</h2>
+    {/if}
+
+    <div class="row collapse">
+    {* Position 1/4 3/4 *}
+    {* l'attribut order définit la position de la colonne 1/4 valuer left ou right *}
+    {if $slicePC69.order == 'left' }
+        <div class="small-12 medium-4 columns">
+            {if $slicePC69.columnLeft.media }
+                <figure>
+                    {include file='../Components/images.html.smarty' image=$slicePC69.columnLeft.media}
+                </figure>
+            {/if}
+            <div class="panel-no-padding-left text-container">
+                {if $slicePC69.columnLeft.title }
+                    {if !empty($slicePC69.title)}
+                        <h3 class="text-left">{$slicePC69.columnLeft.title}</h3>
+                    {else}
+                        <h2 class="text-left">{$slicePC69.columnLeft.title}</h2>
+                    {/if}
+
+                {/if}
+                {if $slicePC69.columnLeft.text }
+                    {$slicePC69.columnLeft.text}
+                {/if}
+
+                {if $slicePC69.columnLeft.ctaList }
+                    <div class="inline-cta">
+                        {foreach $slicePC69.columnLeft.ctaList as $cta}
+                            {include file="../Components/cta.html.smarty" gtm="{ldelim}\"eventType\":\"click\",\"dataList\":{ldelim}\"event\":\"uaevent\",\"eventCategory\":\"{$slicePC69.blockName}::position-{$slicePC69.blockOrder}\",\"eventAction\":\"Redirection\",\"eventLabel\":\"{$cta.title|escape:html}\"{rdelim}{rdelim}"}
+                        {/foreach}
+                    </div>
+                {/if}
+            </div>
+        </div>
+        <div class="small-12 medium-8 columns">
+            {if $slicePC69.columnRight.media }
+                <figure>
+                    {include file='../Components/images.html.smarty' image=$slicePC69.columnRight.media}
+                </figure>
+            {/if}
+            <div class="panel-no-padding-right text-container">
+            {if $slicePC69.columnRight.title }
+                {if !empty($slicePC69.title)}
+                    <h3 class="text-left">{$slicePC69.columnRight.title}</h3>
+                {else}
+                    <h2 class="text-left">{$slicePC69.columnRight.title}</h2>
+                {/if}
+
+            {/if}
+
+            {if $slicePC69.columnRight.text }
+                {$slicePC69.columnRight.text}
+            {/if}
+
+            {if $slicePC69.columnRight.ctaList }
+                <div class="inline-cta">
+                    {foreach $slicePC69.columnRight.ctaList as $cta}
+                        {include file="../Components/cta.html.smarty" widthClass="short-width" gtm="{ldelim}\"eventType\":\"click\",\"dataList\":{ldelim}\"event\":\"uaevent\",\"eventCategory\":\"{$slicePC69.blockName}::position-{$slicePC69.blockOrder}\",\"eventAction\":\"Redirection\",\"eventLabel\":\"{$cta.title|escape:html}\"{rdelim}{rdelim}"}
+                    {/foreach}
+                </div>
+            {/if}
+            </div>
+        </div>
+    {else}
+    {* Position 3/4 1/4 *}
+        <div class="small-12 medium-8 columns">
+            {if $slicePC69.columnLeft.media }
+                <figure>
+                    {include file='../Components/images.html.smarty' image=$slicePC69.columnLeft.media}
+                </figure>
+            {/if}
+            <div class="panel-no-padding-left text-container">
+                {if $slicePC69.columnLeft.title }
+                    {if !empty($slicePC69.title)}
+                        <h3 class="text-left">{$slicePC69.columnLeft.title}</h3>
+                    {else}
+                        <h2 class="text-left">{$slicePC69.columnLeft.title}</h2>
+                    {/if}
+
+                {/if}
+                {if $slicePC69.columnLeft.text }
+                    {$slicePC69.columnLeft.text}
+                {/if}
+
+                {if $slicePC69.columnLeft.ctaList }
+                    <div class="inline-cta">
+                        {foreach $slicePC69.columnLeft.ctaList as $cta}
+                            {include file="../Components/cta.html.smarty" gtm="{ldelim}\"eventType\":\"click\",\"dataList\":{ldelim}\"event\":\"uaevent\",\"eventCategory\":\"{$slicePC69.blockName}::position-{$slicePC69.blockOrder}\",\"eventAction\":\"Redirection\",\"eventLabel\":\"{$cta.title|escape:html}\"{rdelim}{rdelim}"}
+                        {/foreach}
+                    </div>
+                {/if}
+            </div>
+        </div>
+        <div class="small-12 medium-4 columns">
+            {if $slicePC69.columnRight.media }
+                <figure>
+                    {include file='../Components/images.html.smarty' image=$slicePC69.columnRight.media}
+                </figure>
+            {/if}
+            <div class="panel-no-padding-right text-container">
+                {if $slicePC69.columnRight.title }
+                    {if !empty($slicePC69.title)}
+                        <h3 class="text-left">{$slicePC69.columnRight.title}</h3>
+                    {else}
+                        <h2 class="text-left">{$slicePC69.columnRight.title}</h2>
+                    {/if}
+
+                {/if}
+
+                {if $slicePC69.columnRight.text }
+                    {$slicePC69.columnRight.text}
+                {/if}
+
+                {if $slicePC69.columnRight.ctaList }
+                    <div class="inline-cta">
+                        {foreach $slicePC69.columnRight.ctaList as $cta}
+                            {include file="../Components/cta.html.smarty" widthClass="short-width" gtm="{ldelim}\"eventType\":\"click\",\"dataList\":{ldelim}\"event\":\"uaevent\",\"eventCategory\":\"{$slicePC69.blockName}::position-{$slicePC69.blockOrder}\",\"eventAction\":\"Redirection\",\"eventLabel\":\"{$cta.title|escape:html}\"{rdelim}{rdelim}"}
+                        {/foreach}
+                    </div>
+                {/if}
+            </div>
+        </div>
+    {/if}
+    </div>
+</section>

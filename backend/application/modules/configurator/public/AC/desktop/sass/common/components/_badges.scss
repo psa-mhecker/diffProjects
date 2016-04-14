@@ -1,0 +1,38 @@
+	#badges .badge{// FOR PAGE UI
+	margin-top: 5px;
+	}
+
+	.badge{
+	font-family: $font-family-brand-bold;
+	font-size: $font-size-small;
+	color: white; // to do
+	text-align: left;
+	display: inline-block;
+	text-transform: uppercase;
+	padding: 5px 14px;
+		&.badge-lg {
+		width: 255px;
+		padding: 5px 14px 6px 14px;
+		}
+		&.badge-md {
+		width: 222px;
+		padding: 3px 14px 4px 14px;
+		}
+		&.badge-sm {
+		width: 160px;
+		padding: 3px 14px 4px 14px;
+		}
+		&.promotion {
+		background: $badge-promotion;
+		}
+		&.recommandation {
+		background: $badge-recommandation;
+		}
+		&.nouveaute {
+		background: $bage-nouveaute
+		}
+	}
+
+
+				
+

@@ -1,0 +1,121 @@
+/*// media queries nav bar ds*/
+
+@media (min-width:768px) and (max-width:1024px) {
+    .nav-cn_navigation {
+        width: 100%;
+        display: block;
+        #nav {
+            display: block;
+            float: left;
+            height: 1px;
+            position: relative;
+            width: 100%;
+            z-index: 9999;
+            .nav {
+                background-color: #82cddc;
+                float: left;
+                height: 95px;
+                margin: 0 auto;
+                width: 100% !important;
+                .btn-next {
+                    position: absolute;
+                    right: 10px;
+                    top: 55px;
+                    height: 27px;
+                    width: 165px;
+                    padding: 0 0;
+                    margin: 0;
+                    display: none;
+                    z-index: 10;
+                }
+                ul#main-menu {
+                    font-size: 0;
+                    position: relative;
+                    left: 0;
+                    height: 91px;
+                    background-color: #82cddc;
+                    li ul {
+                        opacity: 0;
+                        z-index: -1;
+                        position: absolute;
+                        left: 0;
+                        top: 49px;
+                        padding: 9px;
+                        width: 100%;
+                        background-color: white;
+                    }
+                }
+            }
+            .sticky {
+                background-color: #101717;
+                float: left;
+                height: 95px;
+                margin: 0 auto;
+                width: 100%;
+            }
+        }
+        div.introduction {
+            width: 100%;
+            font-size: 14px;
+            line-height: 24px;
+            color: #5a5864;
+            margin: 20px 0;
+            float: left;
+            div.bloc-left-nav {
+                display: block;
+                float: left;
+                width: 764px;
+                height: auto;
+                position: relative;
+            }
+            div.bloc-right_panier {
+                float: right;
+                width: 223px;
+                height: 248px;
+                display: inline-block;
+                position: relative;
+                text-align: center;
+                border: 1px solid #ccc;
+                top: 96px;
+                left: -4px;
+                .infos_panier {
+                    width: 100%;
+                    display: block;
+                    position: relative;
+                }
+            }
+        }
+    }
+}
+
+/*//cc91 autres equipements*/
+@media (min-width:768px) and (max-width:1024px) {
+    .slice-cc91{
+        display: block;
+        width: 723px;
+        position: relative;
+        float: left;
+        div.lames-finition {
+        display: block;
+        width: 100%;
+        position: relative;
+        margin: 0 auto;
+            aside {
+            position: absolute;
+            top: -28px;
+            right: -30px;
+            background-color: #ededed;
+            border: 4px solid #ededed;
+            width: 257px;
+            padding: 40px 27px 32px;
+            }
+
+        }
+        .popin_overlay {
+            top: -191px !important;
+        }
+
+    }
+
+
+}

@@ -1,0 +1,63 @@
+<section class="slice-pn7 slice-full-size no-margin-top {if !empty($slicePN7.anchorId)} {$slicePN7.anchorId} {/if}" {if !empty($slicePN7.anchorId)} id="{$slicePN7.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePN7' } ]" datalayer="{$slicePN7.datalayer}">
+    {if $isMobile}
+        {if !empty($slicePN7.title)}
+        <h1>{$slicePN7.title}</h1>
+        {/if}
+    {else}
+    <div class="header {if !empty($slicePN7.sticky)} fixed{/if}">
+        <header>
+            <div class="left">
+              <h1>{$slicePN7.title}</h1>
+                {if !empty($slicePN7.breadcrumb)}
+                  <nav class="breadcrumb clearfix">
+                    {foreach $slicePN7.breadcrumb as $link}
+                      {if $link@last}
+                        <span>{$link.text}</span>
+                      {else}
+                        <a {if !empty($slicePN7.color)} style="color: {$slicePN7.color}"{/if} href="{$link.url}"{if !empty($link.target)} target="{$link.target}"{/if}  data-gtm='{ldelim}"eventType": "click", "dataList": {ldelim} "event": "uaevent","eventCategory": "{$slicePN7.blockName}::position-{$slicePN7.blockOrder}", "eventAction": "Redirection::Click", "eventLabel": "{$link.text|escape:javascript}"{rdelim}{rdelim}'><span>{$link.text}</span></a>
+                      {/if}
+                    {/foreach}
+                  </nav>
+                {/if}
+            </div>
+            {if !empty($slicePN7.myPeugeot) }
+              <a href="{$slicePN7.myPeugeot.url}" class="cta btn-cta light-blue arrow chevron-right my-peugeot" data-gtm='{ldelim}"eventType": "click", "dataList": {ldelim} "event": "uaevent","eventCategory": "{$slicePN7.blockName}::position-{$slicePN7.blockOrder}", "eventAction": "Redirection::MyPeugeot", "eventLabel": "{$slicePN7.myPeugeot.label|escape:javascript}"{rdelim}{rdelim}' target="_blank">
+                <span class="content-cta">{$slicePN7.myPeugeot.label}</span>
+              </a>
+            {/if}
+        </header>
+      </div>
+      {if $slicePN7.media}
+        <div class="media">
+          {if $slicePN7.media.type === 'image'}
+            <figure class="row">
+              {include file='../Components/images.html.smarty' image=$slicePN7.media}
+              {if !empty($slicePN7.zoneDescText)}
+              <div class="infos panel {if !empty($slicePN7.bgColor)} {$slicePN7.bgColor}{/if}">
+                  <p>{$slicePN7.zoneDescText}</p>
+                  {if !empty($slicePN7.ctaList)}
+                    {foreach $slicePN7.ctaList as $cta}
+                      <div class="text-center">
+                        {include file="../Components/cta.html.smarty"}
+                      </div>
+                    {/foreach}
+                  {/if}
+                </div>
+                {/if}
+            </figure>
+          {elseif $slicePN7.media.type === 'light'}
+          {elseif $slicePN7.media.type === 'carselector'}
+            <figure style="height:1500px">
+              <div>
+                <a href="#" class="onScrolltext" data-label="{$slicePN7.media.onScrolltext}">{$slicePN7.media.onScrolltext}</a>
+              </div>
+              <img style="margin-top:84px" src="{$slicePN7.media.desktop.src}">
+            </figure>
+          {elseif $slicePN7.media.type === 'video'}
+            {include file='../Components/videoplayer.html.smarty' gtmCategory="{$slicePN7.blockName}::position-{$slicePN7.blockOrder}" video=$slicePN7.media}
+          {/if}
+
+        </div>
+      {/if}
+    {/if}
+</section>

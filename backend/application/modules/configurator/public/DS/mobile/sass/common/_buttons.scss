@@ -1,0 +1,354 @@
+/* buttons */
+.border_radius {
+  /*@include css3(transition, 0.5s);*/
+  border-radius:8px;
+}
+button, .button {
+  display:inline-block;
+  width: 100%;
+  height: 61px;
+  max-height: 61px;
+  padding: 0 20px;
+  font: 13px/13px $light_font_roboto;
+  text-align: center;
+  text-decoration:none;
+  text-transform: uppercase;
+  color: #fff;
+  border:0;
+  margin-top: 16px;
+  background-color: $beige;
+  border: 4px solid transparent;
+  cursor: pointer;
+
+  &:first-child{
+    margin-top: 0;
+  }
+  
+  span{
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+  }
+
+  &[disabled]{
+    background: #d0d0d0;
+    cursor: inherit;
+  }
+
+  &.btn-prev{
+    font-size: 13px;
+    text-align: left;
+    padding-left: 35%;
+    background: #fff;
+    border-color: #afadc3;
+    color: #646464;
+    position: relative;
+
+    &:before{
+      content: '';
+      position: absolute;
+      left: 20px; top: 50%;
+      margin-top: -8px;
+      @extend %_sprites;
+      @extend %_sprite-btn-prev-black;
+    }
+  }
+
+  &.btn-next,
+  &.btn-continued{
+    height: auto;
+    line-height: 13px;
+    font-size: 13px;
+    padding-top: 0;
+    text-align: left;
+    padding-right: 35%;
+    padding-left: 9.5%;
+    text-indent: 0;
+    width: auto;
+    position: relative;
+
+    &.btn-continued{
+      max-width: 242px;
+      display: block;
+    }
+
+    &:before{
+      content: '';
+      position: absolute;
+      right: 20px; top: 50%;
+      margin-top: -8px;
+      @extend %_sprites;
+      @extend %_sprite-btn-next-white;
+    }
+  }
+
+  &.btn-2{
+    color: $beige;
+    background-color: transparent;
+    border: 1px solid $beige;
+    height: inherit;
+    padding: 13px;
+    max-height: inherit;
+
+    span{
+      display: block;
+      font-size: 13px;
+
+    }
+  }
+}
+button:active, .button:active{
+  
+}
+
+
+
+/* Call To Action buttons */
+.selectBox-options,
+.selectBox-options li,
+.selectBox-options li a {max-width:300px;}
+
+.cta-group{
+  li{
+    display: block;
+
+    .cta-btn{
+      width: calc(100% - 20px);
+      margin: 0 auto 10px auto;
+      float: inherit;
+      display: block;
+    }
+  }
+  &.simple-link{
+    max-width: inherit;
+    margin: 0;
+  }
+  .list {
+    background-color: $grey_9_color;
+    position: relative;
+
+    %style-elem {
+      color: $grey_1_color;
+      font-size: 14px;
+      line-height: 15px;
+      display: table;
+      width: 100%;
+      height: 50px;
+      text-align: left;
+    }
+
+    select {
+      left: 0;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      width: 98%;
+    }
+
+    > .title-list {
+      margin: 0;
+      position: relative;
+      padding: 7px 0;
+      border-bottom: 1px solid $grey_15_color;
+      cursor: pointer;
+      text-transform: lowercase;
+      color: $grey_1_color;
+      font-size: 12px;
+      line-height: 15px;
+      display: table;
+      width: 100%;
+      height: 50px;
+
+      > * {
+        display: table-cell;
+        vertical-align: middle;
+      }
+
+      &.opened {
+        &:before {
+        }
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        right: 10px;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        @extend %_sprites;
+      }
+
+	  .selectBox-label{white-space:inherit;}
+    }
+  }
+}
+
+body .cta-group .list .selectBox-dropdown {
+	border-color:$grey_9_color;
+	background-color:$grey_9_color;
+
+	&:focus,
+	&:focus .selectBox-arrow {
+		border-color:$grey_9_color;
+		outline:0;
+	}
+
+	.selectBox-label{width:270px!important;}
+	.selectBox-arrow{display:none;}
+
+	&.selectBox-menuShowing{
+		&:before {
+		}
+	}
+}
+
+@media all and (orientation:portrait) {
+  .cta-group{
+    .cta-btn{
+      max-width: 300px;
+    }
+    .list{
+      margin: 0 auto 10px auto;
+      width: 100%;
+      display: inline-block;
+      max-width: 300px;
+    }
+  }
+}
+@media all and (orientation:landscape) {
+  .cta-group{
+    .cta-btn{
+      max-width: 600px;
+    }
+    .list{
+      margin: 0 auto 10px auto;
+      width: 100%;
+      display: inline-block;
+      max-width: 300px;
+    }
+  }
+}
+@media all and (orientation:landscape) and (max-width : 640px){
+  .cta-group{
+    .cta-btn{
+      max-width: 600px;
+      margin: 0 10px;
+    }
+    .list{
+      margin: 0 auto 10px auto;
+      width: 100%;
+      display: inline-block;
+      max-width: 600px;
+    }
+  }
+}
+.button-link {
+  padding: 0 36px 0 9px;
+  position:relative;
+}
+.cta-link{
+  color: $mid_blue_2_color;
+  font-size: 14px;
+  position: absolute;
+  padding-right: 30px;
+  bottom: 0;
+  &:after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    margin-top: -3px;
+    right: 0;
+    @extend %_sprites;
+  }
+}
+.button-link-type1:after {
+  position:absolute;
+  right:20px; top:50%;
+  margin-top:-3px;
+//  @include sprite-arrow-white-right();
+}
+
+
+/* Call To Action buttons */
+
+.cta-btn {
+  display: inline-block;
+  font-size: 14px;
+  width: 100%;
+  text-transform: uppercase;
+  padding:0 10px;
+  height:50px;
+  line-height:50px;
+  text-align: center;
+
+  span{
+	display: inline-block;
+	vertical-align: middle;
+	line-height: normal;
+  }
+}
+button.cta-btn{line-height:inherit;}
+
+.cta-btn-1 {
+  background-color: $cta_btn_1_bg_color;
+  border-bottom: 3px solid $cta_btn_1_border_color;
+  color: $cta_btn_1_txt_color;
+}
+
+.cta-btn-2 {
+  background-color: $cta_btn_2_bg_color;
+  border-bottom: 3px solid $cta_btn_2_border_color;
+  color: $cta_btn_2_txt_color;
+
+  &:active{
+    background-color: $cta_btn_2_bg_color_hover;
+    border-color: $cta_btn_2_border_color_hover;
+  }
+}
+
+.cta-btn-3 {
+  background-color: $cta_btn_3_bg_color;
+  border-bottom: 3px solid $cta_btn_3_border_color;
+  color: $cta_btn_3_txt_color;
+}
+
+.cta-btn-4 {
+  background-color: $cta_btn_4_bg_color;
+  border-bottom: 3px solid $cta_btn_4_border_color;
+  color: $cta_btn_4_txt_color;
+
+  &:active{
+    background-color: $cta_btn_4_bg_color_hover;
+    border-color: $cta_btn_4_border_color_hover;
+  }
+}
+
+.cta-btn-5 {
+  background-color: $cta_btn_5_bg_color;
+  border-bottom: 3px solid $cta_btn_5_border_color;
+  color: $cta_btn_5_txt_color;
+}
+
+.cta-btn-6 {
+  background-color: $cta_btn_6_bg_color;
+  border-bottom: 3px solid $cta_btn_6_border_color;
+  color: $cta_btn_6_txt_color;
+
+  &:active{
+    background-color: $cta_btn_6_bg_color_hover;
+    border-color: $cta_btn_6_border_color_hover;
+  }
+}
+
+.cta-btn-7 {
+  background-color: $cta_btn_7_bg_color;
+  color: $cta_btn_7_txt_color;
+  font-size: 10px;
+}
+
+.cta-btn-8 {
+  background-color: $cta_btn_8_bg_color;
+  color: $cta_btn_8_txt_color;
+  font-size: 10px;
+}

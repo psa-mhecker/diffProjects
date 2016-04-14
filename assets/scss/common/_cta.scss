@@ -1,0 +1,596 @@
+@charset 'UTF-8';
+// cta.scss
+@import 'foundation/components/buttons';
+@import 'foundation/components/button-groups';
+
+
+// We use these as default colors throughout
+// Texte pour tous les CTA
+$cta-btn-txt-color: #fff !default;
+$cta-link-txt-color: #007edb !default;
+$cta-link-txt-color-hover: #0062c5 !default;
+$grey-txt-color: #3c353f !default;
+
+// CTA principal
+$primary-color: #007edb !default;
+$primary-color-dark: #0062c5 !default;
+$primary-color-dark-ultra: #124682 !default;
+
+// CTA secondaire
+$secondary-color: #133d5f !default;
+$secondary-color-dark: #0c2d47 !default;
+$secondary-color-dark-ultra: #162133 !default;
+
+// CTA par defaut
+$default-color: $grey-9-color !default;
+$default-color-dark: #cdcdcd !default;
+$default-color-dark-ultra: #b4b4b4 !default;
+
+// Light-blue 1 button
+$cta-btn-1-bg-color: $primary-color !default;
+$cta-btn-1-border-color: $primary-color-dark !default;
+$cta-btn-1-txt-color: $cta-btn-txt-color !default;
+
+$cta-btn-1-bg-color-hover: $primary-color-dark-ultra !default;
+
+// Dark-blue 2 button
+$cta-btn-2-bg-color: $secondary-color !default;
+$cta-btn-2-border-color: $secondary-color-dark-ultra !default;
+$cta-btn-2-txt-color: $cta-btn-txt-color !default;
+
+$cta-btn-2-bg-color-hover: $secondary-color-dark !default;
+
+// Grey button
+$cta-grey-txt-color : $grey-txt-color !default;
+
+// Default button
+$cta-btn-3-bg-color: $default-color !default;
+$cta-btn-3-border-color: $default-color-dark !default;
+$cta-btn-3-txt-color: $cta-btn-txt-color !default;
+
+$cta-btn-3-bg-color-hover: $default-color-dark !default;
+$cta-btn-3-border-color-hover: $default-color-dark-ultra !default;
+$cta-btn-3-txt-color-hover: $cta-btn-txt-color !default;
+
+@mixin cta() {
+	.cta {
+		display: inline-block;
+		position: relative;
+		transition: all 150ms ease-in-out;
+		margin: 0;
+		text-align: center;
+	}
+}
+
+@mixin link-cta() {
+	.link-cta {
+		margin-bottom: 15px;
+		min-height: 47px;
+		text-align: left;
+		line-height: 47px;
+		color: $font-dark-blue;
+		font-size: rem-calc(12);
+
+		span {
+			display: inline-block;
+			vertical-align: middle;
+			line-height: 1.2;
+		}
+
+		.cta-content {
+			max-width: 230px;
+		}
+
+		.arrow {
+			@include sprite($arrow-link-right-light);
+			margin: 1px 0 0 20px;
+		}
+
+		&:hover {
+			color: $text-color;
+
+			.arrow {
+				@include sprite($arrow-link-right-dark);
+			}
+		}
+
+		&.chevron-left .arrow {
+			margin: 0 20px 0 0;
+		}
+	}
+}
+
+@mixin square-cta($wrapper: 'squared-cta-wrapper', $inner: 'square-cta') {
+	.#{$wrapper} {
+		margin: auto auto 15px;
+		overflow: hidden;
+
+		.#{$inner} {
+			position: relative;
+			float: left;
+			margin: 0;
+			border: 1px solid $white-color;
+			background-color: $grey-9-color;
+			width: 155px;
+			height: 155px;
+			overflow: hidden;
+			line-height: 1.5rem;
+			color: $grey-20-color;
+
+			&.fullwidth,
+			&.full-width {
+				width: 310px;
+			}
+
+			img {
+				display: block;
+				margin: 30px auto auto;
+				max-width: 50px;
+			}
+
+			&:active {
+				background-color: $grey-25-color;
+				color: $grey-9-color;
+			}
+		}
+	}
+}
+
+@mixin custom-button() {
+	height: rem-calc(50);
+	font-size: rem-calc(14);
+	margin: rem-calc(5);
+	border-bottom-width: rem-calc(3);
+	text-transform: uppercase;
+	text-align: center;
+	vertical-align: middle;
+
+	.cta-center {
+		text-align: center;
+	}
+
+	span {
+		width: rem-calc(140);
+	}
+}
+
+//Dropdown Button
+@mixin cta-dropdown() {
+	//Button customisé
+	.dropdown-wrapper {
+		display: inline-block;
+		position: relative;
+		margin: rem-calc(5);
+
+		.inline-cta & {
+			margin-right: 50px;
+		}
+
+		@media #{$small-only} {
+			.inline-cta & {
+				margin-right: 0px;
+			}
+		}
+
+	}
+
+	.custom-dropdown-button {
+		@include custom-button();
+
+		display: inline-block;
+		margin: 0;
+		border: 1px solid $default-color-dark;
+		background-color: $white;
+		padding: 0 40px 0 20px;
+		min-width: 175px;
+		max-width: 300px;
+		height: 40px;
+		text-align: left;
+		text-transform: initial;
+		line-height: 40px;
+		color: $text-color;
+
+		&.open {
+			border-bottom: 0;
+
+			.dropdown-arrow {
+				@include sprite($mid-blue-arrow-top);
+			}
+
+		}
+
+		&:hover,
+		&:focus {
+			outline: 0;
+			box-shadow: 0;
+			background-color: $white;
+			text-decoration: none;
+			color: $grey-1-color;
+		}
+
+		.content-cta {
+			vertical-align: middle;
+			line-height: 1.2;
+		}
+
+		span {
+			display: inline-block;
+		}
+
+		.dropdown-arrow {
+			@include sprite($mid-blue-arrow-bottom);
+			display: inline-block;
+			position: absolute;
+			top: 50%;
+			right: rem-calc(16);
+			transform: translate(0, -50%);
+		}
+	}
+
+	//Mettre les CTA en colonne
+	.block {
+		display: block;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	//Liste du Dropdown button
+	.f-dropdown {
+		z-index: 2;
+		left: 0 !important;
+		margin: 0;
+		width: 100%;
+		min-width: 0;
+		max-width: none;
+		text-align: left;
+
+		li {
+			display: inline-block;
+			padding: 4px 20px;
+			width: 100%;
+			min-height: 40px;
+			text-align: left;
+			line-height: 40px;
+
+
+			&:not(:first-child) .menuitem-content {
+				border-top: 1px solid $default-color-dark;
+			}
+
+			a {
+				display: inline-block;
+				margin: -3px 0 0;
+				padding: 0;
+				width: 100%;
+				vertical-align: middle;
+				line-height: 1.2;
+			}
+
+			&:first-child a {
+				border-top: 0;
+			}
+
+			&:hover,
+			&:focus {
+				background-color: $primary-color;
+
+				.menuitem-content {
+					border-top: 0;
+				}
+
+				a {
+					color: $white;
+				}
+			}
+		}
+
+		&::after,
+		&::before {
+			display: none; //Enlève le triangle par défaut de Foundation
+			transform: translate(0, -50%);
+		}
+	}
+
+	@media #{$small-only} {
+		.dropdown-wrapper {
+			width: 100%;
+			margin: 5px 0;
+
+			.inline-cta & {
+				margin-right: 0;
+			}
+		}
+
+		.custom-dropdown-button {
+			margin: 5px 0;
+			width: 100%;
+			max-width: 100%;
+			height: 70px;
+			line-height: 70px;
+		}
+
+		.f-dropdown {
+			left: 0 !important;
+			margin: 0;
+			width: 100% !important;
+
+			li {
+				max-width: 100%;
+				height: 70px;
+				line-height: 70px;
+			}
+		}
+	}
+}
+
+@mixin btn-cta() {
+	.btn-cta {
+		margin-bottom: 15px;
+		border-bottom: 3px solid transparent;
+		background-color: transparent;
+		padding: 0 20px;
+		min-width: 175px;
+		max-width: 250px;
+		min-height: 47px;
+		line-height: 47px;
+		font-size: rem-calc(12);
+
+		.content-cta {
+			display: inline-block;
+			vertical-align: middle;
+			line-height: 1.2;
+		}
+
+		&.light-blue {
+			border-bottom-color: $cta-btn-1-border-color;
+			background-color: $cta-btn-1-bg-color;
+			color: $cta-btn-txt-color;
+
+			&:hover {
+				background-color: $cta-btn-1-bg-color-hover;
+			}
+		}
+
+		&.arrow {
+			border-bottom: 0;
+			padding-right: 40px;
+			min-height: 50px;
+			text-align: left;
+			line-height: 50px;
+
+			span {
+				margin-top: -3px;
+			}
+
+			&.link {
+				margin-bottom: 0;
+			}
+
+			&.chevron-top {
+				color: $text-color;
+			}
+
+			&.link.chevron-top span::after {
+				@include sprite($blue-arrow-top);
+				right: 10px;
+			}
+
+			&.link span::after {
+				@include sprite($arrow-link-right-light);
+			}
+
+			span::after{
+				display: block;
+				position: absolute;
+				top: 50%;
+				right: 20px;
+				transform: translate(0, -50%);
+				margin-top: 1px;
+				content: '';
+			}
+
+			&.link.chevron-top:hover span::after {
+				@include sprite($blue-arrow-bottom);
+			}
+
+			&.link:hover span::after {
+				@include sprite($arrow-link-right-dark);
+			}
+
+			span::after {
+				@include sprite($arrow-link-right-dark);
+				display: block;
+				position: absolute;
+				top: 50%;
+				right: 20px;
+				transform: translate(0, -50%);
+				margin-top: 1px;
+				content: '';
+			}
+		}
+
+		&.dark-blue {
+			border-bottom-color: $cta-btn-2-border-color;
+			background-color: $cta-btn-2-bg-color;
+			color: $cta-btn-txt-color;
+
+			&:hover {
+				background-color: $cta-btn-2-bg-color-hover;
+			}
+		}
+
+		&.grey {
+			background-color: $cta-btn-3-bg-color;
+			color: $secondary-color-dark-ultra;
+
+			&:hover {
+				border-bottom-color: $cta-btn-3-border-color-hover;
+				background-color: $cta-btn-3-bg-color-hover;
+			}
+		}
+
+		&.link {
+			background-color: transparent;
+			padding-left: 0;
+			color: $font-dark-blue;
+
+			span::after {
+				@include sprite($arrow-link-right-dark);
+			}
+
+			&:hover {
+				color: $secondary-color-dark-ultra;
+
+				span::after {
+					@include sprite($arrow-link-right-light);
+				}
+			}
+
+		}
+
+		@media #{$small-only} {
+			margin-right: 0;
+			width: 100%;
+			max-width: 100%;
+
+			&.chevron-top {
+				width: auto;
+				max-width: 250px;
+			}
+		}
+	}
+}
+
+@mixin inline-cta() {
+
+	.inline-cta {
+		font-size: 0;
+
+		.btn-cta {
+			display: inline-block;
+			float: none;
+			clear: none;
+
+			&:not(:last-child) {
+				margin-right: 20px;
+			}
+
+			&.link {
+				margin-right: 50px;
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+
+			@media #{$small-only} {
+				&.link {
+					margin-right: 0px;
+				}
+			}
+		}
+
+		.link-cta {
+			margin-bottom: 0;
+
+			&:not(:last-child) {
+				margin-right: 50px;
+			}
+
+			@media #{$small-only} {
+				display: block;
+
+				&:not(:last-child) {
+					margin-right: 0px;
+				}
+			}
+		}
+	}
+}
+
+@mixin cta-group() {
+
+	.cta-group {
+
+		.cta-link {
+			display: inline-block;
+			margin: 0;
+			width: 100%;
+
+			&:not(:first-child) {
+				margin-top: 5px;
+			}
+		}
+	}
+}
+
+@mixin vignette-cta() {
+
+	.vignette-cta {
+		margin: auto;
+
+		img {
+			display: block;
+			margin: auto;
+		}
+
+		.cta.full-width {
+			margin-top: 0;
+		}
+	}
+}
+
+@mixin cta-my-peugeot() {
+
+	.cta.my-peugeot {
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 80px;
+		line-height: 80px;
+		z-index: 1;
+
+		span::after {
+			@include sprite($arrow-link-right-white);
+		}
+
+
+		[class*='slice-'] ~ .slice-pc19 & {
+			display: none;
+		}
+	}
+
+
+	@media #{$small-only} {
+		.cta.my-peugeot {
+			padding: 0;
+			width: 3.75rem;
+			min-width: 0;
+			font-size: 0;
+
+			.slice-pt21 & {
+				height: 60px;
+			}
+
+			.slice-pc19 &,
+			.slice-pt21 + .body .slice-pn7 & {
+				display: none;
+			}
+
+			span::after {
+				@include sprite($my-peugeot);
+
+				right: 5px;
+			}
+		}
+	}
+}
+
+@include cta();
+@include link-cta();
+@include square-cta();
+@include btn-cta();
+@include inline-cta();
+@include cta-group();
+@include vignette-cta();
+@include cta-dropdown();
+@include cta-my-peugeot();

@@ -1,0 +1,43 @@
+<div class="vignette columns large-3 medium-4 small-6">
+	<a class="content" href="#">
+		<div class="heading">
+			{{#commercial-label}}
+				<div class="offer-wrapper">
+					{{> atoms-commercial-label}}
+				</div>
+			{{/commercial-label}}
+			<div class="title">
+				<h3>{{title}}</h3>
+				<h4 class="subtitle">{{subtitle}}</h4>
+			</div>
+		</div>
+		<div class="img-wrapper">
+			{{#img}}
+				<img class="vcenter" src="{{img}}">
+			{{/img}}
+			{{^img}}
+				<div class="no-img"></div>
+			{{/img}}
+		</div>
+		{{#price}}
+			<div class="price"><small>à partir de </small><strong>{{price}} </strong>TTC*</div>
+		{{/price}}
+	</a>
+	<div class="cta-wrapper">
+		{{#type_car}}
+		<a href="#" class="cta btn-cta light-blue">
+			<span>DÉCOUVRIR</span>
+		</a>
+		{{/type_car}}
+		{{#type_service}}
+		<a href="#" class="cta btn-cta link arrow chevron-right">
+			<span>Votre prix personnalisé</span>
+		</a>
+		{{/type_service}}
+		{{#cta-config}}
+			<a href="#" class="cta link-cta chevron-right">
+				<span class="content-cta">Configurer</span>
+			</a>
+		{{/cta-config}}
+	</div>
+</div>

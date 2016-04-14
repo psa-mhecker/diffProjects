@@ -1,4 +1,0 @@
-<section>
-    <h2 class="title-lvl4">Message email de validation envoyé</h2>
-    <p><a href="/_/User/activation?email={$smarty.get.email}&key={$smarty.get.key}">TEMP: Activation du compte</a></p>
-</section>

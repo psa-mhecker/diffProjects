@@ -1,0 +1,464 @@
+$spriteWidth: 578;
+$spriteHeight: 574;
+$spriteWidthPx: 578px;
+$spriteHeightPx: 574px;
+
+
+%_sprites{
+  background-image: url('../img/sprites/sprites@1.png?#{$spriteWidth}#{$spriteHeight}');
+  background-repeat: no-repeat;
+
+  @media only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (-moz-min-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (min-device-pixel-ratio: 2) {
+      background-size: round($spriteWidthPx/2) round($spriteHeightPx/2);
+      background-image: url('../img/sprites/sprites@2.png?#{$spriteWidth}#{$spriteHeight}');
+  }
+}
+
+
+%_sprite-switch-4{
+  background-position: (-4px/2) (-4px/2);
+  width: (156px/2);
+  height: (86px/2);
+}
+
+%_sprite-switch-3{
+  background-position: (-168px/2) (-4px/2);
+  width: (156px/2);
+  height: (86px/2);
+}
+
+%_sprite-switch-2{
+  background-position: (-4px/2) (-98px/2);
+  width: (156px/2);
+  height: (86px/2);
+}
+
+%_sprite-switch-1{
+  background-position: (-168px/2) (-98px/2);
+  width: (156px/2);
+  height: (86px/2);
+}
+
+%_sprite-arrow-1{
+  background-position: (-4px/2) (-192px/2);
+  width: (110px/2);
+  height: (110px/2);
+}
+
+%_sprite-square-360{
+  background-position: (-122px/2) (-192px/2);
+  width: (86px/2);
+  height: (86px/2);
+}
+
+%_sprite-square-camera{
+  background-position: (-216px/2) (-192px/2);
+  width: (86px/2);
+  height: (86px/2);
+}
+
+%_sprite-square-night{
+  background-position: (-332px/2) (-4px/2);
+  width: (86px/2);
+  height: (86px/2);
+}
+
+%_sprite-square-fullscreen{
+  background-position: (-332px/2) (-98px/2);
+  width: (86px/2);
+  height: (86px/2);
+}
+
+%_sprite-square-day{
+  background-position: (-332px/2) (-192px/2);
+  width: (86px/2);
+  height: (86px/2);
+}
+
+%_sprite-vm-tog-inside-chocolate-on{
+  background-position: (-4px/2) (-310px/2);
+  width: (70px/2);
+  height: (70px/2);
+}
+
+%_sprite-vm-tog-inside-chocolate-off{
+  background-position: (-82px/2) (-310px/2);
+  width: (70px/2);
+  height: (70px/2);
+}
+
+%_sprite-vm-tog-inside-champagne-on{
+  background-position: (-160px/2) (-310px/2);
+  width: (70px/2);
+  height: (70px/2);
+}
+
+%_sprite-vm-tog-inside-champagne-off{
+  background-position: (-238px/2) (-310px/2);
+  width: (70px/2);
+  height: (70px/2);
+}
+
+%_sprite-vm-tog-simulation-chocolate-on{
+  background-position: (-316px/2) (-310px/2);
+  width: (70px/2);
+  height: (70px/2);
+}
+
+%_sprite-vm-tog-fs-chocolate-off{
+  background-position: (-426px/2) (-4px/2);
+  width: (70px/2);
+  height: (70px/2);
+}
+
+%_sprite-vm-tog-fs-champagne-on{
+  background-position: (-426px/2) (-82px/2);
+  width: (70px/2);
+  height: (70px/2);
+}
+
+%_sprite-vm-tog-fs-champagne-off{
+  background-position: (-426px/2) (-160px/2);
+  width: (70px/2);
+  height: (70px/2);
+}
+
+%_sprite-vm-tog-simulation-chocolate-off{
+  background-position: (-426px/2) (-238px/2);
+  width: (70px/2);
+  height: (70px/2);
+}
+
+%_sprite-vm-tog-simulation-champagne-on{
+  background-position: (-4px/2) (-388px/2);
+  width: (70px/2);
+  height: (70px/2);
+}
+
+%_sprite-vm-tog-simulation-champagne-off{
+  background-position: (-82px/2) (-388px/2);
+  width: (70px/2);
+  height: (70px/2);
+}
+
+%_sprite-vm-tog-outside-chocolate-on{
+  background-position: (-160px/2) (-388px/2);
+  width: (70px/2);
+  height: (70px/2);
+}
+
+%_sprite-vm-tog-outside-chocolate-off{
+  background-position: (-238px/2) (-388px/2);
+  width: (70px/2);
+  height: (70px/2);
+}
+
+%_sprite-vm-tog-outside-champagne-on{
+  background-position: (-316px/2) (-388px/2);
+  width: (70px/2);
+  height: (70px/2);
+}
+
+%_sprite-vm-tog-fs-chocolate-on{
+  background-position: (-394px/2) (-388px/2);
+  width: (70px/2);
+  height: (70px/2);
+}
+
+%_sprite-vm-tog-outside-champagne-off{
+  background-position: (-504px/2) (-4px/2);
+  width: (70px/2);
+  height: (70px/2);
+}
+
+%_sprite-back-to-top{
+  background-position: (-504px/2) (-82px/2);
+  width: (68px/2);
+  height: (66px/2);
+}
+
+%_sprite-zoom{
+  background-position: (-504px/2) (-156px/2);
+  width: (58px/2);
+  height: (58px/2);
+}
+
+%_sprite-square-check{
+  background-position: (-504px/2) (-222px/2);
+  width: (56px/2);
+  height: (56px/2);
+}
+
+%_sprite-square-quote{
+  background-position: (-504px/2) (-286px/2);
+  width: (56px/2);
+  height: (56px/2);
+}
+
+%_sprite-square-question{
+  background-position: (-504px/2) (-350px/2);
+  width: (56px/2);
+  height: (56px/2);
+}
+
+%_sprite-square-phone{
+  background-position: (-426px/2) (-316px/2);
+  width: (56px/2);
+  height: (56px/2);
+}
+
+%_sprite-arrow-2-big{
+  background-position: (-4px/2) (-466px/2);
+  width: (28px/2);
+  height: (56px/2);
+}
+
+%_sprite-slick-pager-chocolate-off{
+  background-position: (-40px/2) (-466px/2);
+  width: (54px/2);
+  height: (54px/2);
+}
+
+%_sprite-slick-pager-champagne-on{
+  background-position: (-102px/2) (-466px/2);
+  width: (54px/2);
+  height: (54px/2);
+}
+
+%_sprite-slick-pager-champagne-off{
+  background-position: (-164px/2) (-466px/2);
+  width: (54px/2);
+  height: (54px/2);
+}
+
+%_sprite-slick-pager-chocolate-on{
+  background-position: (-226px/2) (-466px/2);
+  width: (54px/2);
+  height: (54px/2);
+}
+
+%_sprite-check-comparateur{
+  background-position: (-288px/2) (-466px/2);
+  width: (46px/2);
+  height: (46px/2);
+}
+
+%_sprite-vm-simulation-cursor{
+  background-position: (-342px/2) (-466px/2);
+  width: (40px/2);
+  height: (46px/2);
+}
+
+%_sprite-valid{
+  background-position: (-390px/2) (-466px/2);
+  width: (46px/2);
+  height: (46px/2);
+}
+
+%_sprite-error{
+  background-position: (-444px/2) (-466px/2);
+  width: (46px/2);
+  height: (46px/2);
+}
+
+%_sprite-checkbox-comparator-checked{
+  background-position: (-504px/2) (-414px/2);
+  width: (40px/2);
+  height: (40px/2);
+}
+
+%_sprite-ico-geoloc{
+  background-position: (-498px/2) (-466px/2);
+  width: (34px/2);
+  height: (40px/2);
+}
+
+%_sprite-checkbox-comparator{
+  background-position: (-4px/2) (-530px/2);
+  width: (40px/2);
+  height: (40px/2);
+}
+
+%_sprite-ico-search{
+  background-position: (-52px/2) (-530px/2);
+  width: (36px/2);
+  height: (36px/2);
+}
+
+%_sprite-check-input{
+  background-position: (-96px/2) (-530px/2);
+  width: (36px/2);
+  height: (36px/2);
+}
+
+%_sprite-ico-pen{
+  background-position: (-540px/2) (-466px/2);
+  width: (32px/2);
+  height: (32px/2);
+}
+
+%_sprite-comparator-plus{
+  background-position: (-140px/2) (-530px/2);
+  width: (32px/2);
+  height: (32px/2);
+}
+
+%_sprite-comparator-min{
+  background-position: (-180px/2) (-530px/2);
+  width: (32px/2);
+  height: (32px/2);
+}
+
+%_sprite-pen{
+  background-position: (-220px/2) (-530px/2);
+  width: (32px/2);
+  height: (32px/2);
+}
+
+%_sprite-square-plus-hover{
+  background-position: (-260px/2) (-530px/2);
+  width: (30px/2);
+  height: (30px/2);
+}
+
+%_sprite-arrow-2-small-white-right{
+  background-position: (-552px/2) (-414px/2);
+  width: (16px/2);
+  height: (30px/2);
+}
+
+%_sprite-arrow-2-small-white{
+  background-position: (-394px/2) (-310px/2);
+  width: (16px/2);
+  height: (30px/2);
+}
+
+%_sprite-square-plus{
+  background-position: (-298px/2) (-530px/2);
+  width: (30px/2);
+  height: (30px/2);
+}
+
+%_sprite-arrow-2-small{
+  background-position: (-394px/2) (-348px/2);
+  width: (16px/2);
+  height: (30px/2);
+}
+
+%_sprite-vm-tog-menu-champagne-on{
+  background-position: (-336px/2) (-530px/2);
+  width: (30px/2);
+  height: (30px/2);
+}
+
+%_sprite-arrow-2-small-dark{
+  background-position: (-472px/2) (-388px/2);
+  width: (16px/2);
+  height: (30px/2);
+}
+
+%_sprite-square-info{
+  background-position: (-374px/2) (-530px/2);
+  width: (30px/2);
+  height: (30px/2);
+}
+
+%_sprite-vm-tog-menu-champagne-off{
+  background-position: (-412px/2) (-530px/2);
+  width: (30px/2);
+  height: (30px/2);
+}
+
+%_sprite-arrow-2-small-white--{
+  background-position: (-472px/2) (-426px/2);
+  width: (16px/2);
+  height: (30px/2);
+}
+
+%_sprite-square-info-hover{
+  background-position: (-450px/2) (-530px/2);
+  width: (30px/2);
+  height: (30px/2);
+}
+
+%_sprite-close{
+  background-position: (-488px/2) (-530px/2);
+  width: (28px/2);
+  height: (28px/2);
+}
+
+%_sprite-cross-toggle{
+  background-position: (-332px/2) (-286px/2);
+  width: (22px/2);
+  height: (12px/2);
+}
+
+%_sprite-arrow-toggle{
+  background-position: (-362px/2) (-286px/2);
+  width: (22px/2);
+  height: (12px/2);
+}
+
+%_sprite-arrow-toggle-2{
+  background-position: (-392px/2) (-286px/2);
+  width: (18px/2);
+  height: (10px/2);
+}
+
+%_sprite-btn-next-2{
+  background-position: (-310px/2) (-192px/2);
+  width: (10px/2);
+  height: (18px/2);
+}
+
+%_sprite-btn-red-1{
+  background-position: (-310px/2) (-218px/2);
+  width: (10px/2);
+  height: (18px/2);
+}
+
+%_sprite-btn-next{
+  background-position: (-310px/2) (-244px/2);
+  width: (10px/2);
+  height: (18px/2);
+}
+
+%_sprite-square-info-2{
+  background-position: (-122px/2) (-286px/2);
+  width: (16px/2);
+  height: (16px/2);
+}
+
+%_sprite-close-small{
+  background-position: (-146px/2) (-286px/2);
+  width: (14px/2);
+  height: (14px/2);
+}
+
+%_sprite-iso-losange{
+  background-position: (-168px/2) (-286px/2);
+  width: (12px/2);
+  height: (12px/2);
+}
+
+%_sprite-check{
+  background-position: (-188px/2) (-286px/2);
+  width: (12px/2);
+  height: (12px/2);
+}
+
+%_sprite-close-panel{
+  background-position: (-208px/2) (-286px/2);
+  width: (10px/2);
+  height: (10px/2);
+}
+
+%_sprite-add-comparator-plus{
+  background-position: (-226px/2) (-286px/2);
+  width: (10px/2);
+  height: (10px/2);
+}
+

@@ -1,0 +1,26 @@
+parameters:
+  psa_ndp_datalayer_processor.class: PsaNdp\MappingBundle\Datalayer\DatalayerProcessor
+  psa_ndp_datalayer_repository.class: PsaNdp\MappingBundle\Repository\PsaPageDatalayerRepository
+  psa_ndp.context.class: PsaNdp\MappingBundle\Datalayer\Context
+  psa_ndp.datalayer.class: PsaNdp\MappingBundle\Datalayer\Datalayer
+services:
+
+  psa_ndp.context:
+    class: %psa_ndp.context.class%
+  psa_ndp_datalayer_repository:
+    class: %psa_ndp_datalayer_repository.class%
+    factory_service: doctrine.orm.entity_manager
+    factory_method:  getRepository
+    arguments: ['PSAMigrationBundle:Page\PsaPageDatalayer']
+
+  psa_ndpdatalayer_processor:
+    class: %psa_ndp_datalayer_processor.class%
+    arguments:
+      - @psa_ndp_datalayer_repository
+  psa_ndp.datalayer:
+      class: %psa_ndp.datalayer.class%
+      arguments:
+        - @psa_ndp_datalayer_repository
+        - %datalayer%
+
+

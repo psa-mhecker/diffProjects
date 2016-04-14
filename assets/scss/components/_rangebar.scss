@@ -1,0 +1,84 @@
+@charset 'UTF-8';
+
+.range-bar {
+
+	> ul {
+		margin: 0;
+	}
+
+	@media #{$small-only}{
+
+		padding: rem-calc(35);
+
+		.range-bar-header {
+			position: relative;
+			background-color: $background-very-light-blue;
+			padding: rem-calc(20);
+			color: $white;
+		}
+
+		.toggle-icon-expand {
+			@include sprite($white-arrow-bottom);
+		}
+
+		.toggle-icon-shrink {
+			@include sprite($white-arrow-top);
+		}
+
+		.range-bar-list {
+			display: none;
+			border: 1px solid $grey-8-color;
+		}
+
+		.range-bar-item {
+			margin: 0 rem-calc(24);
+			border-bottom: 1px solid $grey-7-color;
+			padding: rem-calc(10) 0;
+			list-style-type: none;
+
+			&:last-child {
+				border-bottom: 0;
+			}
+		}
+
+	}
+
+	@media #{$medium-up} {
+
+		.range-bar-list {
+			display: block !important; //Always show the range bar in desktop 
+			font-size: 0;
+		}
+
+		.range-bar-item {
+			display: inline-block;
+			border-bottom: 1px solid $grey-10-color;
+			border-left: 1px solid $grey-10-color;
+		
+			a {
+				display: block;
+				padding: rem-calc(10) rem-calc(20);
+				font-size: rem-calc(12);
+			}			
+
+			&:hover {
+				background-color: $default-color;
+				font-weight: $font-weight-bold;
+
+				a {
+					color: $primary-color;
+				}
+			}
+
+			&:first-child {
+				border-left: 0;
+			}
+
+			&:last-child {
+				border-right: 1px solid $grey-10-color;
+			}
+		}
+
+	}
+
+}

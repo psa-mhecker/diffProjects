@@ -1,0 +1,30 @@
+{assign var="gtmCategory" value="{$slicePC9.blockName}::position-{$slicePC9.blockOrder}"}
+<section class="slice-pc9 {if isset($slicePC9.anchorId)} {$slicePC9.anchorId} {/if}" {if isset($slicePC9.anchorId)} id="{$slicePC9.anchorId}" {/if} {if isset($slicePC9.popintrancheid)} data-popintrancheid = "{$slicePC9.popintrancheid}" {/if} data-jsobj="[ { 'obj':'slicePC9' } ]" datalayer="{$slicePC9.datalayer}">
+    {if $slicePC9.title}<h2>{$slicePC9.title}</h2>{/if}
+    {if $slicePC9.subtitle}<h3>{$slicePC9.subtitle}</h3>{/if}
+    <div class="row row-slideshow collapse">
+        {if $slicePC9.slideShow|@count >= 1}
+        <div class="small-12 medium-8 large-6 {if $slicePC9.imagePosition}slide{$slicePC9.imagePosition}{/if}">
+            {if $slicePC9.slideShow|@count == 1}
+                {foreach $slicePC9.slideShow as $items}
+                    {if $items.type === 'image'}
+                        {include file='../Components/images.html.smarty' image=$items}
+                    {/if}
+                {/foreach}
+            {else}
+                <div class="slick-container js-slick-carousel-container" {if empty($slicePC9.timerSpeed)} data-options='{ldelim}"autoplay":"false"{rdelim}' {/if}>
+                    {include file='../Components/slideshowslick.html.smarty' slideshow=$slicePC9.slideShow timerSpeed=$slicePC9.timerSpeed gtmCategory={$gtmCategory}}
+                </div>
+            {/if}
+        </div>
+        {/if}
+        <div class="panel-no-padding clearfix">
+           {$slicePC9.text}
+        </div>
+        <div class="inline-cta clearfix">
+            {foreach $slicePC9.ctaList as $cta}
+                {include file="../Components/cta.html.smarty" widthClass="short-width" gtm="{ldelim}\"eventType\":\"click\",\"dataList\":{ldelim}\"event\":\"uaevent\",\"eventCategory\":\"{$slicePC9.blockName}::position-{$slicePC9.blockOrder}\",\"eventAction\":\"Redirection\",\"eventLabel\":\"{$cta.title|escape:html}\"{rdelim}{rdelim}"}
+            {/foreach}
+        </div>
+    </div>
+</section>

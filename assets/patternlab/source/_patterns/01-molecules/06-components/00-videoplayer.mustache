@@ -1,0 +1,31 @@
+<div class="js-video-container video-container">
+    {{> atoms-play-video}}
+    <video class="js-video-player video-player" id="media-{{video.media_id}}"
+           title="nouvelle peugeot 308" controls poster='{{video.poster}}'>
+        <source src="http://cdn.streamlike.com/html5/idevicev2/media_id/{{video.media_id}}/width/{{video.width}}/height/{{video.height}}"
+                type="application/x-mpegURL"/>
+        <!-- H.264 IPAD -->
+        <source src="http://cdn.streamlike.com/html5/idevicev1/media_id/{{video.media_id}}/width/{{video.width}}/height/{{video.height}}"
+                type="application/x-mpegURL"/>
+        <!-- H.264 IPHONE -->
+        <source src="http://cdn.streamlike.com/html5/mp4low/media_id/{{video.media_id}}/width/{{video.width}}/height/{{video.height}}"
+                type="video/mp4"/>
+        <!-- H.264 BASELINE -->
+        <source src="http://cdn.streamlike.com/html5/webm/media_id/{{video.media_id}}/width/{{video.width}}/height/{{video.height}}"
+                type="video/webm"/>
+        <!-- WEBM -->
+        <div class="no-video">
+            <div class="jp-video jp-video-360p" role="application" aria-label="media player">
+                <div class="jp-type-single">
+                    <div class="jp-jplayer"></div>
+                    <div class="jp-gui">
+                        <div class="jp-interface">
+                            <div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        Your browser does not support the video tag.
+    </video>
+</div>

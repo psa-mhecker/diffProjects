@@ -1,0 +1,10 @@
+<section class="slice-pn18 {if isset($slicePN18.anchorId)} {$slicePN18.anchorId} {/if}" {if isset($slicePN18.anchorId)} id="{$slicePN18.anchorId}" {/if} datalayer="{$slicePN18.datalayer}">
+
+    <div class="heading">
+        {if isset($slicePN18.title)}<h2 class="title-rubrique">{$slicePN18.title}</h2>{/if}
+        {if isset($slicePN18.description)}<div class="wysiwyg-content">{$slicePN18.description}</div>{/if}
+    </div>
+
+    <iframe src="{$slicePN18.url}" frameborder="0" style="height:{$slicePN18.height}px"></iframe>
+
+</section>

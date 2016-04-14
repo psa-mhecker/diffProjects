@@ -1,0 +1,285 @@
+.slice-df43 {
+
+
+  .nb {
+    color: $warm-black;
+    font-family: $font-family-base-regular;
+    margin-bottom: 0;
+    span {
+      color: $champagne;
+      margin-right: 10px;
+    }
+  }
+  .btnRight > div.col-md-9 {
+    padding: 5px 0;
+  }
+  > p {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: $font-size-x-large;
+  }
+  .title-type {
+    color: $champagne;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: $font-size-x-large;
+  }
+
+  * {
+    font-family: $font-family-base-regular;
+  }
+  .price_check .infoPrice {
+    cursor: pointer;
+  }
+
+  .expands {
+    .vignettes-toggle {
+      .img-vignette {
+        border-bottom: 1px solid $champagne;
+      }
+      margin-top: 28px;
+      &:first-child {
+        margin-top: 0;
+      }
+
+
+      .vignette_bloc {
+        .price_check {
+          position: relative;
+          vertical-align: middle;
+          p {
+            display: inline-block;
+            width: 90%;
+            height: 30px;
+          }
+          .infoPrice {
+            position: absolute;
+            top: 12px;
+            right: 10px;
+            display: inline-block;
+          }
+        }
+        .cta-details {
+          padding-right: 5px;
+          padding-left: 5px;
+
+          .span_detail {
+            .off {
+              display: none;
+            }
+          }
+          &.open {
+            .span_detail {
+              .on {
+                display: none;
+              }
+              .off {
+                display: inline-block;
+              }
+            }
+          }
+        }
+      }
+
+
+      .cont-toggle {
+        padding-right: 10px;
+        .row {
+          margin: 0;
+          .pictures {
+            img {
+              width: 70%;
+              margin: 0 auto;
+              display: block;
+            }
+          }
+          .infos {
+            margin-bottom: 0;
+            .price_check {
+              margin-top: 14px;
+              position: relative;
+              text-align: left;
+              p {
+                margin: 0;
+              }
+              .infoPrice {
+                position: absolute;
+                right: 0;
+                top: 4px;
+              }
+            }
+
+          }
+        }
+
+
+        .x-bloc_carroussel {
+          max-height: none;
+          padding: 15px 56px 0;
+
+          .arrow.arrow--2-big-left,
+          .arrow.arrow--2-big-right {
+            margin-top: -45px;
+          }
+
+          .arrow.arrow--2-big-left {
+            left: -50px;
+          }
+          .arrow.arrow--2-big-right {
+            right: -50px;
+          }
+
+          .item-slide {
+            height: auto;
+            border: none;
+            figure {
+              * {
+                margin: 0;
+                padding: 0;
+              }
+              width: 95%;
+              height: auto;
+              margin: 0;
+              padding: 0;
+              position: relative;
+
+              img {
+                width: 100%;
+                height: 100%;
+                cursor: default;
+              }
+              .oneEquipment {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                background-color: white;
+                * {
+                  cursor: default;
+                }
+              }
+            }
+            .slide-text {
+              height: 40%;
+            }
+          }
+
+          li > span {
+            display: block;
+            font-size: 12px;
+            color: $dark_brown_1_color;
+            text-align: left;
+            padding: 3px;
+            line-height: 1.5;
+          }
+        }
+        .with-slide {
+          padding: 20px 28px;
+          > p {
+            margin: 5px 0;
+            padding-left: 60px;
+            padding-right: 60px;
+          }
+        }
+
+
+
+
+
+        .supplements {
+          padding: 20px 0 0 42px;
+          p {
+            color: $dark_brown_1_color;
+            font-size: 12px;
+            font-family: $medium_font_roboto;
+            font-weight: 600;
+            margin: 0;
+            padding-left: 0;
+          }
+          .price_check {
+            position: relative;
+            vertical-align: middle;
+            p {
+              display: inline-block;
+              width: 90%;
+            }
+            .infoPrice {
+              position: absolute;
+              top: 3px;
+              right: 8px;
+              display: inline-block;
+            }
+          }
+          .cta {
+            width: 52%;
+            float: right;
+            margin-left: 4px;
+            margin-right: 65px;
+            padding: 0;
+            span {
+              display: block;
+              padding: 10px;
+              width: 100%;
+              height: 100%;
+            }
+            &:hover {
+              background-color: $champagne;
+            }
+            &:focus, &:active {
+              background-color: #f9f8f6;
+            }
+          }
+          .ctaRemoved {
+            display: none !important;
+          }
+          .buttonNormalSkinMobile {
+            background-color: #f9f8f6;
+            border-color: $dark_taupe_1_color;
+            &:hover {
+              background-color: #f9f8f6;
+              border-color: $dark_taupe_1_color;
+            }
+          }
+          .reverseButtonSkinMobile {
+            background-color: $champagne !important;
+            border-color: $champagne !important;
+          }
+          .reverseButtonSkin {
+            background-color: $champagne;
+            border-color: $champagne;
+
+            &:hover {
+              background-color: #f9f8f6;
+            }
+            &:focus, &:active {
+              background-color: $champagne;
+            }
+          }
+        }
+      }
+      .infos {
+        background: rgba(230, 224, 219, 0.25);
+        &.desc {
+          width: calc(100% - 108px);
+          margin: 20px 54px;
+          padding: 0 28px;
+          clear: left;
+          > div:first-child {
+            padding-left: 0;
+          }
+        }
+      }
+    }
+  }
+  .list-vignette {
+    margin: 8px 0 0;
+  }
+  .notification {
+    margin: 28px 0 0;
+    &.btnRight {
+      margin-bottom: 28px;
+    }
+  }
+  .more-choice {
+    margin: 28px 0;
+  }
+}

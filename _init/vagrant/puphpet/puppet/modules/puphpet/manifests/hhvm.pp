@@ -50,8 +50,8 @@ class puphpet::hhvm(
       }
     }
     'centos': {
-      $require = defined(Class['puphpet::firewall::post']) ? {
-        true    => Class['puphpet::firewall::post'],
+      $require = defined(Class['my_fw::post']) ? {
+        true    => Class['my_fw::post'],
         default => [],
       }
 

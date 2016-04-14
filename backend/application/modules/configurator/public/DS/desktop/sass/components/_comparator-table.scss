@@ -1,0 +1,637 @@
+@charset "UTF-8";
+#comparatorTable{
+  clear: both;
+    // etat du tableau lorsque le bouton "uniquement les differences" est active.
+    &.showOnlyDiff{
+      .table-comparator-result .toggle-container .toggle-content .row.hasDiff {
+        display:block;
+      }
+      .table-comparator-result .toggle-container .toggle-content .row.noDiff {
+        display:none;
+      }
+      .toggle-container.noRowDiff{
+        // display:none;
+      }
+    }
+    .selectBox-dropdown{
+      width: 100% !important;
+      padding: 0;
+      font-size: 11px;
+      text-transform: none;
+      .selectBox-label{
+        padding-right: 0;
+        padding-left: 10px;
+      }
+    }
+    p.msgError{display:none;color:$carmin;}
+    &.errorLoad{
+      p.msgError{display:block;}
+    }
+
+    h2{
+      &.main-comparator-title{
+        margin-top: 27px;
+        margin-bottom: 20px;
+        font-size:20px;
+        font-family: $font-family-brand;
+        color: $champagne;
+        text-transform:uppercase;
+        text-align: center;
+      }
+    }
+
+    .customization-comparator{
+
+      margin-bottom: 15px;
+      text-align: left;
+      .manageToggle {
+        text-align: center;
+        a{
+          display: inline-block;
+          text-transform: uppercase;
+          font-family: $font-family-base-light;
+          text-align:left;
+          span{
+            vertical-align: middle;
+            font-size: 13px;
+            line-height: 13px;
+            display: inline-block;
+          }
+          &.openAllToggle,&.closeAllToggle{
+            span.input{
+              display: inline-block;
+              vertical-align: middle;
+              margin-right: 10px;
+              width: 28px;
+              height: 28px;
+              border: 1px solid $input-default-border;
+              position: relative;
+              border-radius: 50%;
+            }
+          }
+          &.openOnlyDiff{
+            width:40%;
+            font-size: 13px;
+            color: $champagne;
+            span.input{
+              margin: 0 14px;
+              display:inline-block;
+              vertical-align: middle;
+              margin-bottom: 3px;
+              border: none;
+              @extend %_sprites;
+              @extend %_sprite-checkbox-comparator;
+            }
+          }
+          &:hover{
+
+          }
+          &.active{
+            &.openOnlyDiff{
+              span.input{
+                @extend %_sprites;
+                @extend %_sprite-checkbox-comparator-checked
+              }
+            }
+          }
+          &.openOnlyDiff.disabled{
+            //opacity:0.5;
+            &:hover{
+              color: blue;
+              background-color: white;
+              cursor:no-drop;
+            }
+          }
+        }
+      }
+    }
+    .table-comparator-equipement,.table-comparator-motors,.table-no-motor{
+      display:none;
+    }
+    &.selected_01{
+      .customization-comparator,.table-comparator-equipement,.table-comparator-title{
+        display:block;
+      }
+    }
+    .model-selector-container{
+      position:relative;
+      .subtitleContainer, .model-selector{
+        position:absolute;
+        width:100%;
+        top:0;
+        // left:15px;
+      }
+      .model-selector.stick-it{
+        position:fixed;
+        z-index: 100;
+        .container-bg{
+          background:white;
+          width: 100%;
+          height: 190px;
+        }
+        .car-model,.config-content,.delete-content{
+          display:none;
+        }
+        .span_3_of_12 {
+            height: 120px;
+          .col-content{
+            border-bottom:0;
+            height: 120px;
+          }
+        }
+      }
+      .subtitleContainer{
+        .span_3_of_12.subtitle{
+          padding-left:28px;
+          text-align: left;
+        }
+      }
+    }
+
+    .model-selector{
+      .loader-ds-container{
+        &.hide{display:none;}
+        width: 100%;
+        position: absolute;
+        text-align: center;
+        top: 0;
+        left: 0;
+        > div{
+          height: 240px;
+          vertical-align: middle;
+          line-height: 240px;
+          background: white;
+          opacity: 0.7;
+          .white-loader{
+            margin: 0 auto;
+            display: inline-block;
+            vertical-align: middle;
+            background-image: url('../img/ajaxLoader.gif');
+            background-repeat: no-repeat;
+            width: 61px;
+            height: 61px;
+          }
+        }
+
+      }
+
+      .container-bg{
+        background:$body-bg;
+        float:left;
+        width:100%;
+        border-bottom: 1px solid $dark-champagne;
+        box-sizing: content-box;
+        font-family: $font-family-base-light;
+        &.hidden{visibility:hidden;}
+        .delete-content{
+          height:20px;
+          margin-bottom:6px;
+          position: absolute;
+          right: 0;
+          left: 0;
+          top: -20px;
+          a{
+            padding: 8px;
+            left: 50%;
+            float: left;
+            margin-left: -10px;
+            &:hover{
+              opacity:0.8;
+              cursor: pointer;
+            }
+            span{
+              display:block;
+              @extend %_sprites;
+              @extend %_sprite-close-small;
+            }
+          }
+        }
+      }
+      .span_3_of_12{
+        width:28%;
+        float:left;
+        margin: 0 ;
+        border-left: 1px solid $border-comparator-selector;
+        height: 240px;
+        position: relative;
+        margin-top: 20px;
+        &:first-of-type{
+          border-left: none;
+        }
+        &:first-child{
+          min-height:5px;
+          >span{
+            font-size: 13px;
+            vertical-align: middle;
+            position: relative;
+            display: block;
+            width: 100%;
+            text-transform: uppercase;
+            top: 50%;
+            margin-top: -14px;
+          }
+        }
+        &.item{
+          width:24%;
+          display:table-column;
+          position:relative;
+
+          .col-content {
+            position:relative;
+            height: 240px;
+
+            & > div {
+              //opacity:0.5;
+              a.cta-configurer{
+                visibility: hidden;
+              }
+            }
+          }
+          &.enabled {
+            .col-content {
+              .select-01{opacity:1;}
+              .car-model{
+                display: block;
+                figure .img_default{
+                  display:block;
+                }
+              }
+            }
+            &.selected_01 .car-model figure .img_default{display:none;}
+          }
+
+          figure{ //permet aux images de garder la meme hauteur sur les 3 colonnes
+            height: auto;
+            position:relative;
+            margin: 0.5em 0;
+            margin-top: 5px;
+            .img_wrapper{
+              display:none;
+              position:absolute;
+              top:0;
+              left:0;
+              width:100%;
+              height:100%;
+              img {
+                &.hidden{
+                  visibility:hidden;
+                }
+                // margin-bottom: -50%;
+                display: inline-block;
+                max-width: 100%;
+                max-height: 100%;
+              }
+            }
+            .img_default{
+              display:none;
+              width: 100%;
+              text-align: left;
+              font-size: 11px;
+              padding: 0 25px;
+              text-transform: uppercase;
+              position: relative;
+              bottom: 20%;
+              text-align: center;
+              //font-family: $font_citroen-bold;
+              color:black;
+              >p{
+                margin: 0;
+              }
+              .picto-add{
+                display: block;
+                margin: 14px auto 9px auto;
+
+                @extend %_sprites;
+                @extend %_sprite-comparator-plus;
+              }
+            }
+          }
+          figure,.model-price,.infobulle,.cta{cursor:default}
+          .model-price,.infobulle,a.cta-configurer,.delete-content{
+            display: none;
+          }
+          &.selected_01{
+             .col-content {
+                figure .img_default{
+                  display:none;
+                }
+                figure .img_wrapper{
+                  display:inherit;
+                }
+                & > div {
+                  opacity:1;
+                  a.cta-configurer{
+                    visibility: visible;
+                  }
+                }
+            }
+            figure,.model-price,.infobulle,.cta{cursor:inherit;}
+            .car-model{
+              figure,.infobulle,.cta-configurer{opacity:1;}
+              .model-price,.infobulle{
+                visibility: visible;
+                display: block;
+              }
+            }
+            a.cta-configurer,.delete-content{
+              visibility: visible;
+              display: block;
+            }
+            .select.select-01{
+              .selectBox-dropdown{
+                width: 100% !important;
+                text-transform: uppercase;
+                //font-family: $font_ubuntu-bold;
+                font-size: 11px;
+              }
+            }
+          }
+          &.selected_02{
+            .select.select-02{
+              .selectBox-dropdown{
+                width: 100% !important;
+                text-transform: inherit;
+                //font-family: $font_ubuntu-bold;
+                font-size: 11px;
+                text-transform: none;
+              }
+            }
+          }
+          .select{
+            position:relative;
+            display:table-row;
+            z-index:0;
+            width: 100%;
+            margin-bottom:0;
+            height: 30px;
+            &.select-01{
+              height:35px;
+
+            }
+            select{
+              height:inherit;
+              line-height: inherit;
+              z-index:1;
+              opacity:1;
+              border:none;
+              color:$body-bg;
+              font-size: 11px;
+              // font-family: $robotolight;
+              text-transform: uppercase;
+              -webkit-appearance: none;
+              -moz-appearance: none;
+              -ms-appearance: none;
+              appearance: none;
+              &::-ms-expand {
+                display: none;
+              }
+              margin-bottom:0;
+            }
+
+            &.first-child{
+              select{
+                border-top:1px solid;
+              }
+            }
+          }
+          .car-model{
+            font-size:11px;
+            padding-top: 10px;
+            p.model-price{
+              padding-left:10px;
+              padding-top: 10px;
+              height:62px;
+              margin-bottom:21px;
+              margin:0;
+              line-height: 12px;
+              font-size:11px;
+              font-family: $font-family-base-regular;
+              span:first-child{
+                font-size:11px;
+                display:block;
+                margin-bottom: 5px;
+              }
+              span.light{
+                font-family: $font-family-base-light;
+              }
+            }
+          }
+          .config-content{
+            position:absolute;
+            bottom:10px;
+            left:0;
+            width:100%;
+            padding:10px;
+            a.cta-configurer{
+              display:block;
+              background: $dark-champagne;
+              color: $light-champagne;
+              font-size:13px;
+              text-transform: uppercase;
+              padding: 13px 16px;
+              vertical-align: middle;
+              position:relative;
+              text-align: left;
+              &:hover{
+                background: $champagne;
+                color: $light-champagne;
+              }
+              &:after{
+                content:"";
+                position: absolute;
+                top: 50%;
+                margin-top: -7px;
+                right: 10px;
+                vertical-align: middle;
+                @extend %_sprites;
+                @extend %_sprite-arrow-2-small-white-right;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .table-comparator-result{
+      .row{
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      &.hide{display:none;}
+      &.table-comparator-equipement{
+        // max-width: 790px;
+        margin-bottom: 56px;
+        margin-top: -5px;
+        border-bottom: 1px solid $dark-champagne;
+
+      }
+
+      .toggle-container{
+          border-top: 1px solid $dark-champagne;
+          cursor: pointer;
+        &:first-of-type{
+          border-top: none;
+        }
+        &.hide {
+          display:none;
+        }
+
+        &.toggle-open{
+          .toggle-title{
+            .puce-toggle{
+              /* @extend %_sprites;
+              @extend %_sprite-chevron-toggle-opened; */
+            }
+          }
+        }
+        .toggle-content{
+          display:none;
+          //font-family: $font_ubuntu-regular;
+          font-size:13px;
+          padding-bottom: 0;
+          .info{
+            display: inline-block;
+            vertical-align: middle;
+            margin-top: -9px;
+            margin-left: 5px;
+            // @extend %_sprites;
+            // @extend %_sprite-icopie;
+            cursor: pointer;
+          }
+          .row{
+            .cell{
+              margin: 0;
+              display:inline-block;
+              text-align:center;
+              vertical-align: middle;
+              color: grey;
+              &.label-title{
+                text-align:left;
+                padding-left: 30px;
+              }
+              &.span_3_of_12{
+                width:28%;
+                &.value{
+                  width: 23.27%;
+                  span.standard{
+                    display:inline-block;
+                    @extend %_sprites;
+                    @extend %_sprite-check-comparateur;
+                  }
+                }
+
+              }
+            }
+          }
+          .table-row{
+            &.hasDiff{
+              background: $light-grey;
+              &:nth-of-type(2n){
+                background: $body-bg;
+              }
+            }
+          }
+        }
+        .table-row{
+          padding: 15px 0;
+          text-align: left;
+        }
+        .toggle-title{
+          padding: 27px 0;
+          position:relative;
+          //font-family:$font_ubuntu-bold;
+          font-size:13px;
+          text-transform:uppercase;
+          display:block;
+          color:grey;
+          padding-left: 30px;
+          &:hover{
+            color:grey;
+          }
+          .puce-toggle{
+            display: inline-block;
+            float: right;
+            margin-right: 1.5em;
+            @extend %_sprites;
+            @extend %_sprite-comparator-plus;
+          }
+          &.close{
+            .puce-toggle{
+              display: inline-block;
+              float: right;
+              margin-right: 1.5em;
+              @extend %_sprites;
+              @extend %_sprite-comparator-min;
+            }
+          }
+        }
+      }
+    }
+
+    .table-no-motor{
+      display:none;
+      p{
+        padding: 25px 7%;
+        border: 1px solid black;
+        font-weight: bold;
+        font-size: 12px;
+      }
+    }
+    .text-legals{
+      margin:60px 0;
+      p{
+        margin: 0 auto;
+      }
+    }
+    input[type=checkbox] {
+      + label {
+        &:before {
+          border-radius: .1em;
+        }
+      }
+
+      &:checked + label {
+        &:after {
+          position: absolute;
+          content: "";
+          display: block;
+          width: 10px;
+          height: 10px;
+          top: 5px;
+          left: -15px;
+          background-color: green;
+        }
+      }
+    }
+  .openClose{
+    border: 1px solid $lame-border;
+    padding: 6px 7px;
+    width: auto;
+    display: inline-block;
+    a{
+      display: inline-block;
+      width: auto;
+      padding: 15px 28px;
+      background-color: $body-bg;
+      color: $champagne;
+      margin: 0;
+      &.active{
+        background-color: $champagne;
+        color: $light-champagne;
+      }
+    }
+  }
+  a.selectBox{
+    cursor: pointer;
+
+  }
+}
+.selectBox-dropdown-menu {
+  li {
+    a {
+      cursor: pointer;
+    }
+  }
+}
+

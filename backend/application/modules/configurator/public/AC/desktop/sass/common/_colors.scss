@@ -1,0 +1,250 @@
+@charset "UTF-8";
+/* Range colors */
+
+// Couleurs AC
+$white_color: #fff;
+$black_color: #000;
+$white_light_color: #e6e6e6;
+
+$verdatre-light:#ede7b2;
+$verdatre:#c2b000;
+
+$turquoise-very-light:#daf0f4;
+$turquoise-light:#85cddb;
+$turquoise:#82cddc;
+
+
+$orange:#f0780a; // orange CTA
+
+$magenta:#d91485;
+
+$grey-1:#f7f7f9; // background très clair
+$grey-2:#afadc3; // background CTA
+$grey-2-trans0:rgba(175,173,195,0); // R: 175, V: 173, B: 195, A: 0
+$grey-3:#e8e8e8; // certaines bordures larges - traits de séparations
+$grey-4:#dcdcdc; //a utres bordures larges et fond de blocs gris clairs
+$grey-7:#eaeaea;
+
+$grey-5:#333333; // presque noir - couleur police principale
+$grey-6:#646464; // gris foncé police-bis (notifications)
+$grey-8:#d5c940;
+
+$lavender-grey: #CACAD5;
+$cta-bg-grey:$grey-2;
+$cta-bg-orange:$orange;
+
+$jaunatre: #c2b000 ;
+
+
+
+
+// Couleurs PEUGEOT
+$dark_blue_1_color: #141f33; // R: 19, V: 61, B: 95
+$dark_blue_1_color_hover: #0c2d47; // R: 12, V: 45, B: 71
+$dark_blue_2_color: #012642; // R: 01, V: 38, B: 66
+$dark_blue_3_color: #152946; // R: 01, V: 38, B: 66
+$dark_blue_4_color: #152133; // R: 21, V: 33, B: 51
+$dark_blue_5_color: #142032; // R: 20, V: 32, B: 50
+$dark_blue_6_color: #033153; // R: 20, V: 32, B: 50
+$dark_blue_7_color: #335873; // R: 20, V: 32, B: 50
+$dark_blue_8_color: #143c5f; // R: 18, V: 61, B: 95
+
+$mid_blue_1_color: #0062c5; // R: 00, V: 98, B: 197
+$mid_blue_2_color: #007edb; // R: 00, V: 126, B: 219
+$mid_blue_2_color_hover: #0062c5; // R: 00, V: 98, B: 197
+$mid_blue_3_color: #068fef; // R: 06, V: 143, B: 239
+$mid_blue_4_color: #0069cb; // R: 00, V: 105, B: 203
+$mid_blue_5_color: #3ba7f2; // R: 59, V: 167, B: 242
+$mid_blue_6_color: #3ba6f2; // R: 59, V: 166, B: 242
+$mid_blue_7_color: #053153; // R: 59, V: 166, B: 242
+$mid_blue_8_color: #cce5f8;
+$mid_blue_9_color: #cce6f7;
+$mid_blue_10_color: #0080d9;
+
+$grey_1_color: #3c3947; // R: 60, V: 57, B: 71
+$grey_1_color_light: #5a5864; // R: 90, V: 88, B: 100
+$grey_2_color: #4b4b4b; // R: 75, V: 75, B: 75
+$grey_3_color: #666666; // R: 102, V: 102, B: 102
+$grey_4_color: #818181; // R: 129, V: 129, B: 129
+$grey_5_color: #919191; // R: 145, V: 145, B: 145
+$grey_6_color: #b4b4b4; // R: 180, V: 180, B: 180
+$grey_7_color: #b4b2bd; // R: 180, V: 178, B: 189
+$grey_8_color: #cdcdcd; // R: 205, V: 205, B: 205
+$grey_8_color_hover: #b4b4b4; // R: 180, V: 180, B: 180
+$grey_9_color: #ececee; // R: 236, V: 236, B: 238
+$grey_9_color_hover: #cdcdcd; // R: 205, V: 205, B: 205
+$grey_10_color: #f1f3f2; // R: 241, V: 243, B: 242
+$grey_11_color: #7e7d84; // R: 126, V: 125, B: 132
+$grey_12_color: #e5e5e5; // R: 229, V: 229, B: 229
+$grey_11t_color: #3c3947; // R: 60, V: 57, B: 71
+$grey_11q_color: #5a5864; // R: 90, V: 88, B: 100
+$grey_13_color: #5a5864; // R: 90, V: 88, B: 100
+$grey_14_color: #5a5864; // R: 90, V: 88, B: 100
+$grey_15_color: #dcdcdc; // R: 247, V: 247, B: 247
+$grey_16_color: #f7f7f7;
+$grey_17_color: #5e656e;
+$grey_18_color: #afb0b4;
+$grey_19_color: #e2e1e5; // R: 226, V: 225, B: 229
+$grey_20_color: #3c3947;
+$grey_21_color: #f7f7f8;
+$grey_22_color: #e1e1e1;
+$grey_23_color: #cccccc;
+$grey_24_color: #e2ebee;
+
+
+// color citroen
+$grey_25_color: #d0d0d0;
+$grey_26_color: #e7e6ed;
+
+$orange_1_color: #f0780a;
+
+$color-grey-pager: #dedede;
+$color-grey-pager-active: #2697b5;
+
+$news_color: #01b1ce; // R: 1, V: 177, B: 206
+$special_series_color: #c46225; // R: 196, V: 98, B: 37
+$sport_color: #8e000c; // R: 142, V: 0, B: 12
+$responsible_color: #1a1919; // R: 26, V: 25, B: 25
+$promotion_1_color: #fc7bfd; // R: 252, V: 123, B: 253
+$promotion_2_color: #905fde; // R: 144, V: 95, B: 222
+$promotion_3_color: #4e3cb1; // R: 78, V: 60, B: 177
+$promotion_4_color: #9c4276; // R: 156, V: 66, B: 118
+
+/* Error color */
+$red_1_color: #cc3535; // R: 204, V: 53, B: 53
+$red_2_color: #db2a3c;
+
+/* Wizard steps color */
+$wizard_steps_color: #e6e6e6;
+$wizard_steps_color_active: #557e9c;
+
+/* Radio button color */
+$radio_color_active: #557e9c;
+$radio_border_color: $grey_11_color;
+
+/* Checkbox button color */
+$checkbox_color_active: #007edb;
+$checkbox_border_color: $grey_7_color;
+
+/* Error msg of form */
+$form_errors_color: #d9147f;
+
+/* Main background & text color */
+
+$main_color: $grey_1_color; // main txt color
+$main_bg: $white_color; // body background
+
+
+/* Call to action buttons */
+
+// Dark-blue 1 button
+$cta_btn_1_bg_color: #0c2d47;
+$cta_btn_1_border_color: #162133;
+$cta_btn_1_txt_color: $white_color;
+
+// Dark-blue 2 button
+$cta_btn_2_bg_color: $dark_blue_1_color;
+$cta_btn_2_bg_color_hover: $dark_blue_1_color_hover;
+$cta_btn_2_border_color: #162133;
+$cta_btn_2_border_color_hover: #152034;
+$cta_btn_2_txt_color: $white_color;
+
+// Mid-blue 1 button
+$cta_btn_3_bg_color: $mid_blue_1_color;
+$cta_btn_3_border_color: $dark_blue_1_color;
+$cta_btn_3_txt_color: $white_color;
+
+// Mid-blue 2 button
+$cta_btn_4_bg_color: $orange_1_color;
+$cta_btn_4_bg_color_hover: $grey_25_color;
+$cta_btn_4_border_color: $mid_blue_1_color;
+$cta_btn_4_border_color_hover: #1a4483;
+$cta_btn_4_txt_color: $white_color;
+
+// Mid-grey button
+$cta_btn_5_bg_color: $grey_8_color;
+$cta_btn_5_border_color: $grey_6_color;
+$cta_btn_5_txt_color: $grey_1_color;
+
+// Light-grey button
+$cta_btn_6_bg_color: $grey_9_color;
+$cta_btn_6_bg_color_hover: $grey_9_color_hover;
+$cta_btn_6_border_color: $grey_8_color;
+$cta_btn_6_border_color_hover: $grey_8_color_hover;
+$cta_btn_6_txt_color: $grey_1_color;
+
+// Mid-grey small button
+$cta_btn_7_bg_color: $grey_7_color;
+$cta_btn_7_txt_color: $white_color;
+
+// Light-grey small button
+$cta_btn_8_bg_color: $grey_10_color;
+$cta_btn_8_txt_color: #585864;
+
+
+
+
+/* Slice background */
+$slice_bg_dark_color: $grey_10_color; // R: 241, V: 243, B: 242
+$slice_bg_light_color: $white_color;
+
+
+//color elements form
+$form_border_color: #dadada;
+$form_bg_button: #22a86c;
+$form_bg_button_hover: #5cb78e;
+$form_text_button: #ffffff;
+$form_bg_select: #2d2f31;
+
+
+$border_color : #ff9f72;
+
+
+/* breadcrumb */
+$breadcrumb_color: #a39f99;
+$breadcrumb_color_on : #ff9f72;
+
+$color-border-nav: #f2f2f2;
+$color-border-article: #dcdbe0;
+$font-size-h1: 24px;
+$color-price: #9694a9;
+
+
+/* reevoo */
+$reevoo-bg-color: #ececee;
+$color-reevoo: #fe7910;
+
+/* de serie - en option */
+$deserie_bg_color: #142032;
+$deserie_bg_color_08: rgba(20, 32, 50, 0.8);
+$enoption_bg_color: #007edb;
+
+
+/* notification */
+$notification_bg_color: #cce5f8;
+$notification_txt_color: #007edb;
+$notification_picto_blue: #7abcec;
+$notification_picto_white: #ffffff;
+
+
+$warm_black: #1d1717;
+$warm_chocolate: #2f2726;
+$dark_champagne: #655a54;
+$very_dark_champagne:#302725;
+$champagne: #ad9d91;
+$carmin: #ad0040;
+$light_champagne: #e6e0db;
+$pack_light: #f9f7f6;
+$pack_medium: #efebe8;
+$pack_dark: #e6e0db;
+$very_light_champagne: #f9f7f6;
+$error: #960142;
+
+$facebook: #3b5998;
+$twitter: #55acee;
+$youtube: #fd3126;
+$instagram: #956d53;
+$pinterest: #c81f1a;
+$linkedin: #0179b8;
+$flickr: #ff0080;
+$gplus: #dd4b39;

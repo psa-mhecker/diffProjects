@@ -1,0 +1,346 @@
+span.info.info--blue {
+    cursor: pointer;
+}
+.infobulle-dev{
+  width:97px;
+  height:73px;
+  display:block;
+  .arrow_box-dev {
+    width:97px;
+    height:73px;
+    position: relative;
+    background: #fff;
+    border:4px solid $gray-citroen;
+      .infobulle-text{
+        text-align:center;
+        font-size:$font-size-small;
+        font-family:$font-family-base-bold;
+        color:$gray-citroen;
+        display:inline-block;
+        padding: 14px;
+      }
+      &.arrow_box-dev:after {
+        top: 100%;
+        left: 50%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events:none;
+        }
+        &.arrow_box-dev:before {
+        top: 100%;
+        left: 50%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        }
+     & .arrow_box-dev:before {
+        top: 100%;
+        left: 50%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        }
+        &.arrow_box-dev:after {
+        border-color: rgba(136, 183, 213, 0);
+        border-width: 10px;
+        margin-left: -30px;
+        }
+        &.arrow_box-dev:before {
+        border-color: rgba(194, 225, 245, 0);
+        border-top-color: $gray-citroen;
+        border-width: 10px;
+        margin-left: -14px;
+        }
+  }
+}
+
+
+/* ecolo infobulles*/
+.arrow_box_infobulle_ecolo{
+    position: relative;
+    background: #fff;
+    border: 1px solid $gray-citroen;
+    width:350px;
+    height:333px;
+    float: left;
+    .title-energitique{
+      display:inline-block;
+      margin-top:18px;
+      margin-bottom:18px;
+      padding: 0 15px;
+      text-transform:uppercase;
+      font-family:$font-family-base-bold;
+      font-size:$font-size-md;
+        .title{
+           margin: 0 15px;
+        }
+        .im-energetique{
+          width: 289px;
+          height: 248px;
+          display: block;
+          margin: 14px 15px;
+          img{
+            background-size:cover;
+          }
+        }
+    }
+
+    &.arrow_box_infobulle_ecolo:after {
+      bottom: 100%;
+      left: 183px;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+      }
+    &.arrow_box_infobulle_ecolo:before{
+      bottom: 100%;
+      left: 193px;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+      }
+    &.arrow_box_infobulle_ecolo:after {
+      border-color: rgba(255, 255, 255, 0);
+      border-bottom-color: #fff;
+      border-width: 8px;
+      margin-left: -30px;
+      }
+    &.arrow_box_infobulle_ecolo:before {
+      border-color: rgba(138, 11, 11, 0);
+      border-bottom-color: $gray-citroen;
+      border-width: 9px;
+      margin-left: -41px;
+      }
+  }
+
+/* infobulle list*/
+
+.infobulle_list{
+    width:280px;
+    height:93px;
+    display:block;
+    float:left;
+    margin-left:10px;
+    margin-top: 10px;
+    .arrow_box-list {
+    position: relative;
+    background: #fff;
+    border: 2px solid $gray-citroen;
+    }
+    .arrow_box-list:after, .arrow_box-list:before {
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    }
+
+    .arrow_box-list:after {
+    border-color: rgba(255, 255, 255, 0);
+    border-top-color: #fff;
+    border-width: 10px;
+    margin-left: -10px;
+    }
+    .arrow_box-list:before {
+    border-color: rgba(204, 204, 204, 0);
+    border-top-color: $gray-citroen;
+    border-width: 13px;
+    margin-left: -13px;
+    }
+
+    .icon-reseau{
+      display: block;
+      margin: 12px auto;
+      height: 47px;
+      width: 248px;
+        .icons{
+          width:44px;
+          height:44px;
+          cursor:pointer;
+          float:left;
+          margin-left:5px;
+          display:inline-block;
+          img{
+          width:44px;
+          height:44px;
+          }
+        }
+
+    }
+
+}
+
+/* infobulle reseau*/
+.infobulle_reseau{
+    width:280px;
+    height:93px;
+    display:block;
+    float:left;
+    margin-left:10px;
+    margin-top: 80px;
+    .arrow_box-re {
+    position: relative;
+    background: #fff;
+    border: 2px solid $gray-citroen;
+    }
+    .arrow_box-re:after, .arrow_box-re:before {
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    }
+
+    .arrow_box-re:after {
+    border-color: rgba(255, 255, 255, 0);
+    border-top-color: #fff;
+    border-width: 10px;
+    margin-left: -10px;
+    }
+    .arrow_box-re:before {
+    border-color: rgba(204, 204, 204, 0);
+    border-top-color: $gray-citroen;
+    border-width: 13px;
+    margin-left: -13px;
+    }
+
+    .icon-reseau{
+      display: block;
+      margin: 12px auto;
+      height: 47px;
+      width: 248px;
+        .icons{
+          width:44px;
+          height:44px;
+          cursor:pointer;
+          float:left;
+          margin-left:5px;
+          display:inline-block;
+          img{
+          width:44px;
+          height:44px;
+          }
+        }
+
+    }
+
+}
+
+.slice-infobulle {
+  display: inline;
+}
+
+
+.infobulle{
+  z-index: 3;
+  position: fixed;
+  &:before {
+    content:"";
+    display: inline-block;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 16px;
+    height: 16px;
+    display:none;
+  }
+  &.open{
+    display: inline-block;
+  }
+  p{
+    margin: 0;
+  }
+  &.scroller{
+    .mCSB_scrollTools{
+      width: 5px !important;
+      overflow: hidden !important;
+      right: 0 !important;
+    }
+    .mCSB_dragger{
+      width: 5px;
+    }
+  }
+
+  &.top-left {
+    &:after {
+      content: "";
+      position: absolute;
+      top: -18px;
+      left: 102px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 16px 0 0 16px;
+      border-color: transparent transparent transparent #ccc;
+      display:none;
+    }
+  }
+
+  &.bottom-left{
+    &:after {
+      content: "";
+      position: absolute;
+      left: 102px;
+      bottom: -18px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 16px 16px 0 0px;
+      border-color: #ccc transparent transparent transparent;
+    }
+  }
+
+  &.top-right {
+    &:after {
+      content: "";
+      position: absolute;
+      top: -18px;
+      right: 102px;
+      width: 0;
+      height: 0;
+     border-style: solid;
+      border-width: 0 0 16px 16px;
+      border-color: transparent transparent #ccc transparent;
+    } 
+
+  }
+
+  &.bottom-right {
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: -18px;
+      right: 102px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 16px 0px 0 16px;
+      border-color: #ccc transparent transparent transparent;
+    }
+  }
+
+}
+
+
+

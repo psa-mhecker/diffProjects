@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ea="http://aoa.inetpsa.com/ws/export/ExportAccessoires" xmlns:ecv="http://aoa.inetpsa.com/ws/export/ExportCriteriaValue" targetNamespace="http://aoa.inetpsa.com/ws/export/ExportAccessoires" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xsd:import xmlns:xsd="http://www.w3.org/2001/XMLSchema" schemaLocation="AccessoiresService.xsd1.xsd" namespace="http://aoa.inetpsa.com/ws/setting/Accessories"/>
+<xsd:import xmlns:xsd="http://www.w3.org/2001/XMLSchema" schemaLocation="AccessoiresService.xsd13.xsd" namespace="http://aoa.inetpsa.com/ws/setting/Accessories"/>
+<xsd:import xmlns:xsd="http://www.w3.org/2001/XMLSchema" schemaLocation="AccessoiresService.xsd3.xsd" namespace="http://aoa.inetpsa.com/ws/setting/Criteria"/>
+<xsd:import xmlns:xsd="http://www.w3.org/2001/XMLSchema" schemaLocation="AccessoiresService.xsd15.xsd" namespace="http://aoa.inetpsa.com/ws/setting/Criteria"/>
+<xsd:import xmlns:xsd="http://www.w3.org/2001/XMLSchema" schemaLocation="AccessoiresService.xsd4.xsd" namespace="http://aoa.inetpsa.com/ws/export/ExportCriteria"/>
+<xsd:import xmlns:xsd="http://www.w3.org/2001/XMLSchema" schemaLocation="AccessoiresService.xsd16.xsd" namespace="http://aoa.inetpsa.com/ws/export/ExportCriteria"/>
+<xsd:import xmlns:xsd="http://www.w3.org/2001/XMLSchema" schemaLocation="AccessoiresService.xsd5.xsd" namespace="http://aoa.inetpsa.com/ws/setting/CriteriaValue"/>
+<xsd:import xmlns:xsd="http://www.w3.org/2001/XMLSchema" schemaLocation="AccessoiresService.xsd17.xsd" namespace="http://aoa.inetpsa.com/ws/setting/CriteriaValue"/>
+<xsd:import xmlns:xsd="http://www.w3.org/2001/XMLSchema" schemaLocation="AccessoiresService.xsd7.xsd" namespace="http://aoa.inetpsa.com/ws/setting/AccessoriesByVehicle"/>
+<xsd:import xmlns:xsd="http://www.w3.org/2001/XMLSchema" schemaLocation="AccessoiresService.xsd19.xsd" namespace="http://aoa.inetpsa.com/ws/setting/AccessoriesByVehicle"/>
+<xsd:import xmlns:xsd="http://www.w3.org/2001/XMLSchema" schemaLocation="AccessoiresService.xsd8.xsd" namespace="http://aoa.inetpsa.com/ws/export/ExportAccessoriesByVehicle"/>
+<xsd:import xmlns:xsd="http://www.w3.org/2001/XMLSchema" schemaLocation="AccessoiresService.xsd20.xsd" namespace="http://aoa.inetpsa.com/ws/export/ExportAccessoriesByVehicle"/>
+<xsd:import xmlns:xsd="http://www.w3.org/2001/XMLSchema" schemaLocation="AccessoiresService.xsd9.xsd" namespace="http://aoa.inetpsa.com/ws/setting/AccessoriesByPromotion"/>
+<xsd:import xmlns:xsd="http://www.w3.org/2001/XMLSchema" schemaLocation="AccessoiresService.xsd21.xsd" namespace="http://aoa.inetpsa.com/ws/setting/AccessoriesByPromotion"/>
+<xsd:import xmlns:xsd="http://www.w3.org/2001/XMLSchema" schemaLocation="AccessoiresService.xsd10.xsd" namespace="http://aoa.inetpsa.com/ws/export/ExportAccessoriesByPromotion"/>
+<xsd:import xmlns:xsd="http://www.w3.org/2001/XMLSchema" schemaLocation="AccessoiresService.xsd22.xsd" namespace="http://aoa.inetpsa.com/ws/export/ExportAccessoriesByPromotion"/>
+<xsd:import xmlns:xsd="http://www.w3.org/2001/XMLSchema" schemaLocation="AccessoiresService.xsd11.xsd" namespace="http://fault.core.cxl.inetpsa.com"/>
+<xsd:import xmlns:xsd="http://www.w3.org/2001/XMLSchema" schemaLocation="AccessoiresService.xsd12.xsd" namespace="http://xml.inetpsa.com/Services/AccessoiresApplication/AccessoiresService"/>
+	
+<xs:import namespace="http://aoa.inetpsa.com/ws/export/ExportCriteriaValue" schemaLocation="AccessoiresService.xsd18.xsd"/>
+	
+<xs:element name="accessoryList">
+		
+<xs:complexType>
+			
+<xs:sequence>
+				
+<xs:element name="accessoryLocal" maxOccurs="unbounded">
+					
+<xs:complexType>
+						
+<xs:sequence maxOccurs="unbounded">
+							
+<xs:element name="accessory">
+								
+<xs:complexType>
+									
+<xs:sequence>
+										
+<xs:element name="applicabilities" type="ea:applicabilityType" minOccurs="0" maxOccurs="unbounded"/>
+										
+<xs:element name="arguments" type="xs:string" minOccurs="0"/>
+										
+<xs:element name="bussinessName" type="xs:string" minOccurs="0"/>
+										
+<xs:element name="compDesignation" type="xs:string" minOccurs="0"/>
+										
+<xs:element name="designation" type="xs:string" minOccurs="0"/>
+										
+<xs:element name="condUnit" type="xs:int" minOccurs="0"/>
+										
+<xs:element name="measurement" type="ea:measurementType" minOccurs="0"/>
+										
+<xs:element name="files" type="ea:fileType" minOccurs="0" maxOccurs="unbounded"/>
+										
+<xs:element name="comRefs" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+										
+<xs:element name="techRefs" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+										
+<xs:element name="brand" type="ea:commercialBrandType" minOccurs="0" maxOccurs="unbounded"/>
+										
+<xs:element name="requiredDealerInst" type="xs:boolean" minOccurs="0"/>
+										
+<xs:element name="TPCis" type="ea:TPCisType" minOccurs="0"/>
+										
+<xs:element name="pricing" type="ea:pricingType" minOccurs="0" maxOccurs="unbounded"/>
+										
+<xs:element name="sapRef" type="xs:string" minOccurs="0"/>
+										
+<xs:element name="universe" type="ecv:universeType" minOccurs="0"/>
+										
+<xs:element name="weight" type="xs:decimal" minOccurs="0"/>
+										
+<xs:element name="remplacementRef" type="xs:string" minOccurs="0"/>
+										
+<xs:element name="onLineSales" type="xs:boolean" minOccurs="0"/>
+										
+<xs:element name="reference" type="xs:string" minOccurs="0"/>
+										
+<xs:element name="any" type="ecv:anyType" minOccurs="0" maxOccurs="unbounded"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						
+<xs:attribute name="locale"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+<xs:complexType name="lcdvCodesType">
+		
+<xs:annotation>
+			
+<xs:documentation>code list  lcdv </xs:documentation>
+		</xs:annotation>
+		
+<xs:sequence>
+			
+<xs:element name="lcdvCode" type="xs:string" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+<xs:simpleType name="productLineType">
+		
+<xs:annotation>
+			
+<xs:documentation> product Line</xs:documentation>
+		</xs:annotation>
+		
+<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	
+<xs:complexType name="applicabilityType">
+		
+<xs:annotation>
+			
+<xs:documentation>applicabilty</xs:documentation>
+		</xs:annotation>
+		
+<xs:sequence>
+			
+<xs:element name="productLine" type="ea:productLineType"/>
+			
+<xs:element name="lcdvs" type="ea:lcdvCodesType"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+<xs:complexType name="measurementType">
+		
+<xs:sequence>
+			
+<xs:element name="lenth" type="xs:decimal" minOccurs="0"/>
+			
+<xs:element name="width" type="xs:decimal" minOccurs="0"/>
+			
+<xs:element name="height" type="xs:decimal" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+<xs:simpleType name="commercialBrandType">
+		
+<xs:annotation>
+			
+<xs:documentation>liste des marques de l'accessoire</xs:documentation>
+		</xs:annotation>
+		
+<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	
+<xs:complexType name="descrType">
+		
+<xs:sequence>
+			
+<xs:element name="ref" type="xs:string"/>
+			
+<xs:element name="rate" type="xs:string"/>
+			
+<xs:element name="time" type="xs:int"/>
+			
+<xs:element name="technicitie" type="xs:string"/>
+			
+<xs:element name="applTPCis">
+				
+<xs:complexType>
+					
+<xs:sequence maxOccurs="unbounded">
+						
+<xs:element name="appl" type="ea:applicabilityType"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+<xs:complexType name="fileType">
+		
+<xs:sequence>
+			
+<xs:element name="relativePath" type="xs:string"/>
+			
+<xs:element name="imageName" type="xs:string"/>
+			
+<xs:element name="type" type="xs:string"/>
+			
+<xs:element name="applFiles">
+				
+<xs:complexType>
+					
+<xs:sequence maxOccurs="unbounded">
+						
+<xs:element name="appl" type="ea:applicabilityType"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+<xs:complexType name="labourType">
+		
+<xs:sequence>
+			
+<!-- Liste des descriptions d'applicabilites -->
+			
+<xs:element name="descr" type="ea:descrType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		
+<!-- Quantite de la PR ou du PG pour cette applicabilite et ce TP -->
+		
+<!-- Reference de l'observation associee au poste de montage PR -->
+		
+<!-- Temps associe a une applicabilite MO -->
+		
+<!-- Taux associe a une applicabilite MO -->
+	</xs:complexType>
+	
+<xs:complexType name="TPCisType">
+		
+<xs:sequence maxOccurs="unbounded">
+			
+<xs:element name="TPCI">
+				
+<xs:complexType>
+					
+<xs:sequence maxOccurs="unbounded">
+						
+<xs:element name="labour" type="ea:labourType"/>
+					</xs:sequence>
+					
+<xs:attribute name="TCPIRef" type="xs:string"/>
+					
+<xs:attribute name="wordingTCPI"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+<xs:complexType name="pricingType">
+		
+<xs:sequence>
+			
+<xs:element name="pvpHTWP" type="xs:decimal"/>
+			
+<xs:element name="pvpTTCWP" type="xs:decimal"/>
+			
+<xs:element name="unitSales" type="xs:int"/>
+			
+<xs:element name="brand" type="ea:commercialBrandType"/>
+			
+<xs:any minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

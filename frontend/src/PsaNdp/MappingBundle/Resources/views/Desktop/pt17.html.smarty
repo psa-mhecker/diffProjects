@@ -1,0 +1,39 @@
+<section class="slice-pt17 {if isset($slicePT17.anchorId)} {$slicePT17.anchorId} {/if}" {if isset($slicePT17.anchorId)} id="{$slicePT17.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePT17' } ]" datalayer="{$slicePT17.datalayer}">
+    <div class="header">
+        <div class="logo"></div>
+        <h3 class="title">
+            <ul class="list_style">
+                {foreach $slicePT17.modalLanguage as $langs}
+                    <li class="lang">{$langs.title}</li>
+                {/foreach}
+            </ul>
+        </h3>
+    </div>
+    <div class="wrap">
+        <ul class="list-lang list_style slice-inside-margin clearfix">
+            {if $slicePT17.listLanguage|@count === 2}
+                <li class="choice grid-col span_2_of_12"></li>
+            {/if}
+            {foreach $slicePT17.listLanguage as $cta}
+                <li class="choice grid-col span_4_of_12">
+                    <div class="custom-button-group">
+                        {include file="./cta.html.smarty"}
+                    </div>
+                    <ul class="list-links list_style">
+                        {foreach $cta.links as $link}
+                            <li>
+                                <a href="{$link.url}" class="links cta-btn" {if isset($link.target)}target="{$link.target}"{/if}>{$link.title}</a>
+                            </li>
+                        {/foreach}
+                    </ul>
+                </li>
+            {/foreach}
+            {if $slicePT17.listLanguage|@count === 2}
+                <li class="choice grid-col span_2_of_12"></li>
+            {/if}
+        </ul>
+    </div>
+    <div class="footer">
+        <div class="motion-emotion"></div>
+    </div>
+</section>

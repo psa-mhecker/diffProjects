@@ -1,0 +1,7 @@
+parameters:
+    proxy:
+        isActive: false
+        CURLOPT_PROXY: 'http://relaishttp.sgppsa.com'
+        CURLOPT_PROXYPORT: 80
+        CURLOPT_PROXYUSERPWD: 'mdendp00:rcpel8z6'
+

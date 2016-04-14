@@ -1,0 +1,518 @@
+$spriteWidth: 634;
+$spriteHeight: 588;
+$spriteWidthPx: 634px;
+$spriteHeightPx: 588px;
+
+
+%_sprites{
+  background-image: url('../img/sprites/sprites@1.png?#{$spriteWidth}#{$spriteHeight}');
+  background-repeat: no-repeat;
+
+  @media only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (-moz-min-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (min-device-pixel-ratio: 2) {
+      background-size: round($spriteWidthPx/2) round($spriteHeightPx/2);
+      background-image: url('../img/sprites/sprites@2.png?#{$spriteWidth}#{$spriteHeight}');
+  }
+}
+
+
+%_sprite-play{
+  background-position: (-4px/2) (-4px/2);
+  width: (150px/2);
+  height: (140px/2);
+}
+
+%_sprite-pause{
+  background-position: (-162px/2) (-4px/2);
+  width: (150px/2);
+  height: (140px/2);
+}
+
+%_sprite-conf-finish{
+  background-position: (-4px/2) (-152px/2);
+  width: (120px/2);
+  height: (86px/2);
+}
+
+%_sprite-conf-trim{
+  background-position: (-132px/2) (-152px/2);
+  width: (120px/2);
+  height: (86px/2);
+}
+
+%_sprite-conf-tint{
+  background-position: (-320px/2) (-4px/2);
+  width: (120px/2);
+  height: (86px/2);
+}
+
+%_sprite-conf-options{
+  background-position: (-320px/2) (-98px/2);
+  width: (120px/2);
+  height: (86px/2);
+}
+
+%_sprite-conf-motor{
+  background-position: (-4px/2) (-246px/2);
+  width: (120px/2);
+  height: (86px/2);
+}
+
+%_sprite-vm-tog-outside-off{
+  background-position: (-132px/2) (-246px/2);
+  width: (104px/2);
+  height: (48px/2);
+}
+
+%_sprite-vm-tog-outside-on{
+  background-position: (-244px/2) (-246px/2);
+  width: (104px/2);
+  height: (48px/2);
+}
+
+%_sprite-calendar{
+  background-position: (-4px/2) (-340px/2);
+  width: (92px/2);
+  height: (74px/2);
+}
+
+%_sprite-bouton-suppression-comparateur{
+  background-position: (-448px/2) (-4px/2);
+  width: (84px/2);
+  height: (84px/2);
+}
+
+%_sprite-citroen-badge{
+  background-position: (-448px/2) (-96px/2);
+  width: (70px/2);
+  height: (76px/2);
+}
+
+%_sprite-pin-big{
+  background-position: (-448px/2) (-180px/2);
+  width: (62px/2);
+  height: (76px/2);
+}
+
+%_sprite-phone{
+  background-position: (-448px/2) (-264px/2);
+  width: (46px/2);
+  height: (74px/2);
+}
+
+%_sprite-back-to-top{
+  background-position: (-104px/2) (-340px/2);
+  width: (70px/2);
+  height: (70px/2);
+}
+
+%_sprite-ico-gear{
+  background-position: (-182px/2) (-340px/2);
+  width: (70px/2);
+  height: (70px/2);
+}
+
+%_sprite-ico-motor{
+  background-position: (-260px/2) (-340px/2);
+  width: (70px/2);
+  height: (70px/2);
+}
+
+%_sprite-car-check{
+  background-position: (-448px/2) (-346px/2);
+  width: (60px/2);
+  height: (28px/2);
+}
+
+%_sprite-bouton-checkbox-comparateur-checked{
+  background-position: (-338px/2) (-340px/2);
+  width: (60px/2);
+  height: (60px/2);
+}
+
+%_sprite-pin{
+  background-position: (-260px/2) (-152px/2);
+  width: (48px/2);
+  height: (60px/2);
+}
+
+%_sprite-bouton-checkbox-comparateur{
+  background-position: (-4px/2) (-422px/2);
+  width: (60px/2);
+  height: (60px/2);
+}
+
+%_sprite-vm-tog-inside-on{
+  background-position: (-72px/2) (-422px/2);
+  width: (50px/2);
+  height: (58px/2);
+}
+
+%_sprite-vm-tog-inside-off{
+  background-position: (-130px/2) (-422px/2);
+  width: (50px/2);
+  height: (58px/2);
+}
+
+%_sprite-euro{
+  background-position: (-188px/2) (-422px/2);
+  width: (56px/2);
+  height: (58px/2);
+}
+
+%_sprite-vm-tog-simulation-off{
+  background-position: (-320px/2) (-192px/2);
+  width: (56px/2);
+  height: (38px/2);
+}
+
+%_sprite-vm-tog-simulation-on{
+  background-position: (-384px/2) (-192px/2);
+  width: (56px/2);
+  height: (38px/2);
+}
+
+%_sprite-vm-tog-fs-on{
+  background-position: (-252px/2) (-422px/2);
+  width: (56px/2);
+  height: (56px/2);
+}
+
+%_sprite-citroen-badge-flat{
+  background-position: (-316px/2) (-422px/2);
+  width: (50px/2);
+  height: (56px/2);
+}
+
+%_sprite-vm-tog-fs-off{
+  background-position: (-374px/2) (-422px/2);
+  width: (56px/2);
+  height: (56px/2);
+}
+
+%_sprite-slick-pager-champagne-off{
+  background-position: (-438px/2) (-422px/2);
+  width: (54px/2);
+  height: (54px/2);
+}
+
+%_sprite-slick-pager-chocolate-on{
+  background-position: (-540px/2) (-4px/2);
+  width: (54px/2);
+  height: (54px/2);
+}
+
+%_sprite-slick-pager-champagne-on{
+  background-position: (-540px/2) (-66px/2);
+  width: (54px/2);
+  height: (54px/2);
+}
+
+%_sprite-slick-pager-chocolate-off{
+  background-position: (-540px/2) (-128px/2);
+  width: (54px/2);
+  height: (54px/2);
+}
+
+%_sprite-car-gray{
+  background-position: (-540px/2) (-190px/2);
+  width: (50px/2);
+  height: (42px/2);
+}
+
+%_sprite-car-blue{
+  background-position: (-540px/2) (-240px/2);
+  width: (50px/2);
+  height: (42px/2);
+}
+
+%_sprite-car-white{
+  background-position: (-540px/2) (-290px/2);
+  width: (50px/2);
+  height: (42px/2);
+}
+
+%_sprite-info-blue{
+  background-position: (-540px/2) (-340px/2);
+  width: (48px/2);
+  height: (48px/2);
+}
+
+%_sprite-ico-print{
+  background-position: (-540px/2) (-396px/2);
+  width: (48px/2);
+  height: (40px/2);
+}
+
+%_sprite-info-orange{
+  background-position: (-356px/2) (-246px/2);
+  width: (48px/2);
+  height: (48px/2);
+}
+
+%_sprite-ico-share{
+  background-position: (-4px/2) (-490px/2);
+  width: (48px/2);
+  height: (40px/2);
+}
+
+%_sprite-ico-save{
+  background-position: (-60px/2) (-490px/2);
+  width: (48px/2);
+  height: (40px/2);
+}
+
+%_sprite-car-black{
+  background-position: (-116px/2) (-490px/2);
+  width: (48px/2);
+  height: (40px/2);
+}
+
+%_sprite-vm-simulation-cursor{
+  background-position: (-4px/2) (-538px/2);
+  width: (40px/2);
+  height: (46px/2);
+}
+
+%_sprite-timeglass{
+  background-position: (-502px/2) (-264px/2);
+  width: (24px/2);
+  height: (44px/2);
+}
+
+%_sprite-zoom-equipement{
+  background-position: (-52px/2) (-538px/2);
+  width: (42px/2);
+  height: (42px/2);
+}
+
+%_sprite-arrow-big-gray{
+  background-position: (-540px/2) (-444px/2);
+  width: (22px/2);
+  height: (38px/2);
+}
+
+%_sprite-checked-comparateur{
+  background-position: (-448px/2) (-382px/2);
+  width: (36px/2);
+  height: (30px/2);
+}
+
+%_sprite-arrow-big-dark{
+  background-position: (-570px/2) (-444px/2);
+  width: (22px/2);
+  height: (36px/2);
+}
+
+%_sprite-chevron-toggle-closed{
+  background-position: (-492px/2) (-382px/2);
+  width: (36px/2);
+  height: (22px/2);
+}
+
+%_sprite-chevron-toggle-opened{
+  background-position: (-132px/2) (-302px/2);
+  width: (36px/2);
+  height: (22px/2);
+}
+
+%_sprite-zoom-white{
+  background-position: (-172px/2) (-490px/2);
+  width: (36px/2);
+  height: (36px/2);
+}
+
+%_sprite-arrow-big-gray-bottom{
+  background-position: (-176px/2) (-302px/2);
+  width: (34px/2);
+  height: (20px/2);
+}
+
+%_sprite-chevron-cta-configurer-comparateur{
+  background-position: (-412px/2) (-246px/2);
+  width: (18px/2);
+  height: (32px/2);
+}
+
+%_sprite-arrow-orange-right{
+  background-position: (-406px/2) (-340px/2);
+  width: (18px/2);
+  height: (32px/2);
+}
+
+%_sprite-arrow-dark-top{
+  background-position: (-502px/2) (-316px/2);
+  width: (30px/2);
+  height: (18px/2);
+}
+
+%_sprite-ico-geo{
+  background-position: (-500px/2) (-422px/2);
+  width: (30px/2);
+  height: (30px/2);
+}
+
+%_sprite-pencil-gray{
+  background-position: (-216px/2) (-490px/2);
+  width: (30px/2);
+  height: (30px/2);
+}
+
+%_sprite-vm-tog-menu-champagne-on{
+  background-position: (-254px/2) (-490px/2);
+  width: (30px/2);
+  height: (30px/2);
+}
+
+%_sprite-cross-pink{
+  background-position: (-292px/2) (-490px/2);
+  width: (30px/2);
+  height: (30px/2);
+}
+
+%_sprite-vm-tog-menu-champagne-off{
+  background-position: (-330px/2) (-490px/2);
+  width: (30px/2);
+  height: (30px/2);
+}
+
+%_sprite-arrow-dark-bottom{
+  background-position: (-260px/2) (-220px/2);
+  width: (30px/2);
+  height: (18px/2);
+}
+
+%_sprite-plus-blue{
+  background-position: (-368px/2) (-490px/2);
+  width: (30px/2);
+  height: (30px/2);
+}
+
+%_sprite-plus-dark-gray{
+  background-position: (-406px/2) (-490px/2);
+  width: (30px/2);
+  height: (30px/2);
+}
+
+%_sprite-plus-gray{
+  background-position: (-444px/2) (-490px/2);
+  width: (30px/2);
+  height: (30px/2);
+}
+
+%_sprite-plus-light-gray{
+  background-position: (-482px/2) (-490px/2);
+  width: (30px/2);
+  height: (30px/2);
+}
+
+%_sprite-arrow-toggle{
+  background-position: (-520px/2) (-490px/2);
+  width: (30px/2);
+  height: (24px/2);
+}
+
+%_sprite-bouton-radio-comparateur{
+  background-position: (-102px/2) (-538px/2);
+  width: (28px/2);
+  height: (28px/2);
+}
+
+%_sprite-check-gray{
+  background-position: (-558px/2) (-490px/2);
+  width: (28px/2);
+  height: (22px/2);
+}
+
+%_sprite-check-orange{
+  background-position: (-138px/2) (-538px/2);
+  width: (28px/2);
+  height: (22px/2);
+}
+
+%_sprite-close{
+  background-position: (-602px/2) (-4px/2);
+  width: (28px/2);
+  height: (28px/2);
+}
+
+%_sprite-check-pink{
+  background-position: (-602px/2) (-40px/2);
+  width: (28px/2);
+  height: (22px/2);
+}
+
+%_sprite-bouton-radio-comparateur-checked{
+  background-position: (-602px/2) (-70px/2);
+  width: (28px/2);
+  height: (28px/2);
+}
+
+%_sprite-cross-white{
+  background-position: (-602px/2) (-106px/2);
+  width: (26px/2);
+  height: (26px/2);
+}
+
+%_sprite-cross-dark-gray{
+  background-position: (-602px/2) (-140px/2);
+  width: (26px/2);
+  height: (26px/2);
+}
+
+%_sprite-cross-gray{
+  background-position: (-602px/2) (-174px/2);
+  width: (26px/2);
+  height: (26px/2);
+}
+
+%_sprite-arrow-gray{
+  background-position: (-602px/2) (-208px/2);
+  width: (14px/2);
+  height: (24px/2);
+}
+
+%_sprite-arrow-orange-left{
+  background-position: (-602px/2) (-240px/2);
+  width: (14px/2);
+  height: (24px/2);
+}
+
+%_sprite-arrow-gray-bottom{
+  background-position: (-602px/2) (-272px/2);
+  width: (24px/2);
+  height: (14px/2);
+}
+
+%_sprite-arrow-orange{
+  background-position: (-602px/2) (-294px/2);
+  width: (14px/2);
+  height: (24px/2);
+}
+
+%_sprite-arrow-white{
+  background-position: (-602px/2) (-326px/2);
+  width: (14px/2);
+  height: (24px/2);
+}
+
+%_sprite-arrow-dark-bottom-small{
+  background-position: (-602px/2) (-358px/2);
+  width: (24px/2);
+  height: (14px/2);
+}
+
+%_sprite-arrow-blue{
+  background-position: (-602px/2) (-380px/2);
+  width: (14px/2);
+  height: (24px/2);
+}
+
+%_sprite-arrow-gray-right{
+  background-position: (-602px/2) (-412px/2);
+  width: (14px/2);
+  height: (24px/2);
+}
+

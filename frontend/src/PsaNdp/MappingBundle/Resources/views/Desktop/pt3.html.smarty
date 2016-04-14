@@ -1,0 +1,54 @@
+<div class="slice-pt3 {if isset($slicePt3.anchorId)} {$slicePt3.anchorId} {/if}" {if isset($slicePt3.anchorId)} id="{$slicePt3.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePT3' } ]" datalayer="{$slicePt3.datalayer}">
+  {if isset($slicePt3.toolsLinks)}
+  <div class="nav-shopping-tools tool">
+      <a href="javascript:void(0);" class="close" rel="nofollow"><span>{$slicePt3.toolsLinks}</span></a>
+  </div>
+  {/if}
+  <div class="overlay"></div>
+  <section class="menu-links-content {if empty($slicePt3.toolsLinks) OR empty($slicePt3.MyPeugeot)}singleBtn{/if}">
+    {if isset($slicePt3.title)}
+      <h2>{$slicePt3.title}</h2>
+    {/if}
+    {if isset($slicePt3.4col)}
+    <div class="row">
+        {foreach $slicePt3.4col as $col}
+        <div class="large-3 small-3 columns">
+          {if isset($col.visu)}<img src="{$col.visu.src}" {if isset($col.visu.alt)}alt="{$col.visu.alt}"{/if} class="visuCol">{/if}
+          {if isset($col.titleCol)}<h3>{$col.titleCol}</h3>{else}<span class="align"></span>{/if}
+          <ul class="list_style">
+            {foreach $col.listLinks as $linkCol}
+            <li>
+              <a href="{$linkCol.url}" rel="nofollow" {if isset($linkCol.target)}target="{$linkCol.target}"{/if}>
+                <span>{$linkCol.titleLink}</span>
+              </a>
+            </li>
+            {/foreach}
+          </ul>
+        </div>
+        {/foreach}
+      </div>
+    </div>
+    {/if}
+    {if isset($slicePt3.3col)}
+    <div class="row">
+      {foreach $slicePt3.3col as $col}
+      <div class="large-4 small-4 columns">
+        {if isset($col.visu)}<img src="{$col.visu.src}" {if isset($col.visu.alt)}alt="{$col.visu.alt}"{/if} class="visuCol">{/if}
+        {if isset($col.titleCol)}<h3>{$col.titleCol}</h3>{/if}
+        <ul class="list_style ">
+          {foreach $col.listLinks as $linkCol}
+          <li>
+            <a href="{$linkCol.url}" rel="nofollow" {if isset($linkCol.target)}target="{$linkCol.target}"{/if}>
+              <span>{$linkCol.titleLink}</span>
+            </a>
+          </li>
+          {/foreach}
+        </ul>
+      </div>
+      {/foreach}
+    </div>
+    {/if}
+
+  </section>
+
+</div>

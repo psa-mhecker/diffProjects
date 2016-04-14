@@ -1,0 +1,35 @@
+<section class="slice-pe2 {if isset($slicePC22222.anchorId)} {$slicePC22222.anchorId} {/if}" {if isset($slicePC22222.anchorId)} id="{$slicePC22222.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePE2' } ]" datalayer="{$slicePE2.datalayer}">
+    <header class="clearfix">
+        <h1 class="logo">
+          <a href="{$slicePE2.header.logo.cta.url}"{if isset($slicePE2.header.logo.cta.target)} target="{$slicePE2.logo.cta.target}"{/if}>
+            <img src="{$slicePE2.header.logo.src}" alt="{$slicePE2.header.logo.alt}">
+          </a>
+        </h1>
+        <nav>
+          {if $slicePE2.header.headerLightItems.first}
+            <ul>
+            {foreach $slicePE2.header.headerLightItems.first as $item}
+              <li>
+                <a href="{$item.url}" {if isset($item.target)}target="{$item.target}"{/if}>
+                  {$item.txt}
+                </a>
+              </li>
+            {/foreach}
+            </ul>
+          {/if}
+            <a href="{$slicePE2.header.PRM.url}" {if isset($slicePE2.header.PRM.target)}target="{$slicePE2.header.PRM.target}"{/if}>
+                {$slicePE2.header.PRM.txt}
+            </a>
+            <ul>
+                {foreach $slicePE2.header.headerLightItems.second as $item}
+                    <li>
+                        <a href="{$item.url}" {if isset($item.class)}class="icon {$item.class}"{/if} {if isset($item.target)}target="{$item.target}"{/if}>
+                            {$item.txt}
+                        </a>
+                    </li>
+                {/foreach}
+            </ul>
+        </nav>
+    </header>
+</section>
+

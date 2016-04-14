@@ -1,0 +1,57 @@
+{assign var="gtmCategory" value="{$slicePC68.blockName}::position-{$slicePC68.blockOrder}"}
+<section
+		class="slice-pc68 {if !empty($slicePC68.anchorId)} {$slicePC68.anchorId} {/if}" {if !empty($slicePC68.anchorId)} id="{$slicePC68.anchorId}" {/if} {if !empty($slicePC68.popintrancheid)} data-popintrancheid="{$slicePC68.popintrancheid}" {/if}
+		data-jsobj="[ { 'obj':'slicePC68' } ]" datalayer="{$slicePC68.datalayer}">
+	{if $slicePC68.title}<h2>{$slicePC68.title}</h2>{/if}
+	{if $slicePC68.subtitle}<h3>{$slicePC68.subtitle}</h3>{/if}
+
+	<div class="row show-for-small-only row-slideshow">
+
+		<div class="slick-container js-slick-carousel-container" {if empty($slicePC68.timerSpeed)} data-options='{ldelim}"autoplay":"false"{rdelim}' {/if}>
+        	{include file='../Components/slideshowslick.html.smarty' slideshow=$slicePC68.articleImg gtmCategory={$gtmCategory}}
+        </div>
+
+	</div>
+	<article class="row collapse">
+		<div class="row collapse show-for-medium-up visual-zone">
+			{foreach $slicePC68.articleImg as $img}
+					{if $slicePC68.articleImg|@count === 2}
+						<div class="medium-6 columns">
+							<figure>
+								{include file='../Components/images.html.smarty' image=$img}
+							</figure>
+						</div>
+					{else}
+						<div class="medium-4 columns">
+							<figure>
+								{include file='../Components/images.html.smarty' image=$img}
+							</figure>
+						</div>
+					{/if}
+
+			{/foreach}
+		</div>
+		{if $slicePC68.articleTitle}
+			<h4>{$slicePC68.articleTitle}</h4>
+		{/if}
+		{if $slicePC68.numberOfColumns == 1}
+			<div class="text-container">
+				{$slicePC68.firstColumn}
+			</div>
+		{else}
+			<div class="row text-container">
+				<div class="medium-6 columns panel-no-padding-left">
+					{$slicePC68.firstColumn}
+				</div>
+				<div class="medium-6 columns panel-no-padding-right">
+					{$slicePC68.secondColumn}
+				</div>
+			</div>
+		{/if}
+	</article>
+	<div class="inline-cta">
+		{foreach $slicePC68.ctaList as $cta}
+			{include file="../Components/cta.html.smarty" widthClass="short-width"}
+		{/foreach}
+	</div>
+</section>

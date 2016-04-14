@@ -1,0 +1,75 @@
+/* Fonts */
+$main_font_citroen: 'citroen', Arial;
+$light_font_citroen: 'citroen', Arial;
+$bold_font_citroen:  'citroen', Arial;
+$italic_font_didot: 'didotitalic', Times;
+$main_font_didot: 'didot', Times;
+$main_font_roboto: 'robotoregular', Arial;
+$light_font_roboto: 'robotolight', Arial;
+$italic_font_roboto: 'robotoitalic', Arial;
+$medium_font_roboto: 'robotomedium', Arial;
+
+/* Main font size */
+$main_fontsize: 14;
+
+html {
+	font: $main_fontsize+px/1.2 $main_font_citroen;
+}
+
+body {
+	background-color: $main_bg;
+	color: $main_color;
+}
+
+a {
+	color: $main_color;
+	text-decoration: none;
+}
+
+/*----- FONT FAMILY-----*/
+.ft-light{
+  font-family: $font-family-base-regular;
+}
+.ft-main{
+  font-family: $font-family-base-regular;
+}
+.ft-bold{
+  font-family: $font-family-base-regular;
+}
+
+/*----- FONT SIZE-----*/
+.fs-small-xx{
+  font-size: 11px;
+}
+.fs-small-x{
+  font-size: 12px;
+}
+.fs-small{
+  font-size: 14px;
+}
+.fs-medium{
+  font-size: 16px;
+}
+.fs-big{
+  font-size: 18px;
+}
+.fs-big-x{
+  font-size: 20px;
+}
+.fs-big-xx{
+  font-size: 22px;
+}
+.fs-big-xxx{
+  font-size: 24px;
+}
+
+/*----- GLOBAL STYLE TITLE-----*/
+.title-lv1{
+  font: 24px $light_font_citroen;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0 10px;
+}
+.spl-lk{
+  font-size: 14px;
+}

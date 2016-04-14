@@ -1,0 +1,87 @@
+<?php //namespace Plugin;
+
+use Itkg\Service; use Itkg\Soap\Client; use Itkg\Helper\DataTransformer;
+
+/**
+ *
+ */ class Plugin_BOForms extends Service {
+
+    /**
+     * Client SOAP
+     */
+    protected $client;
+
+    /*
+     *
+     */
+    public function init()
+    {
+    }
+
+    /*
+     *
+     */
+    public function monitor()
+    {
+    }
+
+    /*
+     *
+     */
+    public function getInstances($requestModel, $responseClass, $mapping)
+    {
+    	
+    	$aOptions = $this->configuration->getParameters();
+    
+        	
+		if ($mapping) {
+			$aOptions['classmap'] = $mapping;
+		}
+		
+		
+		$this->client = new Client($this->configuration->getParameter('wsdl'), $aOptions);
+		
+		$responseModel = $this->client->call(
+			'getInstances', $requestModel->__toRequest()
+		);
+		var_dump($responseModel->getInstancesResponse->instances);
+		
+		if ($responseModel) {
+			return $responseModel->ResponseSave->IdSession;
+		} else {
+			return false;
+		}
+				
+    }
+
+    /*
+     *
+     */
+    public function updateInstance($requestModel, $responseClass, $mapping)
+    {
+        $aOptions = $this->configuration->getParameters();
+        if ($mapping) {
+            $aOptions['classmap'] = $mapping;
+        }
+        $this->client = new Client($this->configuration->getParameter('wsdl'), $aOptions);
+        $responseModel = $this->client->call(
+            'getCriteriaValues',
+            $requestModel->__toRequest()
+        );
+        return $responseModel;
+    }
+    
+    public function getReferential($requestModel, $responseClass, $mapping)
+    {
+    	$aOptions = $this->configuration->getParameters();
+    	if ($mapping) {
+    		$aOptions['classmap'] = $mapping;
+    	}
+    	$this->client = new Client($this->configuration->getParameter('wsdl'), $aOptions);
+    	$responseModel = $this->client->call(
+    			'getCriteriaValues',
+    			$requestModel->__toRequest()
+    	);
+    	return $responseModel;
+    }
+}

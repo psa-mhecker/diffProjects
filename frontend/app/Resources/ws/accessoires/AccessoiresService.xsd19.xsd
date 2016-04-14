@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:sabv="http://aoa.inetpsa.com/ws/setting/AccessoriesByVehicle" targetNamespace="http://aoa.inetpsa.com/ws/setting/AccessoriesByVehicle" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	
+<!-- root element -->
+	
+<xs:element name="accessoriesByVehicleInput">
+		
+<xs:complexType>
+			
+<xs:sequence>
+				
+<xs:element name="accessoryByVehicleFields" type="sabv:accessoryByVehicleFieldsType" minOccurs="0"/>
+				
+<xs:element name="searchCriteriaByVehicle" type="sabv:searchCriteriaByVehicleType" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	
+<xs:complexType name="accessoryByVehicleFieldsType">
+		
+<xs:annotation>
+			
+<xs:documentation>Accessory By Vehicle Fields</xs:documentation>
+		</xs:annotation>
+		
+<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			
+<xs:element name="accessoryByVehicleField" type="sabv:accessoryByVehicleFieldEnum"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+<xs:simpleType name="accessoryByVehicleFieldEnum">
+		
+<xs:restriction base="xs:string">
+			
+<xs:enumeration value="Argument"/>
+			
+<xs:enumeration value="BusinessName"/>
+			
+<xs:enumeration value="Designation"/>
+			
+<xs:enumeration value="ComplementaryDesignation"/>
+			
+<xs:enumeration value="ConditionningUnit"/>
+			
+<xs:enumeration value="Measurement"/>
+			
+<xs:enumeration value="FamilyBodyStyleCode"/>
+			
+<xs:enumeration value="LinkedCommercialRefs"/>
+			
+<xs:enumeration value="LinkedTechnicalRefs"/>
+			
+<xs:enumeration value="Images"/>
+			
+<xs:enumeration value="CommercialBrand"/>
+			
+<xs:enumeration value="RequiredDealerInstallation"/>
+			
+<xs:enumeration value="InstallationKIT"/>
+			
+<xs:enumeration value="Labour"/>
+			
+<xs:enumeration value="Pricing"/>
+			
+<xs:enumeration value="PRReference"/>
+			
+<xs:enumeration value="ReplacementRef"/>
+			
+<xs:enumeration value="SAPReference"/>
+			
+<xs:enumeration value="Universe"/>
+			
+<xs:enumeration value="Weight"/>
+			
+<xs:enumeration value="onLineSales"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	
+<xs:complexType name="searchCriteriaByVehicleType">
+		
+<xs:sequence>
+			
+<xs:element name="clientType" type="xs:string"/>
+			
+<xs:element name="locale" type="sabv:localeType"/>
+			
+<xs:element name="salesStatus" type="sabv:salesStatusEnum"/>
+			
+<xs:element name="priceFilter" type="sabv:priceFilterType" minOccurs="0"/>
+			
+<xs:element name="universeCode" type="xs:string" minOccurs="0"/>
+			
+<xs:element name="subUniverseCode" type="xs:string" minOccurs="0"/>
+			
+<xs:element name="vehicle" type="sabv:vehicleType"/>
+			
+<xs:element name="keywords" type="sabv:keywordsType" minOccurs="0"/>
+			
+<xs:element name="references" type="sabv:referencesType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+<xs:simpleType name="localeType">
+		
+<xs:restriction base="xs:string">
+			
+<xs:pattern value="[a-z]{2}_[A-Z]{2}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+<xs:simpleType name="salesStatusEnum">
+		
+<xs:restriction base="xs:string">
+			
+<xs:enumeration value="onLine"/>
+			
+<xs:enumeration value="offLine"/>
+			
+<xs:enumeration value="all"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+<xs:complexType name="priceFilterType">
+		
+<xs:sequence>
+			
+<xs:element name="isTTC" type="xs:boolean"/>
+			
+<xs:element name="maxPrice" type="xs:double" minOccurs="0"/>
+			
+<xs:element name="minPrice" type="xs:double" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+<xs:complexType name="vehicleType">
+		
+<xs:sequence>
+			
+<xs:element name="bodyStyleCode" type="xs:string"/>
+			
+<xs:element name="modelCode" type="xs:string"/>
+			
+<xs:element name="transmissionCode" type="xs:string" minOccurs="0"/>
+			
+<xs:element name="lcdv16code" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+<xs:complexType name="keywordsType">
+		
+<xs:sequence>
+			
+<xs:element name="keyword" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+<xs:complexType name="referencesType">
+		
+<xs:sequence>
+			
+<xs:element name="reference" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+
+</xs:schema>

@@ -1,0 +1,27 @@
+<section class="slice-pc77">
+    <div class="row collapse js-custom-thumbnail-container">
+        <div class="medium-12 large-10 columns">
+            <div class="slick-container js-slick-carousel-container" data-options='{"autoplay":"false"}' data-custom-thumbnail='true'>
+                {{> molecules-slideshow-slick }}
+                <div class="js-slick-carousel-to-sync">
+                    {{#list-thumbnail}}
+                        <div class="size-element" data-slick-to-sync="{{link}}"><p>{{label}}</p></div>
+                    {{/list-thumbnail}}
+                </div>
+            </div>
+        </div>
+        <div class="hide-for-small-only large-2 medium-12 columns">
+            <ul class="list-thumbnail-slideshow medium-block-grid-4 large-block-grid-1">
+                {{#list-thumbnail}}
+                    <li data-slick-link="{{link}}" class="item-thumbnail js-item-thumbnail active">
+                        <div class="thumbnail-container">
+                            <div class="thumbnail-border"></div>
+                            <img class="thumbnail-slideshow" src="{{url}}" alt="{{alt}}">
+                            <p class="thumbnail-label"> {{label}} </p>
+                        </div>
+                    </li>
+                {{/list-thumbnail}}
+            </ul>
+        </div>
+    </div>
+</section>

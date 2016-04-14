@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap11="http://schemas.xmlsoap.org/wsdl/soap/"
+                  xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+                  xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/"
+                  xmlns:wsp="http://www.w3.org/ns/ws-policy"
+                  xmlns:wsp200409="http://schemas.xmlsoap.org/ws/2004/09/policy"
+                  xmlns:wsp200607="http://www.w3.org/2006/07/ws-policy"
+                  xmlns:ns0="http://xml.inetpsa.com/Services/Cfg/Config"
+                  targetNamespace="http://xml.inetpsa.com/Services/Cfg/Config">
+    <wsdl:types xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <xsd:schema>
+            <xsd:import schemaLocation="Config.xsd3.xsd" namespace="http://xml.inetpsa.com/Services/Cfg/Config"/>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="ConfigFeatureRequest">
+        <wsdl:part name="parameters" element="xsns:ConfigFeature"
+                   xmlns:xsns="http://xml.inetpsa.com/Services/Cfg/Config"/>
+    </wsdl:message>
+    <wsdl:message name="ConfigFeatureResponse">
+        <wsdl:part name="parameters" element="xsns:ConfigFeatureResponse"
+                   xmlns:xsns="http://xml.inetpsa.com/Services/Cfg/Config"/>
+    </wsdl:message>
+    <wsdl:message name="ConfigRequest">
+        <wsdl:part name="parameters" element="xsns:Config" xmlns:xsns="http://xml.inetpsa.com/Services/Cfg/Config"/>
+    </wsdl:message>
+    <wsdl:message name="ConfigResponse">
+        <wsdl:part name="parameters" element="xsns:ConfigResponse"
+                   xmlns:xsns="http://xml.inetpsa.com/Services/Cfg/Config"/>
+    </wsdl:message>
+    <wsdl:message name="ServiceException">
+        <wsdl:part name="ServiceException" element="xsns:ServiceException"
+                   xmlns:xsns="http://xml.inetpsa.com/Services/Cfg/Config"/>
+    </wsdl:message>
+    <wsdl:portType name="ConfigPortType">
+        <wsdl:operation name="Config">
+            <wsdl:input name="ConfigRequest" message="ns0:ConfigRequest"/>
+            <wsdl:output name="ConfigResponse" message="ns0:ConfigResponse"/>
+            <wsdl:fault name="ServiceException" message="ns0:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="ConfigFeature">
+            <wsdl:input name="ConfigFeatureRequest" message="ns0:ConfigFeatureRequest"/>
+            <wsdl:output name="ConfigFeatureResponse" message="ns0:ConfigFeatureResponse"/>
+            <wsdl:fault name="ServiceException" message="ns0:ServiceException"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="ConfigHttpBinding" type="ns0:ConfigPortType">
+        <soap11:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="Config">
+            <soap11:operation soapAction="http://xml.inetpsa.com/Services/Cfg/Config#Config" style="document"/>
+            <wsdl:input name="ConfigRequest">
+                <soap11:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="ConfigResponse">
+                <soap11:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap11:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="ConfigFeature">
+            <soap11:operation soapAction="http://xml.inetpsa.com/Services/Cfg/Config#ConfigFeature" style="document"/>
+            <wsdl:input name="ConfigFeatureRequest">
+                <soap11:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="ConfigFeatureResponse">
+                <soap11:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap11:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="Config">
+        <wsdl:port name="ConfigHttpPort.0" binding="ns0:ConfigHttpBinding">
+            <soap11:address location="http://10.68.110.80:80/cfg/services/Config"/>
+        </wsdl:port>
+        <wsdl:port name="ConfigHttpPort.1" binding="ns0:ConfigHttpBinding">
+            <soap11:address location="http://10.68.110.80:80/cfg/pub/services/Config"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

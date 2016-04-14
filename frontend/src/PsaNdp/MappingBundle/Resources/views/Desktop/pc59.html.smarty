@@ -1,0 +1,8 @@
+<section class="slice-pc59 {if !empty($slicePC59.anchorId)} {$slicePC59.anchorId} {/if}" {if !empty($slicePC59.anchorId)} id="{$slicePC59.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePC59' } ]" datalayer="{$slicePC59.datalayer}">
+
+    {if !empty($slicePC59.ctaList)}
+        {foreach $slicePC59.ctaList as $cta}
+            {include file="../Components/cta.html.smarty" test=$slicePC59.ctaList|count gtm="{ldelim}\"eventType\":\"click\",\"dataList\":{ldelim}\"event\":\"uaevent\",\"eventCategory\":\"{$slicePC59.blockName}::position-{$slicePC59.blockOrder}\",\"eventAction\":\"Redirection\",\"eventLabel\":\"{$cta.title|escape:html}\"{rdelim}{rdelim}" }
+        {/foreach}
+    {/if}
+</section>

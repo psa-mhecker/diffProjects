@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:cxl="http://fault.core.cxl.inetpsa.com" xmlns:soap11="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope" xmlns:soapenc11="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soapenc12="http://www.w3.org/2003/05/soap-encoding" xmlns:tn="http://com/inetpsa/dcr/xml/services/bend/boformservice" xmlns:tns="http://xml.inetpsa.com/Services/bend/BOFormService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://com/inetpsa/dcr/xml/services/bend/boformservice">
+      
+<xs:simpleType name="UniqueIdentifier">
+        
+<xs:restriction base="xs:string">
+          
+<xs:pattern value="[A-Z]{4}[0-9]{12}"/>
+        </xs:restriction>
+      </xs:simpleType>
+      
+<xs:simpleType name="Culture">
+        
+<xs:restriction base="xs:string">
+          
+<xs:pattern value="[a-z]{2}\-[A-Z]{2}"/>
+        </xs:restriction>
+      </xs:simpleType>
+      
+<xs:simpleType name="Status">
+        
+<xs:restriction base="xs:string">
+          
+<xs:enumeration value="OK"/>
+          
+<xs:enumeration value="ERROR"/>
+          
+<xs:enumeration value="BAD_REQUEST"/>
+          
+<xs:enumeration value="NO_RESULTS_FOUND"/>
+          
+<xs:enumeration value="INSTANCE_NOT_FOUND"/>
+          
+<xs:enumeration value="XSD_VALIDATION_FAILED"/>
+          
+<xs:enumeration value="UNKNOWN_SITE"/>
+          
+<xs:enumeration value="UNKNOWN_COUNTRY"/>
+          
+<xs:enumeration value="UNKNOWN_BRAND"/>
+          
+<xs:enumeration value="NULL_NOT_PERMITTED"/>
+          
+<xs:enumeration value="UNKNOWN_FORM_TYPE"/>
+          
+<xs:enumeration value="INSTANCE_NAME_ALREADY_EXIST"/>
+          
+<xs:enumeration value="FORM_NAME_ALREADY_EXIST"/>
+          
+<xs:enumeration value="NOT_DATETIME"/>
+        </xs:restriction>
+      </xs:simpleType>
+      
+<xs:complexType name="Instance">
+        
+<xs:sequence>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="instanceId" type="tn:UniqueIdentifier"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="instanceName" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="formId" type="tn:UniqueIdentifier"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="formName" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="formType" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="editable" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="instanceCommentary" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="culture" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      
+<xs:complexType name="Section">
+        
+<xs:sequence>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="dateStart" type="xs:dateTime"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="dateEnd" type="xs:dateTime"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="leads" type="tn:LeadsArray"/>
+        </xs:sequence>
+      </xs:complexType>
+      
+<xs:complexType name="FormData">
+        
+<xs:sequence>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="formType" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="leadsData" type="tn:LeadsDataArray"/>
+        </xs:sequence>
+      </xs:complexType>
+      
+<xs:complexType name="FormsList">
+        
+<xs:sequence>
+          
+<xs:element maxOccurs="unbounded" minOccurs="0" name="FormData" type="tn:FormData"/>
+        </xs:sequence>
+      </xs:complexType>
+      
+<xs:complexType name="LeadData">
+        
+<xs:sequence>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="cible" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="device" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="source" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="country" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="culture" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="creationDate" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="validationDate" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="civility" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="firstName" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="lastName" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="address1" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="address2" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="zipCode" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="city" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="email" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="phone" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="phone2" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="datePurchaseValue" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="companyName" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="carName" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="lcdv" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="byMail" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="byEmail" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="typeForm" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="nameForm" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="gitId" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="marketingCode" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="companyActivity" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="companyRegister" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="function" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="companyType" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="companyVpQuantity" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="companyVpBrand" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="companyVpModel" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="companyVpRenew" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="companyVuQuantity" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="companyVuBrand" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="companyVuModel" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="companyVuRenew" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="optinCommercialOffer" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="legalMention" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="optinMyCitroen" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="deaSiteGeo" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="deaName" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="deaAddressLine1" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="deaAddressLine2" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="deaAddressLine3" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="deaZipCode" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="deaCity" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="deaDepartment" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="deaRegion" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="deaEmail" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="deaFaxNumber" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="deaPhoneNumber" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="utmSource" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="utmMedium" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="utmCampaign" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="utmContent" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="utmTerm" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="userAgent" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="comment" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="requestDate" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="deaRrdi" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="interestFinancing" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="interestInsurance" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="interestService" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="carOwnedBrand" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="carOwnedModel" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="registrationNumber" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="registrationDate" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="serialNumber" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="mileage" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="fileNumber" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="newsletter" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="subscriptionDate" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="unsubscriptionDate" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="unsubscriptionReason" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="unsubscriptionDetail" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="broComment" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="cusTimeslot" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      
+<xs:complexType name="LeadInfoType">
+        
+<xs:sequence>
+          
+<xs:element maxOccurs="1" minOccurs="0" name="siteCode" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="0" name="type" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="0" name="device" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="0" name="formType" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="0" name="total" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      
+<xs:complexType name="ReferentialData">
+        
+<xs:sequence>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="type" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="label" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="refCode" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      
+<xs:complexType name="InstancesArray">
+        
+<xs:sequence>
+          
+<xs:element maxOccurs="unbounded" minOccurs="0" name="instance" type="tn:Instance"/>
+        </xs:sequence>
+      </xs:complexType>
+      
+<xs:complexType name="ParametersArray">
+        
+<xs:sequence>
+          
+<xs:element maxOccurs="unbounded" minOccurs="0" name="parameter" type="tn:ParameterData"/>
+        </xs:sequence>
+      </xs:complexType>
+      
+<xs:complexType name="ParameterData">
+        
+<xs:sequence>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="interfaceSi" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="interfaceSiName" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="parametersInfo" type="tn:ParameterInfoArray"/>
+        </xs:sequence>
+      </xs:complexType>
+      
+<xs:complexType name="ParameterInfoArray">
+        
+<xs:sequence>
+          
+<xs:element maxOccurs="unbounded" minOccurs="0" name="parameterInfo" type="tn:ParameterInfo"/>
+        </xs:sequence>
+      </xs:complexType>
+      
+<xs:complexType name="ParameterInfo">
+        
+<xs:sequence>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="parameterName" type="xs:string"/>
+          
+<xs:element maxOccurs="1" minOccurs="1" name="parameterValue" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      
+<xs:complexType name="RefsArray">
+        
+<xs:sequence>
+          
+<xs:element maxOccurs="unbounded" minOccurs="0" name="referential" type="tn:ReferentialData"/>
+        </xs:sequence>
+      </xs:complexType>
+      
+<xs:complexType name="LeadsDataArray">
+        
+<xs:sequence>
+          
+<xs:element maxOccurs="unbounded" minOccurs="0" name="leadData" type="tn:LeadData"/>
+        </xs:sequence>
+      </xs:complexType>
+      
+<xs:complexType name="LeadsArray">
+        
+<xs:sequence>
+          
+<xs:element maxOccurs="unbounded" minOccurs="0" name="leadInfoType" type="tn:LeadInfoType"/>
+        </xs:sequence>
+      </xs:complexType>
+      
+<xs:element name="getInstancesRequest">
+        
+<xs:complexType>
+          
+<xs:sequence>
+            
+<xs:element maxOccurs="1" minOccurs="1" name="country" type="xs:string"/>
+            
+<xs:element maxOccurs="1" minOccurs="1" name="brand" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      
+<xs:element name="getInstancesResponse">
+        
+<xs:complexType>
+          
+<xs:sequence>
+            
+<xs:element maxOccurs="1" minOccurs="1" name="statusResponse" type="tn:Status"/>
+            
+<xs:element maxOccurs="1" minOccurs="1" name="instances" type="tn:InstancesArray"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      
+<xs:element name="getInstanceByIdRequest">
+        
+<xs:complexType>
+          
+<xs:sequence>
+            
+<xs:element maxOccurs="1" minOccurs="1" name="instanceId" type="tn:UniqueIdentifier"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      
+<xs:element name="getInstanceByIdResponse">
+        
+<xs:complexType>
+          
+<xs:sequence>
+            
+<xs:element maxOccurs="1" minOccurs="1" name="statusResponse" type="tn:Status"/>
+            
+<xs:element maxOccurs="1" minOccurs="0" name="instanceXML" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      
+<xs:element name="getReferentialResponse">
+        
+<xs:complexType>
+          
+<xs:sequence>
+            
+<xs:element maxOccurs="1" minOccurs="1" name="statusResponse" type="tn:Status"/>
+            
+<xs:element maxOccurs="1" minOccurs="1" name="referentials" type="tn:RefsArray"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      
+<xs:element name="getReferentialRequest">
+        
+<xs:complexType>
+          
+<xs:sequence>
+            
+<xs:element maxOccurs="1" minOccurs="1" name="referentialType" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      
+<xs:element name="updateInstanceRequest">
+        
+<xs:complexType>
+          
+<xs:sequence>
+            
+<xs:element maxOccurs="1" minOccurs="1" name="instanceId" type="tn:UniqueIdentifier"/>
+            
+<xs:element maxOccurs="1" minOccurs="1" name="instanceName" type="xs:string"/>
+            
+<xs:element maxOccurs="1" minOccurs="1" name="formId" type="tn:UniqueIdentifier"/>
+            
+<xs:element maxOccurs="1" minOccurs="1" name="formName" type="xs:string"/>
+            
+<xs:element maxOccurs="1" minOccurs="1" name="formType" type="xs:string"/>
+            
+<xs:element maxOccurs="1" minOccurs="1" name="instanceXML" type="xs:string"/>
+            
+<xs:element maxOccurs="1" minOccurs="0" name="editable" type="xs:string"/>
+            
+<xs:element maxOccurs="1" minOccurs="0" name="comment" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      
+<xs:element name="updateInstanceResponse">
+        
+<xs:complexType>
+          
+<xs:sequence>
+            
+<xs:element maxOccurs="1" minOccurs="1" name="statusResponse" type="tn:Status"/>
+            
+<xs:element maxOccurs="1" minOccurs="0" name="errorResponse" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      
+<xs:element name="getReportingRequest">
+        
+<xs:complexType>
+          
+<xs:sequence>
+            
+<xs:element maxOccurs="1" minOccurs="1" name="brand" type="xs:string"/>
+            
+<xs:element maxOccurs="1" minOccurs="0" name="siteCode" type="xs:string"/>
+            
+<xs:element maxOccurs="1" minOccurs="0" name="country" type="xs:string"/>
+            
+<xs:element maxOccurs="1" minOccurs="0" name="opportunityType" type="xs:string"/>
+            
+<xs:element maxOccurs="1" minOccurs="0" name="contexte" type="xs:string"/>
+            
+<xs:element maxOccurs="1" minOccurs="0" name="culture" type="xs:string"/>
+            
+<xs:element maxOccurs="1" minOccurs="0" name="customerType" type="xs:string"/>
+            
+<xs:element maxOccurs="1" minOccurs="0" name="salePoint" type="xs:string"/>
+            
+<xs:element maxOccurs="1" minOccurs="1" name="dateStart" type="xs:dateTime"/>
+            
+<xs:element maxOccurs="1" minOccurs="1" name="dateEnd" type="xs:dateTime"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      
+<xs:element name="getReportingResponse">
+        
+<xs:complexType>
+          
+<xs:sequence>
+            
+<xs:element maxOccurs="1" minOccurs="1" name="statusResponse" type="tn:Status"/>
+            
+<xs:element maxOccurs="1" minOccurs="1" name="FormList" type="tn:FormsList"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      
+<xs:element name="getLeadsByTypeRequest">
+        
+<xs:complexType>
+          
+<xs:sequence>
+            
+<xs:element maxOccurs="1" minOccurs="1" name="country" type="xs:string"/>
+            
+<xs:element maxOccurs="1" minOccurs="1" name="brand" type="xs:string"/>
+            
+<xs:element maxOccurs="1" minOccurs="1" name="dateStart" type="xs:dateTime"/>
+            
+<xs:element maxOccurs="1" minOccurs="1" name="dateEnd" type="xs:dateTime"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      
+<xs:element name="getLeadsByTypeResponse">
+        
+<xs:complexType>
+          
+<xs:sequence>
+            
+<xs:element maxOccurs="1" minOccurs="1" name="statusResponse" type="tn:Status"/>
+            
+<xs:element maxOccurs="1" minOccurs="0" name="leads" type="tn:LeadsArray"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      
+<xs:element name="getParametersRequest">
+        
+<xs:complexType>
+          
+<xs:sequence>
+            
+<xs:element maxOccurs="1" minOccurs="1" name="culture" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      
+<xs:element name="getParametersResponse">
+        
+<xs:complexType>
+          
+<xs:sequence>
+            
+<xs:element maxOccurs="1" minOccurs="1" name="statusResponse" type="tn:Status"/>
+            
+<xs:element maxOccurs="1" minOccurs="1" name="parameters" type="tn:ParametersArray"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      
+<xs:element name="updateParametersRequest">
+        
+<xs:complexType>
+          
+<xs:sequence>
+            
+<xs:element maxOccurs="1" minOccurs="1" name="parameters" type="tn:ParametersArray"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      
+<xs:element name="updateParametersResponse">
+        
+<xs:complexType>
+          
+<xs:sequence>
+            
+<xs:element maxOccurs="1" minOccurs="1" name="statusResponse" type="tn:Status"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      
+<xs:element name="duplicateInstanceRequest">
+        
+<xs:complexType>
+          
+<xs:sequence>
+            
+<xs:element maxOccurs="1" minOccurs="1" name="instanceId" type="tn:UniqueIdentifier"/>
+            
+<xs:element maxOccurs="1" minOccurs="1" name="instanceName" type="xs:string"/>
+            
+<xs:element maxOccurs="1" minOccurs="1" name="formName" type="xs:string"/>
+            
+<xs:element maxOccurs="1" minOccurs="1" name="formType" type="xs:string"/>
+            
+<xs:element maxOccurs="1" minOccurs="1" name="instanceXML" type="xs:string"/>
+            
+<xs:element maxOccurs="1" minOccurs="0" name="editable" type="xs:string"/>
+            
+<xs:element maxOccurs="1" minOccurs="0" name="comment" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      
+<xs:element name="duplicateInstanceResponse">
+        
+<xs:complexType>
+          
+<xs:sequence>
+            
+<xs:element maxOccurs="1" minOccurs="1" name="statusResponse" type="tn:Status"/>
+            
+<xs:element maxOccurs="1" minOccurs="0" name="errorResponse" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xsd:schema>

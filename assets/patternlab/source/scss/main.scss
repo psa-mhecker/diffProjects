@@ -1,0 +1,65 @@
+@charset 'UTF-8';
+@import 'settings';
+@import 'common/fonts';
+//------------------------------------
+//    $VENDOR ELEMENTS
+//------------------------------------
+// Foundation by ZURB
+// foundation.zurb.com
+// Licensed under MIT Open Source
+// Behold, here are all the Foundation components.
+@import 'foundation';
+@import 'vendor/twentytwenty'; // Compare 2 images
+@import '../../../vendor/slick-carousel/slick/slick';
+@import '../../../vendor/slick-carousel/slick/slick-theme';
+//------------------------------------
+//    $GLOBAL ELEMENTS
+//------------------------------------
+@import 'mixins';
+@import 'new_sprites'; 			// Sprites NDP
+@import 'colors'; 			// Sprites NDP
+//@import 'sprites-confishow'; 	// Sprites Confishow
+
+@import 'common/typo';
+@import 'common/cta';
+@import 'components/forms';
+
+@import 'common/layout';
+@import 'common/all';
+@import 'common/navigation';
+
+@import 'common/grid';
+@import 'common/breadcrumb';
+@import 'components/pn7';  //En tête
+@import 'components/pt3';	 //Bloc Je veux
+@import 'components/pt2';  //Footer
+@import 'components/pt20';  //Bloc master page
+@import 'components/slideshowslick'; // slideshow
+@import 'components/videoplayer'; // video player
+@import 'components/pc5';
+@import 'components/pc7';
+@import 'components/pc9';
+@import 'components/pf11';
+@import 'components/pc12';
+@import 'components/pc40'; //Bloc CTA
+@import 'components/pc68';
+@import 'components/pc69';
+@import 'components/pc79';
+@import 'components/navshowroom'; // Navigation showroom
+@import 'components/presentationshowroom';
+@import 'components/pc19'; //Presentation homepage
+@import 'components/rangebar';
+@import 'components/sitemap'; //sitemap
+@import 'components/tooltips';
+@import 'components/uspanchors';
+@import 'components/dragndrop'; // Compare 2 images
+@import 'components/vignettes';
+@import 'components/carselector';
+@import 'components/servicesselector';
+@import 'components/multicolumns';
+@import 'components/popin';
+@import 'components/stickyelement';
+@import 'components/carouselvignette';
+@import 'components/mosaicusp';
+
+@import 'vendor/dist-forms';

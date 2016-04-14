@@ -1,0 +1,105 @@
+/*//== Media queries breakpoints
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.*/
+
+
+/*// Medium screen / desktop*/
+$screen-md:                  992px !default;
+$screen-md-min:              $screen-md !default;
+$screen-desktop:             $screen-md-min !default;
+
+
+/*//== Grid system*/
+/*//*/
+/*//## Define your custom responsive grid.*/
+
+/** Number of columns in the grid.*/
+$grid-columns:              12 !default;
+/** Padding between columns. Gets divided in half for the left and right.*/
+$grid-gutter-width:         28px !default;
+
+
+/*//== Container sizes*/
+/*//*/
+/*//## Define the maximum width of `.container` for different screen sizes.*/
+
+
+/*// Medium screen / desktop*/
+$container-desktop:            (1050px + $grid-gutter-width) !default;
+/** For `$screen-md-min` and up.*/
+$container-md:                 $container-desktop !default;
+
+
+/*//== Colors*/
+/*//*/
+/*//## Gray and brand colors for use across project.*/
+$default-color:         #fff 	  !default;
+$warm-black: 			      #1d1717 !default;
+$warm-chocolate:		    #2f2726 !default;
+$dark-chocolate:		    #302725 !default;
+$dark-champagne:		    #655a54 !default;
+$champagne:		 		      #ad9d91 !default;
+$carmin:		 		        #ad0040 !default;
+$light-champagne:		    #e6e0db !default;
+$dark-champagne-select:	#302725 !default;
+$light-grey: #f9f7f6 !default;
+
+/*//== Scaffolding*/
+/*//*/
+/*//## Settings for some of the most global styles.*/
+
+/** Background color for `<body>`.*/
+$body-bg:               #fff !default;
+/** Global text color on `<body>`.*/
+$text-color:            $warm-black !default;
+
+
+
+/*//## Font, line-height, and color for body text, headings, and more.*/
+
+$font-family-brand: "didot";
+$font-family-brand-italic: "didotitalic";
+
+$font-family-base-light: "robotolight";
+$font-family-base-regular: "robotoregular";
+$font-family-base-bold: "robotobold";
+
+$font-family-sans-serif:  Arial, sans-serif !default;
+
+$font-size-base:          14px !default;
+$font-size-x-large:       ceil(($font-size-base * 1.40)) !default; // ~20px
+$font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
+$font-size-small-small:   ceil(($font-size-base * 0.75)) !default; // ~11px
+$line-height-base:        1.428571429 !default; // 20/14
+
+
+/*//2 badges colors*/
+$bage-nouveaute:				#007f99;
+$badge-promotion: 				#fa0082;
+$badge-recommandation:			#b29fa4;
+
+/*// puce */
+$brand-plum-grey-puce:          #333333 !default;
+$brand-orange:                  #f27800 !default;
+$brand-rose:                    #fa0082 !default;
+$brand-blue:                    #007f99 !default;
+$brand-plum-grey:               #b29fa4 !default;
+$brand-plum-grey-puce:          #1d1717 !default;
+$brand-lavender-grey:           #afadc3 !default;
+$brand-lavender-grey-puce-text: #b29fa4 !default;
+
+/*//elemts formulaire color*/
+$input-default-border:			#b8b8bb;
+$error-color:					#d9147f;
+$gray-dark:         			#333 !default;
+
+/*//elemts lame*/
+$lame-border: #ad9d91 !default;
+$lame-border-selected: #ad0040 !default;
+$hover-picture: #ad9d91 !default;
+
+$lame-header--title--size: 18px !default;
+
+$border-comparator-selector: #f2efed;
+$notification-black: #5a5864;

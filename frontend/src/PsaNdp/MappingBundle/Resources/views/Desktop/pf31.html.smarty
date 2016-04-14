@@ -1,0 +1,28 @@
+<section class="slice-pf31 {if isset($slicePF31.anchorId)} {$slicePF31.anchorId} {/if}" {if isset($slicePF31.anchorId)} id="{$slicePF31.anchorId}" {/if}>
+  <h2 class="title">{$slicePf31.title}</h2>
+  <p class="subtitle">{$slicePf31.subtitle}</p>
+  <div class="carousel clearfix" data-jsobj="[ { 'obj': 'slicePf31' } ]" data-text-next="{$slicePf31.translate.next}" data-text-prev="{$slicePf31.translate.prev}">
+    <div class="carousel-frame ">
+      <ul class="carousel-slider list_style">
+        {foreach $slicePf31.carousel as $thumbnail}
+        <li class="carousel-slide thumb">
+          <a href="#" class="link" {if isset($thumbnail.target)}target="{$thumbnail.target}"{/if}>
+            <h3 class="title">{$thumbnail.title}</h3>
+            <figure>
+              <img src="{$thumbnail.img}" alt="{$thumbnail.alt}" />
+            </figure>
+            {if isset($thumbnail.beforePrice)}
+            <p class="subtitle">{$thumbnail.beforePrice}<span class="price">{$thumbnail.price}</span></p>
+            {/if}
+          </a>
+        </li>
+        {/foreach}
+        {if ($slicePf31.carousel|@count)%4 != 0}
+        {for $foo=0 to (4-(($slicePf31.carousel|@count)%4))-1}
+        <li class="carousel-slide thumb void"></li>
+        {/for}
+        {/if}
+      </ul>
+    </div>
+  </div>
+</section>

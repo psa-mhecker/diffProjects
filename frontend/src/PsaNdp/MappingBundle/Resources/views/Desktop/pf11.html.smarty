@@ -1,0 +1,272 @@
+<section
+		class="slice-pf11 {if isset($slicePf11.anchorId)} {$slicePf11.anchorId} {/if}" {if isset($slicePf11.anchorId)} id="{$slicePf11.anchorId}" {/if}
+		data-jsobj="[ { 'obj':'slicePF11' } ]"
+		datalayer="{$slicePf11.datalayer}" 
+		{if isset($slicePf11.urlJson)} data-urljson="{$slicePf11.urlJson}"  {/if} {if isset($slicePf11.urlRedirection)} data-urlredirection="{$slicePf11.urlRedirection}"  {/if} {if isset($slicePf11.coordInit)} data-coordInit="{$slicePf11.coordInit}" {/if} {if isset($slicePf11.mode)} data-mode="{$slicePf11.mode}"  {/if}
+		data-mapoptions="{$slicePf11.mapOptions|escape}" data-slicename="{$slicePf11.blockName}" data-sliceposition="{$slicePf11.blockOrder}" >
+	{if $slicePf11.cas1}
+		<div class="dealer-locator-head light">
+			<h2 class="title">{$slicePf11.cas1.title}</h2>
+			<div class="wrapper row">
+				<div class="search-dealer row">
+					<form action="" class="form-search-dealer" id="form_search_dealer" data-distance="20">
+						<input type="text" id="search-loc-input" class="search-loc-input" {if isset($slicePf11.cas1.searchType.placeholder1)} placeholder="{$slicePf11.cas1.searchType.placeholder1}"{/if} autocomplete="off">
+						<input type="submit" class="search-loc-submit show-for-medium-up disabled" value="{$slicePf11.cas1.translate.btnSubmit}" data-gtm='{ldelim}"eventType": "click", "dataList": {ldelim} "event": "uaevent","eventCategory": "{$slicePf11.blockName}::position-{$slicePf11.blockOrder}", "eventAction": "Search::Type", "eventLabel": "Icon::Classic"{rdelim}{rdelim}'>
+					</form>
+				</div>
+				<div id="map-canvas"></div>
+			</div>
+		</div>
+		<p class="errorOnLoad hide">{$slicePf11.errorload}</p>
+	{/if}
+	{if $slicePf11.cas2}
+	<div class="dealer-locator-head">
+		<div class="wrapper row">
+			<div class="search-dealer row">
+				<form action="" class="small-8 large-8 columns form-search-dealer" id="form_search_dealer"
+					  data-distance="{$slicePf11.cas2.distance}">
+					{if ($slicePf11.cas2.searchType.filterActive eq 'true')}
+						<div class="sub-city"></div>
+					{/if}
+					<input type="text"
+						   id="search-loc-input" class="search-loc-input"
+							{if isset($slicePf11.cas2.searchType.placeholder1)}
+								placeholder="{$slicePf11.cas2.searchType.placeholder1}"
+							{/if}>
+					<input type="submit"
+						   class="search-loc-submit show-for-medium-up disabled"
+						   value="{$slicePf11.cas2.translate.btnSubmit}"
+						   data-gtm='{ldelim}"eventType": "click", "dataList": {ldelim} "event": "uaevent","eventCategory": "{$slicePf11.blockName}::position-{$slicePf11.blockOrder}", "eventAction": "Search::Type", "eventLabel": "Icon::Classic"{rdelim}{rdelim}'>
+				</form>
+				<span class="or small-1 large-1 columns show-for-medium-up">{$slicePf11.cas2.or}</span>
+				<div class="geoloc js-btn-around-me small-3 large-3 columns"
+					 data-gtm='{ldelim}"eventType": "click", "dataList": {ldelim} "event": "uaevent","eventCategory": "{$slicePf11.blockName}::position-{$slicePf11.blockOrder}", "eventAction": "Search::Type", "eventLabel": "Icon::Géolocalisation"{rdelim}{rdelim}'>
+					<span>{$slicePf11.cas2.btnAroundMe}</span>
+				</div>
+			</div>
+			{if ($slicePf11.cas2.searchType.filterActive eq 'true')}
+				<div class="row">
+					<div class="type-search small-8 large-8 columns">
+						<fieldset class="grid-group check row">
+							<div class="small-12 large-6 columns">
+								<label class="filters">
+									<div class="row">
+										<input type="radio" id="type_byCode" name="type_search" value="city"
+											   data-placeholder="{$slicePf11.cas2.searchType.placeholder1}">
+										<span class="radio small-1 large-1 columns"></span>
+										{$slicePf11.cas2.searchType.label1}
+									</div>
+								</label>
+							</div>
+							<div class="small-12 large-6 columns">
+								<label class="filters">
+									<div class="row">
+										<input type="radio" id="type_byDealer" name="type_search" value="dealer"
+											   data-placeholder="{$slicePf11.cas2.searchType.placeholder2}">
+										<span class="radio small-1 large-1 columns"></span>
+										{$slicePf11.cas2.searchType.label2}
+									</div>
+								</label>
+							</div>
+						</fieldset>
+					</div>
+				</div>
+			{/if}
+			{if ($slicePf11.cas2.filter.displayFilter eq true)}
+				<form action="" id="form_dealers_filters">
+					<div class="filter">
+						<span class="filter-by">{$slicePf11.cas2.filterBy}</span>
+
+						<div class="list-filter">
+							{foreach $slicePf11.cas2.filter.listFilter as $i}
+								<label for="filter{$i@index}" class="filters filter-check">
+									<input type="checkbox" class="filter{$i@index}" id="filter{$i@index}" name="filters"
+										   value="{$i.value}">
+									<span class="btn-radio"></span>
+									<span class="name">{$i.label}</span>
+								</label>
+							{/foreach}
+
+							{if ($slicePf11.cas2.filterMore.displayFilterMore eq true)}
+								<div class="more-filter">
+									<div class="list-filter-more">
+										{foreach $slicePf11.cas2.filterMore.listMoreFilter as $a}
+											<label for="filter-more-{$a@index}" class="filters">
+												<input type="checkbox" class="filter-more-{$a@index}"
+													   id="filter-more-{$a@index}" name="filters" value="{$a.value}">
+												<span class="btn-radio"></span>
+												<span class="name">{$a.label}</span>
+											</label>
+										{/foreach}
+									</div>
+								</div>
+							{/if}
+						</div>
+						{if ($slicePf11.cas2.filterMore.displayFilterMore eq true)}
+							<span class="btn-more-filter">
+								<span class="open-more-filter">{$slicePf11.cas2.moreFilter}</span>
+								<span class="close-more-filter">{$slicePf11.cas2.moreFilterClose}</span>
+							</span>
+						{/if}
+					</div>
+				</form>
+			{/if}
+		</div>
+	</div>
+	<div id="dealer-locator-map" class="map-container" data-pictoMap="{$slicePf11.cas2.mapParam.picto}"
+		 data-pictoMapOn="{$slicePf11.cas2.mapParam.pictoOn}" data-pictoMapOff="{$slicePf11.cas2.mapParam.pictoOff}">
+		<p class="errorOnLoad hide">{$slicePf11.errorload}</p>
+		<span id="textLinkInfoWindow" class="hide">{$slicePf11.cas2.mapParam.textLinkInfoWindow}</span>
+		<div id="map-canvas" class="map-display">
+		</div>
+		<div class="list-result js-list-result scroller">
+			<div class="msg-info js-msg-info hide">{$slicePf11.cas2.resultNotFound}</div>
+			<div class="wrapper">
+				<div class="list-dealer js-list-dealer hide">
+					<h2 class="result"><span id="result-nbr" class="result-nbr"></span>{$slicePf11.cas2.resultFound}</h2>
+					<div class="js-list-dealer-wrapper"></div>
+				</div>
+				<div class="dealer-details"></div>
+			</div>
+		</div>
+		{/if}
+		{literal}
+			<script id="tpl-dealer-item" type="text/template">
+				<div id="dealer-<%- id %>" class="dealer-item row">
+					<% if (adress.dist !== '0') { %>
+					<div class="dist small-2 large-3 column">
+						<div class="picto"></div>
+						<div class="km">
+							<span class="nb-km"><%- adress.dist%></span><span class="unit">km</span>
+						</div>
+					</div>
+					<% } %>
+					<div class="coord <% if(adress.dist !== '0'){ %>small-10 large-9<% } %> column">
+						<div class="dealer-name font-bold"><%- name %></div>
+						<div class="dealer-type"><%- types %></div>
+						<div class="dealer-street"><%- adress.street %></div>
+						<div class="dealer-city"><%- adress.city %></div>
+						<div class="dealer-phone"><span>Tel: </span><span class="phoneNumber"><%- contact.tel %></span>
+						</div>
+						<a href="#" class="cta link-cta short-width chevron-right detailed-sheet">
+							<span class="content-cta">Voir la fiche détaillée</span>
+						</a>
+					</div>
+
+				</div>
+			</script>
+			<script id="tpl-dealer-service" type="text/template">
+				<div class="service row">
+                    <div class="img-service left">
+                        <img src="<%- icon %>" alt="<%- name %>" title="<%- name %>">
+                    </div>
+                    <div class="text">
+                        <div class="title"><%- name %></div>
+                        <% if (tel){ %>
+                        	<div class="tel"><%- translations.labelPhone %> : <a href="tel:<%- tel %>"><%- tel %></a></div>
+                        <% } %>
+                        <% if (mail){ %>
+                        	<a 	class="mail" 
+                        		href="mailto:<%- mail %>"
+                        		data-gtm='{"eventType": "click", "dataList": {"event": "uaevent","eventCategory": "<%- dataGtm.eventCategory %>", "eventAction": "<%- dataGtm.mail.eventAction %>", "eventLabel": "<%- dataGtm.mail.eventLabel %>"}}'>
+                        		<%- mail %>
+                        	</a><% } %>
+                    </div>
+                </div>
+			</script>
+			<script id="tpl-dealer-cta" type="text/template">
+				<a 	href="<%- url %>"
+					class="cta square-cta <%- version %>"
+				   	target="<%- target %>"
+				   	data-gtm='{"eventType": "click", "dataList": {"event": "uaevent", "eventCategory": "<%- dataGtm.eventCategory %>", "eventAction": "<%- dataGtm.eventAction %>", "eventLabel": "<%- dataGtm.eventLabel %>"}}'>
+				    <img src="<%- img %>" alt="<%- title %>">
+				    <span><%- title %></span>
+				</a>
+			</script>
+			<script id="tpl-dealer-item-details" type="text/template">
+				<div class="dealer-detail-<%- id %>" class="dealer-details row">
+					<div class="content-top">
+						<a href="#" class="cta link-cta chevron-left btn-return"><span class="content-cta"><%- translations.btnBackToResults %></span></a>
+						<h3 class="dealer-name font-bold"><%- name %></h3>
+						<h5 class="condensed-coord show-for-small-only"><%- adress.street %>, <%- adress.city %></h5>
+					</div>
+					<div class="squared-cta-wrapper show-for-small-only">
+					</div>
+					<div class="tabs-wrapper show-for-medium-up">
+						<ul class="tabs" data-tab role="tablist">
+							<li class="tab-title active"role="presentation">
+								<a href="#panel2-1"
+								   role="tab"
+								   tabindex="0"
+								   aria-selected="true"
+								   aria-controls="panel2-1"
+								   data-gtm='{"eventType": "click", "dataList": {"event": "uaevent","eventCategory": "<%- gtmCategory %>", "eventAction": "Display::Contact", "eventLabel": "<%- translations.linkContact %>"}}'><%- translations.linkContact %></a>
+							</li>
+							<li class="tab-title" role="presentation">
+								<a href="#panel2-2"
+								   role="tab"
+								   tabindex="0"
+								   aria-selected="false"
+								   aria-controls="panel2-2"
+								   data-gtm='{"eventType": "click", "dataList": {"event": "uaevent","eventCategory": "<%- gtmCategory %>", "eventAction": "Display::Services", "eventLabel": "<%- translations.linkServices %>"}}'><%- translations.linkServices %></a>
+							</li>
+						</ul>
+						<div class="tabs-content">
+							<section role="tabpanel" aria-hidden="false" class="content active" id="panel2-1">
+								<div class="coord show-for-medium-up">
+									<div class="dealer-street"><%- adress.street %></div>
+									<div class="dealer-city"><%- adress.city %></div>
+									<div class="dealer-phone"><span><%- translations.labelPhone %> : </span><span class="phoneNumber"><%- contact.tel %></span>
+									</div>
+								</div>
+								<% if (contact.website !== undefined) { %>
+									<div class="dealer-website text-center show-for-medium-up">
+										<a class="cta btn-cta full-width light-blue"
+										   href="<%- contact.website %>"
+										   target="_blank"
+										   data-gtm='{"eventType": "click", "dataList": {"event": "uaevent","eventCategory": "<%- gtmCategory %>", "eventAction": "Redirection::Edealer::<%- id %>", "eventLabel": "<%- translations.btnvisitWebsite %>"}}'>
+											<span><%- translations.btnvisitWebsite %></span>
+										</a>
+									</div>
+								<% } %>
+								<% if (schedules !== false) { %>
+									<div class="schedules"><%= schedules %></div>
+								<% } %>
+							</section>
+							<section role="tabpanel" aria-hidden="true" class="content" id="panel2-2">
+								<div class="services">
+								</div>
+							</section>
+						</div>
+					</div>
+					<div class="accordions-wrapper show-for-small-only">
+						<ul class="accordion" data-accordion>
+							<% if (schedules !== false) { %>
+								<li class="accordion-navigation">
+									<a href="#panel1a"><%- translations.linkSchedules %><span class="plus">+</span></a>
+									<div id="panel1a" class="content">
+										<div class="schedules"><%= schedules %></div>
+									</div>
+								</li>
+							<% } %>
+							<li class="accordion-navigation">
+								<a href="#panel2a"><%- translations.linkServices %> <span class="plus">+</span></a>
+								<div id="panel2a" class="content">
+									<div class="services">
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</script>
+			<script id="tpl-infowindow" type="text/template">
+				<div id="infowindow-<%- dealerId %>" class="infowindow">
+					<h3><%- dealerName %></h3>
+					<% if(btnDetailedSheet !== undefined) { %>
+					<a href="#" class="cta link-cta chevron-left detailed-sheet"><span class="content-cta"><%- btnDetailedSheet %></span></a>
+					<% } %>
+				</div>
+			</script>
+		{/literal}
+</section>

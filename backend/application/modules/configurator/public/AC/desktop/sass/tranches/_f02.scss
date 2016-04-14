@@ -1,0 +1,490 @@
+.viewManager{
+	position:relative;
+	display:block;
+	width:994px;
+	height:315px;
+	overflow:hidden;
+
+	.control-btns{
+		position:absolute;
+		z-index:2;
+		left:0;
+		top:100%;
+		display:block;
+		padding:0;
+		width:115px;
+		height:43px;
+		line-height:0;
+		font-size:0;
+		@include transition(all, .5s ease-in-out);
+
+		.btn,
+		.sbtn,
+		.switch{
+			padding:0;
+			border:4px solid $grey-2; 
+			background-color:$white_color;
+			
+			@include transition(all, .25s ease-in-out);
+
+			cursor:pointer;
+
+			&:before{
+
+			}
+
+			&.menu-tog{
+				display:none;
+			}
+			
+			&.fullscreen-tog{
+				position:absolute;
+				z-index:2;
+				right:-864px;
+				top:0;
+
+				&:before{
+					position:absolute;
+					left:50%;
+					top:50%;
+					z-index:1;
+					display:block;
+					margin:-14px 0 0 -14px;
+					content:'';
+					@extend %_sprites;
+					@extend %_sprite-vm-tog-fs-off;
+				}
+
+				span{
+					display:block;
+					width:42px;
+					height:42px;
+					text-indent:-10000px;
+					overflow:hidden;
+					@include transition(background, .25s ease-in-out);
+				}
+
+				&:hover{
+
+					span{
+						background-color:$grey-2;
+					}
+
+					&:before{
+						@extend %_sprite-vm-tog-fs-on;
+					}
+
+				}
+
+				&.on{
+					position:absolute;
+					right:-931px;
+					top:-49px;
+					width:13px;
+					height:13px;
+					background:none;
+					border:none;
+
+					span{
+						display:none;
+					}
+
+					&:before{
+						@extend %_sprite-close;
+					}
+
+					&:hover{
+
+						&:before{
+							@extend %_sprite-close;
+						}
+					}
+				}
+			}
+			
+			&.outside-tog{
+				position:relative;
+				margin-bottom: 10px;
+
+				&:before{
+					position:absolute;
+					left:50%;
+					top:50%;
+					z-index:1;
+					display:block;
+					margin:-12px 0 0 -27px;
+					content:'';
+					@extend %_sprites;
+					@extend %_sprite-vm-tog-outside-off;
+				}
+
+				span{
+					display:block;
+					width:107px;
+					height:42px;
+					text-indent:-10000px;
+					overflow:hidden;
+					background-color:$white_color;
+					@include transition(background, .25s ease-in-out);
+				}
+
+				&.on, 
+				&:hover{
+
+					span{
+						background-color:$grey-2;
+					}
+
+					&:before{
+						@extend %_sprite-vm-tog-outside-on;
+					}
+
+				}
+			}
+			
+			&.inside-tog{
+				position:relative;
+				display:inline-block;
+				
+
+				&:before{
+					position:absolute;
+					left:50%;
+					top:50%;
+					z-index:1;
+					display:block;
+					margin:-12px 0 0 -14px;
+					content:'';
+					@extend %_sprites;
+					@extend %_sprite-vm-tog-inside-off;
+				}
+
+				span{
+					display:block;
+					width:52px;
+					height:42px;
+					text-indent:-10000px;
+					overflow:hidden;
+					background-color:$white_color;
+					@include transition(background, .25s ease-in-out);
+				}
+
+				&.on,
+				&:hover{
+					span{
+						background-color:$grey-2;
+					}
+					&:before{
+						@extend %_sprite-vm-tog-inside-on;
+					}
+				}
+				&.on{
+					border-right:0;
+				}
+
+			}
+			
+			&.simulation-tog{
+				position:relative;
+				display:inline-block;
+
+				&:before{
+					position:absolute;
+					left:50%;
+					top:50%;
+					z-index:1;
+					display:block;
+					margin:-9px 0 0 -14px;
+					content:'';
+					@extend %_sprites;
+					@extend %_sprite-vm-tog-simulation-off;
+				}
+
+				span{
+					display:block;
+					width:51px;
+					height:42px;
+					text-indent:-10000px;
+					overflow:hidden;
+					background-color:$white_color;
+					@include transition(background, .25s ease-in-out);
+				}
+
+				&.on,
+				&:hover{
+					span{
+						background-color:$grey-2;
+						
+					}
+					&:before{
+						@extend %_sprite-vm-tog-simulation-on;
+					}
+				}
+
+			}
+		}
+		.inside-tog + .simulation-tog{
+			opacity:0;
+			width:0;
+		}
+		.inside-tog.on + .simulation-tog{
+			opacity:1;	
+			width:59px;
+		}
+	}
+
+	.views{
+		display:block;
+		padding-left:130px;
+		width:994px;
+		height:315px;
+		overflow:hidden;
+		font-size:0;
+		white-space:nowrap;
+	}
+
+	&.loading{
+		.control-btns{
+			top:100%;
+		}
+		.views{
+			position:relative;
+			&:before{
+				content:'';
+				position:absolute;
+				z-index:2;
+				left:0;
+				top:0;
+				width:100%;
+				height:100%;
+				/*
+				background-color:$dark_brown_1_color;
+				*/
+				background-image:url(../img/loader_black.gif);
+				background-position:center center;
+				background-repeat:no-repeat;
+				opacity:0.9;
+			}
+		}
+	}
+	&.loaded{
+		.control-btns{
+			top:15px;
+		}
+	}
+	.view{
+		display:inline-block;
+		width:864px;
+		height:315px;
+		white-space:normal;
+
+		.subview{
+			display:block;
+			width:100%;
+			height:100%;
+		
+			&.simulation{
+				position:relative;
+
+				&:before{
+					position:absolute;
+					left:50%;
+					top:50%;
+					z-index:1;
+					display:block;
+					content:'';
+					margin:-11px 0 0 -10px;
+					width:20px;
+					height:23px;
+					@extend %_sprites;
+					@extend %_sprite-vm-simulation-cursor;
+					opacity:1;
+					@include transition(opacity, .50s ease-in-out);
+				}
+
+				&.touched{
+
+					&:before{
+						opacity:0;
+					}
+
+				}
+
+			}
+
+		}
+
+		.slick{
+
+		}
+
+		.item{
+
+			figure{
+				margin:0;
+				width:100%;
+				height:100%;
+
+				img{
+					width:100%;
+					height:100%;
+				}
+
+			}
+
+		}
+
+		&.outside{
+
+		}
+		
+		&.inside{
+
+		}
+
+	}
+
+	.slick-slider{
+		margin-bottom:0;
+	}
+
+	.slick-arrow{
+		position:relative;
+		left:auto;
+		right:auto;
+		top:auto;
+		@include translate(0,0);
+		display:inline-block;
+		vertical-align:middle;
+		&:before{
+			font-family: 'icomoon';
+			color:$grey-2;
+		}
+	}
+
+	.slick-prev{
+		left:0;
+
+		&:before{
+			content: "\e903";
+			text-align:right;
+		}
+	}
+
+	.slick-next{
+		right:0;
+
+		&:before{
+			content: "\e904";
+			text-align:left;
+		}
+
+	}
+
+	.slick-dots{
+		bottom:15px;
+
+		li{
+			display:inline-block;
+			vertical-align:middle;
+			margin:6px;
+			width:16px;
+			height:16px;
+			button{
+				padding:0;
+				width:16px;
+				height:16px;
+				&:before{
+					content:'';
+					background-color:$grey-2;
+					border-radius:8px;
+					border:0px solid $grey-2;
+					margin:3px;
+					width:10px;
+					height:10px;
+					opacity:1;
+					@include transition(all, .25s ease-in-out);
+
+				}
+
+				&:hover{
+					&:before{
+						border:3px solid $grey-2;
+						margin:0;
+						width:16px;
+						height:16px;
+					}
+				}
+			}
+			&.slick-active{	
+				button{
+					&:before{
+						border:3px solid $grey-2;
+						margin:0;
+						background-color:$grey-2-trans0;
+						width:16px;
+						height:16px;
+					}
+				}
+			}
+
+		}
+	}
+}
+
+.f02{
+	display:block;
+	margin:0 auto;
+	padding:0 15px;
+	width:1024px;
+	height:315px;
+}
+
+.fs-f02-modal{
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:100000;
+	display:block;
+	width:100%;
+	height:100%;
+	background-color:$white_color;
+	text-align:center;
+	font-size:0;
+	white-space:nowrap;
+
+	&:before{
+		content:'';
+		display:inline-block;
+		margin-left:-1px;
+		width:1px;
+		height:100%;
+		vertical-align:middle;
+	}
+
+	.viewManager{
+		display:inline-block;
+		vertical-align:middle;
+		margin:0 auto;
+		height:auto;
+		overflow:visible;
+		white-space:normal;
+
+		.control-btns{
+			top:14px;
+
+			.menu-tog{
+				display:none;
+			}
+		}
+
+		.views,
+		.view{
+			height:auto;
+			overflow:visible;
+		}
+		.slick-dots{
+			bottom:-27px;
+		}
+	}
+}

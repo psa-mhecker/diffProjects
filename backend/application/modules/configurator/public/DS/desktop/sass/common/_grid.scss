@@ -1,0 +1,71 @@
+//
+// Grid system
+// --------------------------------------------------
+// Container widths
+//
+// Set the container width in media queries.
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1280px;
+  min-width: 1007px;
+  overflow: hidden;
+  .content {
+    float: left;
+    width: 67.58%;
+  }
+  .panier {
+    &.relative-position {
+      width: 32.42%;
+      float: right;
+    }
+    .header { 
+      position: relative;
+      z-index: 8;
+      height: 0;
+      opacity:0;
+      transition: all 500ms linear;
+    }
+    &.sticky {
+      min-width: 300px;
+      position: fixed;
+      right: 0;
+      top: 103px;
+      .header {
+        height: 121px;
+        opacity:1;
+        transition: all 500ms linear;
+      }
+    }
+  }
+}
+.clear {
+  clear: both;
+}
+.nopadding {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.addpadding {
+  padding: 0 !important;
+  margin: 0 14px !important;
+}
+
+
+// Row
+//
+// Rows contain and clear the floats of your columns.
+.row {
+  @include make-row;
+}
+
+// Columns
+//
+// Common styles for small and large grid columns
+@include make-grid-columns;
+
+// Medium grid
+//
+// Columns, offsets, pushes, and pulls for the desktop device range.
+@include make-grid(md);

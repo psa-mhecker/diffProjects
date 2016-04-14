@@ -1,0 +1,27 @@
+<section class="slice-pc74 {if isset($slicePC74.anchorId)} {$slicePC74.anchorId} {/if}" {if isset($slicePC74.anchorId)} id="{$slicePC74.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePC74' } ]">
+  <header>
+    <h1 class="title">{$slicePC74.title}</h2>
+    <p class="intro">{$slicePC74.intro}</p>
+  </header>
+  <div class="d-slider">
+    {foreach $slicePC74.slider as $item}
+    <div class="item">
+      {foreach $item as $figure}
+      <div class="visual grid-col">
+        <a href="{$figure.href}" title="{$figure.title}"{if isset($figure.target)} target="{$figure.target}"{/if}>
+          {if isset($figure)}
+          <img src="{$figure.img}" alt="{$figure.alt}" />
+          <span class="btn-box">{$slicePC74.translate.moreAbout}</span>
+          {/if}
+        </a>
+      </div>
+      {/foreach}
+    </div>
+    {/foreach}
+  </div>
+  <div class="see-more">
+    <a href="{$slicePC74.link.href}"{if isset($slicePC74.link.target)} target="{$slicePC74.link.target}"{/if}>
+      {$slicePC74.translate.seeAllOffers}
+    </a>
+  </div>
+</section>

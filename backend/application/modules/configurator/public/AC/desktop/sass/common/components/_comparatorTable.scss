@@ -1,0 +1,659 @@
+@charset "UTF-8";
+#comparatorTable{
+  clear: both;
+    // etat du tableau lorsque le bouton "uniquement les differences" est active.
+    &.showOnlyDiff{
+      .table-comparator-result .toggle-container .toggle-content .row.hasDiff {
+        display:block;
+      }
+      .table-comparator-result .toggle-container .toggle-content .row.noDiff {
+        display:none;
+      }
+      .toggle-container.noRowDiff{
+        // display:none;
+      }
+    }
+
+    p.msgError{display:none;color:$carmin;}
+    &.errorLoad{
+      p.msgError{display:block;}
+    }
+
+    h2{
+      &.main-comparator-title{
+        margin-top: 27px;
+        margin-bottom: 20px;
+        font-size:24px;
+        font-family:$font_citroen-bold;
+        color:$verdatre;
+        text-transform:uppercase;
+      }
+    }
+
+    .customization-comparator{
+
+      margin-bottom: 15px;
+      text-align: center;
+      .manageToggle {
+        a{
+          display: inline-block;
+          text-transform: uppercase;
+          font-family: $font_ubuntu-bold;
+          color:$grey-6 ;
+          margin:0 1%;
+          text-align:left;
+          span{
+            vertical-align: middle;
+            font-size: 13px;
+            line-height: 13px;
+            display: inline-block;
+          }
+          &.openAllToggle,&.closeAllToggle{
+            width:25%;
+            span.input{
+              display: inline-block;
+              vertical-align: middle;
+              margin-right: 10px;
+              width: 28px;
+              height: 28px;
+              border: 1px solid #b8b8bb;
+              position: relative;
+              border-radius: 50%;
+            }
+          }
+          &.openOnlyDiff{
+            width:40%;
+            span.input{
+              margin-right: 15px;
+              display:inline-block;
+              vertical-align: middle;
+              margin-bottom: 3px;
+              border: none;
+              @extend %_sprites;
+              @extend %_sprite-bouton-checkbox-comparateur;
+            }
+          }
+          &:hover{
+
+          }
+          &.active{
+            &.openAllToggle,&.closeAllToggle{
+              span.input{
+                border: 4px solid #b8b8bb;
+                border-color: $grey-2;
+                &:before{
+                  content: '';
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  width: 8px;
+                  height: 8px;
+                  margin-left: -4px;
+                  margin-top: -4px;
+                  background-color: $grey-2;
+                  -moz-border-radius: 50%;
+                  -webkit-border-radius: 50%;
+                  border-radius: 50%;
+              }
+              }
+            }
+
+            &.openOnlyDiff{
+              span.input{
+                @extend %_sprites;
+                @extend %_sprite-bouton-checkbox-comparateur-checked;
+              }
+            }
+          }
+          &.openOnlyDiff.disabled{
+            opacity:0.5;
+            &:hover{
+              color:$champagne;
+              background-color: white;
+              cursor:no-drop;
+            }
+          }
+        }
+      }
+    }
+    .table-comparator-equipement,.table-comparator-motors,.table-no-motor{
+      display:none;
+    }
+    &.selected_01{
+      .customization-comparator,.table-comparator-equipement,.table-comparator-title{
+        display:block;
+      }
+    }
+    .model-selector-container{
+      position:relative;
+      .subtitleContainer, .model-selector{
+        position:absolute;
+        width:100%;
+        top:0;
+        // left:15px;
+        z-index: 100;
+      }
+      .model-selector.stick-it{
+        position:fixed;
+        .container-bg{
+          background:white;
+          width: 100%;
+          height: 120px;
+        }
+        .car-model,.config-content,.delete-content{
+          display:none;
+        }
+        .span_3_of_12 {
+            height: 120px;
+          .col-content{
+            border-bottom:0;
+            height: 120px;
+          }
+        }
+      }
+      .subtitleContainer{
+        .span_3_of_12.subtitle{
+          padding-left:28px;
+          text-align: left;
+        }
+      }
+    }
+
+    .model-selector{
+      .loader-ds-container{
+        &.hide{display:none;}
+        width: 100%;
+        position: absolute;
+        text-align: center;
+        top: 0;
+        left: 0;
+        > div{
+          height: 430px;
+          vertical-align: middle;
+          line-height: 430px;
+          background: white;
+          opacity: 0.7;
+          .white-loader{
+            margin: 0 auto;
+            display: inline-block;
+            vertical-align: middle;
+            background-image: url('../img/ajaxLoader.gif');
+            background-repeat: no-repeat;
+            width: 61px;
+            height: 61px;
+          }
+        }
+
+      }
+
+      .container-bg{
+        border-left: 4px solid  $grey-4;
+        background:$white_color;
+        float:left;
+        width:100%;
+        &.hidden{visibility:hidden;}
+        .delete-content{
+          height:42px;
+          margin-bottom:6px;
+          a{
+            float:right;
+            &:hover{
+              opacity:0.8;
+              cursor: pointer;
+            }
+            span{
+              display:block;
+              @extend %_sprites;
+              @extend %_sprite-bouton-suppression-comparateur;
+            }
+          }
+        }
+      }
+      .span_3_of_12{
+        width:28%;
+        float:left;
+        margin: 0 ;
+        border-top: 4px solid $grey-4;
+        border-right: 4px solid $grey-4;
+        border-bottom: 4px solid $grey-4;
+            height: 430px;
+
+        &:first-child{
+          min-height:5px;
+        }
+        &.item{
+          width:24%;
+          display:table-column;
+          position:relative;
+
+          .col-content {
+            position:relative;
+            height: 430px;
+
+            & > div {opacity:0.5;}
+          }
+          &.enabled {
+            .col-content {
+              .select-01{opacity:1;}
+              .car-model{
+                opacity:1;
+                figure .img_default{
+                  display:block;
+                }
+              }
+            }
+            &.selected_01 .car-model figure .img_default{display:none;}
+          }
+
+          figure{ //permet aux images de garder la meme hauteur sur les 3 colonnes
+            height: 0;
+            padding-bottom: 64.33%;
+            position:relative;
+            margin: 0.5em 0;
+            .img_wrapper{
+              display:none;
+              position:absolute;
+              top:0;
+              left:0;
+              width:100%;
+              height:100%;
+              img {
+                &.hidden{
+                  visibility:hidden;
+                }
+                // margin-bottom: -50%;
+                display: inline-block;
+                max-width: 100%;
+                max-height: 100%;
+              }
+            }
+            .img_default{
+              display:none;
+              width: 100%;
+              text-align: left;
+              font-size: 11px;
+              padding: 0 25px;
+              text-transform: uppercase;
+              position: absolute;
+              bottom: 20%;
+              font-family: $font_citroen-bold;
+              color:$grey-6;
+              .picto-add{
+                display:block;
+                margin-bottom: 7px;
+                @extend %_sprites;
+                @extend %_sprite-car-gray;
+              }
+            }
+          }
+          figure,.model-price,.infobulle,.cta{cursor:default}
+          .model-price,.infobulle,a.cta-configurer,.delete-content{
+            visibility: hidden;
+          }
+          &.selected_01{
+             .col-content {
+                figure .img_default{
+                  display:none;
+                }
+                figure .img_wrapper{
+                  display:inherit;
+                }
+                & > div {opacity:1;}
+            }
+            figure,.model-price,.infobulle,.cta{cursor:inherit;}
+            .car-model{
+              figure,.infobulle,.cta-configurer{opacity:1;}
+              .model-price,.infobulle{
+                visibility: visible;
+              }
+            }
+            a.cta-configurer,.delete-content{
+              visibility: visible;
+            }
+            .select.select-01{
+              .selectBox-dropdown{
+                width: 200px;
+                text-transform: inherit;
+                font-family: $font_ubuntu-bold;
+                font-size: 18px;
+              }
+            }
+          }
+          &.selected_02{
+            .select.select-02{
+              .selectBox-dropdown{
+                width: 200px;
+                text-transform: inherit;
+                font-family: $font_ubuntu-bold;
+                font-size: 13px;
+              }
+            }
+          }
+          .select{
+            position:relative;
+            display:table-row;
+            z-index:0;
+            width: 100%;
+            margin-bottom:0;
+            height: 52px;
+            &.select-01{
+              height:60px;
+
+            }
+            select{
+              height:inherit;
+              line-height: inherit;
+              z-index:1;
+              opacity:1;
+              border:none;
+              color:$dark_champagne;
+              font-size: 11px;
+              // font-family: $robotolight;
+              text-transform: uppercase;
+              -webkit-appearance: none;
+              -moz-appearance: none;
+              -ms-appearance: none;
+              appearance: none;
+              &::-ms-expand {
+                display: none;
+              }
+              margin-bottom:0;
+            }
+
+            &.first-child{
+              select{
+                border-top:1px solid;
+              }
+            }
+          }
+          .car-model{
+            color:$grey-6;
+            font-family:$font_ubuntu-bold;
+            font-size:10px;
+            padding-top: 10px;
+            p.model-price{
+              padding-left:15px;
+              height:62px;
+              margin-bottom:21px;
+              margin:0;
+              line-height: 21px;
+              span:first-child{
+                font-size:18px;
+                display:block;
+              }
+            }
+          }
+          .config-content{
+            position:absolute;
+            bottom:10px;
+            left:0;
+            width:100%;
+            padding:10px;
+            a.cta-configurer{
+              display:block;
+              background:$cta-bg-orange;
+              color:white;
+              font-family: $font_citroen-bold;
+              font-size:12px;
+              text-transform: uppercase;
+              padding: 10px 11px;
+              vertical-align: middle;
+              position:relative;
+              text-align: left;
+              border: 4px solid $cta-bg-orange;
+              &:after{
+                content:"";
+                position: absolute;
+                top: 50%;
+                margin-top: -7px;
+                right: 10px;
+                vertical-align: middle;
+                @extend %_sprites;
+                @extend %_sprite-chevron-cta-configurer-comparateur;
+              }
+              &:hover{
+                color: $cta-bg-orange;
+                background-color: $default-color;
+                &:after{
+                  @extend %_sprites;
+                  @extend %_sprite-arrow-orange-right;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .table-comparator-result{
+      &.hide{display:none;}
+      &.table-comparator-equipement{
+        // max-width: 790px;
+        margin-bottom: 56px;
+        margin-top: -5px;
+        border-bottom:4px solid $grey-4;
+
+      }
+
+      .toggle-container{
+          border-top: 4px solid $grey-4;
+          border-left: 4px solid $grey-4;
+          border-right: 4px solid $grey-4;
+          cursor: pointer;
+        &.hide {
+          display:none;
+        }
+
+        &.toggle-open{
+          .toggle-title{
+            .puce-toggle{
+              @extend %_sprites;
+              @extend %_sprite-chevron-toggle-opened;
+            }
+          }
+        }
+        .toggle-content{
+          display:none;
+          font-family: $font_ubuntu-regular;
+          font-size:13px;
+          //padding-bottom: 10px;
+          .info{
+            display: inline-block;
+            vertical-align: middle;
+            margin-top: -9px;
+            margin-left: 5px;
+            // @extend %_sprites;
+            // @extend %_sprite-icopie;
+            cursor: pointer;
+          }
+          .row{
+            .cell{
+              margin: 0;
+              display:inline-block;
+              text-align:center;
+              color: $gray-citroen-bold;
+              &.label-title{
+                text-align:left;
+                padding-left: 25px;
+              }
+              &.span_3_of_12{
+                width:28%;
+                &.value{
+                  width: 23.27%;
+                  span.standard{
+                    display:inline-block;
+                    @extend %_sprites;
+                    @extend %_sprite-checked-comparateur;
+                  }
+                }
+
+              }
+            }
+          }
+        }
+        .table-row{
+          padding: 17px 0;
+          text-align: left;
+        }
+        .toggle-title{
+          padding: 23px 0;
+          position:relative;
+          font-family:$font_ubuntu-bold;
+          font-size:16px;
+          text-transform:uppercase;
+          display:block;
+          color:$grey-5;
+          padding-left: 25px;
+          &:hover{
+            color:$grey-6;
+          }
+          .puce-toggle{
+            display: inline-block;
+            float: right;
+            margin-right: 1.5em;
+            @extend %_sprites;
+            @extend %_sprite-arrow-dark-bottom;
+          }
+          &.close{
+            .puce-toggle{
+              display: inline-block;
+              float: right;
+              margin-right: 1.5em;
+              @extend %_sprites;
+              @extend %_sprite-arrow-dark-top;
+            }
+          }
+        }
+      }
+    }
+
+    .table-no-motor{
+      display:none;
+      p{
+        padding: 25px 7%;
+        border: 1px solid black;
+        font-weight: bold;
+        font-size: 12px;
+      }
+    }
+    .text-legals{
+      margin:60px 0;
+      p{
+        margin: 0 auto;
+      }
+    }
+    input[type=checkbox], input[type=radio] {
+      position: absolute;
+      opacity: 0;
+
+      + label {
+        position: relative;
+        cursor: pointer;
+        margin-left: 20px;
+        text-align: left;
+        margin-right: 1em;
+        padding: 0 9px;
+
+        &:before, &:after {
+          position: absolute;
+          content: "";
+          display: block;
+          width: 20px;
+          height: 20px;
+          top: 0px;
+          left: -20px;
+        }
+
+        &:before {
+          background-color: white;
+          border: 1px solid $dark_champagne;
+        }
+      }
+
+      &:checked + label:before {
+        background-color: white;
+        border-color: $dark_champagne;
+      }
+
+      &:not(:disabled) + label:hover:before {
+        border-color: $dark_champagne;
+      }
+
+      &:focus + label:before {
+        border-color: $dark_champagne;
+      }
+
+       &:disabled {
+        +label, + label:before {
+          opacity: .5;
+        }
+      }
+    }
+    input[type=checkbox] {
+      + label {
+        &:before {
+          border-radius: .1em;
+        }
+      }
+
+      &:checked + label {
+        &:after {
+          position: absolute;
+          content: "";
+          display: block;
+          width: 10px;
+          height: 10px;
+          top: 5px;
+          left: -15px;
+          background-color: $carmin;
+        }
+      }
+    }
+    a.selectBox{
+      cursor: pointer;
+    }
+}
+
+//SELECT BOX DROPDOWN !!!!!!!
+.selectBox-dropdown-menu {
+  li {
+    a {
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: 1019px) and (min-width: 760px){
+#comparatorTable {
+    .model-selector .span_3_of_12.item {
+      .config-content{
+        padding: 10px;
+        /*
+        a.cta-configurer{
+          padding: 13px 7px;
+          font-size: 10px;
+          &:after{
+            // margin-left: 22px;
+          }
+        }
+        */
+      }
+      figure .img_default{
+        padding: 0 8%;
+      }
+    }
+    .customization-comparator {;
+      text-align: left;
+      .manageToggle a{
+        /*
+        font-size:12px;
+        &.openOnlyDiff{
+          width: 100%;
+          text-align: right;
+          margin-top: 10px;
+        }
+        */
+      }
+    }
+  }
+}

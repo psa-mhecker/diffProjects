@@ -1,0 +1,31 @@
+<div class="vignette columns large-3 medium-4 small-6 {if $item.filters}filter-{' filter-'|implode:$item.filters}"{/if}>
+	<a class="content" href="{$item.url}">
+		<div class="heading">
+			{if !empty($item.vignetteCommercial)}
+				<div class="offer-wrapper {$item.vignetteCommercialClass}">
+					<span class="label">{$item.vignetteCommercial}</span>
+				</div>
+			{/if}
+			<div class="title">
+				<h3>{$item.title}</h3>
+			</div>
+		</div>
+		<div class="img-wrapper">
+			{{if $imgSrc}}
+				<img class="vcenter" src="{$imgSrc}" alt="{$imgAlt}">
+			{{else}}
+				<div class="no-img"></div>
+			{{/if}}
+		</div>
+		{if !empty($item.price)}
+			<div class="price">{$item.price}</div>
+		{/if}
+	</a>
+	{if !empty($item.ctaList)}
+		<div class="cta-wrapper">
+			{foreach $item.ctaList as $cta}
+				{include file="../Components/cta.html.smarty" cssClass="link-cta" gtm="{ldelim}\"eventType\":\"click\",\"dataList\":{ldelim}\"event\":\"uaevent\",\"eventCategory\":\"{$blockName}::position-{$blockOrder}\",\"eventAction\":\"Redirection\",\"eventLabel\":\"{$cta.title|escape:html}\"{rdelim}{rdelim}"}
+			{/foreach}
+		</div>
+	{/if}
+</div>

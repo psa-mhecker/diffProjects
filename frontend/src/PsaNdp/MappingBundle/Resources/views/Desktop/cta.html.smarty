@@ -1,0 +1,13 @@
+{$cta.type} {* type: TYPE_DROPDOWNLIST, TYPE_SIMPLELINK, TYPE_BUTTON, TYPE_IMG, TYPE_HIDDEN *}
+
+{$cta.url}  {* pas besoin pour la dropdownlist *}
+{$cta.target} {* pas besoin pour la dropdownlist *}
+{$cta.title}
+{$cta.color} {* pour les bouttons 1: bleu foncé, 2: bleu claire, 3: gris *}
+
+{$cta.inline} {* true ou false *}
+
+{$cta.image} {* pour le type TYPE_IMG l'url de l'image *}
+{$cta.alt} {* pour le type TYPE_IMG *}
+
+{$cta.options} {* pour le type TYPE_DROPDOWNLIST c'est une collection de cta *}

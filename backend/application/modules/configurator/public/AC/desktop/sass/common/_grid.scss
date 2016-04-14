@@ -1,0 +1,104 @@
+//
+// Grid system
+// --------------------------------------------------
+// Container widths
+//
+// Set the container width in media queries.
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1280px;
+  min-width: 1007px;
+  padding: 0 14px;
+  overflow: hidden;
+  .content {
+    float: left;
+    width: 76.5%;
+  }
+  .panier {
+    &.relative-position {
+      width: 23.5%;
+      float: right;
+      .back-to-top {display:none;}
+      .header { 
+        position: relative;
+        z-index: 8;
+        height: 0;
+        opacity:0;
+        transition: all 500ms linear;
+      }
+      &.detail-open {
+        .header {
+          height: 0;
+          opacity: 0;
+          transition: all 500ms linear;
+        }
+        .back-to-top,
+        .booking,
+        .btn-panier-style-2,
+        .pricetype-onglet,
+        .btn-panier-style-3,
+        .block-legal-mention {display:none;}
+         .pricetype-content-onglet {
+          border-top: 0;
+          min-height: 0;
+          .price {padding-top: 0;}
+        }
+        h3 {padding-bottom: 0;}
+      }
+    }
+    &.sticky {
+      position: fixed;
+      right: 0;
+      top: 91px;
+      .header {
+        height: 80px;
+        opacity: 1;
+        transition: all 500ms linear;
+      }
+      &.detail-open {
+        .header {
+          height: 0;
+          opacity: 0;
+          transition: all 500ms linear;
+        }
+        .back-to-top,
+        .booking,.btn-panier-style-2,
+        .pricetype-onglet,
+        .btn-panier-style-3,
+        .block-legal-mention {display:none;}
+        .pricetype-content-onglet {
+          border-top: 0;
+          min-height: 0;
+          .price {padding-top: 0;}
+        }
+        h3 {padding-bottom: 0;}
+      }
+    }
+  }
+}
+.clear {
+  clear: both;
+}
+.nopadding {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.addpadding {padding-right: 50px;}
+
+// Row
+//
+// Rows contain and clear the floats of your columns.
+.row {
+  @include make-row;
+}
+
+// Columns
+//
+// Common styles for small and large grid columns
+@include make-grid-columns;
+
+// Medium grid
+//
+// Columns, offsets, pushes, and pulls for the desktop device range.
+@include make-grid(md);

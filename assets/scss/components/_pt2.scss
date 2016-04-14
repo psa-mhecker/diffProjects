@@ -1,0 +1,403 @@
+@charset "UTF-8";
+
+.slice-pt2 {
+	.content {
+		padding: 50px;
+	}
+
+	p {
+		&.title {
+			@include font-family('main');
+			margin: 0 0 10px;
+			border-bottom: 1px solid $grey-8-color;
+			padding: 0 10px 10px;
+			height: 2.8rem;
+			color: $text-color;
+			font-size: 1.1rem;
+			font-weight: normal;
+		}
+
+		&.version {
+			margin-top: 26px;
+		}
+	}
+
+	ul.links {
+		padding: 3px 10px 0;
+
+		li {
+			@include font-family('light');
+			display: block;
+			text-transform: uppercase;
+			line-height: 2em;
+		}
+	}
+
+	.lang {
+		list-style: none;
+
+		.columns {
+			float: left;
+		}
+
+		li {
+			background-color: $white;
+			padding: 0;
+			text-align: center;
+
+			a {
+				@include font-family('light');
+				display: block;
+				line-height: 53px;
+				font-size: 1.6rem;
+			}
+
+			&.selected a {
+				background-color: $grey-1-color;
+				color: $white;
+			}
+		}
+	}
+
+	.phone-number {
+		margin: 14px 0;
+		font-size: 1.6rem;
+	}
+
+	.small-contact {
+		padding: 20px 0;
+		text-align: center;
+	}
+
+	.newsletter-subscribe {
+		display: inline-block;
+		margin: 20px 0;
+		background-color: $white;
+		padding: 20px 10px;
+		width: 100%;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	.newsletter-form {
+		fieldset {
+			position: relative;
+			margin: 0;
+			border: 1px solid $white;
+			background-color: $white;
+			padding: 16px 80px 16px 15px;
+
+			&.control-error {
+				border-color: $form-errors-color;
+			}
+		}
+
+		input {
+			@include font-family('light');
+			border: 0;
+			-moz-appearance: none;
+			-webkit-appearance: none;
+		}
+
+		input[type=email] {
+			display: block;
+			margin: 0;
+			outline: none;
+			box-shadow: none;
+			padding: 0 5px;
+			width: 100%;
+			height: 100%;
+		}
+
+		input[type=submit] {
+			display: inline-block;
+			position: absolute;
+			top: 5px;
+			right: 5px;
+			background-color: $grey-1-color;
+			padding: 0 5px;
+			text-transform: uppercase;
+			color: $white;
+			font-size: 1.6rem;
+		}
+	}
+
+	ul.social {
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		font-size: 0;
+
+		li {
+			display: inline-block;
+			border-right: 1px solid $grey-10-color;
+			width: 25%;
+			vertical-align: middle;
+
+			a {
+				display: block;
+				background-color: $white;
+				height: 65px;
+				line-height: 65px;
+			}
+
+			img {
+				width: 26px;
+			}
+		}
+	}
+
+	.cta {
+		margin-top: 40px;
+
+		.columns:last-child {
+			float: left;
+		}
+	}
+
+	.all-models,
+	.all-sites {
+		display: block;
+		padding: 17px 10px;
+		width: 100%;
+		text-align: center;
+	}
+
+	.all-models {
+		background-color: $grey-1-color;
+		color: $white;
+	}
+
+	.all-sites {
+		background-color: $white;
+	}
+
+	.legal-text {
+		@include font-family('light');
+		margin: 20px 0 20px 60px;
+		font-size: .8rem;
+	}
+
+	.legal-links {
+		display: table;
+		margin: 0 auto 20px;
+		padding: 0;
+		list-style-type: none;
+
+		li {
+			display: table-cell;
+			margin: 0;
+			border-left: 1px solid $grey-1-color;
+			padding: 0;
+
+			&:first-child {
+				border: 0;
+			}
+
+			a {
+				margin: 0 14px;
+				text-transform: uppercase;
+				font-size: .8rem;
+			}
+		}
+	}
+
+	.site-map-expand-btn {
+		display: block;
+		margin: 20px 10px 0;
+		background-color: $white;
+		cursor: pointer;
+		padding: 15px 0;
+		text-align: center;
+		text-transform: uppercase;
+
+		&:after {
+			@include sprite($expand-arrow-1-bottom);
+			display: inline-block;
+			position: relative;
+			top: -2px;
+			margin-left: 32px;
+			content: '';
+		}
+
+		&.open:after {
+			@include sprite($expand-arrow-1-top);
+		}
+	}
+
+	.site-map-expand {
+		display: none;
+		margin: 0 10px;
+		background-color: $white;
+		padding-top: 50px;
+
+		> .row .columns {
+			margin-bottom: 50px;
+
+			ul {
+				list-style-type: none;
+				margin: 0;
+				padding: 0 10px;
+				width: 70%;
+
+				li {
+					@include font-family('light');
+					display: block;
+					margin: 12px 0;
+					text-transform: uppercase;
+				}
+			}
+		}
+		.site-map-full-btn {
+			background-color: $grey-8-color;
+			float: right;
+			display: inline-block;
+			margin-bottom: 20px;
+			margin-right: 20px;
+			padding: 17px 10px;
+			text-align: center;
+			width: 210px;
+		}
+	}
+	.error-parent {
+
+		& + span {
+			height: 56px;
+			right: -98px;
+			top: -1px;
+			width: 98px;
+
+			&:after {
+				@include sprite($arrow-error-form-light);
+			}
+
+		}
+	}
+	@media (max-width: rem-calc(800)) {
+		// portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android)
+		.content {
+			padding: 20px;
+		}
+		.phone-number {
+			font-size: 1.4rem;
+			padding: 10px;
+		}
+		.legal-text {
+			margin-left: 20px;
+		}
+	}
+}
+
+.isMobile {
+	.slice-pt2 {
+		background-color: $slice-bg-dark-color;
+		font-size: 12px;
+		text-align: center;
+		padding-bottom: 20px;
+
+		.backToTop {
+			background-color: $white-color;
+			display: block;
+			padding: 10px 0;
+			text-align: center;
+			text-transform: uppercase;
+
+			&:after {
+				content: '';
+				display: inline-block;
+				margin-left: 10px;
+				margin-bottom: 2px;
+				@include sprite($mid-blue-arrow-top);
+			}
+		}
+
+		.help,
+		.lang,
+		.version {
+			font-size: 0.7rem;
+			display: inline-block;
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+
+			li {
+				display: inline-block;
+				background: none;
+				a {
+					height: 20px;
+					font-size: 0.7rem;
+					line-height: 20px;
+					color: $black;
+					background-color: $slice-bg-dark-color;
+				}
+			}
+		}
+
+		.help {
+			li {
+				padding: 24px 0 24px 14px;
+
+				&:first-child {
+					padding-left: 0;
+				}
+
+				a {
+					text-decoration: underline;
+					text-transform: uppercase;
+				}
+			}
+		}
+
+		.lang,
+		.version {
+			li {
+				margin-left: 5px;
+
+				&:first-child {
+					margin-left: 0;
+				}
+
+				&.selected {
+					font-weight: bold;
+				}
+			}
+		}
+
+		.lang {
+			padding-right: 8px;
+		}
+
+		.version {
+			margin-left: 8px;
+		}
+
+		.social {
+			display: inline-block;
+			list-style-type: none;
+			margin: 15px 0 0;
+			padding: 0;
+			min-height: 180px;
+
+			li {
+				display: inline-block;
+				width: auto;
+
+				a {
+					display: block;
+					background-color: $white-color;
+					width: 47px;
+					height: 47px;
+					text-align: center;
+					line-height: 47px;
+				}
+
+				img {
+					display: inline-block;
+					width: 26px;
+					height: 26px;
+					vertical-align: middle;
+				}
+			}
+		}
+	}
+}

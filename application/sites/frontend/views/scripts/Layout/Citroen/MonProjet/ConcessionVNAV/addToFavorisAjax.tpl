@@ -1,1 +1,0 @@
-{$aResults.button_text}

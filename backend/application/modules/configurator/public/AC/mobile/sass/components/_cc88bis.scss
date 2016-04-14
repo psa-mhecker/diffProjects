@@ -1,0 +1,380 @@
+@charset "UTF-8";
+.slice-cc88 {
+
+  padding: 16px;
+
+  .mentions{
+    font-family: $ubunturegular;
+    margin-top: 15px;
+    font-size: 10px;
+    line-height: 14px;
+    color: $txtsite_color;
+  }
+
+  label{
+    display: inline-block;
+    vertical-align: middle;
+    position:relative;
+    width:28px;
+    height:28px;
+    
+    &.radio input.radio,input.checkbox{display:none;}
+    
+    &:before{
+      content:'';
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 6px;
+      width: 28px;
+      height: 28px;
+      border: 1px solid $titlesite_color;
+      position: relative;
+    }
+    
+    &.selected{
+      &:before{
+        border-width: 4px;
+          border-color: $on_color;  
+      }
+      
+      &:after{
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 16px;
+        height: 13px;
+        margin-left: -7px;
+        margin-top: -6px;
+        @extend %_sprites;
+        @extend %_sprite-checkbox-checked-orange;      
+      }
+    }
+  }
+
+  
+  .accordion-fam{
+    position: relative;
+    padding-bottom: 50px;
+    margin-bottom: 15px;
+    .plus-perso{
+      padding: 20px 15px;
+      background: $more-finitions-bg;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+      >span{
+        font-size: 12px;
+        text-transform: uppercase;
+        font-family: $ubuntubold;
+        color: $more-finitions-color;
+      }
+
+      .chevron{
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        margin-top: -6px;
+        @extend %_sprites;
+        @extend %_sprite-arrow-bottom;
+      }
+      &.opened{
+        .chevron{
+          @extend %_sprites;
+          @extend %_sprite-arrow-top;
+        }
+      }
+    }
+    
+  }
+  
+
+  .categories{
+    .open-category-content{
+    }
+    .category{
+      h2.title{
+        color: $yellow-title;
+        font-family: $citroenbold;
+        font-size: 16px;
+        
+        text-transform: uppercase;
+        margin-bottom: 15px;
+      }
+      h3.subtitle{
+        color: $txtsite_color;
+        font-family: $ubuntubold;
+        font-size: 13px;
+        text-transform: capitalize;
+        margin-bottom: 15px;
+      }
+      .family{
+        padding-bottom: 20px;
+        .option.no-border-top{
+            border-top-width: 0;
+          }
+        &.align-horizontal{
+
+          display: table;
+          width: 100%;
+
+          .radio-group{
+            margin-bottom: 12px;
+          }
+
+          .options-row{
+            display: table-row;
+          }
+          .option{
+            display: table-cell;
+            width: 50%;
+            padding: 16px 14px;
+            &:nth-of-type(2){
+              border-left-width: 0;
+              .medias {
+                margin-left: 4px;
+              }
+            }
+
+            
+
+            .infos{
+
+              .inclus{
+                //height: 25px;
+              }
+
+              .medias{
+                width: 100%;
+                left: 0;
+                right: 0;
+                padding: 0;
+                .media-image{
+                  img{
+                    width: 100%;
+                  }
+                }
+              }
+
+              .inclus{
+                color: $txtsite_color;
+                margin-bottom: 20px;
+                .inclus-checked{
+                  font-family: $ubuntubold;
+                  font-size: 10px;
+                  
+                  width: 100%;
+                  display: inline-block;
+                  padding-left: 21px;
+                  position: relative;
+                  &:before{
+                    content: '';
+                    position: absolute;
+                    margin-left: -18px;
+                    @extend %_sprites;
+                    @extend %_sprite-checkbox-checked;
+                  }
+                }
+                .inclus-pack{
+                  font-family: $citroenbold;
+                  font-size: 14px;
+                  
+                  width: 100%;
+                  display: inline-block;
+                  padding-left: 21px;
+                }
+                .include{
+                  font-family: $citroenbold;
+                  font-size: 14px;
+                  
+                  width: 100%;
+                  display: inline-block;
+                }
+              }
+              
+            }
+          }
+        }
+
+        &.align-vertical{
+
+          .option{
+            padding-bottom: 0;
+          }
+
+          .inclus{
+            color: $txtsite_color;
+            font-family: "ubuntubold";
+            color: #646464;
+            font-size: 13px;
+            margin-top: 16px;
+            margin-bottom: 16px;
+
+            padding: 0 5px 0 38px;
+            .inclus-checked{
+              font-family: $ubuntubold;
+              font-size: 10px;
+              
+              width: 100%;
+              display: inline-block;
+              padding-left: 21px;
+              position: relative;
+              &:before{
+                content: '';
+                position: absolute;
+                margin-left: -18px;
+                @extend %_sprites;
+                @extend %_sprite-checkbox-checked;
+              }
+            }
+            .inclus-pack{
+              font-family: $citroenbold;
+              font-size: 14px;
+              
+              width: 100%;
+              display: inline-block;
+              padding-left: 21px;
+            }
+            .include{
+              font-family: $ubuntubold;
+              font-size: 14px;
+              
+              width: 100%;
+              display: inline-block;
+            }
+          }
+          .finitions {
+            .accordion{
+              display: block;
+              color: black;
+              //padding-bottom: 15px;
+              
+            }
+            
+            .zoom{      
+              position: absolute;
+              z-index: 1;
+              bottom: 0;
+              right: 0;
+              margin:0 -12px 0 0;
+            }
+
+            .slickslideshow{
+              padding-bottom: 30px;
+            }
+            
+            .tit-toggle{cursor: pointer;}
+            .chevron{
+              position: absolute;
+              right: 20px;
+              top: 50%;
+              margin-top: -3px;
+              @extend %_sprites;
+              @extend %_sprite-arrow-bottom;
+            }
+            .mod-toggle-open{
+              .chevron{
+                @extend %_sprites;
+                @extend %_sprite-arrow-top;
+              }
+            }
+            .accordion-cont{
+              padding:0 15px;
+              .slide-caption{
+                font-family: $ubuntubold;
+                font-size: 12px;
+                margin-top: 15px;
+                text-align: center;
+                color: $grey_24_color;
+              }
+              .slick-dots{
+                margin-top: 10px;
+                bottom: 15px;
+              }
+              .slick-prev, .slick-next{
+                margin-top: -50px;
+                width: 25px;
+              }
+            }
+          }
+
+          
+          
+          .tit-toggle{
+            &:after {margin: -17px 0 0;}
+          }
+
+
+          .finInfos{
+            position: relative;
+            padding: 22px 15px 0 15px;
+            font-size: 0;
+            
+            
+          
+            .infos{
+              width: 70%;
+              display: inline-block;
+              
+              figure{
+                display: inline-block;
+                width: 100%;
+                
+                img{
+                  width: 30%;
+                  vertical-align: middle;
+                }
+                
+                figcaption{
+                  width: 70%;
+                  display: inline-block;
+                  vertical-align: middle;
+                  padding: 0 0 0 15px;
+                  &.no-vignette{
+                    padding: 0;
+                  }
+                  .subtitle{
+                    color:$titlesite_color;
+                    font-family: $ubuntubold;
+                    cursor: pointer;
+                    margin: 0;
+                    
+                    font-size: 16px;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+
+
+        .subtitle{
+    
+        }
+        .option{
+          border: 4px solid $grey_15_color;
+          min-width: 44px;
+          position: relative;
+          .radio-group{
+            label.radio{
+
+            }
+          }
+          .infos{
+            h4.option-title{
+              font-size: 16.5px;
+              font-family: $citroenbold;
+              margin-bottom: 16px;
+              
+            }
+          }
+        }
+      }
+
+
+    }
+  }
+}

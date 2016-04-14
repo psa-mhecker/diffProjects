@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--[if lt IE 8]><html lang="{{ app.request.locale }}" class="ie ie7 no-js" data-country="{{ node.site.countryCode }}"><![endif]-->
+<!--[if IE 8]><html lang="{{ app.request.locale }}" class="ie ie8 no-js" data-country="{{ node.site.countryCode }}"><![endif]-->
+<!--[if IE 9]><html lang="{{ app.request.locale }}" class="ie ie9 no-js" data-country="{{ node.site.countryCode }}"><![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="{{ app.request.locale }}" class="no-js" data-country="{{ node.site.countryCode }}">
+<!--<![endif]-->
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+
+{%  if  parameters.metas %}
+    {% for meta in parameters.metas   %}
+    {{ meta|raw }}
+    {% endfor %}
+{% endif %}
+
+    <link rel="canonical" href="{{ url(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) }}" />
+
+    {% include 'OpenOrchestraFrontBundle:Node:href.lang.html.twig' with {'translatedPages': node.translatedPages} only %}
+
+    <title>{% block title %}{% if node.version.pageMetaTitle is defined %}{{ node.version.pageMetaTitle }}{% endif %}{% endblock %}</title>
+    {% block stylesheets %}
+        <link href="{{ asset('desktop/css/vendor.css', 'PsaNdpMappingBundle') }} " rel="stylesheet" type="text/css"/>
+        <link href="{{ asset('desktop/css/front.css', 'PsaNdpMappingBundle') }} " rel="stylesheet" type="text/css"/>
+        <script type="text/javascript" src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script type="text/javascript">
+            if (!window.jQuery) { document.write('<script src="{{ asset('desktop/js/jquery.js', 'PsaNdpMappingBundle') }}"><\/script>'); }
+        </script>
+
+        <script type="text/javascript" src="{{ asset('desktop/js/header.js', 'PsaNdpMappingBundle') }}"></script>
+    {% endblock %}
+    {{ node.site.tagTypeJsLink|raw }}
+</head>
+<body class="{{ parameters.bodyClass }}">
+ {% include 'OpenOrchestraFrontBundle:Node:gtm.html.twig' with{'gtmId':node.site.gtmId,'datalayer':parameters.datalayer} only %}
+ {% include 'OpenOrchestraFrontBundle:Node:javascript.translation.html.twig' with{'translation':parameters.javascriptTranslation} only %}
+<div class="sitecontainer">
+        {% for area in node.areas %}
+            {% include "OpenOrchestraFrontBundle:Node:area.html.twig" with {"area": area, 'nodeId': node.nodeId, 'siteId': node.siteId, 'language': node.language } only %}
+        {% endfor %}
+    {% block javascripts %}
+        <script type="text/javascript" src="{{ asset('desktop/js/vendor.js', 'PsaNdpMappingBundle') }}"></script>
+        <script type="text/javascript" src="{{ asset('desktop/js/front.js', 'PsaNdpMappingBundle') }}"></script>
+        {{ node.site.footerJs|raw }}
+    {% endblock %}
+    </div>
+ {% if node.firstLevelTranslatedPages is not null %}
+     {% include 'OpenOrchestraFrontBundle:Node:firstLevelTranslatedPages.modal.html.twig' with {'languages': node.firstLevelTranslatedPages} only %}
+ {% endif %}
+ <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls"> <div class="slides"></div> <a class="prev">‹</a> <a class="next">›</a> <a class="close">×</a> </div>
+
+ <script src="//static.atgsvcs.com/js/atgsvcs.js"></script>
+ <script type='text/javascript'>
+     ATGSvcs.setUOID("200106307525");
+     (function() {
+         console.log('-> in function 1');
+         var l = 'peugeot-fr-fr--tst.custhelp.com',d=document,ss='script',s=d.getElementsByTagName(ss)[0];
+         function r(u) {
+             console.log('-> in function 2');
+             var rn=d.createElement(ss);
+             rn.type='text/javascript';
+             rn.defer=rn.async=!0;
+             rn.src = "//" + l + u;
+             s.parentNode.insertBefore(rn,s);
+             console.log('---------------------');
+             console.log(rn);
+             console.log(s);
+             console.log(s.parentNode);
+             console.log('---------------------');
+         }
+         r('/rnt/rnw/javascript/vs/1/vsapi.js');
+         r('/vs/1/vsopts.js');
+     })();
+ </script>
+
+</body>
+</html>

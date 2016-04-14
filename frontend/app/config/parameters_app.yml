@@ -1,0 +1,8 @@
+parameters:
+    short_cache: 0
+    medium_cache: 10
+    long_cache: 60
+    extra_long_cache: 360
+    google.api_key: null
+    open_orchestra_front.database.route_loader.class: PsaNdp\MappingBundle\Routing\DatabaseRouteLoader
+    log.directory: '%kernel.logs_dir%'

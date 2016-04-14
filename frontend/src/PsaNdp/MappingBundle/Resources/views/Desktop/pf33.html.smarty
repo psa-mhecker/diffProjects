@@ -1,0 +1,87 @@
+<section class="slice-pf33 {if isset($slicePF33.anchorId)} {$slicePF33.anchorId} {/if}" {if isset($slicePF33.anchorId)} id="{$slicePF33.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePF33' } ]" data-html="{$slicePF33.urlJson}" datalayer="{$slicePF33.datalayer}">
+    <h2 class="title">{$slicePF33.title}</h2>
+    {if isset($slicePF33.subtitle)}<p class="subtitle">{$slicePF33.subtitle}</p>{/if}
+
+    <div class="legendcontainer">
+        <ul class="legend">
+            {foreach $slicePF33.legend as $legend}
+            <li class="deserieenoption {$legend.class}">
+                <span>{$legend.label}</span>
+            </li>
+            {/foreach}
+        </ul>
+    </div>
+
+    <div class="carousel clearfix">
+      <div class="carousel-frame">
+        <ul class="carousel-slider carousel-tabs list_style">
+          {foreach $slicePF33.carousel as $thumbnail}
+          <li class="carousel-slide thumb {if isset($thumbnail.active)}on{/if}" data-dealerid="{$thumbnail.id}">
+            <a href="" class="link">
+              <h3 class="title">{$thumbnail.title}</h3>
+              <figure>
+                <img src="{$thumbnail.img.src}" alt="{$thumbnail.img.alt}">
+              </figure>
+            </a>
+          </li>
+          {/foreach}
+        </ul>
+      </div>
+    </div>
+
+    <div class="carousel-results">
+		{literal}
+            <div>
+              {{#if legend }} <span class="hidden hasLegend" data-legend="{{{legend}}}"></span>  {{/if}}
+            	{{#if empty}}
+                	<p class="typevide textaligncenter">{/literal}{$slicePF33.translate.byfinition}{literal}</p>
+                {{else}}
+
+	                <ul class="alltabs tabhaut">
+                        {{#if full}}
+                            <li class="fullfirstitem"></li>
+                        {{/if}}
+                        {{#tabhaut}}
+                            <li><p>{{{label}}}</p></li>
+                        {{/tabhaut}}
+                    </ul>
+
+					{{#if light}}
+                        <ul class="alltabs tabresponse tabresponsealone">
+                            {{#line}}
+                                {{#result}}
+                                    <li class="deserieenoption {{label}}"><span></span></li>
+                                {{/result}}
+                            {{/line}}
+                        </ul>
+                    {{else}}
+                        {{#line}}
+                            <ul class="alltabs tabresponse tabresponsefull">
+                                <li class="fullfirstitem"><span>{{{title}}}</span>{{{subtitle}}}</li>
+                                {{#if empty}}
+                                	<li class="fulltypevide"><p class="typevide">{/literal}{$slicePF33.translate.byfinition}{literal}</p></li>
+                                {{else}}
+                                    {{#result}}
+                                        <li class="deserieenoption {{label}}"><span></span></li>
+                                    {{/result}}
+                                {{/if}}
+                            </ul>
+                        {{/line}}
+                    {{/if}}
+
+                {{/if}}
+            </div>
+        {/literal}
+    </div>
+    {if isset($slicePF33.txtbottom)}
+    <div class="txt-bottom">{$slicePF33.txtbottom}</div>
+    {/if}
+
+    {if isset($slicePF33.ctaList)}
+    <div class="custom-button-group clearfix">
+        {foreach $slicePF33.ctaList as $cta}
+            {include file="./cta.html.smarty"}
+        {/foreach}
+    </div>
+    {/if}
+</section>

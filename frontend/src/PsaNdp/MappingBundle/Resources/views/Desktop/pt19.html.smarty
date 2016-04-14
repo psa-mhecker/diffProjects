@@ -1,0 +1,19 @@
+<section class="slice-pt19 {if isset($slicePT19.anchorId)} {$slicePT19.anchorId} {/if}" {if isset($slicePT19.anchorId)} id="{$slicePT19.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePT19' } ]" datalayer="{$slicePT19.datalayer}">
+  {if isset($slicePT19.commitmentsTitle)}<h2>{$slicePT19.commitmentsTitle}</h2>{/if}
+  <div class="clearfix">
+    {foreach $slicePT19.commitmentsPosts as $post}
+      <article>
+        {if isset($post.readMore)}<a href="{$post.readMore.url}"{if isset($post.readMore.target)} target="{$post.readMore.target}"{/if}>{/if}
+        <figure><img src="{$post.img.src}" alt="{$post.img.alt}"></figure>
+        {if isset($post.readMore)}</a>{/if}
+		    {if isset($post.title)}<h3>{$post.title}</h3>{/if}
+        {if isset($post.desc)}<p>{$post.desc}</p>{/if}
+        {if isset($post.readMore)}
+        <div class="cta-link-group clearfix">
+          <a href="{$post.readMore.url}" class="cta-link cta-inline simple-link"{if isset($post.readMore.target)} target="{$post.readMore.target}"{/if}><span>{$post.readMore.title}</span></a>
+        </div>
+        {/if}
+      </article>
+    {/foreach}
+    </div>
+  </section>

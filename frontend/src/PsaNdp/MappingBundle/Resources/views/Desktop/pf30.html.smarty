@@ -1,0 +1,21 @@
+<section class="slice-pf30 {if isset($slicePF30.anchorId)} {$slicePF30.anchorId} {/if}" {if isset($slicePF30.anchorId)} id="{$slicePF30.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePF30' } ]">
+
+  <section class="locality slice-inside-margin">
+    <strong>{$slicePF30.locality}</strong> : {$slicePF30.postalCode}
+    <a href="#pop-in-code-postal" data-close="{$slicePF30.changeLocalityPopin.btnClose}" class="change-locality">{$slicePF30.changeLocality}</a>
+  </section>
+
+  <section class="change-locality-popin" id="pop-in-code-postal">
+    <h4>{$slicePF30.changeLocalityPopin.desc.title}</h4>
+    <p>{$slicePF30.changeLocalityPopin.desc.txt}</p>
+    <form method="post" action="#" id="form-cp">
+      <fieldset>
+        <div>
+          <input type="text" class="fields" placeholder="{$slicePF30.changeLocalityPopin.desc.placeholder}" required data-msg-required="{$slicePF30.changeLocalityPopin.desc.txtError}" />
+        </div>
+      </fieldset>
+      <input type="submit" class="btnValid cta-btn cta-btn-4" value="{$slicePF30.changeLocalityPopin.desc.btnCTA}" />
+    </form>
+  </section>
+
+</section>

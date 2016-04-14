@@ -1,0 +1,215 @@
+parameters:
+    psa_ndp_appli_mobile_repository.class: PsaNdp\MappingBundle\Repository\PsaAppliMobileRepository
+    psa_ndp_content_repository.class: PSA\MigrationBundle\Repository\PsaContentRepository
+    psa_ndp_content_category_repository.class: PSA\MigrationBundle\Repository\PsaContentCategoryRepository
+    psa_ndp_cta_repository.class: PSA\MigrationBundle\Repository\PsaCtaRepository
+    psa_ndp_content_type_repository.class: PSA\MigrationBundle\Repository\PsaContentTypeRepository
+    psa_ndp_content_zone_repository.class: PSA\MigrationBundle\Repository\PsaContentZoneRepository
+    psa_ndp_page_zone_repository.class: PSA\MigrationBundle\Repository\PsaPageZoneRepository
+    psa_ndp_page_multi_zone_repository.class: PSA\MigrationBundle\Repository\PsaPageMultiZoneRepository
+    psa_ndp_social_network_repository.class: PSA\MigrationBundle\Repository\PsaReseauSocialRepository
+    psa_ndp_groupe_reseaux_sociaux_repository.class: PsaNdp\MappingBundle\Repository\PsaGroupeReseauxSociauxRepository
+    psa_ndp_page_repository.class: PSA\MigrationBundle\Repository\PsaPageRepository
+    psa_ndp_page_version_repository.class: PSA\MigrationBundle\Repository\PsaPageVersionRepository
+    psa_ndp_template_page_repository.class: PSA\MigrationBundle\Repository\PsaTemplatePageRepository
+    psa_ndp_language_repository.class: PSA\MigrationBundle\Repository\PsaLanguageRepository
+    psa_ndp_label_langue_site_repository.class: PSA\MigrationBundle\Repository\PsaLabelLangueSiteRepository
+    psa_ndp_content_version_repository.class: PSA\MigrationBundle\Repository\PsaContentVersionRepository
+    psa_ndp_site_service_repository.class: PSA\MigrationBundle\Repository\PsaSiteServiceRepository
+    psa_ndp_sites_et_webservices_psa_repository.class: PsaNdp\MappingBundle\Repository\PsaSitesEtWebservicesPsaRepository
+    psa_ndp_site_code_repository.class: PSA\MigrationBundle\Repository\PsaSiteCodeRepository
+    psa_ndp_app_mobile_repository.class: PSA\MigrationBundle\Repository\PsaAppMobileRepository
+    psa_ndp_zone_template_repository.class: PSA\MigrationBundle\Repository\PsaZoneTemplateRepository
+    psa_ndp_page_area_block_reference_repository.class: PSA\MigrationBundle\Repository\PsaPageAreaBlockReferenceRepository
+    psa_ndp_become_agent_repository.class: PsaNdp\MappingBundle\Repository\PsaBecomeAgentRepository
+    psa_ndp_dealer_service_repository.class: PsaNdp\MappingBundle\Repository\PsaDealerServiceRepository
+    psa_ndp_model_repository.class: PsaNdp\MappingBundle\Repository\PsaModelRepository
+    psa_ndp_model_site_repository.class: PsaNdp\MappingBundle\Repository\PsaModelSiteRepository
+    psa_ndp_model_view_angle_repository.class: PsaNdp\MappingBundle\Repository\PsaModelViewAngleRepository
+    psa_ndp_model_silhouette_angle_repository.class: PsaNdp\MappingBundle\Repository\Vehicle\PsaModelSilhouetteAngleRepository
+    psa_ndp_connect_services_repository.class: PsaNdp\MappingBundle\Repository\PsaConnectServicesRepository
+    psa_ndp_service_connect_finition_grouping_repository.class: PsaNdp\MappingBundle\Repository\PsaServiceConnectFinitionGroupingRepository
+    psa_ndp_model_silhouette_upselling_repository.class: PsaNdp\MappingBundle\Repository\PsaModelSilhouetteUpsellingRepository
+    psa_ndp_groupe_reseaux_sociaux_rs_repository.class: PSA\MigrationBundle\Repository\PsaGroupeReseauxSociauxRsRepository
+    psa_ndp_groupe_reseaux_sociaux_repository.class: PSA\MigrationBundle\Repository\PsaGroupeReseauxSociauxRepository
+
+
+    psa_ndp_model_silouhette_utils.class: PsaNdp\MappingBundle\Utils\ModelSilouhetteSiteUtils
+    psa_ndp_model_utils.class: PsaNdp\MappingBundle\Utils\ModelSiteUtils
+    psa_ndp_vcard_utils.class: PsaNdp\MappingBundle\Utils\VCardUtils
+    psa_ndp_streamlike.class: PsaNdp\MappingBundle\Utils\StreamlikeMedia
+    psa_ndp_sociallinks.class: PsaNdp\MappingBundle\Utils\SocialLinksManager
+    psa_ndp_page_utils.class: PsaNdp\MappingBundle\Utils\PageUtils
+    psa_ndp_anchor_utils.class: PsaNdp\MappingBundle\Utils\AnchorUtils
+    psa_ndp_device_utils.class: PsaNdp\MappingBundle\Utils\DeviceUtils
+    psa_ndp.services.page_finder.class: PsaNdp\MappingBundle\Services\PageFinder
+    psa_ndp.services.media_server_initializer.class: PsaNdp\MappingBundle\Services\MediaServerInitializer
+    psa_nsp.services.http_cache_client.class : Itkg\CombinedHttpCache\Client\RedisClient
+    psa_ndp.services.share_object.class: PsaNdp\MappingBundle\Services\ShareServices\ShareObjectService
+    psa_ndp.services.share_vehicle.class: PsaNdp\MappingBundle\Services\ShareServices\ShareVehicleService
+    psa_ndp.services.share_my_peugeot.class: PsaNdp\MappingBundle\Services\ShareServices\ShareMyPeugeotService
+    psa_ndp.javascript_translation.class: PsaNdp\MappingBundle\JavascriptTranslation\JavascriptTranslation
+    psa_ndp_mapping.object.formatter.price.class: PsaNdp\MappingBundle\Object\Formatter\PriceFormatter
+
+    # Orchestra Class Override
+    psa_ndp.display_block_manager.class: PsaNdp\MappingBundle\DisplayBlock\PsaDisplayBlockManager
+    psa_ndp.cacheable_manager.class: PsaNdp\MappingBundle\Manager\PsaCacheableManager
+    psa_ndp.tag_manager.class: PsaNdp\MappingBundle\Manager\PsaTagManager
+    psa_ndp.cache.redis.class: Itkg\CombinedHttpCache\Client\RedisClient
+
+
+services:
+    psa_ndp.cache.redis:
+        class: %psa_ndp.cache.redis.class%
+        arguments: [ "%redis_connection%" ]
+
+    psa_ndp_mapping.config.cache.factory:
+         class: PsaNdp\MappingBundle\Config\ConfigCacheFactory
+
+    open_orchestra_display.display_block_manager:
+          class: %psa_ndp.display_block_manager.class%
+          arguments:
+              - @smarty.engine
+              - @open_orchestra_display.manager.cacheable
+              - @psa_ndp_site_code_repository
+              - @translator
+              - @psa_ndp.services.media_server_initializer
+              - @open_orchestra_base.manager.tag
+              - @open_orchestra_display.manager.site
+              - @psa_ndp_mapping.manager.block_manager
+              - @psa_ndp_anchor
+              - @psa_ndp_device_utils
+
+    open_orchestra_display.manager.cacheable:
+        class: %psa_ndp.cacheable_manager.class%
+        arguments:
+            - @fos_http_cache.handler.tag_handler
+
+    open_orchestra_base.manager.tag:
+        class: %psa_ndp.tag_manager.class%
+
+    psa_ndp.services.share_object:
+        class : %psa_ndp.services.share_object.class%
+        arguments:
+            - @psa_ndp_mapping.object.vehicle
+            - @psa_ndp.services.share_my_peugeot
+            - @translator
+    psa_ndp.services.share_my_peugeot:
+        class: %psa_ndp.services.share_my_peugeot.class%
+        arguments:
+            - @psa_ndp_mapping.manager.block_manager
+    psa_ndp.services.share_vehicle:
+        class: %psa_ndp.services.share_vehicle.class%
+        arguments:
+            - '@configuration_engine_select'
+            - '@range_manager'
+            - '@psa_ndp_model_silouhette_utils'
+            - '@psa_ndp.repository.vehicle.model_silhouette_site'
+
+    psa_nsp.services.http_cache_client:
+        class : %psa_nsp.services.http_cache_client.class%
+        arguments:
+            - %redis_connection%
+
+    #Event Subscriber Service to set device in request header to be used by Orchestra, PsaAbstractStrategy...
+    psa_ndp_device_setter_controller.subscriber:
+            class: PsaNdp\MappingBundle\Subscribers\DeviceSetterControllerSubscriber
+            arguments:
+                - @controller_resolver
+                - @psa_nsp.services.http_cache_client
+            tags:
+                - { name: kernel.event_subscriber}
+    #Event Subscriber Service to share object between node/block and other object
+    psa_ndp_share_object_controller.subscriber:
+            class: PsaNdp\MappingBundle\Subscribers\ShareobjectControllerSubscriber
+            arguments:
+                - @psa_ndp.services.share_object
+            tags:
+                - { name: kernel.event_subscriber}
+
+    # Utils
+    psa_ndp_model_silouhette_utils:
+        class: %psa_ndp_model_silouhette_utils.class%
+        arguments:
+            - '@psa_ndp_page_repository'
+            - '@psa_ndp_model_silhouette_angle_repository'
+            - '@psa_ndp.repository.finishing_site'
+            - '@itkg_consumer.repository.service_config'
+            - '@psa_ndp_sites_et_webservices_psa_repository'
+            - '@psa_ndp.repository.vehicle.model_config'
+            - '@configuration_engine_select'
+            - '@range_manager'
+            - '@psa_ndp.repository.vehicle.vehicle_category_site'
+
+    psa_ndp_model_utils:
+        class: %psa_ndp_model_utils.class%
+        arguments:
+            - '@psa_ndp_page_repository'
+            - '@psa_ndp_model_view_angle_repository'
+            - '@itkg_consumer.repository.service_config'
+            - '@psa_ndp_sites_et_webservices_psa_repository'
+            - '@psa_ndp.repository.vehicle.model_config'
+            - '@configuration_engine_select'
+            - '@range_manager'
+
+    psa_ndp_vcard_utils:
+        class: %psa_ndp_vcard_utils.class%
+
+    psa_ndp_streamlike:
+        class: %psa_ndp_streamlike.class%
+        arguments: [%streamlike_server%, %proxy%, @translator, @?request_stack]
+
+    psa_ndp_sociallinks:
+        class: %psa_ndp_sociallinks.class%
+        arguments: [@psa_ndp_groupe_reseaux_sociaux_repository]
+
+    psa_ndp_page_utils:
+        class: %psa_ndp_page_utils.class%
+        arguments: [@psa_ndp_page_repository]
+
+    psa_ndp_mur_media_media_finder:
+        class: PsaNdp\MappingBundle\Utils\MurMediaMediaFinder
+        arguments: [@psa_ndp_media_repository, @psa_ndp.services.media_server_initializer, @psa_ndp_streamlike]
+
+    psa_ndp_device_utils:
+                class: %psa_ndp_device_utils.class%
+                arguments: [@request_stack]
+    psa_ndp.services.page_finder:
+        class: %psa_ndp.services.page_finder.class%
+        arguments:
+            - @psa_ndp_page_repository
+            - @psa_ndp_language_repository
+    psa.entity_listener.psa_media:
+        class: PSA\MigrationBundle\Listener\PsaMediaListener
+        arguments: [ "@service_container", @?request_stack ]
+        tags:
+          - { name: doctrine.orm.entity_listener }
+    psa_ndp.services.media_server_initializer:
+        class: %psa_ndp.services.media_server_initializer.class%
+
+    psa_ndp_anchor:
+        class: %psa_ndp_anchor_utils.class%
+    psa_ndp.javascript_translation:
+        class: %psa_ndp.javascript_translation.class%
+        arguments:
+          - @translator
+          - @serializer
+
+    open_orchestra_front.router.file:
+        class: %open_orchestra_front.router.file.class%
+        arguments:
+            - @service_container
+            - %router.resource%
+            - { cache_dir: %kernel.cache_dir%/routing/, debug: %kernel.debug%, generator_class: %open_orchestra_front.router.file.options.generator_class%, generator_base_class: %open_orchestra_front.router.file.options.generator_base_class%, generator_cache_class: 'ProjectOpenOrchestraUrlGenerator', generator_dumper_class: %open_orchestra_front.router.file.options.generator_dumper_class%, matcher_class: %router.options.matcher_class%, matcher_base_class: %router.options.matcher_base_class%, matcher_dumper_class: %router.options.matcher_dumper_class%, matcher_cache_class: %router.options.matcher.cache_class% }
+            - @?router.request_context
+            - @?logger
+        tags:
+            - { name: monolog.logger, channel: router }
+            - { name: router, priority: 300 }
+
+    psa_ndp_mapping.object.formatter.price:
+        class: %psa_ndp_mapping.object.formatter.price.class%
+        arguments:
+            - @psa_ndp_site_configuration
+            - @translator
+            - @request_stack

@@ -1,0 +1,246 @@
+.slice-df57 {
+  figure:after{
+	  visibility:hidden;
+  }
+
+  > h2{
+    font-family: $font-family-brand;
+    font-size: 30px;
+    color: $lame-border-selected;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 15px;
+  }
+  .title-finition {
+    text-align: center;
+    text-transform: uppercase;
+    color: #000;
+    margin-top: 23px;
+    font-size: 12px;
+    font-family: $medium_font_roboto;
+    font-weight: 600;
+  }
+  > p{
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 400;
+    text-align: center;
+    padding: 0 110px;
+  }
+  .btn-not {
+    padding-left: 0;
+    padding-top: 10px;
+    text-align: center;
+
+    .cta {
+      margin: 0 4px;
+    }
+  }
+  .block-mentions,
+  .save-config{
+    margin-top: 20px;
+  }
+  .block-mentions{
+    text-align: center;
+    background-color: #f3efee;
+    font-family: $light_font_roboto;
+    font-size: 12px;
+    line-height: 20px;
+    padding: 10px;
+  }
+  .help-box{
+    text-align: center;
+    background-color: #f3efee;
+    padding: 10px;
+    font-family: $light_font_roboto;
+    margin: 40px 0;
+
+    p{
+      margin-top: 0;
+      color: #1d1717;
+    }
+
+    a{
+      width: 80px;
+      margin-top: 0;
+      margin: 0 10px;
+      line-height: inherit;
+      height: inherit;
+      padding: 4px 20px;
+      border-color: #655a54;
+      color: #655a54;
+    }
+  }
+  .radio-group{
+    clear: both;
+  }
+  .notification{
+    overflow: hidden;
+  }
+
+  .notification-txt{
+    margin-top: 0px;
+    overflow: hidden;
+	p{
+		margin-top: 0px;
+		margin-bottom: 8px;
+	}
+  }
+
+  .save-config{
+	  .notification-txt{
+		font-weight:normal;
+	  }
+  }
+
+  .notification-padding-fix{
+	  padding:0 !important;
+  }
+
+  .notifFix{
+	  line-height: 6px;
+  }
+
+  .notification-txt-bold{
+	  font-family:"robotobold";
+    p {
+      margin-top: 14px;
+      margin-bottom: 0;
+    }
+  }
+  .notification-txt{
+    p {
+      margin-top: 12px;
+      margin-bottom: 7px;
+    }
+  }
+
+  .modification{
+    width: 100%;
+    display: block;
+    font-size: 0;
+    background: #f3efee;
+    min-height: 38px;
+    margin: 20px 0 0 0;
+    padding: 8px 0;
+    overflow: hidden;
+    margin-top: 0;
+    border: 1px solid #e6e0db;
+    font-size: 14px;
+    text-align: center;
+    font-family: $main_font_roboto;
+    b{
+      display: block;
+    }
+  }
+  .expand-content {
+	 border-top: 0px;
+
+    .expand-title{
+      display: block;
+      clear: both;
+      text-align: center;
+      padding-top: 20px;
+      padding-bottom: 10px;
+      font: 500 12px/1.2 "robotoregular", Arial;
+      color: #ad9d91;
+      text-transform: uppercase;
+    }
+    .list-style {
+        position: relative;
+        text-align: center;
+        margin: 12px 0 15px 0;
+    }
+    .colors {
+      margin: 0 0 20px -4px;
+      font-size: 0;
+      text-align: center;
+    }
+  }
+  .lame{
+    .expand-content .expand-readmore .include{
+      max-width: 90%;
+    }
+    .lame-header{
+      min-height: 37px;
+      line-height: 37px;
+    }
+    .lame-content{
+      padding-bottom: 20px;
+      .notification{
+        margin-left: 15px;
+        margin-right: 15px;
+        width: calc(100% - 30px);
+      }
+      .col-left-galerie{
+        margin-bottom: 20px;
+      }
+    }
+  }
+  .clearfix{ clear: both; }
+  .lame
+  .input-checkbox input[type="checkbox"] ~ label .input-text--checked,
+  .input-checkbox input[type="radio"] ~ label .input-text--checked,
+  .input-radio input[type="checkbox"] ~ label .input-text--checked,
+  .input-radio input[type="radio"] ~ label .input-text--checked {
+    display: none;
+  }
+  .input-checkbox input[type="checkbox"]:checked ~ label .input-text--checked,
+  .input-checkbox input[type="radio"]:checked ~ label .input-text--checked,
+  .input-radio input[type="checkbox"]:checked ~ label .input-text--checked,
+  .input-radio input[type="radio"]:checked ~ label .input-text--checked {
+    display: inline-block;
+  }
+  .input-checkbox input[type="checkbox"] ~ label .input-text,
+  .input-checkbox input[type="radio"] ~ label .input-text,
+  .input-radio input[type="checkbox"] ~ label .input-text,
+  .input-radio input[type="radio"] ~ label .input-text {
+    display: inline-block;
+  }
+  .input-checkbox input[type="checkbox"]:checked ~ label .input-text,
+  .input-checkbox input[type="radio"]:checked ~ label .input-text,
+  .input-radio input[type="checkbox"]:checked ~ label .input-text,
+  .input-radio input[type="radio"]:checked ~ label .input-text {
+    display: none;
+  }
+
+  .price {
+    color: black;
+    font-family: "robotoregular";
+    font-size: 13px;
+  }
+  .priceDesc {
+    font-size: 11px;
+    line-height: 12px;
+    margin-top: 6px;
+  }
+
+  .infoPrice {
+    cursor: pointer;
+  }
+
+  .cta-sm{
+	width:180px;
+  }
+
+  .btn-not {
+    padding-left: 0;
+    padding-top: 10px;
+    text-align: center;
+
+    .cta {
+      margin: 0 4px;
+    }
+  }
+
+  .not-bold{
+	  font-weight:normal;
+  }
+
+  .col-right-title{
+	  font-family:"robotobold" !important;
+	  font-weight:normal !important;
+  }
+}

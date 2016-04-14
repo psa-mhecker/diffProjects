@@ -1,0 +1,6 @@
+@charset 'UTF-8';
+@import '../../../../scss/common/cta';
+
+.inline-cta {
+	@include columns-gutter(0, 0);
+}

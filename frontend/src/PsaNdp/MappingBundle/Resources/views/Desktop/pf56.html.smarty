@@ -1,0 +1,372 @@
+<section class="slice-pf56 {if isset($slicePF56.anchorId)} {$slicePF56.anchorId} {/if}" {if isset($slicePF56.anchorId)} id="{$slicePF56.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePF56' } ]" datalayer="">
+      <h2 class="title">{$slicePF56.title}</h2>
+      {if $slicePF56.mdc.results > 0}
+        <h3 class="cat-title">
+          <span><span class="nbrItems">{$slicePF56.mdc.casing.nbResult} </span>{$slicePF56.mdc.casing.disponibility.other_casing_available}</span>
+        </h3>
+      {/if}
+      {if isset($slicePF56.aide.ctaList) && $slicePF56.aide.active eq true}
+        <div class="custom-button-group clearfix">
+          {foreach $slicePF56.aide.ctaList as $cta}
+            {include file="./cta.html.smarty"}
+          {/foreach}
+        </div>
+      {/if}
+      <ul class="table">
+        <li class="head">
+          <ul>
+          <li class="cellpf56 motor">
+            <span>Moteur</br>energie</span>
+          </li>
+          <li class="cellpf56 gear">
+            <span>Boite de vitesse</span>
+          </li>
+          <li class="cellpf56 co2">
+            <span>Emissions</span>
+            <span class="legend">CO2/Km</span>
+          </li>
+          <li class="cellpf56 conso">
+            <span>Conso</span>
+            <span class="legend">/100Km</span>
+          </li>
+          <li class="cellpf56 energy">
+            <span>Classe énergetique</span>
+          </li>
+          <li class="cellpf56 puissance">
+            <span>Puissance</span>
+          </li>
+          <li class="cellpf56 prix">
+            <span>Prix</span>
+          </li>
+          <li class="cellpf56 choice">
+          </li>
+        </ul>
+        </li>
+          <!--/////////////////////////-->
+        <li class="row">
+          <ul data-typeOption="TypeOption" data-valueOption="ValueOption"{if isset($slicePF56.notification)} class="hasnotif"{/if}>
+          <li class="cellpf56 motor">
+            <span>1,2L HDI 92</span></br>
+            <span class="bold">Essence</span>
+          </li>
+          <li class="cellpf56 gear">
+            <span>BVM5</span></br>
+            <span>Manuelle</span>
+          </li>
+          <li class="cellpf56 co2">
+            <span>114g</span>
+          </li>
+          <li class="cellpf56 conso">
+            <span>5L</span>
+          </li>
+          <li class="cellpf56 energy">
+            <span>B</span>
+            <div class="slice-infobulle-motor" data-jsobj="[ { 'obj':'iso-infobulle' } ]">
+              <span class="info i1" data-infobulle="001"></span>
+              <div class="infobulle scroller" data-infobulleo="001">
+                <!-- <p>Classe energetique (G/KM)</p> -->
+                <img src="../../../img/energy.png" class="info-energy" alt="energy">
+              </div>
+            </div>
+          </li>
+          <li class="cellpf56 puissance">
+            <span>4</span>
+          </li>
+          <li class="cellpf56 prix">
+            <span>A partir de <span class="bold">400€TTC /mois*</span> apres un premier loyer de 3000€</span>
+            <div class="ctp" data-openpopin="financement000010"></div>
+          </li>
+          <li class="cellpf56 choice">
+            {if $slicePF56.incompatible eq true}
+            <div class="step1">
+              <label for="radio2">Choisir</label>
+              <input id="radio2" type="radio" name="radio_motors" class="checked">
+            </div>
+            <div class="step2">
+              <div class="control-box custom-button-group clearfix">
+                <a href="#" class="cta-inline cta-btn cta-btn-4 pull-right"><span>Valider</span></a>
+              </div>
+            </div>
+            {else}
+            <div class="step1">
+              <label for="radio2">Choisir</label>
+              <input id="radio2" type="radio" name="radio_motors" class="checked">
+            </div>
+            <div class="step2" style="display: inline">
+              <div class="control-box custom-button-group clearfix">
+                <a href="#" class="cta-inline cta-btn cta-btn-4 pull-right"><span>étape suivante</span></a>
+              </div>
+            </div>
+            {/if}
+          </li>
+          {if isset($slicePF56.notification)}
+            {foreach $slicePF56.notification as $notification}
+              {include file="../../notification/notification.tpl"}
+              {/foreach}
+          {/if}
+        </ul>
+        </li>
+        <!--/////////////////////////-->
+        <li class="row alt">
+          <ul data-typeOption="TypeOption" data-valueOption="ValueOption">
+          <li class="cellpf56 motor">
+            <span>1,2L HDI 92</span></br>
+            <span class="bold">Essence</span>
+            <img src="../../../img/puretech.png" alt="puretech">
+          </li>
+          <li class="cellpf56 gear">
+            <span>BVM5</span></br>
+            <span>Manuelle</span>
+          </li>
+          <li class="cellpf56 co2">
+            <span>114g</span>
+          </li>
+          <li class="cellpf56 conso">
+            <span>5L</span>
+          </li>
+          <li class="cellpf56 energy">
+            <span>B</span>
+            <div class="slice-infobulle-motor" data-jsobj="[ { 'obj':'iso-infobulle' } ]">
+              <span class="info i1" data-infobulle="002"></span>
+              <div class="infobulle scroller" data-infobulleo="002">
+                <!-- <p>Classe energetique (G/KM)</p> -->
+                <img src="../../../img/energy.png" class="info-energy" alt="energy">
+              </div>
+            </div>
+          </li>
+          <li class="cellpf56 puissance">
+            <span>4</span>
+          </li>
+          <li class="cellpf56 prix">
+             <span>A partir de <span class="bold">8560€ TTC</span></span>
+             <div class="align"></div>
+          </li>
+          <li class="cellpf56 choice">
+            {if $slicePF56.incompatible eq true}
+            <div class="step1">
+              <label for="radio2">Choisir</label>
+              <input id="radio2" type="radio" name="radio_motors">
+            </div>
+            <div class="step2">
+              <div class="control-box custom-button-group clearfix">
+                <a href="#" class="cta-inline cta-btn cta-btn-4 pull-right"><span>Valider</span></a>
+              </div>
+            </div>
+            {else}
+            <div class="step1">
+              <label for="radio2">Choisir</label>
+              <input id="radio2" type="radio" name="radio_motors">
+            </div>
+            <div class="step2" style="display: inline">
+              <div class="control-box custom-button-group clearfix">
+                <a href="#" class="cta-inline cta-btn cta-btn-4 pull-right"><span>étape suivante</span></a>
+              </div>
+            </div>
+            {/if}
+          </li>
+        </ul>
+        </li>
+        <!--/////////////////////////-->
+        <li class="row">
+          <ul data-typeOption="TypeOption" data-valueOption="ValueOption">
+          <li class="cellpf56 motor">
+            <span>1,2L HDI 92</span></br>
+            <span class="bold">Essence</span>
+          </li>
+          <li class="cellpf56 gear">
+            <span>BVM5</span></br>
+            <span>Manuelle</span>
+          </li>
+          <li class="cellpf56 co2">
+            <span>114g</span>
+          </li>
+          <li class="cellpf56 conso">
+            <span>5L</span>
+          </li>
+          <li class="cellpf56 energy">
+            <span>B</span>
+            <div class="slice-infobulle-motor" data-jsobj="[ { 'obj':'iso-infobulle' } ]">
+              <span class="info i1" data-infobulle="003"></span>
+              <div class="infobulle scroller" data-infobulleo="003">
+                <!-- <p>Classe energetique (G/KM)</p> -->
+                <img src="../../../img/energy.png" class="info-energy" alt="energy">
+              </div>
+            </div>
+          </li>
+          <li class="cellpf56 puissance">
+            <span>4</span>
+          </li>
+          <li class="cellpf56 prix">
+            <span>A partir de <span class="bold">400€TTC /mois*</span> apres un premier loyer de 3000€</span>
+            <div class="ctp" data-openpopin="financement000002"></div>
+          </li>
+          <li class="cellpf56 choice">
+            {if $slicePF56.incompatible eq true}
+            <div class="step1">
+              <label for="radio2">Choisir</label>
+              <input id="radio2" type="radio" name="radio_motors">
+            </div>
+            <div class="step2">
+              <div class="control-box custom-button-group clearfix">
+                <a href="#" class="cta-inline cta-btn cta-btn-4 pull-right"><span>Valider</span></a>
+              </div>
+            </div>
+            {else}
+            <div class="step1">
+              <label for="radio2">Choisir</label>
+              <input id="radio2" type="radio" name="radio_motors">
+            </div>
+            <div class="step2" style="display: inline">
+              <div class="control-box custom-button-group clearfix">
+                <a href="#" class="cta-inline cta-btn cta-btn-4 pull-right"><span>étape suivante</span></a>
+              </div>
+            </div>
+            {/if}
+          </li>
+        </ul>
+        </li>
+        <!--/////////////////////////-->
+        <li class="row alt">
+          <ul data-typeOption="TypeOption" data-valueOption="ValueOption">
+          <li class="cellpf56 motor">
+            <span>1,2L HDI 92</span></br>
+            <span class="bold">Essence</span>
+            <img src="../../../img/puretech.png" alt="puretech">
+          </li>
+          <li class="cellpf56 gear">
+            <span>BVM5</span></br>
+            <span>Manuelle</span>
+          </li>
+          <li class="cellpf56 co2">
+            <span>114g</span>
+          </li>
+          <li class="cellpf56 conso">
+            <span>5L</span>
+          </li>
+          <li class="cellpf56 energy">
+            <span>B</span>
+            <div class="slice-infobulle-motor" data-jsobj="[ { 'obj':'iso-infobulle' } ]">
+              <span class="info i1" data-infobulle="004"></span>
+              <div class="infobulle scroller" data-infobulleo="004">
+                <!-- <p>Classe energetique (G/KM)</p> -->
+                <img src="../../../img/energy.png" class="info-energy" alt="energy">
+              </div>
+            </div>
+          </li>
+          <li class="cellpf56 puissance">
+            <span>4</span>
+          </li>
+          <li class="cellpf56 prix">
+            <span>A partir de <span class="bold">8560€ TTC*</span></span>
+            <div class="align"></div>
+          </li>
+          <li class="cellpf56 choice">
+            {if $slicePF56.incompatible eq true}
+            <div class="step1">
+              <label for="radio2">Choisir</label>
+              <input id="radio2" type="radio" name="radio_motors">
+            </div>
+            <div class="step2">
+              <div class="control-box custom-button-group clearfix">
+                <a href="#" class="cta-inline cta-btn cta-btn-4 pull-right"><span>Valider</span></a>
+              </div>
+            </div>
+            {else}
+            <div class="step1">
+              <label for="radio2">Choisir</label>
+              <input id="radio2" type="radio" name="radio_motors">
+            </div>
+            <div class="step2" style="display: inline">
+              <div class="control-box custom-button-group clearfix">
+                <a href="#" class="cta-inline cta-btn cta-btn-4 pull-right"><span>étape suivante</span></a>
+              </div>
+            </div>
+            {/if}
+          </li>
+        </ul>
+        </li>
+      </ul>
+      {if $slicePF56.mdc.monthly_price}
+          <p class="legal-notice">{$slicePF56.mdc.legal_notice}</p>
+      {/if}
+      {if isset($slicePF56.saveConfiguration.content)}
+        {foreach $slicePF56.saveConfiguration.content as $item}
+        <div class="save-config">
+          <div class="content-info">
+            <div class="etape1">
+            {if isset($item.mdc.saveConfig.info)}
+            {foreach $item.mdc.saveConfig.info as $notification}
+              {include file="../../notification/notification.tpl"}
+            {/foreach}
+            {/if}
+            </div>
+
+            <p class="confirm-save">
+              <label class="label-save" for="{$item.mdc.saveConfig.id}">
+                <input type="checkbox" name="{$item.mdc.saveConfig.name}" id="{$item.mdc.saveConfig.id}"/>
+                {$item.mdc.saveConfig.label}
+              </label>
+            </p>
+            <div class="config-save">
+              <form action="" method="post" class="config-form" novalidate>
+                <div class="config-box-input" data-msg-required="{$item.translate.configuration.email.txterror}">
+                  <div class="input-text">
+                    <label class="control-label" for="configname">{$item.translate.configuration.ConfigName.title}</label>
+                    <div class="form-control">
+                      <input type="text" name="configname" id="configname" data-msg-required="{$item.translate.configuration.ConfigName.txterror}" value="{if isset($item.config_value)}{$item.config_value}{/if}" placeholder="{if isset($item.config_value)}{$item.config_value}{/if}" data-required="true">
+                    </div>
+                  </div>
+                  <div class="input-text last">
+                    <label class="control-label" for="configemail">{$item.translate.configuration.email.title}</label>
+                    <div class="form-control">
+                      <input type="email" name="configemail" id="configemail" data-msg-email="{$item.translate.configuration.email.emailError}" data-required="true">
+                    </div>
+                  </div>
+                  <br class="clr" />
+                </div>
+                {if isset($item.translate.configuration.mentionsLegales)}
+                <p class="mentions-legales">{$item.translate.configuration.mentionsLegales}</p>
+                {/if}
+                {if isset($item.translate.configuration.confirmMentions) && $item.translate.configuration.confirmMentions.active eq true}
+                <p class="confirm-mentions">
+                  <label for="{$item.translate.configuration.confirmMentions.id}">
+                    <input type="checkbox" data-msg-required="{$item.translate.configuration.confirmMentions.txterror}" data-required="true" name="{$item.translate.configuration.confirmMentions.name}" id="{$item.translate.configuration.confirmMentions.id}"/>
+                    {$item.translate.configuration.confirmMentions.label}
+                  </label>
+                </p>
+                {/if}
+                {if isset($item.translate.configuration.ctaList)}
+                <div class="custom-button-group clearfix">
+                  <button class="cta-btn cta-btn-4 cta-sauvegarde">{$item.translate.configuration.sendButton}</button>
+                  {foreach $item.translate.configuration.ctaList as $cta}
+                  {include file="./cta.html.smarty"}
+                  {/foreach}
+                </div>
+                {/if}
+              </form>
+            </div>
+            <div class="etape3">
+              {if isset($item.mdc.saveConfig.confirm)}
+              {foreach $item.mdc.saveConfig.confirm as $notification}
+                {include file="../../notification/notification.tpl"}
+              {/foreach}
+              {/if}
+            </div>
+          </div>
+        </div>
+        {if isset($item.return.ctaList)}
+        <div class="control-box custom-button-group clearfix">
+          {foreach $item.return.ctaList as $cta}
+          {include file="./cta.html.smarty"}
+          {/foreach}
+        </div>
+        {/if}
+        {/foreach}
+      {/if}
+        <section class="popin_overlay" data-jsobj="[ { 'obj':'iso-popin' } ]">
+        {foreach $slicePF56.popinFinancement.contents as $ticket}
+          {include file="../../popin-financement/popin-financement.tpl"}
+        {/foreach}
+      </section>
+</section>
+

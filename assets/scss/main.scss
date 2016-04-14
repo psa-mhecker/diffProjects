@@ -1,0 +1,63 @@
+@charset 'UTF-8';
+// main.scss
+@import 'settings';
+@import 'common/fonts';
+//@import 'normalize';
+// Foundation by ZURB
+// foundation.zurb.com
+// Licensed under MIT Open Source
+// Behold, here are all the Foundation components.
+// Foundation is loaded as a whole in vendor, but we need some mixins here
+@import 'foundation/components/panels';
+@import 'foundation/components/tooltips';
+@import 'foundation/components/labels';
+// //------------------------------------
+//    $GLOBAL ELEMENTS
+//------------------------------------
+@import 'mixins';
+@import 'new_sprites';
+@import 'common/typos';
+@import 'common/cta';
+//------------------------------------
+//    $LAYOUT
+//------------------------------------
+@import 'common/layout';
+@import 'common/all';
+
+@import 'common/grid';
+@import 'common/breadcrumb';
+@import 'common/navigation';
+
+@import 'components/pn7';  //En tête
+@import 'components/pt3';  //Bloc Je veux
+@import 'components/pt2';  //Footer
+@import 'components/pt20';  //Bloc master page
+@import 'components/slideshowslick';
+@import 'components/videoplayer'; // video player
+@import 'components/pc7';
+@import 'components/pc9';
+@import 'components/pc8';
+@import 'components/pc12';
+@import 'components/pf11';
+@import 'components/pc19';
+@import 'components/rangebar';
+@import 'components/pc40'; //Bloc CTA
+@import 'components/pc68';
+@import 'components/pc69';
+@import 'components/navshowroom';// Navigation showroom
+@import 'components/presentationshowroom';
+@import 'components/pc79'; //Mur media
+@import 'components/tooltips'; // tooltip, cree depuis tinymce
+@import 'components/uspanchors'; // anchors css
+@import 'components/sitemap'; // siteMaps css
+@import 'components/dragndrop'; // Compare 2 images
+@import 'components/notifications'; // Notification messages
+@import 'components/forms'; // Surcharges forms
+@import 'components/popin'; // Surcharges blueimp gallery
+@import 'components/stickyelement';
+@import 'components/iframes';
+@import 'components/vignettes';
+@import 'components/carselector';
+@import 'components/servicesselector';
+@import 'components/multicolumns';
+@import 'components/carouselvignette';

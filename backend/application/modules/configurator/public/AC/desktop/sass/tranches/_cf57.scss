@@ -1,0 +1,209 @@
+.slice-cf57 {
+  h2{
+    margin-top: 0;
+  }
+  h2, p{
+    color: #646464;
+  }
+
+  .toggle{
+	  padding-top: 15px;
+  }
+
+  .btn-small {
+    background-color: transparent;
+    border: 1px solid #646464;
+    max-width: 20%;
+    font-size: 12px;
+    padding: 10px 30px;
+    color: #646464;
+  }
+  .lame.finition > div > div.row.radio-case{
+    padding-bottom: 0;
+  }
+  h2{
+    margin-right: 70px;
+  }
+
+  .block-mentions,
+  .save-config{
+    margin-top: 10px;
+  }
+
+  .lame{
+    margin-top: 64px;
+    margin-right: 15px;
+    figure{
+      margin: 0;
+    }
+
+    &.finition > div aside {
+      .price-from{
+    		margin-bottom: 5px;
+        font: 14px/1.2 $font-family-brand-regular;
+    	}
+      > strong.price {
+        font: 18px/18px $font-family-base-bold;
+        .price-from{
+          text-transform: uppercase;
+      	}
+      }
+
+	  > strong {
+        font: 38px/36px "citroenbold";
+        .price-from{
+          text-transform: uppercase;
+      	}
+      }
+    }
+
+    aside{
+      .jauges-lvl-container{ float: right; }
+      label.checked{
+        .input{
+          display: none;
+        }
+        span.selected{
+          &, span{ width: 85%; }
+        }
+      }
+    }
+  }
+  .lame.finition > div aside > strong.price .info--blue{
+		position: relative;
+		top: 5px;
+		right: auto;
+	}
+  .notifications,
+  .mentions-legale{
+    margin-top: 20px;
+    .notification-txt p{
+      font-family: $font-family-base-regular;
+
+      b{
+        display: block;
+        font-family: $font-family-base-bold;
+        font-weight: 500;
+      }
+    }
+  }
+  .lame.finition > div > div.row.radio-case{
+    padding-bottom: 0;
+  }
+  .price{
+    margin: 5px 0;
+    position: relative;
+  }
+
+
+  .label-save{
+    color: #f0780a;
+    text-transform: uppercase;
+  }
+
+  .input-checkbox label .label,
+  .input-radio label .label{
+    width: 100%;
+  }
+
+  .input-text{
+    b{
+      display: inline-block;
+      vertical-align: middle;
+      width: calc(100% - 57px);
+    }
+  }
+
+  /*.checked{
+    .input-text{
+		    display:none;
+	   }
+
+	  .input-text--checked{
+		    display:block;
+	   }
+  }*/
+
+  .mentions-legale + .clearfix{
+    clear: both;
+    padding-top: 16px;
+
+    .notifications{
+      margin-top: inherit;
+    }
+  }
+  .cta-group{
+    text-align: center;
+    padding: 15px 10px;
+
+    .cta-link {
+      display: block;
+      padding-top: 20px;
+       color: $gray-dark;
+      span {
+        padding: 0;
+        font-size: 14px;
+        text-decoration: underline;
+      }
+    }
+  }
+  .save-config .content-info .confirm-save .label-save.checked .check--orange {
+    display: inline-block;
+    position: absolute;
+    left: 17px;
+    top: 4px;
+  }
+
+  .fixPreviewWidth{
+	  width:140%;
+  }
+
+  .margin-fix{
+	  margin-left:15px;
+	  margin-right:15px;
+  }
+
+  .info--orange
+    {
+	top:50%;
+	margin-top:-13px;
+  }
+
+  .addComparator {
+	  width:144px;
+    &:hover {
+      border: 4px solid $gray-citroen;
+      box-shadow: none !important;
+      -webkit-box-shadow: none !important;
+      padding: 7px 27px;
+    }
+  }
+
+  .span-button-fix{
+    width: 100px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+
+  .not-bold {
+	 font-weight: normal;
+  }
+
+  .lame 
+  {
+    aside{
+      .radio_click {
+        .price {
+          .price-info::before {
+            right: -27px;
+            top: 6px;
+          }
+
+          .price-info{
+            margin-top: -10px;
+          }
+        }
+      }
+    }
+  }
+}

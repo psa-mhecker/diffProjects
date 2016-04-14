@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions
+        targetNamespace="http://xml.inetpsa.com/Services/Cfg/CompareGrade"
+        xmlns:cxl="http://fault.core.cxl.inetpsa.com"
+        xmlns:soap11="http://schemas.xmlsoap.org/soap/envelope/"
+        xmlns:soap12="http://www.w3.org/2003/05/soap-envelope"
+        xmlns:soapenc11="http://schemas.xmlsoap.org/soap/encoding/"
+        xmlns:soapenc12="http://www.w3.org/2003/05/soap-encoding"
+        xmlns:tn="http://inetpsa.com/cfg"
+        xmlns:tns="http://xml.inetpsa.com/Services/Cfg/CompareGrade"
+        xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+        xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <wsdl:types>
+        <xsd:schema attributeFormDefault="unqualified"
+                    elementFormDefault="qualified"
+                    targetNamespace="http://inetpsa.com/cfg"
+                    xmlns:tn="http://inetpsa.com/cfg" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <xs:element name="CompareGrades" type="tn:CompareGradesType"/>
+            <xs:element name="CompareGradesResponse" type="tn:CompareGradesResponseType"/>
+            <xs:complexType name="CompareGradesType">
+                <xs:sequence>
+                    <xs:element minOccurs="1" name="ContextRequest" type="tn:ContextRequest"/>
+                    <xs:element minOccurs="1" name="CompareGradesCriteria" type="tn:CompareGradesCriteria"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ContextRequest">
+                <xs:sequence>
+                    <xs:element minOccurs="1" name="Client" type="xs:string"/>
+                    <xs:element minOccurs="1" name="Brand">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:length value="1"/>
+                                <xs:enumeration value="P"/>
+                                <xs:enumeration value="C"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element minOccurs="1" name="Country" type="xs:string"/>
+                    <xs:element minOccurs="1" name="Date" type="xs:date"/>
+                    <xs:element maxOccurs="1" minOccurs="0" name="LanguageID" type="xs:string"/>
+                    <xs:element default="false" maxOccurs="1" minOccurs="0"
+                                name="Network" type="xs:boolean"/>
+                    <xs:element maxOccurs="1" minOccurs="0" name="TariffZone" type="xs:string"/>
+                    <!-- minOccurs = "0", LocalCurrency = false -->
+                    <!-- maxOccurs = "1", LocalCurrency = true -->
+                    <xs:element default="false" maxOccurs="1" minOccurs="0"
+                                name="LocalCurrency" type="xs:boolean"/>
+                    <xs:element default="false" maxOccurs="1" minOccurs="0"
+                                name="ShowAllVersions" type="xs:boolean"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="CompareGradesCriteria">
+                <xs:sequence>
+                    <xs:element minOccurs="1" name="VehicleUse" type="xs:string"/>
+                    <xs:element minOccurs="1" name="Model" type="xs:string"/>
+                    <xs:element minOccurs="0" name="GrCommercialName" type="xs:string"/>
+                    <xs:choice minOccurs="1">
+                        <xs:element name="BodyStyle" type="xs:string"/>
+                        <xs:element name="GrBodyStyle" type="xs:string"/>
+                    </xs:choice>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="CompareGradesResponseType">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="Grades" type="tn:Grade"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Grade">
+                <xs:sequence>
+                    <xs:element minOccurs="1" name="id" type="xs:string"/>
+                    <xs:element minOccurs="1" name="label" type="xs:string"/>
+                    <xs:element minOccurs="0" name="description" type="xs:string"/>
+                    <xs:element minOccurs="1" name="Categories" type="tn:Categories"/>
+                    <xs:element minOccurs="0" name="GradeReference" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Categories">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0"
+                                name="Category" type="tn:Category"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Category">
+                <xs:sequence>
+                    <xs:element minOccurs="1" name="code" type="xs:string"/>
+                    <xs:element minOccurs="1" name="label" type="xs:string"/>
+                    <xs:element minOccurs="1" name="rank" type="xs:int"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0"
+                                name="Features" type="tn:FeatureByCategory"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="FeatureByCategory">
+                <xs:sequence>
+                    <xs:element minOccurs="1" name="id" type="xs:string"/>
+                    <xs:element minOccurs="1" name="label" type="xs:string"/>
+                    <xs:element minOccurs="0" name="description" type="xs:string"/>
+                    <xs:element minOccurs="1" name="rank" type="xs:int"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0"
+                                name="Exclusions" type="tn:Exclusion"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Exclusion">
+                <xs:sequence>
+                    <xs:element minOccurs="1" name="lcdvVersion" type="xs:string"/>
+                    <xs:element minOccurs="1" name="labelVersion" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xsd:schema>
+        <xsd:schema attributeFormDefault="unqualified"
+                    elementFormDefault="qualified" targetNamespace="http://fault.core.cxl.inetpsa.com">
+            <xsd:complexType name="ServiceException"/>
+        </xsd:schema>
+        <xsd:schema attributeFormDefault="unqualified"
+                    elementFormDefault="qualified"
+                    targetNamespace="http://xml.inetpsa.com/Services/Cfg/CompareGrade" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <xsd:import namespace="http://fault.core.cxl.inetpsa.com"/>
+            <xsd:import namespace="http://inetpsa.com/cfg"/>
+            <xsd:element name="CompareGrades">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="tn:CompareGrades"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="CompareGradesResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" ref="tn:CompareGradesResponse"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="ServiceException" type="cxl:ServiceException"/>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="CompareGradesRequest">
+        <wsdl:part element="tns:CompareGrades" name="parameters"/>
+    </wsdl:message>
+    <wsdl:message name="ServiceException">
+        <wsdl:part element="tns:ServiceException" name="ServiceException"/>
+    </wsdl:message>
+    <wsdl:message name="CompareGradesResponse">
+        <wsdl:part element="tns:CompareGradesResponse" name="parameters"/>
+    </wsdl:message>
+    <wsdl:portType name="CompareGradePortType">
+        <wsdl:operation name="CompareGrades">
+            <wsdl:input message="tns:CompareGradesRequest" name="CompareGradesRequest"/>
+            <wsdl:output message="tns:CompareGradesResponse" name="CompareGradesResponse"/>
+            <wsdl:fault message="tns:ServiceException" name="ServiceException"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="CompareGradeHttpBinding" type="tns:CompareGradePortType">
+        <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="CompareGrades">
+            <wsdlsoap:operation soapAction="http://xml.inetpsa.com/Services/Cfg/CompareGrade#CompareGrades"/>
+            <wsdl:input name="CompareGradesRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="CompareGradesResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <wsdlsoap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="CompareGrade">
+        <wsdl:port binding="tns:CompareGradeHttpBinding" name="CompareGradeHttpPort">
+            <wsdlsoap:address location="http://localhost:8080/cfg00Web/services/CompareGrade"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

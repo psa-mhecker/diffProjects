@@ -1,0 +1,56 @@
+<section class="slice-pf17 {if isset($slicePF17.anchorId)} {$slicePF17.anchorId} {/if}" {if isset($slicePF17.anchorId)} id="{$slicePF17.anchorId}" {/if} datalayer="{$slicePF17.datalayer}">
+    {if $slicePF17.hasInstance}
+        <div class="row">
+            <section class="form-wrapper small-12 columns">
+                <div class="error notification hide">
+                    <p>
+                        <span class="information">{$slicePF17.information}</span>
+                        {$slicePF17.errorMessage}
+                    </p>
+                </div>
+                <div id="wf_form_content" class="wf_form_content" data-options='{ldelim}"formParams":{ldelim}"instance":"{$slicePF17.instance}", "lang":"{$slicePF17.lang}", "country":"{$slicePF17.country}", "culture":"{$slicePF17.culture}", "brandIdConnector":"{$slicePF17.brandIdConnector}", "context":"{$slicePF17.context}", "environment":"{$slicePF17.environment}"{rdelim}, "contextualization":{ldelim}"preselectedVehicleLcdv":"{$slicePF17.lcdv16}"{rdelim}, "position": "{$slicePF17.blockOrder}", "eventCategory": "{$slicePF17.blockName}::position-{$slicePF17.blockOrder}"{rdelim}'></div>
+                <div class="confirm-forms hide">
+                    <div class="small-12 confirm-message">
+                        <p class="name"></p>
+                        {if isset($slicePF17.demand)}
+                            {$slicePF17.demand}
+                        {/if}
+
+                        <script class="replace-values" type="text/template">
+                            {if isset($slicePF17.emailConfirmation)}
+                                {$slicePF17.emailConfirmation}
+                            {/if}
+                        </script>
+                        
+                        {if isset($slicePF17.additionalText)}
+                            {$slicePF17.additionalText}
+                        {/if}
+                    </div>
+                    <div class="small-12 medium-6 columns">
+                        <div class="cta-container">
+                            {if isset($slicePF17.contentCtaList)}
+                                {foreach $slicePF17.contentCtaList as $cta}
+                                    {if $cta@total is odd and $cta@last}
+                                        {include file="../Components/cta.html.smarty" widthClass="" gtm="{ldelim}\"eventType\":\"click\",\"dataList\":{ldelim}\"event\":\"uaevent\",\"eventCategory\":\"{$slicePF17.blockName}::position-{$slicePF17.blockOrder}\",\"eventAction\":\"Redirection\",\"eventLabel\":\"{$cta.title|escape:html}\"{rdelim}{rdelim}"}
+                                    {else}
+                                        {include file="../Components/cta.html.smarty" widthClass="short-width" gtm="{ldelim}\"eventType\":\"click\",\"dataList\":{ldelim}\"event\":\"uaevent\",\"eventCategory\":\"{$slicePF17.blockName}::position-{$slicePF17.blockOrder}\",\"eventAction\":\"Redirection\",\"eventLabel\":\"{$cta.title|escape:html}\"{rdelim}{rdelim}"}
+                                    {/if}
+                                {/foreach}
+                            {/if}
+                        </div>
+                    </div>
+                    <div class="small-12 medium-6 columns text-center my-peugeot">
+                        <img src="{$slicePF17.contentMedia.src}" alt="{$slicePF17.contentMedia.alt}">
+                        <p>{$slicePF17.myPeugeotDescription}</p>
+                        {if isset($slicePF17.ctaMyPeugeot)}
+                            {foreach $slicePF17.ctaMyPeugeot as $cta}
+                                {include file="../Components/cta.html.smarty" widthClass="short-width" gtm="{ldelim}\"eventType\":\"click\",\"dataList\":{ldelim}\"event\":\"uaevent\",\"eventCategory\":\"{$slicePF17.blockName}::position-{$slicePF17.blockOrder}\",\"eventAction\":\"Redirection\",\"eventLabel\":\"{$cta.title|escape:html}\"{rdelim}{rdelim}"}<br>
+                            {/foreach}
+                        {/if}
+                    </div>
+                </div>
+            </section>
+        </div>
+    {/if}
+</section>
+

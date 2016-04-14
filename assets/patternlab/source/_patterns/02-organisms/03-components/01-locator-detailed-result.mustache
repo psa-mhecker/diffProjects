@@ -1,0 +1,98 @@
+<div id="dealer-detail-id" class="dealer-details row">
+    {{#detailed-result}}
+        <div class="content-top">
+            <a href="#" class="cta link-cta chevron-left btn-return"><span class="content-cta">Retour aux points de vente</span></a>
+            <h3 class="dealer-name font-bold">{{name}}</h3>
+            <h5 class="condensed-coord show-for-small-only">{{adress.street}}, {{adress.city}}</h5>
+        </div>
+        <div class="mobile-squared-cta show-for-small-only">
+            <a class="item"><div class="mobile-cta-call"></div></a>
+            <a class="item"><div class="mobile-cta-itinerary"></div></a>
+            <a class="item"><div class="mobile-cta-visit"></div></a>
+            <a class="item"><div class="mobile-cta-write"></div></a>
+        </div>
+        <div class="tabs-wrapper show-for-medium-up">
+            <dl class="tabs" data-tab role="tablist">
+                <dd class="tab-title active" role="presentation"><a href="#panel2-1" role="tab" tabindex="0" aria-selected="true" aria-controls="panel2-1">contact</a></dd>
+                <dd class="tab-title" role="presentation"><a href="#panel2-2" role="tab" tabindex="0" aria-selected="false" aria-controls="panel2-2">services</a></dd>
+            </dl>
+            <div class="tabs-content">
+                <section role="tabpanel" aria-hidden="false" class="content active" id="panel2-1">
+                    <div class="coord">
+                        <div class="dealer-street">{{adress.street}}</div>
+                        <div class="dealer-city">{{adress.city}}</div>
+                        <div class="dealer-phone"><span>Tel: </span><span class="phoneNumber">{{contact.tel}}</span>
+                        </div>
+                    </div>
+                    <div class="dealer-website text-center">
+                        <a href="#" class="cta btn-cta full-width light-blue" href="{{contact.website}}" target="_blank"><span class="content-cta">Visiter le site</span></a>
+                    </div>
+                    <div class="schedules">{{{schedules}}}</div>
+                </section>
+                <section role="tabpanel" aria-hidden="true" class="content" id="panel2-2">
+                    <div class="services">
+                        <div class="service">
+                            <div class="img-service left">
+                                <img src="//pipsum.com/95x95.jpg">
+                            </div>
+                            <div class="text">
+                                <div class="title">Véhicule neuf</div>
+                                <div class="chief">M.Duhamel Alain</div>
+                                <div class="tel">Tel. : 01 59 64 15 85</div>
+                                <div class="mail">alain.duhamel@peugeot.com</div>
+                            </div>
+                        </div>
+                        <div class="service">
+                            <div class="img-service left">
+                                <img src="//pipsum.com/95x95.jpg">
+                            </div>
+                            <div class="text">
+                                <div class="title">Véhicule neuf</div>
+                                <div class="chief">M.Duhamel Alain</div>
+                                <div class="tel">Tel. : 01 59 64 15 85</div>
+                                <div class="mail">alain.duhamel@peugeot.com</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="accordions-wrapper show-for-small-only">
+            <ul class="accordion" data-accordion>
+                <li class="accordion-navigation">
+                    <a href="#panel1a">Horaires d'ouverture<span class="plus">+</span></a>
+                    <div id="panel1a" class="content">
+                        <div class="schedules">{{{schedules}}}</div>
+                    </div>
+                </li>
+                <li class="accordion-navigation">
+                    <a href="#panel2a">Services<span class="plus">+</span></a>
+                    <div id="panel2a" class="content">
+                        <div class="services">
+                            <div class="service">
+                                <div class="img-service left">
+                                    <img src="//pipsum.com/95x95.jpg">
+                                </div>
+                                <div class="text">
+                                    <div class="title">Véhicule neuf</div>
+                                    <div class="tel">Tel. : 01 59 64 15 85</div>
+                                    <div class="mail">alain.duhamel@peugeot.com</div>
+                                </div>
+                            </div>
+                            <div class="service">
+                                <div class="img-service left">
+                                    <img src="//pipsum.com/95x95.jpg">
+                                </div>
+                                <div class="text">
+                                    <div class="title">Véhicule neuf</div>
+                                    <div class="tel">Tel. : 01 59 64 15 85</div>
+                                    <div class="mail">alain.duhamel@peugeot.com</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    {{/detailed-result}}
+</div>

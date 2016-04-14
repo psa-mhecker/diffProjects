@@ -1,0 +1,43 @@
+checks:
+    php:
+        code_rating: true
+        duplication: true
+        
+filter:
+    paths:
+        - frontend/src/*
+        - backend/application/library/Ndp/*
+        - backend/app/*
+        - backend/application/sites/backend/controllers/Ndp/*
+        - backend/application/sites/backend/controllers/Cms/Page/Ndp/*
+    excluded_paths:
+        - "*/Tests/*"
+build:
+    environment:
+        mongodb: false
+        redis: false
+        mysql: false
+        postgresql: false
+    dependencies:
+        before:
+            - 'cat /dev/null'
+        override:
+            - 'cat /dev/null'
+    tests:
+        override:
+            - 'cat /dev/null'
+tools:
+    php_sim: true
+    php_changetracking: true
+    php_cs_fixer:
+        config: { level: psr2 } 
+    php_mess_detector: true
+    php_pdepend: true
+    php_analyzer: false
+    sensiolabs_security_checker: true
+    php_code_sniffer:
+        enabled: true
+        config:
+          standard: PSR2
+    external_code_coverage: true
+

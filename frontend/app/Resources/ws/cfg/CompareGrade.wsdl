@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap11="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp200409="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsp200607="http://www.w3.org/2006/07/ws-policy" xmlns:ns0="http://xml.inetpsa.com/Services/Cfg/CompareGrade" targetNamespace="http://xml.inetpsa.com/Services/Cfg/CompareGrade">
+<wsdl:types xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:schema>
+<xsd:import schemaLocation="CompareGrade.xsd3.xsd" namespace="http://xml.inetpsa.com/Services/Cfg/CompareGrade"/></xsd:schema></wsdl:types>
+<wsdl:message name="CompareGradesRequest">
+<wsdl:part name="parameters" element="xsns:CompareGrades" xmlns:xsns="http://xml.inetpsa.com/Services/Cfg/CompareGrade"/></wsdl:message>
+<wsdl:message name="CompareGradesResponse">
+<wsdl:part name="parameters" element="xsns:CompareGradesResponse" xmlns:xsns="http://xml.inetpsa.com/Services/Cfg/CompareGrade"/></wsdl:message>
+<wsdl:message name="ServiceException">
+<wsdl:part name="ServiceException" element="xsns:ServiceException" xmlns:xsns="http://xml.inetpsa.com/Services/Cfg/CompareGrade"/></wsdl:message>
+<wsdl:portType name="CompareGradePortType">
+<wsdl:operation name="CompareGrades">
+<wsdl:input name="CompareGradesRequest" message="ns0:CompareGradesRequest"/>
+<wsdl:output name="CompareGradesResponse" message="ns0:CompareGradesResponse"/>
+<wsdl:fault name="ServiceException" message="ns0:ServiceException"/></wsdl:operation></wsdl:portType>
+<wsdl:binding name="CompareGradeHttpBinding" type="ns0:CompareGradePortType">
+<soap11:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+<wsdl:operation name="CompareGrades">
+<soap11:operation soapAction="http://xml.inetpsa.com/Services/Cfg/CompareGrade#CompareGrades" style="document"/>
+<wsdl:input name="CompareGradesRequest">
+<soap11:body use="literal"/></wsdl:input>
+<wsdl:output name="CompareGradesResponse">
+<soap11:body use="literal"/></wsdl:output>
+<wsdl:fault name="ServiceException">
+<soap11:fault name="ServiceException" use="literal"/></wsdl:fault></wsdl:operation></wsdl:binding>
+<wsdl:service name="CompareGrade">
+<wsdl:port name="CompareGradeHttpPort.0" binding="ns0:CompareGradeHttpBinding">
+<soap11:address location="http://10.68.110.80:80/cfg/services/CompareGrade"/></wsdl:port>
+<wsdl:port name="CompareGradeHttpPort.1" binding="ns0:CompareGradeHttpBinding">
+<soap11:address location="http://10.68.110.80:80/cfg/pub/services/CompareGrade"/></wsdl:port></wsdl:service></wsdl:definitions>

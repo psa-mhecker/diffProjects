@@ -1,1 +1,0 @@
-<a href="{urlParser url=$data.ZONE_TITRE}"><img src="{$pelican_config.MEDIA_HTTP}{$data.MEDIA_PATH}" alt="{$data.MEDIA_ALT}"/></a>

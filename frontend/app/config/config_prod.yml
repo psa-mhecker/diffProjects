@@ -1,0 +1,46 @@
+imports:
+    - { resource: config.yml }
+    - { resource: parameters_app_prod.yml }
+    - { resource: parameters_db_prod.yml }
+    - { resource: parameters_proxy_prod.yml }
+
+#framework:
+#    validation:
+#        cache: apc
+
+doctrine:
+    orm:
+        metadata_cache_driver: apc
+        result_cache_driver: apc
+        query_cache_driver: apc
+
+monolog:
+    handlers:
+        main:
+            type:         fingers_crossed
+            action_level: error
+            handler:      nested
+        nested:
+            type:  stream
+            path:  "%kernel.logs_dir%/%kernel.environment%.log"
+            level: error
+        console:
+            type:  console
+
+sonata_cache:
+    caches:
+        symfony:
+            token: Y1065vez7G4ZlSplAI481Yp0kx81l4x6 # token used to clear the related cache
+            php_cache_enabled: true # Optional (default: false), clear APC or PHP OPcache
+            types:  ['translations', 'routing', 'container', 'all']
+            servers:
+                - { domain: ct.ndp.inetpsa.com, ip: yval1d80.inetpsa.com, port: 80}
+                - { domain: ct.ndp.inetpsa.com, ip: yval1d90.inetpsa.com, port: 80}
+                - { domain: ct.ndp.inetpsa.com, ip: yval1da0.inetpsa.com, port: 80}
+                - { domain: ct.ndp.inetpsa.com, ip: yval1db0.inetpsa.com, port: 80}
+                - { domain: ct.ndp.inetpsa.com, ip: yval1dc0.inetpsa.com, port: 80}
+                - { domain: ct.ndp.inetpsa.com, ip: yval1dd0.inetpsa.com, port: 80}
+                - { domain: ct.ndp.inetpsa.com, ip: yval1m30.inetpsa.com, port: 80}
+                - { domain: ct.ndp.inetpsa.com, ip: yval1m40.inetpsa.com, port: 80}
+
+

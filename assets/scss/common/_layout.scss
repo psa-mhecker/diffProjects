@@ -1,0 +1,137 @@
+@charset 'UTF-8';
+// layout.scss
+.sitecontainer {
+	margin: 0 auto;
+	max-width: $row-width;
+}
+
+// ==========================================================================
+// THE SHOWROOM AND HOMEPAGE HOME PAGE
+// ==========================================================================
+.body,
+.body-light {
+	section[class*=slice-] {
+		@include slice-margin-bottom(); //Add default margin bottom
+	}
+
+	section.slice-pc60,
+	section.slice-pn15,
+	section.slice-pt2 {
+		margin-bottom: 0;
+	}
+}
+
+
+// ==========================================================================
+// THE HOME PAGE
+// ==========================================================================
+.body {
+	margin-left: 152px;
+	@media #{$small-only} {
+		margin-left: 0;
+	}
+}
+
+// ==========================================================================
+// THE SHOWROOM HOME PAGE
+// ==========================================================================
+.body-light {
+	margin-left: 0;
+
+	@media #{$small-only} {
+		padding-top: 60px;
+	}
+}
+
+// ==========================================================================
+// ALL SECTION (TRANCHE) WITHOUT MARGIN (=0)
+// ==========================================================================
+.body,
+.body-light {
+	> section {
+
+		&.slice-pn14 {
+			@media #{$small-only} {
+				&.pt-80 {
+					//No padding top in mobile display
+					padding-top: 0;
+				}
+			}
+		}
+
+		&.slice-pn15,
+		&.slice-pf2,
+		&.slice-pt2 {
+			margin-bottom: 0;
+		}
+
+		&.slice-pn7 {
+			.isMobile & {
+				padding: 60px 0 0;
+			}
+		}
+
+	}
+}
+
+section {
+	&.slice-pc19 + &.slice-pf23 {
+		@media #{$small-only} {
+			@include slice-margin-bottom(0, 0);
+		}
+	}
+}
+
+
+// ==========================================================================
+// ENTETE GLOBAL
+// ==========================================================================
+.header {
+	height: rem-calc(80);
+
+	&.fixed {
+		height: inherit;
+
+		header {
+			position: fixed;
+			top: 0;
+			width: 100%;
+		}
+	}
+
+	header {
+		position: relative;
+		z-index: 1;
+		padding-top: rem-calc(10);
+		padding-left: rem-calc(20);
+		max-width: rem-calc(1128);
+		height: rem-calc(80);
+
+		.slice-pn7 & {
+			background-color: $grey-10-color;
+		}
+
+		.white & {
+			background-color: $white;
+		}
+	}
+}
+// ==========================================================================
+// ENTETE SHOWROOM
+// ==========================================================================
+.slice-pn15 {
+	.header {
+		position: absolute;
+		top: 0;
+		z-index: 5;
+		background-color: rgba(20, 32, 50, .6);
+		padding-left: rem-calc(152);
+		width: 100%;
+		max-width: $row-width;
+		height: rem-calc(80);
+
+		> header {
+			padding: 13px;
+		}
+	}
+}

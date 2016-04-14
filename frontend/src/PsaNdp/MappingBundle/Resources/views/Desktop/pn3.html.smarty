@@ -1,0 +1,8 @@
+<section class="slice-pn3 slice-inside-margin {if isset($slicePN3.anchorId)} {$slicePN3.anchorId} {/if}" {if isset($slicePN3.anchorId)} id="{$slicePN3.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePN3' } ]" datalayer="{$slicePN3.datalayer}">
+  {foreach $slicePN3.faqSubCat as $subCat}
+    <div class="toggle{if isset($subCat.open)} open-default{/if}" data-count="{$subCat.count}">{$subCat.title}</div>
+    <div class="toggle-content"></div>
+  {/foreach}
+</section>
+
+

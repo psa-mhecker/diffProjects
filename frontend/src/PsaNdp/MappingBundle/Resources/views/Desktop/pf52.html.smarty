@@ -1,0 +1,13 @@
+<section class="slice-pf52 {if isset($slicePF52.anchorId)} {$slicePF52.anchorId} {/if}" {if isset($slicePF52.anchorId)} id="{$slicePF52.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePF52' } ]">
+  <p>{$slicePF52.text}</p>
+  <form method="post" action="#">
+      <div class="errorbox"></div>
+    <div class="form-group">
+      <label for="inputEmail" class="control-label">{$slicePF52.labelEmail.txt}</label>
+      <input type="email" class="control-email {if isset($slicePF30.emailError)}has-error{/if}" id="inputEmail" {if isset($slicePF52.labelEmail.required) and $slicePF52.labelEmail.required eq true}required data-msg-required="{$slicePF52.errorMsg}"  data-rule-email="true" data-msg-email="{$slicePF52.labelEmail.errorMsg}"{/if}  {if isset($slicePF52.labelEmail.disabled) and $slicePF52.labelEmail.disabled eq true}disabled{/if}>
+    </div>
+    <small>{$slicePF52.fieldRequired}</small>
+    <input type="submit" class="control-submit cta-btn cta-btn-4" value="{$slicePF52.btnCTA}" />
+  </form>
+  <p class="notice">{$slicePF52.textLaw}</p>
+</section>

@@ -1,0 +1,61 @@
+@charset "UTF-8";
+/* pc8.scss */
+.slice-pc8 {
+
+  figure{
+    margin:0;
+  }
+  .pc8m{
+    /* h2 qui doivent etre centre a cote des pictos */
+    padding-top: 6%;
+  }
+  .accordion-navigation > a {
+    background: none;
+    border-bottom: 1px dotted #000000;
+    color: #424242;
+
+    &:hover {
+      background: none;
+      border-bottom: 1px dotted #000000;
+    }
+
+    &:after {
+      @include sprite($accordion-toggle-1-plus);
+      content: "";
+      display: inline-block;
+      position: relative;
+      right: 0;
+      top: rem-calc(1);
+      float: right;
+    }
+  }
+
+  .accordion-navigation.active > a {
+    background: none;
+    border-bottom: 1px solid #000000;
+    color: #424242;
+
+    &:hover {
+      background: none;
+      border-bottom: 1px solid #000000;
+    }
+
+    &:after {
+      @include sprite($accordion-toggle-3-minus);
+      content: "";
+      display: inline-block;
+      position: relative;
+      right: 0;
+      top: rem-calc(8);
+      float: right;
+    }
+  }
+
+  #panel1.active {
+    border-bottom: 1px solid #000000;
+  }
+
+  .accordionContent {
+    display: none;
+  }
+}

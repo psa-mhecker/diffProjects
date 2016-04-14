@@ -1,0 +1,160 @@
+.slice-cf53{
+  .monteeGamme{
+    .itemBusiness{
+      min-width: 77px !important;
+    }
+  }
+  .notifications{
+    clear: left;
+    margin: 20px 0;
+    color: $gray-citroen;
+    .notification-desc{
+      font-family: $font-family-base-regular;
+      font-size: 14px;
+    }
+  }
+  .list_dark{
+    padding-left: 10px;
+    &:before{
+      top: 5px;
+    }
+  }
+  p.disponility{
+    clear: both;
+    span{
+      font: 16px $font-family-base-bold;
+      clear: both;
+      color: $gray-citroen;
+      vertical-align: middle;
+      &.nbr{
+        font-size: 40px;
+        font-family: $font-family-base-regular;
+        margin-right: 5px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-top: -6px;
+      }
+    }
+  }
+  .toggle-finition{
+    .tit-toggle{
+      padding: 25px 20px;
+    }
+    .cont-toggle{
+      .i-cross{
+        height: auto;
+        width: auto;
+        &:before{
+          width: auto;
+          height: auto;
+        }
+      }
+    }
+  }
+  h3.category-title{
+    font-size: 20px;
+    color: $gray-citroen;
+    margin-top: 40px;
+    font-family: $font-family-base-bold;
+    &:first-of-type{
+      margin-top: 20px;
+    }
+  }
+  .cta-goToComparator{
+    padding: 15px 20px;
+    background-color: $comparator-btn-color;
+    color: $default-color;
+    font-size: 13px;
+    &:hover{
+      opacity: 0.8;
+    }
+  }
+  .listing.equipments{
+    padding: 0;
+  }
+  .row{
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .lame.finition{
+    margin-right: 30px;
+    margin-top: 50px;
+  }
+  .more-notif{
+    color: $gray-citroen;
+  }
+  .more-finitions{
+    border: 1px solid $more-finitions-border;
+    clear: left;
+    margin: 20px 0;
+    padding: 20px 15px 20px 30px;
+    .more-title{
+      font-size: 20px;
+      display: block;
+      position: relative;
+      cursor: pointer;
+      color: $gray-citroen-bold;
+      .chevron{
+        position: absolute;
+        top: 7px;
+        right: 0;
+        @extend %_sprites;
+        @extend %_sprite-chevron-toggle-opened;
+      }
+    }
+
+    .more-content{
+      display: none;
+      ul.colorsAvailable{
+        li.color{
+          width: 13.6%;
+        }
+      }
+    }
+    &.open{
+      .more-title{
+        .chevron{
+          @extend %_sprites;
+          @extend %_sprite-chevron-toggle-closed;
+        }
+      }
+    }
+  }
+  .mentions-legale{
+    margin-bottom: 40px;
+    font-size: 14px;
+    font-family: $font-family-base-regular;
+    color: $gray-citroen;
+    padding: 21px 20px;
+  }
+
+  #comparatorTable{
+    .model-selector-container{
+      .model-selector{
+        z-index: 0;
+        &.stick-it{
+          z-index: 100;
+        }
+      }
+    }
+  }
+  .lame .toggle .colors li, .lame .toggle-container .colors li{
+    height: auto;
+    img{
+      width: 100%;
+    }
+  }
+  .lame.finition > div aside > strong.price .info--blue{
+    position: absolute;
+    right: 0;
+    top: -2px;
+  }
+}
+
+html.touch{
+  .cta-goToComparator{
+    :hover{
+      opacity: 1;
+    }
+  }
+}

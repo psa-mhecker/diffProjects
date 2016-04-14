@@ -1,0 +1,8 @@
+services:
+  psa_database_translation_loader:
+        class: PsaNdp\MappingBundle\Translation\DatabaseTranslationLoader
+        arguments:
+          - @psa_ndp_label_repository
+          - @psa_ndp_language_repository
+        tags:
+            - { name: translation.loader, alias: db}

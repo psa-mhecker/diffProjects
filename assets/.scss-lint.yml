@@ -1,0 +1,6 @@
+linters:
+  PropertySortOrder:
+    order: concentric
+  Indentation:
+    character: tab
+    width: 1

@@ -1,0 +1,668 @@
+<section class="slice-pf61 {if isset($slicePf61.anchorId)} {$slicePf61.anchorId} {/if}" {if isset($slicePf61.anchorId)} id="{$slicePf61.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePF61' } ]" data-html="{$slicePf61.urlJson}" data-noresult="Aucun résultat ne correspond à votre recherche" datalayer="{$slicePf61.datalayer}" data-versiontest="test">
+  <h2 class="title">{$slicePf61.title}</h2>
+  <div id="map-canvas" class="map-display"></div>
+  {if isset($slicePf61.hasNav)}
+    <div class="wrapperNav">
+      <section class="nav slice-inside-margin">
+        <div class="fields clearfix span_7_of_12">
+          <form action="" class="span_7_of_12">
+            <input type="text" id="search-loc-input" placeholder="{$slicePf61.searchType.placeholder1}" value="" />
+            <input type="submit" class="search-loc-submit" value="{$slicePf61.searchTxt}" />
+          </form>
+          {if isset($slicePf61.pdv) && $slicePf61.pdv eq true}
+            <div class="pdv">
+              <span class="input-separ"></span>
+              <p class="search-pdv">{$slicePf61.hasNav.pdvInput.label}</p>
+              <div class="type-search span_8_of_12">
+                {literal}
+                {{#listDealer}}
+                  <article class="clearfix span_12_of_12" data-dealerid="{{ id }}">
+                    <div class="dealer-adress">
+                      <p><span>{{ name }}</span> - {{ address.city }}</p>
+                      <p>{{ address.street }} - {{ address.postal_code }} {{ address.city }}</p>
+                    </div>
+                    <span class="km">{{ distanceKm }} {/literal}{$slicePf61.translate.distType}{literal}</span>
+                  </article>
+                {{/listDealer}}
+                {/literal}
+              </div>
+              <a href="#" class="sub-pdv"></a>
+            </div>
+          {/if}
+        </div>
+        {if isset($slicePf61.pdv)}
+          <span class="or span_1_of_12">{$slicePf61.hasNav.or_txt}</span>
+          <a href="#" class="geoloc span_3_of_12">{$slicePf61.hasNav.btnAroundMe}</a>
+          {if isset($slicePf61.hasNav.codePostal)}
+          <a href="#" class="codePostal more span_3_of_12">{$slicePf61.hasNav.codePostal}</a>
+          {/if}
+        {/if}
+      </section>
+      <p class="errorOnLoad hide">{$slicePf61.errorload}</p>
+      <section class="nav pdv">
+        <div class="list-result">
+          <div class="list-dealer">
+            <p class="resultTitle">{$slicePf61.resultTitle}</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  {/if}
+
+  {if isset($slicePf61.isRegional) && $slicePf61.isRegional eq true}
+  <section class="list-results regional">
+    <div>
+      {if isset($slicePf61.noresult)}
+      {foreach $slicePf61.notification as $notification}
+        {include file="../../notification/notification.tpl"}
+      {/foreach}
+      {/if}
+      {literal}
+      {{#if listRegionalCars.length}}
+      <div class="list-car">
+      {/literal}
+        {if ! isset($slicePf61.noresult)}
+        <h3 class="nbVehicle">
+          <span>0</span> véhicules correspondent à votre demande
+        </h3>
+        {/if}
+        {if ! isset($slicePf61.noresult)}
+        {literal}
+        <div class="listCars listMore">
+          <div>
+            {{#listRegionalCars}}
+            <article class="span_12_of_12 clearfix" data-jsobj="[ { 'obj':'iso-infobulle' } ]">
+              <div class="grid-col span_12_of_12">
+                <div class="car grid-col">
+                  <figure>
+                    <img src="{{ imageSrc }}" alt="{{ imageAlt }}" />
+                  </figure>
+                </div>
+                <div class="model grid-col">
+                  {{#if news}}<span>{/literal}{$slicePf61.translate.news}{literal}</span>{{/if}}
+                  <h3>{{ title }}</h3>
+                  <p>{{ engine }} </p>
+                  <p>{{ painting }} </p>
+                  <p><span>{/literal}{$slicePf61.translate.trimming}{literal}</span> : {{ trimming }} 33 </p>
+                  {{#if option}}
+                  <div class="slice-infobulle">
+                    <p class="options">Voir l'option <span class="info" data-infobulle="{{ infobulleID }}"></span></p>
+                    <div class="infobulle scroller" data-infobulleo="{{ infobulleID }}"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores eos quos aliquam repudiandae quam alias, eaque repellat tempore, ipsum molestias aut autem doloribus molestiae, pariatur officiis distinctio ratione totam doloremque.</p></div>
+                  </div>
+                  {{/if}}
+                </div>
+                <div class="offer grid-col span_4_of_12">
+                  <div class="prices{{#if prices.peugeot_perspectives}} monthly{{/if}}">
+                    {{#if prices.peugeot_perspectives}}
+                    <p>{{ prices.with }} <strong>{{ prices.peugeot_perspectives }}</strong>, <br />{{ prices.this_vehicule }}<br />{{ prices.price_from }} {{ prices.price }}{{ prices.devise }}{{ prices.by_month }}{{#if popinFinancement }}<a  href="#" data-openpopin="financement{{ popinFinancement.contents.id }}" class="info"></a>{{/if}}</p>
+                    <p>{{ prices.first_payment }}{{ prices.devise }}</p>
+                    <p>{{ prices.credit_legal }}</p>
+                    {{else}}
+                    <p><span>Prix net,<br>options incluses</span><span>{{ prices.price }} {/literal}{$slicePf61.translate.currency}</span></p>
+                    <p><span>Promotion <sup>(1)</sup></span><span>{literal}{{ prices.advice }} {/literal}{$slicePf61.translate.currency}</span></p>
+                    <p><span>Remise <sup>(1)</sup></span><span>{literal}1 000 {/literal}{$slicePf61.translate.currency}</span></p>
+                    <p><b><span>Total <sup>(2)</sup></span><span>{literal}1 200 {/literal}{$slicePf61.translate.currency}{literal}</span></b></p>
+                    {{/if}}
+                  </div>
+                  <div class="dispo_content">
+                    <p class="disponibility">
+                      {{ prices.disponibility.text }}{{ prices.disponibility.nbDays }}
+                      {{#ifCond prices.disponibility.nbDays 1}}
+                        {{ prices.disponibility.days.[0] }}
+                      {{else}}
+                        {{ prices.disponibility.days.[1] }}
+                      {{/ifCond}}
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="span_12_of_12 bottom">
+                <ul class="table list_style{{#if more_key_info}} two-lines{{/if}}">
+                  <li><span>114</span><p class="label">Total émission de CO2 (g/km)</p></li>
+                  <li><span>5</span><p class="label">Consommation (l/100km)</p></li>
+                  <li>
+                    <span>b</span><div class="slice-infobulle">
+                      <span class="info" data-infobulle="ernergy{{ infobulleID }}"></span>
+                      <div class="infobulle scroller" data-infobulleo="ernergy{{ infobulleID }}">
+                        <p>Classe energetique (G/KM)</p>
+                        <img src="../../../img/energy.png" class="info-energy" alt="energy">
+                      </div>
+                    </div>
+                    <p class="label">Classe energetique</p>
+                  </li>
+                  <li><span>60</span><p class="label">Puissance (kw)</p></li>
+                  {{#if more_key_info}}<li><span>xx</span><p class="label">Lorem ipsum</p></li>{{/if}}
+                </ul>
+                <div class="custom-button-group">
+                  <p>
+                    <a href="#" class="cta-btn cta-btn-4" title="{/literal}{$slicePf61.translate.profit}{literal}" target="{{#if this.target}}{{this.target}}{{else}}_self{{/if}}">{/literal}<span>{$slicePf61.translate.profit}{literal}</span></a>
+                  </p>
+                </div>
+              </div>
+              <div class="line"></div>
+              {/literal}{if ! isset($slicePf61.noNav)}{literal}
+              <div class="dealer-block span_12_of_12">
+                <div class="left-col">
+                  <div class="km span_2_of_12">
+                    <span class="dist">{{ dealer.distanceKm }}</span>
+                    <span class="dist-type">{/literal}{$slicePf61.translate.distType}{literal}</span>
+                  </div>
+                  <div class="name span_8_of_12">
+                    <span class="dealer-name">{{ dealer.name }}</span>
+                    <span class="dealer-city">- {{ dealer.address.city }}</span>
+                    <span class="dealer-cp"> ({{ dealer.address.postal_code }})</span><br>
+                    <span class="dealer-street">{{ dealer.address.street }} - {{ dealer.address.postal_code }} {{ dealer.address.city }}</span>
+                    <p class="dealer-tel">{/literal}{$slicePf61.translate.phone}{literal} {{ dealer.contact.tel }}</p>
+                  </div>
+                </div>
+                <div class="view-file span_2_of_12">
+                  <span data-openpopin="file2">{/literal}{$slicePf61.translate.viewFile}{literal}</span>
+                </div>
+              </div>
+              {/literal}{/if}{literal}
+            </article>
+            {{/listRegionalCars}}
+          </div>
+          <span class="moreResults" data-results="5">Afficher plus de résultats</span>
+        </div>
+        {/literal}{/if}{literal}
+        {{#if listIncompatible.length}}{/literal}
+        <div class="listIncompatible{if ! isset($slicePf61.noresult)} block-other-motors closed-motors{else} noresults{/if} clearfix">
+        {if ! isset($slicePf61.noresult)}
+          <h3 class="cat-title">
+            Véhicules proches de votre configuration
+          </h3>
+          <a href="#" class="open-motors link-motors" title="Voir le décor">Voir les véhicules</a>
+          <a href="#" class="close-motors link-motors" title="Masquer le décor">Masquer les véhicules</a>
+          <div class="slide-content">
+        {else}
+          <h3>
+            Nous vous proposons des véhicules approchants
+          </h3>
+          {/if}
+            <div class="criteres span_12_of_12 clearfix">
+              <div class="grid-col span_6_of_12">
+                <p class="span_12_of_12"><span>Quels critères souhaitez-vous conserver en priorité :</span></p>
+                <div class="clearfix custom-button-group btn-large span_12_of_12">
+                  <div class="list cta-inline">
+                    <select name="" id="" class="select-js title-list"  data-jsobj="[ { 'obj':'iso-ctalistskin' } ]">
+                      <option value="#" selected="selected">Les véhicules Peugeot équipés du Combiné <br> tête haute</option>
+                      <option value="#1" >Peugeot 308</option>
+                      <option value="#2" >Peugeot 3008</option>
+                      <option value="#3" >Peugeot 206</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-col span_6_of_12">
+                <p class="span_12_of_12"><span>Vous souhaitez trier par :</span></p>
+                <div class="clearfix custom-button-group btn-large span_12_of_12">
+                  <div class="list cta-inline">
+                    <select name="" id="" class="select-js title-list"  data-jsobj="[ { 'obj':'iso-ctalistskin' } ]">
+                      <option value="#" selected="selected">Distance</option>
+                      <option value="#1" >Prix</option>
+                      <option value="#2" >Disponibilité</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {literal}
+            <div class="listMores">
+              <div>
+                {{#listIncompatible}}
+                <article class="span_12_of_12 clearfix" data-jsobj="[ { 'obj':'iso-infobulle' } ]">
+                  <div class="grid-col span_12_of_12">
+                    <div class="car grid-col">
+                      <figure>
+                        <img src="{{ imageSrc }}" alt="{{ imageAlt }}" />
+                      </figure>
+                    </div>
+                    <div class="model grid-col">
+                      {{#if news}}<span>{/literal}{$slicePf61.translate.news}{literal}</span>{{/if}}
+                      <h3>{{ title }}</h3>
+                      <p>{{ engine }} </p>
+                      <p>{{ painting }} </p>
+                      <p><span>{/literal}{$slicePf61.translate.trimming}{literal}</span> : {{ trimming }} 33 </p>
+                      {{#if option}}
+                      <div class="slice-infobulle">
+                        <p class="options">Voir l'option <span class="info" data-infobulle="{{ infobulleID }}"></span></p>
+                        <div class="infobulle scroller" data-infobulleo="{{ infobulleID }}"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores eos quos aliquam repudiandae quam alias, eaque repellat tempore, ipsum molestias aut autem doloribus molestiae, pariatur officiis distinctio ratione totam doloremque.</p></div>
+                      </div>
+                      {{/if}}
+                    </div>
+                    <div class="offer grid-col span_4_of_12">
+                      <div class="prices{{#if prices.peugeot_perspectives}} monthly{{/if}}">
+                        {{#if prices.peugeot_perspectives}}
+                        <p>{{ prices.with }} <strong>{{ prices.peugeot_perspectives }}</strong>, <br />{{ prices.this_vehicule }}<br />{{ prices.price_from }} {{ prices.price }}{{ prices.devise }}{{ prices.by_month }}{{#if popinFinancement }}<a  href="#" data-openpopin="financement{{ popinFinancement.contents.id }}" class="info"></a>{{/if}}</p>
+                        <p>{{ prices.first_payment }}{{ prices.devise }}</p>
+                        <p>{{ prices.credit_legal }}</p>
+                        {{else}}
+                        <p><span>Prix net,<br>options incluses</span><span>{{ prices.price }} {/literal}{$slicePf61.translate.currency}</span></p>
+                        <p><span>Promotion <sup>(1)</sup></span><span>{literal}{{ prices.advice }} {/literal}{$slicePf61.translate.currency}</span></p>
+                        <p><span>Remise <sup>(1)</sup></span><span>{literal}1 000 {/literal}{$slicePf61.translate.currency}</span></p>
+                        <p><b><span>Total <sup>(2)</sup></span><span>{literal}1 200 {/literal}{$slicePf61.translate.currency}{literal}</span></b></p>
+                        {{/if}}
+                      </div>
+                      <div class="dispo_content">
+                        <p class="disponibility">
+                          {{ prices.disponibility.text }}{{ prices.disponibility.nbDays }}
+                          {{#ifCond prices.disponibility.nbDays 1}}
+                            {{ prices.disponibility.days.[0] }}
+                          {{else}}
+                            {{ prices.disponibility.days.[1] }}
+                          {{/ifCond}}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="span_12_of_12 bottom">
+                    <ul class="table list_style{{#if more_key_info}} two-lines{{/if}}">
+                      <li><span>114</span><p class="label">Total émission de CO2 (g/km)</p></li>
+                      <li><span>5</span><p class="label">Consommation (l/100km)</p></li>
+                      <li>
+                        <span>b</span><div class="slice-infobulle">
+                          <span class="info" data-infobulle="ernergy{{ infobulleID }}"></span>
+                          <div class="infobulle scroller" data-infobulleo="ernergy{{ infobulleID }}">
+                            <p>Classe energetique (G/KM)</p>
+                            <img src="../../../img/energy.png" class="info-energy" alt="energy">
+                          </div>
+                        </div>
+                        <p class="label">Classe energetique</p>
+                      </li>
+                      <li><span>60</span><p class="label">Puissance (kw)</p></li>
+                      {{#if more_key_info}}<li><span>xx</span><p class="label">Lorem ipsum</p></li>{{/if}}
+                    </ul>
+                    <div class="custom-button-group">
+                      <p>
+                        <a href="#" class="cta-btn cta-btn-4" title="{/literal}{$slicePf61.translate.profit}{literal}" target="{{#if this.target}}{{this.target}}{{else}}_self{{/if}}">{/literal}<span>{$slicePf61.translate.profit}{literal}</span></a>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="line"></div>
+                  <div class="dealer-block span_12_of_12">
+                    <div class="left-col">
+                      <div class="km span_2_of_12">
+                        <span class="dist">{{ dealer.distanceKm }}</span>
+                        <span class="dist-type">{/literal}{$slicePf61.translate.distType}{literal}</span>
+                      </div>
+                      <div class="name span_8_of_12">
+                        <span class="dealer-name">{{ dealer.name }}</span>
+                        <span class="dealer-city">- {{ dealer.address.city }}</span>
+                        <span class="dealer-cp"> ({{ dealer.address.postal_code }})</span><br>
+                        <span class="dealer-street">{{ dealer.address.street }} - {{ dealer.address.postal_code }} {{ dealer.address.city }}</span>
+                        <p class="dealer-tel">{/literal}{$slicePf61.translate.phone}{literal} {{ dealer.contact.tel }}</p>
+                      </div>
+                    </div>
+                    <div class="view-file span_2_of_12">
+                      <span data-openpopin="file2">{/literal}{$slicePf61.translate.viewFile}{literal}</span>
+                    </div>
+                  </div>
+                </article>
+                {{/listIncompatible}}
+              </div>
+              <span class="moreResultsListInc" data-results="5" style="display: inline-block;">Afficher plus de résultats</span>
+            </div>
+          {/literal}{if ! isset($slicePf61.noresult)}{literal}
+          </div>
+          {/literal}{/if}{literal}
+        </div>
+        {{/if}}
+      </div>
+      {{/if}}
+      {/literal}
+    </div>
+  </section>
+  {else}
+  <section class="list-results{if isset($slicePf61.noNav)} product{/if}">
+    <div>
+      {if isset($slicePf61.noresult)}
+      {foreach $slicePf61.notification as $notification}
+        {include file="../../notification/notification.tpl"}
+      {/foreach}
+      {/if}
+      {literal}
+        {{#listDealer}}
+          {{#if listCars.length}}
+          <div class="list-car">
+            {/literal}{if ! isset($slicePf61.noresult)}
+            <h3 class="nbVehicle">
+              <span>0</span> véhicules correspondent à votre demande
+            </h3>
+            {/if}
+            {if ! isset($slicePf61.noNav)}{literal}
+            <div class="list-dealer">
+              <article class="clearfix span_12_of_12 dealer">
+                <div class="left-col">
+                  <div class="km span_2_of_12">
+                    <span class="dist">{{ distanceKm }}</span>
+                    <span class="dist-type">{/literal}{$slicePf61.translate.distType}{literal}</span>
+                  </div>
+                  <div class="name span_8_of_12">
+                    <span class="dealer-name">{{ name }}</span>
+                    <span class="dealer-city">- {{ address.city }}</span>
+                    <span class="dealer-cp"> ({{ address.postal_code }})</span><br>
+                    <span class="dealer-street">{{ address.street }} - {{ address.postal_code }} {{ address.city }}</span>
+                    <p class="dealer-tel">{/literal}{$slicePf61.translate.phone}{literal} {{ contact.tel }}</p>
+                  </div>
+                </div>
+                <div class="view-file span_2_of_12">
+                  <span data-openpopin="file2">{/literal}{$slicePf61.translate.viewFile}{literal}</span>
+                </div>
+              </article>
+            </div>
+            {/literal}{/if}{if ! isset($slicePf61.noresult)}{literal}
+            <div class="listCars listMore">
+              <div>
+              {{#listCars}}
+              <article class="span_12_of_12 clearfix" data-jsobj="[ { 'obj':'iso-infobulle' } ]">
+                <div class="grid-col span_12_of_12">
+                  <div class="car grid-col">
+                    <figure>
+                      <img src="{{ imageSrc }}" alt="{{ imageAlt }}" />
+                    </figure>
+                  </div>
+                  <div class="model grid-col">
+                    {{#if news}}<span>{/literal}{$slicePf61.translate.news}{literal}</span>{{/if}}
+                    <h3>{{ title }}</h3>
+                    <p>{{ engine }} </p>
+                    <p>{{ painting }} </p>
+                    <p><span>{/literal}{$slicePf61.translate.trimming}{literal}</span> : {{ trimming }} 33 </p>
+                    {{#if option}}
+                    <div class="slice-infobulle">
+                      <p class="options">Voir l'option <span class="info" data-infobulle="{{ infobulleID }}"></span></p>
+                      <div class="infobulle scroller" data-infobulleo="{{ infobulleID }}"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores eos quos aliquam repudiandae quam alias, eaque repellat tempore, ipsum molestias aut autem doloribus molestiae, pariatur officiis distinctio ratione totam doloremque.</p></div>
+                    </div>
+                    {{/if}}
+                  </div>
+                  <div class="offer grid-col span_4_of_12">
+                    <div class="prices{{#if prices.peugeot_perspectives}} monthly{{/if}}">
+                      {{#if prices.peugeot_perspectives}}
+                      <p>{{ prices.with }} <strong>{{ prices.peugeot_perspectives }}</strong>, <br />{{ prices.this_vehicule }}<br />{{ prices.price_from }} {{ prices.price }}{{ prices.devise }}{{ prices.by_month }}{{#if popinFinancement }}<a  href="#" data-openpopin="financement{{ popinFinancement.contents.id }}" class="info"></a>{{/if}}</p>
+                      <p>{{ prices.first_payment }}{{ prices.devise }}</p>
+                      <p>{{ prices.credit_legal }}</p>
+                      {{else}}
+                      <p><span>Prix net,<br>options incluses</span><span>{{ prices.price }} {/literal}{$slicePf61.translate.currency}</span></p>
+                      <p><span>Promotion <sup>(1)</sup></span><span>{literal}{{ prices.advice }} {/literal}{$slicePf61.translate.currency}</span></p>
+                      <p><span>Remise <sup>(1)</sup></span><span>{literal}1 000 {/literal}{$slicePf61.translate.currency}</span></p>
+                      <p><b><span>Total <sup>(2)</sup></span><span>{literal}1 200 {/literal}{$slicePf61.translate.currency}{literal}</span></b></p>
+                      {{/if}}
+                    </div>
+                    <div class="dispo_content">
+                      <p class="disponibility">
+                        {{ prices.disponibility.text }}{{ prices.disponibility.nbDays }}
+                        {{#ifCond prices.disponibility.nbDays 1}}
+                          {{ prices.disponibility.days.[0] }}
+                        {{else}}
+                          {{ prices.disponibility.days.[1] }}
+                        {{/ifCond}}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="span_12_of_12 bottom">
+                  <ul class="table list_style{{#if more_key_info}} two-lines{{/if}}">
+                    <li><span>114</span><p class="label">Total émission de CO2 (g/km)</p></li>
+                    <li><span>5</span><p class="label">Consommation (l/100km)</p></li>
+                    <li>
+                      <span>b</span><div class="slice-infobulle">
+                        <span class="info" data-infobulle="ernergy{{ infobulleID }}"></span>
+                        <div class="infobulle scroller" data-infobulleo="ernergy{{ infobulleID }}">
+                          <p>Classe energetique (G/KM)</p>
+                          <img src="../../../img/energy.png" class="info-energy" alt="energy">
+                        </div>
+                      </div>
+                      <p class="label">Classe energetique</p>
+                    </li>
+                    <li><span>60</span><p class="label">Puissance (kw)</p></li>
+                    {{#if more_key_info}}<li><span>xx</span><p class="label">Lorem ipsum</p></li>{{/if}}
+                  </ul>
+                  <div class="custom-button-group">
+                    <p>
+                      <a href="#" class="cta-btn cta-btn-4" title="{/literal}{$slicePf61.translate.profit}{literal}" target="{{#if this.target}}{{this.target}}{{else}}_self{{/if}}">{/literal}<span>{$slicePf61.translate.profit}</span>{literal}</a>
+                    </p>
+                  </div>
+                </div>
+                <div class="line"></div>
+              </article>
+              {{/listCars}}
+              </div>
+              <span class="moreResults" data-results="5">Afficher plus de résultats</span>
+            </div>
+            {/literal}
+            {/if}{literal}
+            {{/if}}
+            {{#if listIncompatible.length}}{/literal}
+            <div class="listIncompatible{if ! isset($slicePf61.noresult)} block-other-motors closed-motors{else} noresults{/if} clearfix">
+            {if ! isset($slicePf61.noresult)}
+              <h3 class="cat-title">
+                Véhicules proches de votre configuration
+              </h3>
+              <a href="#" class="open-motors link-motors" title="Voir le décor">Voir les véhicules</a>
+              <a href="#" class="close-motors link-motors" title="Masquer le décor">Masquer les véhicules</a>
+              <div class="slide-content">
+            {else}
+              <h3>
+                Nous vous proposons des véhicules approchants
+              </h3>
+              {/if}
+                {if ! isset($slicePf61.isProduct)}
+                <div class="criteres span_12_of_12 clearfix">
+                {if isset($slicePf61.isRegional)}
+                  <div class="grid-col span_6_of_12">
+                    <p class="span_12_of_12"><span>Quels critères souhaitez-vous conserver en priorité :</span></p>
+                    <div class="clearfix custom-button-group btn-large span_12_of_12">
+                      <div class="list cta-inline">
+                        <select name="" id="" class="select-js title-list"  data-jsobj="[ { 'obj':'iso-ctalistskin' } ]">
+                          <option value="#" selected="selected">Les véhicules Peugeot équipés du Combiné <br> tête haute</option>
+                          <option value="#1" >Peugeot 308</option>
+                          <option value="#2" >Peugeot 3008</option>
+                          <option value="#3" >Peugeot 206</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid-col span_6_of_12">
+                    <p class="span_12_of_12"><span>Vous souhaitez trier par :</span></p>
+                    <div class="clearfix custom-button-group btn-large span_12_of_12">
+                      <div class="list cta-inline">
+                        <select name="" id="" class="select-js title-list"  data-jsobj="[ { 'obj':'iso-ctalistskin' } ]">
+                          <option value="#" selected="selected">Distance</option>
+                          <option value="#1" >Prix</option>
+                          <option value="#2" >Disponibilité</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                {else}
+                  <p class="grid-col span_6_of_12"><span>Quels critères souhaitez-vous conserver en priorité :</span></p>
+                  <div class="clearfix custom-button-group btn-large grid-col span_6_of_12">
+                    <div class="list cta-inline">
+                      <select name="" id="" class="select-js title-list"  data-jsobj="[ { 'obj':'iso-ctalistskin' } ]">
+                        <option value="#" selected="selected">Moteur/Boîte de vitesse/Peinture</option>
+                        <option value="#1" >Peugeot 308</option>
+                        <option value="#2" >Peugeot 3008</option>
+                        <option value="#3" >Peugeot 206</option>
+                      </select>
+                    </div>
+                  </div>
+                {/if}
+                </div>
+                {/if}
+                <div class="listMores{if isset($slicePf61.isProduct)} product{/if}">{literal}
+                  <div>
+                    {{#listIncompatible}}
+                    <article class="span_12_of_12 clearfix" data-jsobj="[ { 'obj':'iso-infobulle' } ]">
+                      <div class="grid-col span_12_of_12">
+                        <div class="car grid-col">
+                          <figure>
+                            <img src="{{ imageSrc }}" alt="{{ imageAlt }}" />
+                          </figure>
+                        </div>
+                        <div class="model grid-col">
+                          {{#if news}}<span>{/literal}{$slicePf61.translate.news}{literal}</span>{{/if}}
+                          <h3>{{ title }}</h3>
+                          <p>{{ engine }} </p>
+                          <p>{{ painting }} </p>
+                          <p><span>{/literal}{$slicePf61.translate.trimming}{literal}</span> : {{ trimming }} 33 </p>
+                          {{#if option}}
+                          <div class="slice-infobulle">
+                            <p class="options">Voir l'option <span class="info" data-infobulle="{{ infobulleID }}"></span></p>
+                            <div class="infobulle scroller" data-infobulleo="{{ infobulleID }}"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores eos quos aliquam repudiandae quam alias, eaque repellat tempore, ipsum molestias aut autem doloribus molestiae, pariatur officiis distinctio ratione totam doloremque.</p></div>
+                          </div>
+                          {{/if}}
+                        </div>
+                        <div class="offer grid-col span_4_of_12">
+                          <div class="prices{{#if prices.peugeot_perspectives}} monthly{{/if}}">
+                            {{#if prices.peugeot_perspectives}}
+                            <p>{{ prices.with }} <strong>{{ prices.peugeot_perspectives }}</strong>, <br />{{ prices.this_vehicule }}<br />{{ prices.price_from }} {{ prices.price }}{{ prices.devise }}{{ prices.by_month }}{{#if popinFinancement }}<a  href="#" data-openpopin="financement{{ popinFinancement.contents.id }}" class="info"></a>{{/if}}</p>
+                            <p>{{ prices.first_payment }}{{ prices.devise }}</p>
+                            <p>{{ prices.credit_legal }}</p>
+                            {{else}}
+                            <p><span>Prix net,<br>options incluses</span><span>{{ prices.price }} {/literal}{$slicePf61.translate.currency}</span></p>
+                            <p><span>Promotion <sup>(1)</sup></span><span>{literal}{{ prices.advice }} {/literal}{$slicePf61.translate.currency}</span></p>
+                            <p><span>Remise <sup>(1)</sup></span><span>{literal}1 000 {/literal}{$slicePf61.translate.currency}</span></p>
+                            <p><b><span>Total <sup>(2)</sup></span><span>{literal}1 200 {/literal}{$slicePf61.translate.currency}{literal}</span></b></p>
+                            {{/if}}
+                          </div>
+                          <div class="dispo_content">
+                            <p class="disponibility">
+                              {{ prices.disponibility.text }}{{ prices.disponibility.nbDays }}
+                              {{#ifCond prices.disponibility.nbDays 1}}
+                                {{ prices.disponibility.days.[0] }}
+                              {{else}}
+                                {{ prices.disponibility.days.[1] }}
+                              {{/ifCond}}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="span_12_of_12 bottom">
+                        <ul class="table list_style{{#if more_key_info}} two-lines{{/if}}">
+                          <li><span>114</span><p class="label">Total émission de CO2 (g/km)</p></li>
+                          <li><span>5</span><p class="label">Consommation (l/100km)</p></li>
+                          <li>
+                            <span>b</span><div class="slice-infobulle">
+                              <span class="info" data-infobulle="ernergy{{ infobulleID }}"></span>
+                              <div class="infobulle scroller" data-infobulleo="ernergy{{ infobulleID }}">
+                                <p>Classe energetique (G/KM)</p>
+                                <img src="../../../img/energy.png" class="info-energy" alt="energy">
+                              </div>
+                            </div>
+                            <p class="label">Classe energetique</p>
+                          </li>
+                          <li><span>60</span><p class="label">Puissance (kw)</p></li>
+                          {{#if more_key_info}}<li><span>xx</span><p class="label">Lorem ipsum</p></li>{{/if}}
+                        </ul>
+                        <div class="custom-button-group">
+                          <p>
+                            <a href="#" class="cta-btn cta-btn-4" title="{/literal}{$slicePf61.translate.profit}{literal}" target="{{#if this.target}}{{this.target}}{{else}}_self{{/if}}">{/literal}<span>{$slicePf61.translate.profit}{literal}</span></a>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="line"></div>
+                    </article>
+                    {{/listIncompatible}}
+                    {/literal}
+                    {if isset($slicePf61.isRegional)}
+                    {literal}
+                    <div class="list-dealer">
+                      <article class="clearfix span_12_of_12 dealer">
+                        <div class="left-col">
+                          <div class="km span_2_of_12">
+                            <span class="dist">{{ distanceKm }}</span>
+                            <span class="dist-type">{/literal}{$slicePf61.translate.distType}{literal}</span>
+                          </div>
+                          <div class="name span_8_of_12">
+                            <span class="dealer-name">{{ name }}</span>
+                            <span class="dealer-city">- {{ address.city }}</span>
+                            <span class="dealer-cp"> ({{ address.postal_code }})</span><br>
+                            <span class="dealer-street">{{ address.street }} - {{ address.postal_code }} {{ address.city }}</span>
+                            <p class="dealer-tel">{/literal}{$slicePf61.translate.phone}{literal} {{ contact.tel }}</p>
+                          </div>
+                        </div>
+                        <div class="view-file span_2_of_12">
+                          <a href="{{ contact.vcf }}">{/literal}{$slicePf61.translate.viewFile}{literal}</a>
+                        </div>
+                      </article>
+                    </div>
+                    {/literal}
+                    {/if}
+                    {literal}
+                  </div>
+                  <span class="moreResultsListInc" data-results="5" style="display: inline-block;">Afficher plus de résultats</span>
+                </div>
+              {/literal}{if ! isset($slicePf61.noresult)}{literal}
+              </div>
+              {/literal}{/if}{literal}
+            </div>
+          </div>
+          {{/if}}
+        {{/listDealer}}
+      {/literal}
+    </div>
+  </section>
+  {/if}
+  <section class="slice-inside-margin bottom">
+    <p class="mentions">{$slicePf61.translate.legal_notices}</p>
+  </section>
+  <section class="popin_overlay" data-jsobj="[ { 'obj':'iso-popin' } ]">
+      <div class="color--blue1 close"></div>
+
+      {if isset($slicePf61.popinFinancement)}
+        {foreach $slicePf61.popinFinancement as $ticket}
+          {include file="../../popin-financement/popin-financement.tpl"}
+        {/foreach}
+      {/if}
+
+      <div class="popin popin--file scroller" data-popin="file2">
+        <span class="clbtn close">Fermer</span>
+        <section>
+          <h2 class="title">Votre point de vente</h2>
+          <article class="dealer clearfix span_12_of_12">
+            <h3>Peugeot blue automobile</h3>
+            <div class="grid-col span_6_of_12">
+              <p>1, avenue Albert 1er</p>
+              <p>97200 Fort de france</p>
+            </div>
+            <div class="grid-col span_6_of_12">
+              <p>Tel. 01 47 85 23 69</p>
+              <p>Fax. 01 47 85 23 69</p>
+            </div>
+          </article>
+          <article class="clearfix span_12_of_12">
+            <div class="grid-col span_6_of_12">
+              <p class="title">Horaires</p>
+              <ul class="list-timesheet list_style">
+                  <li>
+                      <span>Lundi</span> 8h-12h 14h-18h30
+                  </li>
+                  <li>
+                      <span>Mardi</span> 8h-12h 14h-18h30
+                  </li>
+                  <li>
+                      <span>Mercredi</span> 8h-12h 14h-18h30
+                  </li>
+                  <li>
+                      <span>Jeudi</span> 8h-12h 14h-18h30
+                  </li>
+                  <li>
+                      <span>Vendredi</span> 8h-12h 14h-18h30
+                  </li>
+                  <li>
+                      <span>Samedi</span> 9h-12h
+                  </li>
+                  <li>
+                      <span>Dimanche</span> Fermé
+                  </li>
+              </ul>
+            </div>
+            <div class="grid-col span_6_of_12">
+              <p class="title">A propos de ce point de vente</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque consectetur porttitor ex sagittis bibendum. Proin eget porta enim. Praesent eleifend diam ligula, sed porttitor tortor commodo in. Vestibulum imperdiet eget lectus sed volutpat. Fusce gravida quam purus, sed suscipit mi pharetra eget. Integer vitae tristique orci. Quisque luctus posuere quam, et convallis velit. Donec a justo non enim mollis mollis.</p>
+            </div>
+          </article>
+        </section>
+      </div>
+  </section>
+</section>

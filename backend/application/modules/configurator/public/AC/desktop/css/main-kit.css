@@ -1,0 +1,56 @@
+.cn14 h1 {
+  color: #c2b000;
+}
+.cn14 #nav {
+  border-left: 4px solid #82cddc;
+  border-right: 4px solid #82cddc;
+  border-bottom: 4px solid #82cddc;
+}
+.cn14 #nav .backActive {
+  border-top: 4px solid #82cddc;
+}
+.cn14 #nav #main-menu {
+  background-color: #82cddc;
+}
+.cn14 #nav #main-menu .numero {
+  color: rgba(194, 230, 237, 0.45);
+}
+.cn14 #nav #main-menu > li {
+  background-color: #82cddc;
+}
+.cn14 #nav #main-menu > li.disabled:hover {
+  background-color: #82cddc;
+}
+.cn14 #nav #main-menu > li > a:hover {
+  box-shadow: 0 4px 0 0 #82cddc inset;
+}
+.cn14 #nav #main-menu > li ul li.active > a, .cn14 #nav #main-menu > li ul li:hover > a {
+  background-color: #c2b000;
+}
+.cn14 #nav #main-menu > li.active > a {
+  color: #82cddc;
+}
+.cn14 #nav #main-menu > li:last-child.active > a span {
+  color: #82cddc;
+}
+.cn14 #nav #main-menu > li:last-child > a:hover span {
+  color: #82cddc;
+}
+
+.slice-cf41 .nb .kit-color {
+  color: #c2b000;
+}
+
+.slice-cf42 .nb .kit-color {
+  color: #c2b000;
+}
+
+.slice-cf43 .nb .kit-color {
+  color: #c2b000;
+}
+
+.slice-cf53 p.disponility span.nbr {
+  color: #c2b000;
+}
+
+/*# sourceMappingURL=main-kit.css.map */

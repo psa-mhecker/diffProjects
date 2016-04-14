@@ -1,0 +1,457 @@
+<section class="slice-pf47 {if isset($slicePF47.anchorId)} {$slicePF47.anchorId} {/if}" {if isset($slicePF47.anchorId)} id="{$slicePF47.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePF47' } ]">
+    {assign  var="count" value=$slicePF47.wizardSteps|count}
+    <ul class="wizard-steps {if $count eq 2 }only-two{/if} ">
+        {foreach $slicePF47.wizardSteps as $step}
+            <li class="{if isset($step.isActive) and $step.isActive eq true}active{/if}">
+                <div><span>{$step.name}</span></div>
+            </li>
+        {/foreach}
+    </ul>
+    <form action="../../../js/lib/iso/components/results.json" method="POST" class="form-horizontal filtre">
+        <div class="errorbox"></div>
+
+        {if isset($slicePF47.step1) and $slicePF47.step1 eq true}
+            <div class="select object-select ">
+                <label class="control-label">{$slicePF47.myInfosForm.selectBrand.txt}{if isset($slicePF47.myInfosForm.selectBrand.required) and $slicePF47.myInfosForm.selectBrand.required eq true}*{/if}</label>
+
+                <div class="form-control">
+                    <div class="fake-select">
+                        <select name="{$slicePF47.myInfosForm.selectBrand.name}" class="select-js"
+                                id="{$slicePF47.myInfosForm.selectBrand.name}"
+                                {if isset($slicePF47.myInfosForm.selectBrand.required) and $slicePF47.myInfosForm.selectBrand.required eq true}required
+                                data-msg-required="{$slicePF47.myInfosForm.selectBrand.errorMsg}"{/if}  {if isset($slicePF47.myInfosForm.selectBrand.disabled) and $slicePF47.myInfosForm.selectBrand.disabled eq true}disabled{/if}>
+                            {foreach $slicePF47.myInfosForm.selectBrand.choises as $type}
+                                <option value="{if isset($type.value)}{$type.value} {/if}"{if isset($type.target)} data-target="{$type.target}"{/if}>{$type.txt}</option>
+                            {/foreach}
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="select object-select fields-show-2">
+                <label class="control-label">{$slicePF47.myInfosForm.selectSerialNum.txt}{if isset($slicePF47.myInfosForm.selectSerialNum.required) and $slicePF47.myInfosForm.selectSerialNum.required eq true}*{/if}</label>
+
+                <div class="form-control">
+                    <div class="fake-select">
+                        <select name="{$slicePF47.myInfosForm.selectSerialNum.name}" class="select-js"
+                                id="{$slicePF47.myInfosForm.selectSerialNum.name}"
+                                {if isset($slicePF47.myInfosForm.selectSerialNum.required) and $slicePF47.myInfosForm.selectSerialNum.required eq true}required
+                                data-msg-required="{$slicePF47.myInfosForm.selectSerialNum.errorMsg}"{/if}  {if isset($slicePF47.myInfosForm.selectSerialNum.disabled) and $slicePF47.myInfosForm.selectSerialNum.disabled eq true}disabled{/if}>
+                            {foreach $slicePF47.myInfosForm.selectSerialNum.choises as $type}
+                                <option value="{$type.value}"{if isset($type.target)} data-target="{$type.target}"{/if}>{$type.txt}</option>
+                            {/foreach}
+                        </select>
+                    </div>
+                    <a href="#" class="help" {if isset($slicePF47.myInfosForm.selectSerialNum.target)}target="{$slicePF47.myInfosForm.selectSerialNum.target}"{/if}><!-- help --></a>
+                </div>
+            </div>
+            <div class="select object-select fields-hide-2">
+                <label class="control-label">{$slicePF47.myInfosForm.selectModel.txt}{if isset($slicePF47.myInfosForm.selectModel.required) and $slicePF47.myInfosForm.selectModel.required eq true}*{/if}</label>
+
+                <div class="form-control">
+                    <div class="fake-select">
+                        <select name="{$slicePF47.myInfosForm.selectModel.name}" class="select-js"
+                                id="{$slicePF47.myInfosForm.selectModel.name}"
+                                {if isset($slicePF47.myInfosForm.selectModel.required) and $slicePF47.myInfosForm.selectModel.required eq true}required
+                                data-msg-required="{$slicePF47.myInfosForm.selectModel.errorMsg}"{/if}  {if isset($slicePF47.myInfosForm.selectModel.disabled) and $slicePF47.myInfosForm.selectModel.disabled eq true}disabled{/if}>
+                            {foreach $slicePF47.myInfosForm.selectModel.choises as $type}
+                                <option value="{$type.value}"{if isset($type.target)} data-target="{$type.target}"{/if}>{$type.txt}</option>
+                            {/foreach}
+                        </select>
+                    </div>
+                    <a href="#" class="help" {if isset($slicePF47.myInfosForm.selectSerialNum.target)}target="{$slicePF47.myInfosForm.selectSerialNum.target}"{/if}><!-- help --></a>
+                </div>
+            </div>
+            {foreach $slicePF47.myInfosForm.fieldsText1 as $field}
+                <div class="input-text {if isset($field.fieldsHide) and $field.fieldsHide eq true}fields-hide-2{/if}">
+                    <label class="control-label"
+                           for="{$field.name}">{$field.txt}{if isset($field.required) and $field.required eq true}*{/if}</label>
+
+                    <div class="form-control">
+                        <input type="{if $field.name == 'fichier'}file{else}text{/if}" name="{$field.name}"
+                               id="{$field.name}" {if $field.name == 'email'}data-rule-email="true"
+                               data-msg-email="{$field.errorMsgEmail}"{/if} {if $field.name == 'telephone'} data-rule-number="true" data-msg-number="{$field.errorMsgTel}"{/if}  {if isset($field.disabled) and $field.disabled eq true}disabled{/if}  {if isset($field.required) and $field.required eq true}required data-msg-required="{$field.errorMsg}"{/if}   {if isset($field.placeHolder)}placeholder="{$field.placeHolder}"{/if} >
+                    </div>
+                </div>
+            {/foreach}
+            <div class="select object-select">
+                <label class="control-label">{$slicePF47.myInfosForm.selectIntervention.txt}{if isset($slicePF47.myInfosForm.selectIntervention.required) and $slicePF47.myInfosForm.selectIntervention.required eq true}*{/if}</label>
+
+                <div class="form-control">
+                    <div class="fake-select">
+                        <select name="{$slicePF47.myInfosForm.selectIntervention.name}" class="select-js"
+                                id="{$slicePF47.myInfosForm.selectIntervention.name}"
+                                {if isset($slicePF47.myInfosForm.selectIntervention.required) and $slicePF47.myInfosForm.selectIntervention.required eq true}required
+                                data-msg-required="{$slicePF47.myInfosForm.selectIntervention.errorMsg}"{/if}  {if isset($slicePF47.myInfosForm.selectIntervention.disabled) and $slicePF47.myInfosForm.selectIntervention.disabled eq true}disabled{/if}>
+                            {foreach $slicePF47.myInfosForm.selectIntervention.choises as $type}
+                                <option value="{$type.value}"{if isset($type.target)} data-target="{$type.target}"{/if}>{$type.txt}</option>
+                            {/foreach}
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="select object-select fields-hide-2">
+                <label class="control-label">{$slicePF47.myInfosForm.selectDate.txt}{if isset($slicePF47.myInfosForm.selectDate.required) and $slicePF47.myInfosForm.selectDate.required eq true}*{/if}</label>
+
+                <div class="form-control">
+                    <div class="fake-select">
+                        <select name="{$slicePF47.myInfosForm.selectDate.nameMonth}" class="select-js date"
+                                id="{$slicePF47.myInfosForm.selectDate.nameMonth}"
+                                {if isset($slicePF47.myInfosForm.selectDate.required) and $slicePF47.myInfosForm.selectDate.required eq true}required
+                                data-msg-required="{$slicePF47.myInfosForm.selectDate.errorMsg}"{/if}  {if isset($slicePF47.myInfosForm.selectDate.disabled) and $slicePF47.myInfosForm.selectDate.disabled eq true}disabled{/if}>
+                            {foreach $slicePF47.myInfosForm.selectDate.choisesMonth as $type}
+                                <option value="{$type.value}"{if isset($type.target)} data-target="{$type.target}"{/if}>{$type.txt}</option>
+                            {/foreach}
+                        </select>
+                    </div>
+                    <div class="fake-select">
+                        <select name="{$slicePF47.myInfosForm.selectDate.nameYear}" class="select-js date"
+                                id="{$slicePF47.myInfosForm.selectDate.nameYear}"
+                                {if isset($slicePF47.myInfosForm.selectDate.required) and $slicePF47.myInfosForm.selectDate.required eq true}required
+                                data-msg-required="{$slicePF47.myInfosForm.selectDate.errorMsg}"{/if}  {if isset($slicePF47.myInfosForm.selectDate.disabled) and $slicePF47.myInfosForm.selectDate.disabled eq true}disabled{/if}>
+                            {foreach $slicePF47.myInfosForm.selectDate.choisesYear as $type}
+                                <option value="{$type.value}"{if isset($type.target)} data-target="{$type.target}"{/if}>{$type.txt}</option>
+                            {/foreach}
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <p class="notice">{$slicePF47.myInfosForm.noticeRequire}</p>
+           	<div class="custom-button-group">
+                <div class="form-control">
+                    <div class="form-action">
+                        <button class="cta-block cta-btn cta-btn-4">{$slicePF47.myInfosForm.actionFrom.sendButton}</button>
+                    </div>
+                </div>
+            </div>
+        {/if}
+
+        {if isset($slicePF47.step12) and $slicePF47.step12 eq true}
+            <div class="select object-select ">
+                <label class="control-label">{$slicePF47.myInfosForm.selectBrand.txt}{if isset($slicePF47.myInfosForm.selectBrand.required) and $slicePF47.myInfosForm.selectBrand.required eq true}*{/if}</label>
+
+                <div class="form-control">
+                    <div class="fake-select">
+                        <select name="{$slicePF47.myInfosForm.selectBrand.name}" class="select-js"
+                                id="{$slicePF47.myInfosForm.selectBrand.name}"
+                                {if isset($slicePF47.myInfosForm.selectBrand.required) and $slicePF47.myInfosForm.selectBrand.required eq true}required
+                                data-msg-required="{$slicePF47.myInfosForm.selectBrand.errorMsg}"{/if}  {if isset($slicePF47.myInfosForm.selectBrand.disabled) and $slicePF47.myInfosForm.selectBrand.disabled eq true}disabled{/if}>
+                            {foreach $slicePF47.myInfosForm.selectBrand.choises as $type}
+                                <option value="{$type.value}"{if isset($type.target)} data-target="{$type.target}"{/if}>{$type.txt}</option>
+                            {/foreach}
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="select object-select fields-show-2">
+                <label class="control-label">{$slicePF47.myInfosForm.selectSerialNum.txt}{if isset($slicePF47.myInfosForm.selectSerialNum.required) and $slicePF47.myInfosForm.selectSerialNum.required eq true}*{/if}</label>
+
+                <div class="form-control">
+                    <div class="fake-select">
+                        <select name="{$slicePF47.myInfosForm.selectSerialNum.name}" class="select-js"
+                                id="{$slicePF47.myInfosForm.selectSerialNum.name}"
+                                {if isset($slicePF47.myInfosForm.selectSerialNum.required) and $slicePF47.myInfosForm.selectSerialNum.required eq true}required
+                                data-msg-required="{$slicePF47.myInfosForm.selectSerialNum.errorMsg}"{/if}  {if isset($slicePF47.myInfosForm.selectSerialNum.disabled) and $slicePF47.myInfosForm.selectSerialNum.disabled eq true}disabled{/if}>
+                            {foreach $slicePF47.myInfosForm.selectSerialNum.choises as $type}
+                                <option value="{$type.value}"{if isset($type.target)} data-target="{$type.target}"{/if}>{$type.txt}</option>
+                            {/foreach}
+                        </select>
+                    </div>
+                    <a href="#" class="help" {if isset($slicePF47.myInfosForm.selectSerialNum.target)}target="{$slicePF47.myInfosForm.selectSerialNum.target}"{/if}><!-- help --></a>
+                </div>
+            </div>
+            <div class="select object-select fields-hide-2">
+                <label class="control-label">{$slicePF47.myInfosForm.selectIntervention.txt}{if isset($slicePF47.myInfosForm.selectIntervention.required) and $slicePF47.myInfosForm.selectIntervention.required eq true}*{/if}</label>
+
+                <div class="form-control">
+                    <div class="fake-select">
+                        <select name="{$slicePF47.myInfosForm.selectIntervention.name}" class="select-js"
+                                id="{$slicePF47.myInfosForm.selectIntervention.name}"
+                                {if isset($slicePF47.myInfosForm.selectIntervention.required) and $slicePF47.myInfosForm.selectIntervention.required eq true}required
+                                data-msg-required="{$slicePF47.myInfosForm.selectIntervention.errorMsg}"{/if}  {if isset($slicePF47.myInfosForm.selectIntervention.disabled) and $slicePF47.myInfosForm.selectIntervention.disabled eq true}disabled{/if}>
+                            {foreach $slicePF47.myInfosForm.selectIntervention.choises as $type}
+                                <option value="{$type.value}"{if isset($type.target)} data-target="{$type.target}"{/if}>{$type.txt}</option>
+                            {/foreach}
+                        </select>
+                    </div>
+                    <a href="#" class="help" {if isset($slicePF47.myInfosForm.selectSerialNum.target)}target="{$slicePF47.myInfosForm.selectSerialNum.target}"{/if}><!-- help --></a>
+                </div>
+            </div>
+            {foreach $slicePF47.myInfosForm.fieldsText1 as $field}
+                <div class="input-text {if isset($field.fieldsHide) and $field.fieldsHide eq true}fields-hide-2{/if}">
+                    <label class="control-label"
+                           for="{$field.name}">{$field.txt}{if isset($field.required) and $field.required eq true}*{/if}</label>
+
+                    <div class="form-control">
+                        <input type="{if $field.name == 'fichier'}file{else}text{/if}" name="{$field.name}"
+                               id="{$field.name}" {if $field.name == 'email'}data-rule-email="true"
+                               data-msg-email="{$field.errorMsgEmail}"{/if} {if $field.name == 'telephone'} data-rule-number="true" data-msg-number="{$field.errorMsgTel}"{/if}  {if isset($field.disabled) and $field.disabled eq true}disabled{/if}  {if isset($field.required) and $field.required eq true}required data-msg-required="{$field.errorMsg}"{/if}   {if isset($field.placeHolder)}placeholder="{$field.placeHolder}"{/if} >
+                    </div>
+                </div>
+            {/foreach}
+            <div class="select object-select">
+                <label class="control-label">{$slicePF47.myInfosForm.selectIntervention.txt}{if isset($slicePF47.myInfosForm.selectIntervention.required) and $slicePF47.myInfosForm.selectIntervention.required eq true}*{/if}</label>
+
+                <div class="form-control">
+                    <div class="fake-select">
+                        <select name="{$slicePF47.myInfosForm.selectIntervention.name}" class="select-js"
+                                id="{$slicePF47.myInfosForm.selectIntervention.name}"
+                                {if isset($slicePF47.myInfosForm.selectIntervention.required) and $slicePF47.myInfosForm.selectIntervention.required eq true}required
+                                data-msg-required="{$slicePF47.myInfosForm.selectIntervention.errorMsg}"{/if}  {if isset($slicePF47.myInfosForm.selectIntervention.disabled) and $slicePF47.myInfosForm.selectIntervention.disabled eq true}disabled{/if}>
+                            {foreach $slicePF47.myInfosForm.selectIntervention.choises as $type}
+                                <option value="{$type.value}"{if isset($type.target)} data-target="{$type.target}"{/if}>{$type.txt}</option>
+                            {/foreach}
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <p class="notice">{$slicePF47.myInfosForm.noticeRequire}</p>
+			<div class="custom-button-group">
+                <div class="form-control">
+                    <div class="form-action">                	
+                        <button class="cta-block cta-btn cta-btn-4">{$slicePF47.myInfosForm.actionFrom.sendButton}</button>
+                    </div>
+                </div>
+            </div>
+        {/if}
+
+        {if isset($slicePF47.step2) and $slicePF47.step2 eq true}
+            <div class="box-selection clearfix">
+                <div class="box-left">
+                    <div class="select object-select">
+                        <label class="control-label">{$slicePF47.myInfosForm.selectYourModel.txt}{if isset($slicePF47.myInfosForm.selectYourModel.required) and $slicePF47.myInfosForm.selectYourModel.required eq true}*{/if}</label>
+
+                        <div class="form-control">
+                            <div class="fake-select">
+                                <select name="{$slicePF47.myInfosForm.selectYourModel.name}" class="select-js send-ajax"
+                                        id="{$slicePF47.myInfosForm.selectYourModel.name}"
+                                        {if isset($slicePF47.myInfosForm.selectYourModel.required) and $slicePF47.myInfosForm.selectYourModel.required eq true}required
+                                        data-msg-required="{$slicePF47.myInfosForm.selectYourModel.errorMsg}"{/if}  {if isset($slicePF47.myInfosForm.selectYourModel.disabled) and $slicePF47.myInfosForm.selectYourModel.disabled eq true}disabled{/if}>
+                                    {foreach $slicePF47.myInfosForm.selectYourModel.choises as $type}
+                                        <option value="{$type.value}"{if isset($type.target)} data-target="{$type.target}"{/if}>{$type.txt}</option>
+                                    {/foreach}
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="select object-select">
+                        <label class="control-label">{$slicePF47.myInfosForm.selectSilhouette.txt}{if isset($slicePF47.myInfosForm.selectSilhouette.required) and $slicePF47.myInfosForm.selectBrand.required eq true}*{/if}</label>
+
+                        <div class="form-control">
+                            <div class="fake-select">
+                                <select name="{$slicePF47.myInfosForm.selectSilhouette.name}"
+                                        class="select-js send-ajax" id="{$slicePF47.myInfosForm.selectSilhouette.name}"
+                                        {if isset($slicePF47.myInfosForm.selectSilhouette.required) and $slicePF47.myInfosForm.selectSilhouette.required eq true}required
+                                        data-msg-required="{$slicePF47.myInfosForm.selectSilhouette.errorMsg}"{/if}  {if isset($slicePF47.myInfosForm.selectSilhouette.disabled) and $slicePF47.myInfosForm.selectSilhouette.disabled eq true}disabled{/if}>
+                                    {foreach $slicePF47.myInfosForm.selectSilhouette.choises as $type}
+                                        <option value="{$type.value}"{if isset($type.target)} data-target="{$type.target}"{/if}>{$type.txt}</option>
+                                    {/foreach}
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-right filtre-results">
+                    {literal}
+                        {{#results}}
+                        <figure>
+                            <img src="{{image.src}}" alt="{{image.alt}}"/>
+                        </figure>
+                        {{/results}}
+                    {/literal}
+                </div>
+            </div>
+            <div>
+                <div class="box-survey">
+                    <p>{$slicePF47.myInfosForm.survey.txt}</p>
+                    <ul class="list-vision clearfix">
+                        <li class="grid-col span_3_of_12">{$slicePF47.myInfosForm.survey.vision1}</li>
+                        <li class="grid-col span_3_of_12 active">{$slicePF47.myInfosForm.survey.vision2}</li>
+                        <li class="grid-col span_3_of_12">{$slicePF47.myInfosForm.survey.vision3}</li>
+                        <li class="grid-col span_3_of_12">{$slicePF47.myInfosForm.survey.vision4}</li>
+                    </ul>
+                    <div class="checkbox">
+                        <input type="checkbox" name="{$slicePF47.myInfosForm.survey.choises.name}"
+                               id="{$slicePF47.myInfosForm.survey.choises.name}" value=""
+                               {if isset($slicePF47.myInfosForm.survey.choises.checked) and $slicePF47.myInfosForm.survey.choises.checked eq true}checked{/if}  >
+                        <label for="{$slicePF47.myInfosForm.survey.choises.name}">{$slicePF47.myInfosForm.survey.choises.txt}</label>
+                    </div>
+                </div>
+            </div>
+            <div class="checkbox-group clearfix">
+                <p>{$slicePF47.myInfosForm.brochure.txt}</p>
+                {foreach $slicePF47.myInfosForm.brochure.category as $cat}
+                    <div class="checkbox-row clearfix">
+                        <label class="grid-col span_3_of_12">{$cat.txt}</label>
+
+                        <div class="grid-col span_9_of_12">
+                            {foreach $cat.choise as $type}
+                                <div class="checkbox grid-col span_4_of_12">
+                                    <input type="checkbox" name="{$type.name}" id="{$type.name}" value=""
+                                           {if isset($type.checked) and $type.checked eq true}checked{/if}  >
+                                    <label for="{$type.name}">{$type.txt}</label>
+                                </div>
+                            {/foreach}
+                        </div>
+                    </div>
+                {/foreach}
+            </div>
+            {if isset($slicePF47.myInfosForm.refine)}
+                <div class="radio-group contact-by">
+                    <p class="control-label">{$slicePF47.myInfosForm.refine.txt}{if isset($slicePF47.myInfosForm.refine.required) and $slicePF47.myInfosForm.refine.required eq true}*{/if}</p>
+
+                    <div class="form-control">
+                        <ul>
+                            {foreach $slicePF47.myInfosForm.refine.choises as $type}
+                                <li class="radio">
+                                    <input type="radio" name="{$slicePF47.myInfosForm.refine.name}"
+                                           {if isset($type.checked) and $type.checked eq true}checked="checked"{/if}
+                                           value=""
+                                           id="{$type.name}" {if isset($type.disabled) and $type.disabled eq true}disabled{/if}  {if isset($slicePF47.myInfosForm.refine.required) and $slicePF47.myInfosForm.refine.required eq true}required data-msg-required="{$slicePF47.myInfosForm.refine.errorMsg}"{/if}  {if isset($type.checked) and $type.checked eq true}checked{/if}>
+                                    <label for="{$type.name}">{$type.txt}</label>
+                                </li>
+                            {/foreach}
+                        </ul>
+                    </div>
+                </div>
+                <div class="box-selection box-selection-bottom fields-hide-2 clearfix">
+                    <div class="box-left">
+                        <div class="select object-select">
+                            <label class="control-label">{$slicePF47.myInfosForm.selectBrand.txt}{if isset($slicePF47.myInfosForm.selectBrand.required) and $slicePF47.myInfosForm.selectBrand.required eq true}*{/if}</label>
+
+                            <div class="form-control">
+                                <div class="fake-select">
+                                    <select name="{$slicePF47.myInfosForm.selectBrand.name}" class="select-js"
+                                            id="{$slicePF47.myInfosForm.selectBrand.name}"
+                                            {if isset($slicePF47.myInfosForm.selectBrand.required) and $slicePF47.myInfosForm.selectBrand.required eq true}required
+                                            data-msg-required="{$slicePF47.myInfosForm.selectBrand.errorMsg}"{/if}  {if isset($slicePF47.myInfosForm.selectBrand.disabled) and $slicePF47.myInfosForm.selectBrand.disabled eq true}disabled{/if}>
+                                        <option value="{if isset($type.value)}{$type.value} {/if}"{if isset($type.target)} data-target="{$type.target}"{/if}>{$slicePF47.myInfosForm.selectBrand.choiseTxt}</option>
+                                        {foreach $slicePF47.myInfosForm.selectBrand.choises as $type}
+                                            <option value="{if isset($type.value)}{$type.value} {/if}"{if isset($type.target)} data-target="{$type.target}"{/if}>{$type.txt}</option>
+                                        {/foreach}
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="select object-select">
+                            <label class="control-label">{$slicePF47.myInfosForm.selectModel.txt}{if isset($slicePF47.myInfosForm.selectModel.required) and $slicePF47.myInfosForm.selectModel.required eq true}*{/if}</label>
+
+                            <div class="form-control">
+                                <div class="fake-select">
+                                    <select name="{$slicePF47.myInfosForm.selectModel.name}" class="select-js"
+                                            id="{$slicePF47.myInfosForm.selectModel.name}"
+                                            {if isset($slicePF47.myInfosForm.selectModel.required) and $slicePF47.myInfosForm.selectModel.required eq true}required
+                                            data-msg-required="{$slicePF47.myInfosForm.selectModel.errorMsg}"{/if}  {if isset($slicePF47.myInfosForm.selectModel.disabled) and $slicePF47.myInfosForm.selectModel.disabled eq true}disabled{/if}>
+                                        <option value="{if isset($type.value)}{$type.value} {/if}"{if isset($type.target)} data-target="{$type.target}"{/if}>{$slicePF47.myInfosForm.selectModel.choiseTxt}</option>
+                                        {foreach $slicePF47.myInfosForm.selectModel.choises as $type}
+                                            <option value="{if isset($type.value)}{$type.value} {/if}"{if isset($type.target)} data-target="{$type.target}"{/if}>{$type.txt}</option>
+                                        {/foreach}
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="select object-select">
+                            <label class="control-label">{$slicePF47.myInfosForm.selectDate.txt}{if isset($slicePF47.myInfosForm.selectDate.required) and $slicePF47.myInfosForm.selectDate.required eq true}*{/if}</label>
+
+                            <div class="form-control form-control-date">
+                                <div class="fake-select">
+                                    <select name="{$slicePF47.myInfosForm.selectDate.nameMonth}" class="select-js date"
+                                            id="{$slicePF47.myInfosForm.selectDate.nameMonth}"
+                                            {if isset($slicePF47.myInfosForm.selectDate.required) and $slicePF47.myInfosForm.selectDate.required eq true}required
+                                            data-msg-required="{$slicePF47.myInfosForm.selectDate.errorMsg}"{/if}  {if isset($slicePF47.myInfosForm.selectDate.disabled) and $slicePF47.myInfosForm.selectDate.disabled eq true}disabled{/if}>
+                                        {foreach $slicePF47.myInfosForm.selectDate.choisesMonth as $type}
+                                            <option value="{$type.value}"{if isset($type.target)} data-target="{$type.target}"{/if}>{$type.txt}</option>
+                                        {/foreach}
+                                    </select>
+                                </div>
+                                <div class="fake-select">
+                                    <select name="{$slicePF47.myInfosForm.selectDate.nameYear}" class="select-js date"
+                                            id="{$slicePF47.myInfosForm.selectDate.nameYear}"
+                                            {if isset($slicePF47.myInfosForm.selectDate.required) and $slicePF47.myInfosForm.selectDate.required eq true}required
+                                            data-msg-required="{$slicePF47.myInfosForm.selectDate.errorMsg}"{/if}  {if isset($slicePF47.myInfosForm.selectDate.disabled) and $slicePF47.myInfosForm.selectDate.disabled eq true}disabled{/if}>
+                                        {foreach $slicePF47.myInfosForm.selectDate.choisesYear as $type}
+                                            <option value="{$type.value}"{if isset($type.target)} data-target="{$type.target}"{/if}>{$type.txt}</option>
+                                        {/foreach}
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="select object-select">
+                            <label class="control-label">{$slicePF47.myInfosForm.selectVersion.txt}{if isset($slicePF47.myInfosForm.selectVersion.required) and $slicePF47.myInfosForm.selectVersion.required eq true}*{/if}</label>
+
+                            <div class="form-control">
+                                <div class="fake-select">
+                                    <select name="{$slicePF47.myInfosForm.selectVersion.name}" class="select-js"
+                                            id="{$slicePF47.myInfosForm.selectVersion.name}"
+                                            {if isset($slicePF47.myInfosForm.selectVersion.required) and $slicePF47.myInfosForm.selectVersion.required eq true}required
+                                            data-msg-required="{$slicePF47.myInfosForm.selectVersion.errorMsg}"{/if}  {if isset($slicePF47.myInfosForm.selectVersion.disabled) and $slicePF47.myInfosForm.selectVersion.disabled eq true}disabled{/if}>
+                                        <option value="{if isset($type.value)}{$type.value} {/if}"{if isset($type.target)} data-target="{$type.target}"{/if}>{$slicePF47.myInfosForm.selectVersion.choiseTxt}</option>
+                                        {foreach $slicePF47.myInfosForm.selectVersion.choises as $type}
+                                            <option value="{if isset($type.value)}{$type.value} {/if}"{if isset($type.target)} data-target="{$type.target}"{/if}>{$type.txt}</option>
+                                        {/foreach}
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-right">
+                        <div class="select object-select">
+                            <label class="control-label">{$slicePF47.myInfosForm.selectStateVehicle.txt}{if isset($slicePF47.myInfosForm.selectStateVehicle.required) and $slicePF47.myInfosForm.selectStateVehicle.required eq true}*{/if}</label>
+
+                            <div class="form-control">
+                                <div class="fake-select">
+                                    <select name="{$slicePF47.myInfosForm.selectStateVehicle.name}" class="select-js"
+                                            id="{$slicePF47.myInfosForm.selectStateVehicle.name}"
+                                            {if isset($slicePF47.myInfosForm.selectStateVehicle.required) and $slicePF47.myInfosForm.selectStateVehicle.required eq true}required
+                                            data-msg-required="{$slicePF47.myInfosForm.selectStateVehicle.errorMsg}"{/if}  {if isset($slicePF47.myInfosForm.selectStateVehicle.disabled) and $slicePF47.myInfosForm.selectStateVehicle.disabled eq true}disabled{/if}>
+                                        <option value="{if isset($type.value)}{$type.value} {/if}"{if isset($type.target)} data-target="{$type.target}"{/if}>{$slicePF47.myInfosForm.selectStateVehicle.choiseTxt}</option>
+                                        {foreach $slicePF47.myInfosForm.selectStateVehicle.choises as $type}
+                                            <option value="{if isset($type.value)}{$type.value} {/if}"{if isset($type.target)} data-target="{$type.target}"{/if}>{$type.txt}</option>
+                                        {/foreach}
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="select object-select">
+                            <label class="control-label">{$slicePF47.myInfosForm.selectFinish.txt}{if isset($slicePF47.myInfosForm.selectFinish.required) and $slicePF47.myInfosForm.selectVersion.required eq true}*{/if}</label>
+
+                            <div class="form-control">
+                                <div class="fake-select">
+                                    <select name="{$slicePF47.myInfosForm.selectFinish.name}" class="select-js"
+                                            id="{$slicePF47.myInfosForm.selectFinish.name}"
+                                            {if isset($slicePF47.myInfosForm.selectFinish.required) and $slicePF47.myInfosForm.selectFinish.required eq true}required
+                                            data-msg-required="{$slicePF47.myInfosForm.selectVersion.errorMsg}"{/if}  {if isset($slicePF47.myInfosForm.selectFinish.disabled) and $slicePF47.myInfosForm.selectFinish.disabled eq true}disabled{/if}>
+                                        <option value="{if isset($type.value)}{$type.value} {/if}"{if isset($type.target)} data-target="{$type.target}"{/if}>{$slicePF47.myInfosForm.selectFinish.choiseTxt}</option>
+                                        {foreach $slicePF47.myInfosForm.selectFinish.choises as $type}
+                                            <option value="{if isset($type.value)}{$type.value} {/if}"{if isset($type.target)} data-target="{$type.target}"{/if}>{$type.txt}</option>
+                                        {/foreach}
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-text">
+                            <label class="control-label"
+                                   for="{$slicePF47.myInfosForm.fieldsText.txt}">{$slicePF47.myInfosForm.fieldsText.txt}{if isset($slicePF47.myInfosForm.fieldsText.required) and $slicePF47.myInfosForm.fieldsText.required eq true}*{/if}</label>
+
+                            <div class="form-control">
+                                <input type="{if $slicePF47.myInfosForm.fieldsText.name == 'fichier'}file{else}text{/if}"
+                                       name="{$slicePF47.myInfosForm.fieldsText.name}"
+                                       id="{$slicePF47.myInfosForm.fieldsText.name}"
+                                       {if $slicePF47.myInfosForm.fieldsText.name == 'email'}data-rule-email="true"
+                                       data-msg-email="{$slicePF47.myInfosForm.fieldsText.errorMsgEmail}"{/if} {if $slicePF47.myInfosForm.fieldsText.name == 'telephone'} data-rule-number="true" data-msg-number="{$slicePF47.myInfosForm.fieldsText.errorMsgTel}"{/if}  {if isset($slicePF47.myInfosForm.fieldsText.disabled) and $slicePF47.myInfosForm.fieldsText.disabled eq true}disabled{/if}  {if isset($slicePF47.myInfosForm.fieldsText.required) and $slicePF47.myInfosForm.fieldsText.required eq true}required data-msg-required="{$slicePF47.myInfosForm.fieldsText.errorMsg}"{/if}   {if isset($slicePF47.myInfosForm.fieldsText.placeHolder)}placeholder="{$slicePF47.myInfosForm.fieldsText.placeHolder}"{/if} >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {/if}
+            <p class="notice">{$slicePF47.myInfosForm.noticeRequire}</p>
+			<div class="custom-button-group">
+                <div class="form-control">
+                    <div class="form-action">                	
+                        <button class="cta-block cta-btn cta-btn-4">{$slicePF47.myInfosForm.actionFrom.sendButton}</button>
+                    </div>
+                </div>
+            </div>
+        {/if}
+
+    </form>
+</section>

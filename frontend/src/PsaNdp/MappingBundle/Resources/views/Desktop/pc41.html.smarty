@@ -1,0 +1,8 @@
+<section class="slice-pc41 {if isset($slicePC41.anchorId)} {$slicePC41.anchorId} {/if}" {if isset($slicePC41.anchorId)} id="{$slicePC41.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePC41' } ]" datalayer="{$slicePC41.datalayer}">
+    <div class="sticky">
+        {foreach $slicePC41.mentions as $mention}
+            <div>{$mention}</div>
+        {/foreach}
+    </div>
+
+</section>

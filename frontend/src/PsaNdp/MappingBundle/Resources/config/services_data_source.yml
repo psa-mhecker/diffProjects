@@ -1,0 +1,294 @@
+parameters:
+    psa_ndp_mapping.pc5_1_colonne_data_source.class: PsaNdp\MappingBundle\Sources\Pc51ColonneDataSource
+    psa_ndp_mapping.pc7_2_colonnes_data_source.class: PsaNdp\MappingBundle\Sources\Pc72ColonnesDataSource
+    psa_ndp_mapping.pc8_contenu_2_colonnes_texte_data_source.class: PsaNdp\MappingBundle\Sources\Pc8Contenu2ColonnesTexteDataSource
+    psa_ndp_mapping.pc9_contenu_1_article_1_visuel_data_source.class: PsaNdp\MappingBundle\Sources\Pc9Contenu1Article1VisuelDataSource
+    psa_ndp_mapping.pc12_3_colonnes_texte_data_source.class: PsaNdp\MappingBundle\Sources\Pc123ColonnesTexteDataSource
+    psa_ndp_mapping.pc16_verbatim_data_source.class: PsaNdp\MappingBundle\Sources\Pc16VerbatimDataSource
+    psa_ndp_mapping.pc19_slideshow_data_source.class: PsaNdp\MappingBundle\Sources\Pc19SlideshowDataSource
+    psa_ndp_mapping.pc23_mur_media_data_source.class: PsaNdp\MappingBundle\Sources\Pc23MurMediaDataSource
+    psa_ndp_mapping.pc36_faq_data_source.class: PsaNdp\MappingBundle\Sources\Pc36FAQDataSource
+    psa_ndp_mapping.pc39_slideshow_offre_data_source.class: PsaNdp\MappingBundle\Sources\Pc39SlideshowOffreDataSource
+    psa_ndp_mapping.pc40_cta_data_source.class: PsaNdp\MappingBundle\Sources\Pc40CTADataSource
+    psa_ndp_mapping.pc41_mentions_juridiques_data_source.class: PsaNdp\MappingBundle\Sources\Pc41MentionsJuridiquesDataSource
+    psa_ndp_mapping.pc42_actualites_data_source.class: PsaNdp\MappingBundle\Sources\Pc42ActualitesDataSource
+    psa_ndp_mapping.pc43_applications_mobiles_data_source.class: PsaNdp\MappingBundle\Sources\Pc43ApplicationsMobilesDataSource
+    psa_ndp_mapping.pc47_point_de_vente_unique_data_source.class: PsaNdp\MappingBundle\Sources\Pc47PointDeVenteUniqueDataSource
+    psa_ndp_mapping.pc52_apv_data_source.class: PsaNdp\MappingBundle\Sources\Pc52ApvDataSource
+    psa_ndp_mapping.pc53_apv_data_source.class: PsaNdp\MappingBundle\Sources\Pc53ApvDataSource
+    psa_ndp_mapping.pc59_tools_data_source.class: PsaNdp\MappingBundle\Sources\Pc59ToolsDataSource
+    psa_ndp_mapping.pc61_visuel_boussole_data_source.class: PsaNdp\MappingBundle\Sources\Pc61VisuelBoussoleDataSource
+    psa_ndp_mapping.pc63_lien_boussole_data_source.class: PsaNdp\MappingBundle\Sources\Pc63LienBoussoleDataSource
+    psa_ndp_mapping.pc68_contenu_1_article_2_ou_3_visuels_data_source.class: PsaNdp\MappingBundle\Sources\Pc68Contenu1Article2Ou3VisuelsDataSource
+    psa_ndp_mapping.pc69_contenu_2_colonnes_data_source.class: PsaNdp\MappingBundle\Sources\Pc69Contenu2ColonnesDataSource
+    psa_ndp_mapping.pc73_mega_banniere_dynamique_data_source.class: PsaNdp\MappingBundle\Sources\Pc73MegaBanniereDynamiqueDataSource
+    psa_ndp_mapping.pc77_dimension_vehicule_data_source.class: PsaNdp\MappingBundle\Sources\Pc77DimensionVehiculeDataSource
+    psa_ndp_mapping.pc79_mur_media_manuel_data_source.class: PsaNdp\MappingBundle\Sources\Pc79MurMediaManuelDataSource
+    psa_ndp_mapping.pc85_reevo_data_source.class: PsaNdp\MappingBundle\Sources\PC85ReevoDataSource
+    psa_ndp_mapping.pc95_interested_by_data_source.class: PsaNdp\MappingBundle\Sources\PC95InterestedByDataSource
+    psa_ndp_mapping.pc99_global_header_data_source.class: PsaNdp\MappingBundle\Sources\Pc99GlobalHeaderDataSource
+    psa_ndp_mapping.pf6_drag_and_drop_data_source.class: PsaNdp\MappingBundle\Sources\Pf6DragAndDropDataSource
+    psa_ndp_mapping.pf8_webstore_vehicle_neuf_data_source.class: PsaNdp\MappingBundle\Sources\Pf8WebstoreVehiculeNeufDataSource
+    psa_ndp_mapping.pf11_recherche_point_de_vente_data_source.class: PsaNdp\MappingBundle\Sources\Pf11RecherchePointDeVenteDataSource
+    psa_ndp_mapping.pf14_reseaux_sociaux_data_source.class: PsaNdp\MappingBundle\Sources\Pf14ReseauxSociauxDataSource
+    psa_ndp_mapping.pf16_autres_reseaux_sociaux_data_source.class: PsaNdp\MappingBundle\Sources\Pf16AutresReseauxSociauxDataSource
+    psa_ndp_mapping.pf23_range_bar_data_source.class: PsaNdp\MappingBundle\Sources\Pf23RangeBarDataSource
+    psa_ndp_mapping.pf27_car_picker_data_source.class: PsaNdp\MappingBundle\Sources\Pf27CarPickerDataSource
+    psa_ndp_mapping.pf30_popin_code_postal_data_source.class: PsaNdp\MappingBundle\Sources\Pf30PopinCodePostalDataSource
+    psa_ndp_mapping.pf32_filtre_apv_data_source.class: PsaNdp\MappingBundle\Sources\Pf32FiltreAPVDataSource
+    psa_ndp_mapping.pf33_car_compatibility_data_source.class: PsaNdp\MappingBundle\Sources\Pf33CarCompatibilityDataSource
+    psa_ndp_mapping.pf42_selectionneur_de_teinte_360_data_source.class: PsaNdp\MappingBundle\Sources\Pf42SelectionneurDeTeinte360DataSource
+    psa_ndp_mapping.pf44_devenir_agent_data_source.class: PsaNdp\MappingBundle\Sources\Pf44DevenirAgentDataSource
+    psa_ndp_mapping.pf53_finitions_motorisations_data_source.class: PsaNdp\MappingBundle\Sources\Pf53FinitionsMotorisationDataSource
+    psa_ndp_mapping.pn2_onglet_data_source.class: PsaNdp\MappingBundle\Sources\Pn2OngletDataSource
+    psa_ndp_mapping.pn3_toggle_accordeon_data_source.class: PsaNdp\MappingBundle\Sources\Pn3ToggleAccordeonDataSource
+    psa_ndp_mapping.pn7_en_tete_data_source.class: PsaNdp\MappingBundle\Sources\Pn7EnTeteDataSource
+    psa_ndp_mapping.pn13_ancres_data_source.class: PsaNdp\MappingBundle\Sources\Pn13AncresDataSource
+    psa_ndp_mapping.pn18_iframe_data_source.class: PsaNdp\MappingBundle\Sources\Pn18IFrameDataSource
+    psa_ndp_mapping.pf2_presentation_showroom_data_source.class: PsaNdp\MappingBundle\Sources\Pf2PresentationShowroomDataSource
+    psa_ndp_mapping.pt2_footer_data_source.class: PsaNdp\MappingBundle\Sources\Pt2FooterDataSource
+    psa_ndp_mapping.pt3_je_veux_data_source.class: PsaNdp\MappingBundle\Sources\Pt3JeVeuxDataSource
+    psa_ndp_mapping.pt15_plan_du_site_data_source.class: PsaNdp\MappingBundle\Sources\Pt15PlanDuSiteDataSource
+    psa_ndp_mapping.pt17_choix_de_la_langue_data_source.class: PsaNdp\MappingBundle\Sources\Pt17ChoixDeLaLangueDataSource
+    psa_ndp_mapping.pt18_pre_home_importateur_data_source.class: PsaNdp\MappingBundle\Sources\Pt18PreHomeImportateurDataSource
+    psa_ndp_mapping.pt19_engagements_data_source.class: PsaNdp\MappingBundle\Sources\Pt19EngagementsDataSource
+    psa_ndp_mapping.pt20_master_page_data_source.class: PsaNdp\MappingBundle\Sources\Pt20MasterPageDataSource
+    psa_ndp_mapping.pt21_navigation_data_source.class: PsaNdp\MappingBundle\Sources\Pt21NavigationDataSource
+    psa_ndp_mapping.pt22_my_peugeot_data_source.class: PsaNdp\MappingBundle\Sources\Pt22MyPeugeotDataSource
+    psa_ndp_mapping.pt23_module_qualification_data_source.class: PsaNdp\MappingBundle\Sources\PT23ModuleQualificationDataSource
+    psa_ndp_mapping.pc60_recapitulatif_et_cta_showroom_data_source.class: PsaNdp\MappingBundle\Sources\Pc60RecapitulatifEtCtaShowroomDataSource
+    psa_ndp_mapping.pf17_formulaires_data_source.class: PsaNdp\MappingBundle\Sources\Pf17FormulairesDataSource
+    psa_ndp_mapping.pc78_usp_mosaique_data_source.class: PsaNdp\MappingBundle\Sources\Pc78UspMosaiqueDataSource
+    psa_ndp_mapping.pc84_catalogue_applications_data_source.class: PsaNdp\MappingBundle\Sources\Pc84CatalogueApplicationsDataSource
+    psa_ndp_mapping.pc83_contenu_accessoires_data_source.class: PsaNdp\MappingBundle\Sources\Pc83ContenuAccessoiresDataSource
+    psa_ndp_mapping.pf25_filtres_resultats_car_selector_data_source.class: PsaNdp\MappingBundle\Sources\Pf25FilterCarSelectorDataSource
+    psa_ndp_mapping.pn15_entete_confishow_data_source.class: PsaNdp\MappingBundle\Sources\Pn15EnteteConfishowDataSource
+    psa_ndp_mapping.pn14_navigation_confishow_data_source.class: PsaNdp\MappingBundle\Sources\Pn14NavigationConfishowDataSource
+    psa_ndp_mapping.cs99_configshow_test_data_source.class: PsaNdp\MappingBundle\Sources\Cs99ConfigshowTestDataSource
+services:
+    psa_ndp_mapping.pc5_1_colonne_data_source:
+        class: '%psa_ndp_mapping.pc5_1_colonne_data_source.class%'
+    psa_ndp_mapping.pc7_2_colonnes_data_source:
+        class: '%psa_ndp_mapping.pc7_2_colonnes_data_source.class%'
+    psa_ndp_mapping.pc8_contenu_2_colonnes_texte_data_source:
+        class: '%psa_ndp_mapping.pc8_contenu_2_colonnes_texte_data_source.class%'
+        arguments: ['@psa_ndp_page_zone_repository', '@psa_ndp_page_zone_multi_repository', '@psa_ndp_media_repository']
+    psa_ndp_mapping.pc9_contenu_1_article_1_visuel_data_source:
+        class: '%psa_ndp_mapping.pc9_contenu_1_article_1_visuel_data_source.class%'
+    psa_ndp_mapping.pc12_3_colonnes_texte_data_source:
+        class: '%psa_ndp_mapping.pc12_3_colonnes_texte_data_source.class%'
+    psa_ndp_mapping.pc16_verbatim_data_source:
+        class: '%psa_ndp_mapping.pc16_verbatim_data_source.class%'
+    psa_ndp_mapping.pc19_slideshow_data_source:
+        class: '%psa_ndp_mapping.pc19_slideshow_data_source.class%'
+        arguments: ['@psa_ndp.services.share_object']
+    psa_ndp_mapping.pc23_mur_media_data_source:
+        class: '%psa_ndp_mapping.pc23_mur_media_data_source.class%'
+    psa_ndp_mapping.pc36_faq_data_source:
+        class: '%psa_ndp_mapping.pc36_faq_data_source.class%'
+        arguments: ['@router', '@psa_ndp_content_repository', '@psa_ndp_content_category_repository', '@psa_ndp_content_type_repository']
+    psa_ndp_mapping.pc39_slideshow_offre_data_source:
+        class: '%psa_ndp_mapping.pc39_slideshow_offre_data_source.class%'
+    psa_ndp_mapping.pc40_cta_data_source:
+        class: '%psa_ndp_mapping.pc40_cta_data_source.class%'
+    psa_ndp_mapping.pc41_mentions_juridiques_data_source:
+        class: '%psa_ndp_mapping.pc41_mentions_juridiques_data_source.class%'
+        arguments: ['@financement_simulator', '@psa_ndp_site_configuration']
+    psa_ndp_mapping.pc42_actualites_data_source:
+        class: '%psa_ndp_mapping.pc42_actualites_data_source.class%'
+        arguments: ['@psa_ndp_content_repository']
+    psa_ndp_mapping.pc43_applications_mobiles_data_source:
+        class: '%psa_ndp_mapping.pc43_applications_mobiles_data_source.class%'
+    psa_ndp_mapping.pc47_point_de_vente_unique_data_source:
+        class: '%psa_ndp_mapping.pc47_point_de_vente_unique_data_source.class%'
+        arguments: ['@router', '@psa_ndp_page_zone_repository', '@psa_ndp_content_repository', '@psa_ndp_content_zone_repository', '@psa_ndp_site_service_repository']
+    psa_ndp_mapping.pc59_tools_data_source:
+        class: '%psa_ndp_mapping.pc59_tools_data_source.class%'
+    psa_ndp_mapping.pc52_apv_data_source:
+        class: '%psa_ndp_mapping.pc52_apv_data_source.class%'
+        arguments:
+            - @open_orchestra_model.repository.site
+            - @psa_ndp_page_zone_repository
+            - @psa_ndp.repository.after_sale_services
+            - @psa_ndp.repository.filter_after_sale_services
+    psa_ndp_mapping.pc53_apv_data_source:
+        class: '%psa_ndp_mapping.pc53_apv_data_source.class%'
+        arguments:
+            - @psa_ndp.repository.after_sale_services
+    psa_ndp_mapping.pc61_visuel_boussole_data_source:
+        class: '%psa_ndp_mapping.pc61_visuel_boussole_data_source.class%'
+    psa_ndp_mapping.pc63_lien_boussole_data_source:
+        class: '%psa_ndp_mapping.pc63_lien_boussole_data_source.class%'
+    psa_ndp_mapping.pc68_contenu_1_article_2_ou_3_visuels_data_source:
+        class: '%psa_ndp_mapping.pc68_contenu_1_article_2_ou_3_visuels_data_source.class%'
+    psa_ndp_mapping.pc69_contenu_2_colonnes_data_source:
+        class: '%psa_ndp_mapping.pc69_contenu_2_colonnes_data_source.class%'
+    psa_ndp_mapping.pc73_mega_banniere_dynamique_data_source:
+        class: '%psa_ndp_mapping.pc73_mega_banniere_dynamique_data_source.class%'
+    psa_ndp_mapping.pc77_dimension_vehicule_data_source:
+        class: '%psa_ndp_mapping.pc77_dimension_vehicule_data_source.class%'
+    psa_ndp_mapping.pc85_reevo_data_source:
+        class: '%psa_ndp_mapping.pc85_reevo_data_source.class%'
+    psa_ndp_mapping.pc95_interested_by_data_source:
+        class: '%psa_ndp_mapping.pc95_interested_by_data_source.class%'
+        arguments:
+            - '@psa_ndp.repository.vehicle.model_silhouette_site'
+            - '@configuration_engine_select'
+            - '@psa_ndp.repository.finishing_site'
+            - '@psa_ndp_model_silhouette_angle_repository'
+            - '@psa_ndp_model_silouhette_utils'
+    psa_ndp_mapping.pc99_global_header_data_source:
+        class: '%psa_ndp_mapping.pc99_global_header_data_source.class%'
+    psa_ndp_mapping.pf6_drag_and_drop_data_source:
+        class: '%psa_ndp_mapping.pf6_drag_and_drop_data_source.class%'
+    psa_ndp_mapping.pf8_webstore_vehicle_neuf_data_source:
+        class: '%psa_ndp_mapping.pf8_webstore_vehicle_neuf_data_source.class%'
+        arguments: ['@router', '@psa_ndp_site_configuration', '@webstore', '@psa_ndp.repository.vehicle.model_config', '@psa_ndp.repository.vehicle.model_silhouette_site', '@psa_ndp_sites_et_webservices_psa_repository']
+    psa_ndp_mapping.pf11_recherche_point_de_vente_data_source:
+        class: '%psa_ndp_mapping.pf11_recherche_point_de_vente_data_source.class%'
+        arguments:
+          - '@router'
+          - '@annuaire_pdv'
+          - '@psa_ndp.services.page_finder'
+    psa_ndp_mapping.pf14_reseaux_sociaux_data_source:
+        class: '%psa_ndp_mapping.pf14_reseaux_sociaux_data_source.class%'
+        arguments: ['@psa_ndp_page_repository', '@psa_ndp_page_zone_repository', '@psa_ndp_social_network_repository']
+        calls: [[setNbItems, ['%psa_ndp_socialnetwork.nbitems%']], [setProxy, ['@=parameter(''proxy'')']], [setTwitter, ['@psa_ndp_socialnetwork.twitter']], [setFacebook, ['@=parameter(''facebook'')']]]
+    psa_ndp_mapping.pf16_autres_reseaux_sociaux_data_source:
+        class: '%psa_ndp_mapping.pf16_autres_reseaux_sociaux_data_source.class%'
+        arguments: ['@psa_ndp_social_network_repository']
+    psa_ndp_mapping.pf27_car_picker_data_source:
+        class: '%psa_ndp_mapping.pf27_car_picker_data_source.class%'
+        arguments:
+            - '@range_manager'
+            - '@psa_ndp.repository.vehicle.model_config'
+            - '@site_configuration'
+            - '@psa_ndp.repository.vehicle.model_silhouette_site'
+            - '@configuration_engine_select'
+            - '@open_orchestra_model.repository.node'
+    psa_ndp_mapping.pf30_popin_code_postal_data_source:
+        class: '%psa_ndp_mapping.pf30_popin_code_postal_data_source.class%'
+    psa_ndp_mapping.pf32_filtre_apv_data_source:
+        class: '%psa_ndp_mapping.pf32_filtre_apv_data_source.class%'
+    psa_ndp_mapping.pf33_car_compatibility_data_source:
+        class: '%psa_ndp_mapping.pf33_car_compatibility_data_source.class%'
+        arguments: ['@psa_ndp_service_connect_finition_grouping_repository', '@psa_ndp_model_utils', '@psa_ndp_model_site_repository', '@router', '@configuration_engine_select']
+    psa_ndp_mapping.pf42_selectionneur_de_teinte_360_data_source:
+        class: '%psa_ndp_mapping.pf42_selectionneur_de_teinte_360_data_source.class%'
+        arguments: ['@router']
+    psa_ndp_mapping.pf44_devenir_agent_data_source:
+        class: '%psa_ndp_mapping.pf44_devenir_agent_data_source.class%'
+        arguments: ['@router']
+    psa_ndp_mapping.pf53_finitions_motorisations_data_source:
+        class: '%psa_ndp_mapping.pf53_finitions_motorisations_data_source.class%'
+        arguments:
+            - '@psa_ndp.repository.vehicle.model_config'
+            - '@psa_ndp.repository.vehicle.vehicle_category_site'
+            - '@psa_ndp.repository.vehicle.model_silhouette_site'
+            - '@psa_ndp.repository.vehicle.model_site'
+            - '@configuration_engine_config'
+            - '@psa_ndp_site_configuration'
+            - '@configuration_engine_select'
+            - '@psa_ndp.repository.finishing_site'
+            - '@configuration_engine_compare_grade'
+            - '@psa_ndp.repository.segmentation_finishing_site'
+            - '@configuration_engine_engine_criteria'
+            - '@financement_simulator'
+            - '@psa_ndp_model_silhouette_angle_repository'
+            - '@psa_ndp_model_view_angle_repository'
+            - '@psa_ndp_sites_et_webservices_psa_repository'
+            - '@router'
+    psa_ndp_mapping.pc83_contenu_accessoires_data_source:
+        class: '%psa_ndp_mapping.pc83_contenu_accessoires_data_source.class%'
+        arguments:
+            - '@psa_ndp.repository.vehicle.model_config'
+            - '@psa_ndp_site_configuration'
+            - '@psa_ndp_sites_et_webservices_psa_repository'
+            - '@accessoires_aoa'
+            - '@psa_ndp.repository.accessories.accessories'
+            - '@psa_ndp.repository.accessories.accessories_site'
+    psa_ndp_mapping.pn2_onglet_data_source:
+        class: '%psa_ndp_mapping.pn2_onglet_data_source.class%'
+        arguments: ['@psa_ndp_page_zone_multi_repository']
+    psa_ndp_mapping.pn3_toggle_accordeon_data_source:
+        class: '%psa_ndp_mapping.pn3_toggle_accordeon_data_source.class%'
+    psa_ndp_mapping.pn7_en_tete_data_source:
+        class: '%psa_ndp_mapping.pn7_en_tete_data_source.class%'
+        arguments: ['@psa_ndp_streamlike', '@psa_ndp_page_utils', '@psa_ndp.services.share_object']
+    psa_ndp_mapping.pn13_ancres_data_source:
+        class: '%psa_ndp_mapping.pn13_ancres_data_source.class%'
+        arguments: ['@psa_ndp_anchor']
+    psa_ndp_mapping.pn18_iframe_data_source:
+        class: '%psa_ndp_mapping.pn18_iframe_data_source.class%'
+    psa_ndp_mapping.pf2_presentation_showroom_data_source:
+        class: '%psa_ndp_mapping.pf2_presentation_showroom_data_source.class%'
+        arguments: ['@psa_ndp.services.share_object']
+    psa_ndp_mapping.pt2_footer_data_source:
+        class: '%psa_ndp_mapping.pt2_footer_data_source.class%'
+        arguments:
+            - @psa_ndp_page_zone_repository
+            - @psa_ndp_social_network_repository
+            - @psa_ndp.services.page_finder
+    psa_ndp_mapping.pt3_je_veux_data_source:
+        class: '%psa_ndp_mapping.pt3_je_veux_data_source.class%'
+        arguments: ['@psa_ndp_mapping.manager.block_manager']
+    psa_ndp_mapping.pt15_plan_du_site_data_source:
+        class: '%psa_ndp_mapping.pt15_plan_du_site_data_source.class%'
+        arguments: ['@psa_ndp_page_repository', '@psa_ndp_mapping.manager.tree_manager']
+    psa_ndp_mapping.pt17_choix_de_la_langue_data_source:
+        class: '%psa_ndp_mapping.pt17_choix_de_la_langue_data_source.class%'
+        arguments: ['@psa_ndp_page_repository', '@psa_ndp_language_repository']
+    psa_ndp_mapping.pt18_pre_home_importateur_data_source:
+        class: '%psa_ndp_mapping.pt18_pre_home_importateur_data_source.class%'
+        arguments: ['@router', '@psa_ndp_page_zone_multi_repository']
+    psa_ndp_mapping.pt19_engagements_data_source:
+        class: '%psa_ndp_mapping.pt19_engagements_data_source.class%'
+        arguments: ['@psa_ndp_page_zone_configurable_repository_dispatcher']
+    psa_ndp_mapping.pt20_master_page_data_source:
+        class: '%psa_ndp_mapping.pt20_master_page_data_source.class%'
+        arguments: ['@psa_ndp_page_repository']
+    psa_ndp_mapping.pt21_navigation_data_source:
+        class: '%psa_ndp_mapping.pt21_navigation_data_source.class%'
+        arguments: ['@psa_ndp_page_repository', '@psa_ndp_page_zone_repository', '@psa_ndp_language_repository', '@psa_ndp_mapping.manager.tree_manager',  '@psa_ndp.services.share_object']
+    psa_ndp_mapping.pt22_my_peugeot_data_source:
+        class: '%psa_ndp_mapping.pt22_my_peugeot_data_source.class%'
+        arguments: ['@psa_ndp_sites_et_webservices_psa_repository', '@psa_ndp_appli_mobile_repository']
+    psa_ndp_mapping.pf23_range_bar_data_source:
+        class: '%psa_ndp_mapping.pf23_range_bar_data_source.class%'
+        arguments:
+            - '@psa_ndp_model_silouhette_utils'
+            - '@psa_ndp_page_repository'
+            - '@psa_ndp.repository.vehicle.model_silhouette_site'
+            - '@psa_ndp_model_site_repository'
+            - '@psa_ndp_model_repository'
+    psa_ndp_mapping.pc73_mega_banniere_dynamique_data_source:
+        class: '%psa_ndp_mapping.pc73_mega_banniere_dynamique_data_source.class%'
+    psa_ndp_mapping.pf11_recherche_point_de_vente_data_source:
+        class: '%psa_ndp_mapping.pf11_recherche_point_de_vente_data_source.class%'
+        arguments: ['@router']
+    psa_ndp_mapping.pc79_mur_media_manuel_data_source:
+        class: '%psa_ndp_mapping.pc79_mur_media_manuel_data_source.class%'
+        arguments: ['@psa_ndp_groupe_reseaux_sociaux_repository', '@psa_ndp_groupe_reseaux_sociaux_rs_repository', '@psa_ndp_social_network_repository', '@psa_ndp_sociallinks']
+    psa_ndp_mapping.pt23_module_qualification_data_source:
+        class: '%psa_ndp_mapping.pt23_module_qualification_data_source.class%'
+    psa_ndp_mapping.pc60_recapitulatif_et_cta_showroom_data_source:
+        class: '%psa_ndp_mapping.pc60_recapitulatif_et_cta_showroom_data_source.class%'
+    psa_ndp_mapping.pf17_formulaires_data_source:
+        class: '%psa_ndp_mapping.pf17_formulaires_data_source.class%'
+        arguments: ['@psa_ndp_page_repository', '@psa_ndp_media_repository', '@psa_ndp_sites_et_webservices_psa_repository', '@router']
+    psa_ndp_mapping.pc78_usp_mosaique_data_source:
+        class: '%psa_ndp_mapping.pc78_usp_mosaique_data_source.class%'
+    psa_ndp_mapping.pc84_catalogue_applications_data_source:
+        class: '%psa_ndp_mapping.pc84_catalogue_applications_data_source.class%'
+        arguments: ['@psa_ndp_connect_services_repository', '@psa_ndp_media_repository', '@psa_ndp_service_connect_finition_grouping_repository']
+    psa_ndp_mapping.pf25_filtres_resultats_car_selector_data_source:
+        class: '%psa_ndp_mapping.pf25_filtres_resultats_car_selector_data_source.class%'
+        arguments: ['@router']
+    psa_ndp_mapping.pn15_entete_confishow_data_source:
+        class: '%psa_ndp_mapping.pn15_entete_confishow_data_source.class%'
+        arguments: ['@psa_ndp_page_utils', '@psa_ndp.services.share_object']
+    psa_ndp_mapping.pn14_navigation_confishow_data_source:
+        class: '%psa_ndp_mapping.pn14_navigation_confishow_data_source.class%'
+        arguments: ['@psa_ndp_page_repository', '@psa_ndp.services.share_object', '@psa_ndp.repository.finishin_color']
+    psa_ndp_mapping.cs99_configshow_test_data_source:
+        class: '%psa_ndp_mapping.cs99_configshow_test_data_source.class%'

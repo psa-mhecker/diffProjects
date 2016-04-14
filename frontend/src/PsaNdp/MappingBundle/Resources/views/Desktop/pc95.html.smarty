@@ -1,0 +1,107 @@
+<section class="slice-pc95 {if isset($slicePC95.anchorId)} {$slicePC95.anchorId} {/if}" {if isset($slicePC95.anchorId)} id="{$slicePC95.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePC95' } ]" datalayer="{$slicePC95.datalayer}">
+
+    {if isset($slicePC95.rangebarMode) and $slicePC95.rangebarMode eq 'full'}
+      <div class="models">
+        {foreach $slicePC95.rangbarItems as $item}
+          {if isset($item.model)}
+            <div class="model-item" data-model="{$item.model.name}">
+              <h1>{$slicePC95.rangebarTitle}</h1>
+              <div class="list-articles">
+                {foreach $item.model.collectionModel as $model }
+                  <article class="{if not isset($model.mentions) and not isset($model.price.rent)} no-mentions{/if}{if not isset($model.actions.config) and not isset($model.price.rent) and not isset($model.mentions)} no-config {/if}  {if isset($model.infoPopin)} call-popin{/if} ">
+                    <div>
+                      <div>
+                        <!--a href="#" class="is-fav" >fav</a-->
+                        <h2>
+                          {$model.title}<br>
+                          {$model.subtitle}
+                        </h2>
+                        {if isset($model.img)}
+                          <figure>
+                            <img src="{$model.img.src}" alt="{$model.img.alt}">
+                          </figure>
+                        {/if}
+
+                        {if isset($model.price)}
+                          <p class="price">
+                            <strong>{$model.price.value}</strong>{if isset($model.price.unit)}<small>{$model.price.unit}</small>{/if}
+                            {if isset($model.price.rent)}
+                              <span class="monthly">{$model.price.rent}</span>
+                              <span class="info" data-openpopin="financement{$model.id}"></span>
+                            {/if}
+                          </p>
+                        {/if}
+                        {if isset($model.mentions)}
+                          <p class="mentions">
+                            {$model.mentions}
+                          </p>
+                        {/if}
+
+                        {if isset($model.actions) && $model.actions|@count > 0}
+                          <div class="custom-button-group">
+                            {foreach $model.actions as $cta}
+                              {include file="./cta.html.smarty" gtm="{ldelim}\"eventType\":\"click\",\"dataList\":{ldelim}\"event\":\"uaevent\",\"eventCategory\":\"{$slicePC95.blockName}::position-{$slicePC95.blockOrder}\",\"eventAction\":\"Redirection\",\"eventLabel\":\"{$cta.title|escape:html}\"{rdelim}{rdelim}"}
+                            {/foreach}
+                          </div>
+                        {/if}
+                      </div>
+                    </div>
+                  </article>
+                {/foreach}
+              </div>
+
+              {if isset($item.model.noticeText)}
+                <p class="notice-title">{$item.model.noticeText.title}</p>
+                <p class="notice-text">{$item.model.noticeText.text}</p>
+              {/if}
+
+            </div>
+          {/if}
+        {/foreach}
+        {if isset($slicePC95.notice)}
+            <p class="notice">{$slicePC95.notice}</p>
+        {/if}
+      </div>
+    {/if}
+      <section class="popin_overlay" data-jsobj="[ { 'obj':'iso-popin' } ]">
+    <div class="color--blue1 close"></div>
+        <!-- POPIN FINANCEMENT-->
+    {foreach $slicePC95.rangbarItems as $item}
+      {if isset($item.model)}
+        {foreach $item.model.collectionModel as $items}
+
+          {if isset($items.popinInfo.financement)}
+          <div class="popin popin--financement scroller" data-popin="financement{$items.popinInfo.financement.id}">
+            <span class="clbtn close">{$slicePC95.translate.close}</span>
+            <div class="head">
+              <img src="{$items.popinInfo.financement.img.src}" alt="{$items.popinInfo.financement.img.alt}">
+              <h3 class="model">{$items.popinInfo.financement.model}</h3>
+            </div>
+            {foreach $items.popinInfo.financement.priceList as $section}
+            <section>
+              <h4 class="title">{$section.title}</h4>
+              <ul class="list_style">
+                {foreach $section.price as $price}
+                <li>
+                  <p class="label">{$price.label}</p>
+                  <p class="price">{$price.sum} {if isset($price.devise)}<span>{$price.devise}</span>{/if}</p>
+                  {if isset($price.label2)}
+                  <p class="label2">{$price.label2}</p>
+                  {/if}
+                </li>
+                {/foreach}
+              </ul>
+            </section>
+            {/foreach}
+            {foreach $items.popinInfo.financement.asterix as $asterix}
+            <p class="asterix">{$asterix.text}</p>
+            {/foreach}
+            <p class="mention">{$items.popinInfo.financement.mention}</p>
+          </div>
+          {/if}
+        {/foreach}
+    {/if}
+  {/foreach}
+  </section>
+</section>
+

@@ -1,0 +1,45 @@
+.car-selector {
+	position: relative;
+	padding: 10px 0;
+	min-height: 375px;
+
+	.columns + .columns:last-child {
+		float: left;
+	}
+
+	.vignette {
+		.subtitle {
+			display: none;
+		}
+
+		.img-wrapper {
+			top: 90px;
+		}
+
+		.price {
+			top: 250px;
+		}
+	}
+}
+
+@media only screen and (max-width: 40em) {
+	.car-selector {
+		.vignette {
+			.subtitle {
+				display: none;
+			}
+
+			.img-wrapper {
+				top: 27px;
+			}
+
+			img {
+				width: 95%;
+			}
+
+			.price {
+				top: 192px;
+			}
+		}
+	}
+}

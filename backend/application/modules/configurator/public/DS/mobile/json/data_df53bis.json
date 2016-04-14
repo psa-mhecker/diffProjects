@@ -1,0 +1,121 @@
+{
+    "finitions": [
+	    {
+	    	"id" : "003",
+	    	"title" : "la finition Business edition",
+	    	"titlefinitions" : "Shine 001",
+	        "sup" : [
+	        	{
+	            	"text" : "Odihfghfis tempore dolore mque"
+	        	},
+	        	{
+	            	"text" : "Odit quia recusandae, atque, reichthddh  loremque"
+	        	},
+	        	{
+	            	"text" : "Odit qdfbhtrj,tydis tempore doloremque"
+	        	},
+				{
+	            	"text" : "Odit quia recusannfgn  gty;oi  doloremque"
+	        	},
+	        	{
+	            	"text" : "Odit quia recusandae, atque, reiciendis tempore doloremque"
+	        	}
+	        ],
+	        "ref" : [
+	        	{
+	            	"text" : "Odihfghfis tempore dolore mque"
+	        	},
+	        	{
+	            	"text" : "Odit quia recusandae, atque, reichthddh  loremque"
+	        	},
+	        	{
+	            	"text" : "Odit qdfbhtrj,tydis tempore doloremque"
+	        	},
+				{
+	            	"text" : "Odit quia recusannfgn  gty;oi  doloremque"
+	        	},
+	        	{
+	            	"text" : "Odit quia recusandae, atque, reiciendis tempore doloremque"
+	        	}
+	        ]	        
+	    },
+	    {
+	    	"id" : "004",
+	    	"title" : "la finition shine edition",
+	    	"titlefinitions" : "Shine 002",
+	        "sup" : [
+	        	{
+	            	"text" : "Odihfghfis tempore dolore mque"
+	        	},
+	        	{
+	            	"text" : "Odit quia recusandae, atque, reichthddh  loremque"
+	        	},
+	        	{
+	            	"text" : "Odit qdfbhtrj,tydis tempore doloremque"
+	        	},
+				{
+	            	"text" : "Odit quia recusannfgn  gty;oi  doloremque"
+	        	},
+	        	{
+	            	"text" : "Odit quia recusandae, atque, reiciendis tempore doloremque"
+	        	}
+	        ],
+	        "ref" : [
+	        	{
+	            	"text" : "Odihfghfis tempore dolore mque"
+	        	},
+	        	{
+	            	"text" : "Odit quia recusandae, atque, reichthddh  loremque"
+	        	},
+	        	{
+	            	"text" : "Odit qdfbhtrj,tydis tempore doloremque"
+	        	},
+				{
+	            	"text" : "Odit quia recusannfgn  gty;oi  doloremque"
+	        	},
+	        	{
+	            	"text" : "Odit quia recusandae, atque, reiciendis tempore doloremque"
+	        	}
+	        ]	        
+	    },
+	    {
+	    	"id" : "005",
+	    	"title" : "la finition Business 82g",
+	    	"titlefinitions" : "Shine 007",
+	        "sup" : [
+	        	{
+	            	"text" : "Odihfghfis tempore dolore mque"
+	        	},
+	        	{
+	            	"text" : "Odit quia recusandae, atque, reichthddh  loremque"
+	        	},
+	        	{
+	            	"text" : "Odit qdfbhtrj,tydis tempore doloremque"
+	        	},
+				{
+	            	"text" : "Odit quia recusannfgn  gty;oi  doloremque"
+	        	},
+	        	{
+	            	"text" : "Odit quia recusandae, atque, reiciendis tempore doloremque"
+	        	}
+	        ],
+	        "ref" : [
+	        	{
+	            	"text" : "Odihfghfis tempore dolore mque"
+	        	},
+	        	{
+	            	"text" : "Odit quia recusandae, atque, reichthddh  loremque"
+	        	},
+	        	{
+	            	"text" : "Odit qdfbhtrj,tydis tempore doloremque"
+	        	},
+				{
+	            	"text" : "Odit quia recusannfgn  gty;oi  doloremque"
+	        	},
+	        	{
+	            	"text" : "Odit quia recusandae, atque, reiciendis tempore doloremque"
+	        	}
+	        ]	        
+	    }
+    ]
+}

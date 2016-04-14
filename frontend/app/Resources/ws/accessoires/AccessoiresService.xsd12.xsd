@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:cxl="http://fault.core.cxl.inetpsa.com" xmlns:ea="http://aoa.inetpsa.com/ws/export/ExportAccessoires" xmlns:eabp="http://aoa.inetpsa.com/ws/export/ExportAccessoriesByPromotion" xmlns:eabv="http://aoa.inetpsa.com/ws/export/ExportAccessoriesByVehicle" xmlns:ec="http://aoa.inetpsa.com/ws/export/ExportCriteria" xmlns:ecv="http://aoa.inetpsa.com/ws/export/ExportCriteriaValue" xmlns:sa="http://aoa.inetpsa.com/ws/setting/Accessories" xmlns:sabp="http://aoa.inetpsa.com/ws/setting/AccessoriesByPromotion" xmlns:sabv="http://aoa.inetpsa.com/ws/setting/AccessoriesByVehicle" xmlns:sc="http://aoa.inetpsa.com/ws/setting/Criteria" xmlns:scv="http://aoa.inetpsa.com/ws/setting/CriteriaValue" xmlns:soap11="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope" xmlns:soapenc11="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soapenc12="http://www.w3.org/2003/05/soap-encoding" xmlns:tns="http://xml.inetpsa.com/Services/AccessoiresApplication/AccessoiresService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://xml.inetpsa.com/Services/AccessoiresApplication/AccessoiresService">
+      
+<xsd:import schemaLocation="AccessoiresService.xsd7.xsd" namespace="http://aoa.inetpsa.com/ws/setting/AccessoriesByVehicle"/>
+<xsd:import schemaLocation="AccessoiresService.xsd19.xsd" namespace="http://aoa.inetpsa.com/ws/setting/AccessoriesByVehicle"/>
+      
+<xsd:import schemaLocation="AccessoiresService.xsd2.xsd" namespace="http://aoa.inetpsa.com/ws/export/ExportAccessoires"/>
+<xsd:import schemaLocation="AccessoiresService.xsd14.xsd" namespace="http://aoa.inetpsa.com/ws/export/ExportAccessoires"/>
+      
+<xsd:import schemaLocation="AccessoiresService.xsd11.xsd" namespace="http://fault.core.cxl.inetpsa.com"/>
+      
+<xsd:import schemaLocation="AccessoiresService.xsd9.xsd" namespace="http://aoa.inetpsa.com/ws/setting/AccessoriesByPromotion"/>
+<xsd:import schemaLocation="AccessoiresService.xsd21.xsd" namespace="http://aoa.inetpsa.com/ws/setting/AccessoriesByPromotion"/>
+      
+<xsd:import schemaLocation="AccessoiresService.xsd1.xsd" namespace="http://aoa.inetpsa.com/ws/setting/Accessories"/>
+<xsd:import schemaLocation="AccessoiresService.xsd13.xsd" namespace="http://aoa.inetpsa.com/ws/setting/Accessories"/>
+      
+<xsd:import schemaLocation="AccessoiresService.xsd8.xsd" namespace="http://aoa.inetpsa.com/ws/export/ExportAccessoriesByVehicle"/>
+<xsd:import schemaLocation="AccessoiresService.xsd20.xsd" namespace="http://aoa.inetpsa.com/ws/export/ExportAccessoriesByVehicle"/>
+      
+<xsd:import schemaLocation="AccessoiresService.xsd6.xsd" namespace="http://aoa.inetpsa.com/ws/export/ExportCriteriaValue"/>
+<xsd:import schemaLocation="AccessoiresService.xsd18.xsd" namespace="http://aoa.inetpsa.com/ws/export/ExportCriteriaValue"/>
+      
+<xsd:import schemaLocation="AccessoiresService.xsd4.xsd" namespace="http://aoa.inetpsa.com/ws/export/ExportCriteria"/>
+<xsd:import schemaLocation="AccessoiresService.xsd16.xsd" namespace="http://aoa.inetpsa.com/ws/export/ExportCriteria"/>
+      
+<xsd:import schemaLocation="AccessoiresService.xsd10.xsd" namespace="http://aoa.inetpsa.com/ws/export/ExportAccessoriesByPromotion"/>
+<xsd:import schemaLocation="AccessoiresService.xsd22.xsd" namespace="http://aoa.inetpsa.com/ws/export/ExportAccessoriesByPromotion"/>
+      
+<xsd:import schemaLocation="AccessoiresService.xsd5.xsd" namespace="http://aoa.inetpsa.com/ws/setting/CriteriaValue"/>
+<xsd:import schemaLocation="AccessoiresService.xsd17.xsd" namespace="http://aoa.inetpsa.com/ws/setting/CriteriaValue"/>
+      
+<xsd:import schemaLocation="AccessoiresService.xsd3.xsd" namespace="http://aoa.inetpsa.com/ws/setting/Criteria"/>
+<xsd:import schemaLocation="AccessoiresService.xsd15.xsd" namespace="http://aoa.inetpsa.com/ws/setting/Criteria"/>
+      
+<xsd:element name="getAccessories">
+        
+<xsd:complexType>
+          
+<xsd:sequence>
+            
+<xsd:element maxOccurs="1" minOccurs="1" ref="sa:accessoriesInput"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      
+<xsd:element name="getAccessoriesResponse">
+        
+<xsd:complexType>
+          
+<xsd:sequence>
+            
+<xsd:element maxOccurs="1" minOccurs="1" ref="ea:accessoryList"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      
+<xsd:element name="getCriteria">
+        
+<xsd:complexType>
+          
+<xsd:sequence>
+            
+<xsd:element maxOccurs="1" minOccurs="1" ref="sc:criteriaInput"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      
+<xsd:element name="getCriteriaResponse">
+        
+<xsd:complexType>
+          
+<xsd:sequence>
+            
+<xsd:element maxOccurs="1" minOccurs="1" ref="ec:criteriaOut"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      
+<xsd:element name="getCriteriaValues">
+        
+<xsd:complexType>
+          
+<xsd:sequence>
+            
+<xsd:element maxOccurs="1" minOccurs="1" ref="scv:criteriaValueInput"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      
+<xsd:element name="getCriteriaValuesResponse">
+        
+<xsd:complexType>
+          
+<xsd:sequence>
+            
+<xsd:element maxOccurs="1" minOccurs="1" ref="ecv:criteriaValueOut"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      
+<xsd:element name="getAccessoriesByVehicle">
+        
+<xsd:complexType>
+          
+<xsd:sequence>
+            
+<xsd:element maxOccurs="1" minOccurs="1" ref="sabv:accessoriesByVehicleInput"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      
+<xsd:element name="getAccessoriesByVehicleResponse">
+        
+<xsd:complexType>
+          
+<xsd:sequence>
+            
+<xsd:element maxOccurs="1" minOccurs="1" ref="eabv:accessoryByVehicleList"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      
+<xsd:element name="getAccessoriesByPromotion">
+        
+<xsd:complexType>
+          
+<xsd:sequence>
+            
+<xsd:element maxOccurs="1" minOccurs="1" ref="sabp:accessoriesByPromotionInput"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      
+<xsd:element name="getAccessoriesByPromotionResponse">
+        
+<xsd:complexType>
+          
+<xsd:sequence>
+            
+<xsd:element maxOccurs="1" minOccurs="1" ref="eabp:accessoryByPromotionList"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      
+<xsd:element name="ServiceException" type="cxl:ServiceException"/>
+    </xsd:schema>

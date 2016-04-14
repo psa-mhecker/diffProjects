@@ -1,0 +1,370 @@
+<section class="slice-pc98 {if isset($slicePC98.anchorId)} {$slicePC98.anchorId} {/if}" {if isset($slicePC98.anchorId)} id="{$slicePC98.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePC98' } ]" datalayer="">
+  {if isset($slicePC98.error)}
+    <p class="error">La configuration ou le modèle que vous avez demandé n’est plus disponible</p>
+    <a href="#" class="btn-details">Découvrez notre gamme</a>
+  {else}
+    <h2 class="title-lv1">Récapitulatif de votre configuration</h2>
+    <div class="listRecap">
+    {foreach $slicePC98.listRecap as $list}
+      {if isset($list.type)}
+        <div class="clearfix total">
+          <div class="left">
+            <h4 class="left ft-bold fs-big-xx">TOTAL</h4>
+            <span class="modif right ft-light fs-small-x">(hors accessoires)</span>
+          </div>
+          <div class="right" data-jsobj="[ { 'obj':'iso-infobulle' } ]">
+            <p class="{if !isset($slicePC98.mensuel)}left {/if}price ft-bold fs-medium{if isset($slicePC98.mensuel)} mr35{/if}">
+              <span>430,10</span><span>€</span><span> TTC</span>{if isset($slicePC98.mensuel)}<span>/mois</span>{/if}
+            </p>
+            {if isset($slicePC98.mensuel)}
+              <p class="infoPrice">Après un loyer de <span>3 000</span><span>€</span><span> TTC</span><span>/mois</span></p>
+              <div class="slice-infobulle slice-infobulle-motor">
+                <span class="info" data-infobulle="021"></span>
+                <div class="infobulle scroller" data-infobulleo="021">
+                  <p>Un crédit vous engage et doit être remboursé. Vérifiez vos capacités de remboursement avant de vous engager.</p>
+                </div>
+              </div>
+            {/if}
+          </div>
+        </div>
+        <p class="mention ft-light fs-small-xx">Un crédit vous engage et doit être remboursé. Vérifiez vos capacité de remboursement avant de vous engager</p>
+      {elseif isset($list.maj)}
+        <div class="maj custom-button-group">
+          <a href="#" class="cta-inline cta-btn cta-btn-4">
+            <span>mettre à jour mes choix</span>
+          </a>
+          <a href="#" class="cta-link cta-inline"><span>{$list.maj.label}</span></a>
+        </div>
+      {else}
+        <div class="listArticle {if isset($list.paramEqui)}paramEqui{/if}">
+          <div class="clearfix">
+            <div class="left">
+              <h4 class="left ft-light fs-big-xx">{$list.title}</h4>
+              {if isset($list.info2)}
+                <span class="modif ft-light fs-small-x">{$list.info2}</span>
+              {/if}
+              <a href="#" class="modif right ft-light fs-small-x">Modifier</a>
+            </div>
+            <div class="right" data-jsobj="[ { 'obj':'iso-infobulle' } ]">
+              {if isset($list.price)}
+                {if ! isset($slicePC98.mensuel)}
+                <strong class="left price ft-bold fs-medium{if isset($slicePC98.mensuel)} mr35{/if}">
+                  <span class="tot">0,00</span><span>€</span><span> TTC</span>{if isset($slicePC98.mensuel)}<span>/mois</span>{/if}
+                </strong>
+                {else}
+                <p class="price ft-bold fs-medium mr35 mensuel">
+                  <span class="tot">0,00</span><span>€</span><span> TTC</span>{if isset($slicePC98.mensuel)}<span>/mois</span>{/if}
+                </p>
+                {/if}
+              {/if}
+              {if isset($slicePC98.mensuel)}
+              {if ($list@iteration === 1)}
+              <p class="infoPrice top">Après un loyer de <span>3 000</span><span>€</span><span> TTC</span><span>/mois</span></p>
+              {/if}
+                {if $list.info eq 'true'}
+                  <div class="slice-infobulle slice-infobulle-motor">
+                    <span class="info" data-infobulle="020"></span>
+                    <div class="infobulle scroller" data-infobulleo="020">
+                      <p>Un crédit vous engage et doit être remboursé. Vérifiez vos capacités de remboursement avant de vous engager.</p>
+                    </div>
+                  </div>
+                {/if}
+              {/if}
+            </div>
+          </div>
+          {if isset($list.paramEqui)}
+            {if isset($list.notification)}
+              {foreach $list.notification as $notification}
+                {include file="../../notification/notification.tpl"}
+              {/foreach}
+            {/if}
+          {/if}
+          {if !isset($list.type)}
+            {foreach $list.listEqui as $item}
+            {if isset($item.add)}
+            <article class="add disable">
+              <a href="#" class="cta-add"><span>{$item.add.label}</span></a>
+              <div class="hide">
+                {foreach $item.access as $access}
+                <article class="{if !isset($access.checkbox) || $access.preselectcheckbox eq false} disable{/if}{if isset($access.checkboxincrement)} boxIncrement{/if}">
+                  {if isset($access.checkbox)}
+                    <input type="checkbox" name="{$access.id}" id="{$access.id}" value="{$access.id}" {if $access.preselectcheckbox}checked="checked"{/if}>
+                  {/if}
+                  <div class="articleContainer {if isset($access.checkbox)}enable{/if} {if isset($access.increment)}increment{/if}{if isset($access.checkboxincrement)} enable{/if}">
+                    {if isset($access.toggle)}
+                      <div class="bloc--title">
+                        {if isset($access.checkbox)}
+                          <span class="checkbox checked"></span>
+                        {/if}
+                        {if isset($access.checkboxincrement)}
+                          <span class="checkbox checked"></span>
+                          <span class="compteur">
+                            <a href="#" class="decremente-prix" data-min="1" title="Décrémenter">-</a>
+                            <input type="text" class="compteur-value" maxlength="5" value="1" name="sotres" id="000001" readonly="">
+                            <a href="#" class="incremente-prix" data-max="10" title="Incrémenter">+</a>
+                          </span>
+                        {/if}
+                        <span class="title fs-small">{$access.title}</span>{if isset($access.subtitle)}<span class="subtitle fs-small ft-light"> {$access.subtitle}</span>{/if}
+                        <span class="btn-expand">
+                          <b class="forget">Détails</b>
+                          <b class="forget">Fermer</b>
+                        </span>
+                      </div>
+                      <div class="bloc--price fs-small">
+                        {if isset($item.price)}
+                          <span>{$item.price}</span>
+                        {else}
+                          <span>430,60</span><span>€</span><span> TTC</span>{if isset($slicePC98.mensuel)}<span>/mois</span>{/if}
+                        {/if}
+                      </div>
+                    {else}
+                      <div class="bloc--title">
+                        {if isset($access.checkbox)}
+                          <span class="checkbox checked"></span>
+                        {/if}
+                        {if isset($access.checkboxincrement)}
+                          <span class="checkbox checked"></span>
+                          <span class="compteur">
+                            <a href="#" class="decremente-prix" data-min="1" title="Décrémenter">-</a>
+                            <input type="text" class="compteur-value" maxlength="5" value="1" name="sotres" id="000001" readonly="">
+                            <a href="#" class="incremente-prix" data-max="10" title="Incrémenter">+</a>
+                          </span>
+                        {/if}
+                        <span class="title fs-small">{$access.title}</span>{if isset($access.subtitle)}<span class="subtitle fs-small ft-light"> {$access.subtitle}</span>{/if}
+                      </div>
+                      <div class="bloc--price fs-small">
+                        {if isset($item.price)}
+                          <span>{$item.price}</span>
+                        {else}
+                          <span>430,60</span><span>€</span><span> TTC</span>{if isset($slicePC98.mensuel)}<span>/mois</span>{/if}
+                        {/if}
+                      </div>
+                    {/if}
+                  </div>
+                  <div class="content {if isset($access.content.class) && $access.content.class eq 'lightContent'}lightCont{/if}">
+                    {if isset($access.content.class) && $access.content.class eq 'equActive'}
+                      <div class="table {$access.content.class}">
+                        {foreach $access.content.equActive as $table}
+                        <div class="row {cycle values='odd,even'}">
+                          {foreach $table.cell as $cell}
+                          <div class="cell">
+                            {if isset($cell.title)}<strong class="ft-bold">{$cell.title}</strong>{/if}
+                            {if isset($cell.text)}<p>{if isset($cell.info)}<span class="info" data-openpopin="popin--pc96_01"></span>{/if} {$cell.text}</p>{else}&nbsp;{/if}
+                          </div>
+                          {/foreach}
+                        </div>
+                        {/foreach}
+                      </div>
+                    {elseif isset($access.content.class) && $access.content.class eq 'lightContent'}
+                      <div class="lightContent">
+                        <figure class="visual">
+                          <img src="../../../img/acc_pic-2.jpg" alt="Confort">
+                        </figure>
+                        <div class="content-acc">
+
+                          <div class="desc">
+                            <p>
+                              Ces stores spécifiques à votre véhicule protègeront vos passagers du soleil et de la chaleur tout en dissimulant vos effet personnels des regards extérieurs. Disponible pour vitre latérals et vitres arrières.
+                            </p>
+                          </div>
+                          <span class="ref ft-light">Ref : </span><span class="ref ft-light">xxxxxxxx</span>
+
+                        </div>
+                        <p class="mention ft-light fs-small-xx">Accessoire nécessitant l'intervention d'un</p>
+
+                      </div>
+                    {elseif $access.content.class eq 'caracteristiques'}
+                      <div class="table {$access.content.class}">
+                        <ul class="table list_style odd conso">
+                          {foreach $access.content.info as $info}
+                          <li data-jsobj="[ { 'obj':'iso-infobulle' } ]">
+                            <span>{$info.val}</span>
+                            <p class="label">{$info.label}</p>
+                            {if isset($info.info)}
+                              <div class="slice-infobulle">
+                                <span class="info" data-infobulle="{$info.info}"></span>
+                                <div class="infobulle scroller" data-infobulleo="{$info.info}">
+                                  <p>Classe energetique (G/KM)</p>
+                                  <img src="../../../img/energy.png" class="info-energy" alt="energy">
+                                </div>
+                              </div>
+                            {/if}
+                          </li>
+                          {/foreach}
+                        </ul>
+                        {foreach $access.content.caracteristiques as $table}
+                        <h4>{$table.title}</h4>
+                        <div class="row odd">
+                          {foreach $table.cell as $cell}
+                          <div class="cell">
+                            {if isset($cell.title)}<p>{$cell.title}</p>{/if}
+                            {if isset($cell.text)}<p>{if isset($cell.info)}<span class="info" data-openpopin="popin--pc96_01"></span>{/if} {$cell.text}</p>{else}&nbsp;{/if}
+                          </div>
+                          {/foreach}
+                        </div>
+                        {/foreach}
+                      </div>
+                    {/if}
+                  </div>
+              </article>
+              {/foreach}
+              </div>
+            </article>
+            {else}
+            <article class="{if isset($item.checkboxincrementDefault)}disable{/if} {if $item.preselectcheckbox}selected{/if}{if !$item.checkbox} disable{/if}{if isset($item.checkboxincrement)} boxIncrement{/if}">
+              {if $item.checkbox}
+                <input type="checkbox" name="{$item.id}" id="{$item.id}" value="{$item.id}" {if $item.preselectcheckbox}checked="checked"{/if}>
+              {/if}
+              <div class="articleContainer {if isset($item.checkbox) && !isset($item.checkboxincrementDefault)}enable{/if} {if isset($item.increment)}increment{/if}{if isset($item.checkboxincrement)} enable{/if}">
+                {if isset($item.toggle)}
+                  <div class="bloc--title">
+                    {if $item.checkbox  && !isset($item.checkboxincrementDefault)}
+                      <span class="checkbox checked"></span>
+                    {/if}
+                    {if isset($item.checkboxincrement)}
+                      <span class="checkbox checked"{if isset($item.checkboxincrementDefault)} style="display:none;"{/if}></span>
+                      <span class="compteur"{if isset($item.checkboxincrementDefault)} style="display:inline-block;"{/if}>
+                        <a href="#" class="decremente-prix" data-min="1" title="Décrémenter">-</a>
+                        <input type="text" class="compteur-value" maxlength="5" value="1" name="sotres" id="000001" readonly="">
+                        <a href="#" class="incremente-prix" data-max="10" title="Incrémenter">+</a>
+                      </span>
+                    {/if}
+                    <span class="title fs-small">{$item.title}</span>{if isset($item.subtitle)}<span class="subtitle fs-small ft-light"> {$item.subtitle}</span>{/if}
+                    <span class="btn-expand">
+                      <b class="forget">Détails</b>
+                      <b class="forget">Fermer</b>
+                    </span>
+                  </div>
+                  <div class="bloc--price fs-small">
+                    {if isset($item.price)}
+                      <span>{$item.price}</span>
+                    {else}
+                      <span>430,60</span><span>€</span><span> TTC</span>{if isset($slicePC98.mensuel)}<span>/mois</span>{/if}
+                    {/if}
+                  </div>
+                {else}
+                  <div class="bloc--title">
+                    {if $item.checkbox  && !isset($item.checkboxincrementDefault)}
+                      <span class="checkbox checked"></span>
+                    {/if}
+                    {if isset($item.checkboxincrement)}
+                      <span class="checkbox checked"{if isset($item.checkboxincrementDefault)} style="display:none;"{/if}></span>
+                      <span class="compteur"{if isset($item.checkboxincrementDefault)} style="display:inline-block;"{/if}>
+                        <a href="#" class="decremente-prix" data-min="1" title="Décrémenter">-</a>
+                        <input type="text" class="compteur-value" maxlength="5" value="1" name="sotres" id="000001" readonly="">
+                        <a href="#" class="incremente-prix" data-max="10" title="Incrémenter">+</a>
+                      </span>
+                    {/if}
+                    <span class="title fs-small">{$item.title}</span>{if isset($item.subtitle)}<span class="subtitle fs-small ft-light"> {$item.subtitle}</span>{/if}
+                  </div>
+                  <div class="bloc--price fs-small">
+                    {if isset($item.price)}
+                      <span>{$item.price}</span>
+                    {else}
+                      <span>430,60</span><span>€</span><span> TTC</span>{if isset($slicePC98.mensuel)}<span>/mois</span>{/if}
+                    {/if}
+                  </div>
+                {/if}
+              </div>
+              <div class="content {if isset($item.content.class) && $item.content.class eq 'lightContent'}lightCont{/if}">
+                {if $item.content.class eq 'equActive'}
+                  <div class="table {$item.content.class}">
+                    {foreach $item.content.equActive as $table}
+                    <div class="row {cycle values='odd,even'}">
+                      {foreach $table.cell as $cell}
+                      <div class="cell">
+                        {if isset($cell.title)}<strong class="ft-bold">{$cell.title}</strong>{/if}
+                        {if isset($cell.text)}<p>{if isset($cell.info)}<span class="info" data-openpopin="popin--pc96_01"></span>{/if} {$cell.text}</p>{else}&nbsp;{/if}
+                      </div>
+                      {/foreach}
+                    </div>
+                    {/foreach}
+                  </div>
+                {elseif $item.content.class eq 'lightContent'}
+                  <div class="lightContent">
+                    <figure class="visual">
+                      <img src="../../../img/acc_pic-2.jpg" alt="Confort">
+                    </figure>
+                    <div class="content-acc">
+
+                      <div class="desc">
+                        <p>Ces stores spécifiques à votre véhicule protègeront vos passagers du soleil et de la chaleur tout en dissimulant vos effet personnels des regards extérieurs. Disponible pour vitre latérals et vitres arrières.
+                        </p>
+                      </div>
+                      <span class="ref ft-light">Ref : </span><span class="ref ft-light">xxxxxxxx</span>
+
+                    </div>
+                    <p class="mention ft-light fs-small-xx">Accessoire nécessitant l'intervention d'un</p>
+
+                  </div>
+                {elseif $item.content.class eq 'caracteristiques'}
+                  <div class="table {$item.content.class}">
+                    <ul class="table list_style odd conso">
+                      {foreach $item.content.info as $info}
+                      <li data-jsobj="[ { 'obj':'iso-infobulle' } ]">
+                        <span>{$info.val}</span>
+                        <p class="label">{$info.label}</p>
+                        {if isset($info.info)}
+                          <div class="slice-infobulle">
+                            <span class="info" data-infobulle="001"></span>
+                            <div class="infobulle scroller" data-infobulleo="001">
+                              <p>Classe energetique (G/KM)</p>
+                              <img src="../../../img/energy.png" class="info-energy" alt="energy">
+                            </div>
+                          </div>
+                        {/if}
+                      </li>
+                      {/foreach}
+                    </ul>
+                    {foreach $item.content.caracteristiques as $table}
+                    <h4>{$table.title}</h4>
+                    <div class="row odd">
+                      {foreach $table.cell as $cell}
+                      <div class="cell">
+                        {if isset($cell.title)}<p>{$cell.title}</p>{/if}
+                        {if isset($cell.text)}<p>{if isset($cell.info)}<span class="info"></span>{/if} {$cell.text}</p>{else}&nbsp;{/if}
+                      </div>
+                      {/foreach}
+                    </div>
+                    {/foreach}
+                  </div>
+                {/if}
+              </div>
+            </article>
+            {/if}
+            {/foreach}
+          {/if}
+        </div>
+      {/if}
+    {/foreach}
+    </div>
+    <ul class="list_style tools">
+    {foreach $slicePC98.tools as $cta}
+      <li>
+        <a href="{$cta.url}" {if isset($cta.target)}target="{$cta.target}"{/if} class="link">
+          <img src="{$cta.urlImg}" {if isset($cta.altImg)}alt="{$cta.altImg}"{/if} class="ico" width="40" height="33"/>
+          <span>{$cta.label}<span>
+        </a>
+      </li>
+     {/foreach}
+    </ul>
+  {/if}
+  {if isset($slicePC98.popinPC96)}
+  <div class="popin_overlay" data-jsobj="[ { 'obj':'iso-popin' } ]">
+    <div class="color--blue1 close"></div>
+    {if isset($slicePC98.popinPC96)}
+      {foreach $slicePC98.popinPC96 as $infosTranche }
+        <div class="popin popin--{$infosTranche.popinId} scroller" data-popin="popin--pc96_01">
+          <span class="clbtn close">{$infosTranche.close}</span>
+          {include file="../../pc96/template/pc96.tpl"}
+        </div>
+      {/foreach}
+    {/if}
+    {if isset($slicePC98.popinFinancement)}
+      {foreach $slicePC98.popinFinancement as $ticket}
+        {include file="../../popin-financement/popin-financement.tpl"}
+      {/foreach}
+    {/if}
+  </div>
+  {/if}
+</section>

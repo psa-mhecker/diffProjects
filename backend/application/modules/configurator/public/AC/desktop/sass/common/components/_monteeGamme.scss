@@ -1,0 +1,91 @@
+.monteeGamme{
+	table.itemContainer {
+		font-family:$font-ubuntu-regular;
+	 	tr{
+	 		vertical-align: top;
+	 		&.itemsTitle{
+				color: $gray-citroen;
+	 			td:not(.marginContent){
+	 				border-bottom:4px solid $grey-3;
+					div{
+	 					font:12px/34px $font-ubuntu-bold;
+						line-height: 22px;
+					}
+	 			}
+				text-transform: uppercase;
+	 		}
+	 		&.itemsContent{
+	 			td{
+	 				position:relative;
+	 				.infobulle-finition{
+	 					display:none;
+						position: absolute;
+						top: -88px;
+						left: 0;
+						z-index: 777;
+						background-color: #f3f0ca;
+						padding: 15px 5px;
+						font: 12px/15px "ubunturegular", Arial;
+						&:before{ // tirangle en dessous
+							content:'';
+							display:block;
+							width: 0;
+							height: 0;
+							border-style: solid;
+							border-width: 7px 7px 0 7px;
+							border-color: #f3f0ca transparent transparent transparent;
+							position: absolute;
+							bottom: -7px;
+							left: 50%;
+							margin-left: -7px;
+						}
+					}
+	 				text-align:center;
+	 				.jauges-lvl-container {
+	 					margin:0 auto;
+	 				}
+	 				.autocheck{
+	 					height: auto;
+					    margin-top: 12px;
+					    display: inline-block;
+					    margin-bottom: 23px;
+	 					span{
+		 				//	@extend %_sprites;
+	        	//			@extend %_sprite-automobile-check;
+	        				display:inline-block;
+	        				margin:0 auto;
+	 					}
+	 				}
+	 				&:hover, &.mouseenter{
+	 					.infobulle-finition{display:block;}
+	 				}
+	 			}
+				.itemBusiness{
+					font:16px $font-family-brand-bold;
+					color: $gray-citroen;
+					line-height: 20px;
+					margin-top: 28px;
+					line-height: 15px;
+				}
+	 		}
+	 		&.itemsLink{
+	 			td{
+	 				text-align:center;
+	 				a{
+	 					text-decoration: underline;
+	 				    margin-top: 13px;
+    					display: inline-block;
+    					color: $gray-dark;
+    					line-height: 17px;
+    					margin-bottom: 48px;
+	 					&.active{
+	 						color:$brand-orange;
+	 						font-family: $font-family-base-bold;
+	 					}
+	 				}
+	 			}
+	 		}
+	 	}
+
+	}
+}

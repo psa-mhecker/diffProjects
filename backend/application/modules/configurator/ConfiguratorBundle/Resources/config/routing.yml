@@ -1,0 +1,3 @@
+psa_ndp_configurator_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: PsaNdpConfiguratorBundle:Default:index }

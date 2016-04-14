@@ -1,0 +1,17 @@
+<section class="slice-pc97 {if isset($slicePC97.anchorId)} {$slicePC97.anchorId} {/if}" {if isset($slicePC97.anchorId)} id="{$slicePC97.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePC97' } ]">
+    {if isset($infosTranche.title)}
+        <h2>{$infosTranche.title} {$infosTranche.titleSpec}</h2>
+    {/if}
+    <div class="slides">
+        {foreach $infosTranche.slides as $slide}
+            <div class="item">
+                <figure>
+                    <img src="{$slide.src}" alt="{$slide.alt}" />
+                </figure>
+            </div>
+        {/foreach}
+    </div>
+    <div class="content-description">
+        <p>{$infosTranche.textContent}</p>
+    </div>
+</section>

@@ -1,0 +1,364 @@
+parameters:
+  ndp.webservices.range_manager.class: PsaNdp\WebserviceConsumerBundle\Webservices\RangeManager
+  ndp.webservices.bo_forms.class: PsaNdp\WebserviceConsumerBundle\Webservices\BoForms
+  ndp.webservices.ws_gamme.class: PsaNdp\WebserviceConsumerBundle\Webservices\WsGamme
+  ndp.webservices.accessoires_aoa.class: PsaNdp\WebserviceConsumerBundle\Webservices\AccessoiresAOA
+  ndp.webservices.configuration_engine_select.class: PsaNdp\WebserviceConsumerBundle\Webservices\ConfigurationEngineSelect
+  ndp.webservices.configuration_engine_compare_grade.class: PsaNdp\WebserviceConsumerBundle\Webservices\ConfigurationEngineCompareGrade
+  ndp.webservices.configuration_engine_engine_criteria.class: PsaNdp\WebserviceConsumerBundle\Webservices\ConfigurationEngineEngineCriteria
+  ndp.webservices.annuaire_pdv.class: PsaNdp\WebserviceConsumerBundle\Webservices\AnnuairePointDeVente
+  ndp.webservices.financement_simulator.class: PsaNdp\WebserviceConsumerBundle\Webservices\FinancementSimulator
+  ndp.webservices.configuration_engine_config.class: PsaNdp\WebserviceConsumerBundle\Webservices\ConfigurationEngineConfig
+  ndp.webservices.webstore.class: PsaNdp\WebserviceConsumerBundle\Webservices\Webstore
+  ndp.webservices.edealer.class: PsaNdp\WebserviceConsumerBundle\Webservices\EDealer
+  consumer_service.class: PsaNdp\WebserviceConsumerBundle\Service\Service
+  itkg_consumer.model.service_config.class: PsaNdp\MappingBundle\Entity\PsaWebservice
+  itkg_consumer.repository.service_config.class : PsaNdp\MappingBundle\Repository\PsaWebserviceRepository
+  psa_consumer.subscriber.config.class: PsaNdp\WebserviceConsumerBundle\Listener\ConfigListener
+  psa_ndp.adapter.psa_redis.class: PsaNdp\WebserviceConsumerBundle\Adapter\PsaRedis
+  http_auth_login: mdendp00
+  http_auth_password: rcpel8z6
+  
+services:
+#redis cache adapter and listener
+  psa_ndp_ws_cache:
+    class : %psa_ndp.adapter.psa_redis.class%
+    arguments:
+      - "%redis_connection%"
+
+  psa_ndp_ws_cache.subscriber.config:
+    class:  Itkg\Consumer\Listener\CacheListener
+    arguments: [@event_dispatcher]
+
+# config
+  itkg_consumer.repository.service_config:
+    class: %itkg_consumer.repository.service_config.class%
+    factory_service: doctrine.orm.entity_manager
+    factory_method: getRepository
+    arguments:
+      - %itkg_consumer.model.service_config.class%
+#client
+  rest_client:
+    class: %itkg_consumer.client.rest.class%
+
+
+  bo_forms_soap_client:
+    class: %itkg_consumer.client.soap.class%
+    arguments:
+      - %kernel.root_dir%/Resources/ws/boforms/boforms.wsdl
+      - {http_auth_login: %http_auth_login%, http_auth_password: %http_auth_password%}
+      
+  financement_simulator_soap_client:
+    class: %itkg_consumer.client.soap.class%
+    arguments:
+      - %kernel.root_dir%/Resources/ws/sfg/sfg.wsdl
+      - {http_auth_login: %http_auth_login%, http_auth_password: %http_auth_password%}
+      
+  ws_gamme_soap_client:
+    class: %itkg_consumer.client.soap.class%
+    arguments:
+      - %kernel.root_dir%/Resources/ws/gamme/wsGamme.wsdl
+      - {http_auth_login: %http_auth_login%, http_auth_password: %http_auth_password%}
+
+  accessoires_aoa_soap_client:
+    class: %itkg_consumer.client.soap.class%
+    arguments:
+      - %kernel.root_dir%/Resources/ws/accessoires/AccessoiresService.wsdl
+      - {http_auth_login: %http_auth_login%, http_auth_password: %http_auth_password%}
+      
+  configuration_engine_select_soap_client:
+    class: %itkg_consumer.client.soap.class%
+    arguments:
+      - %kernel.root_dir%/Resources/ws/cfg/Select.wsdl
+      - {http_auth_login: %http_auth_login%, http_auth_password: %http_auth_password%}
+
+  configuration_engine_config_soap_client:
+    class: %itkg_consumer.client.soap.class%
+    arguments:
+      - %kernel.root_dir%/Resources/ws/cfg/Config.wsdl
+      - {trace: 1, http_auth_login: %http_auth_login%, http_auth_password: %http_auth_password%}
+
+  configuration_engine_compare_grade_soap_client:
+    class: %itkg_consumer.client.soap.class%
+    arguments:
+      - %kernel.root_dir%/Resources/ws/cfg/CompareGrade.wsdl
+      - {trace: 1 , http_auth_login: %http_auth_login%, http_auth_password: %http_auth_password%}
+
+  configuration_engine_engine_criteria_soap_client:
+    class: %itkg_consumer.client.soap.class%
+    arguments:
+      - %kernel.root_dir%/Resources/ws/cfg/EngineCriteria.wsdl
+      - {trace: 1 , http_auth_login: %http_auth_login%, http_auth_password: %http_auth_password%}
+
+  webstore_soap_client:
+    class: %itkg_consumer.client.soap.class%
+    arguments:
+      - %kernel.root_dir%/Resources/ws/webstore/wsWebstore.wsdl
+      - {trace: 1 , http_auth_login: %http_auth_login%, http_auth_password: %http_auth_password%}
+
+  edealer_client:
+    class: %itkg_consumer.client.soap.class%
+    arguments:
+      - %kernel.root_dir%/Resources/ws/edealer/edealer.wsdl
+      - {http_auth_login: %http_auth_login%, http_auth_password: %http_auth_password%}
+
+#services
+
+  ws_gamme_soap_service:
+    class: %consumer_service.class%
+    arguments:
+      - @event_dispatcher
+      - @ws_gamme_soap_client
+      -
+          identifier: 'WS_GEST_GAMME'
+          cache_adapter : @psa_ndp_ws_cache
+          cache_ttl : %webservice_default_cache_time%
+    tags:
+      - { name: itkg_consumer.service }
+
+  accessoires_aoa_soap_service:
+    class: %consumer_service.class%
+    arguments:
+      - @event_dispatcher
+      - @accessoires_aoa_soap_client
+      -
+          identifier: 'WS_ACCESSOIRES_AOA'
+          cache_adapter : @psa_ndp_ws_cache
+          cache_ttl : %webservice_default_cache_time%
+    tags:
+      - { name: itkg_consumer.service }
+      
+
+  bo_forms_soap_service:
+    class: %consumer_service.class%
+    arguments:
+      - @event_dispatcher
+      - @bo_forms_soap_client
+      -
+         identifier: 'WS_BO_FORMS'
+         cache_adapter : @psa_ndp_ws_cache
+         cache_ttl : %webservice_default_cache_time%
+    tags:
+      - { name: itkg_consumer.service }
+
+
+  configuration_engine_config_soap_service:
+    class: %consumer_service.class%
+    arguments:
+      - @event_dispatcher
+      - @configuration_engine_config_soap_client
+      -
+         identifier: 'WS_MOTEUR_CONFIG_CONFIG'
+         cache_adapter : @psa_ndp_ws_cache
+         cache_ttl : %webservice_default_cache_time%
+    tags:
+      - { name: itkg_consumer.service }
+
+  configuration_engine_select_soap_service:
+    class: %consumer_service.class%
+    arguments:
+      - @event_dispatcher
+      - @configuration_engine_select_soap_client
+      -
+        identifier: 'WS_MOTEUR_CONFIG_SELECT'
+        cache_adapter : @psa_ndp_ws_cache
+        cache_ttl : %webservice_default_cache_time%
+
+    tags:
+      - { name: itkg_consumer.service }
+
+  configuration_engine_compare_grade_soap_service:
+    class: %consumer_service.class%
+    arguments:
+      - @event_dispatcher
+      - @configuration_engine_compare_grade_soap_client
+      -
+        identifier: 'WS_MOTEUR_CONFIG_COMPARE_GRADE'
+        cache_adapter : @psa_ndp_ws_cache
+        cache_ttl : %webservice_default_cache_time%
+
+    tags:
+      - { name: itkg_consumer.service }
+
+  configuration_engine_engine_criteria_soap_service:
+    class: %consumer_service.class%
+    arguments:
+      - @event_dispatcher
+      - @configuration_engine_engine_criteria_soap_client
+      -
+        identifier: 'WS_MOTEUR_CONFIG_ENGINE_CRITERIA'
+        cache_adapter : @psa_ndp_ws_cache
+        cache_ttl : %webservice_default_cache_time%
+    tags:
+      - { name: itkg_consumer.service }
+
+  financement_simulator_soap_service:
+    class: %consumer_service.class%
+    arguments:
+      - @event_dispatcher
+      - @financement_simulator_soap_client
+      -
+        identifier: 'WS_SFG'
+    tags:
+      - { name: itkg_consumer.service }
+
+
+  range_manager_rest_service:
+    class: %consumer_service.class%
+    arguments:
+      - @event_dispatcher
+      - @rest_client
+      -
+        identifier: 'WS_GEST_RANGE_MANAGER'
+        cache_adapter : @psa_ndp_ws_cache
+        cache_ttl : %webservice_default_cache_time%
+    tags:
+      - { name: itkg_consumer.service }
+
+  annuaire_pdv_rest_service:
+    class: %consumer_service.class%
+    arguments:
+      - @event_dispatcher
+      - @rest_client
+      -
+        identifier: 'WS_ANNUPDV'
+        cache_adapter : @psa_ndp_ws_cache
+        cache_ttl : %webservice_default_cache_time%
+    tags:
+      - { name: itkg_consumer.service }
+
+  webstore_soap_service:
+    class: %consumer_service.class%
+    arguments:
+      - @event_dispatcher
+      - @webstore_soap_client
+      -
+        identifier: 'WS_WEBSTORE'
+        cache_adapter : @psa_ndp_ws_cache
+        cache_ttl : %webservice_default_cache_time%
+    tags:
+      - { name: itkg_consumer.service }
+
+  edealer_soap_service:
+    class: %consumer_service.class%
+    arguments:
+      - @event_dispatcher
+      - @edealer_client
+      -
+        identifier: 'WS_EDEALER'
+        cache_adapter : @psa_ndp_ws_cache
+        cache_ttl : %webservice_default_cache_time%
+    tags:
+      - { name: itkg_consumer.service }
+
+#consumer
+  bo_forms:
+    class: %ndp.webservices.bo_forms.class%
+    arguments:
+      - @bo_forms_soap_service
+      - @psa_ndp.repository.site_webservice
+      - @itkg_consumer.repository.service_config
+
+  range_manager:
+    class: %ndp.webservices.range_manager.class%
+    arguments:
+      - @range_manager_rest_service
+      - @psa_ndp.repository.site_webservice
+      - @itkg_consumer.repository.service_config
+      
+  ws_gamme:
+    class: %ndp.webservices.ws_gamme.class%
+    arguments:
+      - @ws_gamme_soap_service
+      - @psa_ndp.repository.site_webservice
+      - @itkg_consumer.repository.service_config
+    calls :
+      - [ setDefaultContext  ]
+      
+  accessoires_aoa:
+    class: %ndp.webservices.accessoires_aoa.class%
+    arguments:
+      - @accessoires_aoa_soap_service
+      - @psa_ndp.repository.site_webservice
+      - @itkg_consumer.repository.service_config
+    calls :
+      - [ setDefaultContext, [ @psa_ndp_site_configuration, "@?request_stack" ]]
+
+  configuration_engine_select:
+    class: %ndp.webservices.configuration_engine_select.class%
+    arguments:
+      - @configuration_engine_select_soap_service
+      - @psa_ndp.repository.site_webservice
+      - @itkg_consumer.repository.service_config
+    calls :
+      - [ setDefaultContext, [ @psa_ndp_site_configuration, "@?request_stack" ]]
+
+  configuration_engine_config:
+    class: %ndp.webservices.configuration_engine_config.class%
+    arguments:
+      - @configuration_engine_config_soap_service
+      - @psa_ndp.repository.site_webservice
+      - @itkg_consumer.repository.service_config
+    calls :
+      - [ setDefaultContext, [ @psa_ndp_site_configuration, "@?request_stack" ]]
+
+  configuration_engine_compare_grade:
+    class: %ndp.webservices.configuration_engine_compare_grade.class%
+    arguments:
+      - @configuration_engine_compare_grade_soap_service
+      - @psa_ndp.repository.site_webservice
+      - @itkg_consumer.repository.service_config
+    calls :
+      - [ setDefaultContext, [ @psa_ndp_site_configuration, "@?request_stack" ]]
+
+  configuration_engine_engine_criteria:
+    class: %ndp.webservices.configuration_engine_engine_criteria.class%
+    arguments:
+      - @configuration_engine_engine_criteria_soap_service
+      - @psa_ndp.repository.site_webservice
+      - @itkg_consumer.repository.service_config
+    calls :
+      - [ setDefaultContext, [ @psa_ndp_site_configuration, "@?request_stack" ]]
+
+  financement_simulator:
+    class: %ndp.webservices.financement_simulator.class%
+    arguments:
+      - @financement_simulator_soap_service
+      - @psa_ndp.xpath.query.helper
+      - @psa_ndp.repository.site_webservice
+      - @itkg_consumer.repository.service_config
+    calls :
+      - [ setDefaultContext  ]
+
+  annuaire_pdv:
+    class: %ndp.webservices.annuaire_pdv.class%
+    arguments:
+      - @annuaire_pdv_rest_service
+      - @psa_ndp.repository.site_webservice
+      - @itkg_consumer.repository.service_config
+    calls :
+      - [ setDefaultContext, [ @psa_ndp_site_configuration, "@?request_stack" ]  ]
+
+  webstore:
+    class: %ndp.webservices.webstore.class%
+    arguments:
+      - @webstore_soap_service
+      - @psa_ndp.repository.site_webservice
+      - @itkg_consumer.repository.service_config
+    calls :
+      - [ setDefaultContext  ]
+
+  edealer:
+    class: %ndp.webservices.edealer.class%
+    arguments:
+      - @edealer_soap_service
+      - @psa_ndp.repository.site_webservice
+      - @itkg_consumer.repository.service_config
+
+  psa_consumer.subscriber.config:
+    class: %psa_consumer.subscriber.config.class%
+    arguments :
+       options : %psa_consumer.subscriber.config.options%
+    tags:
+        - { name: kernel.event_subscriber }
+

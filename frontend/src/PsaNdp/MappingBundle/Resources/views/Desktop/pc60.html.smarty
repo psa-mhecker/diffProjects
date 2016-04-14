@@ -1,0 +1,36 @@
+<div class="container-sticky margin-like-section" id="stickyContainer">
+    <section class="slice-pc60 slice-full-size {if isset($slicePC60.anchorId)} {$slicePC60.anchorId} {/if}" {if isset($slicePC60.anchorId)} id="{$slicePC60.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePC60' } ]" datalayer="{$slicePC60.datalayer}">
+        <div class="show-for-small-only fix-sticky-font">
+            <div  class="small-12 columns container-recap-mobile margin-like-section">
+                {if isset($slicePC60.cta)}
+                    {foreach $slicePC60.cta as $cta}
+                    {include file="../Components/cta.html.smarty"
+                    gtm="{ldelim}\"eventType\":\"click\",\"dataList\":{ldelim}\"event\":\"uaevent\",\"eventCategory\":\"{$slicePC60.blockName}::position-{$slicePC60.blockOrder}\",\"eventAction\":\"Redirection\",\"eventLabel\":\"{$cta.title|escape:html}\"{rdelim}{rdelim}"}
+                    {/foreach}
+                {/if}
+            </div>
+        </div>
+        <div class="hide-for-small-only small-12 columns fix-sticky-font margin-like-section">
+            <div  class="container-recap">
+                {if isset($slicePC60.cta)}
+                <div class="main-button-container">
+                    {foreach $slicePC60.cta as $cta}
+                    {include file="../Components/cta.html.smarty"
+                    extraclass="cta-recap"
+                    gtm="{ldelim}\"eventType\":\"click\",\"dataList\":{ldelim}\"event\":\"uaevent\",\"eventCategory\":\"{$slicePC60.blockName}::position-{$slicePC60.blockOrder}\",\"eventAction\":\"Redirection\",\"eventLabel\":\"{$cta.title|escape:html}\"{rdelim}{rdelim}"}
+                    {/foreach}
+                </div>
+                {/if}
+
+                {if !empty($slicePC60.links)}
+                    {foreach $slicePC60.links as $cta}
+                    <div class="links-container">
+                    {include file="../Components/cta.html.smarty"
+                    gtm="{ldelim}\"eventType\":\"click\",\"dataList\":{ldelim}\"event\":\"uaevent\",\"eventCategory\":\"{$slicePC60.blockName}::position-{$slicePC60.blockOrder}\",\"eventAction\":\"Redirection\",\"eventLabel\":\"{$cta.title|escape:html}\"{rdelim}{rdelim}"}
+                    </div>
+                    {/foreach}
+                {/if}
+            </div>
+        </div>
+    </section>
+</div>

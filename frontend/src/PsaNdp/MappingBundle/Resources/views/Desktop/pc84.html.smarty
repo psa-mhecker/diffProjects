@@ -1,0 +1,64 @@
+<section class="slice-pc84 {if isset($slicePC84.anchorId)} {$slicePC84.anchorId} {/if}" {if isset($slicePC84.anchorId)} id="{$slicePC84.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePC84' } ]" datalayer="{$slicePC84.datalayer}">
+  {if isset($slicePC84.title)}<h2 class="title">{$slicePC84.title}</h2>{/if}
+  {if isset($slicePC84.subtitle)}<h3 class="subtitle">{$slicePC84.subtitle}</h3>{/if}
+  <ul>
+
+    {foreach $slicePC84.items as $item}
+
+      <li>
+        <div class="visual">
+          <img src="{$item.visual.src}" alt="{$item.visual.alt}">
+        </div>
+        <h3 class="title">{$item.title}</h3>
+        <p class="text">{$item.text}</p>
+
+        {if isset($item.note)}
+          <p class="note">{$item.note}</p>
+        {/if}
+        {if isset($item.link)}
+          <div class="custom-button-group clearfix simple-link" data-popin="{$item.id}">
+            {foreach $item.link as $cta}
+              {include file="./cta.html.smarty"}
+            {/foreach}
+          </div>
+        {/if}
+
+        <div class="cta-box">
+          <div class="custom-button-group clearfix">
+            {foreach $item.cta as $cta}
+              {include file="./cta.html.smarty"}
+            {/foreach}
+          </div>
+        </div>
+      </li>
+
+    {/foreach}
+
+  </ul>
+
+</section>
+
+{foreach $slicePC84.items as $item}
+    {if isset($item.popin)}
+        <div class="overlay-pc84" id="popin-{$item.popin.id}">
+          <div class="popin">
+            <div class="popin-inner">
+              <h3 class="title">{$item.popin.title}</h3>
+              <p class="text">{$item.popin.text}</p>
+              <ul class="models">
+                {foreach $item.popin.list as $itemul}
+                  <li><p>{$itemul}</p></li>
+                {/foreach}
+              </ul>
+              <p class="question">{$item.popin.question}</p>
+              <div class="custom-button-group clearfix">
+                {foreach $item.popin.cta as $cta}
+                  {include file="./cta.html.smarty"}
+                {/foreach}
+              </div>
+            </div>
+            <i class="close-popin">{$item.popin.close}</i>
+          </div>
+        </div>
+    {/if}
+{/foreach}

@@ -1,0 +1,26 @@
+parameters:
+    psa_ndp_api.pf44_become_agent_service.class: PsaNdp\ApiBundle\Service\Pf44BecomeAgentService
+    psa_ndp_api.pf25_car_selector_results.class: PsaNdp\ApiBundle\Service\Pf25CarSelectorResultsService
+    psa_ndp_api.car_selector_filter_settings.class: PsaNdp\ApiBundle\Service\CarSelectorFilterSettings
+
+services:
+
+    psa_ndp_api.pf44_become_agent_service:
+        class: '%psa_ndp_api.pf44_become_agent_service.class%'
+        arguments: ['@service_container']
+
+    psa_ndp_api.pf44_become_agent_service:
+        class: '%psa_ndp_api.pf44_become_agent_service.class%'
+        arguments: ['@service_container']
+
+    psa_ndp_api.pf25_car_selector_results:
+      class: '%psa_ndp_api.pf25_car_selector_results.class%'
+      arguments:
+        - '@open_orchestra_model.repository.node'
+
+    psa_ndp_api.car_selector_filter_settings:
+      class: '%psa_ndp_api.car_selector_filter_settings.class%'
+      arguments:
+        - @psa_ndp.repository.car_selector_settings
+
+

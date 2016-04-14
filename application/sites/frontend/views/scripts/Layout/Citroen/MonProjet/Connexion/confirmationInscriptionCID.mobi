@@ -1,5 +1,0 @@
-<section>
-	<h2 class="title-lvl4">{$aConfirmationInscriptionCID.PAGE_ZONE_MULTI_TITRE}</h2>
-	{$aConfirmationInscriptionCID.PAGE_ZONE_MULTI_TEXT}
-	<br/><a href="/_/User/activation">TEMP: Activation du compte</a>
-</section>

@@ -1,0 +1,54 @@
+<section class="slice-pf25 {if isset($slicePF25.anchorId)} {$slicePF25.anchorId} {/if}" {if isset($slicePF25.anchorId)} id="{$slicePF25.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePF25' } ]" data-url="{$slicePF25.urlJson}" datalayer="{$slicePF25.datalayer}" data-slicename="{$slicePF25.blockName}" data-sliceposition="{$slicePF25.blockOrder}">
+	<div class="car-selector row collapse"></div>
+	<script id="vignette-tpl" type="text/template">
+		<% if(!_.isEmpty(vehicle)) { %>
+			<div <% if(typeof(vehicle.version) !== "undefined") { %> id='<%- vehicle.version %>' <% } %> class="vignette columns large-3 medium-4 small-6">
+				<a class="content" href="<% if(!_.isEmpty(discover)) { %><%-discover.url%><% } %>">
+					<div class="heading">
+						<% if(commercial_label && typeof(commercial_label) !== "undefined") { %>
+							<div class="offer-wrapper">
+								<span class="label <% if(!_.isEmpty(cssClass)) { %><%-cssClass%><% } %>"><%- commercial_label %></span>
+							</div>
+						<% } %>
+						<div class="title">
+							<h3><%- vehicle.title %></h3>
+							<% if(typeof(subTitle) !== "undefined") { %>
+								<h4 class="subtitle"><%- subTitle %></h4>
+							<% } %>
+						</div>
+					</div>
+					
+					<div class="img-wrapper">
+						<% if(typeof(vehicle.thumbnail) !== "undefined") { %>
+							<img src="<%- vehicle.thumbnail %>" alt="<%- vehicle.title %>">
+						<% } else { %>
+							<div class="no-img"></div>
+						<% } %>
+					</div>
+
+					<% if(!_.isEmpty(vehicle.price) && typeof(vehicle.price.display) !== "undefined") { %>
+						<div class="price"><%= vehicle.price.display %></div>
+					<% } %>
+				</a>
+				<div class="cta-wrapper">
+					<% if(!_.isEmpty(discover)) { %>
+						<a href="<%- discover.url %>" class="cta btn-cta full-width light-blue discover">
+							<span><%- discover.title %></span>
+						</a>
+					<% } %>
+					<% if(!_.isEmpty(compare)) { %>
+						<a href="<%- compare.url %>" class="cta link-cta short-width chevron-right config">
+							<span class="content-cta"><%- compare.title %></span>
+						</a>
+					<% } %>
+					<% if(!_.isEmpty(store_locator)) { %>
+						<a href="<%- store_locator.url %>" class="cta link-cta short-width chevron-right config">
+							<span class="content-cta"><%- store_locator.title %></span>
+						</a>
+					<% } %>
+				</div>
+			</div>
+		<% } %>
+	</script>
+    <p class="legal-notice">{$slicePF25.legalMention}</p>
+</section>

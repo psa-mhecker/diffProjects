@@ -1,0 +1,40 @@
+services:
+    open_orchestra_front.subscriber.kernel_exception:
+        class: PsaNdp\MappingBundle\EventListener\HttpNotFoundExceptionListener
+        arguments:
+            - @psa_ndp.services.page_finder
+            - @open_orchestra_model.repository.site
+            - @request_stack
+            - @open_orchestra_front.twig.orchestra_twig_engine
+            - @psa_ndp.services.share_object
+        tags:
+            - { name: kernel.event_listener, event: kernel.exception, method: onKernelException }
+    kernel.listener.request_subscriber:
+        class: PsaNdp\MappingBundle\EventListener\KernelRequestSubscriber
+        arguments: [@psa_ndp.services.page_finder, @open_orchestra_model.repository.site, @psa_ndp_site_configuration]
+        tags:
+             - { name: kernel.event_listener, event: kernel.request, method: onKernelRequest }
+    open_orchestra_theme.subscriber.asset_package_injector:
+        class: PsaNdp\MappingBundle\Subscribers\AssetPackageInjectorSubscriber
+        arguments:
+            - @kernel
+            - @assets.packages
+            - %assets_version%
+            - @psa_ndp.services.media_server_initializer
+        tags:
+            - { name: kernel.event_subscriber }
+    psa_ndp_front.subscriber.kernel_exception_redirection:
+        class: PsaNdp\MappingBundle\EventListener\HttpRedirectionExceptionListener
+        arguments:
+            - @open_orchestra_model.repository.node
+            - @request_stack
+            - @open_orchestra_front.twig.orchestra_twig_engine
+            - @psa_ndp.services.share_object
+        tags:
+            - { name: kernel.event_listener, event: kernel.exception, method: onKernelException }
+    psa_ndp_front.subscriber.kernel_exception_unavailable:
+        class: PsaNdp\MappingBundle\EventListener\HttpUnavailableExceptionListener
+        arguments:
+            - %proxy%
+        tags:
+            - { name: kernel.event_listener, event: kernel.exception, method: onKernelException }

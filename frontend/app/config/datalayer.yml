@@ -1,0 +1,147 @@
+parameters: 
+  datalayer: 
+    default:
+      brand: peugeot
+      siteTarget: all
+      siteOwner: central
+      siteFamily: brand
+      siteTypeLevel1: kpp
+      siteTypeLevel2: navigation
+      pageCategory:
+      virtualPageURL:
+    G01:
+      siteFamily: new cars
+      siteTypeLevel2: index
+      virtualPageURL: index
+      pageCategory: home page
+
+    G02: 
+      pageCategory: master page
+      virtualPageURL: range
+    
+    G03: 
+      pageCategory: prehome page
+      virtualPageURL: kpp/prehome/languagechoice
+    
+    G04: 
+      pageCategory: prehome page
+    
+    G05:
+      pageCategory: error page
+      virtualPageURL: 404
+    G06:
+      virtualPageURL: faq
+    G07:
+      virtualPageUrl: allpeugeot
+    G08:
+      virtualPageUrl: sitemap
+    G09:
+      siteTarget: B2C
+      pageCategory: search result page
+      siteTypeLevel2: car selector
+      virtualPageURL: car-selector
+      siteFamily: new cars
+
+    G10:
+      siteTypeLevel2: dealer locator
+      virtualPageURL: dealerlocator
+
+    G11:
+      siteTypeLevel2: dealer locator
+
+    G12:
+      siteTypeLevel2: others
+      siteTarget: B2C
+      virtualPageURL: basic-content
+
+    G13:
+      siteTypeLevel2: promotion
+      siteTarget: B2C
+      virtualPageURL: offers
+
+    G14:
+      siteTypeLevel2: promotion
+      siteTarget: B2C
+      virtualPageURL: landing-page
+
+    G15:
+      siteTypeLevel2: dealer locator
+      virtualPageURL: kpp/after-sales-offer/detail
+
+
+    G16:
+      virtualPageURL: become-agent
+      siteTypeLevel2: dealer locator
+    G17:
+      siteTypeLevel2: showroom
+      siteTarget: B2C
+      siteFamily: financing
+
+    G18: {}
+    G19:
+      siteTypeLevel2: showroom
+      siteTarget: B2C
+      siteFamily: accessories
+
+    G20:
+      siteTypeLevel2: showroom
+      siteTarget: B2C
+      siteFamily: accessories
+
+    G21:
+      siteTypeLevel2: showroom
+      siteTarget: B2C
+      siteFamily: after-sales
+      pageCategory: range page
+
+    G22:
+      siteTypeLevel2: showroom
+      siteTarget: B2C
+      siteFamily: after-sales
+      pageCategory: product page
+
+    G23:
+      siteTypeLevel2: showroom
+      siteTarget: B2C
+      siteFamily: after-sales
+      pageCategory: range page
+
+    G24: {}
+    G25: {}
+    G26: {}
+    G27:
+      siteTarget: B2C
+      pageCategory: product page
+      siteFamily: new cars
+      siteTypeLevel2: showroom
+      virtualPageURL: kpp/showroom
+
+    G28:
+      siteTarget: B2C
+      pageCategory: master page
+      siteFamily: new cars
+      siteTypeLevel2: showroom
+      virtualPageURL: showroom
+
+    G29:
+      siteTarget: B2C
+      siteTypeLevel2: others
+      virtualPageURL: connected-services-details
+    G30:
+      siteTarget: B2C
+      siteTypeLevel2: others
+      virtualPageURL: connected-services-category
+    G31: {}
+    G32: {}
+    G33: {}
+    G34: {}
+    G35:
+      siteTarget: B2C
+      siteTypeLevel2: others
+      virtualPageURL: free-content
+    G36:
+      siteTypeLevel2: showroom
+      siteTarget: B2C
+      siteFamily: new cars
+      virtualPageURL: brandAndTechnology
+    G37: {}

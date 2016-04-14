@@ -1,0 +1,61 @@
+.toggle, .configLame .toggle-container{
+  margin-top: 16px;
+  margin-bottom: 5px;
+  display: block;
+
+  .tit-toggle, .toggle-title:not(.addComparator){
+    display: block;
+    padding: 21px 15px;
+    font: 14px/1.2 $font-family-base-bold;
+    background-color: $gray-lighter;
+    text-transform: uppercase;
+    position: relative;
+    cursor: pointer;
+
+    .arrow--dark-big-bottom,
+    .arrow--dark-big-top {
+      position: absolute;
+      right: 15px;
+    }
+    .arrow--dark-big-top {
+      display: none;
+    }
+    b{
+      &:first-child {
+        display: inline;
+      }
+      &:last-child {
+        display: none;
+      }
+    }
+    &.close{
+      .arrow--dark-big-bottom {
+        display: none;
+      }
+      .arrow--dark-big-top {
+        display: inline-block;
+      }
+      b{
+        &:first-child {
+          display: none;
+        }
+        &:last-child {
+          display: inline;
+        }
+      }
+    }
+  }
+  .cont-toggle, .toggle-content{
+  //  height: 0;
+    overflow: hidden;
+    clear: left;
+
+    > .row {
+      position: relative;
+    }
+
+    .cont-toggle, .toggle-content{
+      margin-top: 11px;
+    }
+  }
+}

@@ -1,0 +1,221 @@
+<section class="slice-pc88-v2 {if isset($slicePC88.anchorId)} {$slicePC88.anchorId} {/if}" {if isset($slicePC88.anchorId)} id="{$slicePC88.anchorId}" {/if} data-jsobj="[ { 'obj':'slicePC88-v2'} ]" datalayer="{$slicePC88.datalayer}">
+  {if isset($slicePC88.titre)}<h1>{$slicePC88.titre}</h1>{/if}
+  <section class="zone1 slice-inside-margin">
+    {if isset($slicePC88.link)}
+    <a href="{$slicePC88.link.url}" target="{$slicePC88.link.target}">
+    {/if}
+      <figure>
+        <img src="{$slicePC88.visu.url}" alt="{$slicePC88.visu.alt}" class="visu">
+      </figure>
+      <div class="figcaption">
+        <h2 class="title">{$slicePC88.title} <span>{$slicePC88.modele}</span></h2>
+        <p class="fs-small">{$slicePC88.text}</p>
+        <p class="ft-main fs-small">{$slicePC88.text2}</p>
+        {if isset($slicePC88.link)}
+        <span class="link spl-lk">{$slicePC88.link.text}</span>
+        {/if}
+      </div>
+    {if isset($slicePC88.link)}
+    </a>
+    {/if}
+  </section>
+  <section class="zone2">
+    <div id="zone-equipements" class="slice-pf42_confishow slice-inside-margin" data-jsobj="[ { 'obj':'slicePF42_confishow' } ]" data-source="pc88">
+      <h2 class="title"><span class="nbritems"></span> {$slicePC88.zone2.title}</h2>
+      <div class="block-color">
+        {$array = []} 
+        {foreach $slicePC88.zone2.mdc.categories.color.available as $available_color_category}
+        <div class="block-color-category category clearfix">
+          <div class="block-price">
+            {foreach $available_color_category.type as $type}
+              {if !in_array($type.price, $array)}
+                  {$array[] = $type.price}
+              {/if}
+            {/foreach}
+            {if $array|@count > 1}
+            <p class="as_for">{$slicePC88.zone2.mdc.as_for}</p>
+            {/if}
+            <p class="price">
+              <span class="amount" data-price="{$slicePC88.zone2.mdc.selected_price}">{$slicePC88.zone2.mdc.selected_price}</span>
+              <span>{if $slicePC88.zone2.mdc.monthly_price eq true}
+                {$slicePC88.zone2.mdc.currency.monthly}
+                <a href="#" class="picto_monthly"></a>
+                {else}
+                  {$slicePC88.zone2.mdc.currency.normal}
+                {/if}
+              </span>
+            </p>
+            {if $slicePC88.zone2.mdc.monthly_price eq true}
+              <span class="info" data-openpopin="{$slicePC88.popinId}"></span>
+            {/if}
+          </div>
+          <ul class="list-colors">
+            {foreach $available_color_category.type as $type} 
+            <li>
+              <a href="#" class="color" data-price="{$type.price}" 
+                {if isset($type.target)}target="{$type.target}"{/if} title="{$type.label}" {if isset($type.typeOption)}data-typeOption="{$type.typeOption}"{/if} {if isset($type.valueOption)}data-valueOption="{$type.valueOption}"{/if}>
+                <img src="{$type.src}" alt="{$type.alt}" />
+              </a>
+              <div class="block-label clearfix">
+                <span class="label">{$type.label}</span>
+                {foreach $type.infobulle as $sliceInfobulle}
+                  {include file="../../infobulle/infobulle.tpl"}
+                {/foreach}
+                {if isset($type.lienDetail)}
+                <span class="custom-button-group">
+                  <a href="{$type.lienDetail.url}" id="detail-popin" data-close="fermer" class="popin cta-link cta-inline" title="{$type.label}">
+                    <span>{$type.lienDetail.title}</span>
+                  </a>
+                </span>
+                {/if}
+              </div>
+            </li>
+            {/foreach}
+          </ul>
+        </div>
+        {/foreach}
+      </div>
+      <div class="notification modification " data-jsobj="[ { 'obj':'notification' } ]" style="visibility: visible; ">
+        <div class="notification-txt">
+          <p>{$slicePC88.zone2.mdc.painting.info}</p>
+        </div>
+      </div>
+      {if $slicePC88.zone2.mdc.monthly_price eq true}
+      <div class="block-other-color">
+        <!-- <p class="info info-slice-pc88-v2">
+          
+        </p> -->
+        {$array = []}
+        {foreach $slicePC88.zone2.mdc.categories.color.other as $other_color_category}
+        <div class="block-color-category block-other-deco category closed-deco clearfix">
+          <h3 class="cat-title">
+            <span class="nbritems"></span> {$slicePC88.zone2.mdc.painting.disponibility.other_painting_available}
+          </h3>
+          <a href="#" class="open-deco link-deco" title="{$slicePC88.translate.titleVoirDeco}">{$slicePC88.translate.titleVoirDeco}</a>
+          <a href="#" class="close-deco link-deco" title="{$slicePC88.translate.titleMasquerDeco}">{$slicePC88.translate.titleMasquerDeco}</a>
+          <div class="slide-deco">
+            <div class="block-price">
+              {foreach $available_color_category.type as $type}
+                {if !in_array($type.price, $array)}
+                  {$array[] = $type.price}
+                {/if}
+              {/foreach}
+              {if $array|@count > 1}
+              <p class="as_for">{$slicePC88.zone2.mdc.as_for}</p>
+              {/if}
+              <p class="price">
+                <span class="amount" data-price="{$slicePC88.zone2.mdc.selected_price2}">{$slicePC88.zone2.mdc.selected_price2}</span>
+                <span>
+                {if $slicePC88.zone2.mdc.monthly_price}
+                  {$slicePC88.zone2.mdc.currency.monthly}
+                  <a href="#" class="picto_monthly"></a>
+                {else}
+                  {$slicePC88.zone2.mdc.currency.normal}
+                {/if}
+                </span>
+              </p>
+              {if $slicePC88.zone2.mdc.monthly_price eq true}
+                <span class="info" data-openpopin="{$slicePC88.popinId}"></span>
+              {/if}
+            </div>
+            <ul class="list-colors">
+              {foreach $other_color_category.type as $type}
+              <li>
+                <a href="#" class="color"
+                  data-price="{$type.price}"
+                  {if isset($type.target)}target="{$type.target}"{/if} title="{$type.label}">
+                  <img src="{$type.src}" alt="{$type.alt}"/>
+                </a>
+                <div class="block-label clearfix">
+                  <span class="label">{$type.label}</span>
+                  {foreach $type.infobulle as $sliceInfobulle}
+                    {include file="../../infobulle/infobulle.tpl"}
+                  {/foreach}
+                  {if isset($type.lienDetail)}
+                  <span class="custom-button-group clearfix">
+                    <a href="{$type.lienDetail.url}" class="popin cta-link cta-inline" data-close="fermer" data-title="Blanc banquise" title="{$type.label}"><span>{$type.lienDetail.title}</span>
+                    </a>
+                  </span>
+                  {/if}
+                </div>
+              </li>
+              {/foreach}
+            </ul>
+          </div>
+        </div>
+        {/foreach}
+      </div>
+      {/if}
+    </div>
+  </section>
+  <section class="slice-pf42_confishow-popin popin" id="popin-1">
+    <h4 class="popin-title">Noir perla</h4>
+    <div class="slides owl-carousel owl-text-select-on">              
+      <figure>
+        <img src="../../../img/confishow/car.jpg" alt="car">
+      </figure>
+      <figure>
+        <img src="../../../img/confishow/car.jpg" alt="car">
+      </figure>
+      <figure>
+        <img src="../../../img/confishow/car.jpg" alt="car">
+      </figure>
+    </div>
+    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas venenatis velit. Nullam semper sapien risus, id tincidunt ex rhoncus sed.</p>
+  </section>
+
+  <section class="slice-pf42_confishow-popin popin" id="popin-2" style="display: none;">
+    <h4 class="popin-title">Chaîne &amp; Trap Metax Noir Mistral</h4>
+    <div class="wrapper">
+      <figure>
+        <img class="popin-casing-image" src="../../../img/confishow/garnissage1_big.jpg" alt="">
+      </figure>
+      <div class="slides owl-carousel owl-text-select-on">
+        <figure>
+          <img src="../../../img/confishow/peugeot_inside.jpg" alt="peugeot">
+        </figure>
+        <figure>
+          <img src="../../../img/confishow/peugeot_inside.jpg" alt="peugeot">
+        </figure>
+        <figure>
+          <img src="../../../img/confishow/peugeot_inside.jpg" alt="peugeot">
+        </figure>
+      </div>
+    </div>
+    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas venenatis velit. Nullam semper sapien risus, id tincidunt ex rhoncus sed.</p>
+  </section>
+
+  {if $slicePC88.zone2.mdc.monthly_price eq true}
+  <section class="popin_overlay" data-jsobj="[ { 'obj':'iso-popin' } ]">
+    {foreach $slicePC88.popin.financement as $ticket}
+    <div class="popin popin--financement scroller" data-popin="{$ticket.id}">
+      <span class="clbtn close">{$slicePC88.translate.close}</span>
+      <div class="head">
+        <img src="{$ticket.img.src}" alt="{$ticket.img.alt}">
+        <h3 class="model">{$ticket.model}</h3>
+      </div>
+      {foreach $ticket.priceList as $section}
+      <section>
+        <h4 class="title">{$section.title}</h4>
+        <ul class="list_style">
+          {foreach $section.price as $price}
+          <li>
+            <p class="label">{$price.label}</p>
+            <p class="price">{$price.sum} {if isset($price.devise)}<span>{$price.devise}</span>{/if}</p>
+            {if isset($price.label2)}
+            <p class="label2">{$price.label2}</p>
+            {/if}
+          </li>
+          {/foreach}
+        </ul>
+      </section>
+      {/foreach}
+      {foreach $ticket.asterix as $asterix}
+      <p class="asterix">{$asterix.text}</p>
+      {/foreach}
+      <p class="mention">{$ticket.mention}</p>
+    </div>
+    {/foreach}
+  </section>
+  {/if}
+</section>

@@ -1,0 +1,16 @@
+<p class="namecontrast"><span class="airbump-name">picture vehicle 1</span></p>
+<div class="slickslideshow popinzoom" data-jsobj="{literal}[ { 'obj':'slickslideshow', 'option':{'infinite':true, 'slidetoshow':1, 'slidetoscroll':1, 'dots':true, 'speed':300, 'externalnav':true, 'zoomeffect':true} } ]{/literal}">
+   <div class="slickslideshow-slide">
+      <a href="#" class="linkvisu" data-popinName="popinzoom" data-jsobj="{literal}[ { 'obj':'isoPopinOpenLink' } ]{/literal}">
+         <figure><img src="{$base_url_v3d_image}&color={$lookFeature[$var].id}&view=001" alt="picture vehicle 1" class="slickslideshow-slide-bigvisu" /></figure>
+      </a>
+   </div>
+</div>
+<span class="zoom"></span>
+</div>
+<p class="choice"> Toit Disponible : </p>
+<ul class="palette slickexternalnav" >
+   <li id="p-000" >
+      <figure><img src=" http://dummyimage.com/13x13/dcdcdc/dcdcdc.png " alt=" picture vehicle 1 " data-picturename="picture vehicle 1" data-priceoutrightsecond="10" data-pricemonthlysecond="1" /></figure>
+   </li>
+</ul>

@@ -1,0 +1,41 @@
+{
+   "motorisation": [
+      {
+         "id":"001",
+         "GrEngine":"PureTech 110 S&S",
+         "GrTransmissionType":"5 rapports - STT",
+         "Energy":"Essence",
+         "GrTypeBoite":"Boite manuelle",
+         "price":"120€",
+         "co2value":"107 g/km",
+         "consovalue":"4,7 L/100km",
+         "maxpowvalue":"81 kW (110 CEE/ch) à 5 550 tr/min",
+         "energy":
+            {
+               "name":"A",
+               "img":"../../../img/energyB.png",
+               "picto":"../../../img/pictoenergyB.png",
+               "alt":"Alt Categorie A"
+            }
+         
+      },
+      {
+         "id":"002",
+         "GrEngine":"PureTech 82 S&S",
+         "GrTransmissionType":"5 rapports",
+         "Energy":"Essence",
+         "GrTypeBoite":"Boite automatique",
+         "price":"120 520 €",
+         "co2value":"134 g/km",
+         "consovalue":"4,7 L/100km",
+         "maxpowvalue":"81 kW (110 CEE/ch) à 5 550 tr/min",
+         "energy":
+            {
+               "name":"B",
+               "img":"../../../img/energyB.png",
+               "picto":"../../../img/pictoenergyB.png",
+               "alt":"Alt Categorie B"
+            }
+      }
+   ]
+}

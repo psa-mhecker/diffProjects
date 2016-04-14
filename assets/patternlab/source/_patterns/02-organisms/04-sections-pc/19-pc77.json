@@ -1,0 +1,55 @@
+{
+  "list-thumbnail" : [
+    {
+      "label" : "longueur",
+      "url" : "http://dummyimage.com/200x100/999/fff",
+      "alt" : "vignette",
+      "active" : true,
+      "link" : "1"
+    },
+    {
+      "label" : "largeur",
+      "url" : "http://dummyimage.com/200x100/999/fff",
+      "alt" : "vignette",
+      "active" : false,
+      "link" : "2"
+    },
+    {
+      "label" : "hauteur",
+      "url" : "http://dummyimage.com/200x100/999/fff",
+      "alt" : "vignette",
+      "active" : false,
+      "link" : "3"
+    },
+    {
+      "label" : "coffre",
+      "url" : "http://dummyimage.com/200x100/999/fff",
+      "alt" : "vignette",
+      "active" : false,
+      "link" : "4"
+    }
+  ],
+  "timerSpeed" : "1000",
+  "slideshow" : [
+    {
+      "src" : "http://dummyimage.com/1025x496/ff0000/fff",
+      "alt" : "",
+      "data-slide" : "headline-1"
+    },
+    {
+      "src" : "http://dummyimage.com/1025x496/00ff00/fff",
+      "alt" : "",
+      "data-slide" : "headline-2"
+    },
+    {
+      "src" : "http://dummyimage.com/1025x496/0000ff/fff",
+      "alt" : "",
+      "data-slide" : "headline-3"
+    },
+    {
+      "src" : "http://dummyimage.com/1025x496/f0f0f0/fff",
+      "alt" : "",
+      "data-slide" : "headline-4"
+    }
+  ]
+}

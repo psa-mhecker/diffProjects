@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:sc="http://aoa.inetpsa.com/ws/setting/Criteria" xmlns:sa="http://aoa.inetpsa.com/ws/setting/Accessories" xmlns:ecv="http://aoa.inetpsa.com/ws/export/ExportCriteriaValue" targetNamespace="http://aoa.inetpsa.com/ws/setting/Accessories" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	
+<xs:import namespace="http://aoa.inetpsa.com/ws/export/ExportCriteriaValue" schemaLocation="AccessoiresService.xsd18.xsd"/>
+	
+<xs:import namespace="http://aoa.inetpsa.com/ws/setting/Criteria" schemaLocation="AccessoiresService.xsd15.xsd"/>
+	
+<xs:complexType name="referencesType">
+		
+<xs:sequence>
+			
+<xs:element name="reference" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+<!-- root element -->
+	
+<xs:element name="accessoriesInput">
+		
+<xs:complexType>
+			
+<xs:sequence>
+				
+<xs:element name="accessoryFields" type="sa:accessoryFieldsType" minOccurs="0"/>
+				
+<xs:element name="valuedCriteria" type="sa:valuedCriteriaType" minOccurs="0"/>
+				
+<xs:element name="settings" type="sc:settingsType"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+<xs:complexType name="valuedCriterionType">
+		
+<xs:sequence>
+			
+<xs:element name="locale" type="sc:localeType" minOccurs="0"/>
+			
+<xs:element name="isSoldOnInternet" type="xs:boolean" minOccurs="0"/>
+			
+<xs:element name="maxPrice" type="xs:double" minOccurs="0"/>
+			
+<xs:element name="minPrice" type="xs:double" minOccurs="0"/>
+			
+<xs:element name="isTTC" type="xs:boolean" minOccurs="0"/>
+			
+<xs:element name="universeCode" type="xs:string" minOccurs="0"/>
+			
+<xs:element name="subUniverseCode" type="xs:string" minOccurs="0"/>
+			
+<xs:element name="vehicle" type="ecv:vehicleType" minOccurs="0"/>
+			
+<xs:element name="keywords" type="sa:keywordsType" minOccurs="0"/>
+			
+<xs:element name="any" type="ecv:anyType" minOccurs="0" maxOccurs="unbounded"/>
+			
+<xs:element name="references" type="sa:referencesType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+<xs:complexType name="valuedCriteriaType">
+		
+<xs:sequence>
+			
+<xs:element name="valuedCriterion" type="sa:valuedCriterionType" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+<xs:simpleType name="accessoryFieldEnum">
+		
+<xs:restriction base="xs:string">
+			
+<xs:enumeration value="Applicabilities"/>
+			
+<xs:enumeration value="Argument"/>
+			
+<xs:enumeration value="BusinessName"/>
+			
+<xs:enumeration value="Designation"/>
+			
+<xs:enumeration value="ComplementaryDesignation"/>
+			
+<xs:enumeration value="ConditionningUnit"/>
+			
+<xs:enumeration value="Measurement"/>
+			
+<xs:enumeration value="FamilyBodyStyleCode"/>
+			
+<xs:enumeration value="LinkedCommercialRefs"/>
+			
+<xs:enumeration value="LinkedTechnicalRefs"/>
+			
+<xs:enumeration value="Images"/>
+			
+<xs:enumeration value="CommercialBrand"/>
+			
+<xs:enumeration value="RequiredDealerInstallation"/>
+			
+<xs:enumeration value="InstallationKIT"/>
+			
+<xs:enumeration value="Labour"/>
+			
+<xs:enumeration value="Pricing"/>
+			
+<xs:enumeration value="PRReference"/>
+			
+<xs:enumeration value="ReplacementRef"/>
+			
+<xs:enumeration value="SAPReference"/>
+			
+<xs:enumeration value="Universe"/>
+			
+<xs:enumeration value="Weight"/>
+			
+<xs:enumeration value="onLineSales"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+<xs:complexType name="accessoryFieldsType">
+		
+<xs:annotation>
+			
+<xs:documentation>Accessory Fields</xs:documentation>
+		</xs:annotation>
+		
+<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			
+<xs:element name="accessoryField" type="sa:accessoryFieldEnum"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+<xs:complexType name="keywordsType">
+		
+<xs:sequence>
+			
+<xs:element name="keyword" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

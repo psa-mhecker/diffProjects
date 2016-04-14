@@ -1,0 +1,127 @@
+@charset 'UTF-8';
+
+
+$homepage-panel-background: #ececee !default;
+$title-mobile-color: #333;
+
+.slice-pc19 {
+	position: relative;
+}
+
+.video-container ~ .homepage-panel {
+	bottom: 25px;
+}
+
+.homepage-panel {
+
+	.cta {
+		margin-top: 15px;
+	}
+
+	@media #{$small-only} {
+		@include panel(
+			$border: false,
+			$bg: $homepage-panel-background
+		);
+		display: block;
+		margin-bottom: 0;
+
+		.homepage-panel-title {
+			text-align: center;
+		}
+
+		h1 {
+			margin-top: 10px;
+			color: $title-mobile-color;
+			font-size: rem-calc(30);
+		}
+
+		.inline-cta {
+			margin: 10px 0;
+
+			a {
+				line-height: 120%;
+			}
+		}
+	}
+
+	@media #{$medium-up} {
+		position: absolute;
+		bottom: 3%;
+		width: 50%;
+		height: 40%;
+
+		&.right-position {
+			right: 3%;
+			text-align: right;
+
+			> section {
+				right: 0;
+			}
+		}
+
+		&.left-position {
+			left: 3%;
+			text-align: left;
+
+			> section {
+				left: 0;
+			}
+		}
+
+		> section {
+			position: absolute;
+			bottom: 0;
+		}
+
+		.homepage-panel-title {
+			margin-bottom: 0;
+			padding: 0;
+			text-align: inherit;
+			color: $white;
+
+			//This class is a parameter that comes from the back-office
+			// scss-lint:disable all
+			&.darkBlue {
+				color: $primary-color-dark;
+			}
+			// scss-lint:enable all
+
+			//This class is a parameter that comes from the back-office
+			&.white {
+				color: $white-color;
+			}
+		}
+
+		h1 {
+			@include font-family('bold');
+			font-size: rem-calc(18);
+		}
+
+		h2 {
+			font-size: rem-calc(24);
+		}
+
+		.inline-cta {
+			text-align: inherit;
+		}
+
+		.short-width {
+			width: initial;
+			min-width: 50%;
+		}
+
+	}
+
+	@media #{$large-up} {
+
+		h2 {
+			font-size: rem-calc(25);
+		}
+
+		h3 {
+			font-size: rem-calc(30);
+		}
+	}
+
+}
